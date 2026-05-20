@@ -1,0 +1,149 @@
+case_id: figureya_survival_FigureYa299pancanSurv
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  level: deep_asset_review
+  status: reviewed
+  human_review_required: true
+  reason: current rebuilt image is a forest plot, while metadata/dossier/data_main contain heatmap, survival_curve, and generic-line conflicts
+annotator_model: gpt-5-codex
+reviewed_at: "2026-05-21"
+evidence:
+  metadata_json: reviewed
+  agent_guide_md: reviewed
+  plot_entry: plot.py calls retinue standard renderer as render("line", "FigureYa299pancanSurv")
+  data_main_csv:
+    present: true
+    rows: 800
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+    profile_note: sample-level expression/status abstraction; not the displayed forest-plot summary table
+  optional_csv:
+    present: false
+  raw_scripts_docs:
+    rmd: pan-cancer KM plus Cox workflow; produces prognostic heatmap PDF and OS forestplot PDF
+    docs: html plus rendered forestplot and prognostic heatmap PDFs
+  rebuilt_png:
+    present: true
+    width: 1152
+    height: 1152
+    visual_check_ok: true
+    mean_luma: 242.362
+    stddev_luma: 49.9949
+    visual_match: identical to rendered raw forestplot PDF page inspected
+observed_visual_grammar:
+  primary_geometry: forest_plot
+  subtype: tabular_hazard_ratio_forest_plot
+  panel_structure: single panel with left aligned table and right CI plot
+  marks:
+    - row text labels for cancer types
+    - p-value text column
+    - formatted hazard-ratio confidence-interval text column
+    - grey diamond CI point markers
+    - horizontal confidence intervals
+    - vertical HR=1 reference line
+    - bottom hazard-ratio axis
+  encodings:
+    row_position: cancer type
+    x_position: hazard ratio
+    interval: 95 percent CI lower and upper
+    marker_size: appears larger for significant rows in source script
+    text: p value and formatted HR interval
+  color: grayscale in rebuilt image
+  legends: none in rebuilt forest plot
+inferred_visual_grammar:
+  source_workflow: pan-cancer survival association summary from expression plus OS/DSS/DFI/PFI survival outcomes
+  current_rebuilt_unit: OS Cox forest plot across cancer types
+  secondary_source_output: categorical prognostic-role heatmap for Cox/log-rank by survival endpoint
+  not_supported_by_current_rebuilt:
+    - Kaplan-Meier survival curves
+    - survival_curve geometry
+    - source-target network grammar
+    - generic line plot grammar
+reviewed_visual_roles:
+  row_label:
+    role: category label
+    observed_as: cancer abbreviations
+    required_for_rebuilt: true
+  estimate:
+    role: hazard ratio point estimate
+    observed_as: diamond x position and HR text
+    required_for_rebuilt: true
+  lower:
+    role: lower confidence interval bound
+    required_for_rebuilt: true
+  upper:
+    role: upper confidence interval bound
+    required_for_rebuilt: true
+  p_value:
+    role: statistical text and optional marker-size/significance cue
+    required_for_rebuilt: true
+  endpoint:
+    role: survival endpoint filter
+    observed_as: OS only in rebuilt forest plot
+    required_for_rebuilt: fixed_or_optional
+canonical_columns:
+  - cancer
+  - endpoint
+  - hazard_ratio
+  - ci_lower
+  - ci_upper
+  - p_value
+  - formatted_hr_ci
+required_data_semantics:
+  cancer: row category displayed in table and aligned to CI mark
+  hazard_ratio: numeric estimate plotted on hazard-ratio axis
+  ci_lower: numeric left confidence interval endpoint
+  ci_upper: numeric right confidence interval endpoint
+  p_value: numeric or formatted statistical value shown in table
+optional_data_semantics:
+  endpoint: enables OS/DSS/DFI/PFI filtering or multi-endpoint variants
+  method: Cox or log-rank for source heatmap variants
+  prognostic_role: categorical heatmap state such as Risky, Protective, N/A, or Nonsense
+  row_order: explicit cancer ordering
+  display_label: preformatted p-value or HR text
+optional_modules:
+  heatmap_summary:
+    available_in_source: true
+    current_rebuilt: false
+    requires: [cancer, endpoint, method, prognostic_role]
+  significance_emphasis:
+    available_in_script: true
+    current_rebuilt: subtle
+    requires: [p_value]
+false_positive_risks:
+  - Current dossier labels subtype as survival_curve, but no Kaplan-Meier curve is present in rebuilt.png.
+  - Metadata visual_keywords emphasize heatmap, but rebuilt.png is the OS forest plot.
+  - plot.py declares a generic line renderer, which does not describe the inspected rebuilt image.
+  - data_main columns source, target, and weight are compatibility duplicates, not network roles.
+best_for:
+  - tabular forest plot of hazard ratios across named categories
+  - pan-cancer OS Cox summary visualization
+bad_for:
+  - Kaplan-Meier survival curves
+  - source-target or weighted network diagrams
+  - generic x-y line plots
+  - heatmap retrieval unless the source heatmap PDF/Rmd is explicitly selected
+style_notes:
+  - Uses a dense left table aligned to a right-side hazard-ratio axis.
+  - Rebuilt output is grayscale with black structural rules and grey intervals.
+retrieval_tier_recommendation:
+  tier: support
+  rationale: visually useful forest-plot asset, but current standard interface and dossier semantics conflict with the rebuilt image
+  exclusion_risks:
+    - case-level rendered output appears to be the effective visual source
+    - canonical data contract needs correction before core retrieval
+confidence:
+  visual_identification: high
+  source_workflow_understanding: medium
+  current_data_contract_accuracy: low
+  dossier_accuracy: low
+proposed_metadata_patch:
+  chart_family: [forest_plot, survival]
+  visual_keywords: [forestplot, hazard_ratio, confidence_interval, Cox, survival]
+  data_contract_required_mappings: [cancer, hazard_ratio, ci_lower, ci_upper, p_value]
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: forest_plot
+    subtype: tabular_hazard_ratio_forest_plot
+  retrieval_tier: support
+  remove_false_roles: [source, target, weight]
+

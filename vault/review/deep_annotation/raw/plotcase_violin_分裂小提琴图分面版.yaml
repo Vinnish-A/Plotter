@@ -1,0 +1,80 @@
+case_id: "plotcase_violin_分裂小提琴图分面版"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw review condensed from visible second-batch findings and local file evidence."
+annotator_model: "gpt-5.5 high reasoning subagent"
+reviewed_at: "2026-05-21T01:12:07+08:00"
+evidence:
+  truncated_source_summary: true
+  files_read:
+    - "metadata.json"
+    - "agent_guide.md"
+    - "plot.py"
+    - "data_main.csv"
+    - "raw/code.R"
+    - "raw/violin_data.csv"
+    - "outputs/rebuilt.png"
+    - "outputs/visual_check.json"
+    - "vault/dossiers/plotcase_violin_分裂小提琴图分面版.yaml"
+  local_data_header: ["group", "value", "subgroup", "paired_id", "p_value", "facet", "label"]
+  returned_findings:
+    - "Observed asset is a faceted split violin."
+    - "Raw type/group/name/value roles exist; current data_main is a compact abstract demo."
+observed_visual_grammar:
+  family: "split_violin_distribution"
+  layout: ["faceted panels", "grouped x categories", "split halves by subgroup"]
+  marks: ["half violin density", "optional box/jitter/statistical annotation"]
+inferred_visual_grammar:
+  grammar_id: "faceted_split_violin"
+  reusable_pattern: "Observation-level distributions split by subgroup and optionally faceted."
+reviewed_visual_roles:
+  group: "x-axis category"
+  value: "quantitative measurement"
+  subgroup: "split side or fill group"
+  paired_id: "optional paired observation id"
+  p_value: "optional significance annotation"
+  facet: "panel grouping"
+  label: "optional label"
+canonical_columns:
+  - "group"
+  - "value"
+  - "subgroup"
+  - "paired_id"
+  - "p_value"
+  - "facet"
+  - "label"
+required_data_semantics:
+  required: ["observation-level quantitative values", "primary group"]
+optional_data_semantics:
+  optional: ["split subgroup", "facet", "paired id", "p value labels"]
+optional_modules:
+  split_halves:
+    status: "supported_if_subgroup_available"
+  faceting:
+    status: "supported"
+  significance_labels:
+    status: "supported_if_p_value_available"
+false_positive_risks:
+  - "Do not treat as paired-line plot unless paired_id is explicitly encoded."
+  - "Current data_main is compact and may not preserve all original raw variables."
+best_for:
+  - "Faceted split distribution comparisons."
+bad_for:
+  - "Summary-only bar charts."
+style_notes:
+  - "Density symmetry, split sides, and facet spacing are central."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Reusable distribution grammar with clear roles, but current abstraction is compact."
+confidence:
+  overall: 0.84
+  visual_identification: 0.90
+  data_roles: 0.82
+proposed_metadata_patch:
+  retrieval_tier: "support"
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "violin"
+    subtype: "faceted_split_violin"
+

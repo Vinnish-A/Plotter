@@ -1,0 +1,121 @@
+case_id: "figureya_survival_FigureYa251NPHSurv"
+annotation_version: "deep_annotation_v1"
+annotation_status:
+  status: "reviewed_with_contract_mismatch"
+  note: "Observed output and raw R source are Kaplan-Meier survival curves; current plot.py is generic and data_main.csv lacks the strata column."
+annotator_model: "gpt-5 codex"
+reviewed_at: "2026-05-21T01:21:56+08:00"
+evidence:
+  source: "third-batch asset_deep_annotator output in thread"
+  files_read:
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/metadata.json"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/agent_guide.md"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/plot.py"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/data_main.csv"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/raw/FigureYa251NPHSurv.Rmd"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/scripts/FigureYa251NPHSurv.Rmd"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_surv.csv"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_annCol.csv"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/outputs/rebuilt.png"
+    - "vault/material/figureya_survival_FigureYa251NPHSurv/outputs/visual_check.json"
+    - "vault/dossiers/figureya_survival_FigureYa251NPHSurv.yaml"
+  output_check:
+    rebuilt_png_size: [720, 720]
+    visual_check_ok: true
+    observed_reference_match: "visually matches raw/kaplan meier curve2.png at smaller size"
+  current_standard_entry:
+    plot_py: "generic line renderer"
+    data_main_issue: "time/event present but strata missing; compatibility columns are misleading"
+observed_visual_grammar:
+  figure_type: "kaplan_meier_survival_curve"
+  family: "survival"
+  layout: ["single survival panel", "top legend", "vertical delayed-effect marker"]
+  marks: ["right-continuous survival steps", "censor tick marks", "dashed vertical reference line"]
+  encodings:
+    x: "time in months"
+    y: "overall survival probability"
+    color: "survival strata CS1-CS4"
+    censor_marks: "censored observations"
+inferred_visual_grammar:
+  grammar_id: "kaplan_meier_survival_curve_with_delay_marker"
+  inferred_from: ["raw Rmd", "rebuilt.png visual inspection"]
+  statistical_transform: ["Surv(os, censOS)", "survfit by CMOIC"]
+  reusable_pattern: "Grouped time-to-event survival comparison with censor marks and a delay/cutoff marker."
+  not_supported: ["heatmap", "network relationships", "risk-table layout"]
+reviewed_visual_roles:
+  time: "required follow-up duration from data_main x / raw os"
+  event: "required event/censor indicator from data_main y / raw censOS"
+  strata: "required group role from raw CMOIC; missing from data_main"
+  survival_probability: "computed by survfit"
+  censor_marks: "computed from event records"
+  delay_time: "optional vertical marker"
+  source: "compatibility column, not true role"
+  target: "compatibility column, not true role"
+  weight: "compatibility column, not true role"
+  lower: "compatibility column, not true role"
+  upper: "compatibility column, not true role"
+canonical_columns:
+  - "time: required follow-up duration"
+  - "event: required event/censor indicator"
+  - "strata: required survival group"
+  - "delay_time: optional vertical reference marker"
+  - "palette: optional strata color mapping"
+required_data_semantics:
+  time: "time-to-event duration per subject"
+  event: "event/censor status per subject"
+  strata: "categorical survival group used for separate curves"
+optional_data_semantics:
+  delay_time: "vertical reference/cutoff marker"
+  x_limit: "display range"
+  x_breaks: "axis tick spacing"
+  palette: "CS1-CS4 color mapping"
+optional_modules:
+  censor_ticks:
+    status: "present"
+  delay_marker:
+    status: "present"
+  risk_table:
+    status: "not_present"
+  confidence_interval:
+    status: "not_present"
+  network_relationships:
+    status: "not_supported"
+false_positive_risks:
+  - "Do not classify this as heatmap despite metadata visual_keywords."
+  - "Do not treat source/target/weight/lower/upper as real visual roles."
+  - "Do not treat current plot.py as evidence of reproducible Kaplan-Meier rendering."
+  - "Do not claim data_main.csv alone can regenerate the grouped curves because strata are missing."
+best_for:
+  - "Kaplan-Meier survival comparisons across categorical strata."
+  - "Survival curves with censor ticks and a delayed-effect or cutoff marker."
+bad_for:
+  - "Heatmaps."
+  - "Network or source-target-weight diagrams."
+  - "Risk-table survival layouts unless a risk-table module is added."
+style_notes:
+  - "Use step geometry, not interpolated line geometry."
+  - "Keep CS1-CS4 legend above the panel."
+  - "Use restrained axis styling with no major grid and a dashed vertical marker."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Strong source and visual evidence for a reusable Kaplan-Meier grammar, but the standard CSV and plot.py do not currently encode or rebuild the grouped survival figure."
+  exclusion_risks:
+    - "generic renderer mismatch"
+    - "missing strata in data_main.csv"
+    - "metadata heatmap keyword conflict"
+    - "compatibility columns may be mistaken for true roles"
+confidence:
+  overall: 0.9
+  visual_identification: 0.98
+  data_contract_assessment: 0.96
+  rebuild_path_assessment: 0.74
+proposed_metadata_patch:
+  retrieval_tier: "support"
+  visual_grammar:
+    geometry: "survival"
+    subtype: "kaplan_meier_survival_curve_with_delay_marker"
+    required_data_roles: ["time", "event", "strata"]
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "survival"
+    subtype: "kaplan_meier_survival_curve_with_delay_marker"

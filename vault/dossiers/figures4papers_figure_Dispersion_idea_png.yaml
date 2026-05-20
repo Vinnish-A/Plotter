@@ -1,10 +1,14 @@
 id: figures4papers_figure_Dispersion_idea_png
 title: figure_Dispersion_idea
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: fallback_synthetic_inspiration_only
+  note: Observed rebuilt figure is a copied rendered PNG of a three-panel shaded hemisphere
+    dispersion diagram; current dossier overstates reusable 3D/manifold roles.
+  human_review_required: true
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/figures4papers_figure_Dispersion_idea_png
   source:
@@ -309,3 +313,52 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: inspiration
+retrieval_rationale: Useful visual idea, but synthetic, image-first, and rebuilt by
+  direct PNG copy rather than the standard CSV interface.
+exclusion_risks:
+- case-level fallback
+- synthetic data abstraction
+- generic/direct-copy renderer
+- misleading 3d_manifold metadata
+reviewed_visual_grammar:
+  figure_type: three_panel_hemisphere_dispersion_diagram
+  geometry: projected shaded disk with radial point spokes
+  layout: one row of three axis-free panels
+  marks:
+  - gray shaded circular hemisphere backgrounds
+  - blue circular points with black outlines
+  - black dashed radial spokes
+  encodings:
+    panel: three point-dispersion patterns
+    point_position: 2D projected location
+    spoke: connection from point to central reference
+  subtype: abstract_dispersion_spoke_diagram
+  grammar_id: abstract_dispersion_on_projected_hemisphere
+  optional_modules:
+    labels:
+      status: not_supported_by_observed_output
+    trajectories:
+      status: not_supported_by_observed_output
+    true_3d_surface:
+      status: not_supported_by_standard_entry
+    direct_png_fallback:
+      status: active
+      source: outputs/figure.png
+  false_positive_risks:
+  - Do not treat data_main x/y/z/value as plotted random point data.
+  - Do not retrieve this as empirical PCA, manifold learning, or true 3D scatter.
+  - Blank label, trajectory, and color columns are not available optional modules.
+  - Visual check only proves nonblank image properties, not semantic rebuild fidelity.
+reviewed_visual_roles:
+  panel_id: panel assignment for three dispersion examples
+  point_x: projected point coordinate in raw script; absent from data_main
+  point_y: projected point coordinate in raw script; absent from data_main
+  connector_origin: hardcoded shared radial reference
+  hemisphere_background: computed shaded background; not CSV-driven
+  x: synthetic grid column; false positive if treated as plotted point x
+  y: synthetic grid column; false positive if treated as plotted point y
+  z: synthetic radial value; not visible as 3D axis
+  label: blank; no label layer
+  trajectory: blank; no trajectory layer
+  color: blank; point colors hardcoded

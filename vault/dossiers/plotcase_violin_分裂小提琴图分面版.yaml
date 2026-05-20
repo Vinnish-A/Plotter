@@ -1,10 +1,13 @@
 id: plotcase_violin_分裂小提琴图分面版
 title: 分裂小提琴图分面版
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed_with_compact_abstraction_caution
+  note: Observed visual is a faceted split violin distribution; current standard data
+    is useful but compact.
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21T01:12:07+08:00'
+  annotator_model: gpt-5.5 high reasoning subagent
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/plotcase_violin_分裂小提琴图分面版
   source:
@@ -236,3 +239,49 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: support
+retrieval_rationale: Strong reusable distribution grammar, but support-tier until
+  raw role mapping is reviewed against the compact abstraction.
+exclusion_risks:
+- paired_id overinterpretation
+- aggregate data misuse
+reviewed_visual_grammar:
+  figure_type: faceted_split_violin
+  layout:
+  - facet grid or wrapped facets
+  - x-axis groups within each facet
+  - split subgroup halves
+  marks:
+  - violin density halves
+  - optional box/jitter overlays
+  - optional significance labels
+  encodings:
+    x: group
+    y: value
+    fill_or_side: subgroup
+    panel: facet
+  geometry: violin
+  subtype: faceted_split_violin
+  grammar_id: faceted_split_violin_distribution
+  optional_modules:
+    split_violin_halves:
+      status: supported_if_subgroup_available
+    facets:
+      status: supported_if_facet_available
+    significance_labels:
+      status: supported_if_p_value_available
+    paired_connectors:
+      status: not_supported_without_explicit_renderer_evidence
+  false_positive_risks:
+  - Do not infer paired-line semantics from paired_id alone.
+  - Do not recommend for summary-only data; violin density needs observation-level
+    values.
+  - Compact data_main may not fully preserve raw type/group/name distinctions.
+reviewed_visual_roles:
+  group: primary categorical x-axis group
+  value: observation-level quantitative measurement
+  subgroup: split side or fill group
+  paired_id: optional paired observation id, not required for split violin
+  p_value: optional significance value or annotation trigger
+  facet: panel grouping variable
+  label: optional display label

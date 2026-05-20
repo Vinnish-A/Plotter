@@ -155,5 +155,75 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": true,
     "synthetic_data": true
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Visually useful but currently synthetic/generic/fallback-backed; suitable as inspiration for grammar, not core retrieval.",
+  "exclusion_risks": [
+    "synthetic data_main",
+    "generic renderer rebuild",
+    "case-level cover fallback"
+  ],
+  "annotation_status": {
+    "status": "reviewed_problem_cohort",
+    "note": "Observed figure is a Mantel-coupled lower-triangle correlation heatmap; current standardized interface is synthetic/generic and should not be treated as source-backed grammar.",
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21T00:00:00+08:00",
+    "annotator_model": "gpt-5 codex",
+    "review_version": "deep_annotation_v1"
+  },
+  "reviewed_visual_grammar": {
+    "figure_type": "mantel_coupled_correlation_heatmap",
+    "layout": [
+      "lower-triangle correlation matrix",
+      "diagonal variable nodes",
+      "right-side Mantel target nodes",
+      "curved coupling links",
+      "separate legends"
+    ],
+    "marks": [
+      "correlation tiles",
+      "cell text",
+      "significance stars",
+      "curved links",
+      "nodes",
+      "diverging colorbar"
+    ],
+    "encodings": {
+      "tile_fill": "pearson correlation",
+      "link_color": "Mantel p bin",
+      "link_width": "Mantel r bin"
+    },
+    "geometry": "hybrid_correlation_heatmap_network",
+    "subtype": "mantel_coupled_lower_triangle_correlation_heatmap",
+    "grammar_id": "mantel_coupled_correlation_heatmap",
+    "optional_modules": {
+      "correlation_cell_labels": {
+        "status": "observed_required"
+      },
+      "mantel_coupling_links": {
+        "status": "observed_required"
+      },
+      "annotation_tracks": {
+        "status": "not_observed"
+      },
+      "clustering_or_dendrogram": {
+        "status": "not_observed"
+      }
+    },
+    "false_positive_risks": [
+      "Compatibility columns must not be treated as observed annotation-track semantics.",
+      "This is not a plain heatmap; Mantel coupling links are required for the true grammar.",
+      "Current standardized case is synthetic/generic/fallback-backed."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "env_var_x": "matrix variable on x-axis",
+    "env_var_y": "matrix variable on y-axis",
+    "pearson_r": "tile fill and numeric label",
+    "pearson_sig_label": "significance stars",
+    "species_group": "external right-side node",
+    "mantel_r_bin": "curved-link width",
+    "mantel_p_bin": "curved-link color",
+    "current_row_group_column_group_annotation_track": "compatibility columns, not observed annotation tracks"
   }
 }

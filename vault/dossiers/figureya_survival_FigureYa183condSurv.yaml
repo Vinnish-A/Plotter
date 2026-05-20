@@ -1,10 +1,13 @@
 id: figureya_survival_FigureYa183condSurv
 title: FigureYa183condSurv
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed_with_standard_script_mismatch
+  note: Observed rebuilt image matches the conditional-survival composite, but plot.py
+    is generic and data_main.csv is a weak abstraction.
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21T00:00:00+08:00'
+  annotator_model: gpt-5 codex
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/figureya_survival_FigureYa183condSurv
   source:
@@ -323,3 +326,60 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: support
+retrieval_rationale: Source-backed visual match exists, but current standard CSV roles
+  and plot.py entry are not faithful enough for core retrieval.
+exclusion_risks:
+- generic renderer entry
+- weak data_main abstraction
+- misleading compatibility columns
+reviewed_visual_grammar:
+  figure_type: conditional_survival_composite
+  family: survival
+  layout:
+  - top conditional survival step-curve panel
+  - middle triangular probability text matrix
+  - bottom aligned number-at-risk row
+  marks:
+  - colored survival step lines
+  - condition-year legend
+  - colored percent text labels
+  - risk-count text labels
+  encodings:
+    color: given conditional survival year
+    step_y: conditional survival probability
+    matrix_text: conditional survival probability percentages
+    risk_text: number at risk by year
+  geometry: survival
+  subtype: conditional_survival_composite
+  grammar_id: conditional_survival_curve_with_probability_matrix_and_risk_table
+  required_data_roles:
+  - time
+  - event
+  optional_modules:
+    probability_matrix:
+      status: present_and_required_for_visual_match
+    risk_table:
+      status: present_and_required_for_visual_match
+    confidence_interval:
+      status: not_present
+    network_relationships:
+      status: not_supported
+  false_positive_risks:
+  - Do not classify this as a heatmap from metadata keywords alone.
+  - Do not infer network or flow roles from source/target/weight columns.
+  - Do not treat lower/upper as confidence intervals.
+  - Do not treat plot.py generic line rendering as sufficient to reproduce the observed
+    composite.
+reviewed_visual_roles:
+  time: required time-to-event duration
+  event: required event/censor status
+  condition_year: curve color/legend group and matrix row
+  reach_year: matrix target year
+  survival_probability: curve y value and matrix text
+  risk_count: bottom risk-table text
+  source: compatibility duplicate; not a relationship role
+  target: compatibility duplicate; not a relationship role
+  weight: compatibility duplicate; not an edge weight
+  lower: compatibility-only; no confidence interval evidenced
+  upper: compatibility-only; no confidence interval evidenced

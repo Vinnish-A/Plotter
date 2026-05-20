@@ -1,0 +1,81 @@
+case_id: "plotmaster_003气泡图+相关性热图"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw review condensed from the visible subagent output; no repository files outside deep_annotation were modified."
+annotator_model: "gpt-5.5 high reasoning subagent"
+reviewed_at: "2026-05-21T01:01:39+08:00"
+evidence:
+  reviewed_files:
+    - "metadata.json"
+    - "agent_guide.md"
+    - "plot.R"
+    - "scripts/buble_plot.R"
+    - "data_main.csv"
+    - "outputs/rebuilt.png"
+    - "outputs/visual_check.json"
+    - "vault/dossiers/plotmaster_003气泡图+相关性热图.yaml"
+  data_main_profile:
+    rows: 190
+    columns: ["group", "gene", "correlation", "p_value", "direction", "p_value_bin", "abs_correlation"]
+  output:
+    rebuilt_png_size: [1728, 864]
+    visual_check_ok: true
+observed_visual_grammar:
+  figure_type: "correlation bubble matrix / bubble heatmap hybrid"
+  layout: ["single rectangular matrix", "rotated gene labels", "right-side legends"]
+  marks: ["circle at each group-by-gene cell", "positive-direction overlay circle"]
+  encodings:
+    x: "gene"
+    y: "group"
+    size: "abs_correlation"
+    sign: "direction"
+    color_bin: "p_value_bin"
+inferred_visual_grammar:
+  reusable_pattern: "Group-by-feature association matrix with magnitude, sign, and significance tier."
+  not_supported_by_evidence: ["clustered heatmap", "annotation strips", "network relationship graph"]
+reviewed_visual_roles:
+  group: "row category"
+  gene: "column feature"
+  correlation: "signed association metric"
+  p_value: "significance value"
+  direction: "association sign"
+  p_value_bin: "ordered significance tier"
+  abs_correlation: "association magnitude"
+canonical_columns:
+  - "group"
+  - "gene"
+  - "correlation"
+  - "p_value"
+  - "direction"
+  - "p_value_bin"
+  - "abs_correlation"
+required_data_semantics:
+  required: ["group", "gene", "correlation", "direction", "abs_correlation", "p_value_bin"]
+optional_data_semantics:
+  optional: ["p_value for binning", "axis_order"]
+optional_modules:
+  significance_binning:
+    status: "supported"
+  annotation_tracks:
+    status: "not_supported"
+false_positive_risks:
+  - "Do not retrieve for clustered or annotated heatmaps."
+  - "Do not infer source/target/weight semantics."
+best_for:
+  - "Group-by-feature correlation displays."
+bad_for:
+  - "Network and tile-only heatmap cases."
+style_notes:
+  - "White panel, black border, split blue/red significance palettes."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Useful source-backed bubble matrix, but not a core heatmap exemplar."
+confidence:
+  overall: 0.86
+proposed_metadata_patch:
+  visual_grammar:
+    geometry: "bubble_matrix"
+    subtype: "correlation_bubble_heatmap"
+proposed_dossier_patch:
+  retrieval_tier: "support"

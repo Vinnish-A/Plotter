@@ -9,7 +9,7 @@ from typing import Any
 
 import yaml
 
-from .vault_status import normalize_vault_status, rebuild_class
+from .vault_status import is_live_metadata, normalize_vault_status, rebuild_class
 
 
 ROLE_SYNONYMS = {
@@ -38,24 +38,24 @@ GEOMETRY_RULES: list[tuple[str, str, list[str]]] = [
     ("scatter", "volcano", ["火山", "volcano"]),
     ("scatter", "manhattan", ["曼哈顿", "manhattan"]),
     ("scatter", "pca_or_manifold", ["pca", "umap", "tsne", "manifold", "三维pca", "3d"]),
+    ("survival", "survival_curve", ["生存", "kaplan", "km", "survival"]),
     ("forest", "interval_forest", ["森林", "forest", "cox"]),
     ("box", "boxplot", ["箱线", "boxplot"]),
     ("violin", "violin", ["小提琴", "violin"]),
     ("flow", "sankey_or_alluvial", ["桑基", "冲积", "sankey", "alluvial"]),
     ("circos", "chord_or_circular", ["和弦", "弦图", "circos", "环形互作"]),
-    ("network", "node_link_network", ["网络", "network", "互作", "通讯"]),
     ("tree", "phylogenetic_tree", ["进化树", "系统发育", "ggtree", "tree"]),
+    ("network", "node_link_network", ["网络", "network", "互作", "通讯"]),
     ("genome", "genome_structure", ["基因组", "基因簇", "geneviewer", "genome"]),
     ("heatmap", "bubble_heatmap", ["气泡热图", "bubble heatmap", "气泡矩阵"]),
     ("heatmap", "annotated_heatmap", ["热图", "heatmap", "相关性", "矩阵"]),
     ("bubble", "bubble", ["气泡", "bubble"]),
     ("radar", "radar", ["雷达", "radar"]),
     ("pie", "pie_or_donut", ["饼图", "pie", "维诺", "venn"]),
-    ("map", "map", ["地图", "map"]),
+    ("map", "map", ["地图", "spatial map", "geographic map"]),
     ("gantt", "gantt", ["甘特", "gantt"]),
     ("dumbbell", "dumbbell", ["哑铃", "dumbbell"]),
     ("area", "stacked_area", ["面积", "area"]),
-    ("survival", "survival_curve", ["生存", "kaplan", "km", "survival"]),
     ("line", "line", ["折线", "line", "轨迹"]),
     ("bar", "bar", ["柱状", "条形", "bar"]),
 ]
@@ -315,7 +315,7 @@ def infer_optional_modules(geometry: str, columns: list[str]) -> dict[str, Any]:
             "available_from_main_csv": "subgroup" in cols,
             "fallback_if_missing": "use_primary_group_only",
         }
-    if geometry in {"network", "flow", "circos"} or {"source", "target"} <= cols:
+    if geometry in {"network", "flow", "circos"}:
         modules["weighted_relationship"] = {
             "requires": ["source", "target", "weight"],
             "can_query_environment": True,
@@ -330,6 +330,104 @@ def infer_optional_modules(geometry: str, columns: list[str]) -> dict[str, Any]:
             "fallback_if_missing": "suppress_labels",
         }
     return modules
+
+
+def default_retrieval_tier(metadata: dict[str, Any], dossier: dict[str, Any] | None = None) -> dict[str, Any]:
+    status = metadata.get("vault_status") if isinstance(metadata.get("vault_status"), dict) else {}
+    build = metadata.get("build") if isinstance(metadata.get("build"), dict) else {}
+    klass = metadata.get("rebuild_class") if isinstance(metadata.get("rebuild_class"), dict) else rebuild_class(metadata)
+    risks: list[str] = []
+    if not is_live_metadata(metadata) or build.get("status") == "rejected":
+        return {"tier": "archive", "rationale": "non-live, folded, or rejected asset", "exclusion_risks": ["not a live recommendation asset"]}
+    if klass.get("case_level_fallback"):
+        risks.append("case-level fallback")
+    if klass.get("synthetic_data"):
+        risks.append("synthetic data abstraction")
+    if klass.get("generic_renderer_rebuild"):
+        risks.append("generic renderer involved")
+    if klass.get("case_level_fallback") or klass.get("synthetic_data"):
+        return {"tier": "inspiration", "rationale": "; ".join(risks), "exclusion_risks": risks}
+    if klass.get("source_code_rebuild"):
+        rationale = "source-code rebuild with non-synthetic data"
+        if klass.get("generic_renderer_rebuild"):
+            rationale += "; generic renderer also present, so keep out of core until review"
+        return {"tier": "support", "rationale": rationale, "exclusion_risks": risks}
+    if klass.get("generic_renderer_rebuild"):
+        return {"tier": "inspiration", "rationale": "generic renderer without source-code proof", "exclusion_risks": risks}
+    return {"tier": "support", "rationale": "live material asset with no high-risk rebuild flags", "exclusion_risks": risks}
+
+
+def reviewed_fields(metadata: dict[str, Any], dossier: dict[str, Any]) -> dict[str, Any]:
+    fields: dict[str, Any] = {}
+    for key in ("retrieval_tier", "retrieval_rationale", "exclusion_risks", "reviewed_visual_roles", "reviewed_visual_grammar"):
+        if key in metadata:
+            fields[key] = metadata[key]
+        elif key in dossier:
+            fields[key] = dossier[key]
+    tier = fields.get("retrieval_tier")
+    if not tier:
+        tier_info = default_retrieval_tier(metadata, dossier)
+        fields["retrieval_tier"] = tier_info["tier"]
+        fields["retrieval_rationale"] = tier_info["rationale"]
+        fields["exclusion_risks"] = tier_info["exclusion_risks"]
+    elif "retrieval_rationale" not in fields:
+        fields["retrieval_rationale"] = "review-layer retrieval tier"
+    fields.setdefault("exclusion_risks", [])
+    return fields
+
+
+def effective_visual_grammar(dossier: dict[str, Any]) -> dict[str, Any]:
+    reviewed = dossier.get("reviewed_visual_grammar")
+    base = dossier.get("visual_grammar") if isinstance(dossier.get("visual_grammar"), dict) else {}
+    if not isinstance(reviewed, dict) or not reviewed:
+        return dict(base)
+    grammar = dict(base)
+    grammar.update(reviewed)
+    if "geometry" not in grammar:
+        for key in ("primary_geometry", "geometry", "family", "plot_family", "figure_family", "figure_type"):
+            if reviewed.get(key):
+                grammar["geometry"] = str(reviewed[key])
+                break
+    if "subtype" not in grammar:
+        for key in ("subtype", "grammar_id", "figure_type", "plot_family"):
+            if reviewed.get(key):
+                grammar["subtype"] = str(reviewed[key])
+                break
+    return grammar
+
+
+def reviewed_module_supported(module: Any) -> bool:
+    if not isinstance(module, dict):
+        return False
+    status_bits = " ".join(str(module.get(key, "")) for key in ("status", "available", "observed", "present", "use"))
+    status = status_bits.lower()
+    blockers = (
+        "not_supported",
+        "not supported",
+        "not_observed",
+        "not observed",
+        "not part",
+        "absent",
+        "false",
+        "compatibility",
+        "remove",
+        "disable",
+    )
+    if any(bit in status for bit in blockers):
+        return False
+    allow = ("observed", "supported", "present", "available", "core", "required")
+    return any(bit in status for bit in allow)
+
+
+def effective_optional_modules(dossier: dict[str, Any]) -> dict[str, Any]:
+    reviewed = dossier.get("reviewed_visual_grammar")
+    if isinstance(reviewed, dict) and isinstance(reviewed.get("optional_modules"), dict):
+        return {
+            name: value
+            for name, value in reviewed["optional_modules"].items()
+            if reviewed_module_supported(value)
+        }
+    return dossier.get("optional_modules", {})
 
 
 def scientific_intent_for(title: str, geometry: str, subtype: str, keywords: list[str]) -> list[str]:
@@ -460,22 +558,24 @@ def dossier_from_case(case_dir: Path, repo_root: Path) -> dict[str, Any]:
         "rebuild_class": metadata.get("rebuild_class", {}),
         "vault_status": metadata.get("vault_status", {}),
     }
+    dossier.update(reviewed_fields(metadata, dossier))
     return dossier
 
 
 def index_record(dossier: dict[str, Any], repo_root: Path) -> dict[str, Any]:
     case_dir = dossier["origin"]["case_dir"]
     case_id = dossier["id"]
+    grammar = effective_visual_grammar(dossier)
     return {
         "id": case_id,
         "title": dossier["title"],
         "intent": dossier.get("scientific_intent", []),
-        "geometry": [dossier.get("visual_grammar", {}).get("geometry", "")],
-        "subtype": dossier.get("visual_grammar", {}).get("subtype", ""),
+        "geometry": [grammar.get("geometry", "")],
+        "subtype": grammar.get("subtype", "") or grammar.get("grammar_id", ""),
         "visual_genes": dossier.get("visual_genes", {}),
         "required_roles": dossier.get("required_data", []),
         "optional_roles": dossier.get("optional_data", []),
-        "optional_modules": dossier.get("optional_modules", {}),
+        "optional_modules": effective_optional_modules(dossier),
         "supports": dossier.get("supports", {}),
         "complexity": dossier.get("complexity", {}).get("level", ""),
         "defamiliarization": dossier.get("defamiliarization", {}).get("level", ""),
@@ -486,6 +586,11 @@ def index_record(dossier: dict[str, Any], repo_root: Path) -> dict[str, Any]:
         "preview": f"{case_dir}/outputs/rebuilt.png",
         "vault_status": dossier.get("vault_status", {}),
         "rebuild_class": dossier.get("rebuild_class", {}),
+        "retrieval_tier": dossier.get("retrieval_tier", "support"),
+        "retrieval_rationale": dossier.get("retrieval_rationale", ""),
+        "exclusion_risks": dossier.get("exclusion_risks", []),
+        "reviewed_visual_roles": dossier.get("reviewed_visual_roles", {}),
+        "reviewed_visual_grammar": dossier.get("reviewed_visual_grammar", {}),
     }
 
 

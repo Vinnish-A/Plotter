@@ -1,10 +1,13 @@
 id: plotcase_barplot_ggplot2优雅的绘制径向条形图
 title: ggplot2优雅的绘制径向条形图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed_with_corrections_recommended
+  note: Observed figure is a concentric polar/radial bar chart; current dossier line
+    grammar and compatibility columns are misleading.
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21T00:00:00+08:00'
+  annotator_model: gpt-5 codex
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图
   source:
@@ -266,3 +269,67 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: support
+retrieval_rationale: Visually useful and source-backed, but current data_main.csv,
+  plot.py, and dossier do not faithfully represent the observed radial bar contract.
+exclusion_risks:
+- generic renderer mismatch
+- synthetic canonical CSV
+- misleading compatibility columns
+reviewed_visual_grammar:
+  figure_type: concentric_radial_bar_chart
+  geometry: polar_bar
+  layout:
+  - white void theme
+  - concentric annular bars
+  - left/center inline label stack
+  - no axes
+  - no legend
+  marks:
+  - annular bar arcs
+  - country-percent text labels
+  encodings:
+    category: country/ring identity and label text
+    value: aggregated participant total mapped to polar bar arc length
+    percent: derived share shown in label
+    order: descending total, displayed as ordered rings
+    color: alternating teal/navy styling; no legend semantics
+  subtype: concentric_radial_bar
+  grammar_id: top_n_concentric_polar_bar_with_inline_percent_labels
+  required_data_roles:
+  - category
+  - value
+  optional_data_roles:
+  - percent
+  - label
+  - order
+  - color
+  - ymax
+  - top_n
+  optional_modules:
+    percent_label_layer:
+      status: supported_by_original_R
+    polar_coordinate_bar:
+      status: required_for_observed_grammar
+    top_n_filter:
+      status: supported_by_original_R
+    generic_bar_renderer:
+      status: compatibility_only_not_observed_grammar
+  false_positive_risks:
+  - Current dossier line grammar is wrong.
+  - Do not treat group, stack, error_low, error_high, or line_value as evidenced visual
+    roles.
+  - plot.py calls a generic bar renderer and does not encode the observed radial grammar.
+  - Do not classify as stacked/grouped bar despite metadata keywords.
+reviewed_visual_roles:
+  category: displayed country/category identity
+  value: aggregated numeric magnitude driving arc length
+  percent: derived share label
+  label: category plus rounded percent text
+  order: ranked display order
+  color: fixed alternating decorative palette
+  group: compatibility/demo role only
+  stack: compatibility/demo role only
+  error_low: not visually supported
+  error_high: not visually supported
+  line_value: not visually supported

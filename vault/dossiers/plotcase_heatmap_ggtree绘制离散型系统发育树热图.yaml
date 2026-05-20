@@ -1,10 +1,13 @@
 id: plotcase_heatmap_ggtree绘制离散型系统发育树热图
 title: ggtree绘制离散型系统发育树热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed_with_rebuild_caution
+  note: Observed grammar is circular phylogeny plus discrete annotation tracks; not
+    a generic network and not an ordinary rectangular heatmap.
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21T01:12:07+08:00'
+  annotator_model: gpt-5.5 high reasoning subagent
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图
   source:
@@ -280,3 +283,46 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: support
+retrieval_rationale: Visually distinctive and useful, but retained as support until
+  rebuild and source-code fidelity are reviewed more deeply.
+exclusion_risks:
+- tree/network confusion
+- heatmap overgeneralization
+reviewed_visual_grammar:
+  figure_type: circular_tree_heatmap
+  layout:
+  - circular phylogenetic tree
+  - tip-attached discrete annotation tracks
+  marks:
+  - tree branch segments
+  - tip labels or tip points
+  - outer annotation tiles/rings
+  encodings:
+    topology: node-parent tree or Newick tree
+    annotation: tip-aligned track and class/value
+  geometry: tree_heatmap
+  subtype: circular_phylogeny_discrete_tracks
+  grammar_id: circular_phylogeny_discrete_annotation_tracks
+  optional_modules:
+    discrete_annotation_rings:
+      status: supported
+    clade_or_tip_coloring:
+      status: supported_if_tip_group_available
+    network_relationships:
+      status: not_supported
+  false_positive_risks:
+  - Do not classify as network only because the standardized table has parent_id.
+  - Do not infer source/target/weight semantics; they are absent and not visually
+    supported.
+  - Do not treat heatmap_value as evidence for a reusable rectangular heatmap body.
+reviewed_visual_roles:
+  node_id: tree node or tip identifier
+  parent_id: tree parent identifier, only tree topology
+  label: tip or node display label
+  branch_length: optional tree branch length
+  tip_group: tip class or clade annotation
+  track: annotation ring identifier
+  track_value: annotation value aligned to a tip
+  track_class: discrete annotation category
+  heatmap_value: optional annotation value, not proof of a full matrix heatmap

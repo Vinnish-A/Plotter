@@ -141,5 +141,81 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Strong GOChord support exemplar, but standard CSV and plot entry do not faithfully encode the observed semantics.",
+  "exclusion_risks": [
+    "generic_renderer_involved",
+    "canonical_source_target_weight_false_positive",
+    "current_data_main_not_semantic",
+    "label_clipping"
+  ],
+  "annotation_status": {
+    "status": "reviewed_with_warnings",
+    "note": "Observed visual is a GOplot GOChord-style gene-to-GO-term enrichment chord, not a generic source-target-weight network.",
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21T01:02:40+08:00",
+    "annotator_model": "gpt-5.5 high reasoning subagent",
+    "review_version": "deep_annotation_v1"
+  },
+  "reviewed_visual_grammar": {
+    "plot_family": "go_enrichment_chord_diagram",
+    "layout": [
+      "circular body",
+      "outer gene label ring",
+      "outer gene value tiles",
+      "GO term sector arcs",
+      "inner ribbons",
+      "right-side legends"
+    ],
+    "marks": [
+      "curved ribbons",
+      "arc sectors",
+      "small gene tiles",
+      "radial gene labels",
+      "legend swatches",
+      "vertical colorbar"
+    ],
+    "encodings": {
+      "go_term": "sector color, ribbon color, and legend entry",
+      "gene": "radial labels and membership endpoints",
+      "membership": "ribbon/chord links between genes and terms",
+      "gene_logFC": "diverging color on outer gene tiles"
+    },
+    "geometry": "circos",
+    "subtype": "go_enrichment_chord",
+    "grammar_id": "go_enrichment_gene_term_chord",
+    "optional_modules": {
+      "term_legend": {
+        "status": "observed"
+      },
+      "logFC_colorbar": {
+        "status": "observed"
+      },
+      "gene_label_ring": {
+        "status": "observed"
+      },
+      "top_term_selection": {
+        "status": "supported by raw code"
+      },
+      "go_plot_transform": {
+        "status": "supported by raw code"
+      }
+    },
+    "false_positive_risks": [
+      "Do not retrieve as generic chord network because metadata lists source/target/weight.",
+      "Do not assume edge weights, flow volume, or directed links.",
+      "Do not use for genomic circos tracks with coordinates.",
+      "Current data_main.csv is demo-like and not evidence for GO enrichment semantics.",
+      "Current plot.py is a generic network renderer entry."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "go_term": "categorical sector and legend entry",
+    "gene": "categorical label and membership endpoint",
+    "gene_term_membership": "binary membership relationship",
+    "gene_logFC": "quantitative value for gene tile color",
+    "p_adjust": "term ranking/filtering, not a direct visual mark",
+    "link_weight": "not observed"
   }
 }

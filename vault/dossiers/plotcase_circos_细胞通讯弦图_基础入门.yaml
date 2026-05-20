@@ -1,10 +1,14 @@
 id: plotcase_circos_细胞通讯弦图_基础入门
 title: 细胞通讯弦图_基础入门
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed_with_contract_mismatch
+  note: Observed asset is a CCPlotR cell-communication circos/chord figure; current
+    source/target/weight CSV is synthetic compatibility data.
+  human_review_required: true
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21T01:38:07+08:00'
+  annotator_model: gpt-5 codex
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/plotcase_circos_细胞通讯弦图_基础入门
   source:
@@ -292,3 +296,64 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: inspiration
+retrieval_rationale: Strong visual exemplar, but current data contract is synthetic
+  and the rebuild is a case-level fallback.
+exclusion_risks:
+- source_target_weight_false_positive
+- synthetic_data_main
+- generic_renderer_entry
+- case_level_fallback
+reviewed_visual_grammar:
+  figure_type: cell_communication_circos_chord
+  layout:
+  - circular ligand/receptor label ring
+  - outer cell-type arcs
+  - inner expression tiles
+  - directed chord arrows
+  - cell-type legend
+  - mean-expression colorbar
+  marks:
+  - sector arcs
+  - small expression tiles
+  - curved directed links
+  - radial text labels
+  - legend swatches
+  - colorbar
+  encodings:
+    cell_type: outer arc color and legend
+    ligand_or_receptor: radial label and sector position
+    communication_link: directed curved arrow/chord
+    mean_expression: purple sequential tile color
+    interaction_rank_or_strength: possibly chord width, not recoverable from current
+      CSV
+  geometry: circos
+  subtype: cell_communication_chord
+  grammar_id: ccplotr_cell_communication_chord
+  optional_modules:
+    cell_type_legend:
+      status: observed
+    mean_expression_colorbar:
+      status: observed
+    directed_chords:
+      status: observed
+    weighted_edges:
+      status: not_verified_from_standard_csv
+  false_positive_risks:
+  - Do not treat current source/target/weight columns as true chord/network evidence.
+  - Do not retrieve as generic weighted network without preserving cell-communication
+    and expression-track semantics.
+  - Do not assume standardized rebuild from original code; metadata records case-level
+    finished-figure fallback.
+  - plot.py invokes a generic network renderer, while rebuilt.png is the original
+    cover fallback.
+reviewed_visual_roles:
+  source: real concept may be sender cell or interaction origin, but current CSV source
+    values are compatibility placeholders
+  target: real concept may be receiver cell or interaction endpoint, but current CSV
+    target values are compatibility placeholders
+  weight: current CSV weights are synthetic demo values; observed link width may encode
+    ranking or strength but is not documented in standardized data
+  cell_type: observed outer arc category
+  ligand_receptor_label: observed radial label
+  mean_expression: observed tile color value

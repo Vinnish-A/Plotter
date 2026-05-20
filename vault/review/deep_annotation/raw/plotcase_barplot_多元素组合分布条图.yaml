@@ -1,0 +1,56 @@
+case_id: "plotcase_barplot_多元素组合分布条图"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw review condensed from visible subagent output."
+annotator_model: "gpt-5.5 high reasoning subagent"
+reviewed_at: "2026-05-21T01:02:08+08:00"
+evidence:
+  reviewed_files: ["metadata.json", "agent_guide.md", "plot.py", "scripts/code.R", "data_main.csv", "outputs/rebuilt.png", "outputs/visual_check.json"]
+  raw_files: ["production-based_emission.csv", "consumption-based_emission.csv", "pie_data.csv", "code.R", "cover.png"]
+  rebuilt_png_size: [1234, 712]
+observed_visual_grammar:
+  primary_family: "horizontal_stacked_bar_composite"
+  layout: ["mirrored bar panels", "central labels", "upper-right legend", "pie inset"]
+  marks: ["stacked bar segments", "net point overlays", "pie wedges"]
+inferred_visual_grammar:
+  grammar_id: "mirrored_stacked_bar_with_net_points_and_pie_inset"
+  reusable_pattern: "Two matched measures over shared entities plus global category summary."
+reviewed_visual_roles:
+  region: "shared row category"
+  stack_category: "fill category"
+  production_value: "left-side magnitude"
+  consumption_value: "right-side magnitude"
+  net_value: "point overlay"
+  summary_value: "pie inset value"
+canonical_columns:
+  - "current generic demo fields are not enough for observed composite"
+  - "source/target/weight absent"
+required_data_semantics:
+  required: ["region", "panel", "stack_category", "value"]
+optional_data_semantics:
+  optional: ["net_value", "summary_value", "color", "order", "inset"]
+optional_modules:
+  net_marker_overlay:
+    status: "supported"
+  pie_inset:
+    status: "supported"
+false_positive_risks:
+  - "Not a standalone pie/donut."
+  - "Not a simple grouped bar."
+best_for:
+  - "Mirrored stacked comparisons."
+bad_for:
+  - "Standalone pies and relationship graphs."
+style_notes:
+  - "Muted shared palette, central row labels, inset pie summary."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Strong composite grammar but current contract needs correction."
+confidence:
+  overall: 0.88
+proposed_metadata_patch:
+  visual_grammar:
+    geometry: "mirrored_horizontal_stacked_bar_composite"
+proposed_dossier_patch:
+  retrieval_tier: "support"

@@ -144,5 +144,70 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Strong reusable faceted distribution support pattern, but standard entry/data_main contract is not aligned enough for core retrieval.",
+  "exclusion_risks": [],
+  "annotation_status": {
+    "status": "complete_with_contract_mismatch_noted",
+    "note": "Observed image is a 22-panel faceted violin-box-jitter figure; generic box renderer is not sufficient evidence.",
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21T01:02:13+08:00",
+    "annotator_model": "gpt-5.5 high reasoning subagent",
+    "review_version": "deep_annotation_v1"
+  },
+  "reviewed_visual_grammar": {
+    "plot_family": "distribution_comparison",
+    "geometry": "faceted_violin_box_jitter",
+    "panel_structure": "22 small-multiple panels",
+    "marks": [
+      "violin densities",
+      "semi-transparent jitter points",
+      "boxplots",
+      "significance text",
+      "colored facet strips"
+    ],
+    "encodings": {
+      "y": "quantitative observation value",
+      "x": "two within-panel groups shown as sample-count labels",
+      "fill": "two treatment/group categories",
+      "facet": "panel assignment",
+      "strip_fill": "higher-level class"
+    },
+    "subtype": "multi_group_faceted_violin_boxplot",
+    "optional_modules": {
+      "violin_density_layer": {
+        "status": "observed"
+      },
+      "jitter_observation_layer": {
+        "status": "observed"
+      },
+      "box_summary_layer": {
+        "status": "observed"
+      },
+      "faceting": {
+        "status": "observed_and_core"
+      },
+      "significance_annotation": {
+        "status": "observed"
+      },
+      "paired_connections": {
+        "status": "not_observed"
+      }
+    },
+    "false_positive_risks": [
+      "Do not retrieve as a plain boxplot.",
+      "Do not treat paired_id as evidence for paired-line plots.",
+      "Do not treat canonical data_main.csv as the full source data for the 22-panel image.",
+      "Do not infer source/target/weight roles."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "facet": "small-multiple partition; core to observed grammar",
+    "group": "within-panel comparison group",
+    "value": "observation-level numeric measurement",
+    "strip_class": "optional higher-level class for facet strip background",
+    "p_value": "optional per-facet significance annotation input or computed output",
+    "paired_id": "not visually supported as paired connector role"
   }
 }

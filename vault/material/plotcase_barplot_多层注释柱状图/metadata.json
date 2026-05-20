@@ -150,5 +150,88 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Distinct reusable nested-axis stacked-bar grammar, but current standard data interface and dossier need correction before core retrieval.",
+  "exclusion_risks": [
+    "generic renderer entry does not reproduce the observed grammar from data_main.csv"
+  ],
+  "annotation_status": {
+    "status": "reviewed_with_corrections_recommended",
+    "note": "Observed figure is a 100% stacked vertical bar plot with two-level nested x-axis annotation boxes; current line-grammar dossier and generic demo CSV are misleading.",
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21T00:00:00+08:00",
+    "annotator_model": "gpt-5 codex",
+    "review_version": "deep_annotation_v1"
+  },
+  "reviewed_visual_grammar": {
+    "figure_type": "vertical_100pct_stacked_bar_with_nested_axis_annotations",
+    "geometry": "bar",
+    "layout": [
+      "single main bar panel",
+      "right-side fill legend",
+      "two bottom nested x-axis annotation bands"
+    ],
+    "marks": [
+      "stacked vertical bar segments",
+      "nested annotation boxes",
+      "legend swatches"
+    ],
+    "encodings": {
+      "sample_id": "x position; sample text suppressed",
+      "component": "stack segment fill and legend item",
+      "proportion": "stack segment height on percent y-axis",
+      "subtype_x": "outer/upper nested x-axis group band",
+      "subtype_y": "inner/lower nested x-axis group band"
+    },
+    "subtype": "100pct_stacked_bar_nested_axis_annotation",
+    "grammar_id": "stacked_percent_bars_with_two_level_nested_axis",
+    "required_data_roles": [
+      "sample_id",
+      "component",
+      "proportion",
+      "subtype_x",
+      "subtype_y"
+    ],
+    "optional_modules": {
+      "nested_axis_annotation": {
+        "status": "core_observed_feature",
+        "required_fields": [
+          "sample_id",
+          "subtype_x",
+          "subtype_y"
+        ]
+      },
+      "percent_stack": {
+        "status": "core_observed_feature",
+        "required_fields": [
+          "sample_id",
+          "component",
+          "proportion"
+        ]
+      },
+      "label_layer": {
+        "status": "not_observed"
+      },
+      "uncertainty_interval": {
+        "status": "not_observed"
+      }
+    },
+    "false_positive_risks": [
+      "Do not classify as line grammar; no line marks are present.",
+      "Do not treat data_main.csv error_low/error_high/line_value as supported visual roles for this asset.",
+      "Do not classify raw meta tag '环状' as observed geometry; rebuilt image is rectangular stacked bars.",
+      "plot.py calls a generic renderer and does not encode the observed nested-axis grammar."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "sample_id": "bar identity and ordering key",
+    "component": "wide raw proportion columns pivoted to stacked fill categories",
+    "proportion": "numeric value plotted as relative percent",
+    "subtype_x": "coarser nested x annotation category",
+    "subtype_y": "finer nested x annotation category",
+    "error_low": "generic demo column only; not observed",
+    "error_high": "generic demo column only; not observed",
+    "line_value": "generic demo column only; not observed"
   }
 }

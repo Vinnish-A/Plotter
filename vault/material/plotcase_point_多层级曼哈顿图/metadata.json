@@ -136,5 +136,69 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": true,
     "synthetic_data": true
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Strong visual grammar, but fallback cover plus synthetic data_main and generic scatter entry make it unsuitable for default retrieval.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "synthetic_data_main",
+    "generic_renderer_entry",
+    "missing_real_multitrait_marker_table"
+  ],
+  "annotation_status": {
+    "status": "metadata_and_dossier_need_correction",
+    "note": "Observed figure is a circular two-ring CMplot Manhattan plot; current plot.py is a generic scatter renderer and data_main is a synthetic placeholder.",
+    "human_review_required": true,
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "reviewed_visual_grammar": {
+    "figure_type": "circular_multi_trait_manhattan_plot",
+    "geometry": "radial_genomic_scatter",
+    "layout": "outer chromosome ideogram plus two concentric Manhattan point tracks",
+    "marks": [
+      "chromosome sector band",
+      "rotated chromosome labels",
+      "genomic scatter points",
+      "two radial rings",
+      "radial grid circles"
+    ],
+    "encodings": {
+      "angle": "chromosome plus genomic position",
+      "radius": "Manhattan score",
+      "color": "chromosome category",
+      "ring": "trait layer"
+    },
+    "subtype": "circular_multi_trait_manhattan",
+    "grammar_id": "cmplot_circular_multilevel_manhattan",
+    "optional_modules": {
+      "circular_ideogram_band": {
+        "status": "present_in_observed_output_not_current_data_main"
+      },
+      "concentric_trait_tracks": {
+        "status": "present_in_observed_output_not_current_data_main"
+      },
+      "generic_scatter_renderer": {
+        "status": "not_supported_for_observed_asset"
+      }
+    },
+    "false_positive_risks": [
+      "Generic scatter plot.py is not evidence of the observed radial genomic grammar.",
+      "Current chromosome/position/score fields are synthetic placeholders.",
+      "Empty ring column hides the missing two-track structure.",
+      "Rebuilt image is a fallback cover."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "marker_id": "genomic marker identifier; current feature_id placeholders are not source-derived",
+    "chromosome": "angular sector; current values are synthetic placeholders",
+    "position": "within-chromosome angular coordinate; current values are synthetic",
+    "trait": "concentric ring identity; current CSV has only one trait",
+    "score": "radial point distance",
+    "ring": "required for two-ring long-form grammar; empty in current CSV",
+    "threshold": "not visibly drawn",
+    "highlight": "not visibly drawn"
   }
 }

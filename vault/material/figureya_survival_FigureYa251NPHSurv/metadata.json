@@ -206,5 +206,85 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Strong source and visual evidence for a reusable Kaplan-Meier grammar, but the standard CSV and plot.py do not currently encode or rebuild the grouped survival figure.",
+  "exclusion_risks": [
+    "generic renderer mismatch",
+    "missing strata in data_main.csv",
+    "metadata heatmap keyword conflict",
+    "compatibility columns may be mistaken for true roles"
+  ],
+  "annotation_status": {
+    "status": "reviewed_with_contract_mismatch",
+    "note": "Observed output and raw R source are Kaplan-Meier survival curves; current plot.py is generic and data_main.csv lacks the strata column.",
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21T01:21:56+08:00",
+    "annotator_model": "gpt-5 codex",
+    "review_version": "deep_annotation_v1"
+  },
+  "reviewed_visual_grammar": {
+    "figure_type": "kaplan_meier_survival_curve",
+    "family": "survival",
+    "layout": [
+      "single survival panel",
+      "top legend",
+      "vertical delayed-effect marker"
+    ],
+    "marks": [
+      "right-continuous survival steps",
+      "censor tick marks",
+      "dashed vertical reference line"
+    ],
+    "encodings": {
+      "x": "time in months",
+      "y": "overall survival probability",
+      "color": "survival strata CS1-CS4",
+      "censor_marks": "censored observations"
+    },
+    "geometry": "survival",
+    "subtype": "kaplan_meier_survival_curve_with_delay_marker",
+    "required_data_roles": [
+      "time",
+      "event",
+      "strata"
+    ],
+    "grammar_id": "kaplan_meier_survival_curve_with_delay_marker",
+    "optional_modules": {
+      "censor_ticks": {
+        "status": "present"
+      },
+      "delay_marker": {
+        "status": "present"
+      },
+      "risk_table": {
+        "status": "not_present"
+      },
+      "confidence_interval": {
+        "status": "not_present"
+      },
+      "network_relationships": {
+        "status": "not_supported"
+      }
+    },
+    "false_positive_risks": [
+      "Do not classify this as heatmap despite metadata visual_keywords.",
+      "Do not treat source/target/weight/lower/upper as real visual roles.",
+      "Do not treat current plot.py as evidence of reproducible Kaplan-Meier rendering.",
+      "Do not claim data_main.csv alone can regenerate the grouped curves because strata are missing."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "time": "required follow-up duration from data_main x / raw os",
+    "event": "required event/censor indicator from data_main y / raw censOS",
+    "strata": "required group role from raw CMOIC; missing from data_main",
+    "survival_probability": "computed by survfit",
+    "censor_marks": "computed from event records",
+    "delay_time": "optional vertical marker",
+    "source": "compatibility column, not true role",
+    "target": "compatibility column, not true role",
+    "weight": "compatibility column, not true role",
+    "lower": "compatibility column, not true role",
+    "upper": "compatibility column, not true role"
   }
 }

@@ -1,10 +1,14 @@
 id: figureya_survival_FigureYa66UnivariateCox
 title: FigureYa66UnivariateCox
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: metadata_and_dossier_need_correction
+  note: Observed rebuilt figure is a horizontal Cox forest plot; current metadata/dossier
+    point to scatter/manifold/generic-line roles.
+  human_review_required: true
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/figureya_survival_FigureYa66UnivariateCox
   source:
@@ -328,3 +332,68 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: support
+retrieval_rationale: Strong visual source evidence for a Cox forest plot, but current
+  metadata, dossier grammar, data_main.csv, and plot.py are inconsistent with the
+  observed rebuilt figure.
+exclusion_risks:
+- misleading manifold/scatter metadata
+- generic renderer entry mismatch
+- noncanonical current data_main interface
+reviewed_visual_grammar:
+  figure_type: horizontal_cox_forest_plot
+  geometry: forest_interval
+  layout: single_panel_cartesian
+  marks:
+  - horizontal confidence interval segments
+  - diamond point estimates
+  - dashed HR=1 reference line
+  - gene label rail
+  - p-value colorbar
+  axes:
+    x: log2 hazard-ratio scale
+    y: gene labels
+  encodings:
+    x_position: hazard ratio point estimate
+    interval: confidence interval lower and upper
+    color: p-value mapped to viridis colorbar
+  subtype: univariate_cox_forest_plot
+  required_data_roles:
+  - gene
+  - hazard_ratio
+  - ci_lower
+  - ci_upper
+  - p_value
+  grammar_id: univariate_cox_forest_interval_plot
+  optional_modules:
+    pvalue_colorbar:
+      status: available_from_raw_cox_output_not_current_data_main
+      requires:
+      - p_value
+    log_hazard_axis:
+      status: available_from_raw_cox_output
+      requires:
+      - hazard_ratio
+    confidence_intervals:
+      status: available_from_raw_cox_output
+      requires:
+      - ci_lower
+      - ci_upper
+    generic_line_renderer:
+      status: not_supported_for_this_asset
+  false_positive_risks:
+  - Current dossier incorrectly labels the asset as scatter/pca_or_manifold.
+  - Metadata visual_keywords include 3d_manifold, which is not visible in rebuilt.png.
+  - Do not treat x/y/value/source/target/weight compatibility columns as visual evidence.
+  - Current lower/upper in data_main.csv are not the Cox confidence intervals used
+    in the figure.
+reviewed_visual_roles:
+  gene: y-axis label
+  hazard_ratio: x point estimate from HR
+  ci_lower: horizontal interval low from lower
+  ci_upper: horizontal interval high from upper
+  p_value: point color scale from pvalue
+  z: source statistic available but not visibly drawn
+  source: compatibility column only; not a relationship role
+  target: compatibility column only; not a relationship role
+  weight: compatibility column only; not a relationship role

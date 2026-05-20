@@ -1,0 +1,85 @@
+case_id: "plotcase_sankey_多层级桑基图"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw review condensed from visible second-batch findings and local file evidence."
+annotator_model: "gpt-5.5 high reasoning subagent"
+reviewed_at: "2026-05-21T01:12:07+08:00"
+evidence:
+  truncated_source_summary: true
+  files_read:
+    - "metadata.json"
+    - "agent_guide.md"
+    - "plot.py"
+    - "data_main.csv"
+    - "raw/code.R"
+    - "raw/sankey_data.csv"
+    - "outputs/rebuilt.png"
+    - "outputs/visual_check.json"
+    - "vault/dossiers/plotcase_sankey_多层级桑基图.yaml"
+  local_data_header: ["stage", "node", "next_stage", "next_node", "value", "flow_id", "group", "node_color", "label", "order"]
+  returned_findings:
+    - "Observed asset is a staged Sankey/alluvial flow."
+    - "Roles are stage/node/next_stage/next_node/value, not generic network source/target/weight."
+observed_visual_grammar:
+  family: "sankey_alluvial"
+  layout: ["multi-stage horizontal or vertical flow", "nodes arranged by stage"]
+  marks: ["flow ribbons", "stage nodes/strata", "labels"]
+inferred_visual_grammar:
+  grammar_id: "multi_level_sankey"
+  reusable_pattern: "Stage-wise transitions with weighted ribbons."
+reviewed_visual_roles:
+  stage: "current stage"
+  node: "current node/category"
+  next_stage: "next stage"
+  next_node: "next node/category"
+  value: "flow magnitude"
+  flow_id: "optional path identifier"
+  group: "optional flow class/color"
+  node_color: "optional explicit node color"
+  label: "optional display label"
+  order: "optional stage/node ordering"
+canonical_columns:
+  - "stage"
+  - "node"
+  - "next_stage"
+  - "next_node"
+  - "value"
+  - "flow_id"
+  - "group"
+  - "node_color"
+  - "label"
+  - "order"
+required_data_semantics:
+  required: ["ordered stages", "node labels per stage", "transition target", "flow value"]
+optional_data_semantics:
+  optional: ["flow id", "group color", "node color", "manual order"]
+optional_modules:
+  stage_ordering:
+    status: "supported"
+  group_coloring:
+    status: "supported"
+  network_centrality:
+    status: "not_supported"
+false_positive_risks:
+  - "Do not convert to source/target/weight network retrieval; stage semantics are essential."
+best_for:
+  - "Multi-level categorical flow diagrams."
+bad_for:
+  - "Free-form node-link networks."
+style_notes:
+  - "Preserve stage alignment and label readability."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Clear and reusable staged-flow grammar with source-backed roles."
+confidence:
+  overall: 0.87
+  visual_identification: 0.90
+  data_roles: 0.88
+proposed_metadata_patch:
+  retrieval_tier: "support"
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "sankey"
+    subtype: "multi_stage_alluvial"
+

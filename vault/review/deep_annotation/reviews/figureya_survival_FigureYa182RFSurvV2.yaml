@@ -1,0 +1,117 @@
+case_id: "figureya_survival_FigureYa182RFSurvV2"
+annotation_version: "deep_annotation_v1"
+annotation_status:
+  status: "reviewed_with_contract_mismatch"
+  note: "Observed visual is a random-survival-forest diagnostic composite; metadata/dossier/data_main/plot.py imply weaker generic line or survival roles."
+annotator_model: "gpt-5"
+reviewed_at: "2026-05-21"
+evidence:
+  source: "third-batch asset_deep_annotator output in thread"
+  files_read:
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/metadata.json"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/agent_guide.md"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/plot.py"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/data_main.csv"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/scripts/FigureYa182RFSurvV2.Rmd"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/data_raw/easy_input_cli.csv"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/data_raw/easy_input_expr.csv"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/outputs/rebuilt.png"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/outputs/visual_check.json"
+    - "vault/dossiers/figureya_survival_FigureYa182RFSurvV2.yaml"
+  output_check:
+    rebuilt_png_size: [1728, 1728]
+    visual_check_ok: true
+    original_reference: "raw/error rate and importance derived from package.pdf"
+    selected_rmse: 0.0
+  current_standard_entry:
+    plot_py: "generic line renderer"
+    data_main_columns: ["x", "y", "value", "group", "label", "facet", "source", "target", "weight", "lower", "upper"]
+observed_visual_grammar:
+  figure_type: "random_survival_forest_diagnostic"
+  subtype: "error_rate_and_variable_importance"
+  layout: ["left error-rate line panel", "right variable-importance horizontal bar/segment panel"]
+  marks: ["black error-rate line", "signed horizontal importance bars", "dashed zero reference line", "dense gene label rail"]
+  encodings:
+    left_x: "number of trees"
+    left_y: "error rate"
+    right_x: "signed variable importance"
+    right_y: "gene/predictor labels"
+inferred_visual_grammar:
+  grammar_id: "random_survival_forest_error_importance_composite"
+  statistical_transform: ["univariate Cox filtering", "random survival forest fit", "out-of-bag error trajectory", "variable importance"]
+  not_supported: ["Kaplan-Meier survival curve", "heatmap", "source-target network"]
+reviewed_visual_roles:
+  tree_index: "generated x-axis for error-rate trajectory"
+  error_rate: "model error per tree count"
+  variable_label: "gene/predictor label"
+  variable_importance: "signed model importance value"
+  sign: "optional derived positive/negative importance class"
+  source: "compatibility column only; not a graph role"
+  target: "compatibility column only; not a graph role"
+  weight: "compatibility column only; not a graph role"
+  lower: "compatibility column only; not a confidence interval role"
+  upper: "compatibility column only; not a confidence interval role"
+canonical_columns:
+  - "tree_index: required if error-rate panel is precomputed"
+  - "error_rate: required if error-rate panel is precomputed"
+  - "variable_label: required predictor label"
+  - "variable_importance: required signed importance value"
+  - "sign: optional derived positive/negative class"
+required_data_semantics:
+  error_trajectory: "model error values by tree count"
+  variable_label: "predictor names for importance panel"
+  variable_importance: "signed model importance values"
+optional_data_semantics:
+  importance_cutoff: "threshold or zero reference"
+  rank_order: "display order for importance panel"
+  palette: "positive/negative importance colors"
+  model_metadata: "precomputed fitted model metadata"
+optional_modules:
+  error_rate_panel:
+    status: "present"
+  variable_importance_panel:
+    status: "present"
+  survival_curve:
+    status: "not_present"
+  network_relationships:
+    status: "not_supported"
+false_positive_risks:
+  - "Do not treat metadata heatmap keywords as observed grammar."
+  - "Do not treat dossier subtype survival_curve as visually supported."
+  - "Do not infer source/target/weight graph semantics from compatibility columns."
+  - "Do not treat lower/upper as confidence interval roles."
+  - "Do not rely on plot.py generic line renderer as faithful rebuild evidence."
+best_for:
+  - "Random survival forest diagnostics combining error trajectory and variable importance."
+  - "Model-screening figures for predictor prioritization."
+bad_for:
+  - "Kaplan-Meier curves."
+  - "Heatmaps."
+  - "Network or source-target-weight diagrams."
+  - "Single generic line charts without importance ranking."
+style_notes:
+  - "Use plain white base-R style panels with black axes."
+  - "Keep the zero line visible in the importance panel."
+  - "Dense y labels are part of the source grammar but may be hard to read."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Strong source and visual evidence exist, but the standard CSV contract and plot.py do not encode the observed diagnostic composite."
+  exclusion_risks:
+    - "generic line renderer mismatch"
+    - "compatibility columns may imply false network or interval roles"
+confidence:
+  overall: 0.86
+  visual_identification: 0.95
+  data_contract_assessment: 0.9
+  rebuild_path_assessment: 0.72
+proposed_metadata_patch:
+  retrieval_tier: "support"
+  visual_grammar:
+    geometry: "model_diagnostic_composite"
+    subtype: "random_survival_forest_error_importance"
+    required_data_roles: ["tree_index", "error_rate", "variable_label", "variable_importance"]
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "model_diagnostic_composite"
+    subtype: "random_survival_forest_error_importance"
+

@@ -1,0 +1,108 @@
+case_id: "plotcase_network_微生物与代谢物共生网络图"
+annotation_version: "deep_dossier_review_v1"
+annotation_status:
+  level: "problem_cohort_deep_review"
+  status: "reviewed_no_edits"
+  human_review_required: true
+  reason: "standardized CSV is synthetic/compatibility data while rebuilt.png is a case-level cover fallback"
+annotator_model: "gpt-5-codex"
+reviewed_at: "2026-05-21"
+evidence:
+  metadata: "reviewed"
+  agent_guide: "reviewed"
+  plot_entry: "plot.py calls generic retinue network renderer"
+  data_main_profile: "7 rows, 13 columns, synthetic N1-N7 node-link demo"
+  optional_csv: "absent"
+  raw_scripts_docs: "original R/igraph code, SIF edge files, node annotation TSVs, docs reviewed"
+  output_rebuilt_png: "identical to raw cover and outputs/figure_001_cover.png, 1819x881, nonblank"
+  visual_check: "ok true, non_empty_image true, not_blank true"
+  current_dossier: "reviewed"
+observed_visual_grammar:
+  geometry: "multi_panel_node_link_network"
+  panels:
+    count: 3
+    labels: ["Bog", "Fen", "Palsa"]
+  marks: ["circular metabolite nodes", "square microbial nodes", "positive_negative_edges", "hub_size_emphasis", "bottom color legend"]
+  encodings:
+    node_shape: "metabolite_vs_microbe"
+    node_color: "metabolite elemental composition / microbial phylum categories"
+    node_size: "hub_or_connector status"
+    edge_color: "pp vs np association direction"
+    layout: "igraph automatic per-habitat layout"
+inferred_visual_grammar:
+  source_case_semantics: "microbiome-metabolite association networks across thaw-gradient habitats"
+  original_data_units:
+    edges: "SIF triples from, direction, to"
+    nodes: "annotated node tables with degree, betweenness, node type, type_data, elemental composition"
+  rebuild_class: "case_level_fallback_cover"
+  reusable_abstraction_quality: "weak"
+reviewed_visual_roles:
+  source:
+    status: "compatibility_column"
+    note: "synthetic N ids, not original mass/micro identifiers"
+  target:
+    status: "compatibility_column"
+    note: "synthetic N ids, not original network endpoints"
+  weight:
+    status: "compatibility_column"
+    note: "original SIF has pp/np direction and constant edge.width, not numeric edge weights"
+  true_network_semantics:
+    status: "present_in_raw_only"
+    note: "raw SIF source/target are true network endpoints; raw direction is true association sign"
+canonical_columns:
+  - "source"
+  - "target"
+  - "weight"
+  - "node_id"
+  - "node_label"
+  - "node_group"
+  - "node_size"
+  - "edge_group"
+  - "edge_direction"
+  - "layout_x"
+  - "layout_y"
+  - "source_group"
+  - "target_group"
+required_data_semantics:
+  source: "synthetic compatibility endpoint"
+  target: "synthetic compatibility endpoint"
+  weight: "synthetic renderer weight"
+  true_required_for_case: ["habitat", "edge_from", "edge_to", "association_sign", "node_name", "node_type", "node_shape_class", "node_color_class", "node_hub_status"]
+optional_data_semantics:
+  data_optional_csv: "absent"
+  optional_roles_in_main:
+    node_id: "synthetic node id"
+    node_label: "synthetic label"
+    node_group: "empty"
+    node_size: "empty"
+    edge_group: "empty"
+    edge_direction: "empty"
+    layout_x: "empty"
+    layout_y: "empty"
+optional_modules:
+  habitat_faceting: "required_for_original_but_missing_from_standard_csv"
+  signed_edges: "required_for_original_but_missing_from_standard_csv"
+  node_annotations: "required_for_original_but_missing_from_standard_csv"
+  manual_layout: "not declared"
+false_positive_risks:
+  - "Dossier currently implies source/target/weight are true reusable network roles, but they are synthetic compatibility columns here."
+  - "Retrieval as weighted network may be misleading because original edges encode pp/np sign, not numeric weight."
+  - "Rebuilt preview is a fallback cover, not reproducible output from plot.py/data_main.csv."
+  - "Generic renderer cannot reproduce three habitat panels, shape encodings, hub sizing, or categorical legend."
+best_for:
+  - "Inspiration for microbiome-metabolite multi-panel signed association network styling."
+bad_for:
+  - "Ordinary weighted source-target graph templates."
+  - "Clean CSV-only reproducible network cases."
+style_notes:
+  - "Black background with high-contrast colored nodes and white microbial squares."
+  - "Three horizontally arranged networks with no node labels."
+retrieval_tier_recommendation:
+  tier: "inspiration"
+  rationale: "Visually valuable but should not be treated as core reusable data contract because standard CSV is synthetic and rebuild is fallback cover."
+  exclusion_risks: ["synthetic data abstraction", "case-level fallback", "source/target/weight compatibility semantics only"]
+confidence:
+  overall: "high"
+  visual_grammar: "high"
+  data_semantics: "high"
+  reproducibility_contract: "high"

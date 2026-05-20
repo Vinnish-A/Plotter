@@ -1,0 +1,106 @@
+case_id: "plotcase_基因组图_geneviewer基因簇结构可视化"
+annotation_version: "deep_dossier_review_v1"
+annotation_status:
+  status: "reviewed_problem_cohort"
+  note: "Observed rebuilt image is a pixel-identical static cover fallback; plot.py is a generic scatter entry and data_main is synthetic."
+  human_review_required: true
+annotator_model: "gpt-5-codex"
+reviewed_at: "2026-05-21"
+evidence:
+  files_read:
+    - "metadata.json"
+    - "agent_guide.md"
+    - "plot.py"
+    - "data_main.csv"
+    - "scripts/code.R"
+    - "raw/_plotter_run.R"
+    - "outputs/rebuilt.png"
+    - "outputs/visual_check.json"
+    - "vault/dossiers/plotcase_基因组图_geneviewer基因簇结构可视化.yaml"
+  plot_entry: "calls generic render('scatter'), not geneviewer"
+  rebuilt_image: "pixel-identical to raw/cover.png and outputs/figure_001_cover.png"
+  data_main_profile:
+    rows: 13
+    columns: ["segment_id", "feature_id", "start", "end", "strand", "feature_class", "cluster", "label", "link_id", "similarity", "track", "color_class"]
+    finding: "synthetic genome-grammar demo; not derived from source clusters"
+observed_visual_grammar:
+  family: "genome_cluster_structure"
+  structure: "two horizontal gene-cluster tracks with baselines, directional arrow genes, top legend, species/locus footers, right-side scale bars, and hidden axes"
+  marks: ["gene_arrow", "baseline", "gene_label", "legend_swatch", "cluster_footer", "scale_bar"]
+  encodings: ["genomic_position", "gene_span", "strand_direction", "functional_class_color", "cluster_identity", "gene_name"]
+inferred_visual_grammar:
+  grammar_id: "two_track_gene_cluster_structure"
+  true_source_grammar: "geneviewer GC_chart over source cluster data"
+  current_standard_grammar: "synthetic oriented feature table plus generic scatter-compatible plot entry"
+  mismatch: "standard columns are plausible but current values and plot entry do not reproduce the observed geneviewer grammar"
+reviewed_visual_roles:
+  segment_id: "cluster/segment role; current values are synthetic"
+  feature_id: "gene identifier; current values are placeholders"
+  start: "genomic start coordinate; current values are synthetic"
+  end: "genomic end coordinate; current values are synthetic"
+  strand: "arrow direction"
+  feature_class: "functional class color; current values do not preserve observed legend"
+  label: "gene label; current values are placeholders"
+  link_id: "empty optional field; no synteny/link marks observed"
+  similarity: "empty optional field; no similarity ribbons observed"
+canonical_columns:
+  - "segment_id"
+  - "feature_id"
+  - "start"
+  - "end"
+  - "strand"
+  - "feature_class"
+  - "cluster"
+  - "label"
+required_data_semantics:
+  segment_id: "gene cluster or track identity"
+  feature_id: "gene identifier"
+  start: "feature start coordinate"
+  end: "feature end coordinate"
+  strand: "feature direction"
+  feature_class: "functional class mapped to color"
+  label: "displayed gene name"
+optional_data_semantics:
+  species_footer: "cluster footer text"
+  locus_subtitle: "locus subtitle text"
+  legend_class_labels: "functional class legend labels"
+  class_palette: "functional class color palette"
+  scale_bar_position: "scale bar placement"
+  cluster_reverse_flag: "reverse direction for a track"
+optional_modules:
+  gene_labels:
+    status: "present_in_source_placeholder_only_in_standard_data"
+  cluster_footer:
+    status: "present_in_source_missing_from_standard_data"
+  class_legend_palette:
+    status: "present_in_source_missing_from_standard_data"
+  synteny_or_similarity_links:
+    status: "not_observed"
+  generic_scatter_renderer:
+    status: "not_suitable"
+false_positive_risks:
+  - "Genome columns are schema-compatible but synthetic."
+  - "rebuilt.png matches only because it is a case-level cover fallback."
+  - "plot.py would not regenerate the observed gene-arrow figure from data_main.csv."
+  - "Empty link_id/similarity columns do not prove synteny or homology-link support."
+best_for:
+  - "Visual inspiration for two-track gene cluster diagrams with directional arrows and functional-class legend."
+bad_for:
+  - "Core reusable genome-structure template or clean CSV-to-figure rebuild testing."
+style_notes:
+  - "Sparse axis-free white layout with grey baselines, outlined colored gene arrows, italic labels, and right-side scale bars."
+retrieval_tier_recommendation:
+  tier: "inspiration"
+  rationale: "Observed grammar is useful, but current asset is a static fallback with synthetic data_main and a generic scatter plot entry."
+  exclusion_risks: ["case_level_fallback", "synthetic_data_main", "generic_renderer_entry", "missing_source_data_lineage"]
+confidence:
+  overall: "high"
+  visual_review: "high"
+  source_lineage: "high"
+  limitation: "Original geneviewer widget cannot be statically rebuilt from declared standard data."
+proposed_metadata_patch:
+  retrieval_tier: "inspiration"
+  data_main_status: "synthetic_genome_grammar_demo"
+proposed_dossier_patch:
+  retrieval_tier: "inspiration"
+  data_roles_required_note: "Treat required columns as grammar-compatible placeholders until regenerated from source-equivalent data."

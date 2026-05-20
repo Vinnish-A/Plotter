@@ -1,0 +1,116 @@
+case_id: "figureya_survival_FigureYa197SmoothHaz"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw third-batch output preserved from this thread; original return omitted case_id, annotator_model, and reviewed_at."
+annotator_model: "not_returned_by_asset_deep_annotator"
+reviewed_at: "2026-05-21"
+evidence:
+  annotator_model_missing: true
+  case_dir: "vault/material/figureya_survival_FigureYa197SmoothHaz"
+  reviewed_files:
+    - "metadata.json"
+    - "agent_guide.md"
+    - "plot.py"
+    - "data_main.csv"
+    - "raw/_plotter_run.R"
+    - "raw/FigureYa197SmoothHaz.Rmd"
+    - "docs/FigureYa197SmoothHaz.html"
+    - "outputs/rebuilt.png"
+    - "outputs/visual_check.json"
+    - "vault/dossiers/figureya_survival_FigureYa197SmoothHaz.yaml"
+  optional_csv_present: false
+  rebuilt_png:
+    width: 432
+    height: 576
+    visual_check_ok: true
+    visual_check_note: "nonblank image, minimum resolution passed"
+  source_rebuild:
+    status: "success"
+    generated_source: "raw/smoothHaz.png"
+    script: "raw/FigureYa197SmoothHaz.Rmd"
+  current_standard_entry:
+    plot_py: "generic render('line', 'FigureYa197SmoothHaz')"
+    caution: "current plot.py does not encode the source smooth-hazard/risk-table grammar"
+observed_visual_grammar:
+  figure_type: "stacked survival-analysis composite"
+  panels: ["kernel-smoothed hazard line plot", "number-at-risk table aligned to month ticks"]
+  marks: ["two smoothed colored lines", "risk-count text rows", "left group labels colored to match lines"]
+  encodings:
+    x: "Months, 0 to 72, 12-month breaks"
+    y: "Hazard"
+    color: "gender subgroup, Male blue and Female red"
+    table_values: "subjects at risk by subgroup and time"
+  layout: "vertical two-panel composition with larger hazard panel and smaller risk table"
+  observed_title: "Kernel-smoothing hazard function plot"
+inferred_visual_grammar:
+  inferred: true
+  source_basis: "raw R code uses muhaz, survival::Surv, survminer::ggsurvplot risk.table"
+  likely_data_flow:
+    - "raw survival records with event indicator, event/censoring time, and subgroup"
+    - "grouped muhaz estimates produce Months, Hazard, Subgroup for line panel"
+    - "survfit produces number-at-risk table for same subgroup/time grid"
+  not_supported_by_current_data_main: true
+reviewed_visual_roles:
+  x: "binary compatibility column; not plotted Months"
+  y: "DFI.time-like values; not plotted Hazard"
+  value: "duplicate of y"
+  group: "real role partial; gender subgroup"
+  label: "duplicate of group"
+  facet: "empty compatibility column"
+  source: "duplicate of x; not a relationship role"
+  target: "duplicate of y; not a relationship role"
+  weight: "duplicate of y; not an edge weight"
+  lower_upper: "artificial compatibility columns; no interval ribbon visible"
+canonical_columns:
+  - "time_month"
+  - "hazard"
+  - "subgroup"
+  - "risk_time_month"
+  - "n_at_risk"
+  - "event"
+  - "survival_time_month"
+required_data_semantics:
+  required: ["time grid in months", "smoothed hazard estimate", "subgroup", "risk-table counts"]
+optional_data_semantics:
+  optional: ["raw survival event indicator", "raw survival/censoring time", "censoring horizon", "palette labels"]
+optional_modules:
+  risk_table:
+    status: "required_for_full_visual_equivalence"
+  smoothing_recompute:
+    status: "optional_if_hazard_curve_precomputed"
+  label_layer:
+    status: "simple legend/table row labels only"
+false_positive_risks:
+  - "Current x/y/value/source/target/weight columns are compatibility mappings, not true visual roles."
+  - "lower/upper may be mistaken for uncertainty intervals but no interval ribbon is visible."
+  - "Metadata visual_keywords say bar/ggplot2 while plot.py renders generic line."
+best_for:
+  - "Grouped smoothed hazard curves over follow-up time."
+  - "Survival-analysis figures needing a compact number-at-risk table."
+bad_for:
+  - "Ordinary Kaplan-Meier survival probability curves without hazard estimates."
+  - "Generic line charts lacking survival/event semantics."
+  - "Network or edge semantics despite source/target compatibility columns."
+style_notes:
+  - "Classic white background with black axes and no grid."
+  - "Blue/red two-group palette."
+  - "Legend inside upper-right of hazard panel."
+  - "Risk table shares month axis and uses colored subgroup row labels."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Visually useful source-code rebuild, but standard CSV interface and plot.py are not yet semantically faithful enough for core retrieval."
+confidence:
+  level: "high"
+  score: 0.86
+  limits: ["did not edit or rerun build", "semantics inferred from raw R code and visible output"]
+proposed_metadata_patch:
+  visual_grammar:
+    geometry: "survival_hazard"
+    subtype: "smooth_hazard_with_risk_table"
+  retrieval_tier: "support"
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "survival_hazard"
+    subtype: "smooth_hazard_with_risk_table"
+

@@ -1,0 +1,100 @@
+case_id: "figureya_survival_FigureYa182RFSurvV2"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw third-batch output preserved from this thread."
+annotator_model: "gpt-5"
+reviewed_at: "2026-05-21"
+evidence:
+  files_read:
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/metadata.json"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/agent_guide.md"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/plot.py"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/data_main.csv"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/scripts/FigureYa182RFSurvV2.Rmd"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/data_raw/easy_input_cli.csv"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/data_raw/easy_input_expr.csv"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/outputs/rebuilt.png"
+    - "vault/material/figureya_survival_FigureYa182RFSurvV2/outputs/visual_check.json"
+    - "vault/dossiers/figureya_survival_FigureYa182RFSurvV2.yaml"
+  output_check:
+    rebuilt_png_size: [1728, 1728]
+    visual_check_ok: true
+    original_reference: "raw/error rate and importance derived from package.pdf"
+    selected_rmse: 0.0
+  source_code_evidence:
+    rmd: "randomSurvivalForest::rsf(Surv(OS.time, OS) ~ ., ntree=1000), then randomSurvivalForest::plot.error(surv.rf)"
+    plot_py: "generic line renderer; not sufficient for the observed two-panel diagnostic"
+  data_main_profile:
+    columns: ["x", "y", "value", "group", "label", "facet", "source", "target", "weight", "lower", "upper"]
+    row_count: 800
+    compatibility_columns: ["source", "target", "weight", "lower", "upper"]
+observed_visual_grammar:
+  figure_family: "random_survival_forest_diagnostic"
+  subtype: "error_rate_and_variable_importance"
+  layout: ["left error-rate line panel", "right variable-importance horizontal bar/segment panel"]
+  marks: ["black error-rate line", "positive blue horizontal importance bars", "negative red horizontal importance bars", "dashed zero reference line", "dense gene label rail"]
+inferred_visual_grammar:
+  grammar_id: "random_survival_forest_error_importance_composite"
+  statistical_transform: ["univariate Cox filtering", "random survival forest fit", "out-of-bag error trajectory", "variable importance"]
+  not_supported: ["Kaplan-Meier survival curve", "heatmap", "generic interpolated line chart", "source-target network"]
+reviewed_visual_roles:
+  tree_index: "x-axis for error-rate trajectory"
+  error_rate: "model error per tree count"
+  variable_label: "gene/predictor labels on importance panel"
+  variable_importance: "signed model importance value"
+  zero_reference: "dashed vertical line at importance 0"
+  source_target_weight: "compatibility columns only; no relationship semantics supported"
+canonical_columns:
+  - "tree_index"
+  - "error_rate"
+  - "variable_label"
+  - "variable_importance"
+  - "sign"
+required_data_semantics:
+  required: ["model error trajectory", "predictor names", "signed variable importance values"]
+optional_data_semantics:
+  optional: ["importance cutoff", "rank/order", "palette for positive/negative importance", "cox filter threshold"]
+optional_modules:
+  error_rate_panel:
+    status: "present"
+  variable_importance_panel:
+    status: "present"
+  survival_curve:
+    status: "absent"
+  heatmap_body:
+    status: "absent"
+false_positive_risks:
+  - "Do not treat metadata visual_keywords heatmap as observed grammar."
+  - "Do not treat dossier subtype survival_curve as visually supported."
+  - "Do not interpret source/target/weight columns as graph roles."
+  - "Do not rely on plot.py generic line renderer as evidence of faithful rebuild."
+best_for:
+  - "Random survival forest diagnostics combining error trajectory and variable importance."
+  - "Model-screening figures for predictor prioritization."
+bad_for:
+  - "Kaplan-Meier curves."
+  - "Heatmaps."
+  - "Network or source-target-weight diagrams."
+style_notes:
+  - "Use plain white base-R style panels with black axes."
+  - "Keep right-panel zero line visually explicit."
+  - "Dense y labels are part of the source grammar but become hard to read at this count."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Strong source and visual evidence exist, but the standard CSV contract and plot.py do not encode the observed diagnostic composite."
+confidence:
+  overall: 0.86
+  visual_identification: 0.95
+  data_contract_assessment: 0.9
+  rebuild_path_assessment: 0.72
+proposed_metadata_patch:
+  visual_grammar:
+    geometry: "model_diagnostic_composite"
+    subtype: "random_survival_forest_error_importance"
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "model_diagnostic_composite"
+    subtype: "random_survival_forest_error_importance"
+  retrieval_tier: "support"
+

@@ -1,0 +1,75 @@
+case_id: "figures4papers_figure_Dispersion_idea_png"
+annotation_version: "deep_dossier_review_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw review condensed from visible subagent output."
+  human_review_required: true
+annotator_model: "GPT-5 Codex"
+reviewed_at: "2026-05-21"
+evidence:
+  files_read: ["metadata.json", "agent_guide.md", "plot.py", "data_main.csv", "raw/plot_idea.py", "scripts/plot_idea.py", "raw/plot_illustration.py", "outputs/rebuilt.png", "outputs/visual_check.json", "vault/dossiers/figures4papers_figure_Dispersion_idea_png.yaml"]
+  data_main_profile:
+    rows: 64
+    columns: ["x", "y", "z", "value", "panel", "group", "label", "surface", "trajectory", "color"]
+    assessment: "synthetic 8x8 radial grid; not plotted random point locations"
+  plot_entry: "copies outputs/figure.png to outputs/rebuilt.png"
+  output_check:
+    rebuilt_png_size: [5400, 1800]
+    visual_check_ok: true
+observed_visual_grammar:
+  figure_type: "three_panel_hemisphere_dispersion_diagram"
+  geometry: "rendered shaded disk with radial point spokes"
+  marks: ["gray shaded circular backgrounds", "blue outlined points", "black dashed radial spokes"]
+inferred_visual_grammar:
+  grammar_id: "abstract_dispersion_on_projected_hemisphere"
+  transformations: ["sample random points", "render hemisphere shading", "draw dashed radial connectors"]
+  not_supported: ["empirical PCA", "true 3D manifold plot", "trajectory plot", "labeled scatter"]
+reviewed_visual_roles:
+  point_x: "synthetic sampled coordinate in raw script; not preserved in data_main.csv"
+  point_y: "synthetic sampled coordinate in raw script; not preserved in data_main.csv"
+  panel_pattern: "three different dispersion examples"
+  label: "all missing; no label layer"
+  trajectory: "all missing; no trajectory layer"
+canonical_columns:
+  - "panel_id"
+  - "point_x"
+  - "point_y"
+  - "connector_x0"
+  - "connector_y0"
+  - "point_style"
+required_data_semantics:
+  panel_id: "panel assignment"
+  point_x: "projected x coordinate"
+  point_y: "projected y coordinate"
+optional_data_semantics:
+  hemisphere_shading: "computed background"
+  point_style: "panel or group style"
+  label: "not observed"
+optional_modules:
+  labels:
+    status: "not_supported"
+  trajectories:
+    status: "not_supported"
+  direct_png_fallback:
+    status: "active"
+false_positive_risks:
+  - "Do not treat data_main x/y/z/value as plotted random point data."
+  - "Do not retrieve as empirical PCA, manifold learning, or true 3D scatter."
+  - "Blank label, trajectory, and color columns are not optional modules."
+best_for:
+  - "Inspiration for abstract dispersion diagrams on projected hemispheres."
+bad_for:
+  - "Data-driven PCA/manifold retrieval."
+  - "Reproducible plotted coordinates from data_main.csv."
+style_notes:
+  - "Minimal white canvas, three circular shaded panels, blue outlined points, black dashed spokes."
+retrieval_tier_recommendation:
+  tier: "inspiration"
+  rationale: "Useful visual idea, but synthetic, image-first, and rebuilt by direct PNG copy rather than the standard CSV interface."
+  exclusion_risks: ["case-level fallback", "synthetic data abstraction", "generic/direct-copy renderer", "misleading 3d_manifold metadata"]
+confidence:
+  observed_visual_grammar: "high"
+  raw_script_semantics: "medium"
+  current_data_contract: "low"
+  retrieval_tier: "high"
+

@@ -149,5 +149,81 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Source-backed and visually useful, but current canonical CSV/plot.py contract is not faithful enough for default core recommendation.",
+  "exclusion_risks": [
+    "generic scatter renderer mismatch",
+    "canonical CSV mismatch"
+  ],
+  "annotation_status": {
+    "status": "reviewed_with_corrections_recommended",
+    "note": "Observed asset is a grouped differential-expression volcano-style strip plot; generic CSV roles should not be treated as complete visual evidence.",
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21T01:22:18+08:00",
+    "annotator_model": "gpt-5 codex",
+    "review_version": "deep_annotation_v1"
+  },
+  "reviewed_visual_grammar": {
+    "figure_type": "grouped_differential_expression_volcano_strip",
+    "family": "grouped_scatter_strip",
+    "layout": [
+      "wide cartesian panel",
+      "vertical cluster bands",
+      "colored center label strip",
+      "two-class legend"
+    ],
+    "marks": [
+      "jittered points",
+      "background rectangles",
+      "cluster strip labels",
+      "repelled gene labels",
+      "connector segments"
+    ],
+    "encodings": {
+      "x": "cluster category",
+      "y": "avg_log2FC",
+      "color": "derived up/down class",
+      "label": "selected genes"
+    },
+    "geometry": "grouped_scatter_strip",
+    "subtype": "multi_group_differential_expression_volcano",
+    "grammar_id": "grouped_differential_expression_volcano_strip",
+    "required_data_roles": [
+      "cluster",
+      "avg_log2FC"
+    ],
+    "optional_data_roles": [
+      "gene",
+      "p_val_adj",
+      "cluster_order",
+      "cluster_color"
+    ],
+    "optional_modules": {
+      "label_selection": {
+        "status": "supported_by_original_R"
+      },
+      "center_group_strip": {
+        "status": "supported_by_original_R"
+      },
+      "generic_scatter_renderer": {
+        "status": "compatibility_only_not_observed_grammar"
+      }
+    },
+    "false_positive_risks": [
+      "Do not treat current generic x/y/value/size_value/threshold/facet/highlight fields as complete evidence for the observed grammar.",
+      "Do not retrieve as a classic volcano plot unless categorical multi-group x layout is acceptable.",
+      "Current plot.py calls a generic scatter renderer and does not express the observed R grammar."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "cluster": "required x/category and strip label role",
+    "avg_log2FC": "required signed y/effect-size role",
+    "type": "derived up/down color class",
+    "gene": "optional selected point label",
+    "p_val_adj": "optional label-selection filter",
+    "p_val": "raw statistical field, not visibly encoded",
+    "pct_1": "raw field, not visibly encoded",
+    "pct_2": "raw field, not visibly encoded"
   }
 }

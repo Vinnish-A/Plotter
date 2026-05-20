@@ -1,10 +1,13 @@
 id: plotcase_sankey_多层级桑基图
 title: 多层级桑基图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  note: Observed visual is a multi-stage Sankey/alluvial flow with explicit stage
+    semantics.
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21T01:12:07+08:00'
+  annotator_model: gpt-5.5 high reasoning subagent
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/plotcase_sankey_多层级桑基图
   source:
@@ -291,3 +294,50 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: support
+retrieval_rationale: Good reusable staged-flow grammar; recommended as support rather
+  than core until visual audit confirms exact output fidelity.
+exclusion_risks:
+- stage semantics lost by generic network retrieval
+reviewed_visual_grammar:
+  figure_type: multi_stage_sankey_alluvial
+  layout:
+  - ordered stages
+  - nodes within each stage
+  - ribbons between adjacent stages
+  marks:
+  - weighted ribbons
+  - node/stratum blocks
+  - labels
+  encodings:
+    stage: x or ordered stage position
+    node: stratum/category within a stage
+    value: ribbon thickness
+    group: optional color grouping
+  geometry: sankey
+  subtype: multi_stage_alluvial
+  grammar_id: multi_level_sankey
+  optional_modules:
+    group_coloring:
+      status: supported
+    manual_ordering:
+      status: supported
+    node_label_overrides:
+      status: supported
+    network_weighted_edges:
+      status: not_supported_as_network_semantics
+  false_positive_risks:
+  - Do not collapse stage/node/next_stage/next_node into generic source/target unless
+    preserving stage semantics.
+  - Do not retrieve as a free-form network graph.
+reviewed_visual_roles:
+  stage: current ordered stage
+  node: current stage category
+  next_stage: target ordered stage
+  next_node: target stage category
+  value: flow magnitude mapped to ribbon width
+  flow_id: optional path identifier for continuity
+  group: optional flow group/color
+  node_color: optional explicit node color
+  label: optional display label
+  order: optional stage or node ordering

@@ -1,0 +1,111 @@
+case_id: "plotmaster_003气泡图+相关性热图"
+annotation_version: "deep_annotation_v1"
+annotation_status:
+  status: "reviewed"
+  note: "Observed figure is a correlation bubble matrix, not a clustered or annotated heatmap."
+annotator_model: "gpt-5.5 high reasoning subagent"
+reviewed_at: "2026-05-21T01:01:39+08:00"
+evidence:
+  files_read:
+    - "vault/material/plotmaster_003气泡图+相关性热图/metadata.json"
+    - "vault/material/plotmaster_003气泡图+相关性热图/agent_guide.md"
+    - "vault/material/plotmaster_003气泡图+相关性热图/plot.R"
+    - "vault/material/plotmaster_003气泡图+相关性热图/scripts/buble_plot.R"
+    - "vault/material/plotmaster_003气泡图+相关性热图/data_main.csv"
+    - "vault/material/plotmaster_003气泡图+相关性热图/outputs/rebuilt.png"
+    - "vault/material/plotmaster_003气泡图+相关性热图/outputs/visual_check.json"
+    - "vault/dossiers/plotmaster_003气泡图+相关性热图.yaml"
+  data_profile:
+    rows: 190
+    columns: ["group", "gene", "correlation", "p_value", "direction", "p_value_bin", "abs_correlation"]
+  visual_evidence:
+    rebuilt_png_size: [1728, 864]
+    visual_check_ok: true
+    mean_stddev: 26.9988
+observed_visual_grammar:
+  figure_type: "correlation_bubble_matrix"
+  layout: ["single rectangular group-by-gene matrix", "rotated gene labels", "right-side legends"]
+  marks: ["sized circles", "positive-direction overlay circles"]
+  encodings:
+    x: "gene"
+    y: "group"
+    size: "abs_correlation"
+    sign: "direction"
+    color_or_fill: "p_value_bin"
+inferred_visual_grammar:
+  reusable_pattern: "Group-by-feature association matrix where bubble size shows magnitude and split palettes show sign/significance."
+  not_supported: ["clustered heatmap", "annotation tracks", "dendrograms", "network source-target-weight relationships"]
+reviewed_visual_roles:
+  group: "row category mapped to y-axis"
+  gene: "column feature mapped to x-axis"
+  correlation: "signed association metric, parent of direction and abs_correlation"
+  p_value: "significance value used or preserved for binning"
+  direction: "association sign"
+  p_value_bin: "ordered significance legend bin"
+  abs_correlation: "bubble-size magnitude"
+canonical_columns:
+  - "group: observed row category"
+  - "gene: observed column feature"
+  - "correlation: observed signed association value"
+  - "p_value: observed significance value; adjustment semantics not proven"
+  - "direction: observed sign category"
+  - "p_value_bin: observed ordered display bin"
+  - "abs_correlation: observed bubble-size magnitude"
+required_data_semantics:
+  group: "categorical row group identifier"
+  gene: "categorical feature identifier"
+  correlation: "signed quantitative association"
+  direction: "positive/negative sign of association"
+  abs_correlation: "nonnegative magnitude for bubble size"
+  p_value_bin: "ordered significance bin"
+optional_data_semantics:
+  p_value: "can generate p_value_bin if bins are not precomputed"
+  axis_order: "not materialized; would control row/column ordering"
+optional_modules:
+  significance_binning:
+    status: "supported if p_value is available"
+  annotation_tracks:
+    status: "not supported by observed figure"
+  facet_or_detail_panel:
+    status: "not supported by observed figure"
+false_positive_risks:
+  - "Do not retrieve as clustered heatmap, annotated heatmap, dendrogram, or tile-only heatmap."
+  - "Do not infer source/target/weight network semantics; those columns are absent."
+  - "Legend text around p/FDR needs review before statistical claims."
+best_for:
+  - "Group-by-feature correlation bubble matrices."
+  - "Association summaries with magnitude, sign, and significance tiers."
+bad_for:
+  - "Continuous tile heatmaps."
+  - "Clustered or annotated heatmaps."
+  - "Network or source-target-weight diagrams."
+style_notes:
+  - "Wide white ggplot-style panel with black border."
+  - "Blue palette for negative/base significance and red/pink palette for positive significance."
+  - "Rotated x labels and right-side legends are central to readability."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Reusable source-backed bubble-matrix grammar, but should not be a core annotated-heatmap exemplar."
+confidence:
+  overall: 0.86
+  visual_grammar: 0.93
+  data_roles: 0.90
+  caveats:
+    - "Current rebuilt image and plot.R legend titles may not fully agree."
+proposed_metadata_patch:
+  visual_grammar:
+    geometry: "bubble_matrix"
+    subtype: "correlation_bubble_heatmap"
+  data_contract:
+    required_mappings: ["group", "gene", "correlation", "p_value", "direction", "p_value_bin", "abs_correlation"]
+    optional_mappings: []
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "bubble_matrix"
+    subtype: "correlation_bubble_heatmap"
+  optional_modules:
+    annotation_track:
+      status: "remove_or_disable"
+    detail_panel:
+      status: "remove_or_disable"
+  retrieval_tier: "support"

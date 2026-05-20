@@ -121,5 +121,80 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": true,
     "synthetic_data": true
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Strong visual idea, but current asset is synthetic-data and case-level fallback, not a true CSV-driven rebuild.",
+  "exclusion_risks": [
+    "synthetic_data",
+    "case_level_fallback",
+    "generic_renderer_rebuild",
+    "empty_compatibility_columns"
+  ],
+  "annotation_status": {
+    "status": "fallback_synthetic_inspiration_only",
+    "note": "Observed figure is a copied two-panel diffusion matrix plus swiss-roll neighborhood image; standard CSV and plot entry do not reproduce it.",
+    "human_review_required": true,
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "codex",
+    "review_version": "deep_annotation_v1"
+  },
+  "reviewed_visual_grammar": {
+    "figure_type": "two_panel_diffusion_manifold",
+    "layout": [
+      "transition_matrix_heatmap",
+      "swiss_roll_point_cloud_network"
+    ],
+    "marks": [
+      "red matrix cells",
+      "gray local edges",
+      "colored translucent points"
+    ],
+    "encodings": {
+      "matrix_intensity": "transition probability",
+      "point_position": "2D manifold embedding",
+      "point_color": "roll parameter",
+      "edge_alpha": "transition probability"
+    },
+    "not_observed": [
+      "3d axes",
+      "labels",
+      "threshold lines",
+      "focus callouts",
+      "marginal density"
+    ],
+    "geometry": "diffusion_manifold_composite",
+    "subtype": "transition_matrix_plus_swiss_roll_network",
+    "grammar_id": "diffusion_matrix_plus_swiss_roll_neighborhood",
+    "optional_modules": {
+      "matrix_panel": {
+        "status": "observed_but_not_encoded_by_current_csv"
+      },
+      "manifold_edge_layer": {
+        "status": "observed_but_not_encoded_by_current_csv"
+      },
+      "label_layer": {
+        "status": "not_supported"
+      },
+      "trajectory_layer": {
+        "status": "not_supported"
+      }
+    },
+    "false_positive_risks": [
+      "Do not retrieve as clean PCA, 3D manifold, label, trajectory, or focus-callout template.",
+      "Compatibility columns are not evidence of supported optional modules.",
+      "Rendered image fallback should not be treated as data-driven Retinue rebuild."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "matrix_row": "transition matrix row index",
+    "matrix_column": "transition matrix column index",
+    "transition_probability": "matrix cell intensity and edge strength",
+    "node_id": "manifold point identity",
+    "x": "manifold x coordinate in true grammar; synthetic grid coordinate in current CSV",
+    "y": "manifold y coordinate in true grammar; synthetic grid coordinate in current CSV",
+    "roll_parameter": "point color parameter",
+    "label": "empty compatibility column; not an active label layer",
+    "trajectory": "empty compatibility column; not an active trajectory layer"
   }
 }

@@ -1,0 +1,126 @@
+case_id: "plotcase_point_多层级曼哈顿图"
+annotation_version: "deep_dossier_review_v1"
+annotation_status:
+  status: "metadata_and_dossier_need_correction"
+  note: "Observed figure is a circular two-ring CMplot Manhattan plot; current plot.py is a generic scatter renderer and data_main is a synthetic placeholder."
+  human_review_required: true
+annotator_model: "GPT-5 Codex"
+reviewed_at: "2026-05-21"
+evidence:
+  files_read:
+    - "metadata.json"
+    - "agent_guide.md"
+    - "plot.py"
+    - "data_main.csv"
+    - "scripts/code.R"
+    - "raw/code.R"
+    - "docs/*.md"
+    - "outputs/rebuilt.png"
+    - "outputs/visual_check.json"
+    - "vault/dossiers/plotcase_point_多层级曼哈顿图.yaml"
+  data_main_profile:
+    rows: 16
+    columns: ["chromosome", "position", "score", "feature_id", "trait", "threshold", "highlight", "label", "ring"]
+    assessment: "synthetic compact demo; only 4 chromosomes, one trait, empty ring/label; not enough for observed 20-sector two-ring circular Manhattan"
+  optional_csv: "absent"
+  raw_source_evidence:
+    script: "CMplot(pig60K, type='p', plot.type='c', r=0.5, cir.axis=TRUE, outward=FALSE)"
+    source_data: "CMplot built-in pig60K selected columns 1:5"
+  output_check:
+    rebuilt_png_size: [1458, 1256]
+    visual_check_ok: true
+    fallback_source: "outputs/figure_001_cover.png"
+observed_visual_grammar:
+  figure_type: "circular_multi_trait_manhattan_plot"
+  geometry: "radial_genomic_scatter"
+  layout: "single circular plot with outer chromosome ideogram and two concentric Manhattan point tracks"
+  marks: ["black-white outer chromosome sector band", "rotated chromosome labels", "colored genomic scatter points", "two concentric radial point rings", "radial grid circles"]
+  encodings:
+    angle: "chromosome plus genomic position"
+    radius: "Manhattan score"
+    color: "chromosome category"
+    ring: "trait layer"
+inferred_visual_grammar:
+  grammar_id: "cmplot_circular_multilevel_manhattan"
+  statistical_unit: "SNP/genomic marker by chromosome, position, and multiple trait scores"
+  data_source_best_match: "CMplot built-in pig60K"
+  not_supported: ["ordinary Cartesian scatter", "quadrant plot", "network", "generic threshold scatter"]
+reviewed_visual_roles:
+  chromosome: "valid conceptual role, but current CSV only has chr1-chr4 placeholders"
+  position: "valid conceptual role, but current values are synthetic"
+  score: "valid single-track role, but observed figure needs multiple trait/ring scores"
+  feature_id: "marker/SNP identifier role, placeholder var1-var16 in current CSV"
+  trait: "should distinguish concentric rings; current CSV has only trait_a"
+  ring: "required for observed two-ring grammar if long-form; empty in current CSV"
+  threshold: "not visibly drawn"
+  highlight: "not visibly drawn"
+canonical_columns:
+  - "marker_id"
+  - "chromosome"
+  - "position"
+  - "trait"
+  - "score"
+  - "ring"
+required_data_semantics:
+  marker_id:
+    kind: "categorical"
+    role: "genomic marker identifier"
+  chromosome:
+    kind: "ordered categorical"
+    role: "outer sector and angular grouping"
+  position:
+    kind: "quantitative"
+    role: "within-chromosome angular coordinate"
+  trait:
+    kind: "categorical"
+    role: "concentric Manhattan track identity"
+  score:
+    kind: "quantitative"
+    role: "radial point distance"
+optional_data_semantics:
+  chromosome_label: "outer rotated label"
+  chromosome_color: "sector point color palette"
+  chromosome_length: "sector width calibration"
+  radial_ticks: "circular grid and tick labels"
+optional_modules:
+  circular_ideogram_band:
+    status: "present_in_observed_output_not_current_data_main"
+    requires: ["chromosome", "chromosome_order", "chromosome_length"]
+  concentric_trait_tracks:
+    status: "present_in_observed_output_not_current_data_main"
+    requires: ["trait", "ring", "score"]
+  generic_scatter_renderer:
+    status: "not_supported_for_observed_asset"
+false_positive_risks:
+  - "Do not treat plot.py render('scatter') as evidence of the observed grammar."
+  - "chromosome/position/score names are conceptually compatible but current values are synthetic placeholders."
+  - "Empty ring column can hide the missing two-track structure."
+  - "Fallback rebuilt.png is a finished cover image, not a clean standardized rebuild from data_main.csv."
+best_for:
+  - "Visual inspiration for CMplot-style circular multi-trait Manhattan figures."
+  - "Examples needing chromosome ideogram sectors plus concentric genomic score tracks."
+bad_for:
+  - "Direct reusable Vault template without reconstructing real pig60K-like marker data."
+  - "Cartesian scatter, quadrant/outlier plots, or single-threshold scatter retrieval."
+style_notes:
+  - "Large white canvas with dense centered circular body."
+  - "Bold black outer chromosome band with white separators."
+retrieval_tier_recommendation:
+  tier: "inspiration"
+  rationale: "Observed visual grammar is strong and distinctive, but the case is a fallback cover with synthetic data_main and a generic scatter entry rather than a reproducible standardized circular Manhattan rebuild."
+  exclusion_risks: ["case_level_fallback", "synthetic_data_main", "generic_renderer_entry", "missing_real_multitrait_marker_table"]
+confidence:
+  observed_visual_grammar: "high"
+  raw_script_semantics: "high"
+  current_data_contract: "low"
+  retrieval_tier: "high"
+proposed_metadata_patch:
+  retrieval_tier: "inspiration"
+  visual_grammar:
+    geometry: "radial_genomic_scatter"
+    subtype: "circular_multi_trait_manhattan"
+    required_data_roles: ["marker_id", "chromosome", "position", "trait", "score"]
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "radial_genomic_scatter"
+    subtype: "circular_multi_trait_manhattan"

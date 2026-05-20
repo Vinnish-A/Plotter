@@ -172,5 +172,77 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Source-backed and visually useful, but current data_main.csv and plot.py require reabstraction before core retrieval.",
+  "exclusion_risks": [
+    "generic line renderer mismatch",
+    "compatibility columns may imply false network or interval roles"
+  ],
+  "annotation_status": {
+    "status": "reviewed_with_contract_mismatch",
+    "note": "Observed visual is a smooth-hazard survival composite with risk table; current standard plot.py and data_main.csv do not encode that grammar.",
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "not_returned_by_asset_deep_annotator",
+    "review_version": "deep_annotation_v1"
+  },
+  "reviewed_visual_grammar": {
+    "figure_type": "smooth_hazard_with_risk_table",
+    "family": "survival_hazard",
+    "layout": [
+      "upper kernel-smoothed hazard panel",
+      "lower number-at-risk table aligned to month ticks"
+    ],
+    "marks": [
+      "smoothed group lines",
+      "risk-count text rows",
+      "colored subgroup labels"
+    ],
+    "encodings": {
+      "x": "months",
+      "y": "hazard",
+      "color": "subgroup",
+      "table_text": "subjects at risk by subgroup and time"
+    },
+    "geometry": "survival_hazard",
+    "subtype": "smooth_hazard_with_risk_table",
+    "required_data_roles": [
+      "time_month",
+      "hazard",
+      "subgroup"
+    ],
+    "grammar_id": "smooth_hazard_survival_composite",
+    "optional_modules": {
+      "risk_table": {
+        "status": "present_and_required_for_visual_match"
+      },
+      "smoothing_recompute": {
+        "status": "optional_if_hazard_curve_precomputed"
+      },
+      "confidence_interval": {
+        "status": "not_present"
+      },
+      "network_relationships": {
+        "status": "not_supported"
+      }
+    },
+    "false_positive_risks": [
+      "source/target/weight are compatibility columns and must not be treated as network roles.",
+      "lower/upper are compatibility columns and must not be treated as uncertainty intervals without new evidence.",
+      "Current plot.py generic line renderer is not evidence of faithful smooth-hazard rendering."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "time_month": "required x role for hazard curve",
+    "hazard": "required y role for smoothed hazard estimate",
+    "subgroup": "required group/color role",
+    "risk_time_month": "optional/supporting x role for risk table",
+    "n_at_risk": "optional/supporting text value for risk table",
+    "source": "compatibility duplicate; not a relationship role",
+    "target": "compatibility duplicate; not a relationship role",
+    "weight": "compatibility duplicate; not an edge weight",
+    "lower": "compatibility-only; no interval ribbon evidenced",
+    "upper": "compatibility-only; no interval ribbon evidenced"
   }
 }

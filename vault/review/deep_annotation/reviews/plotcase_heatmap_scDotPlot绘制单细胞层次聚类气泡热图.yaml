@@ -1,0 +1,97 @@
+case_id: "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图"
+annotation_version: "deep_dossier_review_v1"
+annotation_status:
+  status: "reviewed_problem_cohort"
+  file_edits: false
+  human_review_required: true
+  reason: "Live asset is visually useful but is a case-level rendered-output fallback with synthetic CSV."
+annotator_model: "GPT-5 Codex"
+reviewed_at: "2026-05-21"
+evidence:
+  files_read:
+    - "metadata.json"
+    - "agent_guide.md"
+    - "plot.py"
+    - "data_main.csv"
+    - "raw/code.R"
+    - "outputs/visual_check.json"
+    - "vault/dossiers/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图.yaml"
+  optional_csv: "absent"
+  rebuilt_png_size: [2278, 1600]
+  visual_check_ok: true
+  rebuild_class:
+    source_code_rebuild: false
+    generic_renderer_rebuild: true
+    case_level_fallback: true
+    synthetic_data: true
+observed_visual_grammar:
+  plot_family: "single-cell clustered dot heatmap"
+  structure: ["dot matrix body", "row and column dendrograms", "row and column annotation strips", "gene labels", "cell-subtype labels", "color and size legends"]
+  marks: ["matrix circles", "categorical annotation tiles", "dendrogram branches", "legend swatches"]
+  encodings:
+    color: "continuous log-count expression"
+    size: "percent of cells"
+    rows: "marker genes"
+    columns: "cell groups"
+inferred_visual_grammar:
+  grammar_id: "single_cell_clustered_dot_heatmap"
+  source_basis: "scDotPlot on ZeiselBrainData"
+  not_supported_by_current_csv: ["source-derived expression values", "source-derived annotations", "clustering/order"]
+reviewed_visual_roles:
+  feature_id: "marker gene row identity"
+  cell_group: "cell subtype/cluster column identity"
+  expression_value: "continuous expression value encoded by color"
+  percent_cells: "prevalence encoded by dot size"
+  feature_annotation: "row annotation class"
+  cell_group_annotation: "column annotation class"
+  current_row_id_column_id: "synthetic placeholders only"
+  current_label_facet: "empty compatibility fields"
+canonical_columns:
+  - "feature_id"
+  - "cell_group"
+  - "expression_value"
+  - "percent_cells"
+  - "feature_annotation"
+  - "cell_group_annotation"
+  - "feature_order"
+  - "cell_group_order"
+required_data_semantics:
+  feature_id: "marker gene row identity"
+  cell_group: "cell subtype/cluster column identity"
+  expression_value: "continuous expression/log-count value for color"
+  percent_cells: "continuous prevalence value for dot size"
+optional_data_semantics:
+  feature_annotation: "marker class or parent gene class strip"
+  cell_group_annotation: "parent cell class strip"
+  dendrogram_or_order: "row/column clustering or explicit order"
+  palette: "categorical group colors and continuous log-count ramp"
+  labels: "gene and cell-subtype display labels"
+optional_modules:
+  dendrograms:
+    observed: true
+    available_from_main_csv: false
+  annotation_tracks:
+    observed: true
+    available_from_main_csv: "only synthetic placeholders"
+  label_layer:
+    observed: true
+    available_from_main_csv: false
+false_positive_risks:
+  - "Current data_main.csv is synthetic and must not be read as source-derived expression data."
+  - "Empty label/facet fields do not prove optional label or facet support."
+  - "Case is fallback/generic, not a clean scDotPlot rebuild."
+best_for:
+  - "Inspiration for clustered single-cell dot heatmaps with color and size matrix encodings."
+bad_for:
+  - "Clean source-code reproducibility examples or source-derived single-cell expression reconstruction."
+style_notes:
+  - "Dense matrix body with attached annotation strips, external labels, and separate color and size legends."
+retrieval_tier_recommendation:
+  tier: "inspiration"
+  rationale: "Strong visual grammar, but standardized data and rebuild path are synthetic/generic/fallback-backed."
+  exclusion_risks: ["case-level fallback", "synthetic data_main.csv", "generic renderer", "missing source-derived optional modules"]
+confidence:
+  overall: "high"
+  visual_observation: "high"
+  source_rebuild_assessment: "high"
+  data_semantics: "medium"

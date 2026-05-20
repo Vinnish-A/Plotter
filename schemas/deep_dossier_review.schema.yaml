@@ -1,0 +1,86 @@
+type: object
+required:
+  - case_id
+  - annotation_version
+  - annotation_status
+  - annotator_model
+  - reviewed_at
+  - evidence
+  - observed_visual_grammar
+  - inferred_visual_grammar
+  - reviewed_visual_roles
+  - canonical_columns
+  - required_data_semantics
+  - optional_data_semantics
+  - optional_modules
+  - false_positive_risks
+  - best_for
+  - bad_for
+  - style_notes
+  - retrieval_tier_recommendation
+  - confidence
+properties:
+  case_id:
+    type: string
+  annotation_version:
+    type: string
+  annotation_status:
+    type: object
+  annotator_model:
+    type: string
+  reviewed_at:
+    type: string
+  evidence:
+    type: object
+  observed_visual_grammar:
+    type: object
+  inferred_visual_grammar:
+    type: object
+  reviewed_visual_roles:
+    type: object
+  canonical_columns:
+    type: array
+    items:
+      type: string
+  required_data_semantics:
+    type: object
+  optional_data_semantics:
+    type: object
+  optional_modules:
+    type: object
+  false_positive_risks:
+    type: array
+    items:
+      type: string
+  best_for:
+    type: array
+    items:
+      type: string
+  bad_for:
+    type: array
+    items:
+      type: string
+  style_notes:
+    type: array
+    items:
+      type: string
+  retrieval_tier_recommendation:
+    type: object
+    required:
+      - tier
+      - rationale
+    properties:
+      tier:
+        enum: [core, support, inspiration, archive]
+      rationale:
+        type: string
+      exclusion_risks:
+        type: array
+        items:
+          type: string
+  confidence:
+    type: object
+  proposed_metadata_patch:
+    type: object
+  proposed_dossier_patch:
+    type: object

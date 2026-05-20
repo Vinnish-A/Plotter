@@ -1,0 +1,111 @@
+case_id: "plotcase_boxplot_多分组分面小提琴箱线图"
+annotation_version: "deep_annotation_v1"
+annotation_status:
+  status: "complete_with_contract_mismatch_noted"
+  note: "Observed image is a 22-panel faceted violin-box-jitter figure; generic box renderer is not sufficient evidence."
+annotator_model: "gpt-5.5 high reasoning subagent"
+reviewed_at: "2026-05-21T01:02:13+08:00"
+evidence:
+  files_read:
+    - "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/metadata.json"
+    - "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/agent_guide.md"
+    - "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/plot.py"
+    - "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/scripts/code.R"
+    - "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/data_main.csv"
+    - "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/outputs/rebuilt.png"
+    - "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/outputs/visual_check.json"
+    - "vault/dossiers/plotcase_boxplot_多分组分面小提琴箱线图.yaml"
+  visual_audit:
+    selected_original: "raw/cover.png"
+    selected_rmse: 0.0
+  visual_evidence:
+    rebuilt_png_size: [1944, 1498]
+    visual_check_ok: true
+observed_visual_grammar:
+  plot_family: "distribution_comparison"
+  geometry: "faceted_violin_box_jitter"
+  panel_structure: "22 small-multiple panels"
+  marks: ["violin densities", "semi-transparent jitter points", "boxplots", "significance text", "colored facet strips"]
+  encodings:
+    y: "quantitative observation value"
+    x: "two within-panel groups shown as sample-count labels"
+    fill: "two treatment/group categories"
+    facet: "panel assignment"
+    strip_fill: "higher-level class"
+inferred_visual_grammar:
+  reusable_pattern: "Many-facet two-group distribution comparison with violin density, raw observations, box summary, and optional significance labels."
+  minimum_contract: ["facet", "group", "value"]
+  useful_extensions: ["strip_class", "p_value", "p_label", "panel_order", "sample_count"]
+reviewed_visual_roles:
+  facet: "small-multiple partition; core to observed grammar"
+  group: "within-panel comparison group"
+  value: "observation-level numeric measurement"
+  strip_class: "optional higher-level class for facet strip background"
+  p_value: "optional per-facet significance annotation input or computed output"
+  paired_id: "not visually supported as paired connector role"
+canonical_columns:
+  - "group/value/facet: reusable minimum roles"
+  - "subgroup: present but not proven as an extra visual layer"
+  - "paired_id: present but no paired connectors observed"
+  - "p_value: constant in canonical CSV; not enough for per-panel evidence"
+  - "label: empty"
+required_data_semantics:
+  facet: "categorical panel assignment"
+  group: "categorical group compared within each facet"
+  value: "observation-level numeric measurement"
+optional_data_semantics:
+  strip_class: "class for facet strip background color"
+  p_value: "per-facet statistical annotation or computable from observations"
+  p_label: "formatted significance label"
+  panel_order: "facet ordering"
+  sample_count: "x-axis sample-count labels"
+optional_modules:
+  violin_density_layer:
+    status: "observed"
+  jitter_observation_layer:
+    status: "observed"
+  box_summary_layer:
+    status: "observed"
+  faceting:
+    status: "observed_and_core"
+  significance_annotation:
+    status: "observed"
+  paired_connections:
+    status: "not_observed"
+false_positive_risks:
+  - "Do not retrieve as a plain boxplot."
+  - "Do not treat paired_id as evidence for paired-line plots."
+  - "Do not treat canonical data_main.csv as the full source data for the 22-panel image."
+  - "Do not infer source/target/weight roles."
+best_for:
+  - "Two-group distribution comparisons repeated across many facets."
+  - "Violin plus raw point plus box summary layouts."
+  - "Small-multiple distribution layouts with optional significance labels."
+bad_for:
+  - "Single-panel boxplots with no facet structure."
+  - "Paired before/after designs requiring connecting lines."
+  - "Network, flow, or source-target-weight diagrams."
+style_notes:
+  - "Dense white-background small multiples with black panel borders and colored strip headers."
+  - "Teal versus magenta group palette."
+  - "Legend is suppressed; panel and axis text carry semantics."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Strong reusable faceted distribution support pattern, but standard entry/data_main contract is not aligned enough for core retrieval."
+confidence:
+  overall: 0.88
+  visual_grammar: 0.95
+  current_contract_fit: 0.45
+proposed_metadata_patch:
+  visual_grammar:
+    geometry: "faceted_violin_box_jitter"
+    subtype: "multi_group_faceted_violin_boxplot"
+  data_contract:
+    required_mappings: ["facet", "group", "value"]
+    optional_mappings: ["strip_class", "p_value", "p_label", "panel_order", "sample_count", "label"]
+proposed_dossier_patch:
+  visual_genes:
+    layout: ["small_multiples", "dense_facet_grid", "colored_facet_strips"]
+    marks: ["violin_density", "jitter_point", "boxplot", "significance_text"]
+    encodings: ["facet", "group", "value", "strip_class", "p_value"]
+  retrieval_tier: "support"

@@ -1,0 +1,106 @@
+case_id: "plotcase_point_多组火山图"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw third-batch output preserved from this thread."
+annotator_model: "gpt-5 codex"
+reviewed_at: "2026-05-21T01:22:18+08:00"
+evidence:
+  files_read:
+    - "vault/material/plotcase_point_多组火山图/metadata.json"
+    - "vault/material/plotcase_point_多组火山图/agent_guide.md"
+    - "vault/material/plotcase_point_多组火山图/plot.py"
+    - "vault/material/plotcase_point_多组火山图/scripts/code.R"
+    - "vault/material/plotcase_point_多组火山图/raw/code.R"
+    - "vault/material/plotcase_point_多组火山图/data_main.csv"
+    - "vault/material/plotcase_point_多组火山图/raw/data.csv"
+    - "vault/material/plotcase_point_多组火山图/outputs/rebuilt.png"
+    - "vault/material/plotcase_point_多组火山图/outputs/visual_check.json"
+    - "vault/dossiers/plotcase_point_多组火山图.yaml"
+  data_profile:
+    data_main_rows: 29
+    data_main_columns: ["x", "y", "group", "value", "size_value", "label", "threshold", "facet", "highlight"]
+    raw_rows: 3138
+    raw_columns: ["p_val", "avg_log2FC", "pct.1", "pct.2", "p_val_adj", "cluster", "gene"]
+    data_optional_present: false
+  visual_evidence:
+    rebuilt_png_size: [2028, 808]
+    visual_check_ok: true
+    mean_stddev: 61.4376
+    original_reference: "raw/cover.png"
+observed_visual_grammar:
+  figure_type: "grouped_differential_expression_volcano_strip"
+  layout: ["single wide cartesian panel", "ten vertical cluster bands", "colored horizontal center label strip", "upper-left two-class legend"]
+  marks: ["jittered points", "background rectangles", "center strip labels", "repelled gene text labels", "short connector segments"]
+  encodings:
+    x: "cluster category position"
+    y: "avg_log2FC"
+    color: "derived up/down sign class"
+    fill: "cluster identity for center strip"
+    label: "selected gene names"
+inferred_visual_grammar:
+  reusable_pattern: "Multi-group differential-expression display comparing signed effect sizes across clusters, with significant/extreme genes labeled per group."
+  not_supported: ["classic volcano plot with x=log fold change and y=-log10 p-value", "bubble scatter", "continuous x-y quantitative scatter"]
+reviewed_visual_roles:
+  cluster: "observed x-axis group and center-strip label"
+  avg_log2FC: "observed y-axis signed effect size"
+  type: "derived color class from avg_log2FC sign"
+  gene: "text label for selected points"
+  p_val_adj: "used for label filtering"
+canonical_columns:
+  - "cluster"
+  - "avg_log2FC"
+  - "gene"
+  - "p_val_adj"
+  - "type"
+required_data_semantics:
+  cluster: "categorical group for each point"
+  avg_log2FC: "signed effect-size value plotted on y-axis"
+optional_data_semantics:
+  gene: "label text for selected points"
+  p_val_adj: "significance value used to select labels"
+  cluster_order: "fixed display order"
+  cluster_color: "manual palette for center label strip"
+optional_modules:
+  label_selection:
+    status: "supported_by_original_R"
+  center_group_strip:
+    status: "supported_by_original_R"
+  generic_scatter_renderer:
+    status: "compatibility_only_not_observed_grammar"
+false_positive_risks:
+  - "Do not treat data_main.csv x/y/value/size_value/threshold/facet/highlight as proven roles for the observed figure."
+  - "Do not retrieve as a classic volcano plot unless categorical multi-group x layout is acceptable."
+  - "Current plot.py calls a generic scatter renderer and does not express the observed R grammar."
+best_for:
+  - "Multi-cluster differential-expression effect-size displays."
+  - "Comparing upregulated and downregulated genes across categorical groups."
+bad_for:
+  - "Classic two-axis volcano plots using -log10 p-value."
+  - "Bubble charts or size-encoded scatterplots."
+  - "Generic continuous x-y scatter without categorical group bands."
+style_notes:
+  - "White background with ggprism-like y-axis and minimal x-axis."
+  - "Red and blue points encode up/down sign classes."
+  - "Muted gray vertical bands and saturated center strips create group structure."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Source-backed and visually useful, but current canonical CSV/plot.py contract does not reproduce the observed grammar without relying on raw R assets."
+  exclusion_risks: ["generic renderer involved", "canonical CSV mismatch"]
+confidence:
+  overall: 0.88
+  visual_grammar: 0.95
+  data_roles: 0.86
+  current_contract_fit: 0.30
+proposed_metadata_patch:
+  visual_grammar:
+    grammar_id: "grouped_differential_expression_volcano_strip"
+    backend: "R/ggplot2"
+    required_data_roles: ["cluster", "avg_log2FC"]
+    optional_data_roles: ["gene", "p_val_adj", "cluster_order", "cluster_color"]
+proposed_dossier_patch:
+  visual_grammar:
+    geometry: "grouped_scatter_strip"
+    subtype: "multi_group_differential_expression_volcano"
+  retrieval_tier: "support"
+

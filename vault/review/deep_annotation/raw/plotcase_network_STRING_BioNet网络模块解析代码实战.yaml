@@ -1,0 +1,91 @@
+case_id: "plotcase_network_STRING_BioNet网络模块解析代码实战"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw review condensed from visible second-batch findings and local file evidence."
+annotator_model: "gpt-5.5 high reasoning subagent"
+reviewed_at: "2026-05-21T01:12:07+08:00"
+evidence:
+  truncated_source_summary: true
+  files_read:
+    - "metadata.json"
+    - "agent_guide.md"
+    - "plot.py"
+    - "data_main.csv"
+    - "raw/code.R"
+    - "raw/stringdb_NK_background.tsv"
+    - "raw/41590_2025_2341_MOESM4_ESM.xlsx"
+    - "outputs/rebuilt.png"
+    - "outputs/visual_check.json"
+    - "vault/dossiers/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml"
+  local_data_header: ["source", "target", "weight", "node_id", "node_label", "node_group", "node_size", "edge_group", "edge_direction", "layout_x", "layout_y", "source_group", "target_group"]
+  returned_findings:
+    - "Observed asset is a labeled node-link STRING/BioNet network."
+    - "Node size and node color/logFC-like node score were the meaningful roles."
+    - "Current source/target/weight demo table is not fully faithful; weight was not visually meaningful."
+observed_visual_grammar:
+  family: "network_graph"
+  layout: ["node-link graph", "labeled biological network"]
+  marks: ["nodes", "edges", "node labels"]
+inferred_visual_grammar:
+  grammar_id: "string_bionet_labeled_node_link"
+  reusable_pattern: "Biological interaction network with node-level attributes and labels."
+reviewed_visual_roles:
+  source: "edge source"
+  target: "edge target"
+  weight: "edge strength if proved; current evidence weak"
+  node_id: "node join key"
+  node_label: "display label"
+  node_group: "node category"
+  node_size: "node importance or degree-like size"
+  edge_group: "optional edge category"
+  layout_x: "optional manual x coordinate"
+  layout_y: "optional manual y coordinate"
+canonical_columns:
+  - "source"
+  - "target"
+  - "weight"
+  - "node_id"
+  - "node_label"
+  - "node_group"
+  - "node_size"
+  - "edge_group"
+  - "edge_direction"
+  - "layout_x"
+  - "layout_y"
+  - "source_group"
+  - "target_group"
+required_data_semantics:
+  required: ["interaction edge source", "interaction edge target", "node identifier"]
+optional_data_semantics:
+  optional: ["node label", "node score for size/color", "edge confidence", "manual layout"]
+optional_modules:
+  node_labels:
+    status: "supported"
+  node_attribute_encoding:
+    status: "supported"
+  weighted_edges:
+    status: "uncertain"
+false_positive_risks:
+  - "Do not overstate edge weight semantics from compatibility data_main columns."
+  - "Current standardized data may be a demo abstraction rather than a faithful STRING edge table."
+best_for:
+  - "Labeled protein/gene interaction networks with node attributes."
+bad_for:
+  - "Flow diagrams or staged Sankey plots."
+style_notes:
+  - "Prioritize label legibility and avoid dense edge-label overlap."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Real network grammar with useful source evidence, but current standard data contract needs caution."
+confidence:
+  overall: 0.80
+  visual_identification: 0.88
+  data_roles: 0.74
+proposed_metadata_patch:
+  retrieval_tier: "support"
+proposed_dossier_patch:
+  optional_modules:
+    weighted_edges:
+      status: "uncertain_until_source_weight_is_verified"
+

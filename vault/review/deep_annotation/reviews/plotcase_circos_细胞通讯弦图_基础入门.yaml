@@ -1,0 +1,108 @@
+case_id: "plotcase_circos_细胞通讯弦图_基础入门"
+annotation_version: "deep_annotation_v1"
+annotation_status:
+  status: "reviewed_with_contract_mismatch"
+  note: "Observed asset is a CCPlotR cell-communication circos/chord figure; current source/target/weight CSV is synthetic compatibility data."
+  human_review_required: true
+annotator_model: "gpt-5 codex"
+reviewed_at: "2026-05-21T01:38:07+08:00"
+evidence:
+  files_read:
+    - "vault/material/plotcase_circos_细胞通讯弦图_基础入门/metadata.json"
+    - "vault/material/plotcase_circos_细胞通讯弦图_基础入门/agent_guide.md"
+    - "vault/material/plotcase_circos_细胞通讯弦图_基础入门/plot.py"
+    - "vault/material/plotcase_circos_细胞通讯弦图_基础入门/data_main.csv"
+    - "vault/material/plotcase_circos_细胞通讯弦图_基础入门/scripts/code.R"
+    - "vault/material/plotcase_circos_细胞通讯弦图_基础入门/raw/code.R"
+    - "vault/material/plotcase_circos_细胞通讯弦图_基础入门/outputs/rebuilt.png"
+    - "vault/material/plotcase_circos_细胞通讯弦图_基础入门/outputs/visual_check.json"
+    - "vault/dossiers/plotcase_circos_细胞通讯弦图_基础入门.yaml"
+  source_evidence:
+    package_family: "CCPlotR"
+    plotting_function: "cc_circos"
+    source_data: "CCPlotR built-in toy_data and toy_exp"
+    declared_data_files: []
+  rebuilt_png_size: [1625, 1537]
+  visual_check_ok: true
+observed_visual_grammar:
+  figure_type: "cell_communication_circos_chord"
+  layout: ["circular ligand/receptor label ring", "outer cell-type arcs", "inner expression tiles", "directed chord arrows", "cell-type legend", "mean-expression colorbar"]
+  marks: ["sector arcs", "small expression tiles", "curved directed links", "radial text labels", "legend swatches", "colorbar"]
+  encodings:
+    cell_type: "outer arc color and legend"
+    ligand_or_receptor: "radial label and sector position"
+    communication_link: "directed curved arrow/chord"
+    mean_expression: "purple sequential tile color"
+    interaction_rank_or_strength: "possibly chord width, not recoverable from current CSV"
+inferred_visual_grammar:
+  grammar_id: "ccplotr_cell_communication_chord"
+  backend: "R_CCPlotR_cc_circos"
+  data_unit: "cell-cell ligand/receptor communication table plus optional expression matrix"
+  not_supported: ["generic arbitrary network", "validated weighted source-target edge list from current data_main.csv", "genomic circos coordinates"]
+reviewed_visual_roles:
+  source: "real concept may be sender cell or interaction origin, but current CSV source values are compatibility placeholders"
+  target: "real concept may be receiver cell or interaction endpoint, but current CSV target values are compatibility placeholders"
+  weight: "current CSV weights are synthetic demo values; observed link width may encode ranking or strength but is not documented in standardized data"
+  cell_type: "observed outer arc category"
+  ligand_receptor_label: "observed radial label"
+  mean_expression: "observed tile color value"
+canonical_columns:
+  - "source/target/weight: compatibility columns for generic network renderer, not trustworthy CCPlotR semantics"
+  - "source_group/target_group: synthetic group helpers"
+  - "direction/sector_order/sector_color/label: empty optional compatibility columns"
+  - "node_id/node_label: synthetic demo node fields"
+  - "recommended roles: sender_cell_type, receiver_cell_type, ligand_receptor_or_gene, interaction_presence"
+required_data_semantics:
+  sender_cell_type: "cell type emitting or associated with communication signal"
+  receiver_cell_type: "cell type receiving or associated with communication signal"
+  ligand_receptor_or_gene: "displayed interaction label on circular sectors"
+  interaction_presence: "chord or arced directed connection"
+optional_data_semantics:
+  interaction_strength: "line width or top-interaction ranking if source data exposes it"
+  mean_expression: "tile color and colorbar value"
+  cell_color: "outer arc palette"
+  label_order: "sector ordering"
+optional_modules:
+  cell_type_legend:
+    status: "observed"
+  mean_expression_colorbar:
+    status: "observed"
+  directed_chords:
+    status: "observed"
+  weighted_edges:
+    status: "not_verified_from_standard_csv"
+false_positive_risks:
+  - "Do not treat current source/target/weight columns as true chord/network evidence."
+  - "Do not retrieve as generic weighted network without preserving cell-communication and expression-track semantics."
+  - "Do not assume standardized rebuild from original code; metadata records case-level finished-figure fallback."
+  - "plot.py invokes a generic network renderer, while rebuilt.png is the original cover fallback."
+best_for:
+  - "CCPlotR-style cell communication circos/chord exemplars."
+  - "Figures combining cell-type arcs, ligand/receptor labels, directed communication links, and expression tiles."
+bad_for:
+  - "Arbitrary source-target-weight network datasets."
+  - "Chord diagrams where edge weight is the only primary claim."
+  - "Genomic circos tracks."
+style_notes:
+  - "Cell-type arcs, ligand/receptor labels, directed links, mean-expression tiles, legend, and colorbar all carry the observed grammar."
+retrieval_tier_recommendation:
+  tier: "inspiration"
+  rationale: "Strong visual exemplar, but current data contract is synthetic and the rebuild is a case-level fallback."
+  exclusion_risks: ["source_target_weight_false_positive", "synthetic_data_main", "generic_renderer_entry", "case_level_fallback"]
+confidence:
+  overall: 0.86
+  visual_grammar: 0.92
+  data_roles: 0.62
+  reproducibility_contract: 0.55
+proposed_metadata_patch:
+  retrieval_tier: "inspiration"
+  visual_grammar:
+    geometry: "circos"
+    subtype: "cell_communication_chord"
+  data_contract:
+    required_mappings: ["sender_cell_type", "receiver_cell_type", "ligand_receptor_or_gene", "interaction_presence"]
+    optional_mappings: ["interaction_strength", "mean_expression", "cell_color", "label_order"]
+proposed_dossier_patch:
+  retrieval_tier: "inspiration"
+  canonical_columns:
+    source_target_weight_semantics: "compatibility_only_currently"

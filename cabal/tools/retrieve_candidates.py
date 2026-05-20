@@ -40,8 +40,20 @@ def score_record(record: dict, scene: dict) -> tuple[float, list[str]]:
     return score, missing
 
 
-def retrieve(scene: dict, index_path: Path, limit: int) -> list[dict]:
-    records = [r for r in load_index(index_path) if r.get("vault_status", {}).get("live", True)]
+def parse_tiers(value: str) -> set[str]:
+    if value == "all":
+        return {"core", "support", "inspiration", "archive"}
+    return {item.strip() for item in value.split(",") if item.strip()}
+
+
+def retrieve(scene: dict, index_path: Path, limit: int, include_tiers: set[str] | None = None) -> list[dict]:
+    tiers = include_tiers or {"core", "support"}
+    records = [
+        r
+        for r in load_index(index_path)
+        if r.get("vault_status", {}).get("live", True)
+        and str(r.get("retrieval_tier") or "support") in tiers
+    ]
     scored = []
     for record in records:
         score, missing = score_record(record, scene)
@@ -55,9 +67,10 @@ def main() -> int:
     parser.add_argument("--scene-card", type=Path, required=True)
     parser.add_argument("--index", type=Path, default=repo_root(Path(__file__)) / "vault" / "index.jsonl")
     parser.add_argument("--limit", type=int, default=20)
+    parser.add_argument("--include-tiers", default="core,support", help="comma-separated tiers or 'all'")
     parser.add_argument("--out", type=Path, default=None)
     args = parser.parse_args()
-    candidates = retrieve(load_scene(args.scene_card), args.index, args.limit)
+    candidates = retrieve(load_scene(args.scene_card), args.index, args.limit, parse_tiers(args.include_tiers))
     payload = {"candidate_count": len(candidates), "candidates": candidates}
     text = json.dumps(payload, indent=2, ensure_ascii=False)
     if args.out:

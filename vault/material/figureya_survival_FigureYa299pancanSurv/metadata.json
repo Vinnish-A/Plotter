@@ -194,5 +194,86 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Visually useful forest-plot asset, but current standard interface and dossier semantics conflict with the rebuilt image.",
+  "exclusion_risks": [
+    "case-level rendered output appears to be the effective visual source",
+    "canonical data contract needs correction before core retrieval"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "note": "Rebuilt visual is an OS Cox forest plot; current metadata/dossier/data_main contain heatmap, survival-curve, and generic-line conflicts.",
+    "human_review_required": true,
+    "level": "model_assisted_deep_review_v1",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "reviewed_visual_grammar": {
+    "figure_type": "tabular_hazard_ratio_forest_plot",
+    "geometry": "forest_plot",
+    "panel_structure": "single panel with left aligned table and right CI plot",
+    "marks": [
+      "row text labels for cancer types",
+      "p-value text column",
+      "formatted hazard-ratio confidence-interval text column",
+      "grey diamond CI point markers",
+      "horizontal confidence intervals",
+      "vertical HR=1 reference line",
+      "bottom hazard-ratio axis"
+    ],
+    "encodings": {
+      "row_position": "cancer type",
+      "x_position": "hazard ratio",
+      "interval": "95 percent CI lower and upper",
+      "text": "p value and formatted HR interval"
+    },
+    "subtype": "tabular_hazard_ratio_forest_plot",
+    "grammar_id": "tabular_hazard_ratio_forest_plot",
+    "required_data_roles": [
+      "cancer",
+      "hazard_ratio",
+      "ci_lower",
+      "ci_upper",
+      "p_value"
+    ],
+    "optional_modules": {
+      "heatmap_summary": {
+        "status": "available_in_source_not_current_rebuilt",
+        "requires": [
+          "cancer",
+          "endpoint",
+          "method",
+          "prognostic_role"
+        ]
+      },
+      "significance_emphasis": {
+        "status": "available_in_script_subtle_in_rebuilt",
+        "requires": [
+          "p_value"
+        ]
+      },
+      "sample_level_survival_modeling": {
+        "status": "not_part_of_rebuilt_visual"
+      }
+    },
+    "false_positive_risks": [
+      "Do not describe rebuilt.png as a Kaplan-Meier survival curve.",
+      "Do not retrieve as heatmap unless the source heatmap output is explicitly selected.",
+      "Do not treat source/target/weight as network roles.",
+      "Do not use generic plot.py line renderer as visual evidence."
+    ]
+  },
+  "reviewed_visual_roles": {
+    "cancer": "row category displayed in table and aligned to CI mark",
+    "hazard_ratio": "numeric estimate plotted on hazard-ratio axis",
+    "ci_lower": "numeric left confidence interval endpoint",
+    "ci_upper": "numeric right confidence interval endpoint",
+    "p_value": "numeric or formatted statistical value shown in table",
+    "endpoint": "survival endpoint filter; OS in rebuilt output",
+    "source": "compatibility column only; not a network role",
+    "target": "compatibility column only; not a network role",
+    "weight": "compatibility column only; not a network role"
   }
 }

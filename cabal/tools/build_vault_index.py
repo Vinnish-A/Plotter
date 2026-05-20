@@ -21,11 +21,12 @@ def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def build_index(root: Path, dossiers: Path, include_folded: bool = False) -> dict:
+def build_index(root: Path, dossiers: Path, include_folded: bool = False, write_dossiers: bool = False) -> dict:
     repo = repo_root(root)
     dossiers.mkdir(parents=True, exist_ok=True)
     records = []
     skipped = 0
+    written_dossiers = 0
     for case_dir in sorted(root.iterdir()):
         if not case_dir.is_dir() or not (case_dir / "metadata.json").exists():
             continue
@@ -35,14 +36,22 @@ def build_index(root: Path, dossiers: Path, include_folded: bool = False) -> dic
             continue
         dossier = dossier_from_case(case_dir, repo)
         dossier_path = dossiers / f"{dossier['id']}.yaml"
-        write_yaml(dossier_path, dossier)
+        if write_dossiers:
+            write_yaml(dossier_path, dossier)
+            written_dossiers += 1
         records.append(index_record(dossier, repo))
 
     index_path = repo / "vault" / "index.jsonl"
     with index_path.open("w", encoding="utf-8") as handle:
         for record in records:
             handle.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")
-    summary = {"indexed": len(records), "skipped_folded": skipped, "index": str(index_path), "dossiers": str(dossiers)}
+    summary = {
+        "indexed": len(records),
+        "skipped_folded": skipped,
+        "index": str(index_path),
+        "dossiers": str(dossiers),
+        "written_dossiers": written_dossiers,
+    }
     return summary
 
 
@@ -51,8 +60,15 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=material_root(Path(__file__)))
     parser.add_argument("--dossiers", type=Path, default=dossier_root(Path(__file__)))
     parser.add_argument("--include-folded", action="store_true")
+    parser.add_argument("--write-dossiers", action="store_true", help="Regenerate vault/dossiers/*.yaml. Default only writes vault/index.jsonl.")
     args = parser.parse_args()
-    print(json.dumps(build_index(args.root.resolve(), args.dossiers.resolve(), args.include_folded), indent=2, ensure_ascii=False))
+    print(
+        json.dumps(
+            build_index(args.root.resolve(), args.dossiers.resolve(), args.include_folded, args.write_dossiers),
+            indent=2,
+            ensure_ascii=False,
+        )
+    )
     return 0
 
 

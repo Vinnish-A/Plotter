@@ -1,0 +1,63 @@
+case_id: "figures4papers_figure_RNAGenScape_manifold_holes_png"
+annotation_version: "deep_dossier_review_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw review condensed from visible subagent output."
+annotator_model: "gpt-5 codex"
+reviewed_at: "2026-05-21T00:00:00+08:00"
+evidence:
+  files_read: ["metadata.json", "agent_guide.md", "plot.py", "data_main.csv", "scripts/plot_hole_manifold.py", "raw/plot_hole_manifold.py", "outputs/visual_check.json", "outputs/rebuilt.png", "vault/dossiers/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml"]
+  data_profile:
+    rows: 64
+    columns: ["x", "y", "z", "value", "panel", "group", "label", "surface", "trajectory", "color"]
+  rebuilt_png_size: [4200, 1800]
+  visual_check_ok: true
+observed_visual_grammar:
+  figure_type: "two_panel_3d_surface_comparison"
+  layout: ["side-by-side 3D panels", "axes hidden", "no legend"]
+  marks: ["meshed 3D surface", "semi-transparent gray surface patches"]
+inferred_visual_grammar:
+  reusable_pattern: "smooth 3D manifold surface versus masked or gray-patch variant"
+  not_supported: ["2D scatter", "PCA point cloud", "trajectory manifold", "labels/callouts"]
+reviewed_visual_roles:
+  x: "synthetic grid coordinate"
+  y: "synthetic grid coordinate"
+  z: "surface height"
+  value: "duplicates z"
+  panel: "CSV says one panel, rendered figure has two hardcoded panels"
+  label: "blank"
+  trajectory: "blank"
+canonical_columns:
+  - "x/y/z are synthetic surface grid coordinates"
+  - "patch_mask and panel_variant are required for true grammar but missing from CSV"
+required_data_semantics:
+  x: "numeric grid coordinate"
+  y: "numeric grid coordinate"
+  z: "numeric surface height"
+optional_data_semantics:
+  patch_mask: "missing from CSV"
+  panel_variant: "hardcoded smooth versus gray-patch variant"
+optional_modules:
+  patch_mask:
+    status: "required_for_true_grammar_but_missing_from_csv"
+  label_layer:
+    status: "not_supported"
+false_positive_risks:
+  - "Do not retrieve as ordinary scatter, PCA, UMAP, or point-manifold grammar."
+  - "Blank columns do not imply optional modules."
+  - "Standard plot.py copies a rendered PNG."
+best_for:
+  - "Visual inspiration for 3D surface perturbation comparisons."
+bad_for:
+  - "Data-backed scientific rebuilds."
+style_notes:
+  - "Soft green height-shaded surface with fine black mesh and gray patches."
+retrieval_tier_recommendation:
+  tier: "inspiration"
+  rationale: "Useful as a visual idea only; case-level rendered-output fallback with synthetic CSV and generic copy-based rebuild."
+  exclusion_risks: ["case-level fallback", "synthetic data abstraction", "generic renderer/copy rebuild", "compatibility columns overstate supported grammar"]
+confidence:
+  overall: 0.90
+  visual_grammar: 0.96
+  data_roles: 0.84
+

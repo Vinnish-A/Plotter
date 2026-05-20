@@ -1,10 +1,14 @@
 id: figures4papers_figure_RNAGenScape_manifold_holes_png
 title: figure_RNAGenScape_manifold_holes
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: fallback_synthetic_inspiration_only
+  note: Image-first fallback asset; observed grammar is a two-panel 3D surface comparison,
+    not generic scatter/PCA manifold.
+  human_review_required: true
+  level: model_assisted_deep_review_v1
+  reviewed_at: '2026-05-21T00:00:00+08:00'
+  annotator_model: gpt-5 codex
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png
   source:
@@ -309,3 +313,55 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+retrieval_tier: inspiration
+retrieval_rationale: Useful as a visual idea only; current case is a case-level rendered-output
+  fallback with synthetic CSV and generic copy-based rebuild.
+exclusion_risks:
+- case-level fallback
+- synthetic data abstraction
+- generic renderer/copy rebuild
+- compatibility columns overstate supported grammar
+reviewed_visual_grammar:
+  figure_type: two_panel_3d_surface_comparison
+  layout:
+  - side-by-side 3D panels
+  - large whitespace
+  - panel titles only
+  - axes hidden
+  - no legend
+  marks:
+  - meshed 3D surface
+  - semi-transparent gray surface patches
+  encodings:
+    x_y: hidden surface coordinates
+    z: surface height
+    fill: soft green height shading
+    gray_patches: masked or perturbed surface regions in right panel
+  geometry: 3d_surface_comparison
+  subtype: smooth_vs_masked_manifold_surface
+  grammar_id: smooth_vs_masked_manifold_surface
+  optional_modules:
+    label_layer:
+      status: not_supported_observed
+    trajectory:
+      status: not_supported_observed
+    subgroup_color:
+      status: not_supported_observed
+    patch_mask:
+      status: required_for_true_grammar_but_missing_from_csv
+  false_positive_risks:
+  - Do not retrieve as ordinary scatter, PCA, UMAP, or point-manifold grammar.
+  - Blank label, trajectory, and color columns are not supported optional modules.
+  - Constant group and surface columns are not meaningful categories.
+  - Standard plot.py only copies outputs/figure.png to rebuilt.png.
+reviewed_visual_roles:
+  x: synthetic grid coordinate; not visibly labeled
+  y: synthetic grid coordinate; not visibly labeled
+  z: surface height
+  value: duplicates z
+  panel: compatibility column; rendered two-panel comparison is hardcoded
+  group: constant compatibility column
+  label: blank; not an active label layer
+  surface: constant compatibility column
+  trajectory: blank; not observed
+  color: blank; color is hardcoded in script

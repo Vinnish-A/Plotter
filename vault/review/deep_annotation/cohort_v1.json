@@ -1,0 +1,678 @@
+{
+  "annotation_version": "deep_annotation_v1",
+  "selected_at": "2026-05-20T17:59:25.243103+00:00",
+  "selection_policy": {
+    "high_value": "source_code_rebuild=true, synthetic_data=false, visual evidence present, family diversity first",
+    "problem": "geometry conflicts, synthetic/fallback/generic risk, or confusing optional modules"
+  },
+  "counts": {
+    "material_records": 156,
+    "high_value": 20,
+    "problem": 10,
+    "total": 30
+  },
+  "high_value_assets": [
+    {
+      "case_id": "plotmaster_003气泡图+相关性热图",
+      "case_dir": "vault/material/plotmaster_003气泡图+相关性热图",
+      "title": "003气泡图+相关性热图",
+      "family": "heatmap",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": false,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "heatmap",
+        "",
+        "bubble_matrix",
+        "heatmap"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "figureya_survival_FigureYa30nomogram_update",
+      "case_dir": "vault/material/figureya_survival_FigureYa30nomogram_update",
+      "title": "FigureYa30nomogram_update",
+      "family": "line",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "3d_manifold",
+        "line",
+        "nomogram",
+        "scatter"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": true,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_barplot_ggplot2优雅的绘制径向条形图",
+      "case_dir": "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图",
+      "title": "ggplot2优雅的绘制径向条形图",
+      "family": "map",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "bar_composite",
+        "polar_bar",
+        "map"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_barplot_多元素组合分布条图",
+      "case_dir": "vault/material/plotcase_barplot_多元素组合分布条图",
+      "title": "多元素组合分布条图",
+      "family": "pie",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "bar_composite",
+        "mirrored_horizontal_stacked_bar_composite",
+        "pie"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_boxplot_多分组分面小提琴箱线图",
+      "case_dir": "vault/material/plotcase_boxplot_多分组分面小提琴箱线图",
+      "title": "多分组分面小提琴箱线图",
+      "family": "box",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "distribution",
+        "faceted_violin_box_jitter",
+        "box"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_circos_GO富集分析通路图",
+      "case_dir": "vault/material/plotcase_circos_GO富集分析通路图",
+      "title": "GO富集分析通路图",
+      "family": "circos",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "chord_circos",
+        "circos",
+        "circos"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_heatmap_ggtree绘制离散型系统发育树热图",
+      "case_dir": "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图",
+      "title": "ggtree绘制离散型系统发育树热图",
+      "family": "tree",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "tree_heatmap",
+        "tree_heatmap",
+        "tree"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_network_STRING_BioNet网络模块解析代码实战",
+      "case_dir": "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战",
+      "title": "STRING_BioNet网络模块解析代码实战",
+      "family": "network",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "network_graph",
+        "",
+        "network"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_sankey_多层级桑基图",
+      "case_dir": "vault/material/plotcase_sankey_多层级桑基图",
+      "title": "多层级桑基图",
+      "family": "flow",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "alluvial_sankey",
+        "sankey",
+        "flow"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_violin_分裂小提琴图分面版",
+      "case_dir": "vault/material/plotcase_violin_分裂小提琴图分面版",
+      "title": "分裂小提琴图分面版",
+      "family": "violin",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "distribution",
+        "violin",
+        "violin"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_曲线图_Kaplan_Meier生存曲线",
+      "case_dir": "vault/material/plotcase_曲线图_Kaplan_Meier生存曲线",
+      "title": "Kaplan_Meier生存曲线",
+      "family": "survival",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "network_graph",
+        "survival",
+        "network"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": true,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "figureya_survival_FigureYa197SmoothHaz",
+      "case_dir": "vault/material/figureya_survival_FigureYa197SmoothHaz",
+      "title": "FigureYa197SmoothHaz",
+      "family": "bar",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "bar",
+        "line",
+        "survival_hazard",
+        "map"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": true,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_point_多组火山图",
+      "case_dir": "vault/material/plotcase_point_多组火山图",
+      "title": "多组火山图",
+      "family": "scatter",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "scatter_bubble",
+        "grouped_scatter_strip",
+        "scatter"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "figureya_survival_FigureYa182RFSurvV2",
+      "case_dir": "vault/material/figureya_survival_FigureYa182RFSurvV2",
+      "title": "FigureYa182RFSurvV2",
+      "family": "heatmap",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "heatmap",
+        "line",
+        "model_diagnostic_composite",
+        "forest"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": true,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "figureya_survival_FigureYa183condSurv",
+      "case_dir": "vault/material/figureya_survival_FigureYa183condSurv",
+      "title": "FigureYa183condSurv",
+      "family": "heatmap",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "heatmap",
+        "line",
+        "survival",
+        "heatmap"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": true,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "figureya_survival_FigureYa251NPHSurv",
+      "case_dir": "vault/material/figureya_survival_FigureYa251NPHSurv",
+      "title": "FigureYa251NPHSurv",
+      "family": "heatmap",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "heatmap",
+        "line",
+        "survival",
+        "heatmap"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": true,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "figureya_survival_FigureYa299pancanSurv",
+      "case_dir": "vault/material/figureya_survival_FigureYa299pancanSurv",
+      "title": "FigureYa299pancanSurv",
+      "family": "heatmap",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "heatmap",
+        "line",
+        "forest_plot",
+        "forest"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": true,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "figureya_survival_FigureYa66UnivariateCox",
+      "case_dir": "vault/material/figureya_survival_FigureYa66UnivariateCox",
+      "title": "FigureYa66UnivariateCox",
+      "family": "line",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "3d_manifold",
+        "line",
+        "forest_interval",
+        "scatter"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": true,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_barplot_ggplot2绘制菌群分布图",
+      "case_dir": "vault/material/plotcase_barplot_ggplot2绘制菌群分布图",
+      "title": "ggplot2绘制菌群分布图",
+      "family": "map",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "bar_composite",
+        "compositional_bar",
+        "map"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "support"
+    },
+    {
+      "case_id": "plotcase_barplot_多层注释柱状图进阶版",
+      "case_dir": "vault/material/plotcase_barplot_多层注释柱状图进阶版",
+      "title": "多层注释柱状图进阶版",
+      "family": "map",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": true,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": false,
+        "synthetic_data": false
+      },
+      "geometry_values": [
+        "",
+        "bar_composite",
+        "",
+        "map"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": null
+    }
+  ],
+  "problem_assets": [
+    {
+      "case_id": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
+      "case_dir": "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png",
+      "title": "figure_Cflows_diffusion_swiss_roll",
+      "family": "network",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "3d_manifold",
+        "network",
+        "diffusion_manifold_composite",
+        "scatter"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "figures4papers_figure_Dispersion_idea_png",
+      "case_dir": "vault/material/figures4papers_figure_Dispersion_idea_png",
+      "title": "figure_Dispersion_idea",
+      "family": "scatter",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "3d_manifold",
+        "scatter",
+        "projected shaded disk with radial point spokes",
+        "scatter"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "figures4papers_figure_RNAGenScape_manifold_holes_png",
+      "case_dir": "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png",
+      "title": "figure_RNAGenScape_manifold_holes",
+      "family": "scatter",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "3d_manifold",
+        "scatter",
+        "3d_surface_comparison",
+        "scatter"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "plotcase_circos_多类别关联网络弦图",
+      "case_dir": "vault/material/plotcase_circos_多类别关联网络弦图",
+      "title": "多类别关联网络弦图",
+      "family": "circos",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "",
+        "chord_circos",
+        "",
+        "circos"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "plotcase_circos_细胞通讯弦图_基础入门",
+      "case_dir": "vault/material/plotcase_circos_细胞通讯弦图_基础入门",
+      "title": "细胞通讯弦图_基础入门",
+      "family": "circos",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "",
+        "chord_circos",
+        "circos",
+        "circos"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "plotcase_heatmap_Mantel检验热图",
+      "case_dir": "vault/material/plotcase_heatmap_Mantel检验热图",
+      "title": "Mantel检验热图",
+      "family": "heatmap",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "",
+        "annotated_heatmap",
+        "hybrid_correlation_heatmap_network",
+        "heatmap"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+      "case_dir": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+      "title": "scDotPlot绘制单细胞层次聚类气泡热图",
+      "family": "heatmap",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "",
+        "annotated_heatmap",
+        "",
+        "heatmap"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "plotcase_network_微生物与代谢物共生网络图",
+      "case_dir": "vault/material/plotcase_network_微生物与代谢物共生网络图",
+      "title": "微生物与代谢物共生网络图",
+      "family": "network",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "",
+        "network_graph",
+        "multi_panel_node_link_network",
+        "network"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "plotcase_point_多层级曼哈顿图",
+      "case_dir": "vault/material/plotcase_point_多层级曼哈顿图",
+      "title": "多层级曼哈顿图",
+      "family": "scatter",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "",
+        "manhattan",
+        "radial_genomic_scatter",
+        "scatter"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    },
+    {
+      "case_id": "plotcase_基因组图_geneviewer基因簇结构可视化",
+      "case_dir": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化",
+      "title": "geneviewer基因簇结构可视化",
+      "family": "genome",
+      "visual_evidence": true,
+      "rebuild_class": {
+        "source_code_rebuild": false,
+        "generic_renderer_rebuild": true,
+        "case_level_fallback": true,
+        "synthetic_data": true
+      },
+      "geometry_values": [
+        "",
+        "genome_structure",
+        "",
+        "genome"
+      ],
+      "geometry_conflict": true,
+      "confusing_optional_modules": false,
+      "current_retrieval_tier": "inspiration"
+    }
+  ]
+}

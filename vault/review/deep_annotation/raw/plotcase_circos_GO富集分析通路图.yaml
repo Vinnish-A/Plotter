@@ -1,0 +1,56 @@
+case_id: "plotcase_circos_GO富集分析通路图"
+annotation_version: "deep_annotation_v1_raw"
+annotation_status:
+  status: "captured_from_asset_deep_annotator"
+  note: "Raw review condensed from visible subagent output."
+annotator_model: "gpt-5.5 high reasoning subagent"
+reviewed_at: "2026-05-21T01:02:40+08:00"
+evidence:
+  reviewed_files: ["metadata.json", "agent_guide.md", "plot.py", "data_main.csv", "raw/code.R", "scripts/code.R", "outputs/rebuilt.png", "outputs/visual_check.json"]
+  package_family: "GOplot"
+  plotting_function: "GOChord"
+  rebuilt_png_size: [1008, 1008]
+observed_visual_grammar:
+  plot_family: "go_enrichment_chord_diagram"
+  layout: ["circular body", "gene labels", "GO term sectors", "inner ribbons", "right-side legends"]
+  marks: ["ribbons", "sector arcs", "gene value tiles", "radial labels", "colorbar"]
+inferred_visual_grammar:
+  grammar_id: "go_enrichment_gene_term_chord"
+  not_supported_as: ["generic source-target-weight network", "genomic circos track plot"]
+reviewed_visual_roles:
+  go_term: "sector and legend category"
+  gene: "label and membership endpoint"
+  membership: "binary gene-term relationship"
+  logFC: "gene tile color value"
+canonical_columns:
+  - "source/target/weight are demo compatibility columns, not true edge weights"
+  - "recommended roles are term/gene/membership/logFC"
+required_data_semantics:
+  required: ["term", "gene", "membership", "logFC"]
+optional_data_semantics:
+  optional: ["p_adjust", "term_color", "term_order", "gene_order", "gene_label"]
+optional_modules:
+  term_legend:
+    status: "observed"
+  logFC_colorbar:
+    status: "observed"
+false_positive_risks:
+  - "Do not retrieve as generic network or weighted chord."
+  - "Do not treat source/target/weight as biological edges."
+best_for:
+  - "GO enrichment gene-term chord diagrams."
+bad_for:
+  - "Arbitrary networks and genomic circos tracks."
+style_notes:
+  - "Categorical term colors plus diverging logFC colorbar; current rebuilt export has label clipping risk."
+retrieval_tier_recommendation:
+  tier: "support"
+  rationale: "Strong visual exemplar with contract mismatch."
+confidence:
+  overall: 0.82
+proposed_metadata_patch:
+  visual_grammar:
+    geometry: "circos"
+    subtype: "go_enrichment_chord"
+proposed_dossier_patch:
+  retrieval_tier: "support"

@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from retrieve_candidates import retrieve
+from retrieve_candidates import parse_tiers, retrieve
 
 from plotter.paths import repo_root
 
@@ -40,6 +40,8 @@ def score(candidate: dict, fit: dict) -> dict:
         risks.append("missing required roles")
     if candidate.get("rebuild_class", {}).get("generic_renderer_rebuild"):
         risks.append("first-pass generic renderer")
+    if candidate.get("retrieval_tier") in {"inspiration", "archive"}:
+        risks.append(f"retrieval tier: {candidate.get('retrieval_tier')}")
     return {
         "candidate_id": candidate["id"],
         "title": candidate.get("title", candidate["id"]),
@@ -57,6 +59,8 @@ def score(candidate: dict, fit: dict) -> dict:
         "entry": candidate.get("entry", ""),
         "dossier": candidate.get("dossier", ""),
         "preview": candidate.get("preview", ""),
+        "retrieval_tier": candidate.get("retrieval_tier", "support"),
+        "retrieval_rationale": candidate.get("retrieval_rationale", ""),
     }
 
 
@@ -64,7 +68,9 @@ def choose_lane(scored: list[dict], lane: str) -> dict | None:
     if not scored:
         return None
     if lane == "safe":
-        pool = [x for x in scored if not x["score"]["risks"] and x["score"]["readability"] >= 0.8] or scored
+        pool = [x for x in scored if not x["score"]["risks"] and x["score"]["readability"] >= 0.8]
+        if not pool:
+            return None
     elif lane == "balanced":
         pool = [x for x in scored if x["score"]["plot_worthiness"] >= 0.65] or scored
     else:
@@ -93,10 +99,11 @@ def main() -> int:
     parser.add_argument("--data-profile", type=Path, default=None)
     parser.add_argument("--index", type=Path, default=repo_root(Path(__file__)) / "vault" / "index.jsonl")
     parser.add_argument("--limit", type=int, default=30)
+    parser.add_argument("--include-tiers", default="core,support", help="comma-separated tiers or 'all'")
     parser.add_argument("--out", type=Path, default=None)
     args = parser.parse_args()
     scene = load_scene(args.scene_card)
-    candidates = retrieve(scene, args.index, args.limit)
+    candidates = retrieve(scene, args.index, args.limit, parse_tiers(args.include_tiers))
     profile = load_json(args.data_profile) if args.data_profile else None
     payload = recommend(scene, candidates, profile)
     text = json.dumps(payload, indent=2, ensure_ascii=False)
