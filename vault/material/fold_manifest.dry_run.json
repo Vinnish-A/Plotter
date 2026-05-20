@@ -1,123 +1,28 @@
 {
-  "created_at": "2026-05-17T06:59:15.814423+00:00",
+  "created_at": "2026-05-20T15:03:59.709924+00:00",
   "material_root": "/mnt/f/Plotter/vault/material",
   "quarantine": "/mnt/f/Plotter/vault/folded_assets",
   "dry_run": true,
-  "folded_count": 23,
+  "folded_count": 4,
   "actions": [
     {
-      "case": "plotmaster_003气泡图+相关性热图",
-      "canonical_case": "plotmaster_002渐变火山图",
-      "reason": "exact duplicate primary image hash"
-    },
-    {
-      "case": "figures4papers_figure_Cflows_fig2_comparison_GeneRegulatory_pdf",
-      "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
-      "reason": "exact duplicate primary image hash"
-    },
-    {
-      "case": "figures4papers_figure_Cflows_fig2_comparison_Trajectory_pdf",
-      "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
-      "reason": "exact duplicate primary image hash"
-    },
-    {
-      "case": "figures4papers_figure_Cflows_figX_comparison_Ablation_pdf",
-      "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
-      "reason": "exact duplicate primary image hash"
-    },
-    {
-      "case": "plotcase_heatmap_时间序列基因表达热图",
-      "canonical_case": "plotcase_heatmap_tidyheatmaps轻松绘制热图",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_VIGIL_comparison_radar_png",
-      "canonical_case": "figures4papers_figure_VIGIL_comparison_posttraining_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_CellSpliceNet_comparison_png",
-      "canonical_case": "figures4papers_figure_CellSpliceNet_ablation_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_Cflows_fig2_comparison_GeneRegulatory_png",
-      "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_Cflows_fig2_comparison_Trajectory_png",
-      "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_Cflows_figX_comparison_Ablation_png",
+      "case": "figures4papers_figure_Dispersion_idea_png",
       "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
       "reason": "exact duplicate primary code hash"
     },
     {
       "case": "figures4papers_figure_Dispersion_illustration_png",
-      "canonical_case": "figures4papers_figure_Dispersion_idea_png",
+      "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
       "reason": "exact duplicate primary code hash"
     },
     {
-      "case": "figures4papers_figure_ImmunoStruct_bars_ablation_IEDB_png",
-      "canonical_case": "figures4papers_figure_ImmunoStruct_bars_ablation_Cancer_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_ImmunoStruct_bars_comparison_Cancer_png",
-      "canonical_case": "figures4papers_figure_ImmunoStruct_bars_ablation_Cancer_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_ImmunoStruct_bars_comparison_IEDB_png",
-      "canonical_case": "figures4papers_figure_ImmunoStruct_bars_ablation_Cancer_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_brainteaser_correctness_by_category_png",
-      "canonical_case": "figures4papers_figure_brainteaser_brute_force_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_brainteaser_correctness_by_subcategory_png",
-      "canonical_case": "figures4papers_figure_brainteaser_brute_force_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_brainteaser_rewriting_png",
-      "canonical_case": "figures4papers_figure_brainteaser_brute_force_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_brainteaser_selfcorrection_math_png",
-      "canonical_case": "figures4papers_figure_brainteaser_brute_force_png",
+      "case": "figures4papers_figure_RNAGenScape_manifold_holes_png",
+      "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
       "reason": "exact duplicate primary code hash"
     },
     {
       "case": "figures4papers_figure_RNAGenScape_manifold_png",
-      "canonical_case": "figures4papers_figure_RNAGenScape_manifold_holes_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_RNAGenScape_results_comparison_optimization_png",
-      "canonical_case": "figures4papers_figure_RNAGenScape_manifold_holes_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_RNAGenScape_results_comparison_speed_png",
-      "canonical_case": "figures4papers_figure_RNAGenScape_manifold_holes_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_RNAGenScape_results_sweep_png",
-      "canonical_case": "figures4papers_figure_RNAGenScape_manifold_holes_png",
-      "reason": "exact duplicate primary code hash"
-    },
-    {
-      "case": "figures4papers_figure_ophthal_review_trend_by_month_png",
-      "canonical_case": "figures4papers_figure_ophthal_review_composition_heatmap_png",
+      "canonical_case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
       "reason": "exact duplicate primary code hash"
     }
   ]

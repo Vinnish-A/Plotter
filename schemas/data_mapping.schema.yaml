@@ -22,3 +22,9 @@ properties:
     type: array
     items:
       type: string
+  role_profiles:
+    type: object
+  optional_modules:
+    type: object
+  provenance:
+    type: object

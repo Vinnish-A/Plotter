@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:35.377618+00:00",
+    "updated_at": "2026-05-20T15:04:57.574869+00:00",
     "records": [
-      {
-        "source": "plotmaster_005复杂热图/data_raw/rownames.txt",
-        "status": "converted",
-        "csv": [
-          "plotmaster_005复杂热图/data_raw/rownames.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_005复杂热图/raw/rownames.txt",
         "status": "converted",
         "csv": [
           "plotmaster_005复杂热图/raw/rownames.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -148,5 +140,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

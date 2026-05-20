@@ -12,6 +12,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from plotter.paths import material_root as default_material_root, repo_root
+from plotter.vault_status import normalize_vault_status
+
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -78,6 +83,7 @@ def fold_case(case_dir: Path, target_dir: Path, canonical: Path, reason: str) ->
             "reason": reason,
             "folded_at": datetime.now(timezone.utc).isoformat(),
         }
+        normalize_vault_status(metadata)
         write_json(metadata_path, metadata)
     target = target_dir / case_dir.name
     if target.exists():
@@ -93,8 +99,8 @@ def fold_case(case_dir: Path, target_dir: Path, canonical: Path, reason: str) ->
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--quarantine", type=Path, default=Path(__file__).resolve().parents[2] / "folded_assets")
+    parser.add_argument("--root", type=Path, default=default_material_root(Path(__file__)))
+    parser.add_argument("--quarantine", type=Path, default=repo_root(Path(__file__)) / "vault" / "folded_assets")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 

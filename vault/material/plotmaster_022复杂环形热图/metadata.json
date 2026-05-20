@@ -75,36 +75,8 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:35.512090+00:00",
+    "updated_at": "2026-05-20T15:04:57.714716+00:00",
     "records": [
-      {
-        "source": "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Guide.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_1.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_2.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_3.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_4.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_5.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_6.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_7.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_8.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_9.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_10.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_11.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_12.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_13.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_14.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_15.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_16.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_17.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_18.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_19.csv",
-          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_20.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM.xlsx",
         "status": "converted",
@@ -128,10 +100,9 @@
           "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_16.csv",
           "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_17.csv",
           "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_18.csv",
-          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_19.csv",
-          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_20.csv"
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_19.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -186,5 +157,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

@@ -73,21 +73,16 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:35.920662+00:00",
+    "updated_at": "2026-05-20T15:04:57.887908+00:00",
     "records": [
       {
-        "source": "plotmaster_031环形散点图+环形热图/data_raw/439_2022_2514_MOESM3_ESM.xlsx",
-        "status": "failed",
-        "csv": [],
-        "deleted_original": false,
-        "error": "Sheet name is an empty list"
-      },
-      {
         "source": "plotmaster_031环形散点图+环形热图/raw/439_2022_2514_MOESM3_ESM.xlsx",
-        "status": "failed",
-        "csv": [],
-        "deleted_original": false,
-        "error": "Sheet name is an empty list"
+        "status": "converted",
+        "csv": [
+          "plotmaster_031环形散点图+环形热图/raw/439_2022_2514_MOESM3_ESM__Sheet1.csv",
+          "plotmaster_031环形散点图+环形热图/raw/439_2022_2514_MOESM3_ESM__Sheet2.csv"
+        ],
+        "deleted_original": false
       }
     ]
   },
@@ -145,5 +140,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": true,
+    "canonical_case": null,
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

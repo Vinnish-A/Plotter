@@ -82,55 +82,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:26.781763+00:00",
+    "updated_at": "2026-05-20T15:04:52.482632+00:00",
     "records": [
-      {
-        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_combined dataframe with both gene expression and survival information.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa299pancanSurv/data_raw/output_combined_dataframe_with_both_gene_expression_and_survival_information.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_simple_sample_annotation.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa299pancanSurv/data_raw/output_simple_sample_annotation.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of cox result in pancancer.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_cox_result_in_pancancer.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of gene prognositicationin pancancer.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_gene_prognositicationin_pancancer.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of km result in pancancer.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_km_result_in_pancancer.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "figureya_survival_FigureYa299pancanSurv/raw/output_combined dataframe with both gene expression and survival information.txt",
         "status": "converted",
         "csv": [
           "figureya_survival_FigureYa299pancanSurv/raw/output_combined_dataframe_with_both_gene_expression_and_survival_information.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa299pancanSurv/raw/output_simple_sample_annotation.txt",
@@ -138,7 +98,7 @@
         "csv": [
           "figureya_survival_FigureYa299pancanSurv/raw/output_simple_sample_annotation.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of cox result in pancancer.txt",
@@ -146,7 +106,7 @@
         "csv": [
           "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_cox_result_in_pancancer.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of gene prognositicationin pancancer.txt",
@@ -154,7 +114,7 @@
         "csv": [
           "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_gene_prognositicationin_pancancer.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of km result in pancancer.txt",
@@ -162,7 +122,7 @@
         "csv": [
           "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_km_result_in_pancancer.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -221,5 +181,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

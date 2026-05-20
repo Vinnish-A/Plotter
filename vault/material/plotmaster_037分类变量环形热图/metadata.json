@@ -73,81 +73,29 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:36.028679+00:00",
+    "updated_at": "2026-05-20T15:04:58.000238+00:00",
     "records": [
-      {
-        "source": "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__alzRG.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__GWAS_catalog.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__UK_BioBank_GWAS.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__DisGeNET.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__WIKIPATHWAY.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__RWR_prediction.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__kmeans_prediction.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__spectral_clust_prediction.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DRUG_TARGET.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DEG_for_microarray.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DEG_for_bulk_RNA-seq.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DEG_for_proteomics_study.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DAM_DEG_in_module.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DAA_DEG_in_module.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__multi-omics_validation.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__detail_proteomics_DEPs.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__detail_microarray_DEGs.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__detail_bulk_DEGs.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE140511.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE98969.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE138852.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE147528.csv",
-          "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE157827.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__alzRG.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__GWAS_catalog.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__UK_BioBank_GWAS.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__DisGeNET.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__WIKIPATHWAY.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__RWR_prediction.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__kmeans_prediction.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__spectral_clust_prediction.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5.xlsx",
         "status": "converted",
         "csv": [
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DRUG_TARGET.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_microarray.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_bulk_RNA-seq.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_proteomics_study.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DAM_DEG_in_module.csv",
           "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DAA_DEG_in_module.csv",
+          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DAM_DEG_in_module.csv",
+          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_bulk_RNA-seq.csv",
+          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_microarray.csv",
+          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_proteomics_study.csv",
+          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DRUG_TARGET.csv",
           "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__multi-omics_validation.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__detail_proteomics_DEPs.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__detail_microarray_DEGs.csv",
           "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__detail_bulk_DEGs.csv",
-          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE140511.csv",
+          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__detail_microarray_DEGs.csv",
+          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__detail_proteomics_DEPs.csv",
           "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE98969.csv",
           "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE138852.csv",
+          "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE140511.csv",
           "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE147528.csv",
           "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE157827.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -200,5 +148,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

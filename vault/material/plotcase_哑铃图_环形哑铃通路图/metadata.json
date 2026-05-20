@@ -77,23 +77,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:34.418565+00:00",
+    "updated_at": "2026-05-20T15:04:57.076718+00:00",
     "records": [
       {
-        "source": "plotcase_哑铃图_环形哑铃通路图/data_raw/data/data.tsv",
+        "source": "plotcase_哑铃图_环形哑铃通路图/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_哑铃图_环形哑铃通路图/data_raw/data/data.csv"
+          "plotcase_哑铃图_环形哑铃通路图/raw/data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_哑铃图_环形哑铃通路图/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_哑铃图_环形哑铃通路图/raw/data/data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -142,5 +134,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

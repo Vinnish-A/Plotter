@@ -116,5 +116,18 @@
       "track",
       "color_class"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": true
   }
 }

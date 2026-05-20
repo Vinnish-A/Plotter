@@ -139,5 +139,32 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_060复杂环形互作网络图",
+    "reason": "visual_redundancy:network:network"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-20T15:04:55.887988+00:00",
+    "records": [
+      {
+        "source": "plotcase_network_细胞通讯网络图/raw/count_network.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_细胞通讯网络图/raw/count_network.csv"
+        ],
+        "deleted_original": false
+      }
+    ]
   }
 }

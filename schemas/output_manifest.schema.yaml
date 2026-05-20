@@ -23,3 +23,9 @@ properties:
     type: object
   checks:
     type: object
+  visual_check:
+    type: object
+  style:
+    type: object
+  rebuild_class:
+    type: object

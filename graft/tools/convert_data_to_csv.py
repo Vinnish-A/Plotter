@@ -13,7 +13,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
 import pandas as pd
+
+from plotter.paths import material_root as default_material_root
 
 
 DATA_SUFFIXES = {
@@ -207,7 +211,7 @@ def case_from_path(path: Path, material_root: Path) -> Path:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--root", type=Path, default=default_material_root(Path(__file__)))
     parser.add_argument("--delete-originals", action="store_true")
     parser.add_argument("--manifest", type=Path, default=None)
     args = parser.parse_args()

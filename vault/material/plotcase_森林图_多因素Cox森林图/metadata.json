@@ -75,29 +75,18 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:34.671422+00:00",
+    "updated_at": "2026-05-20T15:04:57.138869+00:00",
     "records": [
       {
-        "source": "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM.xlsx",
+        "source": "plotcase_森林图_多因素Cox森林图/raw/43018_2025_1072_MOESM3_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM__Overview.csv",
-          "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM__Figure1a.csv",
-          "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM__Figure1b_d-h.csv",
-          "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM__Figure1c.csv"
+          "plotcase_森林图_多因素Cox森林图/raw/43018_2025_1072_MOESM3_ESM__Fig.1a.csv",
+          "plotcase_森林图_多因素Cox森林图/raw/43018_2025_1072_MOESM3_ESM__Fig.1b.csv",
+          "plotcase_森林图_多因素Cox森林图/raw/43018_2025_1072_MOESM3_ESM__Fig.1c.csv",
+          "plotcase_森林图_多因素Cox森林图/raw/43018_2025_1072_MOESM3_ESM__Overview.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM__Overview.csv",
-          "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM__Figure1a.csv",
-          "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM__Figure1b_d-h.csv",
-          "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM__Figure1c.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -141,5 +130,18 @@
       "label",
       "row_order"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+    "reason": "visual_redundancy:line:line"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

@@ -78,37 +78,22 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:30.048311+00:00",
+    "updated_at": "2026-05-20T15:04:54.711683+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM.xlsx",
+        "source": "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4b.csv",
-          "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4c.csv",
-          "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4d.csv",
-          "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4f.csv",
-          "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4g_h.csv",
-          "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4j.csv",
-          "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4k.csv",
-          "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4l.csv"
+          "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM__Fig4b.csv",
+          "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM__Fig4c.csv",
+          "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM__Fig4d.csv",
+          "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM__Fig4f.csv",
+          "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM__Fig4g_h.csv",
+          "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM__Fig4j.csv",
+          "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM__Fig4k.csv",
+          "plotcase_heatmap_对角线相关性热图/raw/41586_2025_9686_MOESM8_ESM__Fig4l.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4b.csv",
-          "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4c.csv",
-          "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4d.csv",
-          "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4f.csv",
-          "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4g_h.csv",
-          "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4j.csv",
-          "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4k.csv",
-          "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4l.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -164,5 +149,18 @@
       "size_value",
       "facet"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

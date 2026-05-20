@@ -57,7 +57,7 @@
     "requires_optional_data": false,
     "linux_ready": true,
     "complexity_mode": "medium",
-    "last_built_at": "2026-05-17T12:30:13.122429+00:00"
+    "last_built_at": "2026-05-20T15:07:20.682035+00:00"
   },
   "dependencies": {
     "core": [
@@ -126,5 +126,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": true,
+    "canonical_case": null,
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": true
   }
 }

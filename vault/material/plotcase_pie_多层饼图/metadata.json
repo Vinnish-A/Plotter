@@ -75,39 +75,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:32.028183+00:00",
+    "updated_at": "2026-05-20T15:04:56.010904+00:00",
     "records": [
       {
-        "source": "plotcase_pie_多层饼图/data_raw/data/data.tsv",
+        "source": "plotcase_pie_多层饼图/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_pie_多层饼图/data_raw/data/data.csv"
+          "plotcase_pie_多层饼图/raw/data.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_pie_多层饼图/data_raw/data/group.tsv",
+        "source": "plotcase_pie_多层饼图/raw/group.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_pie_多层饼图/data_raw/data/group.csv"
+          "plotcase_pie_多层饼图/raw/group.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_pie_多层饼图/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_pie_多层饼图/raw/data/data.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_pie_多层饼图/raw/data/group.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_pie_多层饼图/raw/data/group.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -175,5 +159,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

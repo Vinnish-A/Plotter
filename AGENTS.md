@@ -13,14 +13,15 @@ This repository is a scientific figure standardization system. Agents working he
 
 ## Architecture Map
 
-This repository has 6 top-level architecture modules. Treat these names as ownership boundaries:
+This repository has 5 core architecture modules. Treat these names as ownership boundaries:
 
 1. `graft/`: intake and normalization. Graft turns foreign plotting code, source figures, and source data into an intake record with an explicit visual grammar, data contract, rebuild plan, and declared source evidence.
 2. `retinue/`: rebuild and reproducibility. Retinue validates case contracts, runs standard scripts, renders `outputs/rebuilt.png`, records build status, and keeps batch rebuilds moving after case-level failures.
 3. `cabal/`: decision and review. Cabal parses intent, builds Scene Cards, routes work, scores candidates, checks fairness, rejects unsuitable figures, records manual review, and folds visually redundant assets.
 4. `vault/`: accepted asset memory. Vault stores live standardized cases, review evidence, folded assets, dossiers, examples, preview caches, success records, and failure records.
 5. `bastard/`: figure-generation and mutation. Bastard extracts visual genes, recombines compatible grammars, creates guided mutations, runs agent figure tests, and sends acceptable variants back through Cabal and Retinue before Vault admission.
-6. `ui/`: preview and manual review surface. UI builds the browser manifest and serves live, non-folded Vault assets for inspection.
+
+`ui/` is a preview and manual review surface. It is not a sixth core cognitive module.
 
 The only valid ordinary asset path is:
 
@@ -32,6 +33,12 @@ Generated variants use:
 
 ```text
 Vault source -> Bastard generation -> Cabal review -> Retinue rebuild -> Vault admission -> UI preview
+```
+
+The target closed loop is:
+
+```text
+Cabal -> Vault -> Bastard -> Cabal -> Retinue -> Vault
 ```
 
 ## Cabal Architecture
@@ -60,11 +67,6 @@ Vault is accepted asset memory, not a raw-file dumping area. It has 8 storage zo
 6. `vault/previews/`: generated preview cache for UI use.
 7. `vault/successes/`: accepted generation or rebuild success records.
 8. `vault/failures/`: failure records that preserve reproducibility limits and known bad cases.
-
-Compatibility wrappers:
-
-- `vault/ui/`: old path for top-level `ui/`.
-- `vault/agent_tests/`: old path for generated figure tests now owned by `bastard/tests/`.
 
 Keep live, non-folded assets in `vault/material/`. Keep folded assets out of primary UI manifests. Do not compensate for weak CSV abstraction by placing extra raw evidence in Vault.
 
@@ -110,7 +112,7 @@ ui/               Web UI, manifest builder, and review server
 vault/material/   accepted asset storage only
 ```
 
-Compatibility wrappers remain in `vault/material/tools/`, `vault/ui/`, and `vault/agent_tests/`, but they should not be treated as the canonical implementation.
+Legacy compatibility wrappers should not be reintroduced. Use only the canonical module paths.
 
 Every new image should enter through a figure intake record before Vault admission:
 

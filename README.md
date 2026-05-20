@@ -6,16 +6,23 @@ The project is not a file mirror. Raw files are evidence, while the tracked inte
 
 ## Architecture Overview
 
-The repository has 6 top-level architecture modules:
+The repository has 5 core architecture modules:
 
 1. `graft/`: Intake and normalization architecture.
 2. `retinue/`: Rebuild, validation, rendering, export, and reproducibility architecture.
 3. `cabal/`: Decision, routing, scoring, review, grouping, and folding architecture.
 4. `vault/`: Accepted asset memory and case storage architecture.
 5. `bastard/`: Figure-generation, visual-gene recombination, mutation, and test architecture.
-6. `ui/`: Web preview, manifest building, and manual review interface architecture.
 
-The valid asset path is:
+`ui/` is a surface, not a core cognitive module. It previews Vault/Retinue state and supports manual review.
+
+The closed loop is:
+
+```text
+Cabal -> Vault -> Bastard -> Cabal -> Retinue -> Vault
+```
+
+The ordinary asset admission path is:
 
 ```text
 Graft intake -> Retinue rebuild -> Cabal review -> Vault admission -> UI preview
@@ -104,9 +111,9 @@ It owns:
 
 Generated figures must still follow the same visual architecture rules as Vault rebuilds: main data body first, annotation tracks around it, no overlapping semantic elements, and final export at readable scale.
 
-### UI
+### UI Surface
 
-`ui/` builds the browser-facing review surface.
+`ui/` builds the browser-facing review surface. It is not a sixth core module.
 
 It owns:
 
@@ -183,4 +190,4 @@ python ui/build_ui_manifest.py
 python ui/server.py --host 127.0.0.1 --port 8766
 ```
 
-Compatibility wrappers remain under `vault/material/tools/`, `vault/ui/`, and `vault/agent_tests/` for older commands, but new work should use `graft/`, `retinue/`, `cabal/`, `bastard/`, and top-level `ui/`.
+Legacy compatibility wrappers are intentionally not part of the architecture. Use `graft/`, `retinue/`, `cabal/`, `bastard/`, `vault/`, and top-level `ui/` directly.

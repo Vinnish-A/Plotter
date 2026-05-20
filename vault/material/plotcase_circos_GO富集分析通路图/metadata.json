@@ -79,23 +79,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:28.477484+00:00",
+    "updated_at": "2026-05-20T15:04:53.481746+00:00",
     "records": [
       {
-        "source": "plotcase_circos_GO富集分析通路图/data_raw/data/GO_pathway.tsv",
+        "source": "plotcase_circos_GO富集分析通路图/raw/GO_pathway.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_circos_GO富集分析通路图/data_raw/data/GO_pathway.csv"
+          "plotcase_circos_GO富集分析通路图/raw/GO_pathway.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_circos_GO富集分析通路图/raw/data/GO_pathway.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_circos_GO富集分析通路图/raw/data/GO_pathway.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -142,5 +134,18 @@
       "sector_color",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_circos_circlize绘制和弦图",
+    "reason": "visual_redundancy:network:circos"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

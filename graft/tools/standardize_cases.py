@@ -12,8 +12,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
 import numpy as np
 import pandas as pd
+
+from plotter.paths import material_root as default_material_root
 
 
 GEOMETRY_KEYWORDS = [
@@ -279,7 +283,7 @@ def standardize_case(case_dir: Path, rebuild: bool) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--root", type=Path, default=default_material_root(Path(__file__)))
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--rebuild", action="store_true")
     parser.add_argument("--skip-rebuilt", action="store_true")

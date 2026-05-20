@@ -78,23 +78,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:26.927605+00:00",
+    "updated_at": "2026-05-20T15:04:52.626306+00:00",
     "records": [
-      {
-        "source": "figureya_survival_FigureYa30nomogram_update/data_raw/easy_input.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa30nomogram_update/data_raw/easy_input.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "figureya_survival_FigureYa30nomogram_update/raw/easy_input.txt",
         "status": "converted",
         "csv": [
           "figureya_survival_FigureYa30nomogram_update/raw/easy_input.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -143,5 +135,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

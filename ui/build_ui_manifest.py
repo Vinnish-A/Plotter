@@ -5,9 +5,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from plotter.paths import material_root as default_material_root
+from plotter.vault_status import is_live_metadata
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -136,18 +142,27 @@ def asset_record(case_dir: Path, ui_root: Path) -> dict[str, Any]:
         "original_source_code": code_record(original_source, ui_root),
         "standard_entry_code": code_record(standard_entry, ui_root),
         "dependencies": dependencies,
+        "vault_status": metadata.get("vault_status", {}),
     }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--material-root", type=Path, default=Path(__file__).resolve().parents[1] / "vault" / "material")
+    parser.add_argument("--material-root", type=Path, default=default_material_root(Path(__file__)))
+    parser.add_argument("--include-folded", action="store_true")
     parser.add_argument("--out", type=Path, default=Path(__file__).resolve().parent / "assets_manifest.js")
     args = parser.parse_args()
 
     material_root = args.material_root.resolve()
     ui_root = args.out.resolve().parent
-    cases = sorted(path for path in material_root.iterdir() if path.is_dir() and (path / "metadata.json").exists())
+    cases = []
+    for path in sorted(material_root.iterdir()):
+        if not path.is_dir() or not (path / "metadata.json").exists():
+            continue
+        metadata = load_json(path / "metadata.json")
+        if not args.include_folded and not is_live_metadata(metadata):
+            continue
+        cases.append(path)
     assets = [asset_record(case, ui_root) for case in cases]
     manifest = {
         "generated_at": datetime.now(timezone.utc).isoformat(),

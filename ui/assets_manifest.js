@@ -1,8 +1,8 @@
 window.PLOTTER_ASSETS = {
-  "generated_at": "2026-05-19T10:32:08.192381+00:00",
+  "generated_at": "2026-05-20T15:07:38.553367+00:00",
   "material_root": "/mnt/f/Plotter/vault/material",
-  "asset_count": 156,
-  "rebuilt_count": 156,
+  "asset_count": 105,
+  "rebuilt_count": 105,
   "assets": [
     {
       "id": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
@@ -85,13 +85,20 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/plot.py",
-        "url": "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/plot.py?v=1779073025"
+        "url": "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
           "python"
         ],
         "special": []
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
       }
     },
     {
@@ -103,8 +110,8 @@ window.PLOTTER_ASSETS = {
       "language": "Python",
       "linux_ready": true,
       "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/figures4papers_figure_Dispersion_idea_png/outputs/rebuilt.png?v=1779073025",
-      "preview_image": "vault/material/figures4papers_figure_Dispersion_idea_png/outputs/rebuilt.png?v=1779073025",
+      "rebuilt_image": "vault/material/figures4papers_figure_Dispersion_idea_png/outputs/rebuilt.png?v=1779289645",
+      "preview_image": "vault/material/figures4papers_figure_Dispersion_idea_png/outputs/rebuilt.png?v=1779289645",
       "preview_kind": "rebuilt",
       "required_mappings": [
         "x",
@@ -175,13 +182,20 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figures4papers_figure_Dispersion_idea_png/plot.py",
-        "url": "vault/material/figures4papers_figure_Dispersion_idea_png/plot.py?v=1779073025"
+        "url": "vault/material/figures4papers_figure_Dispersion_idea_png/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
           "python"
         ],
         "special": []
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
       }
     },
     {
@@ -259,13 +273,20 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figures4papers_figure_Dispersion_illustration_png/plot.py",
-        "url": "vault/material/figures4papers_figure_Dispersion_illustration_png/plot.py?v=1779073025"
+        "url": "vault/material/figures4papers_figure_Dispersion_illustration_png/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
           "python"
         ],
         "special": []
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
       }
     },
     {
@@ -348,13 +369,20 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/plot.py",
-        "url": "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/plot.py?v=1779073025"
+        "url": "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
           "python"
         ],
         "special": []
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
       }
     },
     {
@@ -431,13 +459,20 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py",
-        "url": "vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py?v=1779073025"
+        "url": "vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
           "python"
         ],
         "special": []
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
       }
     },
     {
@@ -522,7 +557,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa128Prognostic/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa128Prognostic/plot.py?v=1779020556"
+        "url": "vault/material/figureya_survival_FigureYa128Prognostic/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -536,6 +571,13 @@ window.PLOTTER_ASSETS = {
           "survival",
           "survivalROC"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -621,7 +663,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa182RFSurvV2/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa182RFSurvV2/plot.py?v=1779020784"
+        "url": "vault/material/figureya_survival_FigureYa182RFSurvV2/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -636,6 +678,13 @@ window.PLOTTER_ASSETS = {
           "randomSurvivalForest",
           "survival"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -731,7 +780,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa183condSurv/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa183condSurv/plot.py?v=1779020785"
+        "url": "vault/material/figureya_survival_FigureYa183condSurv/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -755,6 +804,13 @@ window.PLOTTER_ASSETS = {
           "survminer",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -847,7 +903,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa197SmoothHaz/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa197SmoothHaz/plot.py?v=1779020794"
+        "url": "vault/material/figureya_survival_FigureYa197SmoothHaz/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -868,6 +924,13 @@ window.PLOTTER_ASSETS = {
           "survival",
           "survminer"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -956,7 +1019,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa251NPHSurv/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa251NPHSurv/plot.py?v=1779020795"
+        "url": "vault/material/figureya_survival_FigureYa251NPHSurv/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -973,6 +1036,13 @@ window.PLOTTER_ASSETS = {
           "survRM2",
           "survminer"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1066,7 +1136,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa299pancanSurv/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa299pancanSurv/plot.py?v=1779020797"
+        "url": "vault/material/figureya_survival_FigureYa299pancanSurv/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1086,6 +1156,13 @@ window.PLOTTER_ASSETS = {
           "survival",
           "survminer"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1174,7 +1251,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa305PMAPscore/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa305PMAPscore/plot.py?v=1779020797"
+        "url": "vault/material/figureya_survival_FigureYa305PMAPscore/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1191,6 +1268,13 @@ window.PLOTTER_ASSETS = {
           "SPIA",
           "knitr"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1280,7 +1364,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa30nomogram_update/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa30nomogram_update/plot.py?v=1779020798"
+        "url": "vault/material/figureya_survival_FigureYa30nomogram_update/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1299,6 +1383,13 @@ window.PLOTTER_ASSETS = {
           "survival",
           "vioplot"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1393,7 +1484,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/figureya_survival_FigureYa66UnivariateCox/plot.py",
-        "url": "vault/material/figureya_survival_FigureYa66UnivariateCox/plot.py?v=1779020799"
+        "url": "vault/material/figureya_survival_FigureYa66UnivariateCox/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1416,6 +1507,13 @@ window.PLOTTER_ASSETS = {
           "tidyverse",
           "viridis"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1499,7 +1597,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/plot.py",
-        "url": "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/plot.py?v=1779020801"
+        "url": "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1510,6 +1608,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1593,7 +1698,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/plot.py",
-        "url": "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/plot.py?v=1779020802"
+        "url": "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1606,102 +1711,13 @@ window.PLOTTER_ASSETS = {
           "scales",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_barplot_多元素组合分布条图",
-      "case_dir": "plotcase_barplot_多元素组合分布条图",
-      "title": "多元素组合分布条图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png?v=1779091166",
-      "preview_image": "vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png?v=1779091166",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "category",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "category",
-          "value"
-        ],
-        "optional_mappings": [
-          "group",
-          "stack",
-          "error_low",
-          "error_high",
-          "line_value",
-          "annotation_value",
-          "label"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "bar_composite",
-        "backend": "R/ggplot2",
-        "unit": "category-value summary table",
-        "required_data_roles": [
-          "category",
-          "value"
-        ],
-        "optional_data_roles": [
-          "group",
-          "stack",
-          "error_low",
-          "error_high",
-          "line_value",
-          "annotation_value",
-          "label"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/43016_2026_1303_MOESM3_ESM__pie_data.csv",
-        "grammar_geometry": "bar_composite",
-        "row_count": 6,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "barplot\\多元素组合分布条图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_barplot_多元素组合分布条图/raw/code.R",
-        "url": "vault/material/plotcase_barplot_多元素组合分布条图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_barplot_多元素组合分布条图/raw/code.R",
-        "url": "vault/material/plotcase_barplot_多元素组合分布条图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_barplot_多元素组合分布条图/plot.py",
-        "url": "vault/material/plotcase_barplot_多元素组合分布条图/plot.py?v=1779020805"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "patchwork"
-        ],
-        "special": [
-          "readxl",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1785,7 +1801,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_barplot_多层注释柱状图/plot.py",
-        "url": "vault/material/plotcase_barplot_多层注释柱状图/plot.py?v=1779020806"
+        "url": "vault/material/plotcase_barplot_多层注释柱状图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1799,6 +1815,13 @@ window.PLOTTER_ASSETS = {
           "scales",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1882,7 +1905,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_barplot_多层注释柱状图进阶版/plot.py",
-        "url": "vault/material/plotcase_barplot_多层注释柱状图进阶版/plot.py?v=1779020806"
+        "url": "vault/material/plotcase_barplot_多层注释柱状图进阶版/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1894,6 +1917,13 @@ window.PLOTTER_ASSETS = {
           "legendry",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -1977,7 +2007,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/plot.py",
-        "url": "vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/plot.py?v=1779020809"
+        "url": "vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -1991,6 +2021,13 @@ window.PLOTTER_ASSETS = {
           "rstatix",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -2074,7 +2111,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/plot.py",
-        "url": "vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/plot.py?v=1779020809"
+        "url": "vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -2089,6 +2126,13 @@ window.PLOTTER_ASSETS = {
           "rstatix",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -2172,7 +2216,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_barplot_环形条形图/plot.py",
-        "url": "vault/material/plotcase_barplot_环形条形图/plot.py?v=1779020811"
+        "url": "vault/material/plotcase_barplot_环形条形图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -2184,6 +2228,13 @@ window.PLOTTER_ASSETS = {
           "geomtextpath",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -2267,7 +2318,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_barplot_配对连线条形图_进阶版/plot.py",
-        "url": "vault/material/plotcase_barplot_配对连线条形图_进阶版/plot.py?v=1779020812"
+        "url": "vault/material/plotcase_barplot_配对连线条形图_进阶版/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -2282,6 +2333,13 @@ window.PLOTTER_ASSETS = {
           "scico",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -2361,7 +2419,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/plot.py",
-        "url": "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/plot.py?v=1779020813"
+        "url": "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -2373,6 +2431,13 @@ window.PLOTTER_ASSETS = {
           "ggh4x",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -2452,7 +2517,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_boxplot_多组配对连线箱线图/plot.py",
-        "url": "vault/material/plotcase_boxplot_多组配对连线箱线图/plot.py?v=1779020814"
+        "url": "vault/material/plotcase_boxplot_多组配对连线箱线图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -2465,6 +2530,13 @@ window.PLOTTER_ASSETS = {
           "ggpubr",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -2544,7 +2616,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_boxplot_方差分析箱线图_进阶版/plot.py",
-        "url": "vault/material/plotcase_boxplot_方差分析箱线图_进阶版/plot.py?v=1779020814"
+        "url": "vault/material/plotcase_boxplot_方差分析箱线图_进阶版/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -2559,203 +2631,13 @@ window.PLOTTER_ASSETS = {
           "multcompView",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_circos_GO富集分析通路图",
-      "case_dir": "plotcase_circos_GO富集分析通路图",
-      "title": "GO富集分析通路图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_circos_GO富集分析通路图/outputs/rebuilt.png?v=1779090584",
-      "preview_image": "vault/material/plotcase_circos_GO富集分析通路图/outputs/rebuilt.png?v=1779090584",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "chord_circos",
-        "backend": "R/ggplot2",
-        "unit": "edge list or adjacency matrix normalized to source-target-weight",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/GO_pathway.csv",
-        "grammar_geometry": "chord_circos",
-        "row_count": 8,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "circos\\GO富集分析通路图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_GO富集分析通路图/raw/code.R",
-        "url": "vault/material/plotcase_circos_GO富集分析通路图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_GO富集分析通路图/raw/code.R",
-        "url": "vault/material/plotcase_circos_GO富集分析通路图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_circos_GO富集分析通路图/plot.py",
-        "url": "vault/material/plotcase_circos_GO富集分析通路图/plot.py?v=1779020816"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "readr",
-          "stringr",
-          "tidyr"
-        ],
-        "special": [
-          "GOplot",
-          "RColorBrewer",
-          "devtools",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_circos_circlize优雅绘制多重注释弦图",
-      "case_dir": "plotcase_circos_circlize优雅绘制多重注释弦图",
-      "title": "circlize优雅绘制多重注释弦图",
-      "mode": "medium",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/outputs/rebuilt.png?v=1779090586",
-      "preview_image": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/outputs/rebuilt.png?v=1779090586",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "chord_circos",
-        "backend": "R/ComplexHeatmap-circlize",
-        "unit": "edge list or adjacency matrix normalized to source-target-weight",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "chord_circos",
-        "row_count": 8,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "circos\\circlize优雅绘制多重注释弦图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/raw/code.R",
-        "url": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/raw/code.R",
-        "url": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/plot.py",
-        "url": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/plot.py?v=1779020817"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "circlize",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -2840,7 +2722,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_circos_circlize绘制和弦图/plot.py",
-        "url": "vault/material/plotcase_circos_circlize绘制和弦图/plot.py?v=1779020817"
+        "url": "vault/material/plotcase_circos_circlize绘制和弦图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -2857,496 +2739,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_circos_circlize绘制和弦图进阶版",
-      "case_dir": "plotcase_circos_circlize绘制和弦图进阶版",
-      "title": "circlize绘制和弦图进阶版",
-      "mode": "medium",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_circos_circlize绘制和弦图进阶版/outputs/rebuilt.png?v=1779090588",
-      "preview_image": "vault/material/plotcase_circos_circlize绘制和弦图进阶版/outputs/rebuilt.png?v=1779090588",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "chord_circos",
-        "backend": "R/ComplexHeatmap-circlize",
-        "unit": "edge list or adjacency matrix normalized to source-target-weight",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "chord_circos",
-        "row_count": 10,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "circos\\circlize绘制和弦图进阶版"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_circlize绘制和弦图进阶版/raw/code.R",
-        "url": "vault/material/plotcase_circos_circlize绘制和弦图进阶版/raw/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_circlize绘制和弦图进阶版/raw/code.R",
-        "url": "vault/material/plotcase_circos_circlize绘制和弦图进阶版/raw/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_circos_circlize绘制和弦图进阶版/plot.py",
-        "url": "vault/material/plotcase_circos_circlize绘制和弦图进阶版/plot.py?v=1779020818"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "tibble"
-        ],
-        "special": [
-          "ComplexHeatmap",
-          "circlize",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_circos_circlize绘制融合基因图",
-      "case_dir": "plotcase_circos_circlize绘制融合基因图",
-      "title": "circlize绘制融合基因图",
-      "mode": "low",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_circos_circlize绘制融合基因图/outputs/rebuilt.png?v=1779091578",
-      "preview_image": "vault/material/plotcase_circos_circlize绘制融合基因图/outputs/rebuilt.png?v=1779091578",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "chord_circos",
-        "backend": "R/ComplexHeatmap-circlize",
-        "unit": "edge list or adjacency matrix normalized to source-target-weight",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/bed.csv",
-        "grammar_geometry": "chord_circos",
-        "row_count": 27,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "circos\\circlize绘制融合基因图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_circlize绘制融合基因图/scripts/code.R",
-        "url": "vault/material/plotcase_circos_circlize绘制融合基因图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_circlize绘制融合基因图/scripts/code.R",
-        "url": "vault/material/plotcase_circos_circlize绘制融合基因图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_circos_circlize绘制融合基因图/plot.py",
-        "url": "vault/material/plotcase_circos_circlize绘制融合基因图/plot.py?v=1779020819"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "circlize",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_circos_多类别关联网络弦图",
-      "case_dir": "plotcase_circos_多类别关联网络弦图",
-      "title": "多类别关联网络弦图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_circos_多类别关联网络弦图/outputs/rebuilt.png?v=1779091578",
-      "preview_image": "vault/material/plotcase_circos_多类别关联网络弦图/outputs/rebuilt.png?v=1779091578",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "chord_circos",
-        "backend": "R/ComplexHeatmap-circlize",
-        "unit": "edge list or adjacency matrix normalized to source-target-weight",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "chord_circos",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "circos\\多类别关联网络弦图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_多类别关联网络弦图/scripts/code.R",
-        "url": "vault/material/plotcase_circos_多类别关联网络弦图/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_多类别关联网络弦图/scripts/code.R",
-        "url": "vault/material/plotcase_circos_多类别关联网络弦图/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_circos_多类别关联网络弦图/plot.py",
-        "url": "vault/material/plotcase_circos_多类别关联网络弦图/plot.py?v=1779020820"
-      },
-      "dependencies": {
-        "core": [
-          "dplyr",
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ComplexHeatmap",
-          "circlize",
-          "grid",
-          "reshape2",
-          "viridis"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_circos_细胞通讯弦图_基础入门",
-      "case_dir": "plotcase_circos_细胞通讯弦图_基础入门",
-      "title": "细胞通讯弦图_基础入门",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_circos_细胞通讯弦图_基础入门/outputs/rebuilt.png?v=1779091578",
-      "preview_image": "vault/material/plotcase_circos_细胞通讯弦图_基础入门/outputs/rebuilt.png?v=1779091578",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "chord_circos",
-        "backend": "R",
-        "unit": "edge list or adjacency matrix normalized to source-target-weight",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "source_group",
-          "target_group",
-          "direction",
-          "sector_order",
-          "sector_color",
-          "label"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "chord_circos",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "circos\\细胞通讯弦图_基础入门"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_细胞通讯弦图_基础入门/scripts/code.R",
-        "url": "vault/material/plotcase_circos_细胞通讯弦图_基础入门/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_circos_细胞通讯弦图_基础入门/scripts/code.R",
-        "url": "vault/material/plotcase_circos_细胞通讯弦图_基础入门/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_circos_细胞通讯弦图_基础入门/plot.py",
-        "url": "vault/material/plotcase_circos_细胞通讯弦图_基础入门/plot.py?v=1779020821"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "BiocManager",
-          "CCPlotR"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_3D热图",
-      "case_dir": "plotcase_heatmap_3D热图",
-      "title": "3D热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_3D热图/outputs/rebuilt.png?v=1779091578",
-      "preview_image": "vault/material/plotcase_heatmap_3D热图/outputs/rebuilt.png?v=1779091578",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ComplexHeatmap-circlize",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data3.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 150,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\3D热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_3D热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_3D热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_3D热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_3D热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_3D热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_3D热图/plot.py?v=1779020822"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "BiocManager",
-          "ComplexHeatmap",
-          "corrplot",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -3433,7 +2832,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/plot.py?v=1779020822"
+        "url": "vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -3449,210 +2848,13 @@ window.PLOTTER_ASSETS = {
           "linkET",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_Mantel检验热图",
-      "case_dir": "plotcase_heatmap_Mantel检验热图",
-      "title": "Mantel检验热图",
-      "mode": "medium",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_Mantel检验热图/outputs/rebuilt.png?v=1779091578",
-      "preview_image": "vault/material/plotcase_heatmap_Mantel检验热图/outputs/rebuilt.png?v=1779091578",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\Mantel检验热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_Mantel检验热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_Mantel检验热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_Mantel检验热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_Mantel检验热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_Mantel检验热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_Mantel检验热图/plot.py?v=1779020823"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "corrplot",
-          "devtools",
-          "ggtext",
-          "linkET",
-          "magrittr",
-          "psych",
-          "reshape",
-          "tidyverse",
-          "vegan"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_circlize绘制环状聚类热图",
-      "case_dir": "plotcase_heatmap_circlize绘制环状聚类热图",
-      "title": "circlize绘制环状聚类热图",
-      "mode": "low",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图/outputs/rebuilt.png?v=1779090640",
-      "preview_image": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图/outputs/rebuilt.png?v=1779090640",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ComplexHeatmap-circlize",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 100,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\circlize绘制环状聚类热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图/plot.py?v=1779020824"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ComplexHeatmap",
-          "circlize",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -3739,7 +2941,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_circlize风格多层次极坐标热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_circlize风格多层次极坐标热图/plot.py?v=1779020824"
+        "url": "vault/material/plotcase_heatmap_circlize风格多层次极坐标热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -3754,104 +2956,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_ggtree绘制环状聚类热图",
-      "case_dir": "plotcase_heatmap_ggtree绘制环状聚类热图",
-      "title": "ggtree绘制环状聚类热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/outputs/rebuilt.png?v=1779091578",
-      "preview_image": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/outputs/rebuilt.png?v=1779091578",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "node_id",
-        "parent_id",
-        "label"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "node_id",
-          "parent_id",
-          "label"
-        ],
-        "optional_mappings": [
-          "branch_length",
-          "tip_group",
-          "track",
-          "track_value",
-          "track_class",
-          "heatmap_value"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "tree_heatmap",
-        "backend": "R/ggtree",
-        "unit": "tree edges plus tip-level annotation table",
-        "required_data_roles": [
-          "node_id",
-          "parent_id",
-          "label"
-        ],
-        "optional_data_roles": [
-          "branch_length",
-          "tip_group",
-          "track",
-          "track_value",
-          "track_class",
-          "heatmap_value"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "tree_heatmap",
-        "row_count": 98,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\ggtree绘制环状聚类热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/plot.py?v=1779020827"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggtree",
-          "ggtreeExtra",
-          "tidyverse",
-          "treeio"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -3936,7 +3047,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/plot.py?v=1779020828"
+        "url": "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -3950,6 +3061,13 @@ window.PLOTTER_ASSETS = {
           "ggtreeExtra",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -4034,7 +3152,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_ggtree绘制组合热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_ggtree绘制组合热图/plot.py?v=1779020828"
+        "url": "vault/material/plotcase_heatmap_ggtree绘制组合热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -4047,518 +3165,13 @@ window.PLOTTER_ASSETS = {
           "ggtree",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
-      "case_dir": "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
-      "title": "scDotPlot绘制单细胞层次聚类气泡热图",
-      "mode": "medium",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/outputs/rebuilt.png?v=1779091451",
-      "preview_image": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/outputs/rebuilt.png?v=1779091451",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\scDotPlot绘制单细胞层次聚类气泡热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/plot.py?v=1779020829"
-      },
-      "dependencies": {
-        "core": [
-          "dplyr",
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "AnnotationDbi",
-          "BiocManager",
-          "ggsci",
-          "scDotPlot",
-          "scRNAseq",
-          "scran",
-          "scuttle",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_回归方差分解热图",
-      "case_dir": "plotcase_heatmap_回归方差分解热图",
-      "title": "回归方差分解热图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_回归方差分解热图/outputs/rebuilt.png?v=1779091221",
-      "preview_image": "vault/material/plotcase_heatmap_回归方差分解热图/outputs/rebuilt.png?v=1779091221",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/env.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 24,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\回归方差分解热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_回归方差分解热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_回归方差分解热图/raw/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_回归方差分解热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_回归方差分解热图/raw/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_回归方差分解热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_回归方差分解热图/plot.py?v=1779020832"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "MASS",
-          "RColorBrewer",
-          "aplot",
-          "magrittr",
-          "psych",
-          "relaimpo",
-          "reshape2",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_基因表达注释热图",
-      "case_dir": "plotcase_heatmap_基因表达注释热图",
-      "title": "基因表达注释热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_基因表达注释热图/outputs/rebuilt.png?v=1779091578",
-      "preview_image": "vault/material/plotcase_heatmap_基因表达注释热图/outputs/rebuilt.png?v=1779091578",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ComplexHeatmap-circlize",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 136,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\基因表达注释热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_基因表达注释热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_基因表达注释热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_基因表达注释热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_基因表达注释热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_基因表达注释热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_基因表达注释热图/plot.py?v=1779020832"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "stringr"
-        ],
-        "special": [
-          "ComplexHeatmap",
-          "circlize",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_多元素个性化对角线热图",
-      "case_dir": "plotcase_heatmap_多元素个性化对角线热图",
-      "title": "多元素个性化对角线热图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_多元素个性化对角线热图/outputs/rebuilt.png?v=1779090646",
-      "preview_image": "vault/material/plotcase_heatmap_多元素个性化对角线热图/outputs/rebuilt.png?v=1779090646",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 18,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\多元素个性化对角线热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_多元素个性化对角线热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_多元素个性化对角线热图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_多元素个性化对角线热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_多元素个性化对角线热图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_多元素个性化对角线热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_多元素个性化对角线热图/plot.py?v=1779020833"
-      },
-      "dependencies": {
-        "core": [
-          "dplyr",
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "devtools",
-          "ggnewscale",
-          "jjPlot",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_多元素个性化气泡热图",
-      "case_dir": "plotcase_heatmap_多元素个性化气泡热图",
-      "title": "多元素个性化气泡热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_多元素个性化气泡热图/outputs/rebuilt.png?v=1779091578",
-      "preview_image": "vault/material/plotcase_heatmap_多元素个性化气泡热图/outputs/rebuilt.png?v=1779091578",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/heat.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 45,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\多元素个性化气泡热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_多元素个性化气泡热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_多元素个性化气泡热图/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_多元素个性化气泡热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_多元素个性化气泡热图/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_多元素个性化气泡热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_多元素个性化气泡热图/plot.py?v=1779020834"
-      },
-      "dependencies": {
-        "core": [
-          "ggplot2",
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "patchwork"
-        ],
-        "special": [
-          "PieGlyph",
-          "ggtext",
-          "legendry",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -4645,7 +3258,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_多分组气泡热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_多分组气泡热图/plot.py?v=1779020834"
+        "url": "vault/material/plotcase_heatmap_多分组气泡热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -4657,6 +3270,13 @@ window.PLOTTER_ASSETS = {
           "legendry",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -4743,7 +3363,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_多层嵌套分面热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_多层嵌套分面热图/plot.py?v=1779020835"
+        "url": "vault/material/plotcase_heatmap_多层嵌套分面热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -4759,6 +3379,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -4845,7 +3472,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_多类别分面注释热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_多类别分面注释热图/plot.py?v=1779020836"
+        "url": "vault/material/plotcase_heatmap_多类别分面注释热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -4860,104 +3487,13 @@ window.PLOTTER_ASSETS = {
           "magrittr",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_多类别注释风格热图",
-      "case_dir": "plotcase_heatmap_多类别注释风格热图",
-      "title": "多类别注释风格热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_多类别注释风格热图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_heatmap_多类别注释风格热图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 19,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\多类别注释风格热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_多类别注释风格热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_多类别注释风格热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_多类别注释风格热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_多类别注释风格热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_多类别注释风格热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_多类别注释风格热图/plot.py?v=1779020836"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "legendry",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -5044,7 +3580,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_多重注释分组热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_多重注释分组热图/plot.py?v=1779020837"
+        "url": "vault/material/plotcase_heatmap_多重注释分组热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -5059,6 +3595,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -5145,7 +3688,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_对角线相关性热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_对角线相关性热图/plot.py?v=1779020838"
+        "url": "vault/material/plotcase_heatmap_对角线相关性热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -5162,97 +3705,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_时间序列基因表达热图",
-      "case_dir": "plotcase_heatmap_时间序列基因表达热图",
-      "title": "时间序列基因表达热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "R",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_时间序列基因表达热图/outputs/rebuilt.png?v=1779091451",
-      "preview_image": "vault/material/plotcase_heatmap_时间序列基因表达热图/outputs/rebuilt.png?v=1779091451",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "grammar_geometry": "annotated_heatmap",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\时间序列基因表达热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_时间序列基因表达热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_时间序列基因表达热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_时间序列基因表达热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_时间序列基因表达热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_时间序列基因表达热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_时间序列基因表达热图/scripts/code.R?v=1778928033"
-      },
-      "dependencies": {
-        "core": [],
-        "special": [
-          "ClusterGVis",
-          "devtools",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -5339,7 +3798,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_极坐标热图添加聚类/plot.py",
-        "url": "vault/material/plotcase_heatmap_极坐标热图添加聚类/plot.py?v=1779020839"
+        "url": "vault/material/plotcase_heatmap_极坐标热图添加聚类/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -5352,610 +3811,13 @@ window.PLOTTER_ASSETS = {
           "legendry",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_气泡配对连线个性化热图",
-      "case_dir": "plotcase_heatmap_气泡配对连线个性化热图",
-      "title": "气泡配对连线个性化热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_气泡配对连线个性化热图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_heatmap_气泡配对连线个性化热图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/heatmap2.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 19,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\气泡配对连线个性化热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_气泡配对连线个性化热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_气泡配对连线个性化热图/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_气泡配对连线个性化热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_气泡配对连线个性化热图/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_气泡配对连线个性化热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_气泡配对连线个性化热图/plot.py?v=1779020840"
-      },
-      "dependencies": {
-        "core": [
-          "dplyr",
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "patchwork"
-        ],
-        "special": [
-          "RColorBrewer",
-          "ggnewscale",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_热图添加层次折叠聚类树",
-      "case_dir": "plotcase_heatmap_热图添加层次折叠聚类树",
-      "title": "热图添加层次折叠聚类树",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggtree",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/Figure5-metabolicfunctions_logtpm.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 127,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\热图添加层次折叠聚类树"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树/plot.py",
-        "url": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树/plot.py?v=1779020841"
-      },
-      "dependencies": {
-        "core": [
-          "dplyr",
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "RColorBrewer",
-          "aplot",
-          "ggtree",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_环状分组热图",
-      "case_dir": "plotcase_heatmap_环状分组热图",
-      "title": "环状分组热图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_环状分组热图/outputs/rebuilt.png?v=1779090655",
-      "preview_image": "vault/material/plotcase_heatmap_环状分组热图/outputs/rebuilt.png?v=1779090655",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/heatmap.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 20,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\环状分组热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_环状分组热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_环状分组热图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_环状分组热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_环状分组热图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_环状分组热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_环状分组热图/plot.py?v=1779020842"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "corrplot",
-          "geomtextpath",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_环状注释热图",
-      "case_dir": "plotcase_heatmap_环状注释热图",
-      "title": "环状注释热图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_环状注释热图/outputs/rebuilt.png?v=1779090656",
-      "preview_image": "vault/material/plotcase_heatmap_环状注释热图/outputs/rebuilt.png?v=1779090656",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggtree",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 95,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\环状注释热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_环状注释热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_环状注释热图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_环状注释热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_环状注释热图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_环状注释热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_环状注释热图/plot.py?v=1779020843"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "RColorBrewer",
-          "ape",
-          "ggnewscale",
-          "ggtree",
-          "ggtreeExtra",
-          "tidyverse",
-          "treeio"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_相关性分面热图",
-      "case_dir": "plotcase_heatmap_相关性分面热图",
-      "title": "相关性分面热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_相关性分面热图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_heatmap_相关性分面热图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/genus.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 19,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\相关性分面热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_相关性分面热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_相关性分面热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_相关性分面热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_相关性分面热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_相关性分面热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_相关性分面热图/plot.py?v=1779020844"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "RColorBrewer",
-          "ggh4x",
-          "magrittr",
-          "psych",
-          "reshape",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_相关性注释热图",
-      "case_dir": "plotcase_heatmap_相关性注释热图",
-      "title": "相关性注释热图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_相关性注释热图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_heatmap_相关性注释热图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 57,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\相关性注释热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_相关性注释热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_相关性注释热图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_相关性注释热图/scripts/code.R",
-        "url": "vault/material/plotcase_heatmap_相关性注释热图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_相关性注释热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_相关性注释热图/plot.py?v=1779020844"
-      },
-      "dependencies": {
-        "core": [
-          "dplyr",
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -6042,7 +3904,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_离散热图与条图组合/plot.py",
-        "url": "vault/material/plotcase_heatmap_离散热图与条图组合/plot.py?v=1779020847"
+        "url": "vault/material/plotcase_heatmap_离散热图与条图组合/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -6056,6 +3918,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -6140,7 +4009,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_heatmap_系统发育树组合离散热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_系统发育树组合离散热图/plot.py?v=1779020847"
+        "url": "vault/material/plotcase_heatmap_系统发育树组合离散热图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -6158,210 +4027,13 @@ window.PLOTTER_ASSETS = {
           "tidyverse",
           "treeio"
         ]
-      }
-    },
-    {
-      "id": "plotcase_heatmap_配对连线热图",
-      "case_dir": "plotcase_heatmap_配对连线热图",
-      "title": "配对连线热图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_heatmap_配对连线热图/outputs/rebuilt.png?v=1779090660",
-      "preview_image": "vault/material/plotcase_heatmap_配对连线热图/outputs/rebuilt.png?v=1779090660",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "row_id",
-        "column_id",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_mappings": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "annotated_heatmap",
-        "backend": "R/ggplot2",
-        "unit": "long matrix table with optional row/column annotations",
-        "required_data_roles": [
-          "row_id",
-          "column_id",
-          "value"
-        ],
-        "optional_data_roles": [
-          "row_group",
-          "column_group",
-          "annotation_track",
-          "annotation_value",
-          "label",
-          "size_value",
-          "facet"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data1.csv",
-        "grammar_geometry": "annotated_heatmap",
-        "row_count": 30,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "heatmap\\配对连线热图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_配对连线热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_配对连线热图/raw/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_heatmap_配对连线热图/raw/code.R",
-        "url": "vault/material/plotcase_heatmap_配对连线热图/raw/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_heatmap_配对连线热图/plot.py",
-        "url": "vault/material/plotcase_heatmap_配对连线热图/plot.py?v=1779020849"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "patchwork"
-        ],
-        "special": [
-          "MetBrewer",
-          "RColorBrewer",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_network_GO通路相似性网络图_基于基因重叠度",
-      "case_dir": "plotcase_network_GO通路相似性网络图_基于基因重叠度",
-      "title": "GO通路相似性网络图_基于基因重叠度",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggraph-igraph",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/GO_pathway.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 8,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "network\\GO通路相似性网络图_基于基因重叠度"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/scripts/code.R",
-        "url": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/scripts/code.R",
-        "url": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/plot.py",
-        "url": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/plot.py?v=1779020854"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "RColorBrewer",
-          "ggforce",
-          "ggraph",
-          "ggtext",
-          "igraph",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -6450,7 +4122,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/plot.py",
-        "url": "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/plot.py?v=1779020855"
+        "url": "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -6466,6 +4138,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -6550,7 +4229,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_network_Treemap矩形树状GO富集分析图/plot.py",
-        "url": "vault/material/plotcase_network_Treemap矩形树状GO富集分析图/plot.py?v=1779020856"
+        "url": "vault/material/plotcase_network_Treemap矩形树状GO富集分析图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -6566,105 +4245,13 @@ window.PLOTTER_ASSETS = {
           "tidyverse",
           "treemapify"
         ]
-      }
-    },
-    {
-      "id": "plotcase_network_ggplot2优雅绘制网络图",
-      "case_dir": "plotcase_network_ggplot2优雅绘制网络图",
-      "title": "ggplot2优雅绘制网络图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_network_ggplot2优雅绘制网络图/outputs/rebuilt.png?v=1779090597",
-      "preview_image": "vault/material/plotcase_network_ggplot2优雅绘制网络图/outputs/rebuilt.png?v=1779090597",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggplot2",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 100,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "network\\ggplot2优雅绘制网络图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_ggplot2优雅绘制网络图/raw/code.R",
-        "url": "vault/material/plotcase_network_ggplot2优雅绘制网络图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_ggplot2优雅绘制网络图/raw/code.R",
-        "url": "vault/material/plotcase_network_ggplot2优雅绘制网络图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_network_ggplot2优雅绘制网络图/plot.py",
-        "url": "vault/material/plotcase_network_ggplot2优雅绘制网络图/plot.py?v=1779020856"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -6753,7 +4340,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/plot.py",
-        "url": "vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/plot.py?v=1779020857"
+        "url": "vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -6767,6 +4354,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -6855,7 +4449,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/plot.py",
-        "url": "vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/plot.py?v=1779020858"
+        "url": "vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -6874,414 +4468,13 @@ window.PLOTTER_ASSETS = {
           "tidygraph",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_network_ggraph绘制代谢途径图",
-      "case_dir": "plotcase_network_ggraph绘制代谢途径图",
-      "title": "ggraph绘制代谢途径图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_network_ggraph绘制代谢途径图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_network_ggraph绘制代谢途径图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggraph-igraph",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/oppp_edges.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 14,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "network\\ggraph绘制代谢途径图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_ggraph绘制代谢途径图/scripts/code.R",
-        "url": "vault/material/plotcase_network_ggraph绘制代谢途径图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_ggraph绘制代谢途径图/scripts/code.R",
-        "url": "vault/material/plotcase_network_ggraph绘制代谢途径图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_network_ggraph绘制代谢途径图/plot.py",
-        "url": "vault/material/plotcase_network_ggraph绘制代谢途径图/plot.py?v=1779020859"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggraph",
-          "igraph",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_network_ggraph绘制环状网络图",
-      "case_dir": "plotcase_network_ggraph绘制环状网络图",
-      "title": "ggraph绘制环状网络图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_network_ggraph绘制环状网络图/outputs/rebuilt.png?v=1779090602",
-      "preview_image": "vault/material/plotcase_network_ggraph绘制环状网络图/outputs/rebuilt.png?v=1779090602",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggraph-igraph",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 100,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "network\\ggraph绘制环状网络图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_ggraph绘制环状网络图/raw/code.R",
-        "url": "vault/material/plotcase_network_ggraph绘制环状网络图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_ggraph绘制环状网络图/raw/code.R",
-        "url": "vault/material/plotcase_network_ggraph绘制环状网络图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_network_ggraph绘制环状网络图/plot.py",
-        "url": "vault/material/plotcase_network_ggraph绘制环状网络图/plot.py?v=1779020859"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "readr",
-          "stringr",
-          "tidyr"
-        ],
-        "special": [
-          "geomtextpath",
-          "ggraph",
-          "tidygraph",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_network_分层气泡图_类别层次结构展示",
-      "case_dir": "plotcase_network_分层气泡图_类别层次结构展示",
-      "title": "分层气泡图_类别层次结构展示",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_network_分层气泡图_类别层次结构展示/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_network_分层气泡图_类别层次结构展示/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggraph-igraph",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 800,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "network\\分层气泡图_类别层次结构展示"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_分层气泡图_类别层次结构展示/scripts/code.R",
-        "url": "vault/material/plotcase_network_分层气泡图_类别层次结构展示/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_分层气泡图_类别层次结构展示/scripts/code.R",
-        "url": "vault/material/plotcase_network_分层气泡图_类别层次结构展示/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_network_分层气泡图_类别层次结构展示/plot.py",
-        "url": "vault/material/plotcase_network_分层气泡图_类别层次结构展示/plot.py?v=1779020860"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggraph",
-          "igraph",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_network_微生物与代谢物共生网络图",
-      "case_dir": "plotcase_network_微生物与代谢物共生网络图",
-      "title": "微生物与代谢物共生网络图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_network_微生物与代谢物共生网络图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_network_微生物与代谢物共生网络图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggraph-igraph",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "network_graph",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "network\\微生物与代谢物共生网络图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_微生物与代谢物共生网络图/scripts/code.R",
-        "url": "vault/material/plotcase_network_微生物与代谢物共生网络图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_微生物与代谢物共生网络图/scripts/code.R",
-        "url": "vault/material/plotcase_network_微生物与代谢物共生网络图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_network_微生物与代谢物共生网络图/plot.py",
-        "url": "vault/material/plotcase_network_微生物与代谢物共生网络图/plot.py?v=1779020862"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggpubr",
-          "igraph",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -7370,7 +4563,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_network_环形网络图的构建方法/plot.py",
-        "url": "vault/material/plotcase_network_环形网络图的构建方法/plot.py?v=1779020862"
+        "url": "vault/material/plotcase_network_环形网络图的构建方法/plot.py?v=1779289253"
       },
       "dependencies": {
         "core": [
@@ -7384,407 +4577,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_network_细胞通讯网络图",
-      "case_dir": "plotcase_network_细胞通讯网络图",
-      "title": "细胞通讯网络图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_network_细胞通讯网络图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_network_细胞通讯网络图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggraph-igraph",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/count_network.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 144,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "network\\细胞通讯网络图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_细胞通讯网络图/scripts/code.R",
-        "url": "vault/material/plotcase_network_细胞通讯网络图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_细胞通讯网络图/scripts/code.R",
-        "url": "vault/material/plotcase_network_细胞通讯网络图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_network_细胞通讯网络图/plot.py",
-        "url": "vault/material/plotcase_network_细胞通讯网络图/plot.py?v=1779020863"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "CellChat",
-          "devtools",
-          "grid",
-          "igraph",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_network_蛋白互作网络图",
-      "case_dir": "plotcase_network_蛋白互作网络图",
-      "title": "蛋白互作网络图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_network_蛋白互作网络图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_network_蛋白互作网络图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggraph-igraph",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/string_interactions.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 39,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "network\\蛋白互作网络图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_蛋白互作网络图/scripts/code.R",
-        "url": "vault/material/plotcase_network_蛋白互作网络图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_network_蛋白互作网络图/scripts/code.R",
-        "url": "vault/material/plotcase_network_蛋白互作网络图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_network_蛋白互作网络图/plot.py",
-        "url": "vault/material/plotcase_network_蛋白互作网络图/plot.py?v=1779020864"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggraph",
-          "igraph",
-          "tidygraph",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_pie_多层饼图",
-      "case_dir": "plotcase_pie_多层饼图",
-      "title": "多层饼图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_pie_多层饼图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_pie_多层饼图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggplot2",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 72,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "pie\\多层饼图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_pie_多层饼图/scripts/code.R",
-        "url": "vault/material/plotcase_pie_多层饼图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_pie_多层饼图/scripts/code.R",
-        "url": "vault/material/plotcase_pie_多层饼图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_pie_多层饼图/plot.py",
-        "url": "vault/material/plotcase_pie_多层饼图/plot.py?v=1779020867"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggtext",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_point_多层级曼哈顿图",
-      "case_dir": "plotcase_point_多层级曼哈顿图",
-      "title": "多层级曼哈顿图",
-      "mode": "medium",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_point_多层级曼哈顿图/outputs/rebuilt.png?v=1779091579",
-      "preview_image": "vault/material/plotcase_point_多层级曼哈顿图/outputs/rebuilt.png?v=1779091579",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "chromosome",
-        "position",
-        "score"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "chromosome",
-          "position",
-          "score"
-        ],
-        "optional_mappings": [
-          "feature_id",
-          "trait",
-          "threshold",
-          "highlight",
-          "label",
-          "ring"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "manhattan",
-        "backend": "R/ggplot2",
-        "unit": "genomic position score table",
-        "required_data_roles": [
-          "chromosome",
-          "position",
-          "score"
-        ],
-        "optional_data_roles": [
-          "feature_id",
-          "trait",
-          "threshold",
-          "highlight",
-          "label",
-          "ring"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "manhattan",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "point\\多层级曼哈顿图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_point_多层级曼哈顿图/scripts/code.R",
-        "url": "vault/material/plotcase_point_多层级曼哈顿图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_point_多层级曼哈顿图/scripts/code.R",
-        "url": "vault/material/plotcase_point_多层级曼哈顿图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_point_多层级曼哈顿图/plot.py",
-        "url": "vault/material/plotcase_point_多层级曼哈顿图/plot.py?v=1779020874"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "CMplot",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -7868,7 +4667,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_point_多组火山图/plot.py",
-        "url": "vault/material/plotcase_point_多组火山图/plot.py?v=1779020875"
+        "url": "vault/material/plotcase_point_多组火山图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -7881,301 +4680,13 @@ window.PLOTTER_ASSETS = {
           "ggrepel",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_point_效应量森林图_分组比较与显著性标注",
-      "case_dir": "plotcase_point_效应量森林图_分组比较与显著性标注",
-      "title": "效应量森林图_分组比较与显著性标注",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "term",
-        "estimate",
-        "lower",
-        "upper"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "term",
-          "estimate",
-          "lower",
-          "upper"
-        ],
-        "optional_mappings": [
-          "p_value",
-          "group",
-          "reference",
-          "label",
-          "row_order"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "forest_interval",
-        "backend": "R/ggplot2",
-        "unit": "interval estimate table",
-        "required_data_roles": [
-          "term",
-          "estimate",
-          "lower",
-          "upper"
-        ],
-        "optional_data_roles": [
-          "p_value",
-          "group",
-          "reference",
-          "label",
-          "row_order"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/F1_f.csv",
-        "grammar_geometry": "forest_interval",
-        "row_count": 96,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "point\\效应量森林图_分组比较与显著性标注"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注/scripts/code.R",
-        "url": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注/scripts/code.R",
-        "url": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注/plot.py",
-        "url": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注/plot.py?v=1779020875"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "tibble"
-        ],
-        "special": [
-          "car",
-          "lme4",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_point_散点图叠加多坐标轴",
-      "case_dir": "plotcase_point_散点图叠加多坐标轴",
-      "title": "散点图叠加多坐标轴",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_point_散点图叠加多坐标轴/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_point_散点图叠加多坐标轴/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "x",
-        "y"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "x",
-          "y"
-        ],
-        "optional_mappings": [
-          "group",
-          "value",
-          "size_value",
-          "label",
-          "threshold",
-          "facet",
-          "highlight"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "scatter_bubble",
-        "backend": "R/ggplot2",
-        "unit": "point table",
-        "required_data_roles": [
-          "x",
-          "y"
-        ],
-        "optional_data_roles": [
-          "group",
-          "value",
-          "size_value",
-          "label",
-          "threshold",
-          "facet",
-          "highlight"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_1.csv",
-        "grammar_geometry": "scatter_bubble",
-        "row_count": 800,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "point\\散点图叠加多坐标轴"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_point_散点图叠加多坐标轴/scripts/code.R",
-        "url": "vault/material/plotcase_point_散点图叠加多坐标轴/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_point_散点图叠加多坐标轴/scripts/code.R",
-        "url": "vault/material/plotcase_point_散点图叠加多坐标轴/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_point_散点图叠加多坐标轴/plot.py",
-        "url": "vault/material/plotcase_point_散点图叠加多坐标轴/plot.py?v=1779020876"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggnewscale",
-          "ggrepel",
-          "readxl",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线",
-      "case_dir": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线",
-      "title": "气泡图高阶用法添加时间轨迹趋势线",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "x",
-        "y"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "x",
-          "y"
-        ],
-        "optional_mappings": [
-          "group",
-          "value",
-          "size_value",
-          "label",
-          "threshold",
-          "facet",
-          "highlight"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "scatter_bubble",
-        "backend": "R/ggplot2",
-        "unit": "point table",
-        "required_data_roles": [
-          "x",
-          "y"
-        ],
-        "optional_data_roles": [
-          "group",
-          "value",
-          "size_value",
-          "label",
-          "threshold",
-          "facet",
-          "highlight"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/F1.csv",
-        "grammar_geometry": "scatter_bubble",
-        "row_count": 150,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "point\\气泡图高阶用法添加时间轨迹趋势线"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/scripts/code.R",
-        "url": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/scripts/code.R",
-        "url": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/plot.py",
-        "url": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/plot.py?v=1779020880"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "purrr"
-        ],
-        "special": [
-          "RColorBrewer",
-          "ggforce",
-          "ggnewscale",
-          "magrittr",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -8259,7 +4770,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_point_火山图局部放大版/plot.py",
-        "url": "vault/material/plotcase_point_火山图局部放大版/plot.py?v=1779020882"
+        "url": "vault/material/plotcase_point_火山图局部放大版/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -8275,6 +4786,13 @@ window.PLOTTER_ASSETS = {
           "remotes",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -8363,7 +4881,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_sankey,venn_桑基组合维恩图/plot.py",
-        "url": "vault/material/plotcase_sankey,venn_桑基组合维恩图/plot.py?v=1779020884"
+        "url": "vault/material/plotcase_sankey,venn_桑基组合维恩图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -8378,6 +4896,13 @@ window.PLOTTER_ASSETS = {
           "ggvenn",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -8466,7 +4991,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_sankey_多层级桑基图/plot.py",
-        "url": "vault/material/plotcase_sankey_多层级桑基图/plot.py?v=1779020884"
+        "url": "vault/material/plotcase_sankey_多层级桑基图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -8481,209 +5006,13 @@ window.PLOTTER_ASSETS = {
           "magrittr",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_sankey_桑基流向图",
-      "case_dir": "plotcase_sankey_桑基流向图",
-      "title": "桑基流向图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_sankey_桑基流向图/outputs/rebuilt.png?v=1779090616",
-      "preview_image": "vault/material/plotcase_sankey_桑基流向图/outputs/rebuilt.png?v=1779090616",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "stage",
-        "node",
-        "next_stage",
-        "next_node",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "stage",
-          "node",
-          "next_stage",
-          "next_node",
-          "value"
-        ],
-        "optional_mappings": [
-          "flow_id",
-          "group",
-          "node_color",
-          "label",
-          "order"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "alluvial_sankey",
-        "backend": "R/ggplot2",
-        "unit": "stage-wise flow table",
-        "required_data_roles": [
-          "stage",
-          "node",
-          "next_stage",
-          "next_node",
-          "value"
-        ],
-        "optional_data_roles": [
-          "flow_id",
-          "group",
-          "node_color",
-          "label",
-          "order"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "alluvial_sankey",
-        "row_count": 310,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "sankey\\桑基流向图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_sankey_桑基流向图/raw/code.R",
-        "url": "vault/material/plotcase_sankey_桑基流向图/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_sankey_桑基流向图/raw/code.R",
-        "url": "vault/material/plotcase_sankey_桑基流向图/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_sankey_桑基流向图/plot.py",
-        "url": "vault/material/plotcase_sankey_桑基流向图/plot.py?v=1779020885"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggalluvial",
-          "ggpubr",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_sankey_渐变色桑基图",
-      "case_dir": "plotcase_sankey_渐变色桑基图",
-      "title": "渐变色桑基图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_sankey_渐变色桑基图/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_sankey_渐变色桑基图/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "stage",
-        "node",
-        "next_stage",
-        "next_node",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "stage",
-          "node",
-          "next_stage",
-          "next_node",
-          "value"
-        ],
-        "optional_mappings": [
-          "flow_id",
-          "group",
-          "node_color",
-          "label",
-          "order"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "alluvial_sankey",
-        "backend": "R/ggplot2",
-        "unit": "stage-wise flow table",
-        "required_data_roles": [
-          "stage",
-          "node",
-          "next_stage",
-          "next_node",
-          "value"
-        ],
-        "optional_data_roles": [
-          "flow_id",
-          "group",
-          "node_color",
-          "label",
-          "order"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "alluvial_sankey",
-        "row_count": 26,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "sankey\\渐变色桑基图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_sankey_渐变色桑基图/scripts/code.R",
-        "url": "vault/material/plotcase_sankey_渐变色桑基图/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_sankey_渐变色桑基图/scripts/code.R",
-        "url": "vault/material/plotcase_sankey_渐变色桑基图/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_sankey_渐变色桑基图/plot.py",
-        "url": "vault/material/plotcase_sankey_渐变色桑基图/plot.py?v=1779020886"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggnewscale",
-          "ggsankeyfier",
-          "grid",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -8772,7 +5101,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_sankey_渐变色桑基图_进阶版/plot.py",
-        "url": "vault/material/plotcase_sankey_渐变色桑基图_进阶版/plot.py?v=1779020886"
+        "url": "vault/material/plotcase_sankey_渐变色桑基图_进阶版/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -8786,108 +5115,13 @@ window.PLOTTER_ASSETS = {
           "grid",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_sankey_节点融合桑基图",
-      "case_dir": "plotcase_sankey_节点融合桑基图",
-      "title": "节点融合桑基图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_sankey_节点融合桑基图/outputs/rebuilt.png?v=1779090621",
-      "preview_image": "vault/material/plotcase_sankey_节点融合桑基图/outputs/rebuilt.png?v=1779090621",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "stage",
-        "node",
-        "next_stage",
-        "next_node",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "stage",
-          "node",
-          "next_stage",
-          "next_node",
-          "value"
-        ],
-        "optional_mappings": [
-          "flow_id",
-          "group",
-          "node_color",
-          "label",
-          "order"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "alluvial_sankey",
-        "backend": "R/ggplot2",
-        "unit": "stage-wise flow table",
-        "required_data_roles": [
-          "stage",
-          "node",
-          "next_stage",
-          "next_node",
-          "value"
-        ],
-        "optional_data_roles": [
-          "flow_id",
-          "group",
-          "node_color",
-          "label",
-          "order"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data1_1.csv",
-        "grammar_geometry": "alluvial_sankey",
-        "row_count": 80,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "sankey\\节点融合桑基图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_sankey_节点融合桑基图/raw/code.R",
-        "url": "vault/material/plotcase_sankey_节点融合桑基图/raw/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_sankey_节点融合桑基图/raw/code.R",
-        "url": "vault/material/plotcase_sankey_节点融合桑基图/raw/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_sankey_节点融合桑基图/plot.py",
-        "url": "vault/material/plotcase_sankey_节点融合桑基图/plot.py?v=1779020887"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "RColorBrewer",
-          "ggsankeyfier",
-          "magrittr",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -8972,7 +5206,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_tree_ggtree绘制多层级进化树/plot.py",
-        "url": "vault/material/plotcase_tree_ggtree绘制多层级进化树/plot.py?v=1779020888"
+        "url": "vault/material/plotcase_tree_ggtree绘制多层级进化树/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -8989,108 +5223,13 @@ window.PLOTTER_ASSETS = {
           "tidyverse",
           "vegan"
         ]
-      }
-    },
-    {
-      "id": "plotcase_tree_ggtree绘制系统发育树",
-      "case_dir": "plotcase_tree_ggtree绘制系统发育树",
-      "title": "ggtree绘制系统发育树",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_tree_ggtree绘制系统发育树/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_tree_ggtree绘制系统发育树/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "node_id",
-        "parent_id",
-        "label"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "node_id",
-          "parent_id",
-          "label"
-        ],
-        "optional_mappings": [
-          "branch_length",
-          "tip_group",
-          "track",
-          "track_value",
-          "track_class",
-          "heatmap_value"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "tree_heatmap",
-        "backend": "R/ggtree",
-        "unit": "tree edges plus tip-level annotation table",
-        "required_data_roles": [
-          "node_id",
-          "parent_id",
-          "label"
-        ],
-        "optional_data_roles": [
-          "branch_length",
-          "tip_group",
-          "track",
-          "track_value",
-          "track_class",
-          "heatmap_value"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "tree_heatmap",
-        "row_count": 127,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "tree\\ggtree绘制系统发育树"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_tree_ggtree绘制系统发育树/scripts/code.R",
-        "url": "vault/material/plotcase_tree_ggtree绘制系统发育树/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_tree_ggtree绘制系统发育树/scripts/code.R",
-        "url": "vault/material/plotcase_tree_ggtree绘制系统发育树/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_tree_ggtree绘制系统发育树/plot.py",
-        "url": "vault/material/plotcase_tree_ggtree绘制系统发育树/plot.py?v=1779020889"
-      },
-      "dependencies": {
-        "core": [
-          "dplyr",
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "MetBrewer",
-          "RColorBrewer",
-          "ape",
-          "ggnewscale",
-          "ggtree",
-          "ggtreeExtra",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -9175,7 +5314,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_tree_多层级系统发育树图/plot.py",
-        "url": "vault/material/plotcase_tree_多层级系统发育树图/plot.py?v=1779020889"
+        "url": "vault/material/plotcase_tree_多层级系统发育树图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -9191,6 +5330,13 @@ window.PLOTTER_ASSETS = {
           "ggtreeExtra",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -9270,7 +5416,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_violin_分裂小提琴图分面版/plot.py",
-        "url": "vault/material/plotcase_violin_分裂小提琴图分面版/plot.py?v=1779020893"
+        "url": "vault/material/plotcase_violin_分裂小提琴图分面版/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -9286,6 +5432,13 @@ window.PLOTTER_ASSETS = {
           "tidyverse",
           "vroom"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -9365,7 +5518,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_violin_小提琴图添加显著性标记/plot.py",
-        "url": "vault/material/plotcase_violin_小提琴图添加显著性标记/plot.py?v=1779020894"
+        "url": "vault/material/plotcase_violin_小提琴图添加显著性标记/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -9379,420 +5532,13 @@ window.PLOTTER_ASSETS = {
           "rstatix",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_冲积图_物种组成冲积图",
-      "case_dir": "plotcase_冲积图_物种组成冲积图",
-      "title": "物种组成冲积图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_冲积图_物种组成冲积图/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_冲积图_物种组成冲积图/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "stage",
-        "node",
-        "next_stage",
-        "next_node",
-        "value"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "stage",
-          "node",
-          "next_stage",
-          "next_node",
-          "value"
-        ],
-        "optional_mappings": [
-          "flow_id",
-          "group",
-          "node_color",
-          "label",
-          "order"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "alluvial_sankey",
-        "backend": "R/ggplot2",
-        "unit": "stage-wise flow table",
-        "required_data_roles": [
-          "stage",
-          "node",
-          "next_stage",
-          "next_node",
-          "value"
-        ],
-        "optional_data_roles": [
-          "flow_id",
-          "group",
-          "node_color",
-          "label",
-          "order"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1c.csv",
-        "grammar_geometry": "alluvial_sankey",
-        "row_count": 800,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "冲积图\\物种组成冲积图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_冲积图_物种组成冲积图/scripts/code.R",
-        "url": "vault/material/plotcase_冲积图_物种组成冲积图/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_冲积图_物种组成冲积图/scripts/code.R",
-        "url": "vault/material/plotcase_冲积图_物种组成冲积图/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_冲积图_物种组成冲积图/plot.py",
-        "url": "vault/material/plotcase_冲积图_物种组成冲积图/plot.py?v=1779020896"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "RColorBrewer",
-          "ggalluvial",
-          "readxl",
-          "scales",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_哑铃图_环形哑铃通路图",
-      "case_dir": "plotcase_哑铃图_环形哑铃通路图",
-      "title": "环形哑铃通路图",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_哑铃图_环形哑铃通路图/outputs/rebuilt.png?v=1779090627",
-      "preview_image": "vault/material/plotcase_哑铃图_环形哑铃通路图/outputs/rebuilt.png?v=1779090627",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggplot2",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 26,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "哑铃图\\环形哑铃通路图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_哑铃图_环形哑铃通路图/raw/code.R",
-        "url": "vault/material/plotcase_哑铃图_环形哑铃通路图/raw/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_哑铃图_环形哑铃通路图/raw/code.R",
-        "url": "vault/material/plotcase_哑铃图_环形哑铃通路图/raw/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_哑铃图_环形哑铃通路图/plot.py",
-        "url": "vault/material/plotcase_哑铃图_环形哑铃通路图/plot.py?v=1779020897"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "MetBrewer",
-          "geomtextpath",
-          "magrittr",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_基因组图_geneviewer基因簇结构可视化",
-      "case_dir": "plotcase_基因组图_geneviewer基因簇结构可视化",
-      "title": "geneviewer基因簇结构可视化",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/outputs/rebuilt.png?v=1779091451",
-      "preview_image": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/outputs/rebuilt.png?v=1779091451",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "segment_id",
-        "feature_id",
-        "start",
-        "end",
-        "strand",
-        "feature_class"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "segment_id",
-          "feature_id",
-          "start",
-          "end",
-          "strand",
-          "feature_class"
-        ],
-        "optional_mappings": [
-          "cluster",
-          "label",
-          "link_id",
-          "similarity",
-          "track",
-          "color_class"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "genome_structure",
-        "backend": "R",
-        "unit": "oriented genomic feature table",
-        "required_data_roles": [
-          "segment_id",
-          "feature_id",
-          "start",
-          "end",
-          "strand",
-          "feature_class"
-        ],
-        "optional_data_roles": [
-          "cluster",
-          "label",
-          "link_id",
-          "similarity",
-          "track",
-          "color_class"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "genome_structure",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "基因组图\\geneviewer基因簇结构可视化"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/scripts/code.R",
-        "url": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/scripts/code.R",
-        "url": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/plot.py",
-        "url": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/plot.py?v=1779020898"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "geneviewer"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_基因组图_比较基因组结构图",
-      "case_dir": "plotcase_基因组图_比较基因组结构图",
-      "title": "比较基因组结构图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_基因组图_比较基因组结构图/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_基因组图_比较基因组结构图/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "segment_id",
-        "feature_id",
-        "start",
-        "end",
-        "strand",
-        "feature_class"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "segment_id",
-          "feature_id",
-          "start",
-          "end",
-          "strand",
-          "feature_class"
-        ],
-        "optional_mappings": [
-          "cluster",
-          "label",
-          "link_id",
-          "similarity",
-          "track",
-          "color_class"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "genome_structure",
-        "backend": "R/ggplot2",
-        "unit": "oriented genomic feature table",
-        "required_data_roles": [
-          "segment_id",
-          "feature_id",
-          "start",
-          "end",
-          "strand",
-          "feature_class"
-        ],
-        "optional_data_roles": [
-          "cluster",
-          "label",
-          "link_id",
-          "similarity",
-          "track",
-          "color_class"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "genome_structure",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "基因组图\\比较基因组结构图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_基因组图_比较基因组结构图/scripts/code.R",
-        "url": "vault/material/plotcase_基因组图_比较基因组结构图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_基因组图_比较基因组结构图/scripts/code.R",
-        "url": "vault/material/plotcase_基因组图_比较基因组结构图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_基因组图_比较基因组结构图/plot.py",
-        "url": "vault/material/plotcase_基因组图_比较基因组结构图/plot.py?v=1779020899"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "tidyheatmaps",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -9881,7 +5627,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_曲线图_Kaplan_Meier生存曲线/plot.py",
-        "url": "vault/material/plotcase_曲线图_Kaplan_Meier生存曲线/plot.py?v=1779020902"
+        "url": "vault/material/plotcase_曲线图_Kaplan_Meier生存曲线/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -9894,305 +5640,13 @@ window.PLOTTER_ASSETS = {
           "survminer",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_森林图_多因素Cox森林图",
-      "case_dir": "plotcase_森林图_多因素Cox森林图",
-      "title": "多因素Cox森林图",
-      "mode": "medium",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png?v=1779091451",
-      "preview_image": "vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png?v=1779091451",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "term",
-        "estimate",
-        "lower",
-        "upper"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "term",
-          "estimate",
-          "lower",
-          "upper"
-        ],
-        "optional_mappings": [
-          "p_value",
-          "group",
-          "reference",
-          "label",
-          "row_order"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "forest_interval",
-        "backend": "R/ggplot2",
-        "unit": "interval estimate table",
-        "required_data_roles": [
-          "term",
-          "estimate",
-          "lower",
-          "upper"
-        ],
-        "optional_data_roles": [
-          "p_value",
-          "group",
-          "reference",
-          "label",
-          "row_order"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/43018_2025_1072_MOESM3_ESM__Figure1a.csv",
-        "grammar_geometry": "forest_interval",
-        "row_count": 487,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "森林图\\多因素Cox森林图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_森林图_多因素Cox森林图/scripts/code.R",
-        "url": "vault/material/plotcase_森林图_多因素Cox森林图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_森林图_多因素Cox森林图/scripts/code.R",
-        "url": "vault/material/plotcase_森林图_多因素Cox森林图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_森林图_多因素Cox森林图/plot.py",
-        "url": "vault/material/plotcase_森林图_多因素Cox森林图/plot.py?v=1779020903"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "readxl",
-          "survival",
-          "survminer",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_森林图_森林图进阶图例映射版",
-      "case_dir": "plotcase_森林图_森林图进阶图例映射版",
-      "title": "森林图进阶图例映射版",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_森林图_森林图进阶图例映射版/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_森林图_森林图进阶图例映射版/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "term",
-        "estimate",
-        "lower",
-        "upper"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "term",
-          "estimate",
-          "lower",
-          "upper"
-        ],
-        "optional_mappings": [
-          "p_value",
-          "group",
-          "reference",
-          "label",
-          "row_order"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "forest_interval",
-        "backend": "R/ComplexHeatmap-circlize",
-        "unit": "interval estimate table",
-        "required_data_roles": [
-          "term",
-          "estimate",
-          "lower",
-          "upper"
-        ],
-        "optional_data_roles": [
-          "p_value",
-          "group",
-          "reference",
-          "label",
-          "row_order"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "forest_interval",
-        "row_count": 14,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "森林图\\森林图进阶图例映射版"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_森林图_森林图进阶图例映射版/scripts/code.R",
-        "url": "vault/material/plotcase_森林图_森林图进阶图例映射版/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_森林图_森林图进阶图例映射版/scripts/code.R",
-        "url": "vault/material/plotcase_森林图_森林图进阶图例映射版/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_森林图_森林图进阶图例映射版/plot.py",
-        "url": "vault/material/plotcase_森林图_森林图进阶图例映射版/plot.py?v=1779020903"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ComplexHeatmap",
-          "RColorBrewer",
-          "ggh4x",
-          "grid",
-          "tidyverse"
-        ]
-      }
-    },
-    {
-      "id": "plotcase_流程图_细胞网络通讯示意图",
-      "case_dir": "plotcase_流程图_细胞网络通讯示意图",
-      "title": "细胞网络通讯示意图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_流程图_细胞网络通讯示意图/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_流程图_细胞网络通讯示意图/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
-      },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggplot2",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "synthetic_from_case_identity",
-        "grammar_geometry": "network_graph",
-        "row_count": 36,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "流程图\\细胞网络通讯示意图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_流程图_细胞网络通讯示意图/scripts/code.R",
-        "url": "vault/material/plotcase_流程图_细胞网络通讯示意图/scripts/code.R?v=1778928032"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_流程图_细胞网络通讯示意图/scripts/code.R",
-        "url": "vault/material/plotcase_流程图_细胞网络通讯示意图/scripts/code.R?v=1778928032"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_流程图_细胞网络通讯示意图/plot.py",
-        "url": "vault/material/plotcase_流程图_细胞网络通讯示意图/plot.py?v=1779020906"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas",
-          "tibble"
-        ],
-        "special": [
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -10281,7 +5735,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_游泳图_游泳图_进阶版/plot.py",
-        "url": "vault/material/plotcase_游泳图_游泳图_进阶版/plot.py?v=1779020907"
+        "url": "vault/material/plotcase_游泳图_游泳图_进阶版/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -10297,107 +5751,13 @@ window.PLOTTER_ASSETS = {
           "swimplot",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_维诺图_维诺图划分子区域",
-      "case_dir": "plotcase_维诺图_维诺图划分子区域",
-      "title": "维诺图划分子区域",
-      "mode": "high",
-      "build_status": "build_success",
-      "language": "R",
-      "linux_ready": true,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_维诺图_维诺图划分子区域/outputs/rebuilt.png?v=1779091372",
-      "preview_image": "vault/material/plotcase_维诺图_维诺图划分子区域/outputs/rebuilt.png?v=1779091372",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "R",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "R/ggplot2",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/data.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 20,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "维诺图\\维诺图划分子区域"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_维诺图_维诺图划分子区域/raw/code.R",
-        "url": "vault/material/plotcase_维诺图_维诺图划分子区域/raw/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_维诺图_维诺图划分子区域/raw/code.R",
-        "url": "vault/material/plotcase_维诺图_维诺图划分子区域/raw/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_维诺图_维诺图划分子区域/plot.py",
-        "url": "vault/material/plotcase_维诺图_维诺图划分子区域/plot.py?v=1779020908"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "VoronoiPlus",
-          "devtools",
-          "tidyverse"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -10481,7 +5841,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/plot.py",
-        "url": "vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/plot.py?v=1779020909"
+        "url": "vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -10494,106 +5854,13 @@ window.PLOTTER_ASSETS = {
           "legendry",
           "tidyverse"
         ]
-      }
-    },
-    {
-      "id": "plotcase_综合图_lefse分析图",
-      "case_dir": "plotcase_综合图_lefse分析图",
-      "title": "lefse分析图",
-      "mode": "high",
-      "build_status": "custom_required",
-      "language": "Python",
-      "linux_ready": false,
-      "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotcase_综合图_lefse分析图/outputs/rebuilt.png?v=1779091580",
-      "preview_image": "vault/material/plotcase_综合图_lefse分析图/outputs/rebuilt.png?v=1779091580",
-      "preview_kind": "rebuilt",
-      "required_mappings": [
-        "source",
-        "target",
-        "weight"
-      ],
-      "data_contract": {
-        "interface": "single_csv",
-        "main_csv": "data_main.csv",
-        "optional_csv": "data_optional.csv",
-        "required_mappings": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_mappings": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ],
-        "declared_raw_resources": []
       },
-      "render_runtime": "Python",
-      "visual_grammar": {
-        "grammar_id": "network_graph",
-        "backend": "rendered_figure",
-        "unit": "node-link graph tables",
-        "required_data_roles": [
-          "source",
-          "target",
-          "weight"
-        ],
-        "optional_data_roles": [
-          "node_id",
-          "node_label",
-          "node_group",
-          "node_size",
-          "edge_group",
-          "edge_direction",
-          "layout_x",
-          "layout_y"
-        ]
-      },
-      "standardization": {
-        "status": "standardized_first_pass",
-        "source_csv": "data_raw/data/feature_table.csv",
-        "grammar_geometry": "network_graph",
-        "row_count": 800,
-        "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
-        "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
-        "data_main_status": "abstract_visual_grammar_demo",
-        "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
-      },
-      "source": {
-        "root": "raw/plotcase_export",
-        "original_path": "综合图\\lefse分析图"
-      },
-      "source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_综合图_lefse分析图/scripts/code.R",
-        "url": "vault/material/plotcase_综合图_lefse分析图/scripts/code.R?v=1778928033"
-      },
-      "original_source_code": {
-        "name": "code.R",
-        "path": "vault/material/plotcase_综合图_lefse分析图/scripts/code.R",
-        "url": "vault/material/plotcase_综合图_lefse分析图/scripts/code.R?v=1778928033"
-      },
-      "standard_entry_code": {
-        "name": "plot.py",
-        "path": "vault/material/plotcase_综合图_lefse分析图/plot.py",
-        "url": "vault/material/plotcase_综合图_lefse分析图/plot.py?v=1779020909"
-      },
-      "dependencies": {
-        "core": [
-          "matplotlib",
-          "numpy",
-          "pandas"
-        ],
-        "special": [
-          "ggsci",
-          "pacman"
-        ]
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -10682,7 +5949,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_综合图_多分组统计与差异变化综合图/plot.py",
-        "url": "vault/material/plotcase_综合图_多分组统计与差异变化综合图/plot.py?v=1779020910"
+        "url": "vault/material/plotcase_综合图_多分组统计与差异变化综合图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -10698,6 +5965,13 @@ window.PLOTTER_ASSETS = {
           "scales",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -10786,7 +6060,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_雷达图_雷达图批量绘制/plot.py",
-        "url": "vault/material/plotcase_雷达图_雷达图批量绘制/plot.py?v=1779020911"
+        "url": "vault/material/plotcase_雷达图_雷达图批量绘制/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -10801,6 +6075,13 @@ window.PLOTTER_ASSETS = {
           "scales",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -10889,7 +6170,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotcase_面积图_ggplot2绘制极坐标面积图/plot.py",
-        "url": "vault/material/plotcase_面积图_ggplot2绘制极坐标面积图/plot.py?v=1779020912"
+        "url": "vault/material/plotcase_面积图_ggplot2绘制极坐标面积图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -10907,6 +6188,13 @@ window.PLOTTER_ASSETS = {
           "scales",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -10990,7 +6278,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_001箱线图+散点图/plot.py",
-        "url": "vault/material/plotmaster_001箱线图+散点图/plot.py?v=1779020913"
+        "url": "vault/material/plotmaster_001箱线图+散点图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11001,6 +6289,13 @@ window.PLOTTER_ASSETS = {
           "tidyr"
         ],
         "special": []
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -11083,7 +6378,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_002渐变火山图/plot.py",
-        "url": "vault/material/plotmaster_002渐变火山图/plot.py?v=1779020914"
+        "url": "vault/material/plotmaster_002渐变火山图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11093,6 +6388,13 @@ window.PLOTTER_ASSETS = {
           "pandas"
         ],
         "special": []
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -11178,6 +6480,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "Hmisc"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -11262,7 +6571,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_004提琴图/plot.py",
-        "url": "vault/material/plotmaster_004提琴图/plot.py?v=1779020914"
+        "url": "vault/material/plotmaster_004提琴图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11275,6 +6584,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "ggsignif"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -11362,7 +6678,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_005复杂热图/plot.py",
-        "url": "vault/material/plotmaster_005复杂热图/plot.py?v=1779020915"
+        "url": "vault/material/plotmaster_005复杂热图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11376,6 +6692,13 @@ window.PLOTTER_ASSETS = {
           "ComplexHeatmap",
           "circlize"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -11459,7 +6782,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_006复杂散点图/plot.py",
-        "url": "vault/material/plotmaster_006复杂散点图/plot.py?v=1779020916"
+        "url": "vault/material/plotmaster_006复杂散点图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11471,6 +6794,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "Hmisc"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -11555,7 +6885,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_007气泡火山图/plot.py",
-        "url": "vault/material/plotmaster_007气泡火山图/plot.py?v=1779020916"
+        "url": "vault/material/plotmaster_007气泡火山图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11568,6 +6898,13 @@ window.PLOTTER_ASSETS = {
           "ggrepel",
           "latex2exp"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -11655,7 +6992,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_008复杂热图02/plot.py",
-        "url": "vault/material/plotmaster_008复杂热图02/plot.py?v=1779020917"
+        "url": "vault/material/plotmaster_008复杂热图02/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11671,6 +7008,13 @@ window.PLOTTER_ASSETS = {
           "grid",
           "png"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -11758,7 +7102,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_009甘特图/plot.py",
-        "url": "vault/material/plotmaster_009甘特图/plot.py?v=1779020918"
+        "url": "vault/material/plotmaster_009甘特图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11774,6 +7118,13 @@ window.PLOTTER_ASSETS = {
           "scales",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -11861,7 +7212,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_015分半小提琴图/plot.py",
-        "url": "vault/material/plotmaster_015分半小提琴图/plot.py?v=1779020921"
+        "url": "vault/material/plotmaster_015分半小提琴图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11877,6 +7228,13 @@ window.PLOTTER_ASSETS = {
           "scales",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -11966,7 +7324,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_016复杂热图+渐变色连线/plot.py",
-        "url": "vault/material/plotmaster_016复杂热图+渐变色连线/plot.py?v=1779020922"
+        "url": "vault/material/plotmaster_016复杂热图+渐变色连线/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -11982,6 +7340,13 @@ window.PLOTTER_ASSETS = {
           "ggforce",
           "ggplotify"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -12073,7 +7438,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_017基因融合热图+堆积柱状图/plot.py",
-        "url": "vault/material/plotmaster_017基因融合热图+堆积柱状图/plot.py?v=1779020923"
+        "url": "vault/material/plotmaster_017基因融合热图+堆积柱状图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12091,6 +7456,13 @@ window.PLOTTER_ASSETS = {
           "tidyverse",
           "xlsx"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -12176,7 +7548,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_018单细胞分组火山图/plot.py",
-        "url": "vault/material/plotmaster_018单细胞分组火山图/plot.py?v=1779020923"
+        "url": "vault/material/plotmaster_018单细胞分组火山图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12190,6 +7562,13 @@ window.PLOTTER_ASSETS = {
           "RColorBrewer",
           "ggrepel"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -12277,7 +7656,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_019堆积柱状图+折线+热图注释/plot.py",
-        "url": "vault/material/plotmaster_019堆积柱状图+折线+热图注释/plot.py?v=1779020924"
+        "url": "vault/material/plotmaster_019堆积柱状图+折线+热图注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12292,6 +7671,13 @@ window.PLOTTER_ASSETS = {
           "RColorBrewer",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -12303,8 +7689,8 @@ window.PLOTTER_ASSETS = {
       "language": "Python",
       "linux_ready": true,
       "rebuilt_exists": true,
-      "rebuilt_image": "vault/material/plotmaster_020多组学九象限散点图/outputs/rebuilt.png?v=1779034612",
-      "preview_image": "vault/material/plotmaster_020多组学九象限散点图/outputs/rebuilt.png?v=1779034612",
+      "rebuilt_image": "vault/material/plotmaster_020多组学九象限散点图/outputs/rebuilt.png?v=1779289639",
+      "preview_image": "vault/material/plotmaster_020多组学九象限散点图/outputs/rebuilt.png?v=1779289639",
       "preview_kind": "rebuilt",
       "required_mappings": [
         "x",
@@ -12376,7 +7762,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_020多组学九象限散点图/plot.py",
-        "url": "vault/material/plotmaster_020多组学九象限散点图/plot.py?v=1779020925"
+        "url": "vault/material/plotmaster_020多组学九象限散点图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12389,6 +7775,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "MASS"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -12474,7 +7867,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_021分组散点图+直方图注释/plot.py",
-        "url": "vault/material/plotmaster_021分组散点图+直方图注释/plot.py?v=1779020925"
+        "url": "vault/material/plotmaster_021分组散点图+直方图注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12488,6 +7881,13 @@ window.PLOTTER_ASSETS = {
           "MASS",
           "psych"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -12574,7 +7974,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_022复杂环形热图/plot.py",
-        "url": "vault/material/plotmaster_022复杂环形热图/plot.py?v=1779020926"
+        "url": "vault/material/plotmaster_022复杂环形热图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12588,6 +7988,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -12674,7 +8081,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_023泛癌箱线图+显著性检验/plot.py",
-        "url": "vault/material/plotmaster_023泛癌箱线图+显著性检验/plot.py?v=1779020927"
+        "url": "vault/material/plotmaster_023泛癌箱线图+显著性检验/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12689,6 +8096,13 @@ window.PLOTTER_ASSETS = {
           "rstatix",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -12773,7 +8187,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_024矩阵饼图+分组注释/plot.py",
-        "url": "vault/material/plotmaster_024矩阵饼图+分组注释/plot.py?v=1779020927"
+        "url": "vault/material/plotmaster_024矩阵饼图+分组注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12787,6 +8201,13 @@ window.PLOTTER_ASSETS = {
           "jjPlot",
           "readxl"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -12879,7 +8300,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_025三维PCA散点图/plot.py",
-        "url": "vault/material/plotmaster_025三维PCA散点图/plot.py?v=1779020928"
+        "url": "vault/material/plotmaster_025三维PCA散点图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12897,6 +8318,13 @@ window.PLOTTER_ASSETS = {
           "plot3D",
           "scatterplot3d"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -12981,7 +8409,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_026相关性气泡图+显著性热图/plot.py",
-        "url": "vault/material/plotmaster_026相关性气泡图+显著性热图/plot.py?v=1779020929"
+        "url": "vault/material/plotmaster_026相关性气泡图+显著性热图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -12994,6 +8422,13 @@ window.PLOTTER_ASSETS = {
           "Hmisc",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -13076,7 +8511,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_027箱线图+热图注释/plot.py",
-        "url": "vault/material/plotmaster_027箱线图+热图注释/plot.py?v=1779020930"
+        "url": "vault/material/plotmaster_027箱线图+热图注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13088,6 +8523,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -13174,7 +8616,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_028分面双向柱状图+热图注释/plot.py",
-        "url": "vault/material/plotmaster_028分面双向柱状图+热图注释/plot.py?v=1779020930"
+        "url": "vault/material/plotmaster_028分面双向柱状图+热图注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13188,6 +8630,13 @@ window.PLOTTER_ASSETS = {
           "circlize",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -13270,7 +8719,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_029分面堆积面积图/plot.py",
-        "url": "vault/material/plotmaster_029分面堆积面积图/plot.py?v=1779020931"
+        "url": "vault/material/plotmaster_029分面堆积面积图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13282,6 +8731,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -13366,7 +8822,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_031环形散点图+环形热图/plot.py",
-        "url": "vault/material/plotmaster_031环形散点图+环形热图/plot.py?v=1779020932"
+        "url": "vault/material/plotmaster_031环形散点图+环形热图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13379,6 +8835,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -13465,7 +8928,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_032表达定量雷达图/plot.py",
-        "url": "vault/material/plotmaster_032表达定量雷达图/plot.py?v=1779020933"
+        "url": "vault/material/plotmaster_032表达定量雷达图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13480,6 +8943,13 @@ window.PLOTTER_ASSETS = {
           "scales",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -13562,7 +9032,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_033个性化森林图/plot.py",
-        "url": "vault/material/plotmaster_033个性化森林图/plot.py?v=1779020933"
+        "url": "vault/material/plotmaster_033个性化森林图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13572,6 +9042,13 @@ window.PLOTTER_ASSETS = {
           "pandas"
         ],
         "special": []
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -13656,7 +9133,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_037分类变量环形热图/plot.py",
-        "url": "vault/material/plotmaster_037分类变量环形热图/plot.py?v=1779020936"
+        "url": "vault/material/plotmaster_037分类变量环形热图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13669,6 +9146,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -13756,7 +9240,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_038聚类热图+注释/plot.py",
-        "url": "vault/material/plotmaster_038聚类热图+注释/plot.py?v=1779020937"
+        "url": "vault/material/plotmaster_038聚类热图+注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13771,6 +9255,13 @@ window.PLOTTER_ASSETS = {
           "paletteer",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -13856,7 +9347,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_039雷达图+环形注释/plot.py",
-        "url": "vault/material/plotmaster_039雷达图+环形注释/plot.py?v=1779020937"
+        "url": "vault/material/plotmaster_039雷达图+环形注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13870,6 +9361,13 @@ window.PLOTTER_ASSETS = {
           "ggradar",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -13955,7 +9453,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_043分块热图+注释/plot.py",
-        "url": "vault/material/plotmaster_043分块热图+注释/plot.py?v=1779020940"
+        "url": "vault/material/plotmaster_043分块热图+注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -13968,6 +9466,13 @@ window.PLOTTER_ASSETS = {
           "circlize",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -14054,7 +9559,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_046环形层次聚类热图+批量环形饼图/plot.py",
-        "url": "vault/material/plotmaster_046环形层次聚类热图+批量环形饼图/plot.py?v=1779020941"
+        "url": "vault/material/plotmaster_046环形层次聚类热图+批量环形饼图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14068,6 +9573,13 @@ window.PLOTTER_ASSETS = {
           "scatterpie",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -14151,7 +9663,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_047散点饼图/plot.py",
-        "url": "vault/material/plotmaster_047散点饼图/plot.py?v=1779020942"
+        "url": "vault/material/plotmaster_047散点饼图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14164,6 +9676,13 @@ window.PLOTTER_ASSETS = {
           "scatterpie",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -14248,7 +9767,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_049多组哑铃图/plot.py",
-        "url": "vault/material/plotmaster_049多组哑铃图/plot.py?v=1779020943"
+        "url": "vault/material/plotmaster_049多组哑铃图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14261,6 +9780,13 @@ window.PLOTTER_ASSETS = {
           "latex2exp",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -14348,7 +9874,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_050复杂分组散点图/plot.py",
-        "url": "vault/material/plotmaster_050复杂分组散点图/plot.py?v=1779020944"
+        "url": "vault/material/plotmaster_050复杂分组散点图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14364,6 +9890,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -14447,7 +9980,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_053分组气泡图/plot.py",
-        "url": "vault/material/plotmaster_053分组气泡图/plot.py?v=1779020946"
+        "url": "vault/material/plotmaster_053分组气泡图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14459,6 +9992,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -14543,7 +10083,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_054分面森林图/plot.py",
-        "url": "vault/material/plotmaster_054分面森林图/plot.py?v=1779020946"
+        "url": "vault/material/plotmaster_054分面森林图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14556,6 +10096,13 @@ window.PLOTTER_ASSETS = {
           "gtable",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -14642,7 +10189,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_055批量火山图/plot.py",
-        "url": "vault/material/plotmaster_055批量火山图/plot.py?v=1779020947"
+        "url": "vault/material/plotmaster_055批量火山图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14657,6 +10204,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -14741,7 +10295,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_056复杂网络图/plot.py",
-        "url": "vault/material/plotmaster_056复杂网络图/plot.py?v=1779020948"
+        "url": "vault/material/plotmaster_056复杂网络图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14754,6 +10308,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -14839,7 +10400,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_057复杂进化树/plot.py",
-        "url": "vault/material/plotmaster_057复杂进化树/plot.py?v=1779020948"
+        "url": "vault/material/plotmaster_057复杂进化树/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14852,6 +10413,13 @@ window.PLOTTER_ASSETS = {
           "ggtree",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -14936,7 +10504,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_058分面折线图+置信区间+误差棒/plot.py",
-        "url": "vault/material/plotmaster_058分面折线图+置信区间+误差棒/plot.py?v=1779020949"
+        "url": "vault/material/plotmaster_058分面折线图+置信区间+误差棒/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -14949,6 +10517,13 @@ window.PLOTTER_ASSETS = {
           "grid",
           "gtable"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -15034,7 +10609,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_059桑基气泡图/plot.py",
-        "url": "vault/material/plotmaster_059桑基气泡图/plot.py?v=1779020950"
+        "url": "vault/material/plotmaster_059桑基气泡图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -15049,6 +10624,13 @@ window.PLOTTER_ASSETS = {
           "ggsankey",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -15140,7 +10722,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_060复杂环形互作网络图/plot.py",
-        "url": "vault/material/plotmaster_060复杂环形互作网络图/plot.py?v=1779020951"
+        "url": "vault/material/plotmaster_060复杂环形互作网络图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -15159,6 +10741,13 @@ window.PLOTTER_ASSETS = {
           "tidyverse",
           "wesanderson"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -15242,7 +10831,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_061散点图+双向误差棒/plot.py",
-        "url": "vault/material/plotmaster_061散点图+双向误差棒/plot.py?v=1779020952"
+        "url": "vault/material/plotmaster_061散点图+双向误差棒/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -15254,6 +10843,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -15335,7 +10931,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_062环形分组折线图/plot.py",
-        "url": "vault/material/plotmaster_062环形分组折线图/plot.py?v=1779020952"
+        "url": "vault/material/plotmaster_062环形分组折线图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -15346,6 +10942,13 @@ window.PLOTTER_ASSETS = {
         "special": [
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": true,
+        "canonical_case": null,
+        "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
       }
     },
     {
@@ -15430,7 +11033,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/plot.py",
-        "url": "vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/plot.py?v=1779020953"
+        "url": "vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -15444,6 +11047,13 @@ window.PLOTTER_ASSETS = {
           "readxl",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     },
     {
@@ -15528,7 +11138,7 @@ window.PLOTTER_ASSETS = {
       "standard_entry_code": {
         "name": "plot.py",
         "path": "vault/material/plotmaster_48个性化桑基图/plot.py",
-        "url": "vault/material/plotmaster_48个性化桑基图/plot.py?v=1779020954"
+        "url": "vault/material/plotmaster_48个性化桑基图/plot.py?v=1779289254"
       },
       "dependencies": {
         "core": [
@@ -15541,6 +11151,13 @@ window.PLOTTER_ASSETS = {
           "RColorBrewer",
           "tidyverse"
         ]
+      },
+      "vault_status": {
+        "live": true,
+        "folded": false,
+        "restored_from_fold": false,
+        "canonical_case": null,
+        "reason": null
       }
     }
   ]

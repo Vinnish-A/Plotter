@@ -79,51 +79,29 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:28.602184+00:00",
+    "updated_at": "2026-05-20T15:04:53.605541+00:00",
     "records": [
       {
-        "source": "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM.xlsx",
+        "source": "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_aPDL1.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_aTIGIT.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_Combo.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_Combo_FTY.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_control.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_aPDL1.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_aTIGIT.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_Combo.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_Combo_FTY.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_control.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_aPDL1.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_aTIGIT.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_Combo.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_Combo_FTY.csv",
-          "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_control.csv"
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6a_aPDL1.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6a_aTIGIT.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6a_Combo.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6a_Combo_FTY.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6a_control.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6b_aPDL1.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6b_aTIGIT.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6b_Combo.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6b_Combo_FTY.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6b_control.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6c_aPDL1.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6c_aTIGIT.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6c_Combo.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6c_Combo_FTY.csv",
+          "plotcase_circos_circlize绘制和弦图/raw/43018_2024_870_MOESM8_ESM__Fig6c_control.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_aPDL1.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_aTIGIT.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_Combo.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_Combo_FTY.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_control.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_aPDL1.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_aTIGIT.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_Combo.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_Combo_FTY.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_control.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_aPDL1.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_aTIGIT.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_Combo.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_Combo_FTY.csv",
-          "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_control.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -178,5 +156,18 @@
       "sector_color",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

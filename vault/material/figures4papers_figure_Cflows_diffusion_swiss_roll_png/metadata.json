@@ -118,5 +118,18 @@
     "manual_override": true,
     "reason": "manual UI group assignment",
     "reviewed_at": "2026-05-18T15:48:08.008795+00:00"
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": true,
+    "canonical_case": null,
+    "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": true
   }
 }

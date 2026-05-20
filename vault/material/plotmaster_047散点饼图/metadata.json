@@ -72,155 +72,34 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:36.175188+00:00",
+    "updated_at": "2026-05-20T15:04:58.055159+00:00",
     "records": [
-      {
-        "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data file S7.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1C.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1D_and_Fig._S2G.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1G.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1H_and_Fig._S5I.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2C_and_Fig._S6E.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2D_and_Fig._S6H.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2E_and_Fig._S6G.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._3D.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._3H.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._4F.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5C.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5F.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5G_and_Fig._S12F.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S1F.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S2E.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S2I.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S3D.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S5I.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7B.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7C.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7F.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S8B.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9E.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9F.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9G.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S10A.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S11E.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S12A.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S12H.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker genes for cell types.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker_genes_for_cell_types__Marker_genes_of_Lin-CD34_cells.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker_genes_for_cell_types__Marker_genes_of_TNCs.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet results in Fig2(WithoutP4).xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Demuxlet_validation.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_Lin-CD34__cells.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_TNCs__BM.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_TNCs__PB.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Corelation_of_STR_and_Demuxlet.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA gene sets.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA_gene_sets__GSEA_name.csv",
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA_gene_sets__Gene_symbol.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS5_Upregulated genes in validated S100high Neu2 enriched GO terms.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS5_Upregulated_genes_in_validated_S100high_Neu2_enriched_GO_terms.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data file S7.xlsx",
         "status": "converted",
         "csv": [
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1C.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1D_and_Fig._S2G.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1G.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1H_and_Fig._S5I.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2C_and_Fig._S6E.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2D_and_Fig._S6H.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2E_and_Fig._S6G.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._3D.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._3H.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._4F.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5C.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5F.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5G_and_Fig._S12F.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S1F.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S2E.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S2I.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S3D.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S5I.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7B.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7C.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7F.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S8B.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9E.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9F.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9G.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S10A.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S11E.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S12A.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S12H.csv"
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._1C.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._1D_and_Fig..csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._1G.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._1H_and_Fig..csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._2C_and_Fig..csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._2D_and_Fig..csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._2E_and_Fig..csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._3D.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._3H.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._4F.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._5C.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._5F.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._5G_and_Fig..csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._S1F.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._S2E.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._S2I.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._S3D.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._S5I.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._S7B.csv",
+          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Data_file_S7__Fig._S7C.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker genes for cell types.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker_genes_for_cell_types__Marker_genes_of_Lin-CD34_cells.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker_genes_for_cell_types__Marker_genes_of_TNCs.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet results in Fig2(WithoutP4).xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Demuxlet_validation.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_Lin-CD34__cells.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_TNCs__BM.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_TNCs__PB.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Corelation_of_STR_and_Demuxlet.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA gene sets.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA_gene_sets__GSEA_name.csv",
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA_gene_sets__Gene_symbol.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS5_Upregulated genes in validated S100high Neu2 enriched GO terms.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS5_Upregulated_genes_in_validated_S100high_Neu2_enriched_GO_terms.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -272,5 +151,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

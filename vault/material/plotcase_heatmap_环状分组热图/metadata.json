@@ -74,39 +74,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:30.305457+00:00",
+    "updated_at": "2026-05-20T15:04:54.836632+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_环状分组热图/data_raw/data/group2.tsv",
+        "source": "plotcase_heatmap_环状分组热图/raw/group2.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_环状分组热图/data_raw/data/group2.csv"
+          "plotcase_heatmap_环状分组热图/raw/group2.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_heatmap_环状分组热图/data_raw/data/heatmap.tsv",
+        "source": "plotcase_heatmap_环状分组热图/raw/heatmap.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_环状分组热图/data_raw/data/heatmap.csv"
+          "plotcase_heatmap_环状分组热图/raw/heatmap.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_环状分组热图/raw/data/group2.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_环状分组热图/raw/data/group2.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_环状分组热图/raw/data/heatmap.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_环状分组热图/raw/data/heatmap.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -155,5 +139,18 @@
       "size_value",
       "facet"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+    "reason": "visual_redundancy:heatmap:map"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

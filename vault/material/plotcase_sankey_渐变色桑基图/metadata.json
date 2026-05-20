@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:33.477852+00:00",
+    "updated_at": "2026-05-20T15:04:56.527247+00:00",
     "records": [
       {
-        "source": "plotcase_sankey_渐变色桑基图/data_raw/data/data.tsv",
+        "source": "plotcase_sankey_渐变色桑基图/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_sankey_渐变色桑基图/data_raw/data/data.csv"
+          "plotcase_sankey_渐变色桑基图/raw/data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_sankey_渐变色桑基图/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_sankey_渐变色桑基图/raw/data/data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -158,5 +150,18 @@
       "label",
       "order"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_sankey_渐变色桑基图_进阶版",
+    "reason": "visual_redundancy:network:sankey"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

@@ -77,17 +77,8 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:26.837429+00:00",
+    "updated_at": "2026-05-20T15:04:52.536469+00:00",
     "records": [
-      {
-        "source": "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA.RData",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA_csv/_rdata_conversion_manifest.csv",
-          "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA_csv/object_summary.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA.RData",
         "status": "converted",
@@ -95,7 +86,7 @@
           "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA_csv/_rdata_conversion_manifest.csv",
           "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA_csv/object_summary.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -149,5 +140,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

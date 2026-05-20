@@ -7,10 +7,16 @@ import argparse
 import json
 import math
 import shutil
+import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from plotter.paths import material_root as default_material_root, repo_root
+from plotter.vault_status import normalize_vault_status
 
 
 KEEP_QUOTAS = {
@@ -205,8 +211,8 @@ def rebalance_modes(live_infos: list[dict[str, Any]]) -> Counter:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--quarantine", type=Path, default=Path(__file__).resolve().parents[2] / "folded_assets")
+    parser.add_argument("--root", type=Path, default=default_material_root(Path(__file__)))
+    parser.add_argument("--quarantine", type=Path, default=repo_root(Path(__file__)) / "vault" / "folded_assets")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -244,6 +250,7 @@ def main() -> int:
                 "reason": reason,
                 "folded_at": now,
             }
+            normalize_vault_status(metadata)
             write_json(info["case_dir"] / "metadata.json", metadata)
             quarantine.mkdir(parents=True, exist_ok=True)
             target = quarantine / info["name"]

@@ -80,23 +80,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:33.730922+00:00",
+    "updated_at": "2026-05-20T15:04:56.771985+00:00",
     "records": [
       {
-        "source": "plotcase_tree_ggtree绘制系统发育树/data_raw/data/DEseq.tsv",
+        "source": "plotcase_tree_ggtree绘制系统发育树/raw/DEseq.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_tree_ggtree绘制系统发育树/data_raw/data/DEseq.csv"
+          "plotcase_tree_ggtree绘制系统发育树/raw/DEseq.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_ggtree绘制系统发育树/raw/data/DEseq.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_ggtree绘制系统发育树/raw/data/DEseq.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -162,5 +154,18 @@
       "track_class",
       "heatmap_value"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_tree_多层级系统发育树图",
+    "reason": "visual_redundancy:network:tree"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

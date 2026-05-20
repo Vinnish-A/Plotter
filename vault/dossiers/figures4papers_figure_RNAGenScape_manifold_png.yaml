@@ -1,0 +1,159 @@
+id: figures4papers_figure_RNAGenScape_manifold_png
+title: figure_RNAGenScape_manifold
+origin:
+  case_dir: vault/material/figures4papers_figure_RNAGenScape_manifold_png
+  source:
+    root: raw/figures4papers
+    original_path: figure_RNAGenScape
+scientific_intent: &id001
+- 3d_manifold visual grammar
+- general_figure
+- 3d_manifold
+intent: *id001
+visual_genes:
+  layout:
+  - cartesian
+  marks:
+  - point
+  encodings:
+  - x
+  - y
+  - color
+  - size
+  narrative:
+  - global_comparison
+  emphasis:
+  - focus_halo
+  - callout
+  - reserved_label_space
+data_roles:
+  required:
+    x:
+      kind: inferred
+      semantic: x
+    y:
+      kind: inferred
+      semantic: y
+    z:
+      kind: inferred
+      semantic: z
+    value:
+      kind: inferred
+      semantic: value
+    panel:
+      kind: inferred
+      semantic: panel
+  optional:
+    group:
+      kind: inferred
+      use: optional_visual_module
+    label:
+      kind: inferred
+      use: optional_visual_module
+    surface:
+      kind: inferred
+      use: optional_visual_module
+    trajectory:
+      kind: inferred
+      use: optional_visual_module
+    color:
+      kind: inferred
+      use: optional_visual_module
+    annotation:
+      kind: inferred
+      use: optional_visual_module
+required_data:
+- x
+- y
+- z
+- value
+- panel
+optional_data:
+- group
+- label
+- surface
+- trajectory
+- color
+- annotation
+optional_modules:
+  detail_panel:
+    requires:
+    - group
+    - sample_x
+    - sample_y
+    can_query_environment: true
+    fallback_if_missing: disable_detail_panel
+  annotation_track:
+    requires:
+    - group
+    - value
+    can_query_environment: true
+    fallback_if_missing: use_plain_axis
+  uncertainty_interval:
+    requires_any:
+    - - lower
+      - upper
+    - - se
+    - - ci_low
+      - ci_high
+    can_query_environment: true
+    fallback_if_missing: do_not_show_uncertainty
+  subgroup_color:
+    requires:
+    - subgroup
+    can_query_environment: true
+    fallback_if_missing: use_primary_group_only
+  network_weight:
+    requires:
+    - source
+    - target
+    - weight
+    enabled_by_default: false
+    fallback_if_missing: draw_unweighted_edges
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: true
+  composition: false
+  detail_panel: false
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: medium
+defamiliarization:
+  level: U2
+best_for:
+- 'Reusable 3d_manifold cases with roles: x, y, z, value, panel'
+bad_for:
+- Missing required roles
+- Undeclared raw resources
+- Unbounded labels without focus selection
+failure_cases:
+- Missing output image
+- Blank image
+- Required role not materialized
+minimal_reproducible_example:
+  data: vault/material/figures4papers_figure_RNAGenScape_manifold_png/data_main.csv
+  entry: vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py
+  preview: vault/material/figures4papers_figure_RNAGenScape_manifold_png/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: false
+  case_level_fallback: true
+  synthetic_data: false
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: true
+  canonical_case: null
+  reason: restored as distinctive 3D/manifold visual grammar from figures4papers

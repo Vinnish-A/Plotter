@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:33.037246+00:00",
+    "updated_at": "2026-05-20T15:04:56.285859+00:00",
     "records": [
       {
-        "source": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/data_raw/data/F1.tsv",
+        "source": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/raw/F1.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/data_raw/data/F1.csv"
+          "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/raw/F1.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/raw/data/F1.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/raw/data/F1.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -157,5 +149,18 @@
       "facet",
       "highlight"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_053分组气泡图",
+    "reason": "visual_redundancy:scatter:气泡"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

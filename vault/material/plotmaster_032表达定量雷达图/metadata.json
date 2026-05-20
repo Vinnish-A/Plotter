@@ -75,31 +75,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:35.971850+00:00",
+    "updated_at": "2026-05-20T15:04:57.941744+00:00",
     "records": [
-      {
-        "source": "plotmaster_032表达定量雷达图/data_raw/radar.eg.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_032表达定量雷达图/data_raw/radar.eg.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotmaster_032表达定量雷达图/data_raw/radar_groups.eg.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_032表达定量雷达图/data_raw/radar_groups.eg.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_032表达定量雷达图/raw/radar.eg.xlsx",
         "status": "converted",
         "csv": [
           "plotmaster_032表达定量雷达图/raw/radar.eg.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "plotmaster_032表达定量雷达图/raw/radar_groups.eg.xlsx",
@@ -107,7 +91,7 @@
         "csv": [
           "plotmaster_032表达定量雷达图/raw/radar_groups.eg.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -163,5 +147,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

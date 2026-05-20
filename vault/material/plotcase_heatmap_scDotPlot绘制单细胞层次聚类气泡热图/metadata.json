@@ -119,5 +119,18 @@
       "size_value",
       "facet"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_heatmap_多分组气泡热图",
+    "reason": "visual_redundancy:heatmap:气泡"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": true
   }
 }

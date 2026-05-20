@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:34.735434+00:00",
+    "updated_at": "2026-05-20T15:04:57.200361+00:00",
     "records": [
       {
-        "source": "plotcase_森林图_森林图进阶图例映射版/data_raw/data/data.tsv",
+        "source": "plotcase_森林图_森林图进阶图例映射版/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_森林图_森林图进阶图例映射版/data_raw/data/data.csv"
+          "plotcase_森林图_森林图进阶图例映射版/raw/data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_森林图_森林图进阶图例映射版/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_森林图_森林图进阶图例映射版/raw/data/data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -157,5 +149,18 @@
       "label",
       "row_order"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

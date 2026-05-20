@@ -78,71 +78,39 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:33.794464+00:00",
+    "updated_at": "2026-05-20T15:04:56.832001+00:00",
     "records": [
       {
-        "source": "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_Presence_Datasets.txt",
+        "source": "plotcase_tree_多层级系统发育树图/raw/pMAGS_Presence_Datasets.txt",
         "status": "converted",
         "csv": [
-          "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_Presence_Datasets.csv"
+          "plotcase_tree_多层级系统发育树图/raw/pMAGS_Presence_Datasets.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_bact_gtdtk_midroot.tree",
+        "source": "plotcase_tree_多层级系统发育树图/raw/pMAGS_tax.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_bact_gtdtk_midroot.csv"
+          "plotcase_tree_多层级系统发育树图/raw/pMAGS_tax.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_cov_sum.txt",
+        "source": "plotcase_tree_多层级系统发育树图/raw/pMAGs_bact_gtdtk_midroot.tree",
         "status": "converted",
         "csv": [
-          "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_cov_sum.csv"
+          "plotcase_tree_多层级系统发育树图/raw/pMAGs_bact_gtdtk_midroot.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_tax.tsv",
+        "source": "plotcase_tree_多层级系统发育树图/raw/pMAGs_cov_sum.txt",
         "status": "converted",
         "csv": [
-          "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_tax.csv"
+          "plotcase_tree_多层级系统发育树图/raw/pMAGs_cov_sum.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_Presence_Datasets.txt",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_Presence_Datasets.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_bact_gtdtk_midroot.tree",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_bact_gtdtk_midroot.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_cov_sum.txt",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_cov_sum.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_tax.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_tax.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -198,5 +166,18 @@
       "track_class",
       "heatmap_value"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

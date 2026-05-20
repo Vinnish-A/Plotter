@@ -58,7 +58,8 @@
     "output": "outputs/rebuilt.png",
     "requires_optional_data": false,
     "linux_ready": true,
-    "complexity_mode": "low"
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-20T15:07:24.437150+00:00"
   },
   "dependencies": {
     "core": [
@@ -108,5 +109,18 @@
       "numpy",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": true,
+    "canonical_case": null,
+    "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": true
   }
 }

@@ -7,9 +7,12 @@ import json
 import math
 import re
 import shutil
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 import matplotlib
 
@@ -24,6 +27,8 @@ from matplotlib import font_manager
 from matplotlib.colors import LinearSegmentedColormap, ListedColormap
 from matplotlib.font_manager import FontProperties
 from PIL import Image
+
+from plotter.style import load_palette_presets, load_style, resolve_palette
 
 
 TEST_ROOT = Path(__file__).resolve().parent
@@ -40,20 +45,13 @@ GOLD = "#f5b744"
 RED = "#d31c22"
 PURPLE = "#B4388A"
 GREEN = "#8BC25C"
-PALETTES = {
-    "standard_blue_white_red_diverging": ["#2166AC", "#4393C3", "#92C5DE", "#D1E5F0", "#F7F7F7", "#FDDBC7", "#F4A582", "#D6604D", "#B2182B"],
-    "standard_discrete_annotation": ["#2b458d", "#21a6ce", "#8BC25C", "#d31c22", "#B4388A", "#f5b744", "#9a9fbe", "#565c50"],
-    "standard_focus_scatter": ["#2b458d", "#21a6ce", "#8BC25C", "#f5b744", "#a764ce", "#d31c22", "#565c50"],
-    "standard_manifold_sequence": ["#2166AC", "#4393C3", "#92C5DE", "#D1E5F0", "#F7F7F7", "#FDDBC7", "#F4A582", "#D6604D"],
-    "standard_support_layers": ["#7391c2", "#A3C1B0", "#8BC25C", "#f5b744", "#e295c8", "#B4388A", "#565c50"],
-    "user_discrete_reference": ["#8BC25C", "#A3C1B0", "#c4c4c4", "#2b458d", "#A7958E", "#e778cf", "#d31c22", "#B4388A", "#21a6ce", "#1f42b4", "#f5b744", "#9a9fbe", "#565c50", "#a764ce", "#bed5f0", "#3077ce", "#aa287f", "#7391c2", "#ffbdb5"],
-    "user_pair_reference": ["#fad0bf", "#c15e72"],
-}
-GROUP_COLORS = PALETTES["standard_focus_scatter"]
-ANNOTATION_COLORS = PALETTES["standard_discrete_annotation"]
-HEATMAP_CMAP = LinearSegmentedColormap.from_list("standard_blue_white_red_diverging", PALETTES["standard_blue_white_red_diverging"])
-MANIFOLD_CMAP = LinearSegmentedColormap.from_list("standard_manifold_sequence", PALETTES["standard_manifold_sequence"])
-SIGNAL_CMAP = LinearSegmentedColormap.from_list("standard_support_layers", PALETTES["standard_support_layers"])
+STYLE = load_style()
+PALETTES = load_palette_presets()
+GROUP_COLORS = resolve_palette(STYLE, "focus", PALETTES)
+ANNOTATION_COLORS = resolve_palette(STYLE, "discrete", PALETTES)
+HEATMAP_CMAP = LinearSegmentedColormap.from_list("standard_blue_white_red_diverging", resolve_palette(STYLE, "diverging", PALETTES))
+MANIFOLD_CMAP = LinearSegmentedColormap.from_list("standard_manifold_sequence", resolve_palette(STYLE, "manifold", PALETTES))
+SIGNAL_CMAP = LinearSegmentedColormap.from_list("standard_support_layers", resolve_palette(STYLE, "support", PALETTES))
 FIG_DPI = 180
 BASE_TEXT_SIZE = 12
 AXIS_LINEWIDTH = 0.75

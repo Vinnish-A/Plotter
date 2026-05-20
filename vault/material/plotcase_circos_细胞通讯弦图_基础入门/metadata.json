@@ -131,5 +131,18 @@
       "sector_color",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_circos_circlize绘制和弦图",
+    "reason": "visual_redundancy:network:circos"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": true
   }
 }

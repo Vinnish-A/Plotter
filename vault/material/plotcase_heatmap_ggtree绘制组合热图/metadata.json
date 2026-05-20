@@ -75,39 +75,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:29.290235+00:00",
+    "updated_at": "2026-05-20T15:04:54.099262+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_ggtree绘制组合热图/data_raw/data/data.txt",
+        "source": "plotcase_heatmap_ggtree绘制组合热图/raw/data.txt",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_ggtree绘制组合热图/data_raw/data/data.csv"
+          "plotcase_heatmap_ggtree绘制组合热图/raw/data.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_heatmap_ggtree绘制组合热图/data_raw/data/group.txt",
+        "source": "plotcase_heatmap_ggtree绘制组合热图/raw/group.txt",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_ggtree绘制组合热图/data_raw/data/group.csv"
+          "plotcase_heatmap_ggtree绘制组合热图/raw/group.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_ggtree绘制组合热图/raw/data/data.txt",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_ggtree绘制组合热图/raw/data/data.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_ggtree绘制组合热图/raw/data/group.txt",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_ggtree绘制组合热图/raw/data/group.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -168,5 +152,18 @@
       "track_class",
       "heatmap_value"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": true,
+    "canonical_case": null,
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

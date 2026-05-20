@@ -22,16 +22,28 @@ modules:
   retinue:
     role: execution_rendering_export
     tools: retinue/tools
+
+surfaces:
   ui:
-    role: system_preview_and_manual_review
+    role: vault_retinue_preview_and_manual_review_surface
     root: ui
 
 admission_pipeline:
+  - cabal_scene_card
   - graft_intake
   - retinue_rebuild
   - cabal_review
   - vault_admission
-  - ui_preview
+
+closed_loop:
+  - cabal_scene_card
+  - retinue_data_probe
+  - vault_dossier_retrieval
+  - cabal_data_fit_and_recommendation
+  - bastard_generation_when_needed
+  - retinue_render_and_visual_check
+  - cabal_final_score
+  - vault_memory_return
 
 material_contract:
   root: vault/material
@@ -53,6 +65,16 @@ material_contract:
     - build_failed
     - custom_required
     - dependency_missing
+  vault_status:
+    live: boolean
+    folded: boolean
+    restored_from_fold: boolean
+    canonical_case: string_or_null
+  rebuild_class:
+    source_code_rebuild: boolean
+    generic_renderer_rebuild: boolean
+    case_level_fallback: boolean
+    synthetic_data: boolean
   complexity_modes:
     low: data_main.csv only
     medium: data_main.csv plus common module composition

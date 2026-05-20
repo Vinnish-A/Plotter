@@ -1,0 +1,163 @@
+id: plotcase_network_环形网络图的构建方法
+title: 环形网络图的构建方法
+origin:
+  case_dir: vault/material/plotcase_network_环形网络图的构建方法
+  source:
+    root: raw/plotcase_export
+    original_path: network\环形网络图的构建方法
+scientific_intent: &id001
+- network_graph visual grammar
+- network
+- network_graph
+- node_link
+- layout
+- community
+intent: *id001
+visual_genes:
+  layout:
+  - cartesian
+  marks:
+  - point
+  encodings:
+  - x
+  - y
+  - color
+  - size
+  narrative:
+  - global_comparison
+  emphasis:
+  - focus_halo
+  - callout
+  - reserved_label_space
+data_roles:
+  required:
+    source:
+      kind: inferred
+      semantic: source
+    target:
+      kind: inferred
+      semantic: target
+    weight:
+      kind: inferred
+      semantic: weight
+  optional:
+    node_id:
+      kind: inferred
+      use: optional_visual_module
+    node_label:
+      kind: inferred
+      use: optional_visual_module
+    node_group:
+      kind: inferred
+      use: optional_visual_module
+    node_size:
+      kind: inferred
+      use: optional_visual_module
+    edge_group:
+      kind: inferred
+      use: optional_visual_module
+    edge_direction:
+      kind: inferred
+      use: optional_visual_module
+    layout_x:
+      kind: inferred
+      use: optional_visual_module
+    layout_y:
+      kind: inferred
+      use: optional_visual_module
+required_data:
+- source
+- target
+- weight
+optional_data:
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+optional_modules:
+  detail_panel:
+    requires:
+    - group
+    - sample_x
+    - sample_y
+    can_query_environment: true
+    fallback_if_missing: disable_detail_panel
+  annotation_track:
+    requires:
+    - group
+    - value
+    can_query_environment: true
+    fallback_if_missing: use_plain_axis
+  uncertainty_interval:
+    requires_any:
+    - - lower
+      - upper
+    - - se
+    - - ci_low
+      - ci_high
+    can_query_environment: true
+    fallback_if_missing: do_not_show_uncertainty
+  subgroup_color:
+    requires:
+    - subgroup
+    can_query_environment: true
+    fallback_if_missing: use_primary_group_only
+  network_weight:
+    requires:
+    - source
+    - target
+    - weight
+    enabled_by_default: true
+    fallback_if_missing: draw_unweighted_edges
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: false
+  composition: false
+  detail_panel: false
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: high
+defamiliarization:
+  level: U2
+best_for:
+- 'Reusable network_graph cases with roles: source, target, weight'
+bad_for:
+- Missing required roles
+- Undeclared raw resources
+- Unbounded labels without focus selection
+failure_cases:
+- Missing output image
+- Blank image
+- Required role not materialized
+minimal_reproducible_example:
+  data: vault/material/plotcase_network_环形网络图的构建方法/data_main.csv
+  entry: vault/material/plotcase_network_环形网络图的构建方法/plot.py
+  preview: vault/material/plotcase_network_环形网络图的构建方法/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: true
+  canonical_case: null
+  reason: retained after visual folding review; complex or distinctive non-map visual
+    grammar

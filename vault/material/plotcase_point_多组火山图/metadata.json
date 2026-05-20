@@ -73,23 +73,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:32.532652+00:00",
+    "updated_at": "2026-05-20T15:04:56.102408+00:00",
     "records": [
       {
-        "source": "plotcase_point_多组火山图/data_raw/data/data.tsv",
+        "source": "plotcase_point_多组火山图/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_point_多组火山图/data_raw/data/data.csv"
+          "plotcase_point_多组火山图/raw/data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_point_多组火山图/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_point_多组火山图/raw/data/data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -144,5 +136,18 @@
       "facet",
       "highlight"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

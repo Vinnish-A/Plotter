@@ -1,0 +1,153 @@
+id: plotcase_barplot_环形条形图
+title: 环形条形图
+origin:
+  case_dir: vault/material/plotcase_barplot_环形条形图
+  source:
+    root: raw/plotcase_export
+    original_path: barplot\环形条形图
+scientific_intent: &id001
+- bar_composite visual grammar
+- bar
+- bar
+- stacked_or_grouped
+- summary_layer
+intent: *id001
+visual_genes:
+  layout:
+  - cartesian
+  marks:
+  - point
+  encodings:
+  - x
+  - y
+  - color
+  - size
+  narrative:
+  - global_comparison
+  emphasis:
+  - focus_halo
+  - callout
+  - reserved_label_space
+data_roles:
+  required:
+    category:
+      kind: inferred
+      semantic: category
+    value:
+      kind: inferred
+      semantic: value
+  optional:
+    group:
+      kind: inferred
+      use: optional_visual_module
+    stack:
+      kind: inferred
+      use: optional_visual_module
+    error_low:
+      kind: inferred
+      use: optional_visual_module
+    error_high:
+      kind: inferred
+      use: optional_visual_module
+    line_value:
+      kind: inferred
+      use: optional_visual_module
+    annotation_value:
+      kind: inferred
+      use: optional_visual_module
+    label:
+      kind: inferred
+      use: optional_visual_module
+required_data:
+- category
+- value
+optional_data:
+- group
+- stack
+- error_low
+- error_high
+- line_value
+- annotation_value
+- label
+optional_modules:
+  detail_panel:
+    requires:
+    - group
+    - sample_x
+    - sample_y
+    can_query_environment: true
+    fallback_if_missing: disable_detail_panel
+  annotation_track:
+    requires:
+    - group
+    - value
+    can_query_environment: true
+    fallback_if_missing: use_plain_axis
+  uncertainty_interval:
+    requires_any:
+    - - lower
+      - upper
+    - - se
+    - - ci_low
+      - ci_high
+    can_query_environment: true
+    fallback_if_missing: do_not_show_uncertainty
+  subgroup_color:
+    requires:
+    - subgroup
+    can_query_environment: true
+    fallback_if_missing: use_primary_group_only
+  network_weight:
+    requires:
+    - source
+    - target
+    - weight
+    enabled_by_default: false
+    fallback_if_missing: draw_unweighted_edges
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: true
+  composition: false
+  detail_panel: false
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: low
+defamiliarization:
+  level: U2
+best_for:
+- 'Reusable bar_composite cases with roles: category, value'
+bad_for:
+- Missing required roles
+- Undeclared raw resources
+- Unbounded labels without focus selection
+failure_cases:
+- Missing output image
+- Blank image
+- Required role not materialized
+minimal_reproducible_example:
+  data: vault/material/plotcase_barplot_环形条形图/data_main.csv
+  entry: vault/material/plotcase_barplot_环形条形图/plot.py
+  preview: vault/material/plotcase_barplot_环形条形图/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null

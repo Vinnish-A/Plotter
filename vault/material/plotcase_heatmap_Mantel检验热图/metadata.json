@@ -148,5 +148,18 @@
     "manual_override": true,
     "reason": "manual UI group assignment",
     "reviewed_at": "2026-05-19T10:32:03.164302+00:00"
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+    "reason": "visual_redundancy:heatmap:map"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": true
   }
 }

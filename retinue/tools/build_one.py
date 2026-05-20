@@ -14,6 +14,8 @@ from pathlib import Path
 from typing import Any
 
 from validate_case import validate_case
+from visual_check import run_visual_check
+from write_output_manifest import write_manifest
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -113,6 +115,18 @@ def build_one(case_dir: Path, timeout: int) -> dict[str, Any]:
     output_path = case_dir / output
     result["returncode"] = proc.returncode
     if proc.returncode == 0 and output_path.exists() and output_path.stat().st_size > 0:
+        visual = run_visual_check(case_dir, output)
+        write_manifest(case_dir)
+        result["visual_check"] = visual
+        if not visual["ok"]:
+            status = "build_failed"
+            reason = "visual_check_failed"
+            update_status(metadata_path, status, reason)
+            result["status"] = status
+            result["failure_reason"] = reason
+            result["duration_seconds"] = round(time.time() - started, 3)
+            append_log(case_dir, f"[visual_check] {json.dumps(visual, ensure_ascii=False)}")
+            return result
         status = "build_success"
         update_status(metadata_path, status)
     else:

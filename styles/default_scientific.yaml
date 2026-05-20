@@ -1,0 +1,34 @@
+style_card:
+  id: default_scientific_v1
+  style_family: scientific_dense
+  palette:
+    diverging: standard_blue_white_red_diverging
+    discrete: standard_discrete_annotation
+    focus: standard_focus_scatter
+    support: standard_support_layers
+    manifold: standard_manifold_sequence
+  typography:
+    font_family: DejaVu Sans
+    base_size: 11
+    title_size: 14
+    tick_size: 8
+    annotation_size: 9
+  geometry:
+    body_first: true
+    panel_gap: 0.04
+    annotation_gap: 0.012
+    line_width: 0.9
+    connector_width: 1.2
+  focus:
+    strongest_chroma: true
+    halo: true
+    callout_box: true
+    connector: arrow
+  export:
+    dpi: 160
+    png: true
+    pdf: false
+  constraints:
+    - no_default_color_cycle
+    - no_overlapping_semantic_elements
+    - annotation_tracks_calmer_than_focus

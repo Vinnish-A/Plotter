@@ -6,8 +6,13 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from plotter.paths import material_root as default_material_root
 
 
 GEOMETRY_KEYWORDS = [
@@ -194,7 +199,7 @@ def refresh_case(case_dir: Path, write: bool) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--root", type=Path, default=default_material_root(Path(__file__)))
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
 

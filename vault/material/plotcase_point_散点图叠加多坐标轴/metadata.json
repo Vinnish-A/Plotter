@@ -74,35 +74,21 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:32.658562+00:00",
+    "updated_at": "2026-05-20T15:04:56.224652+00:00",
     "records": [
       {
-        "source": "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM.xlsx",
+        "source": "plotcase_point_散点图叠加多坐标轴/raw/41591_2025_3891_MOESM5_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1b.csv",
-          "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_1.csv",
-          "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_2.csv",
-          "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_1.csv",
-          "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_2.csv",
-          "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_1.csv",
-          "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_2.csv"
+          "plotcase_point_散点图叠加多坐标轴/raw/41591_2025_3891_MOESM5_ESM__Fig.1b.csv",
+          "plotcase_point_散点图叠加多坐标轴/raw/41591_2025_3891_MOESM5_ESM__Fig.1c.csv",
+          "plotcase_point_散点图叠加多坐标轴/raw/41591_2025_3891_MOESM5_ESM__Fig.1c_2.csv",
+          "plotcase_point_散点图叠加多坐标轴/raw/41591_2025_3891_MOESM5_ESM__Fig.1d.csv",
+          "plotcase_point_散点图叠加多坐标轴/raw/41591_2025_3891_MOESM5_ESM__Fig.1d_2.csv",
+          "plotcase_point_散点图叠加多坐标轴/raw/41591_2025_3891_MOESM5_ESM__Fig.1e.csv",
+          "plotcase_point_散点图叠加多坐标轴/raw/41591_2025_3891_MOESM5_ESM__Fig.1e_2.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1b.csv",
-          "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_1.csv",
-          "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_2.csv",
-          "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_1.csv",
-          "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_2.csv",
-          "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_1.csv",
-          "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_2.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -167,5 +153,18 @@
       "facet",
       "highlight"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

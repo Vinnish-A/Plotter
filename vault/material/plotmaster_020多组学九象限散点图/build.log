@@ -1,0 +1,40 @@
+[build] command: /home/vinnish/miniconda3/bin/python plot.py
+[stdout]
+[stderr]
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 22810 (\N{CJK UNIFIED IDEOGRAPH-591A}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 32452 (\N{CJK UNIFIED IDEOGRAPH-7EC4}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 23398 (\N{CJK UNIFIED IDEOGRAPH-5B66}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 20061 (\N{CJK UNIFIED IDEOGRAPH-4E5D}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 35937 (\N{CJK UNIFIED IDEOGRAPH-8C61}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 38480 (\N{CJK UNIFIED IDEOGRAPH-9650}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 25955 (\N{CJK UNIFIED IDEOGRAPH-6563}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 28857 (\N{CJK UNIFIED IDEOGRAPH-70B9}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 22270 (\N{CJK UNIFIED IDEOGRAPH-56FE}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 22810 (\N{CJK UNIFIED IDEOGRAPH-591A}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 32452 (\N{CJK UNIFIED IDEOGRAPH-7EC4}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 23398 (\N{CJK UNIFIED IDEOGRAPH-5B66}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 20061 (\N{CJK UNIFIED IDEOGRAPH-4E5D}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 35937 (\N{CJK UNIFIED IDEOGRAPH-8C61}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 38480 (\N{CJK UNIFIED IDEOGRAPH-9650}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 25955 (\N{CJK UNIFIED IDEOGRAPH-6563}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 28857 (\N{CJK UNIFIED IDEOGRAPH-70B9}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 22270 (\N{CJK UNIFIED IDEOGRAPH-56FE}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+[result] {"case": "/mnt/f/Plotter/vault/material/plotmaster_020多组学九象限散点图", "status": "build_success", "duration_seconds": 0.845, "returncode": 0, "visual_check": {"case": "/mnt/f/Plotter/vault/material/plotmaster_020多组学九象限散点图", "output": "outputs/rebuilt.png", "ok": true, "checks": {"file_exists": true, "non_empty_image": true, "minimum_resolution": true, "not_blank": true, "width": 1263, "height": 784, "mean_stddev": 27.0599}}}

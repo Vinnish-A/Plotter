@@ -2,6 +2,6 @@ canonical_record: metadata.json
 agent_guide: agent_guide.md
 standard_input: data_main.csv
 optional_input: data_optional.csv
-csv_data_files: 6
-output_files: 1
-note: Detailed original file listings were folded after Vault CSV-only normalization.
+csv_data_files: 9
+output_files: 2
+note: Detailed original file listings were folded after CSV-only data conversion.

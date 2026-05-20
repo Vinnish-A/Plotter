@@ -77,23 +77,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:31.901069+00:00",
+    "updated_at": "2026-05-20T15:04:55.948538+00:00",
     "records": [
       {
-        "source": "plotcase_network_蛋白互作网络图/data_raw/data/string_interactions.tsv",
+        "source": "plotcase_network_蛋白互作网络图/raw/string_interactions.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_network_蛋白互作网络图/data_raw/data/string_interactions.csv"
+          "plotcase_network_蛋白互作网络图/raw/string_interactions.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_蛋白互作网络图/raw/data/string_interactions.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_蛋白互作网络图/raw/data/string_interactions.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -160,5 +152,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_060复杂环形互作网络图",
+    "reason": "visual_redundancy:network:network"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

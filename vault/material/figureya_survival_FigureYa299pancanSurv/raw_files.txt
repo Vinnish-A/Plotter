@@ -3,5 +3,5 @@ agent_guide: agent_guide.md
 standard_input: data_main.csv
 optional_input: data_optional.csv
 csv_data_files: 10
-output_files: 4
-note: Detailed original file listings were folded after Vault CSV-only normalization.
+output_files: 5
+note: Detailed original file listings were folded after CSV-only data conversion.

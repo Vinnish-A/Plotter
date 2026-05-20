@@ -79,35 +79,21 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:35.121429+00:00",
+    "updated_at": "2026-05-20T15:04:57.451513+00:00",
     "records": [
       {
-        "source": "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM.xlsx",
+        "source": "plotcase_综合图_多分组统计与差异变化综合图/raw/41586_2025_9686_MOESM5_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1b.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1c.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_1.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_2.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_3.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1f.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1g.csv"
+          "plotcase_综合图_多分组统计与差异变化综合图/raw/41586_2025_9686_MOESM5_ESM__Fig1b.csv",
+          "plotcase_综合图_多分组统计与差异变化综合图/raw/41586_2025_9686_MOESM5_ESM__Fig1c.csv",
+          "plotcase_综合图_多分组统计与差异变化综合图/raw/41586_2025_9686_MOESM5_ESM__Fig1e_1.csv",
+          "plotcase_综合图_多分组统计与差异变化综合图/raw/41586_2025_9686_MOESM5_ESM__Fig1e_2.csv",
+          "plotcase_综合图_多分组统计与差异变化综合图/raw/41586_2025_9686_MOESM5_ESM__Fig1e_3.csv",
+          "plotcase_综合图_多分组统计与差异变化综合图/raw/41586_2025_9686_MOESM5_ESM__Fig1f.csv",
+          "plotcase_综合图_多分组统计与差异变化综合图/raw/41586_2025_9686_MOESM5_ESM__Fig1g.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1b.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1c.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_1.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_2.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_3.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1f.csv",
-          "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1g.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -165,5 +151,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

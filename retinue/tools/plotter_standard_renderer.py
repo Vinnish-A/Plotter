@@ -3,7 +3,14 @@
 
 from __future__ import annotations
 
+import os
+import sys
 from pathlib import Path
+
+for parent in Path(__file__).resolve().parents:
+    if (parent / "plotter.yaml").exists():
+        sys.path.insert(0, str(parent))
+        break
 
 import matplotlib
 
@@ -13,8 +20,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from plotter.style import load_style, resolve_palette
 
-PALETTE = ["#2f6f9f", "#d9822b", "#4f8f5b", "#b24a4a", "#8064a2", "#3b8f8f", "#a66f2f"]
+
+STYLE = load_style(Path(os.environ["PLOTTER_STYLE"]) if os.environ.get("PLOTTER_STYLE") else None)
+PALETTE = resolve_palette(STYLE, "focus")
+DIVERGING = resolve_palette(STYLE, "diverging")
+SUPPORT = resolve_palette(STYLE, "support")
 
 
 def _read_main() -> pd.DataFrame:
@@ -47,7 +59,11 @@ def _trim(frame: pd.DataFrame, limit: int = 1600) -> pd.DataFrame:
 
 
 def _setup(figsize=(8, 5)):
-    fig, ax = plt.subplots(figsize=figsize, dpi=160)
+    card = STYLE.get("style_card", {})
+    typography = card.get("typography", {})
+    export = card.get("export", {})
+    plt.rcParams["font.family"] = typography.get("font_family", "DejaVu Sans")
+    fig, ax = plt.subplots(figsize=figsize, dpi=int(export.get("dpi", 160)))
     ax.set_facecolor("#ffffff")
     fig.patch.set_facecolor("#ffffff")
     ax.grid(True, color="#e8ecef", linewidth=0.7, zorder=0)
@@ -55,8 +71,9 @@ def _setup(figsize=(8, 5)):
 
 
 def _finish(fig, ax, title: str):
-    ax.set_title(title.replace("_", " ")[:90], loc="left", fontsize=11, pad=10)
-    ax.tick_params(labelsize=8)
+    typography = STYLE.get("style_card", {}).get("typography", {})
+    ax.set_title(title.replace("_", " ")[:90], loc="left", fontsize=typography.get("title_size", 14), pad=10)
+    ax.tick_params(labelsize=typography.get("tick_size", 8))
     for spine in ("top", "right"):
         if spine in ax.spines:
             ax.spines[spine].set_visible(False)
@@ -93,7 +110,8 @@ def render_scatter(frame: pd.DataFrame, title: str):
     size = np.clip(np.abs(value), np.nanpercentile(np.abs(value), 5), np.nanpercentile(np.abs(value), 95) if len(value) > 5 else np.nanmax(np.abs(value)))
     size = 22 + 78 * (size - size.min()) / (size.max() - size.min() + 1e-9)
     fig, ax = _setup()
-    sc = ax.scatter(x, y, c=value, s=size, cmap="viridis", alpha=0.78, edgecolor="white", linewidth=0.35, zorder=3)
+    cmap = matplotlib.colors.LinearSegmentedColormap.from_list("plotter_diverging", DIVERGING)
+    sc = ax.scatter(x, y, c=value, s=size, cmap=cmap, alpha=0.78, edgecolor="white", linewidth=0.35, zorder=3)
     fig.colorbar(sc, ax=ax, fraction=0.035, pad=0.02, label="value")
     ax.set_xlabel("x")
     ax.set_ylabel("y")
@@ -149,7 +167,8 @@ def render_heatmap(frame: pd.DataFrame, title: str):
     table = pd.DataFrame({"x": x, "y": y, "value": value}).pivot_table(index="y", columns="x", values="value", aggfunc="mean")
     table = table.iloc[:60, :60]
     fig, ax = _setup(figsize=(8, 6))
-    im = ax.imshow(table.fillna(0).to_numpy(), aspect="auto", cmap="mako" if "mako" in plt.colormaps() else "viridis")
+    cmap = matplotlib.colors.LinearSegmentedColormap.from_list("plotter_diverging", DIVERGING)
+    im = ax.imshow(table.fillna(0).to_numpy(), aspect="auto", cmap=cmap)
     ax.set_xticks(np.arange(table.shape[1]))
     ax.set_yticks(np.arange(table.shape[0]))
     ax.set_xticklabels(table.columns, rotation=90, fontsize=6)
@@ -171,7 +190,7 @@ def render_network(frame: pd.DataFrame, title: str):
     ax.grid(False)
     for s, t, w in zip(source, target, weight):
         if s in pos and t in pos:
-            ax.plot([pos[s][0], pos[t][0]], [pos[s][1], pos[t][1]], color="#9aa6b2", alpha=0.25, linewidth=0.5 + abs(float(w)) % 2)
+            ax.plot([pos[s][0], pos[t][0]], [pos[s][1], pos[t][1]], color=SUPPORT[0], alpha=0.28, linewidth=0.5 + abs(float(w)) % 2)
     for i, node in enumerate(nodes):
         ax.scatter(*pos[node], s=80, color=PALETTE[i % len(PALETTE)], zorder=3)
         ax.text(pos[node][0] * 1.08, pos[node][1] * 1.08, str(node)[:12], fontsize=6, ha="center", va="center")

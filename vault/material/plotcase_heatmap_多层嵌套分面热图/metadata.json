@@ -77,47 +77,27 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:29.793467+00:00",
+    "updated_at": "2026-05-20T15:04:54.465645+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM.xlsx",
+        "source": "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2a_1.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2a_2.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2b_1.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2b_2.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_1.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_2.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_3.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_4.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_5.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_6.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_1.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_2.csv",
-          "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_3.csv"
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2a_1.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2a_2.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2b_1.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2b_2.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2c_1.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2c_2.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2c_3.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2c_4.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2c_5.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2c_6.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2d_1.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2d_2.csv",
+          "plotcase_heatmap_多层嵌套分面热图/raw/41591_2025_3891_MOESM6_ESM__source_data_fig2d_3.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2a_1.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2a_2.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2b_1.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2b_2.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_1.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_2.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_3.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_4.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_5.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_6.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_1.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_2.csv",
-          "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_3.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -173,5 +153,18 @@
       "size_value",
       "facet"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

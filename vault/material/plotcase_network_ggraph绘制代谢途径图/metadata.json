@@ -76,39 +76,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:31.577333+00:00",
+    "updated_at": "2026-05-20T15:04:55.633930+00:00",
     "records": [
       {
-        "source": "plotcase_network_ggraph绘制代谢途径图/data_raw/data/oppp_edges.tsv",
+        "source": "plotcase_network_ggraph绘制代谢途径图/raw/OPPP_edges.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_network_ggraph绘制代谢途径图/data_raw/data/oppp_edges.csv"
+          "plotcase_network_ggraph绘制代谢途径图/raw/OPPP_edges.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_network_ggraph绘制代谢途径图/data_raw/data/oppp_nodes.tsv",
+        "source": "plotcase_network_ggraph绘制代谢途径图/raw/OPPP_nodes.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_network_ggraph绘制代谢途径图/data_raw/data/oppp_nodes.csv"
+          "plotcase_network_ggraph绘制代谢途径图/raw/OPPP_nodes.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_ggraph绘制代谢途径图/raw/data/oppp_edges.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_ggraph绘制代谢途径图/raw/data/oppp_edges.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_ggraph绘制代谢途径图/raw/data/oppp_nodes.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_ggraph绘制代谢途径图/raw/data/oppp_nodes.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -176,5 +160,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_060复杂环形互作网络图",
+    "reason": "visual_redundancy:network:network"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

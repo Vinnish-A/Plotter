@@ -77,47 +77,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:26.673799+00:00",
+    "updated_at": "2026-05-20T15:04:52.428584+00:00",
     "records": [
       {
-        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_annCol.txt",
+        "source": "figureya_survival_FigureYa251NPHSurv/raw/ cutoff.txt",
         "status": "converted",
         "csv": [
-          "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_annCol.csv"
+          "figureya_survival_FigureYa251NPHSurv/raw/cutoff.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_surv.txt",
+        "source": "figureya_survival_FigureYa251NPHSurv/raw/ delayed effect.txt",
         "status": "converted",
         "csv": [
-          "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_surv.csv"
+          "figureya_survival_FigureYa251NPHSurv/raw/delayed_effect.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_long term survival p value matrix after 90 delayed effect.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa251NPHSurv/data_raw/output_long_term_survival_p_value_matrix_after_90_delayed_effect.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted mean survival p value matrix at 180 cutoff.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted_mean_survival_p_value_matrix_at_180_cutoff.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted mean survival p value matrix at 365 cutoff.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted_mean_survival_p_value_matrix_at_365_cutoff.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa251NPHSurv/raw/easy_input_annCol.txt",
@@ -125,7 +101,7 @@
         "csv": [
           "figureya_survival_FigureYa251NPHSurv/raw/easy_input_annCol.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa251NPHSurv/raw/easy_input_surv.txt",
@@ -133,7 +109,7 @@
         "csv": [
           "figureya_survival_FigureYa251NPHSurv/raw/easy_input_surv.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa251NPHSurv/raw/output_long term survival p value matrix after 90 delayed effect.txt",
@@ -141,7 +117,7 @@
         "csv": [
           "figureya_survival_FigureYa251NPHSurv/raw/output_long_term_survival_p_value_matrix_after_90_delayed_effect.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa251NPHSurv/raw/output_restricted mean survival p value matrix at 180 cutoff.txt",
@@ -149,7 +125,7 @@
         "csv": [
           "figureya_survival_FigureYa251NPHSurv/raw/output_restricted_mean_survival_p_value_matrix_at_180_cutoff.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa251NPHSurv/raw/output_restricted mean survival p value matrix at 365 cutoff.txt",
@@ -157,7 +133,7 @@
         "csv": [
           "figureya_survival_FigureYa251NPHSurv/raw/output_restricted_mean_survival_p_value_matrix_at_365_cutoff.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -217,5 +193,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

@@ -75,39 +75,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:28.100358+00:00",
+    "updated_at": "2026-05-20T15:04:53.231869+00:00",
     "records": [
       {
-        "source": "plotcase_barplot_配对连线条形图_进阶版/data_raw/data/data1.tsv",
+        "source": "plotcase_barplot_配对连线条形图_进阶版/raw/data1.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_barplot_配对连线条形图_进阶版/data_raw/data/data1.csv"
+          "plotcase_barplot_配对连线条形图_进阶版/raw/data1.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_barplot_配对连线条形图_进阶版/data_raw/data/data2.tsv",
+        "source": "plotcase_barplot_配对连线条形图_进阶版/raw/data2.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_barplot_配对连线条形图_进阶版/data_raw/data/data2.csv"
+          "plotcase_barplot_配对连线条形图_进阶版/raw/data2.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_barplot_配对连线条形图_进阶版/raw/data/data1.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_barplot_配对连线条形图_进阶版/raw/data/data1.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_barplot_配对连线条形图_进阶版/raw/data/data2.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_barplot_配对连线条形图_进阶版/raw/data/data2.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -163,5 +147,18 @@
       "annotation_value",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

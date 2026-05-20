@@ -76,43 +76,25 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:36.245251+00:00",
+    "updated_at": "2026-05-20T15:04:58.128855+00:00",
     "records": [
-      {
-        "source": "plotmaster_050复杂分组散点图/data_raw/total_w_unc.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__cell_type_densities.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__total_immune_densities.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__num_by_cell_and_system.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__num_unc_by_cell_and_system.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_cell_and_system.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_unc_by_cell_and_s_system.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__numbers_by_cell_type.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__numbers_by_systems.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_cell_type.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_systems.csv",
-          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__totals.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_050复杂分组散点图/raw/total_w_unc.xlsx",
         "status": "converted",
         "csv": [
           "plotmaster_050复杂分组散点图/raw/total_w_unc__cell_type_densities.csv",
           "plotmaster_050复杂分组散点图/raw/total_w_unc__total_immune_densities.csv",
-          "plotmaster_050复杂分组散点图/raw/total_w_unc__num_by_cell_and_system.csv",
-          "plotmaster_050复杂分组散点图/raw/total_w_unc__num_unc_by_cell_and_system.csv",
           "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_cell_and_system.csv",
-          "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_unc_by_cell_and_s_system.csv",
-          "plotmaster_050复杂分组散点图/raw/total_w_unc__numbers_by_cell_type.csv",
-          "plotmaster_050复杂分组散点图/raw/total_w_unc__numbers_by_systems.csv",
           "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_cell_type.csv",
           "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_systems.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_unc_by_cell_and_s_system.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__num_by_cell_and_system.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__num_unc_by_cell_and_system.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__numbers_by_cell_type.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__numbers_by_systems.csv",
           "plotmaster_050复杂分组散点图/raw/total_w_unc__totals.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -168,5 +150,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

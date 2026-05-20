@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:33.542671+00:00",
+    "updated_at": "2026-05-20T15:04:56.588478+00:00",
     "records": [
       {
-        "source": "plotcase_sankey_渐变色桑基图_进阶版/data_raw/data/F5d.tsv",
+        "source": "plotcase_sankey_渐变色桑基图_进阶版/raw/F5d.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_sankey_渐变色桑基图_进阶版/data_raw/data/F5d.csv"
+          "plotcase_sankey_渐变色桑基图_进阶版/raw/F5d.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_sankey_渐变色桑基图_进阶版/raw/data/F5d.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_sankey_渐变色桑基图_进阶版/raw/data/F5d.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -148,5 +140,18 @@
       "label",
       "order"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

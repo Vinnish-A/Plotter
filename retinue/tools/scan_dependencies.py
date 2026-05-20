@@ -11,6 +11,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from plotter.paths import material_root as default_material_root
+
 
 R_LIBRARY_RE = re.compile(r"(?:library|require)\s*\(\s*['\"]?([A-Za-z0-9_.]+)['\"]?")
 R_NAMESPACE_RE = re.compile(r"\b([A-Za-z][A-Za-z0-9_.]*)::")
@@ -63,7 +67,7 @@ def scan_case(case_dir: Path) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--root", type=Path, default=default_material_root(Path(__file__)))
     parser.add_argument("--write", action="store_true", help="rewrite dependency_catalog.json with observed packages")
     args = parser.parse_args()
 

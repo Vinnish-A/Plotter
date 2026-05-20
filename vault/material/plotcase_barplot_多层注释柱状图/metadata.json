@@ -74,23 +74,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:27.470471+00:00",
+    "updated_at": "2026-05-20T15:04:52.926563+00:00",
     "records": [
       {
-        "source": "plotcase_barplot_多层注释柱状图/data_raw/data/data.tsv",
+        "source": "plotcase_barplot_多层注释柱状图/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_barplot_多层注释柱状图/data_raw/data/data.csv"
+          "plotcase_barplot_多层注释柱状图/raw/data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_barplot_多层注释柱状图/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_barplot_多层注释柱状图/raw/data/data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -145,5 +137,18 @@
       "annotation_value",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

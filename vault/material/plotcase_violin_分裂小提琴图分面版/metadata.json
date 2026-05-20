@@ -74,23 +74,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:33.982316+00:00",
+    "updated_at": "2026-05-20T15:04:56.893501+00:00",
     "records": [
       {
-        "source": "plotcase_violin_分裂小提琴图分面版/data_raw/data/violin_data.tsv",
+        "source": "plotcase_violin_分裂小提琴图分面版/raw/violin_data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_violin_分裂小提琴图分面版/data_raw/data/violin_data.csv"
+          "plotcase_violin_分裂小提琴图分面版/raw/violin_data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_violin_分裂小提琴图分面版/raw/data/violin_data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_violin_分裂小提琴图分面版/raw/data/violin_data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -143,5 +135,18 @@
       "facet",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

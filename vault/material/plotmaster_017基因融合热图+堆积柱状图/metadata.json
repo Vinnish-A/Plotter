@@ -80,23 +80,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:35.456280+00:00",
+    "updated_at": "2026-05-20T15:04:57.655375+00:00",
     "records": [
-      {
-        "source": "plotmaster_017基因融合热图+堆积柱状图/data_raw/41467_2022_31780_MOESM9_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_017基因融合热图+堆积柱状图/data_raw/41467_2022_31780_MOESM9_ESM.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_017基因融合热图+堆积柱状图/raw/41467_2022_31780_MOESM9_ESM.xlsx",
         "status": "converted",
         "csv": [
           "plotmaster_017基因融合热图+堆积柱状图/raw/41467_2022_31780_MOESM9_ESM.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -156,5 +148,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

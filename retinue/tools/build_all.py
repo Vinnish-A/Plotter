@@ -10,15 +10,26 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
 from build_one import build_one, load_json
+from plotter.vault_status import is_live_metadata
 
 
 ORDER = {"low": 0, "medium": 1, "high": 2, "custom": 3}
 
 
-def case_dirs(material_root: Path) -> list[Path]:
+def case_dirs(material_root: Path, include_folded: bool = False) -> list[Path]:
+    candidates = []
+    for path in material_root.iterdir():
+        if not path.is_dir() or not (path / "metadata.json").exists():
+            continue
+        metadata = load_json(path / "metadata.json")
+        if not include_folded and not is_live_metadata(metadata):
+            continue
+        candidates.append(path)
     return sorted(
-        [path for path in material_root.iterdir() if path.is_dir() and (path / "metadata.json").exists()],
+        candidates,
         key=lambda path: (ORDER.get(read_mode(path), 99), path.name),
     )
 
@@ -46,11 +57,12 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=0, help="maximum number of cases to build")
     parser.add_argument("--status", default="standardized", help="only build cases with this build.status")
     parser.add_argument("--include-pending", action="store_true", help="include every case regardless of build.status")
+    parser.add_argument("--include-folded", action="store_true", help="include folded/quarantined cases")
     parser.add_argument("--timeout", type=int, default=300)
     args = parser.parse_args()
 
     material_root = args.root.resolve()
-    selected = case_dirs(material_root)
+    selected = case_dirs(material_root, include_folded=args.include_folded)
     if args.status and not args.include_pending:
         filtered = []
         for case_dir in selected:

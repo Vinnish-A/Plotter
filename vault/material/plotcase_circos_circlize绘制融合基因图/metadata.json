@@ -74,55 +74,31 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:28.728568+00:00",
+    "updated_at": "2026-05-20T15:04:53.729595+00:00",
     "records": [
       {
-        "source": "plotcase_circos_circlize绘制融合基因图/data_raw/data/bed.tsv",
+        "source": "plotcase_circos_circlize绘制融合基因图/raw/bed.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_circos_circlize绘制融合基因图/data_raw/data/bed.csv"
+          "plotcase_circos_circlize绘制融合基因图/raw/bed.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_circos_circlize绘制融合基因图/data_raw/data/link1.tsv",
+        "source": "plotcase_circos_circlize绘制融合基因图/raw/link1.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_circos_circlize绘制融合基因图/data_raw/data/link1.csv"
+          "plotcase_circos_circlize绘制融合基因图/raw/link1.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_circos_circlize绘制融合基因图/data_raw/data/link2.tsv",
+        "source": "plotcase_circos_circlize绘制融合基因图/raw/link2.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_circos_circlize绘制融合基因图/data_raw/data/link2.csv"
+          "plotcase_circos_circlize绘制融合基因图/raw/link2.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_circos_circlize绘制融合基因图/raw/data/bed.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_circos_circlize绘制融合基因图/raw/data/bed.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_circos_circlize绘制融合基因图/raw/data/link1.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_circos_circlize绘制融合基因图/raw/data/link1.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_circos_circlize绘制融合基因图/raw/data/link2.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_circos_circlize绘制融合基因图/raw/data/link2.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -189,5 +165,18 @@
       "sector_color",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_circos_circlize绘制和弦图",
+    "reason": "visual_redundancy:network:circos"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

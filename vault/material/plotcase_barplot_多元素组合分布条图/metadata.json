@@ -73,27 +73,17 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:27.407170+00:00",
+    "updated_at": "2026-05-20T15:04:52.866754+00:00",
     "records": [
       {
-        "source": "plotcase_barplot_多元素组合分布条图/data_raw/data/43016_2026_1303_MOESM3_ESM.xlsx",
+        "source": "plotcase_barplot_多元素组合分布条图/raw/43016_2026_1303_MOESM3_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_barplot_多元素组合分布条图/data_raw/data/43016_2026_1303_MOESM3_ESM__production-based_emission.csv",
-          "plotcase_barplot_多元素组合分布条图/data_raw/data/43016_2026_1303_MOESM3_ESM__consumption-based_emission.csv",
-          "plotcase_barplot_多元素组合分布条图/data_raw/data/43016_2026_1303_MOESM3_ESM__pie_data.csv"
+          "plotcase_barplot_多元素组合分布条图/raw/43016_2026_1303_MOESM3_ESM__production-based_emission.csv",
+          "plotcase_barplot_多元素组合分布条图/raw/43016_2026_1303_MOESM3_ESM__consumption-based_emission.csv",
+          "plotcase_barplot_多元素组合分布条图/raw/43016_2026_1303_MOESM3_ESM__pie_data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_barplot_多元素组合分布条图/raw/data/43016_2026_1303_MOESM3_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_barplot_多元素组合分布条图/raw/data/43016_2026_1303_MOESM3_ESM__production-based_emission.csv",
-          "plotcase_barplot_多元素组合分布条图/raw/data/43016_2026_1303_MOESM3_ESM__consumption-based_emission.csv",
-          "plotcase_barplot_多元素组合分布条图/raw/data/43016_2026_1303_MOESM3_ESM__pie_data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -140,5 +130,18 @@
       "annotation_value",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+    "reason": "visual_redundancy:bar:bar"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

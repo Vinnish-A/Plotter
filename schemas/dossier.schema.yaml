@@ -3,7 +3,9 @@ required:
   - id
   - title
   - origin
-  - intent
+  - scientific_intent
+  - visual_genes
+  - data_roles
   - required_data
   - function_signature
   - supports
@@ -14,10 +16,20 @@ properties:
     type: string
   origin:
     type: object
+  scientific_intent:
+    type: array
+    items:
+      type: string
   intent:
     type: array
     items:
       type: string
+  visual_genes:
+    type: object
+  data_roles:
+    type: object
+  optional_modules:
+    type: object
   complexity:
     type: object
   defamiliarization:
@@ -43,4 +55,8 @@ properties:
     items:
       type: string
   minimal_reproducible_example:
+    type: object
+  rebuild_class:
+    type: object
+  vault_status:
     type: object

@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:31.640691+00:00",
+    "updated_at": "2026-05-20T15:04:55.694373+00:00",
     "records": [
       {
-        "source": "plotcase_network_分层气泡图_类别层次结构展示/data_raw/data/data.tsv",
+        "source": "plotcase_network_分层气泡图_类别层次结构展示/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_network_分层气泡图_类别层次结构展示/data_raw/data/data.csv"
+          "plotcase_network_分层气泡图_类别层次结构展示/raw/data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_分层气泡图_类别层次结构展示/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_分层气泡图_类别层次结构展示/raw/data/data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -159,5 +151,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotmaster_059桑基气泡图",
+    "reason": "visual_redundancy:network:气泡"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

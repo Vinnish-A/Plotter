@@ -78,39 +78,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:31.324732+00:00",
+    "updated_at": "2026-05-20T15:04:55.390114+00:00",
     "records": [
       {
-        "source": "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_background_gene_universe.tsv",
+        "source": "plotcase_network_Treemap矩形树状GO富集分析图/raw/Source_data_background_gene_universe.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_background_gene_universe.csv"
+          "plotcase_network_Treemap矩形树状GO富集分析图/raw/Source_data_background_gene_universe.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_master_file_FT_cilia_proteome.tsv",
+        "source": "plotcase_network_Treemap矩形树状GO富集分析图/raw/Source_data_master_file_FT_cilia_proteome.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_master_file_FT_cilia_proteome.csv"
+          "plotcase_network_Treemap矩形树状GO富集分析图/raw/Source_data_master_file_FT_cilia_proteome.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_background_gene_universe.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_background_gene_universe.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_master_file_FT_cilia_proteome.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_master_file_FT_cilia_proteome.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -166,5 +150,18 @@
       "track_class",
       "heatmap_value"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

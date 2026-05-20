@@ -57,141 +57,95 @@
       "CMplot",
       "CellChat",
       "ClusterGVis",
-      "ComparisonSurv",
       "ComplexHeatmap",
-      "GGally",
       "GOplot",
       "Hmisc",
-      "KEGGREST",
       "MASS",
       "MetBrewer",
-      "NST",
-      "PMAPscore",
       "PieGlyph",
       "RColorBrewer",
-      "ResourceSelection",
-      "Rmisc",
-      "SPIA",
-      "UpSetR",
       "VoronoiPlus",
       "ape",
       "aplot",
       "beanplot",
-      "camcorder",
       "car",
       "circlize",
       "clusterProfiler",
-      "cmprsk",
       "cols4all",
-      "condsurv",
       "corrplot",
       "cowplot",
-      "data.table",
-      "datawizard",
       "devtools",
       "dplyr",
-      "export",
       "extrafont",
-      "forestplot",
-      "gapminder",
       "geneviewer",
-      "geodata",
       "geomtextpath",
       "gg3D",
-      "ggExtra",
       "ggVolcano",
       "ggalluvial",
-      "ggalt",
-      "ggbump",
-      "ggcirclepack",
-      "ggflowchart",
       "ggforce",
-      "ggfx",
-      "gggenomes",
-      "gggibbous",
       "ggh4x",
       "gghalves",
-      "ggimage",
       "ggmagnify",
       "ggnewscale",
-      "ggpattern",
       "ggplot2",
       "ggplotify",
-      "ggpmisc",
       "ggpp",
       "ggprism",
       "ggpubr",
       "ggradar",
       "ggraph",
       "ggrepel",
-      "ggridges",
       "ggsankey",
       "ggsankeyfier",
       "ggsci",
       "ggside",
       "ggsignif",
-      "ggspatial",
       "ggstar",
       "ggstatsplot",
       "ggstream",
-      "ggtern",
       "ggtext",
       "ggtree",
       "ggtreeExtra",
       "ggvenn",
-      "glmnet",
       "glue",
       "gplots",
-      "graphics",
       "grib",
       "grid",
-      "gridpattern",
       "gridtext",
       "gtable",
       "igraph",
       "introdataviz",
       "jjAnno",
       "jjPlot",
-      "knitr",
       "kulife",
       "latex2exp",
       "legendry",
       "linkET",
       "lme4",
       "lubridate",
-      "lwgeom",
-      "magick",
       "magrittr",
-      "maps",
-      "muhaz",
+      "matplotlib",
       "multcompView",
-      "nomogramEx",
+      "numpy",
       "openxlsx",
       "org.Hs.eg.db",
       "pacman",
       "paletteer",
+      "pandas",
       "patchwork",
-      "pec",
       "pheatmap",
       "phytools",
       "plot3D",
-      "plotrix",
       "plyr",
       "png",
       "psych",
       "purrr",
-      "randomForestSRC",
-      "randomSurvivalForest",
       "readr",
       "readxl",
-      "regplot",
       "relaimpo",
       "remotes",
       "reshape",
       "reshape2",
-      "rms",
-      "rnaturalearth",
-      "rnaturalearthdata",
       "rrvgo",
       "rstatix",
       "scDotPlot",
@@ -202,28 +156,16 @@
       "scico",
       "scran",
       "scuttle",
-      "sf",
-      "shape",
-      "showtext",
-      "stats",
       "statsExpressions",
       "stringr",
-      "survMisc",
-      "survRM2",
-      "survcomp",
       "survival",
-      "survivalROC",
       "survminer",
       "swimplot",
-      "terra",
       "tibble",
-      "tidygeocoder",
       "tidygraph",
       "tidyheatmaps",
       "tidyr",
-      "tidyterra",
       "tidyverse",
-      "timeROC",
       "treeio",
       "treemapify",
       "vegan",
@@ -234,332 +176,237 @@
       "xlsx"
     ],
     "python_modules": [
-      "datetime",
-      "dateutil",
+      "AnnotationDbi",
+      "BiocManager",
+      "CCPlotR",
+      "CMplot",
+      "CellChat",
+      "ComparisonSurv",
+      "ComplexHeatmap",
+      "Hmisc",
+      "KEGGREST",
+      "MASS",
+      "MetBrewer",
+      "PMAPscore",
+      "PieGlyph",
+      "RColorBrewer",
+      "SPIA",
+      "ape",
+      "aplot",
+      "beanplot",
+      "car",
+      "circlize",
+      "cols4all",
+      "condsurv",
+      "corrplot",
+      "cowplot",
+      "csv",
+      "data.table",
+      "devtools",
+      "dplyr",
+      "export",
+      "extrafont",
+      "forestplot",
+      "geneviewer",
+      "gg3D",
+      "ggVolcano",
+      "ggalluvial",
+      "ggforce",
+      "ggh4x",
+      "gghalves",
+      "ggnewscale",
+      "ggplot2",
+      "ggplotify",
+      "ggpubr",
+      "ggradar",
+      "ggraph",
+      "ggrepel",
+      "ggsankey",
+      "ggsankeyfier",
+      "ggsci",
+      "ggside",
+      "ggsignif",
+      "ggstatsplot",
+      "ggtext",
+      "ggtree",
+      "ggtreeExtra",
+      "gplots",
+      "grib",
+      "grid",
+      "gtable",
+      "igraph",
+      "jjAnno",
+      "jjPlot",
+      "knitr",
+      "kulife",
+      "latex2exp",
+      "legendry",
+      "linkET",
+      "lme4",
+      "magrittr",
       "matplotlib",
       "mpl_toolkits",
+      "muhaz",
+      "nomogramEx",
       "numpy",
+      "openxlsx",
       "os",
-      "raw_data",
+      "pacman",
+      "paletteer",
+      "pandas",
+      "patchwork",
+      "pathlib",
+      "pheatmap",
+      "plot3D",
+      "plotter_standard_renderer",
+      "plyr",
+      "png",
+      "psych",
+      "purrr",
+      "python",
+      "randomForestSRC",
+      "randomSurvivalForest",
+      "readxl",
+      "regplot",
+      "remotes",
+      "reshape",
+      "reshape2",
+      "rms",
+      "rstatix",
+      "scDotPlot",
+      "scRNAseq",
+      "scales",
+      "scatterpie",
+      "scatterplot3d",
       "scipy",
-      "seaborn"
+      "scran",
+      "scuttle",
+      "shutil",
+      "stats",
+      "statsExpressions",
+      "stringr",
+      "survRM2",
+      "survival",
+      "survivalROC",
+      "survminer",
+      "sys",
+      "tibble",
+      "tidygraph",
+      "tidyheatmaps",
+      "tidyr",
+      "tidyverse",
+      "treeio",
+      "vegan",
+      "vioplot",
+      "viridis",
+      "wesanderson",
+      "xlsx"
     ]
   },
   "by_case": {
-    "figures4papers_figure_brainteaser_brute_force_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_brainteaser_correctness_by_category_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_brainteaser_correctness_by_subcategory_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_brainteaser_rewriting_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_brainteaser_selfcorrection_math_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_CellSpliceNet_ablation_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_CellSpliceNet_comparison_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
     "figures4papers_figure_Cflows_diffusion_swiss_roll_png": {
       "r": [],
       "python": [
+        "csv",
         "matplotlib",
         "numpy",
         "os",
-        "scipy"
-      ]
-    },
-    "figures4papers_figure_Cflows_fig2_comparison_GeneRegulatory_pdf": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "scipy"
-      ]
-    },
-    "figures4papers_figure_Cflows_fig2_comparison_GeneRegulatory_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "scipy"
-      ]
-    },
-    "figures4papers_figure_Cflows_fig2_comparison_Trajectory_pdf": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "scipy"
-      ]
-    },
-    "figures4papers_figure_Cflows_fig2_comparison_Trajectory_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "scipy"
-      ]
-    },
-    "figures4papers_figure_Cflows_figX_comparison_Ablation_pdf": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "scipy"
-      ]
-    },
-    "figures4papers_figure_Cflows_figX_comparison_Ablation_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "scipy"
+        "pathlib",
+        "python",
+        "scipy",
+        "shutil"
       ]
     },
     "figures4papers_figure_Dispersion_idea_png": {
       "r": [],
       "python": [
+        "csv",
         "matplotlib",
         "mpl_toolkits",
         "numpy",
-        "os"
+        "os",
+        "pathlib",
+        "python",
+        "shutil"
       ]
     },
     "figures4papers_figure_Dispersion_illustration_png": {
       "r": [],
       "python": [
+        "csv",
         "matplotlib",
         "mpl_toolkits",
         "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_ImmunoStruct_bars_ablation_Cancer_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
         "os",
-        "raw_data"
-      ]
-    },
-    "figures4papers_figure_ImmunoStruct_bars_ablation_IEDB_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "raw_data"
-      ]
-    },
-    "figures4papers_figure_ImmunoStruct_bars_comparison_Cancer_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "raw_data"
-      ]
-    },
-    "figures4papers_figure_ImmunoStruct_bars_comparison_IEDB_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os",
-        "raw_data"
-      ]
-    },
-    "figures4papers_figure_ophthal_review_composition_heatmap_png": {
-      "r": [],
-      "python": [
-        "datetime",
-        "dateutil",
-        "matplotlib",
-        "numpy",
-        "os",
-        "seaborn"
-      ]
-    },
-    "figures4papers_figure_ophthal_review_trend_by_month_png": {
-      "r": [],
-      "python": [
-        "datetime",
-        "dateutil",
-        "matplotlib",
-        "numpy",
-        "os",
-        "seaborn"
+        "pathlib",
+        "python",
+        "shutil"
       ]
     },
     "figures4papers_figure_RNAGenScape_manifold_holes_png": {
       "r": [],
       "python": [
+        "csv",
         "matplotlib",
         "numpy",
-        "os"
+        "os",
+        "pathlib",
+        "python",
+        "shutil"
       ]
     },
     "figures4papers_figure_RNAGenScape_manifold_png": {
       "r": [],
       "python": [
+        "csv",
         "matplotlib",
         "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_RNAGenScape_results_comparison_optimization_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_RNAGenScape_results_comparison_speed_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_RNAGenScape_results_sweep_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_VIGIL_comparison_posttraining_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
-      ]
-    },
-    "figures4papers_figure_VIGIL_comparison_radar_png": {
-      "r": [],
-      "python": [
-        "matplotlib",
-        "numpy",
-        "os"
+        "os",
+        "pathlib",
+        "python",
+        "shutil"
       ]
     },
     "figureya_survival_FigureYa128Prognostic": {
       "r": [
+        "BiocManager"
+      ],
+      "python": [
         "BiocManager",
         "knitr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
         "survival",
-        "survivalROC"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa138NiceCalibration": {
-      "r": [
-        "BiocManager",
-        "ResourceSelection",
-        "knitr",
-        "rms",
-        "scales"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa141risk": {
-      "r": [
-        "BiocManager",
-        "cowplot",
-        "ggplot2",
-        "knitr",
-        "reshape2",
-        "scales"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa143survCor_update": {
-      "r": [
-        "BiocManager",
-        "ggplot2",
-        "knitr",
-        "shape",
-        "survMisc",
-        "survival"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa171subgroupSurv": {
-      "r": [
-        "BiocManager",
-        "data.table",
-        "knitr",
-        "survival",
-        "survminer"
-      ],
-      "python": []
+        "survivalROC",
+        "sys"
+      ]
     },
     "figureya_survival_FigureYa182RFSurvV2": {
       "r": [
+        "BiocManager"
+      ],
+      "python": [
         "BiocManager",
         "knitr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
         "randomForestSRC",
         "randomSurvivalForest",
-        "survival"
-      ],
-      "python": []
+        "survival",
+        "sys"
+      ]
     },
     "figureya_survival_FigureYa183condSurv": {
       "r": [
+        "BiocManager"
+      ],
+      "python": [
         "BiocManager",
         "RColorBrewer",
         "condsurv",
@@ -567,107 +414,71 @@
         "ggplot2",
         "ggpubr",
         "knitr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
         "purrr",
         "stats",
         "survival",
         "survminer",
+        "sys",
         "tibble",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa187RMS": {
-      "r": [
-        "BiocManager",
-        "knitr",
-        "survRM2",
-        "survcomp",
-        "survival"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa189timeCindex": {
-      "r": [
-        "BiocManager",
-        "RColorBrewer",
-        "knitr",
-        "pec",
-        "survival"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa193RiskTable": {
-      "r": [
-        "BiocManager",
-        "forestplot",
-        "glmnet",
-        "knitr",
-        "survival"
-      ],
-      "python": []
+      ]
     },
     "figureya_survival_FigureYa197SmoothHaz": {
       "r": [
+        "extrafont",
+        "remotes"
+      ],
+      "python": [
         "cowplot",
         "dplyr",
         "export",
         "extrafont",
         "ggplot2",
         "knitr",
+        "matplotlib",
         "muhaz",
+        "numpy",
         "openxlsx",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
         "remotes",
         "survival",
-        "survminer"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa1survivalCurve_update": {
-      "r": [
-        "BiocManager",
-        "knitr",
-        "survival",
-        "survminer"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa210survivalScape": {
-      "r": [
-        "BiocManager",
-        "data.table",
-        "knitr",
-        "pheatmap",
-        "survival"
-      ],
-      "python": []
+        "survminer",
+        "sys"
+      ]
     },
     "figureya_survival_FigureYa251NPHSurv": {
       "r": [
+        "BiocManager"
+      ],
+      "python": [
         "BiocManager",
         "ComparisonSurv",
         "ggplot2",
         "ggpubr",
         "knitr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
         "survRM2",
-        "survminer"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa284pairwiseLogrank": {
-      "r": [
-        "BiocManager",
-        "RColorBrewer",
-        "ggpp",
-        "knitr",
-        "survival",
         "survminer",
-        "tibble"
-      ],
-      "python": []
+        "sys"
+      ]
     },
     "figureya_survival_FigureYa299pancanSurv": {
       "r": [
+        "BiocManager"
+      ],
+      "python": [
         "BiocManager",
         "ComplexHeatmap",
         "circlize",
@@ -676,50 +487,61 @@
         "ggplot2",
         "grid",
         "knitr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
         "survival",
-        "survminer"
-      ],
-      "python": []
+        "survminer",
+        "sys"
+      ]
     },
     "figureya_survival_FigureYa305PMAPscore": {
       "r": [
+        "BiocManager"
+      ],
+      "python": [
         "BiocManager",
         "ComplexHeatmap",
         "KEGGREST",
         "PMAPscore",
         "SPIA",
         "dplyr",
-        "knitr"
-      ],
-      "python": []
+        "knitr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "figureya_survival_FigureYa30nomogram_update": {
       "r": [
         "BiocManager",
         "beanplot",
-        "knitr",
         "kulife",
-        "nomogramEx",
-        "regplot",
-        "rms",
         "survival",
         "vioplot"
       ],
-      "python": []
-    },
-    "figureya_survival_FigureYa33DCA_update": {
-      "r": [
+      "python": [
         "BiocManager",
-        "cmprsk",
-        "cowplot",
-        "ggplotify",
-        "graphics",
+        "beanplot",
         "knitr",
-        "magick",
-        "stats",
-        "survival"
-      ],
-      "python": []
+        "kulife",
+        "matplotlib",
+        "nomogramEx",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "regplot",
+        "rms",
+        "survival",
+        "sys",
+        "vioplot"
+      ]
     },
     "figureya_survival_FigureYa66UnivariateCox": {
       "r": [
@@ -728,7 +550,6 @@
         "ggrepel",
         "ggside",
         "ggstatsplot",
-        "knitr",
         "purrr",
         "scales",
         "statsExpressions",
@@ -737,241 +558,224 @@
         "tidyverse",
         "viridis"
       ],
-      "python": []
-    },
-    "figureya_survival_FigureYa6rHRsV2": {
-      "r": [
-        "BiocManager",
-        "forestplot",
-        "knitr"
-      ],
-      "python": []
-    },
-    "figureya_survival_FigureYa85timeROC": {
-      "r": [
-        "BiocManager",
+      "python": [
+        "dplyr",
+        "ggplot2",
+        "ggrepel",
+        "ggside",
+        "ggstatsplot",
         "knitr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "purrr",
+        "scales",
+        "statsExpressions",
+        "stringr",
         "survival",
-        "timeROC"
-      ],
-      "python": []
+        "sys",
+        "tidyverse",
+        "viridis"
+      ]
     },
     "plotcase_barplot_ggplot2优雅的绘制径向条形图": {
       "r": [
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_barplot_ggplot2绘制小清新版箭头图": {
-      "r": [
-        "cowplot",
-        "magrittr",
-        "scales",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_barplot_ggplot2绘制菌群分布图": {
       "r": [
         "ggh4x",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "scales",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_barplot_个性化环状条形图": {
-      "r": [
-        "RColorBrewer",
-        "geomtextpath",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_barplot_区域缩柱状图_(基础入门)": {
-      "r": [
-        "Rmisc",
-        "dplyr",
-        "ggmagnify",
-        "readxl",
-        "remotes",
-        "reshape2",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_barplot_基因富集分析条图": {
-      "r": [
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_barplot_多元素组合分布条图": {
       "r": [
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_barplot_多层注释柱状图": {
       "r": [
         "ggtext",
         "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "scales",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_barplot_多层注释柱状图进阶版": {
       "r": [
         "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_barplot_局部放大柱状图": {
-      "r": [
-        "ggsci",
-        "patchwork",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_barplot_条形图与直方分布图组合": {
-      "r": [
-        "cowplot",
-        "ggtext",
-        "readxl",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_barplot_极坐标堆砌柱状图": {
-      "r": [
-        "geomtextpath",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_barplot_柱状图添加显著性标记_(进阶版)": {
       "r": [
         "ggprism",
         "ggpubr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "rstatix",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_barplot_柱状图添加显著性标记_基础版": {
       "r": [
         "ggprism",
         "ggpubr",
         "ggtext",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "rstatix",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_barplot_正负分布堆砌条形图": {
-      "r": [
-        "cowplot",
-        "dplyr",
-        "ggtext",
-        "grid",
-        "magrittr",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_barplot_环形条形图": {
       "r": [
         "geomtextpath",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_barplot_配对连线条图": {
-      "r": [
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_barplot_配对连线条形图_进阶版": {
       "r": [
         "ggnewscale",
         "ggtext",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "scales",
         "scico",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_boxplot_几何阴影填充箱线图": {
-      "r": [
-        "gapminder",
-        "ggpattern",
-        "ggpmisc",
-        "ggprism",
-        "ggpubr",
-        "ggsci",
-        "gridpattern",
-        "rstatix",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_boxplot_多分组分面小提琴箱线图": {
       "r": [
         "ggh4x",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_boxplot_多组配对连线箱线图": {
       "r": [
         "ggpubr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_boxplot_方差分析箱线图_进阶版": {
       "r": [
         "dplyr",
         "ggtext",
         "legendry",
+        "matplotlib",
         "multcompView",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_boxplot_箱线图_基础入门版": {
-      "r": [
-        "ggpubr",
-        "ggsci",
-        "ggsignif",
-        "magrittr",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_boxplot_配对连线箱线图": {
-      "r": [
-        "ggpubr",
-        "ggtext",
-        "legendry",
-        "readxl",
-        "rstatix",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_circos_circlize优雅绘制多重注释弦图": {
       "r": [
         "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_circos_circlize绘制和弦图": {
       "r": [
@@ -980,38 +784,68 @@
         "grid",
         "gridtext",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_circos_circlize绘制和弦图进阶版": {
       "r": [
         "ComplexHeatmap",
         "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tibble",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_circos_circlize绘制融合基因图": {
       "r": [
         "circlize",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_circos_GO富集分析通路图": {
       "r": [
         "GOplot",
         "RColorBrewer",
         "devtools",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readr",
         "stringr",
         "tidyr",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_circos_多类别关联网络弦图": {
       "r": [
@@ -1022,24 +856,36 @@
         "reshape2",
         "viridis"
       ],
-      "python": []
-    },
-    "plotcase_circos_细胞通讯和弦图": {
-      "r": [
+      "python": [
         "ComplexHeatmap",
         "circlize",
+        "dplyr",
         "grid",
-        "scales",
-        "tidyverse"
-      ],
-      "python": []
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "reshape2",
+        "sys",
+        "viridis"
+      ]
     },
     "plotcase_circos_细胞通讯弦图_基础入门": {
       "r": [
         "BiocManager",
         "CCPlotR"
       ],
-      "python": []
+      "python": [
+        "BiocManager",
+        "CCPlotR",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_3D热图": {
       "r": [
@@ -1048,7 +894,18 @@
         "corrplot",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "BiocManager",
+        "ComplexHeatmap",
+        "corrplot",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_heatmap_ARG丰度与环境因子相关性网络热图": {
       "r": [
@@ -1059,50 +916,52 @@
         "linkET",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "RColorBrewer",
+        "devtools",
+        "ggforce",
+        "ggnewscale",
+        "linkET",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_heatmap_circlize绘制环状聚类热图": {
       "r": [
         "ComplexHeatmap",
         "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_circlize风格多层次极坐标热图": {
       "r": [
         "ComplexHeatmap",
         "RColorBrewer",
         "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readxl",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_heatmap_corrplot绘制相关性热图": {
-      "r": [
-        "RColorBrewer",
-        "corrplot",
-        "psych",
-        "tidyverse",
-        "vegan"
-      ],
-      "python": []
-    },
-    "plotcase_heatmap_ggforce标记关键信息": {
-      "r": [
-        "ggforce",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_heatmap_ggplot2绘制连续型热图": {
-      "r": [
-        "MetBrewer",
-        "ggtext",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_ggtree绘制环状聚类热图": {
       "r": [
@@ -1111,24 +970,49 @@
         "tidyverse",
         "treeio"
       ],
-      "python": []
+      "python": [
+        "ggtree",
+        "ggtreeExtra",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse",
+        "treeio"
+      ]
     },
     "plotcase_heatmap_ggtree绘制离散型系统发育树热图": {
       "r": [
         "ggnewscale",
         "ggtree",
         "ggtreeExtra",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_ggtree绘制组合热图": {
       "r": [
         "aplot",
         "ggtree",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_Mantel检验热图": {
       "r": [
@@ -1142,7 +1026,23 @@
         "tidyverse",
         "vegan"
       ],
-      "python": []
+      "python": [
+        "corrplot",
+        "devtools",
+        "ggtext",
+        "linkET",
+        "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "psych",
+        "reshape",
+        "sys",
+        "tidyverse",
+        "vegan"
+      ]
     },
     "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图": {
       "r": [
@@ -1156,33 +1056,23 @@
         "scuttle",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_heatmap_tidyheatmaps轻松绘制热图": {
-      "r": [
-        "ClusterGVis",
-        "devtools",
+      "python": [
+        "AnnotationDbi",
+        "BiocManager",
+        "dplyr",
+        "ggsci",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "scDotPlot",
+        "scRNAseq",
+        "scran",
+        "scuttle",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_heatmap_分组注释标记热图": {
-      "r": [
-        "legendry",
-        "readxl",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_heatmap_分面热图": {
-      "r": [
-        "ggh4x",
-        "ggtext",
-        "readxl",
-        "scales",
-        "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_heatmap_回归方差分解热图": {
       "r": [
@@ -1190,12 +1080,19 @@
         "RColorBrewer",
         "aplot",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "psych",
         "relaimpo",
         "reshape2",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_基因表达注释热图": {
       "r": [
@@ -1204,7 +1101,18 @@
         "stringr",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ComplexHeatmap",
+        "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "stringr",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_heatmap_多元素个性化对角线热图": {
       "r": [
@@ -1212,9 +1120,16 @@
         "dplyr",
         "ggnewscale",
         "jjPlot",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_多元素个性化气泡热图": {
       "r": [
@@ -1225,52 +1140,102 @@
         "patchwork",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "PieGlyph",
+        "ggplot2",
+        "ggtext",
+        "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_heatmap_多分组气泡热图": {
       "r": [
         "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_多层嵌套分面热图": {
       "r": [
         "ggh4x",
         "ggplot2",
         "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_多类别分面注释热图": {
       "r": [
         "ggh4x",
         "ggtext",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tibble",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_多类别注释风格热图": {
       "r": [
         "legendry",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_heatmap_多重注释分组热图": {
       "r": [
         "MetBrewer",
         "grid",
         "jjAnno",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_对角线相关性热图": {
       "r": [
@@ -1279,18 +1244,17 @@
         "grid",
         "legendry",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readxl",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_heatmap_差异表达基因的层次聚类热图": {
-      "r": [
-        "ComplexHeatmap",
-        "circlize",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_时间序列基因表达热图": {
       "r": [
@@ -1304,9 +1268,16 @@
       "r": [
         "RColorBrewer",
         "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_气泡配对连线个性化热图": {
       "r": [
@@ -1316,7 +1287,19 @@
         "patchwork",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "RColorBrewer",
+        "dplyr",
+        "ggnewscale",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_heatmap_热图添加层次折叠聚类树": {
       "r": [
@@ -1326,25 +1309,34 @@
         "ggtree",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_heatmap_热图添加渐变色背景": {
-      "r": [
-        "MetBrewer",
-        "ggtext",
-        "grid",
-        "readxl",
+      "python": [
+        "RColorBrewer",
+        "aplot",
+        "dplyr",
+        "ggtree",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_heatmap_环状分组热图": {
       "r": [
         "corrplot",
         "geomtextpath",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_环状注释热图": {
       "r": [
@@ -1353,10 +1345,17 @@
         "ggnewscale",
         "ggtree",
         "ggtreeExtra",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse",
         "treeio"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_相关性分面热图": {
       "r": [
@@ -1367,44 +1366,52 @@
         "reshape",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "RColorBrewer",
+        "ggh4x",
+        "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "psych",
+        "reshape",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_heatmap_相关性注释热图": {
       "r": [
         "dplyr",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_heatmap_相关性热图进阶": {
-      "r": [
-        "corrplot",
-        "devtools",
-        "ggtext",
-        "linkET",
-        "magrittr",
-        "psych",
-        "reshape",
-        "tidyverse",
-        "vegan"
-      ],
-      "python": []
-    },
-    "plotcase_heatmap_离散气泡热图": {
-      "r": [
-        "RColorBrewer",
+      "python": [
+        "dplyr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_heatmap_离散热图与条图组合": {
       "r": [
         "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_系统发育树组合离散热图": {
       "r": [
@@ -1413,122 +1420,63 @@
         "ggtree",
         "legendry",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "phytools",
         "tidyverse",
         "treeio"
       ],
-      "python": []
-    },
-    "plotcase_heatmap_边框分组注释热图": {
-      "r": [
-        "ggnewscale",
-        "grid",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_heatmap_配对连线热图": {
       "r": [
         "MetBrewer",
         "RColorBrewer",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_map_ggbump优雅绘制组合地图": {
-      "r": [
-        "MetBrewer",
-        "datawizard",
-        "ggbump",
-        "rnaturalearth",
-        "rnaturalearthdata",
-        "sf",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_map_地图嵌套子图": {
-      "r": [
-        "ggspatial",
-        "patchwork",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_map_地图添加3D饼图注释": {
-      "r": [
-        "BiocManager",
-        "ggimage",
-        "ggnewscale",
-        "plotrix",
-        "scatterpie",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_map_环状地图": {
-      "r": [
-        "cowplot",
-        "ggimage",
-        "maps",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_map_连线地图": {
-      "r": [
-        "lwgeom",
-        "rnaturalearth",
-        "sf",
-        "terra",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_map_采样点地图": {
-      "r": [
-        "ComplexHeatmap",
-        "ggnewscale",
-        "ggspatial",
-        "ggtext",
-        "sf",
-        "terra",
-        "tibble",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_map_采样点地图进阶版": {
-      "r": [
-        "camcorder",
-        "geodata",
-        "ggsci",
-        "ggspatial",
-        "lwgeom",
-        "rnaturalearth",
-        "sf",
-        "terra",
-        "tidygeocoder",
-        "tidyterra",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_network_ggplot2优雅绘制网络图": {
       "r": [
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_network_ggraph构建疾病遗传调控网络图": {
       "r": [
         "ggraph",
         "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_network_ggraph环形网络图_多维数据圈层": {
       "r": [
@@ -1539,10 +1487,17 @@
         "ggpubr",
         "ggraph",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidygraph",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_network_ggraph绘制代谢途径图": {
       "r": [
@@ -1550,19 +1505,36 @@
         "igraph",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggraph",
+        "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_network_ggraph绘制环状网络图": {
       "r": [
         "geomtextpath",
         "ggraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readr",
         "stringr",
         "tidygraph",
         "tidyr",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_network_GO通路相似性网络图_基于基因重叠度": {
       "r": [
@@ -1573,7 +1545,20 @@
         "igraph",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "RColorBrewer",
+        "ggforce",
+        "ggraph",
+        "ggtext",
+        "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_network_STRING_BioNet网络模块解析代码实战": {
       "r": [
@@ -1581,21 +1566,35 @@
         "BiocManager",
         "ggraph",
         "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_network_Treemap矩形树状GO富集分析图": {
       "r": [
         "BiocManager",
         "clusterProfiler",
+        "matplotlib",
+        "numpy",
         "org.Hs.eg.db",
+        "pandas",
         "rrvgo",
         "tidyverse",
         "treemapify"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_network_分层气泡图_类别层次结构展示": {
       "r": [
@@ -1603,14 +1602,17 @@
         "igraph",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_network_基因互作网络图": {
-      "r": [
-        "ggforce",
+      "python": [
+        "ggraph",
+        "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_network_微生物与代谢物共生网络图": {
       "r": [
@@ -1618,16 +1620,33 @@
         "igraph",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggpubr",
+        "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_network_环形网络图的构建方法": {
       "r": [
         "ggraph",
         "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_network_细胞通讯网络图": {
       "r": [
@@ -1637,16 +1656,19 @@
         "igraph",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_network_网络图_基础入门版": {
-      "r": [
-        "ggraph",
+      "python": [
+        "CellChat",
+        "devtools",
+        "grid",
         "igraph",
-        "tidygraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_network_蛋白互作网络图": {
       "r": [
@@ -1655,148 +1677,65 @@
         "tidygraph",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_pie_3D饼图": {
-      "r": [
-        "ComplexHeatmap",
-        "RColorBrewer",
-        "cowplot",
-        "plotrix",
-        "readxl",
+      "python": [
+        "ggraph",
+        "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidygraph",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_pie_ggplot2绘制月亮图": {
-      "r": [
-        "ggfx",
-        "gggibbous",
-        "ggtext",
-        "magick",
-        "magrittr",
-        "showtext",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_pie_分裂饼图": {
-      "r": [
-        "MetBrewer",
-        "devtools",
-        "ggtext",
-        "jjPlot",
-        "tibble",
-        "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_pie_多层饼图": {
       "r": [
         "ggtext",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_pie_循环绘制饼图": {
-      "r": [
-        "ggpubr",
-        "reshape2",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point,面积图_双Y轴散点面积组合图": {
-      "r": [
-        "ggnewscale",
+      "python": [
         "ggtext",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_ggplot2优雅的绘制增强版哑铃图": {
-      "r": [
-        "GGally",
-        "ggtext",
-        "glue",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_ggplot2绘制平滑曲线注释散点图": {
-      "r": [
-        "devtools",
-        "ggalt",
-        "ggnewscale",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_ggplot2绘制误差线点图": {
-      "r": [
-        "ggprism",
-        "ggsci",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_NMDS分析图": {
-      "r": [
-        "NST",
-        "ggsci",
-        "patchwork",
-        "tidyverse",
-        "vegan"
-      ],
-      "python": []
-    },
-    "plotcase_point_PCA散点图": {
-      "r": [
-        "ggExtra",
-        "readxl",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_PCOA分析图": {
-      "r": [
-        "ape",
-        "tidyverse",
-        "vegan"
-      ],
-      "python": []
-    },
-    "plotcase_point_三元相图": {
-      "r": [
-        "ggtern",
-        "readxl",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_四象限散点图": {
-      "r": [
-        "ggh4x",
-        "ggrepel",
-        "ggtext",
-        "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_point_多层级曼哈顿图": {
       "r": [
         "CMplot",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "CMplot",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_point_多组火山图": {
       "r": [
         "ggprism",
         "ggrepel",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_point_效应量森林图_分组比较与显著性标注": {
       "r": [
@@ -1805,7 +1744,18 @@
         "tibble",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "car",
+        "lme4",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tibble",
+        "tidyverse"
+      ]
     },
     "plotcase_point_散点图叠加多坐标轴": {
       "r": [
@@ -1814,56 +1764,18 @@
         "readxl",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_point_散点图叠加多组拟合曲线": {
-      "r": [
-        "ggtext",
-        "legendry",
-        "magrittr",
-        "patchwork",
-        "remotes",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_散点图叠加拟合曲线_(基础入门)": {
-      "r": [
-        "ggpmisc",
-        "ggtext",
-        "patchwork",
-        "readxl",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_散点图叠加边际分布": {
-      "r": [
-        "ggExtra",
-        "ggtext",
-        "patchwork",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_散点饼图_(基础入门)": {
-      "r": [
-        "PieGlyph",
-        "ggh4x",
-        "ggtext",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_曼哈顿图": {
-      "r": [
-        "MetBrewer",
-        "ggprism",
+      "python": [
+        "ggnewscale",
         "ggrepel",
-        "ggtext",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_point_气泡图高阶用法添加时间轨迹趋势线": {
       "r": [
@@ -1874,54 +1786,38 @@
         "purrr",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_point_渐变火山图": {
-      "r": [
-        "ggrepel",
-        "ggtext",
-        "readxl",
+      "python": [
+        "RColorBrewer",
+        "ggforce",
+        "ggnewscale",
+        "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "purrr",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_火山图_(基础入门)": {
-      "r": [
-        "dplyr",
-        "ggrepel",
-        "ggtext",
-        "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_point_火山图局部放大版": {
       "r": [
         "ggmagnify",
         "ggrepel",
         "ggtext",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "readxl",
         "remotes",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_point_点线图_(基础入门)": {
-      "r": [
-        "ggprism",
-        "ggpubr",
-        "ggtext",
-        "rstatix",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_point_配对散点图_(基础入门)": {
-      "r": [
-        "RColorBrewer",
-        "patchwork",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_sankey,venn_桑基组合维恩图": {
       "r": [
@@ -1929,9 +1825,16 @@
         "ggsankeyfier",
         "ggtext",
         "ggvenn",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_sankey_多层级桑基图": {
       "r": [
@@ -1939,17 +1842,31 @@
         "ggsankeyfier",
         "grid",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_sankey_桑基流向图": {
       "r": [
         "ggalluvial",
         "ggpubr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_sankey_渐变色桑基图": {
       "r": [
@@ -1958,25 +1875,50 @@
         "grid",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggnewscale",
+        "ggsankeyfier",
+        "grid",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_sankey_渐变色桑基图_进阶版": {
       "r": [
         "ggnewscale",
         "ggsankeyfier",
         "grid",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_sankey_节点融合桑基图": {
       "r": [
         "RColorBrewer",
         "ggsankeyfier",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_tree_ggtree绘制多层级进化树": {
       "r": [
@@ -1985,10 +1927,17 @@
         "ggstar",
         "ggtree",
         "ggtreeExtra",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse",
         "vegan"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_tree_ggtree绘制系统发育树": {
       "r": [
@@ -2001,7 +1950,22 @@
         "ggtreeExtra",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "MetBrewer",
+        "RColorBrewer",
+        "ape",
+        "dplyr",
+        "ggnewscale",
+        "ggtree",
+        "ggtreeExtra",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_tree_多层级系统发育树图": {
       "r": [
@@ -2010,57 +1974,16 @@
         "ggnewscale",
         "ggtree",
         "ggtreeExtra",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_venn,pie_维恩图组合饼图": {
-      "r": [
-        "cowplot",
-        "geomtextpath",
-        "ggtext",
-        "ggvenn",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_venn_ggplot2绘制花瓣图": {
-      "r": [
-        "cowplot",
-        "ggforce",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_venn_维恩图组合棒棒糖图": {
-      "r": [
-        "RColorBrewer",
-        "cowplot",
-        "ggh4x",
-        "ggvenn",
-        "tibble",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_venn_维恩点图": {
-      "r": [
-        "RColorBrewer",
-        "UpSetR",
-        "readxl",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_violin_分裂小提琴图": {
-      "r": [
-        "devtools",
-        "ggpubr",
-        "introdataviz",
-        "rstatix",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_violin_分裂小提琴图分面版": {
       "r": [
@@ -2068,51 +1991,33 @@
         "ggpp",
         "ggpubr",
         "introdataviz",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse",
         "vroom"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_violin_小提琴图添加显著性标记": {
       "r": [
         "ggh4x",
         "ggpubr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "rstatix",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_violin_小提琴图自定义刻度值": {
-      "r": [
-        "MetBrewer",
-        "ggh4x",
-        "patchwork",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_violin_配对连线半小提琴图": {
-      "r": [
-        "gghalves",
-        "ggpubr",
-        "ggtext",
-        "patchwork",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_云雨图_云雨图添加统计信息": {
-      "r": [
-        "devtools",
-        "gghalves",
-        "ggpmisc",
-        "ggpp",
-        "ggprism",
-        "ggsci",
-        "rstatix",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_冲积图_物种组成冲积图": {
       "r": [
@@ -2122,89 +2027,80 @@
         "scales",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_哑铃图_哑铃图进阶展示差异信息": {
-      "r": [
-        "ggnewscale",
-        "ggtext",
-        "magrittr",
+      "python": [
+        "RColorBrewer",
+        "ggalluvial",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "scales",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_哑铃图_环形哑铃通路图": {
       "r": [
         "MetBrewer",
         "geomtextpath",
         "magrittr",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_基因组图_geneviewer基因簇结构可视化": {
       "r": [
         "geneviewer"
       ],
-      "python": []
-    },
-    "plotcase_基因组图_常规基因组结构图": {
-      "r": [
-        "dplyr",
-        "gggenomes",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "geneviewer",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_基因组图_比较基因组结构图": {
       "r": [
         "tidyheatmaps",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_山脊图_山脊密度图": {
-      "r": [
-        "RColorBrewer",
-        "ggridges",
+      "python": [
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyheatmaps",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_折线图_折线图添加密度分布": {
-      "r": [
-        "ggpubr",
-        "ggtext",
-        "patchwork",
-        "rstatix",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_旭日图_旭日图_(基础入门)": {
-      "r": [
-        "RColorBrewer",
-        "geomtextpath",
-        "ggnewscale",
-        "ggtext",
-        "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_曲线图_Kaplan_Meier生存曲线": {
       "r": [
+        "matplotlib",
+        "numpy",
+        "pandas",
         "survival",
         "survminer",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_曲线图_累积曲线图": {
-      "r": [
-        "dplyr",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_森林图_多因素Cox森林图": {
       "r": [
@@ -2213,7 +2109,18 @@
         "survminer",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "survival",
+        "survminer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotcase_森林图_森林图进阶图例映射版": {
       "r": [
@@ -2223,44 +2130,35 @@
         "grid",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_气泡图_堆积气泡图": {
-      "r": [
-        "dplyr",
-        "ggcirclepack",
+      "python": [
+        "ComplexHeatmap",
+        "RColorBrewer",
         "ggh4x",
-        "remotes",
-        "scales",
+        "grid",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_流程图_流程图_基础版": {
-      "r": [
-        "dplyr",
-        "ggflowchart",
-        "tibble",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotcase_流程图_流程图_进阶版": {
-      "r": [
-        "ggraph",
-        "ggtext",
-        "glue",
-        "tidygraph",
-        "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotcase_流程图_细胞网络通讯示意图": {
       "r": [
         "tibble",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tibble",
+        "tidyverse"
+      ]
     },
     "plotcase_游泳图_游泳图_进阶版": {
       "r": [
@@ -2268,73 +2166,98 @@
         "devtools",
         "ggnewscale",
         "ggrepel",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "swimplot",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_维诺图_维诺图": {
-      "r": [
-        "VoronoiPlus",
-        "devtools",
-        "dplyr",
-        "ggtext",
-        "glue",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_维诺图_维诺图划分子区域": {
       "r": [
         "VoronoiPlus",
         "devtools",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_综合图_ggplot2组合展示误差线点图与柱状图": {
       "r": [
         "legendry",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_综合图_lefse分析图": {
       "r": [
         "ggsci",
         "pacman"
       ],
-      "python": []
+      "python": [
+        "ggsci",
+        "matplotlib",
+        "numpy",
+        "pacman",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_综合图_多分组统计与差异变化综合图": {
       "r": [
         "RColorBrewer",
         "grid",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
         "readxl",
         "scales",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_雷达图_雷达图批量绘制": {
       "r": [
         "devtools",
         "ggradar",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "patchwork",
         "scales",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_面积图,barplot_柱状图组合面积图": {
-      "r": [
-        "RColorBrewer",
-        "ggnewscale",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotcase_面积图_ggplot2绘制极坐标面积图": {
       "r": [
@@ -2344,36 +2267,52 @@
         "ggtext",
         "glue",
         "lubridate",
+        "matplotlib",
+        "numpy",
+        "pandas",
         "scales",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotcase_面积图_堆砌流动面积图": {
-      "r": [
-        "ggh4x",
-        "ggstream",
-        "readxl",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_001箱线图+散点图": {
       "r": [
         "ggplot2",
         "tidyr"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyr"
+      ]
     },
     "plotmaster_002渐变火山图": {
       "r": [
         "ggplot2"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_003气泡图+相关性热图": {
       "r": [
         "Hmisc",
+        "ggplot2",
         "tidyr"
       ],
       "python": []
@@ -2384,7 +2323,17 @@
         "ggsignif",
         "patchwork"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "ggsignif",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_005复杂热图": {
       "r": [
@@ -2393,14 +2342,34 @@
         "ggplot2",
         "patchwork"
       ],
-      "python": []
+      "python": [
+        "ComplexHeatmap",
+        "circlize",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_006复杂散点图": {
       "r": [
         "Hmisc",
         "ggplot2"
       ],
-      "python": []
+      "python": [
+        "Hmisc",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_007气泡火山图": {
       "r": [
@@ -2408,7 +2377,17 @@
         "ggrepel",
         "latex2exp"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "ggrepel",
+        "latex2exp",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_008复杂热图02": {
       "r": [
@@ -2419,7 +2398,20 @@
         "png",
         "tidyr"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "ggtext",
+        "grid",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "png",
+        "sys",
+        "tidyr"
+      ]
     },
     "plotmaster_009甘特图": {
       "r": [
@@ -2430,37 +2422,20 @@
         "scales",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotmaster_011批量散点图+拟合曲线": {
-      "r": [
-        "Hmisc",
-        "cowplot",
-        "patchwork"
-      ],
-      "python": []
-    },
-    "plotmaster_012箱线图美化": {
-      "r": [
+      "python": [
+        "dplyr",
         "ggplot2",
-        "ggsignif",
+        "grib",
+        "grid",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "scales",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotmaster_013复杂百分比柱状图": {
-      "r": [
-        "cowplot",
-        "ggplot2",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotmaster_013渐变柱状图": {
-      "r": [
-        "ggplot2"
-      ],
-      "python": []
+      ]
     },
     "plotmaster_015分半小提琴图": {
       "r": [
@@ -2471,7 +2446,20 @@
         "scales",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "gghalves",
+        "ggplot2",
+        "grid",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "plyr",
+        "scales",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_016复杂热图+渐变色连线": {
       "r": [
@@ -2482,7 +2470,20 @@
         "ggplotify",
         "patchwork"
       ],
-      "python": []
+      "python": [
+        "ComplexHeatmap",
+        "circlize",
+        "ggforce",
+        "ggplot2",
+        "ggplotify",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_017基因融合热图+堆积柱状图": {
       "r": [
@@ -2495,7 +2496,22 @@
         "tidyverse",
         "xlsx"
       ],
-      "python": []
+      "python": [
+        "ComplexHeatmap",
+        "circlize",
+        "ggplot2",
+        "ggplotify",
+        "ggsci",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse",
+        "xlsx"
+      ]
     },
     "plotmaster_018单细胞分组火山图": {
       "r": [
@@ -2504,7 +2520,18 @@
         "ggplot2",
         "ggrepel"
       ],
-      "python": []
+      "python": [
+        "RColorBrewer",
+        "dplyr",
+        "ggplot2",
+        "ggrepel",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_019堆积柱状图+折线+热图注释": {
       "r": [
@@ -2514,7 +2541,19 @@
         "patchwork",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ComplexHeatmap",
+        "RColorBrewer",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_020多组学九象限散点图": {
       "r": [
@@ -2522,7 +2561,17 @@
         "cowplot",
         "ggplot2"
       ],
-      "python": []
+      "python": [
+        "MASS",
+        "cowplot",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_021分组散点图+直方图注释": {
       "r": [
@@ -2531,7 +2580,18 @@
         "ggplot2",
         "psych"
       ],
-      "python": []
+      "python": [
+        "MASS",
+        "cowplot",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "psych",
+        "sys"
+      ]
     },
     "plotmaster_022复杂环形热图": {
       "r": [
@@ -2540,7 +2600,18 @@
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ComplexHeatmap",
+        "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_023泛癌箱线图+显著性检验": {
       "r": [
@@ -2550,7 +2621,19 @@
         "rstatix",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "ggpubr",
+        "latex2exp",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "rstatix",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_024矩阵饼图+分组注释": {
       "r": [
@@ -2559,7 +2642,18 @@
         "jjPlot",
         "readxl"
       ],
-      "python": []
+      "python": [
+        "devtools",
+        "jjAnno",
+        "jjPlot",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys"
+      ]
     },
     "plotmaster_025三维PCA散点图": {
       "r": [
@@ -2572,7 +2666,22 @@
         "plot3D",
         "scatterplot3d"
       ],
-      "python": []
+      "python": [
+        "RColorBrewer",
+        "devtools",
+        "gg3D",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "openxlsx",
+        "pandas",
+        "pathlib",
+        "pheatmap",
+        "plot3D",
+        "plotter_standard_renderer",
+        "scatterplot3d",
+        "sys"
+      ]
     },
     "plotmaster_026相关性气泡图+显著性热图": {
       "r": [
@@ -2580,14 +2689,33 @@
         "ggplot2",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "Hmisc",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_027箱线图+热图注释": {
       "r": [
         "patchwork",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_028分面双向柱状图+热图注释": {
       "r": [
@@ -2596,22 +2724,34 @@
         "patchwork",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ComplexHeatmap",
+        "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_029分面堆积面积图": {
       "r": [
         "cowplot",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotmaster_030形状火山图": {
-      "r": [
-        "ggVolcano",
-        "ggrepel",
-        "latex2exp"
-      ],
-      "python": []
+      "python": [
+        "cowplot",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_031环形散点图+环形热图": {
       "r": [
@@ -2619,7 +2759,17 @@
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_032表达定量雷达图": {
       "r": [
@@ -2629,38 +2779,33 @@
         "scales",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "ggradar",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "scales",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_033个性化森林图": {
       "r": [
         "ggplot2"
       ],
-      "python": []
-    },
-    "plotmaster_034柱状图+抖动散点+误差棒": {
-      "r": [
-        "cowplot",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotmaster_035堆积柱状图+百分比柱状图": {
-      "r": [
-        "RColorBrewer",
-        "cowplot",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotmaster_036批量箱线图+多组间显著性检验": {
-      "r": [
-        "cowplot",
-        "ggpubr",
-        "ggsignif",
-        "rstatix",
-        "tidyverse"
-      ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_037分类变量环形热图": {
       "r": [
@@ -2668,7 +2813,17 @@
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_038聚类热图+注释": {
       "r": [
@@ -2678,7 +2833,19 @@
         "paletteer",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ComplexHeatmap",
+        "circlize",
+        "ggsci",
+        "matplotlib",
+        "numpy",
+        "paletteer",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_039雷达图+环形注释": {
       "r": [
@@ -2687,30 +2854,18 @@
         "patchwork",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotmaster_040密度直方图": {
-      "r": [
+      "python": [
         "ggplot2",
+        "ggradar",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "patchwork",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotmaster_041分半箱线图+抖动散点图": {
-      "r": [
-        "devtools",
-        "gghalves",
-        "tidyverse"
-      ],
-      "python": []
-    },
-    "plotmaster_042批量散点图+批量折线图": {
-      "r": [
-        "cowplot",
-        "ggplot2",
-        "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotmaster_043分块热图+注释": {
       "r": [
@@ -2718,23 +2873,17 @@
         "circlize",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotmaster_044百分比柱状图+误差棒": {
-      "r": [
-        "ggplot2",
+      "python": [
+        "ComplexHeatmap",
+        "circlize",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
-    },
-    "plotmaster_045分组提琴图+显著性检验": {
-      "r": [
-        "ggplot2",
-        "ggpubr",
-        "rstatix",
-        "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotmaster_046环形层次聚类热图+批量环形饼图": {
       "r": [
@@ -2743,7 +2892,18 @@
         "scatterpie",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "circlize",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "scatterpie",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_047散点饼图": {
       "r": [
@@ -2751,7 +2911,17 @@
         "scatterpie",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "scatterpie",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_049多组哑铃图": {
       "r": [
@@ -2759,7 +2929,17 @@
         "latex2exp",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "latex2exp",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_050复杂分组散点图": {
       "r": [
@@ -2770,28 +2950,36 @@
         "readxl",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotmaster_051箱线图+抖动散点": {
-      "r": [
+      "python": [
+        "ggnewscale",
         "ggplot2",
-        "latex2exp"
-      ],
-      "python": []
-    },
-    "plotmaster_052细腰箱线图": {
-      "r": [
-        "ggsignif",
+        "ggrepel",
+        "latex2exp",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
         "tidyverse"
-      ],
-      "python": []
+      ]
     },
     "plotmaster_053分组气泡图": {
       "r": [
         "ggplot2",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_054分面森林图": {
       "r": [
@@ -2799,7 +2987,17 @@
         "gtable",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "gtable",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_055批量火山图": {
       "r": [
@@ -2809,7 +3007,19 @@
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "cowplot",
+        "ggVolcano",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_056复杂网络图": {
       "r": [
@@ -2817,7 +3027,17 @@
         "readxl",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_057复杂进化树": {
       "r": [
@@ -2825,7 +3045,17 @@
         "ggtree",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "ggtree",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_058分面折线图+置信区间+误差棒": {
       "r": [
@@ -2833,7 +3063,17 @@
         "grid",
         "gtable"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "grid",
+        "gtable",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys"
+      ]
     },
     "plotmaster_059桑基气泡图": {
       "r": [
@@ -2843,7 +3083,19 @@
         "ggsankey",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "cols4all",
+        "cowplot",
+        "devtools",
+        "ggsankey",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_060复杂环形互作网络图": {
       "r": [
@@ -2857,20 +3109,53 @@
         "tidyverse",
         "wesanderson"
       ],
-      "python": []
+      "python": [
+        "dplyr",
+        "ggraph",
+        "gplots",
+        "igraph",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
+        "tidygraph",
+        "tidyr",
+        "tidyverse",
+        "wesanderson"
+      ]
     },
     "plotmaster_061散点图+双向误差棒": {
       "r": [
         "ggplot2",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_062环形分组折线图": {
       "r": [
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     },
     "plotmaster_063_共定位矩阵散点图+柱状图注释": {
       "r": [
@@ -2879,7 +3164,18 @@
         "tidyr",
         "tidyverse"
       ],
-      "python": []
+      "python": [
+        "ggsci",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "readxl",
+        "sys",
+        "tidyr",
+        "tidyverse"
+      ]
     },
     "plotmaster_48个性化桑基图": {
       "r": [
@@ -2887,11 +3183,17 @@
         "ggplot2",
         "tidyverse"
       ],
-      "python": []
-    },
-    "plotmaster_双向柱状图": {
-      "r": [],
-      "python": []
+      "python": [
+        "RColorBrewer",
+        "ggplot2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "plotter_standard_renderer",
+        "sys",
+        "tidyverse"
+      ]
     }
   }
 }

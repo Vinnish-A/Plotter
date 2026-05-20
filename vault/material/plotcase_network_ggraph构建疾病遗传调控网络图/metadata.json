@@ -77,31 +77,19 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:31.450594+00:00",
+    "updated_at": "2026-05-20T15:04:55.511625+00:00",
     "records": [
       {
-        "source": "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM.xlsx",
+        "source": "plotcase_network_ggraph构建疾病遗传调控网络图/raw/43587_2025_1027_MOESM9_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7b.csv",
-          "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7c.csv",
-          "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7d.csv",
-          "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7f.csv",
-          "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7g.csv"
+          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/43587_2025_1027_MOESM9_ESM__Figure_7b.csv",
+          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/43587_2025_1027_MOESM9_ESM__Figure_7c.csv",
+          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/43587_2025_1027_MOESM9_ESM__Figure_7d.csv",
+          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/43587_2025_1027_MOESM9_ESM__Figure_7f.csv",
+          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/43587_2025_1027_MOESM9_ESM__Figure_7g.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7b.csv",
-          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7c.csv",
-          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7d.csv",
-          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7f.csv",
-          "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7g.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -163,5 +151,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": true,
+    "canonical_case": null,
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

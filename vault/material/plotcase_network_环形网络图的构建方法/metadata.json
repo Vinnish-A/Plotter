@@ -77,27 +77,17 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:31.771562+00:00",
+    "updated_at": "2026-05-20T15:04:55.826716+00:00",
     "records": [
       {
-        "source": "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM.xlsx",
+        "source": "plotcase_network_环形网络图的构建方法/raw/41588_2025_2326_MOESM8_ESM.xlsx",
         "status": "converted",
         "csv": [
-          "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5a.csv",
-          "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5b.csv",
-          "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5c.csv"
+          "plotcase_network_环形网络图的构建方法/raw/41588_2025_2326_MOESM8_ESM__fig5a.csv",
+          "plotcase_network_环形网络图的构建方法/raw/41588_2025_2326_MOESM8_ESM__fig5b.csv",
+          "plotcase_network_环形网络图的构建方法/raw/41588_2025_2326_MOESM8_ESM__fig5c.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5a.csv",
-          "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5b.csv",
-          "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5c.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -159,5 +149,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": true,
+    "canonical_case": null,
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

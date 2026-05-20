@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:28.665695+00:00",
+    "updated_at": "2026-05-20T15:04:53.668870+00:00",
     "records": [
       {
-        "source": "plotcase_circos_circlize绘制和弦图进阶版/data_raw/data/data.tsv",
+        "source": "plotcase_circos_circlize绘制和弦图进阶版/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_circos_circlize绘制和弦图进阶版/data_raw/data/data.csv"
+          "plotcase_circos_circlize绘制和弦图进阶版/raw/data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_circos_circlize绘制和弦图进阶版/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_circos_circlize绘制和弦图进阶版/raw/data/data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -139,5 +131,18 @@
       "sector_color",
       "label"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_circos_circlize绘制和弦图",
+    "reason": "visual_redundancy:network:circos"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

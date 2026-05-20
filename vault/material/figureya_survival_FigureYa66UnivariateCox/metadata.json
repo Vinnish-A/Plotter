@@ -83,31 +83,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:27.045087+00:00",
+    "updated_at": "2026-05-20T15:04:52.688851+00:00",
     "records": [
-      {
-        "source": "figureya_survival_FigureYa66UnivariateCox/data_raw/TCGA_phenotype_denseDataOnlyDownload.tsv",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa66UnivariateCox/data_raw/TCGA_phenotype_denseDataOnlyDownload.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "figureya_survival_FigureYa66UnivariateCox/data_raw/samplepair.txt",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa66UnivariateCox/data_raw/samplepair.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "figureya_survival_FigureYa66UnivariateCox/raw/TCGA_phenotype_denseDataOnlyDownload.tsv",
         "status": "converted",
         "csv": [
           "figureya_survival_FigureYa66UnivariateCox/raw/TCGA_phenotype_denseDataOnlyDownload.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
         "source": "figureya_survival_FigureYa66UnivariateCox/raw/samplepair.txt",
@@ -115,7 +99,7 @@
         "csv": [
           "figureya_survival_FigureYa66UnivariateCox/raw/samplepair.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -184,5 +168,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

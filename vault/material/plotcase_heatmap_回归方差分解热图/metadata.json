@@ -79,39 +79,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:29.477038+00:00",
+    "updated_at": "2026-05-20T15:04:54.160783+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_回归方差分解热图/data_raw/data/env.tsv",
+        "source": "plotcase_heatmap_回归方差分解热图/raw/env.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_回归方差分解热图/data_raw/data/env.csv"
+          "plotcase_heatmap_回归方差分解热图/raw/env.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_heatmap_回归方差分解热图/data_raw/data/spe.tsv",
+        "source": "plotcase_heatmap_回归方差分解热图/raw/spe.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_回归方差分解热图/data_raw/data/spe.csv"
+          "plotcase_heatmap_回归方差分解热图/raw/spe.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_回归方差分解热图/raw/data/env.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_回归方差分解热图/raw/data/env.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_回归方差分解热图/raw/data/spe.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_回归方差分解热图/raw/data/spe.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -160,5 +144,18 @@
       "size_value",
       "facet"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+    "reason": "visual_redundancy:heatmap:map"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

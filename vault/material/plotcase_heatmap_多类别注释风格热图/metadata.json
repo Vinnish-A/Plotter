@@ -73,39 +73,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:29.919949+00:00",
+    "updated_at": "2026-05-20T15:04:54.588778+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_多类别注释风格热图/data_raw/data/data.tsv",
+        "source": "plotcase_heatmap_多类别注释风格热图/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_多类别注释风格热图/data_raw/data/data.csv"
+          "plotcase_heatmap_多类别注释风格热图/raw/data.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_heatmap_多类别注释风格热图/data_raw/data/group.tsv",
+        "source": "plotcase_heatmap_多类别注释风格热图/raw/group.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_多类别注释风格热图/data_raw/data/group.csv"
+          "plotcase_heatmap_多类别注释风格热图/raw/group.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_多类别注释风格热图/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_多类别注释风格热图/raw/data/data.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_多类别注释风格热图/raw/data/group.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_多类别注释风格热图/raw/data/group.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -172,5 +156,18 @@
       "size_value",
       "facet"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+    "reason": "visual_redundancy:heatmap:map"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

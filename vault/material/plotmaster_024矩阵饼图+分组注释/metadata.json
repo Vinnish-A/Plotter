@@ -73,31 +73,19 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:35.564030+00:00",
+    "updated_at": "2026-05-20T15:04:57.770542+00:00",
     "records": [
-      {
-        "source": "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Outline.csv",
-          "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Gene_mutations-Subtype.csv",
-          "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Categories-Subtype.csv",
-          "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Gene_mutation-Gene_mutation.csv",
-          "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Categories-Categories.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06.xlsx",
         "status": "converted",
         "csv": [
-          "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Outline.csv",
+          "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Categories-Categories.csv",
           "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Gene_mutations-Subtype.csv",
           "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Categories-Subtype.csv",
           "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Gene_mutation-Gene_mutation.csv",
-          "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Categories-Categories.csv"
+          "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Outline.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -141,5 +129,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

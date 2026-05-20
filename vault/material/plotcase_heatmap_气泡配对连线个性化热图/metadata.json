@@ -76,39 +76,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:30.176809+00:00",
+    "updated_at": "2026-05-20T15:04:54.774028+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_气泡配对连线个性化热图/data_raw/data/heatmap1.tsv",
+        "source": "plotcase_heatmap_气泡配对连线个性化热图/raw/heatmap1.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_气泡配对连线个性化热图/data_raw/data/heatmap1.csv"
+          "plotcase_heatmap_气泡配对连线个性化热图/raw/heatmap1.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_heatmap_气泡配对连线个性化热图/data_raw/data/heatmap2.tsv",
+        "source": "plotcase_heatmap_气泡配对连线个性化热图/raw/heatmap2.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_气泡配对连线个性化热图/data_raw/data/heatmap2.csv"
+          "plotcase_heatmap_气泡配对连线个性化热图/raw/heatmap2.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_气泡配对连线个性化热图/raw/data/heatmap1.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_气泡配对连线个性化热图/raw/data/heatmap1.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_气泡配对连线个性化热图/raw/data/heatmap2.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_气泡配对连线个性化热图/raw/data/heatmap2.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -175,5 +159,18 @@
       "size_value",
       "facet"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_heatmap_多分组气泡热图",
+    "reason": "visual_redundancy:heatmap:气泡"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

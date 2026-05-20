@@ -73,23 +73,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:36.826876+00:00",
+    "updated_at": "2026-05-20T15:04:58.417016+00:00",
     "records": [
-      {
-        "source": "plotmaster_063_共定位矩阵散点图+柱状图注释/data_raw/data.xlsx",
-        "status": "converted",
-        "csv": [
-          "plotmaster_063_共定位矩阵散点图+柱状图注释/data_raw/data.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "plotmaster_063_共定位矩阵散点图+柱状图注释/raw/data.xlsx",
         "status": "converted",
         "csv": [
           "plotmaster_063_共定位矩阵散点图+柱状图注释/raw/data.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -143,5 +135,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

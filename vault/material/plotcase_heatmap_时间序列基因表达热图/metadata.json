@@ -107,5 +107,18 @@
     "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
     "data_main_status": "abstract_visual_grammar_demo",
     "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_heatmap_tidyheatmaps轻松绘制热图",
+    "reason": "exact duplicate primary code hash"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": false,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }

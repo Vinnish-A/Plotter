@@ -81,37 +81,23 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:26.503940+00:00",
+    "updated_at": "2026-05-20T15:04:52.374656+00:00",
     "records": [
-      {
-        "source": "figureya_survival_FigureYa197SmoothHaz/data_raw/input.xlsx",
-        "status": "converted",
-        "csv": [
-          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TCGA-CDR.csv",
-          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TCGA-CDR_Notes.csv",
-          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__ExtraEndpoints.csv",
-          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__ExtraEndpoints_Notes.csv",
-          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Table4_PHAssumptionTests.csv",
-          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Table5_PHAssumptionTests.csv",
-          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TSS_Info.csv",
-          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Fig2EFG_AdditionalInfo.csv"
-        ],
-        "deleted_original": true
-      },
       {
         "source": "figureya_survival_FigureYa197SmoothHaz/raw/input.xlsx",
         "status": "converted",
         "csv": [
-          "figureya_survival_FigureYa197SmoothHaz/raw/input__TCGA-CDR.csv",
-          "figureya_survival_FigureYa197SmoothHaz/raw/input__TCGA-CDR_Notes.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__easy_input.csv",
           "figureya_survival_FigureYa197SmoothHaz/raw/input__ExtraEndpoints.csv",
           "figureya_survival_FigureYa197SmoothHaz/raw/input__ExtraEndpoints_Notes.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__Fig2EFG_AdditionalInfo.csv",
           "figureya_survival_FigureYa197SmoothHaz/raw/input__Table4_PHAssumptionTests.csv",
           "figureya_survival_FigureYa197SmoothHaz/raw/input__Table5_PHAssumptionTests.csv",
-          "figureya_survival_FigureYa197SmoothHaz/raw/input__TSS_Info.csv",
-          "figureya_survival_FigureYa197SmoothHaz/raw/input__Fig2EFG_AdditionalInfo.csv"
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__TCGA-CDR.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__TCGA-CDR_Notes.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__TSS_Info.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -173,5 +159,18 @@
       "pandas",
       "python"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

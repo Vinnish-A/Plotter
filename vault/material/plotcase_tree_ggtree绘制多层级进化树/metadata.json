@@ -79,71 +79,39 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:33.669980+00:00",
+    "updated_at": "2026-05-20T15:04:56.710257+00:00",
     "records": [
       {
-        "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v4.txt",
+        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/group.v4.txt",
         "status": "converted",
         "csv": [
-          "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v4.csv"
+          "plotcase_tree_ggtree绘制多层级进化树/raw/group.v4.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v9.txt",
+        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/group.v9.txt",
         "status": "converted",
         "csv": [
-          "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v9.csv"
+          "plotcase_tree_ggtree绘制多层级进化树/raw/group.v9.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v4.txt",
+        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/v4.txt",
         "status": "converted",
         "csv": [
-          "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v4.csv"
+          "plotcase_tree_ggtree绘制多层级进化树/raw/v4.csv"
         ],
-        "deleted_original": true
+        "deleted_original": false
       },
       {
-        "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v9.txt",
+        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/v9.txt",
         "status": "converted",
         "csv": [
-          "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v9.csv"
+          "plotcase_tree_ggtree绘制多层级进化树/raw/v9.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v4.txt",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v4.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v9.txt",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v9.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/v4.txt",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_ggtree绘制多层级进化树/raw/data/v4.csv"
-        ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/v9.txt",
-        "status": "converted",
-        "csv": [
-          "plotcase_tree_ggtree绘制多层级进化树/raw/data/v9.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -201,5 +169,18 @@
       "track_class",
       "heatmap_value"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

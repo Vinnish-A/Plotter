@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:29.227266+00:00",
+    "updated_at": "2026-05-20T15:04:54.037726+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_ggtree绘制离散型系统发育树热图/data_raw/data/RAxML_bipartitions.allUK_1000.nwk",
+        "source": "plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/RAxML_bipartitions.allUK_1000.nwk",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_ggtree绘制离散型系统发育树热图/data_raw/data/RAxML_bipartitions.allUK_1000.csv"
+          "plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/RAxML_bipartitions.allUK_1000.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/data/RAxML_bipartitions.allUK_1000.nwk",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/data/RAxML_bipartitions.allUK_1000.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -148,5 +140,18 @@
       "track_class",
       "heatmap_value"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

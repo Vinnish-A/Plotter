@@ -77,23 +77,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:33.351359+00:00",
+    "updated_at": "2026-05-20T15:04:56.404967+00:00",
     "records": [
       {
-        "source": "plotcase_sankey_多层级桑基图/data_raw/data/sankey_data.tsv",
+        "source": "plotcase_sankey_多层级桑基图/raw/sankey_data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_sankey_多层级桑基图/data_raw/data/sankey_data.csv"
+          "plotcase_sankey_多层级桑基图/raw/sankey_data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_sankey_多层级桑基图/raw/data/sankey_data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_sankey_多层级桑基图/raw/data/sankey_data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -159,5 +151,18 @@
       "label",
       "order"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": true,
+    "canonical_case": null,
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

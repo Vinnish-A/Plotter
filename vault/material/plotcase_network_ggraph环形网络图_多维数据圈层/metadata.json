@@ -82,23 +82,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:31.514485+00:00",
+    "updated_at": "2026-05-20T15:04:55.572818+00:00",
     "records": [
       {
-        "source": "plotcase_network_ggraph环形网络图_多维数据圈层/data_raw/data/network_data.tsv",
+        "source": "plotcase_network_ggraph环形网络图_多维数据圈层/raw/network_data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_network_ggraph环形网络图_多维数据圈层/data_raw/data/network_data.csv"
+          "plotcase_network_ggraph环形网络图_多维数据圈层/raw/network_data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_network_ggraph环形网络图_多维数据圈层/raw/data/network_data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_network_ggraph环形网络图_多维数据圈层/raw/data/network_data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -155,5 +147,18 @@
       "layout_x",
       "layout_y"
     ]
+  },
+  "vault_status": {
+    "live": true,
+    "folded": false,
+    "restored_from_fold": false,
+    "canonical_case": null,
+    "reason": null
+  },
+  "rebuild_class": {
+    "source_code_rebuild": true,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": false,
+    "synthetic_data": false
   }
 }

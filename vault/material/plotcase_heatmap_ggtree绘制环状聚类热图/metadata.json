@@ -76,23 +76,15 @@
   },
   "data_conversion": {
     "csv_only_data_inputs": true,
-    "updated_at": "2026-05-17T06:55:29.165288+00:00",
+    "updated_at": "2026-05-20T15:04:53.976863+00:00",
     "records": [
       {
-        "source": "plotcase_heatmap_ggtree绘制环状聚类热图/data_raw/data/data.tsv",
+        "source": "plotcase_heatmap_ggtree绘制环状聚类热图/raw/data.tsv",
         "status": "converted",
         "csv": [
-          "plotcase_heatmap_ggtree绘制环状聚类热图/data_raw/data/data.csv"
+          "plotcase_heatmap_ggtree绘制环状聚类热图/raw/data.csv"
         ],
-        "deleted_original": true
-      },
-      {
-        "source": "plotcase_heatmap_ggtree绘制环状聚类热图/raw/data/data.tsv",
-        "status": "converted",
-        "csv": [
-          "plotcase_heatmap_ggtree绘制环状聚类热图/raw/data/data.csv"
-        ],
-        "deleted_original": true
+        "deleted_original": false
       }
     ]
   },
@@ -157,5 +149,18 @@
       "track_class",
       "heatmap_value"
     ]
+  },
+  "vault_status": {
+    "live": false,
+    "folded": true,
+    "restored_from_fold": false,
+    "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+    "reason": "visual_redundancy:heatmap:map"
+  },
+  "rebuild_class": {
+    "source_code_rebuild": false,
+    "generic_renderer_rebuild": true,
+    "case_level_fallback": true,
+    "synthetic_data": false
   }
 }
