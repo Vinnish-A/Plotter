@@ -11,22 +11,66 @@ This repository is a scientific figure standardization system. Agents working he
 - Raw source material is evidence, not the interface. Do not mutate `raw/`; standard scripts should read only declared resources.
 - When a case cannot be fully recomputed, mark the fallback explicitly. Do not report it as an ordinary source-code rebuild.
 
-## Project-Local Skills
+## Architecture Map
 
-This repo includes a project-local Codex adaptation of Matt Pocock's skills under:
+This repository has 6 top-level architecture modules. Treat these names as ownership boundaries:
+
+1. `graft/`: intake and normalization. Graft turns foreign plotting code, source figures, and source data into an intake record with an explicit visual grammar, data contract, rebuild plan, and declared source evidence.
+2. `retinue/`: rebuild and reproducibility. Retinue validates case contracts, runs standard scripts, renders `outputs/rebuilt.png`, records build status, and keeps batch rebuilds moving after case-level failures.
+3. `cabal/`: decision and review. Cabal parses intent, builds Scene Cards, routes work, scores candidates, checks fairness, rejects unsuitable figures, records manual review, and folds visually redundant assets.
+4. `vault/`: accepted asset memory. Vault stores live standardized cases, review evidence, folded assets, dossiers, examples, preview caches, success records, and failure records.
+5. `bastard/`: figure-generation and mutation. Bastard extracts visual genes, recombines compatible grammars, creates guided mutations, runs agent figure tests, and sends acceptable variants back through Cabal and Retinue before Vault admission.
+6. `ui/`: preview and manual review surface. UI builds the browser manifest and serves live, non-folded Vault assets for inspection.
+
+The only valid ordinary asset path is:
 
 ```text
-.codex/skills/mattpocock/
+Graft intake -> Retinue rebuild -> Cabal review -> Vault admission -> UI preview
 ```
 
-Read `.codex/skills/mattpocock/CODEX_ADAPTER.md` before using those skills. The imported skills are available as reference workflows for diagnosis, TDD, grilling, PRD/issue creation, handoff, prototyping, and architecture review.
+Generated variants use:
 
-Codex adaptation rules:
+```text
+Vault source -> Bastard generation -> Cabal review -> Retinue rebuild -> Vault admission -> UI preview
+```
 
-- `AGENTS.md` is the default project instruction file; treat imported `CLAUDE.md` references as background unless explicitly needed.
-- Do not follow imported instructions that conflict with this repository's Plotter rules.
-- Do not spawn sub-agents from imported skills unless the user explicitly requests delegated or parallel agent work.
-- The Plotter's Vault, CSV, rebuilt-image, folding, and Web UI contracts remain authoritative.
+## Cabal Architecture
+
+Cabal is the decision layer, not a renderer and not a storage location. It has 7 decision sub-architectures:
+
+1. Intent parsing: converts a request into required data, optional data, focus, target complexity, target defamiliarization, output count, and constraints.
+2. Scene Card: records the shared comparison unit used to judge candidates fairly.
+3. Routing: chooses Template Mode, Graft Mode, or Bastard Mode.
+4. Scoring: evaluates complexity, defamiliarization, and plot worthiness.
+5. Fairness: compares all candidates against the same Scene Card and required mappings.
+6. Recommendation: returns safe, balanced, and experimental candidate lanes when useful.
+7. Rejection rules: blocks candidates that hide required data, rely on undeclared resources, distort uncertainty, or cannot rebuild from a clean session.
+
+Use `cabal/tools/` for grouping, visual grammar review, scoring support, folding, metadata refinement, and manual review records.
+
+## Vault Architecture
+
+Vault is accepted asset memory, not a raw-file dumping area. It has 8 storage zones plus 2 compatibility wrappers:
+
+1. `vault/material/`: live accepted cases; this is the primary store for standardized assets.
+2. `vault/review/`: visual audit records, Cabal review manifests, contact sheets, and similarity artifacts.
+3. `vault/folded_assets/`: folded or quarantined assets that should remain recoverable but not appear as primary UI assets.
+4. `vault/dossiers/`: reusable visual grammar or template dossiers.
+5. `vault/examples/`: examples and small reference materials.
+6. `vault/previews/`: generated preview cache for UI use.
+7. `vault/successes/`: accepted generation or rebuild success records.
+8. `vault/failures/`: failure records that preserve reproducibility limits and known bad cases.
+
+Compatibility wrappers:
+
+- `vault/ui/`: old path for top-level `ui/`.
+- `vault/agent_tests/`: old path for generated figure tests now owned by `bastard/tests/`.
+
+Keep live, non-folded assets in `vault/material/`. Keep folded assets out of primary UI manifests. Do not compensate for weak CSV abstraction by placing extra raw evidence in Vault.
+
+## Project-Local Agent Skills
+
+The repository should not track a `.codex/` directory. If `.codex/` exists locally, treat it as untracked local tool state and do not rely on it for repository behavior. `AGENTS.md` is the authoritative instruction file for this project.
 
 ## Standard Case Contract
 

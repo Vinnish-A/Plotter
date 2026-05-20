@@ -52,6 +52,7 @@ test-results/
 
 # Local tool state
 .cache/
+.codex/
 .playwright-mcp/
 tmp/
 temp/
