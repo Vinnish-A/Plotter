@@ -1,0 +1,236 @@
+{
+  "id": "plotcase_network_STRING_BioNet网络模块解析代码实战",
+  "title": "STRING_BioNet网络模块解析代码实战",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "network\\STRING_BioNet网络模块解析代码实战"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "network"
+  ],
+  "visual_keywords": [
+    "network_graph",
+    "node_link",
+    "layout",
+    "community"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_mappings": [
+      "node_id",
+      "node_label",
+      "node_group",
+      "node_size",
+      "edge_group",
+      "edge_direction",
+      "layout_x",
+      "layout_y"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "node-link graph tables"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 10,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 5,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:12.302449+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "BioNet",
+      "BiocManager",
+      "ggraph",
+      "igraph",
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:31.259808+00:00",
+    "records": [
+      {
+        "source": "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_PBMC_DESeq2.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_NK_DESeq2.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_NK.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_B.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD14Mono.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD16Mono.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD4T.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD8T.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_DC.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_PB.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_pDC.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_ProlifLymph.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__NK_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__NK_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__B_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__B_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD14Mono_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD14Mono_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD16Mono_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD16Mono_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD4T_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD4T_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD8T_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD8T_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DC_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__PB_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__PB_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__pDC_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__ProlifLymph_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__ProlifLymph_Narrow_KEGG.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/stringdb_NK_background.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/stringdb_NK_background.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_PBMC_DESeq2.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_NK_DESeq2.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_NK.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_B.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD14Mono.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD16Mono.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD4T.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD8T.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_DC.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_PB.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_pDC.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_ProlifLymph.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__NK_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__NK_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__B_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__B_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD14Mono_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD14Mono_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD16Mono_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD16Mono_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD4T_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD4T_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD8T_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD8T_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DC_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__PB_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__PB_Narrow_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__pDC_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__ProlifLymph_Broad_KEGG.csv",
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__ProlifLymph_Narrow_KEGG.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/stringdb_NK_background.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/stringdb_NK_background.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/stringdb_NK_background.csv",
+    "grammar_geometry": "network_graph",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "complexity_assignment": {
+    "mode": "high",
+    "score": 5.2867,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/41590_2025_2341_MOESM4_ESM.xlsx",
+      "raw/stringdb_NK_background.tsv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:33:09.864983+00:00"
+  },
+  "complexity_review": {
+    "status": "reviewed_after_visual_folding",
+    "reason": "mode adjusted by final visual complexity and target live ratio high/medium/low = 0.2/0.3/0.5",
+    "previous_mode": "high"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.12871459586097914,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "network_graph",
+    "backend": "R/ggraph-igraph",
+    "unit": "node-link graph tables",
+    "required_data_roles": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_data_roles": [
+      "node_id",
+      "node_label",
+      "node_group",
+      "node_size",
+      "edge_group",
+      "edge_direction",
+      "layout_x",
+      "layout_y"
+    ]
+  }
+}

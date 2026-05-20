@@ -1,0 +1,29 @@
+{
+  "case_id": "circular_chord_outer_tracks",
+  "intent": "Use a circos-style template: weighted circular chords, grouped node sectors, and aligned outer annotation tracks.",
+  "complexity": "high",
+  "template_refs": [
+    "plotcase_circos_circlize优雅绘制多重注释弦图",
+    "plotcase_circos_circlize绘制和弦图进阶版",
+    "plotmaster_060复杂环形互作网络图"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "source",
+    "target",
+    "weight",
+    "source_group",
+    "target_group",
+    "track_1",
+    "track_2",
+    "label_priority"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}

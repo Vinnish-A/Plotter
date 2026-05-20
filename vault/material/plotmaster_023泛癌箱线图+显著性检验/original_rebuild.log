@@ -1,0 +1,41 @@
+            mir   project          sample group   expr
+1 hsa-let-7a-5p TCGA-BRCA TCGA-3C-AAAU-01 Tumor 15.171
+2 hsa-let-7a-5p TCGA-BRCA TCGA-3C-AALI-01 Tumor 15.494
+3 hsa-let-7a-5p TCGA-BRCA TCGA-3C-AALJ-01 Tumor 15.453
+4 hsa-let-7a-5p TCGA-BRCA TCGA-3C-AALK-01 Tumor 15.592
+5 hsa-let-7a-5p TCGA-BRCA TCGA-4H-AAAK-01 Tumor 15.967
+6 hsa-let-7a-5p TCGA-BRCA TCGA-5L-AAT0-01 Tumor 16.044
+# A tibble: 22 × 15
+   project   .y.   group1 group2    n1    n2        p p.signif    p.adj
+   <fct>     <chr> <chr>  <chr>  <int> <int>    <dbl> <chr>       <dbl>
+ 1 TCGA-THYM expr  Normal Tumor      2   124 9.93e- 1 ns       9.93e- 1
+ 2 TCGA-SKCM expr  Normal Tumor      2    97 3.51e- 1 ns       3.51e- 1
+ 3 TCGA-THCA expr  Normal Tumor     59   506 9.82e- 2 ns       9.82e- 2
+ 4 TCGA-BRCA expr  Normal Tumor    104  1078 5.33e- 3 **       5.33e- 3
+ 5 TCGA-LIHC expr  Normal Tumor     50   372 8.34e- 3 **       8.34e- 3
+ 6 TCGA-PAAD expr  Normal Tumor      4   178 2.85e- 2 *        2.85e- 2
+ 7 TCGA-CESC expr  Normal Tumor      3   307 1.76e- 2 *        1.76e- 2
+ 8 TCGA-HNSC expr  Normal Tumor     44   523 4.91e- 8 ****     4.91e- 8
+ 9 TCGA-LUAD expr  Normal Tumor     46   513 5.59e-31 ****     5.59e-31
+10 TCGA-PRAD expr  Normal Tumor     52   494 2.73e-11 ****     2.73e-11
+# ℹ 12 more rows
+# ℹ 6 more variables: p.adj.signif <chr>, y.position <dbl>,
+#   groups <named list>, x <dbl>, xmin <dbl>, xmax <dbl>
+
+[stderr]
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+Attaching package: ‘rstatix’
+
+The following object is masked from ‘package:stats’:
+
+    filter
+

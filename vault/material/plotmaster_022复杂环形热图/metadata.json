@@ -1,0 +1,190 @@
+{
+  "id": "plotmaster_022复杂环形热图",
+  "title": "022复杂环形热图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "022复杂环形热图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "3d_manifold",
+    "ComplexHeatmap",
+    "circlize"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 4,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:13.138163+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ComplexHeatmap",
+      "circlize",
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:35.512090+00:00",
+    "records": [
+      {
+        "source": "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Guide.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_1.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_2.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_3.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_4.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_5.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_6.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_7.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_8.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_9.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_10.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_11.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_12.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_13.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_14.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_15.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_16.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_17.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_18.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_19.csv",
+          "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_20.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Guide.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_1.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_2.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_3.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_4.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_5.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_6.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_7.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_8.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_9.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_10.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_11.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_12.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_13.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_14.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_15.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_16.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_17.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_18.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_19.csv",
+          "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_20.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_17.csv",
+    "grammar_geometry": "heatmap",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "high",
+    "score": 5.8967,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/plot.png",
+    "compat_xlsx": [
+      "raw/41591_2022_1686_MOESM3_ESM.xlsx"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:31:31.419184+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plot.pdf",
+      "selected": "raw/plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.09064991437534914,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ComplexHeatmap-circlize",
+    "geometry": "3d_manifold",
+    "keywords": [
+      "3d_manifold",
+      "ComplexHeatmap",
+      "circlize"
+    ],
+    "visual_dependencies": [
+      "ComplexHeatmap",
+      "circlize",
+      "readxl",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

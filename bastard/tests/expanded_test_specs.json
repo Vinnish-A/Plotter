@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "color_policy": "User-provided color names are non-semantic. Only the colors are retained as references for contrast, harmony, lightness spread, and export-size separability.",
+  "suites": [
+    {
+      "id": "template_complex",
+      "goal": "Render a complex figure by selecting one strong template family.",
+      "cases": [
+        {
+          "id": "circular_chord_outer_tracks",
+          "source_templates": ["circos_chord", "multi_annotation_chord", "communication_chord"],
+          "required_columns": ["source", "target", "weight", "source_group", "target_group"],
+          "optional_columns": ["node", "group", "track_1", "track_2", "label_priority", "ring_order"],
+          "must_have": ["circular sectors", "weighted inner chords", "outer annotation rings", "external legends"],
+          "fail_if": ["radial labels collide", "outer tracks drift from sectors", "figure becomes plain network"]
+        },
+        {
+          "id": "circular_dendrogram_heatmap",
+          "source_templates": ["circular_clustered_heatmap", "ggtree_heatmap", "radial_annotation_tracks"],
+          "required_columns": ["row_id", "column_id", "value"],
+          "optional_columns": ["row_group", "column_group", "tree_parent", "tree_child", "track_value", "label_priority"],
+          "must_have": ["radial tree", "circular heatmap", "aligned row ordering", "outer group rings"],
+          "fail_if": ["tree and heatmap order disagree", "rectangular fallback", "radial labels overlap heavily"]
+        },
+        {
+          "id": "multi_level_manhattan",
+          "source_templates": ["multi_track_manhattan", "locus_zoom", "threshold_point_plot"],
+          "required_columns": ["chromosome", "position", "score", "feature_id"],
+          "optional_columns": ["gene_label", "track_value", "threshold", "focus_window", "annotation_level"],
+          "must_have": ["chromosome bands", "thresholds", "focus labels", "density-safe points"],
+          "fail_if": ["chromosomes merge visually", "labels cover peaks", "thresholds are unlabeled"]
+        },
+        {
+          "id": "comparative_genome_structure",
+          "source_templates": ["geneviewer_cluster", "comparative_genome", "synteny_connectors"],
+          "required_columns": ["sample", "gene_id", "start", "end", "strand", "family"],
+          "optional_columns": ["sample_a", "sample_b", "gene_a", "gene_b", "identity", "block_id", "label"],
+          "must_have": ["directional gene arrows", "stacked genome tracks", "synteny connectors"],
+          "fail_if": ["genes become undirected rectangles", "connector endpoints float", "generic timeline fallback"]
+        },
+        {
+          "id": "forest_table_encoded_legend",
+          "source_templates": ["advanced_forest", "cox_forest_table", "legend_mapped_forest"],
+          "required_columns": ["term", "estimate", "lower", "upper", "p_value", "group"],
+          "optional_columns": ["table_column", "table_value", "symbol_value", "row_order", "section"],
+          "must_have": ["aligned table text", "confidence interval axis", "group sections", "readable p-values"],
+          "fail_if": ["table rows drift from intervals", "text too small", "intervals clipped"]
+        },
+        {
+          "id": "multi_stage_sankey_alluvial",
+          "source_templates": ["gradient_sankey", "node_fused_sankey", "alluvial_flow"],
+          "required_columns": ["stage", "node", "next_stage", "next_node", "value"],
+          "optional_columns": ["group", "node_order", "label_priority", "flow_color", "stage_label"],
+          "must_have": ["staged nodes", "smooth ribbons", "conserved widths", "outside labels"],
+          "fail_if": ["straight line segments", "labels inside dense ribbons", "stage misalignment"]
+        }
+      ]
+    },
+    {
+      "id": "template_composition",
+      "goal": "Combine multiple template grammars into one coherent figure unit.",
+      "cases": [
+        {
+          "id": "dendrogram_heatmap_dot_summary",
+          "source_templates": ["clustered_heatmap", "dot_heatmap", "side_summary_bars"],
+          "required_columns": ["row_id", "column_id", "value", "dot_size"],
+          "optional_columns": ["row_group", "column_group", "side_score", "bottom_score", "label_priority"],
+          "must_have": ["main body rectangle", "aligned dendrogram", "dot matrix or overlay", "side and bottom summaries"],
+          "fail_if": ["auxiliary panels own primary axes", "bottom labels above bottom tracks", "summaries misalign"]
+        },
+        {
+          "id": "volcano_focus_marginal_density",
+          "source_templates": ["volcano", "focus_expansion", "marginal_distribution"],
+          "required_columns": ["feature_id", "x", "y", "group", "significance"],
+          "optional_columns": ["label", "focus_group", "density_bin", "callout_priority"],
+          "must_have": ["thresholds", "marginal summaries", "sparse labels", "focus explanation"],
+          "fail_if": ["thresholds decorative only", "label collision hides peaks", "marginals dominate body"]
+        },
+        {
+          "id": "chord_heat_strip_summary",
+          "source_templates": ["chord", "network_ring", "annotation_heat_strip"],
+          "required_columns": ["source", "target", "weight", "source_group", "target_group"],
+          "optional_columns": ["node", "metric_a", "metric_b", "node_order", "label_priority"],
+          "must_have": ["circular chord body", "aligned outer strips", "separate legends for links and tracks"],
+          "fail_if": ["strip order differs from node order", "encodings compete equally"]
+        },
+        {
+          "id": "genome_synteny_expression_tracks",
+          "source_templates": ["comparative_genome", "heatmap_strip", "lollipop_annotation"],
+          "required_columns": ["sample", "gene_id", "start", "end", "strand", "family"],
+          "optional_columns": ["condition", "expression", "variant_count", "connector_identity"],
+          "must_have": ["gene arrows", "synteny ribbons", "aligned expression strips", "variant lollipops"],
+          "fail_if": ["expression strips use independent x scale", "lollipop stems hide gene labels"]
+        },
+        {
+          "id": "radial_network_grouped_bubble_legend",
+          "source_templates": ["ring_network", "hierarchical_bubble", "network_module"],
+          "required_columns": ["source", "target", "weight", "node_group"],
+          "optional_columns": ["node", "node_size", "module", "ring", "label_priority"],
+          "must_have": ["radial network", "module arcs", "node size legend", "outside labels"],
+          "fail_if": ["network collapses into dense hairball", "node size unreadable"]
+        },
+        {
+          "id": "forest_distribution_support",
+          "source_templates": ["forest_plot", "ridge_distribution", "aligned_table"],
+          "required_columns": ["term", "estimate", "lower", "upper", "group"],
+          "optional_columns": ["sample_value", "density_group", "table_value", "section"],
+          "must_have": ["CI forest body", "distribution support", "row alignment"],
+          "fail_if": ["distribution panels break row height", "table text misaligns"]
+        }
+      ]
+    },
+    {
+      "id": "inspired_complex",
+      "goal": "Generate a new complex figure by recombining visual genes from existing templates.",
+      "cases": [
+        {
+          "id": "focused_chord_to_detail_expansion",
+          "source_templates": ["chord", "global_local_focus", "annotation_heatmap"],
+          "required_columns": ["source", "target", "weight", "focus_flag", "detail_x", "detail_y"],
+          "optional_columns": ["entity", "detail_metric", "label", "annotation_group", "priority"],
+          "must_have": ["global circular flow", "reserved focus detail", "non-crossing connectors"],
+          "fail_if": ["focus merely highlighted", "connector crosses dense chords"]
+        },
+        {
+          "id": "manifold_trajectory_embedded_tiles",
+          "source_templates": ["3d_manifold", "trajectory_signal", "annotated_heatmap"],
+          "required_columns": ["sample_id", "x", "y", "z", "trajectory", "state", "value"],
+          "optional_columns": ["tile_metric", "time_bin", "label_priority"],
+          "must_have": ["manifold body", "trajectory ordering", "state tile strip", "signal support"],
+          "fail_if": ["support tracks carry the whole figure", "projection and tracks disagree on order"]
+        },
+        {
+          "id": "correlation_constellation_local_matrix",
+          "source_templates": ["correlation_heatmap", "network_module", "local_focus"],
+          "required_columns": ["entity_a", "entity_b", "correlation", "group"],
+          "optional_columns": ["entity", "focus_flag", "module", "local_value", "label_priority"],
+          "must_have": ["module network", "signed correlation encoding", "local matrix"],
+          "fail_if": ["network and matrix ordering disagree", "color direction conflicts"]
+        },
+        {
+          "id": "temporal_flow_matrix",
+          "source_templates": ["sankey", "heatmap", "alluvial_area"],
+          "required_columns": ["time", "source_state", "target_state", "value"],
+          "optional_columns": ["state", "state_metric", "time_metric", "label_priority"],
+          "must_have": ["time-aligned flow", "compact state matrix", "distinct flow and matrix encodings"],
+          "fail_if": ["matrix and flow use conflicting time order", "duplicate labels clutter figure"]
+        },
+        {
+          "id": "circular_genome_interaction_atlas",
+          "source_templates": ["comparative_genome", "circular_chord", "outer_annotation_rings"],
+          "required_columns": ["segment", "start", "end", "feature_id", "feature_group"],
+          "optional_columns": ["source_feature", "target_feature", "interaction_weight", "track_value", "label_priority"],
+          "must_have": ["coordinate-preserving sectors", "feature blocks or arrows", "interaction chords", "outer rings"],
+          "fail_if": ["sector order arbitrary", "outer tracks detach from coordinates"]
+        },
+        {
+          "id": "adaptive_uncertainty_atlas",
+          "source_templates": ["forest_plot", "heatmap", "focus_expansion"],
+          "required_columns": ["entity", "condition", "estimate", "lower", "upper", "value"],
+          "optional_columns": ["group", "focus_flag", "rank", "annotation"],
+          "must_have": ["condition matrix", "anchored uncertainty expansions", "preserved matrix alignment"],
+          "fail_if": ["uncertainty encoded only as text", "expansions break matrix alignment"]
+        }
+      ]
+    }
+  ],
+  "global_quality_checks": [
+    "CSV-only required input",
+    "one independent figure unit",
+    "no subplot letters",
+    "no meaningful overlap or occlusion",
+    "consistent text categories",
+    "controlled element sizes",
+    "curated colors rather than default cycles",
+    "PDF and PNG export with matching physical size",
+    "explicit failure signatures checked by visual review"
+  ]
+}

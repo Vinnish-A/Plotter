@@ -1,0 +1,14 @@
+          ID Group   color        DC_1       DC_2
+1 SIHTALLS26    G1 #FD6AB0 -0.02677773 0.03531621
+2        A37    G1 #FD6AB0 -0.03068308 0.04230065
+3        T78    G1 #FD6AB0 -0.02738485 0.03747457
+4  SIHTALLS3    G1 #FD6AB0 -0.02941009 0.04039534
+5 SIHTALLS12    G1 #FD6AB0 -0.01946934 0.02060690
+null device 
+          1 
+
+[stderr]
+Warning message:
+no DISPLAY variable so Tk is not available 
+Error in library(gg3D) : there is no package called ‘gg3D’
+Execution halted

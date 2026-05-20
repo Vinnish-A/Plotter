@@ -1,0 +1,46 @@
+{
+  "palette_presets": [
+    {
+      "id": "standard_blue_white_red_diverging",
+      "source_assets": ["user_standard", "plotmaster_heatmap_family"],
+      "best_for": ["heatmap_body", "continuous_diverging_value"],
+      "colors": ["#2166AC", "#4393C3", "#92C5DE", "#D1E5F0", "#F7F7F7", "#FDDBC7", "#F4A582", "#D6604D", "#B2182B"]
+    },
+    {
+      "id": "standard_discrete_annotation",
+      "source_assets": ["user_discrete_reference", "plotmaster_019", "plotcase_ring_network"],
+      "best_for": ["annotation_tracks", "categorical_groups", "side_summaries"],
+      "colors": ["#2b458d", "#21a6ce", "#8BC25C", "#d31c22", "#B4388A", "#f5b744", "#9a9fbe", "#565c50"]
+    },
+    {
+      "id": "standard_focus_scatter",
+      "source_assets": ["user_discrete_reference", "plotmaster_020", "plotmaster_021"],
+      "best_for": ["highlight", "scatter_groups", "focus_expansion"],
+      "colors": ["#2b458d", "#21a6ce", "#8BC25C", "#f5b744", "#a764ce", "#d31c22", "#565c50"]
+    },
+    {
+      "id": "standard_manifold_sequence",
+      "source_assets": ["figures4papers_cflows", "figures4papers_manifold"],
+      "best_for": ["trajectory", "manifold", "continuous_sequence"],
+      "colors": ["#2166AC", "#4393C3", "#92C5DE", "#D1E5F0", "#F7F7F7", "#FDDBC7", "#F4A582", "#D6604D"]
+    },
+    {
+      "id": "standard_support_layers",
+      "source_assets": ["user_discrete_reference", "plotcase_ring_network", "figures4papers_cflows"],
+      "best_for": ["network", "multi_layer_annotation", "supporting_marks"],
+      "colors": ["#7391c2", "#A3C1B0", "#8BC25C", "#f5b744", "#e295c8", "#B4388A", "#565c50"]
+    },
+    {
+      "id": "user_discrete_reference",
+      "source_assets": ["user_discrete_reference"],
+      "best_for": ["categorical_groups", "annotation_tracks", "multi_group_highlight"],
+      "colors": ["#8BC25C", "#A3C1B0", "#c4c4c4", "#2b458d", "#A7958E", "#e778cf", "#d31c22", "#B4388A", "#21a6ce", "#1f42b4", "#f5b744", "#9a9fbe", "#565c50", "#a764ce", "#bed5f0", "#3077ce", "#aa287f", "#7391c2", "#ffbdb5"]
+    },
+    {
+      "id": "user_pair_reference",
+      "source_assets": ["user_discrete_reference"],
+      "best_for": ["two_state_gradient", "paired_state"],
+      "colors": ["#fad0bf", "#c15e72"]
+    }
+  ]
+}

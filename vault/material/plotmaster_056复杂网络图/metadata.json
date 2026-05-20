@@ -1,0 +1,170 @@
+{
+  "id": "plotmaster_056复杂网络图",
+  "title": "056复杂网络图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "056复杂网络图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "3d_manifold",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 34,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 6,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:13.404385+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:36.476863+00:00",
+    "records": [
+      {
+        "source": "plotmaster_056复杂网络图/data_raw/Supplemental Excel Table.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S1.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S2.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S3.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S4.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S5.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S6.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S7.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S8.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S10.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S11.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S12.csv",
+          "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S13.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotmaster_056复杂网络图/raw/Supplemental Excel Table.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S1.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S2.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S3.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S4.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S5.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S6.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S7.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S8.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S10.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S11.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S12.csv",
+          "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S13.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+    "grammar_geometry": "network",
+    "row_count": 354,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "high",
+    "score": 5.892,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/plot.png",
+    "compat_xlsx": [
+      "raw/Supplemental Excel Table.xlsx"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:31:56.197114+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plot.pdf",
+      "selected": "raw/plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.05846576409309403,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "3d_manifold",
+    "keywords": [
+      "3d_manifold",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "ggplot2",
+      "readxl",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

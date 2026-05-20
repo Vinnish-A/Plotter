@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-plotter.local/schemas/data_contract.schema.json",
+  "title": "Data Contract",
+  "type": "object",
+  "required": ["interface", "main_csv", "required_mappings"],
+  "properties": {
+    "interface": {"const": "single_csv"},
+    "main_csv": {"const": "data_main.csv"},
+    "optional_csv": {"enum": ["data_optional.csv", ""]},
+    "data_unit": {"type": "string"},
+    "required_mappings": {"type": "array", "items": {"type": "string"}},
+    "optional_mappings": {"type": "array", "items": {"type": "string"}},
+    "declared_raw_resources": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

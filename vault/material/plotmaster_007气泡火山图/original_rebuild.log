@@ -1,0 +1,10 @@
+
+[stderr]
+Warning messages:
+1: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead. 
+2: Removed 89 rows containing missing values or values outside the scale range
+(`geom_text_repel()`). 
+Warning message:
+Removed 89 rows containing missing values or values outside the scale range
+(`geom_text_repel()`). 

@@ -1,0 +1,149 @@
+{
+  "id": "plotcase_barplot_多层注释柱状图",
+  "title": "多层注释柱状图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "barplot\\多层注释柱状图"
+  },
+  "mode": "low",
+  "chart_family": [
+    "bar"
+  ],
+  "visual_keywords": [
+    "bar",
+    "stacked_or_grouped",
+    "summary_layer"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "category",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "stack",
+      "error_low",
+      "error_high",
+      "line_value",
+      "annotation_value",
+      "label"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "category-value summary table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:11.676576+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ggtext",
+      "legendry",
+      "scales",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:27.470471+00:00",
+    "records": [
+      {
+        "source": "plotcase_barplot_多层注释柱状图/data_raw/data/data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_barplot_多层注释柱状图/data_raw/data/data.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_barplot_多层注释柱状图/raw/data/data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_barplot_多层注释柱状图/raw/data/data.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/data.csv",
+    "grammar_geometry": "bar_composite",
+    "row_count": 72,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 3.4615,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/data.tsv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:45:01.210584+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.24032789968963858,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "bar_composite",
+    "backend": "R/ggplot2",
+    "unit": "category-value summary table",
+    "required_data_roles": [
+      "category",
+      "value"
+    ],
+    "optional_data_roles": [
+      "group",
+      "stack",
+      "error_low",
+      "error_high",
+      "line_value",
+      "annotation_value",
+      "label"
+    ]
+  }
+}

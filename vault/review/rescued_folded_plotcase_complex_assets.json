@@ -1,0 +1,317 @@
+{
+  "audit_date": "2026-05-18T15:15:29",
+  "rule": "Rescue folded plotcase assets whose original cover shows complex non-map visual grammar; keep true map assets and plain duplicate/simple forms folded. The string heatmap is not treated as map.",
+  "review_contact_sheets": [
+    "vault/review/folded_plotcase_original_contact_sheet.png",
+    "vault/review/folded_plotcase_heatmap_original_sheet.png"
+  ],
+  "rescued_count": 51,
+  "items": [
+    {
+      "case": "plotcase_barplot_多元素组合分布条图",
+      "source": "vault/folded_assets/plotcase_barplot_多元素组合分布条图",
+      "destination": "vault/material/plotcase_barplot_多元素组合分布条图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_circos_GO富集分析通路图",
+      "source": "vault/folded_assets/plotcase_circos_GO富集分析通路图",
+      "destination": "vault/material/plotcase_circos_GO富集分析通路图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_circos_circlize优雅绘制多重注释弦图",
+      "source": "vault/folded_assets/plotcase_circos_circlize优雅绘制多重注释弦图",
+      "destination": "vault/material/plotcase_circos_circlize优雅绘制多重注释弦图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_circos_circlize绘制和弦图进阶版",
+      "source": "vault/folded_assets/plotcase_circos_circlize绘制和弦图进阶版",
+      "destination": "vault/material/plotcase_circos_circlize绘制和弦图进阶版",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_circos_circlize绘制融合基因图",
+      "source": "vault/folded_assets/plotcase_circos_circlize绘制融合基因图",
+      "destination": "vault/material/plotcase_circos_circlize绘制融合基因图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_circos_多类别关联网络弦图",
+      "source": "vault/folded_assets/plotcase_circos_多类别关联网络弦图",
+      "destination": "vault/material/plotcase_circos_多类别关联网络弦图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_circos_细胞通讯弦图_基础入门",
+      "source": "vault/folded_assets/plotcase_circos_细胞通讯弦图_基础入门",
+      "destination": "vault/material/plotcase_circos_细胞通讯弦图_基础入门",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_network_GO通路相似性网络图_基于基因重叠度",
+      "source": "vault/folded_assets/plotcase_network_GO通路相似性网络图_基于基因重叠度",
+      "destination": "vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_network_ggplot2优雅绘制网络图",
+      "source": "vault/folded_assets/plotcase_network_ggplot2优雅绘制网络图",
+      "destination": "vault/material/plotcase_network_ggplot2优雅绘制网络图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_network_ggraph绘制代谢途径图",
+      "source": "vault/folded_assets/plotcase_network_ggraph绘制代谢途径图",
+      "destination": "vault/material/plotcase_network_ggraph绘制代谢途径图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_network_ggraph绘制环状网络图",
+      "source": "vault/folded_assets/plotcase_network_ggraph绘制环状网络图",
+      "destination": "vault/material/plotcase_network_ggraph绘制环状网络图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_network_分层气泡图_类别层次结构展示",
+      "source": "vault/folded_assets/plotcase_network_分层气泡图_类别层次结构展示",
+      "destination": "vault/material/plotcase_network_分层气泡图_类别层次结构展示",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_network_微生物与代谢物共生网络图",
+      "source": "vault/folded_assets/plotcase_network_微生物与代谢物共生网络图",
+      "destination": "vault/material/plotcase_network_微生物与代谢物共生网络图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_network_细胞通讯网络图",
+      "source": "vault/folded_assets/plotcase_network_细胞通讯网络图",
+      "destination": "vault/material/plotcase_network_细胞通讯网络图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_network_蛋白互作网络图",
+      "source": "vault/folded_assets/plotcase_network_蛋白互作网络图",
+      "destination": "vault/material/plotcase_network_蛋白互作网络图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_pie_多层饼图",
+      "source": "vault/folded_assets/plotcase_pie_多层饼图",
+      "destination": "vault/material/plotcase_pie_多层饼图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_point_多层级曼哈顿图",
+      "source": "vault/folded_assets/plotcase_point_多层级曼哈顿图",
+      "destination": "vault/material/plotcase_point_多层级曼哈顿图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_point_效应量森林图_分组比较与显著性标注",
+      "source": "vault/folded_assets/plotcase_point_效应量森林图_分组比较与显著性标注",
+      "destination": "vault/material/plotcase_point_效应量森林图_分组比较与显著性标注",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_point_散点图叠加多坐标轴",
+      "source": "vault/folded_assets/plotcase_point_散点图叠加多坐标轴",
+      "destination": "vault/material/plotcase_point_散点图叠加多坐标轴",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线",
+      "source": "vault/folded_assets/plotcase_point_气泡图高阶用法添加时间轨迹趋势线",
+      "destination": "vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_sankey_桑基流向图",
+      "source": "vault/folded_assets/plotcase_sankey_桑基流向图",
+      "destination": "vault/material/plotcase_sankey_桑基流向图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_sankey_渐变色桑基图",
+      "source": "vault/folded_assets/plotcase_sankey_渐变色桑基图",
+      "destination": "vault/material/plotcase_sankey_渐变色桑基图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_sankey_节点融合桑基图",
+      "source": "vault/folded_assets/plotcase_sankey_节点融合桑基图",
+      "destination": "vault/material/plotcase_sankey_节点融合桑基图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_tree_ggtree绘制系统发育树",
+      "source": "vault/folded_assets/plotcase_tree_ggtree绘制系统发育树",
+      "destination": "vault/material/plotcase_tree_ggtree绘制系统发育树",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_冲积图_物种组成冲积图",
+      "source": "vault/folded_assets/plotcase_冲积图_物种组成冲积图",
+      "destination": "vault/material/plotcase_冲积图_物种组成冲积图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_哑铃图_环形哑铃通路图",
+      "source": "vault/folded_assets/plotcase_哑铃图_环形哑铃通路图",
+      "destination": "vault/material/plotcase_哑铃图_环形哑铃通路图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_基因组图_geneviewer基因簇结构可视化",
+      "source": "vault/folded_assets/plotcase_基因组图_geneviewer基因簇结构可视化",
+      "destination": "vault/material/plotcase_基因组图_geneviewer基因簇结构可视化",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_基因组图_比较基因组结构图",
+      "source": "vault/folded_assets/plotcase_基因组图_比较基因组结构图",
+      "destination": "vault/material/plotcase_基因组图_比较基因组结构图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_森林图_多因素Cox森林图",
+      "source": "vault/folded_assets/plotcase_森林图_多因素Cox森林图",
+      "destination": "vault/material/plotcase_森林图_多因素Cox森林图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_森林图_森林图进阶图例映射版",
+      "source": "vault/folded_assets/plotcase_森林图_森林图进阶图例映射版",
+      "destination": "vault/material/plotcase_森林图_森林图进阶图例映射版",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_流程图_细胞网络通讯示意图",
+      "source": "vault/folded_assets/plotcase_流程图_细胞网络通讯示意图",
+      "destination": "vault/material/plotcase_流程图_细胞网络通讯示意图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_维诺图_维诺图划分子区域",
+      "source": "vault/folded_assets/plotcase_维诺图_维诺图划分子区域",
+      "destination": "vault/material/plotcase_维诺图_维诺图划分子区域",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_综合图_lefse分析图",
+      "source": "vault/folded_assets/plotcase_综合图_lefse分析图",
+      "destination": "vault/material/plotcase_综合图_lefse分析图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_3D热图",
+      "source": "vault/folded_assets/plotcase_heatmap_3D热图",
+      "destination": "vault/material/plotcase_heatmap_3D热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_Mantel检验热图",
+      "source": "vault/folded_assets/plotcase_heatmap_Mantel检验热图",
+      "destination": "vault/material/plotcase_heatmap_Mantel检验热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_circlize绘制环状聚类热图",
+      "source": "vault/folded_assets/plotcase_heatmap_circlize绘制环状聚类热图",
+      "destination": "vault/material/plotcase_heatmap_circlize绘制环状聚类热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_ggtree绘制环状聚类热图",
+      "source": "vault/folded_assets/plotcase_heatmap_ggtree绘制环状聚类热图",
+      "destination": "vault/material/plotcase_heatmap_ggtree绘制环状聚类热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+      "source": "vault/folded_assets/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+      "destination": "vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_回归方差分解热图",
+      "source": "vault/folded_assets/plotcase_heatmap_回归方差分解热图",
+      "destination": "vault/material/plotcase_heatmap_回归方差分解热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_基因表达注释热图",
+      "source": "vault/folded_assets/plotcase_heatmap_基因表达注释热图",
+      "destination": "vault/material/plotcase_heatmap_基因表达注释热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_多元素个性化对角线热图",
+      "source": "vault/folded_assets/plotcase_heatmap_多元素个性化对角线热图",
+      "destination": "vault/material/plotcase_heatmap_多元素个性化对角线热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_多元素个性化气泡热图",
+      "source": "vault/folded_assets/plotcase_heatmap_多元素个性化气泡热图",
+      "destination": "vault/material/plotcase_heatmap_多元素个性化气泡热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_多类别注释风格热图",
+      "source": "vault/folded_assets/plotcase_heatmap_多类别注释风格热图",
+      "destination": "vault/material/plotcase_heatmap_多类别注释风格热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_时间序列基因表达热图",
+      "source": "vault/folded_assets/plotcase_heatmap_时间序列基因表达热图",
+      "destination": "vault/material/plotcase_heatmap_时间序列基因表达热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_气泡配对连线个性化热图",
+      "source": "vault/folded_assets/plotcase_heatmap_气泡配对连线个性化热图",
+      "destination": "vault/material/plotcase_heatmap_气泡配对连线个性化热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_热图添加层次折叠聚类树",
+      "source": "vault/folded_assets/plotcase_heatmap_热图添加层次折叠聚类树",
+      "destination": "vault/material/plotcase_heatmap_热图添加层次折叠聚类树",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_环状分组热图",
+      "source": "vault/folded_assets/plotcase_heatmap_环状分组热图",
+      "destination": "vault/material/plotcase_heatmap_环状分组热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_环状注释热图",
+      "source": "vault/folded_assets/plotcase_heatmap_环状注释热图",
+      "destination": "vault/material/plotcase_heatmap_环状注释热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_相关性分面热图",
+      "source": "vault/folded_assets/plotcase_heatmap_相关性分面热图",
+      "destination": "vault/material/plotcase_heatmap_相关性分面热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_相关性注释热图",
+      "source": "vault/folded_assets/plotcase_heatmap_相关性注释热图",
+      "destination": "vault/material/plotcase_heatmap_相关性注释热图",
+      "status": "rescued_to_material"
+    },
+    {
+      "case": "plotcase_heatmap_配对连线热图",
+      "source": "vault/folded_assets/plotcase_heatmap_配对连线热图",
+      "destination": "vault/material/plotcase_heatmap_配对连线热图",
+      "status": "rescued_to_material"
+    }
+  ]
+}

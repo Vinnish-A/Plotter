@@ -1,0 +1,129 @@
+{
+  "id": "plotmaster_058分面折线图+置信区间+误差棒",
+  "title": "058分面折线图+置信区间+误差棒",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "058分面折线图+置信区间+误差棒"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "bar",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 23,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:13.420451+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "grid",
+      "gtable"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/TableS3.csv",
+    "grammar_geometry": "line",
+    "row_count": 16,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+    "reason": "visual_redundancy:line:line",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/TableS3.csv"
+    ],
+    "returncode": 1,
+    "rebuilt_at": "2026-05-17T15:46:10.471750+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plot.pdf",
+      "selected": "raw/plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.13347310092441164,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "bar",
+    "keywords": [
+      "bar",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "ggplot2",
+      "grid",
+      "gtable"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

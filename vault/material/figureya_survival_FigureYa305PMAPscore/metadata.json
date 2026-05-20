@@ -1,0 +1,153 @@
+{
+  "id": "figureya_survival_FigureYa305PMAPscore",
+  "title": "FigureYa305PMAPscore",
+  "source": {
+    "root": "raw/FigureYa",
+    "original_path": "FigureYa305PMAPscore"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "ComplexHeatmap"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 364,
+    "outputs": 6,
+    "scripts": 3,
+    "raw_data": 1,
+    "docs": 5
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:11.570701+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "dplyr",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "BiocManager",
+      "ComplexHeatmap",
+      "KEGGREST",
+      "PMAPscore",
+      "SPIA",
+      "knitr"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:26.837429+00:00",
+    "records": [
+      {
+        "source": "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA.RData",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA_csv/_rdata_conversion_manifest.csv",
+          "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA_csv/object_summary.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA.RData",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA_csv/_rdata_conversion_manifest.csv",
+          "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA_csv/object_summary.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/InputData/hsaSPIA_csv/object_summary.csv",
+    "grammar_geometry": "line",
+    "row_count": 1,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 2.79,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "case_level_rendered_output",
+    "generated_source": "raw/km_curve.pdf",
+    "fallback_reason": "Full PMAPscore workflow exceeds batch timeout; using provided case-level rendered KM output.",
+    "rebuilt_at": "2026-05-17T16:15:00.210837+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_003_km_curve.pdf",
+      "selected": "raw/km_curve.pdf",
+      "page": 0,
+      "previous_rmse": 0.14408077375312156,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ComplexHeatmap-circlize",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap",
+      "ComplexHeatmap"
+    ],
+    "visual_dependencies": [
+      "BiocManager",
+      "ComplexHeatmap",
+      "KEGGREST",
+      "PMAPscore",
+      "SPIA",
+      "dplyr",
+      "knitr"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

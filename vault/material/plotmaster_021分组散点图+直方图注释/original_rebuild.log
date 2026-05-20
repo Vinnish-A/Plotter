@@ -1,0 +1,22 @@
+  Genome size GC content         group
+1   1.5665208   3.776681 Bacteroidetes
+2   1.0487747   3.409877    Firmicutes
+3   0.4320459   2.974752  Host unknown
+4   0.8521241   2.265011    Firmicutes
+5   2.0625189   2.341081  Host unknown
+6  -0.5283141   2.197489  Host unknown
+
+[stderr]
+
+Attaching package: ‘ggplot2’
+
+The following objects are masked from ‘package:psych’:
+
+    %+%, alpha
+
+Warning message:
+In geom_histogram(aes(`Genome size`), binwidth = 0.2, fill = "#9db1c1",  :
+  Ignoring unknown parameters: `size`
+Warning message:
+In geom_histogram(aes(`GC content`), binwidth = 0.2, fill = "#9db1c1",  :
+  Ignoring unknown parameters: `size`

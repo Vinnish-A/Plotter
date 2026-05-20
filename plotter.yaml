@@ -1,0 +1,60 @@
+project:
+  name: The Plotter
+  purpose: external_visual_cognition_system
+  machine_entry: metadata.json
+  agent_entry: agent_guide.md
+
+modules:
+  cabal:
+    role: decision_routing_scoring_review
+    tools: cabal/tools
+  vault:
+    role: accepted_asset_memory_and_template_archive
+    material_root: vault/material
+  graft:
+    role: foreign_code_normalization
+    intake_root: graft/intake
+    tools: graft/tools
+  bastard:
+    role: visual_gene_recombination
+    tests: bastard/tests
+    generated: bastard/generated
+  retinue:
+    role: execution_rendering_export
+    tools: retinue/tools
+  ui:
+    role: system_preview_and_manual_review
+    root: ui
+
+admission_pipeline:
+  - graft_intake
+  - retinue_rebuild
+  - cabal_review
+  - vault_admission
+  - ui_preview
+
+material_contract:
+  root: vault/material
+  main_csv: data_main.csv
+  optional_csv: data_optional.csv
+  standard_outputs:
+    - outputs/rebuilt.png
+  optional_outputs:
+    - outputs/rebuilt.pdf
+  manifests:
+    - manifests/intake_manifest.json
+    - manifests/rebuild_manifest.json
+    - manifests/visual_audit.json
+    - manifests/cabal_review.json
+  statuses:
+    - pending
+    - standardized
+    - build_success
+    - build_failed
+    - custom_required
+    - dependency_missing
+  complexity_modes:
+    low: data_main.csv only
+    medium: data_main.csv plus common module composition
+    high: data_main.csv plus data_optional.csv and multilayer or multipanel output
+    custom: raw resources, manual coordinates, hardcoded annotations, or special assets required

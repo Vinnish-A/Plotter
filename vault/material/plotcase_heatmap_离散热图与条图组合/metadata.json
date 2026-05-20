@@ -1,0 +1,245 @@
+{
+  "id": "plotcase_heatmap_离散热图与条图组合",
+  "title": "离散热图与条图组合",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "heatmap\\离散热图与条图组合"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "heatmap"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "matrix_body",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_mappings": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "long matrix table with optional row/column annotations"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:12.164642+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "patchwork"
+    ],
+    "special": [
+      "legendry",
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:30.621794+00:00",
+    "records": [
+      {
+        "source": "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig1b.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig1c.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig1d.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig2a.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig2b.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig2g.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig2h.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3a.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3b-e.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3g.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3h.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3i.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig4a-b.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig4c-e.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig4f-h.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig5a__c__and_d.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig5b.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig5e.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6b.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6c.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6d-e.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6f.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6g.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__FigS3.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__FigS4.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S5A.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S5B.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S5C.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S6.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S7.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S8A.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S8B.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S9A.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S9B.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S10A.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S10B.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S10C.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S11A.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S11B.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S12A.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S12B.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S12C.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S13A.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S13B.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S15A.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S15B.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S15C.csv",
+          "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S16.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig1b.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig1c.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig1d.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig2a.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig2b.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig2g.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig2h.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3a.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3b-e.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3g.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3h.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3i.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig4a-b.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig4c-e.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig4f-h.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig5a__c__and_d.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig5b.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig5e.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6b.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6c.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6d-e.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6f.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6g.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__FigS3.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__FigS4.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S5A.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S5B.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S5C.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S6.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S7.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S8A.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S8B.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S9A.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S9B.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S10A.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S10B.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S10C.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S11A.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S11B.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S12A.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S12B.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S12C.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S13A.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S13B.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S15A.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S15B.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S15C.csv",
+          "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S16.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/41467_2022_35431_MOESM8_ESM__S6.csv",
+    "grammar_geometry": "annotated_heatmap",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 5.2367,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/41467_2022_35431_MOESM8_ESM.xlsx"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:33:05.100594+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.3143175090503449,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "annotated_heatmap",
+    "backend": "R/ggplot2",
+    "unit": "long matrix table with optional row/column annotations",
+    "required_data_roles": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_data_roles": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ]
+  }
+}

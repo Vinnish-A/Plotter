@@ -1,0 +1,125 @@
+{
+  "id": "plotmaster_061散点图+双向误差棒",
+  "title": "061散点图+双向误差棒",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "061散点图+双向误差棒"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "scatter",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 20,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:13.444297+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "scatter",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/plot.png",
+    "compat_xlsx": [],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:46:11.648726+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plot.pdf",
+      "selected": "raw/plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.10804861728173544,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "scatter",
+    "keywords": [
+      "scatter",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "ggplot2",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

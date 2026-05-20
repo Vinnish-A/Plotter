@@ -1,0 +1,147 @@
+{
+  "id": "plotmaster_063_共定位矩阵散点图+柱状图注释",
+  "title": "063 共定位矩阵散点图+柱状图注释",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "063 共定位矩阵散点图+柱状图注释"
+  },
+  "mode": "high",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "heatmap"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 31,
+    "outputs": 2,
+    "scripts": 1,
+    "raw_data": 2,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:13.460331+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "tidyr"
+    ],
+    "special": [
+      "ggsci",
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:36.826876+00:00",
+    "records": [
+      {
+        "source": "plotmaster_063_共定位矩阵散点图+柱状图注释/data_raw/data.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_063_共定位矩阵散点图+柱状图注释/data_raw/data.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotmaster_063_共定位矩阵散点图+柱状图注释/raw/data.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_063_共定位矩阵散点图+柱状图注释/raw/data.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data.csv",
+    "grammar_geometry": "heatmap",
+    "row_count": 43,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "high",
+    "score": 5.3984,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/plot.png",
+    "compat_xlsx": [
+      "raw/data.xlsx",
+      "raw/group.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:32:06.628004+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_002_plot_AI.pdf",
+      "selected": "raw/plot_AI.pdf",
+      "page": 0,
+      "previous_rmse": 0.10201085674972096,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap"
+    ],
+    "visual_dependencies": [
+      "ggsci",
+      "readxl",
+      "tidyr",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

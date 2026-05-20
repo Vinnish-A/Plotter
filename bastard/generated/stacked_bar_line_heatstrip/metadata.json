@@ -1,0 +1,26 @@
+{
+  "case_id": "stacked_bar_line_heatstrip",
+  "intent": "Use a PlotMaster-like single-figure grammar: stacked bars, an overlaid signal line, and aligned heat/group annotation strips.",
+  "complexity": "high",
+  "template_refs": [
+    "plotmaster_019堆积柱状图+折线+热图注释",
+    "plotcase_barplot_多元素组合分布条图"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "category",
+    "stack",
+    "value",
+    "line_value",
+    "annotation_value",
+    "group"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}

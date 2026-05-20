@@ -1,0 +1,96 @@
+Starting R package installation...
+===========================================
+
+Installing survminer dependencies...
+Package already installed: gridtext 
+Package already installed: ggtext 
+
+Installing CRAN packages...
+Package already installed: ggplot2 
+Package already installed: ggpubr 
+Package already installed: survminer 
+
+Installing Bioconductor packages...
+Installing Bioconductor package: ComparisonSurv 
+begin installing package ‘TSHRC’
+* installing *source* package ‘TSHRC’ ...
+** package ‘TSHRC’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/RtmpN8v0qE/R.INSTALLe20c64a3d5ca6/TSHRC/src'
+gcc -I"/usr/share/R/include" -DNDEBUG      -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c crandom.c -o crandom.o
+gcc -I"/usr/share/R/include" -DNDEBUG      -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c init.c -o init.o
+gfortran  -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong  -c two-stage.f -o two-stage.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o TSHRC.so crandom.o init.o two-stage.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpN8v0qE/R.INSTALLe20c64a3d5ca6/TSHRC/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-TSHRC/00new/TSHRC/libs
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (TSHRC)
+begin installing package ‘ComparisonSurv’
+* installing *source* package ‘ComparisonSurv’ ...
+** package ‘ComparisonSurv’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ComparisonSurv)
+Successfully installed: ComparisonSurv 
+Package already installed: survRM2 
+
+===========================================
+Package installation completed!
+You can now run your R scripts in this directory.
+
+[stderr]
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org/
+Bioconductor version 3.20 (BiocManager 1.30.25), R 4.4.2 (2024-10-31)
+Installing package(s) 'ComparisonSurv'
+also installing the dependency ‘TSHRC’
+
+trying URL 'https://cloud.r-project.org/src/contrib/TSHRC_0.1-6.tar.gz'
+Content type 'application/x-gzip' length 9371 bytes
+==================================================
+downloaded 9371 bytes
+
+trying URL 'https://cloud.r-project.org/src/contrib/ComparisonSurv_1.1.1.tar.gz'
+Content type 'application/x-gzip' length 18154 bytes (17 KB)
+==================================================
+downloaded 17 KB
+
+
+The downloaded source packages are in
+	‘/tmp/Rtmp5b0zad/downloaded_packages’
+Loading required package: survival
+
+Attaching package: ‘survminer’
+
+The following object is masked from ‘package:survival’:
+
+    myeloma
+
+Ignoring unknown labels:
+• fill : ""
+• linetype : "1"
+Ignoring unknown labels:
+• fill : ""
+• linetype : "1"

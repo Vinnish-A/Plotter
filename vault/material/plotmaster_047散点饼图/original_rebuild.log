@@ -1,0 +1,33 @@
+   Time Proportion   ProNeu   PreNeu MatureNeu   Monocyte          B          T
+6    d1  1.8108652 0.000000 1.587302  39.68254   3.174603 25.3968254 30.1587302
+11   d1 18.7098657 0.000000 0.000000  96.72387   2.496100  0.4680187  0.3120125
+16   d1  0.1209190 0.000000 0.000000   0.00000   0.000000  0.0000000 50.0000000
+21   d1  1.7464678 1.123596 0.000000  12.35955  21.348315 52.8089888  6.7415730
+7   d14  1.0000000 0.000000 0.000000   0.00000 100.000000  0.0000000  0.0000000
+12  d14  0.1291572 0.000000 0.000000  25.00000   0.000000 25.0000000 50.0000000
+   NK Megakaryocyte   x region
+6   0      0.000000 0.5      1
+11  0      0.000000 1.5      2
+16 50      0.000000 2.5      3
+21  0      5.617978 3.5      4
+7   0      0.000000 4.5      5
+12  0      0.000000 5.5      6
+
+[stderr]
+scatterpie v0.2.4 Learn more at https://yulab-smu.top/
+
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning message:
+`aes_()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`
+ℹ The deprecated feature was likely used in the scatterpie package.
+  Please report the issue to the authors. 

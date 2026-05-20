@@ -1,0 +1,141 @@
+{
+  "id": "plotcase_circos_circlize优雅绘制多重注释弦图",
+  "title": "circlize优雅绘制多重注释弦图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "circos\\circlize优雅绘制多重注释弦图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "circos",
+    "chord_network"
+  ],
+  "visual_keywords": [
+    "circos",
+    "chord_network",
+    "radial_layout",
+    "link_weight"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_mappings": [
+      "source_group",
+      "target_group",
+      "direction",
+      "sector_order",
+      "sector_color",
+      "label"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "edge list or adjacency matrix normalized to source-target-weight"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:11.813904+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "circlize",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:28.540154+00:00",
+    "records": [
+      {
+        "source": "plotcase_circos_circlize优雅绘制多重注释弦图/data_raw/data/data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_circos_circlize优雅绘制多重注释弦图/data_raw/data/data.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_circos_circlize优雅绘制多重注释弦图/raw/data/data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_circos_circlize优雅绘制多重注释弦图/raw/data/data.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/data.csv",
+    "grammar_geometry": "chord_circos",
+    "row_count": 8,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_circos_circlize绘制和弦图",
+    "reason": "visual_redundancy:network:circos",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/data.tsv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-18T07:49:46.258623+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "chord_circos",
+    "backend": "R/ComplexHeatmap-circlize",
+    "unit": "edge list or adjacency matrix normalized to source-target-weight",
+    "required_data_roles": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_data_roles": [
+      "source_group",
+      "target_group",
+      "direction",
+      "sector_order",
+      "sector_color",
+      "label"
+    ]
+  }
+}

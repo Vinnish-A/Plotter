@@ -1,0 +1,121 @@
+{
+  "id": "plotmaster_062环形分组折线图",
+  "title": "062环形分组折线图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "062环形分组折线图"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "network"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 32,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 0,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:13.452394+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "line",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+    "reason": "visual_redundancy:line:line",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/plot.png",
+    "compat_xlsx": [],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T16:06:02.569967+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plot.pdf",
+      "selected": "raw/plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.01583821957459256,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "network",
+    "keywords": [
+      "network"
+    ],
+    "visual_dependencies": [
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

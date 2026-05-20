@@ -1,0 +1,124 @@
+{
+  "id": "plotmaster_48个性化桑基图",
+  "title": "48个性化桑基图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "48个性化桑基图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "3d_manifold",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 4,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:13.468611+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "RColorBrewer",
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data.csv",
+    "grammar_geometry": "network",
+    "row_count": 28,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 4.5359,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/plot.png",
+    "compat_xlsx": [
+      "raw/data.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:34:45.944959+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plot.pdf",
+      "selected": "raw/plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.08339970404808121,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "3d_manifold",
+    "keywords": [
+      "3d_manifold",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "RColorBrewer",
+      "ggplot2",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

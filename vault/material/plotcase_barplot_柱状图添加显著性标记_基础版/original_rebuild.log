@@ -1,0 +1,56 @@
+
+[stderr]
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+Attaching package: ‘rstatix’
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+Rows: 120 Columns: 4
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (3): Celltype, Group, Mice
+dbl (1): Cell Count ×10^6
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Error:
+! Problem while computing aesthetics.
+ℹ Error occurred in the 4th layer.
+Caused by error:
+! object 'Treatment' not found
+Backtrace:
+     ▆
+  1. ├─base (local) `<fn>`(x)
+  2. ├─ggplot2 (local) `print.ggplot2::ggplot`(x)
+  3. │ ├─ggplot2::ggplot_build(x)
+  4. │ └─ggplot2 (local) `ggplot_build.ggplot2::ggplot`(x)
+  5. │   └─ggplot2:::by_layer(...)
+  6. │     ├─rlang::try_fetch(...)
+  7. │     │ ├─base::tryCatch(...)
+  8. │     │ │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  9. │     │ │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 10. │     │ │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 11. │     │ └─base::withCallingHandlers(...)
+ 12. │     └─ggplot2 (local) f(l = layers[[i]], d = data[[i]])
+ 13. │       └─l$compute_aesthetics(d, plot)
+ 14. │         └─ggplot2 (local) compute_aesthetics(..., self = self)
+ 15. │           └─ggplot2:::eval_aesthetics(aesthetics, data)
+ 16. │             └─base::lapply(aesthetics, eval_tidy, data = data, env = env)
+ 17. │               └─rlang (local) FUN(X[[i]], ...)
+ 18. └─base::.handleSimpleError(...)
+ 19.   └─rlang (local) h(simpleError(msg, call))
+ 20.     └─handlers[[1L]](cnd)
+ 21.       └─cli::cli_abort(...)
+ 22.         └─rlang::abort(...)
+Execution halted

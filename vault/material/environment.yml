@@ -1,0 +1,39 @@
+name: plotter-agent
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pip
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - plotnine
+  - scikit-learn
+  - networkx
+  - openpyxl
+  - pillow
+  - r-base=4.3
+  - r-tidyverse
+  - r-data.table
+  - r-readxl
+  - r-ggplot2
+  - r-cowplot
+  - r-patchwork
+  - r-ggrepel
+  - r-ggpubr
+  - r-reshape2
+  - r-survival
+  - r-survminer
+  - r-rms
+  - r-pheatmap
+  - r-circlize
+  - r-complexheatmap
+  - r-igraph
+  - r-ggraph
+  - r-tidytree
+  - r-ape
+  - pip:
+      - kaleido

@@ -1,0 +1,136 @@
+{
+  "id": "plotcase_heatmap_极坐标热图添加聚类",
+  "title": "极坐标热图添加聚类",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "heatmap\\极坐标热图添加聚类"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "heatmap"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "matrix_body",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_mappings": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "long matrix table with optional row/column annotations"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 8,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 3,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:12.084389+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "RColorBrewer",
+      "legendry",
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "annotated_heatmap",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+    "reason": "visual_redundancy:heatmap:map",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "complexity_review": {
+    "status": "reviewed_after_visual_folding",
+    "reason": "mode adjusted by final visual complexity and target live ratio high/medium/low = 0.2/0.3/0.5",
+    "previous_mode": "high"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:33:03.545329+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.1310559197862653,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "annotated_heatmap",
+    "backend": "R/ggplot2",
+    "unit": "long matrix table with optional row/column annotations",
+    "required_data_roles": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_data_roles": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "plotmaster_018单细胞分组火山图",
+  "title": "018单细胞分组火山图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "018单细胞分组火山图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "3d_manifold",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 7,
+    "outputs": 2,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 5
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:13.106994+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "dplyr",
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "RColorBrewer",
+      "ggrepel"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data02.csv",
+    "grammar_geometry": "scatter",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 4.4167,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/p1.png",
+    "compat_xlsx": [
+      "raw/data02.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:34:32.118672+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_p1.pdf",
+      "selected": "raw/p1.pdf",
+      "page": 0,
+      "previous_rmse": 0.08686668944339125,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "3d_manifold",
+    "keywords": [
+      "3d_manifold",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "RColorBrewer",
+      "dplyr",
+      "ggplot2",
+      "ggrepel"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

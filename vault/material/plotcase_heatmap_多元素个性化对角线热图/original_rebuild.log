@@ -1,0 +1,26 @@
+
+[stderr]
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Rows: 18 Columns: 11
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (7): Stage, Histology, Treatment, Pretreatment_detectio, Pretreatment_de...
+dbl (4): EGFR, Smoking_status, Recurrence, Sample_no
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Warning messages:
+1: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+2: In `margin()`, the argument `t` should have length 1, not length 2.
+ℹ Argument get(s) truncated to length 1. 
+3: In `margin()`, the argument `t` should have length 1, not length 4.
+ℹ Argument get(s) truncated to length 1. 

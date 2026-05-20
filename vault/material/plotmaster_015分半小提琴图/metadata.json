@@ -1,0 +1,130 @@
+{
+  "id": "plotmaster_015分半小提琴图",
+  "title": "015分半小提琴图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "015分半小提琴图"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "network",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 5,
+    "outputs": 2,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:13.082772+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "gghalves",
+      "grid",
+      "plyr",
+      "scales",
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data.csv",
+    "grammar_geometry": "box",
+    "row_count": 84,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 4.0984,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/split_violin_plot.R",
+    "generated_source": "raw/violin_plot.png",
+    "compat_xlsx": [
+      "raw/data.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T16:08:41.941134+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_violin_plot.pdf",
+      "selected": "raw/violin_plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.07741793649316213,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "network",
+    "keywords": [
+      "network",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "gghalves",
+      "ggplot2",
+      "grid",
+      "plyr",
+      "scales",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

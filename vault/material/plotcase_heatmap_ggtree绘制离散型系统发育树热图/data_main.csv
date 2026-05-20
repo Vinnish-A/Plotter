@@ -1,0 +1,10 @@
+node_id,parent_id,label,branch_length,tip_group,track,track_value,track_class,heatmap_value
+N1,,Tip 1,0.13,G1,ann,0.841,,0.54
+N2,N1,Tip 2,0.16,G2,ann,0.909,,-0.416
+N3,N1,Tip 3,0.19,G0,ann,0.141,,-0.99
+N4,N2,Tip 4,0.22,G1,ann,-0.757,,-0.654
+N5,N2,Tip 5,0.25,G2,ann,-0.959,,0.284
+N6,N3,Tip 6,0.28,G0,ann,-0.279,,0.96
+N7,N3,Tip 7,0.31,G1,ann,0.657,,0.754
+N8,N4,Tip 8,0.34,G2,ann,0.989,,-0.146
+N9,N4,Tip 9,0.37,G0,ann,0.412,,-0.911

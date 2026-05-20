@@ -1,0 +1,12 @@
+     mRNA_FC      RPF_FC
+1 -0.3942020 -0.66620709
+2 -0.1875013  0.52843278
+3 -0.7834284 -0.03536383
+4 -0.9801491 -0.39895763
+5 -0.3845149  0.56646094
+6  0.3792915  0.59680731
+
+[stderr]
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 

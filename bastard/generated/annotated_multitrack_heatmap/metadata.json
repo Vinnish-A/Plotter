@@ -1,0 +1,27 @@
+{
+  "case_id": "annotated_multitrack_heatmap",
+  "intent": "Use a ComplexHeatmap-like grammar: heatmap body plus row annotation, column annotation, and marginal summaries.",
+  "complexity": "high",
+  "template_refs": [
+    "plotcase_heatmap_多层嵌套分面热图",
+    "plotmaster_016复杂热图+渐变色连线",
+    "plotmaster_019堆积柱状图+折线+热图注释"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "x",
+    "y",
+    "value",
+    "row_group",
+    "column_group",
+    "annotation_value"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}

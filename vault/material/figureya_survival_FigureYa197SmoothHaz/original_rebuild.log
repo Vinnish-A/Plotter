@@ -1,0 +1,135 @@
+===========================================
+Installing dependencies for FigureYa197SmoothHaz.Rmd
+===========================================
+Installing core packages...
+Already installed: cowplot 
+Already installed: dplyr 
+Already installed: ggplot2 
+Already installed: muhaz 
+Already installed: openxlsx 
+Already installed: survival 
+Already installed: survminer 
+Already installed: remotes 
+Already installed: Rttf2pt1 
+Already installed: extrafontdb 
+Handling extrafont...
+Verifying installation...
+OK: survival installed successfully
+OK: survminer installed successfully
+OK: muhaz installed successfully
+OK: ggplot2 installed successfully
+OK: extrafont installed successfully
+Initializing font system...
+Importing Arial and Helvetica fonts...
+Font initialization failed: arguments imply differing number of rows: 0, 1 
+===========================================
+Installation completed!
+===========================================
+使用系统默认字体: Helvetica  (HTML输出)
+[1] 5000    6
+  DFI DFI.time gender time_month survevent survmonth
+1   1      754   MALE       25.1         1      25.1
+[1] 5000    6
+  DFI DFI.time gender time_month survevent survmonth
+1   1      754   MALE       25.1         1      25.1
+2   1       53 FEMALE        1.8         1       1.8
+3   0     2703 FEMALE       90.1         0      72.0
+4   1      530   MALE       17.7         1      17.7
+5   1      414 FEMALE       13.8         1      13.8
+6   0     3038 FEMALE      101.3         0      72.0
+# A tibble: 2 × 2
+  Subgroup stratMax
+  <chr>       <dbl>
+1 FEMALE    0.0103 
+2 MALE      0.00990
+[1] 0.9625112
+Call:
+coxph(formula = Surv(survmonth, survevent) ~ gender, data = clin)
+
+  n= 5000, number of events= 1006 
+
+              coef exp(coef) se(coef)     z Pr(>|z|)
+genderMALE 0.07696   1.08000  0.06342 1.214    0.225
+
+           exp(coef) exp(-coef) lower .95 upper .95
+genderMALE      1.08     0.9259    0.9538     1.223
+
+Concordance= 0.516  (se = 0.008 )
+Likelihood ratio test= 1.47  on 1 df,   p=0.2
+Wald test            = 1.47  on 1 df,   p=0.2
+Score (logrank) test = 1.47  on 1 df,   p=0.2
+
+pdf 
+  2 
+
+[stderr]
+Registering fonts with R
+Scanning ttf files in /usr/share/fonts/, /usr/local/share/fonts/ ...
+Extracting .afm files from .ttf files...
+/usr/share/fonts/truetype/msttcorefonts/Arial_Black.ttf : Arial-Black already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial_Bold_Italic.ttf : Arial-BoldItalicMT already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial_Bold.ttf : Arial-BoldMT already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial_Italic.ttf : Arial-ItalicMT already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial.ttf : ArialMT already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial.ttf : ArialMT already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial_Bold.ttf : Arial-BoldMT already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial_Bold_Italic.ttf : Arial-BoldItalicMT already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial_Italic.ttf : Arial-ItalicMT already registered in fonts database. Skipping.
+/usr/share/fonts/truetype/msttcorefonts/Arial_Black.ttf : Arial-Black already registered in fonts database. Skipping.
+Found FontName for 0 fonts.
+Scanning afm files in /usr/lib/R/library/extrafontdb/metrics
+Scanning ttf files in /usr/share/fonts/, /usr/local/share/fonts/ ...
+Extracting .afm files from .ttf files...
+There were 48 warnings (use warnings() to see them)
+Loading required package: ggplot2
+Loading required package: ggpubr
+
+Attaching package: ‘survminer’
+
+The following object is masked from ‘package:survival’:
+
+    myeloma
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggpubr’:
+
+    get_legend
+
+Warning message:
+In muhaz(times = .$survmonth, delta = .$survevent, min.time = min(.$survmonth[.$survevent ==  :
+  minimum time > minimum Survival Time
+
+
+Ignoring unknown labels:
+• fill : ""
+• linetype : "1"
+Warning messages:
+1: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the ggpubr package.
+  Please report the issue at <https://github.com/kassambara/ggpubr/issues>. 
+2: ggtheme is not a valid theme.
+Please use `theme()` to construct themes. 
+3: ggtheme is not a valid theme.
+Please use `theme()` to construct themes. 
+4: tables.theme is not a valid theme.
+Please use `theme()` to construct themes. 
+Ignoring unknown labels:
+• colour : ""
+Ignoring unknown labels:
+• colour : ""
+Ignoring unknown labels:
+• colour : ""

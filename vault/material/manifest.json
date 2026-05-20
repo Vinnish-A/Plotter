@@ -1,0 +1,2842 @@
+﻿[
+    {
+        "id":  "plotcase_barplot_ggplot2优雅的绘制径向条形图",
+        "title":  "ggplot2优雅的绘制径向条形图",
+        "source":  "barplot\\ggplot2优雅的绘制径向条形图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_ggplot2绘制小清新版箭头图",
+        "title":  "ggplot2绘制小清新版箭头图",
+        "source":  "barplot\\ggplot2绘制小清新版箭头图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_ggplot2绘制菌群分布图",
+        "title":  "ggplot2绘制菌群分布图",
+        "source":  "barplot\\ggplot2绘制菌群分布图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_个性化环状条形图",
+        "title":  "个性化环状条形图",
+        "source":  "barplot\\个性化环状条形图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_区域缩柱状图_(基础入门)",
+        "title":  "区域缩柱状图_(基础入门)",
+        "source":  "barplot\\区域缩柱状图_(基础入门)",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_基因富集分析条图",
+        "title":  "基因富集分析条图",
+        "source":  "barplot\\基因富集分析条图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_多元素组合分布条图",
+        "title":  "多元素组合分布条图",
+        "source":  "barplot\\多元素组合分布条图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_多层注释柱状图",
+        "title":  "多层注释柱状图",
+        "source":  "barplot\\多层注释柱状图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_多层注释柱状图进阶版",
+        "title":  "多层注释柱状图进阶版",
+        "source":  "barplot\\多层注释柱状图进阶版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_局部放大柱状图",
+        "title":  "局部放大柱状图",
+        "source":  "barplot\\局部放大柱状图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_barplot_条形图与直方分布图组合",
+        "title":  "条形图与直方分布图组合",
+        "source":  "barplot\\条形图与直方分布图组合",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_极坐标堆砌柱状图",
+        "title":  "极坐标堆砌柱状图",
+        "source":  "barplot\\极坐标堆砌柱状图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_柱状图添加显著性标记_(进阶版)",
+        "title":  "柱状图添加显著性标记_(进阶版)",
+        "source":  "barplot\\柱状图添加显著性标记_(进阶版)",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_柱状图添加显著性标记_基础版",
+        "title":  "柱状图添加显著性标记_基础版",
+        "source":  "barplot\\柱状图添加显著性标记_基础版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_正负分布堆砌条形图",
+        "title":  "正负分布堆砌条形图",
+        "source":  "barplot\\正负分布堆砌条形图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_环形条形图",
+        "title":  "环形条形图",
+        "source":  "barplot\\环形条形图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_配对连线条图",
+        "title":  "配对连线条图",
+        "source":  "barplot\\配对连线条图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_barplot_配对连线条形图_进阶版",
+        "title":  "配对连线条形图_进阶版",
+        "source":  "barplot\\配对连线条形图_进阶版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_boxplot_几何阴影填充箱线图",
+        "title":  "几何阴影填充箱线图",
+        "source":  "boxplot\\几何阴影填充箱线图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_boxplot_多分组分面小提琴箱线图",
+        "title":  "多分组分面小提琴箱线图",
+        "source":  "boxplot\\多分组分面小提琴箱线图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_boxplot_多组配对连线箱线图",
+        "title":  "多组配对连线箱线图",
+        "source":  "boxplot\\多组配对连线箱线图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_boxplot_方差分析箱线图_进阶版",
+        "title":  "方差分析箱线图_进阶版",
+        "source":  "boxplot\\方差分析箱线图_进阶版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_boxplot_箱线图_基础入门版",
+        "title":  "箱线图_基础入门版",
+        "source":  "boxplot\\箱线图_基础入门版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_boxplot_配对连线箱线图",
+        "title":  "配对连线箱线图",
+        "source":  "boxplot\\配对连线箱线图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_circos_circlize优雅绘制多重注释弦图",
+        "title":  "circlize优雅绘制多重注释弦图",
+        "source":  "circos\\circlize优雅绘制多重注释弦图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_circos_circlize绘制和弦图",
+        "title":  "circlize绘制和弦图",
+        "source":  "circos\\circlize绘制和弦图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_circos_circlize绘制和弦图进阶版",
+        "title":  "circlize绘制和弦图进阶版",
+        "source":  "circos\\circlize绘制和弦图进阶版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_circos_circlize绘制融合基因图",
+        "title":  "circlize绘制融合基因图",
+        "source":  "circos\\circlize绘制融合基因图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  6,
+        "files":  11
+    },
+    {
+        "id":  "plotcase_circos_GO富集分析通路图",
+        "title":  "GO富集分析通路图",
+        "source":  "circos\\GO富集分析通路图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_circos_多类别关联网络弦图",
+        "title":  "多类别关联网络弦图",
+        "source":  "circos\\多类别关联网络弦图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_circos_细胞通讯和弦图",
+        "title":  "细胞通讯和弦图",
+        "source":  "circos\\细胞通讯和弦图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_circos_细胞通讯弦图_基础入门",
+        "title":  "细胞通讯弦图_基础入门",
+        "source":  "circos\\细胞通讯弦图_基础入门",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_3D热图",
+        "title":  "3D热图",
+        "source":  "heatmap\\3D热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_ARG丰度与环境因子相关性网络热图",
+        "title":  "ARG丰度与环境因子相关性网络热图",
+        "source":  "heatmap\\ARG丰度与环境因子相关性网络热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_circlize绘制环状聚类热图",
+        "title":  "circlize绘制环状聚类热图",
+        "source":  "heatmap\\circlize绘制环状聚类热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_circlize风格多层次极坐标热图",
+        "title":  "circlize风格多层次极坐标热图",
+        "source":  "heatmap\\circlize风格多层次极坐标热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_corrplot绘制相关性热图",
+        "title":  "corrplot绘制相关性热图",
+        "source":  "heatmap\\corrplot绘制相关性热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_ggforce标记关键信息",
+        "title":  "ggforce标记关键信息",
+        "source":  "heatmap\\ggforce标记关键信息",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_ggplot2绘制连续型热图",
+        "title":  "ggplot2绘制连续型热图",
+        "source":  "heatmap\\ggplot2绘制连续型热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_ggtree绘制环状聚类热图",
+        "title":  "ggtree绘制环状聚类热图",
+        "source":  "heatmap\\ggtree绘制环状聚类热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_ggtree绘制离散型系统发育树热图",
+        "title":  "ggtree绘制离散型系统发育树热图",
+        "source":  "heatmap\\ggtree绘制离散型系统发育树热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_ggtree绘制组合热图",
+        "title":  "ggtree绘制组合热图",
+        "source":  "heatmap\\ggtree绘制组合热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_Mantel检验热图",
+        "title":  "Mantel检验热图",
+        "source":  "heatmap\\Mantel检验热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+        "title":  "scDotPlot绘制单细胞层次聚类气泡热图",
+        "source":  "heatmap\\scDotPlot绘制单细胞层次聚类气泡热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_tidyheatmaps轻松绘制热图",
+        "title":  "tidyheatmaps轻松绘制热图",
+        "source":  "heatmap\\tidyheatmaps轻松绘制热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_分组注释标记热图",
+        "title":  "分组注释标记热图",
+        "source":  "heatmap\\分组注释标记热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_分面热图",
+        "title":  "分面热图",
+        "source":  "heatmap\\分面热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_回归方差分解热图",
+        "title":  "回归方差分解热图",
+        "source":  "heatmap\\回归方差分解热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_基因表达注释热图",
+        "title":  "基因表达注释热图",
+        "source":  "heatmap\\基因表达注释热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_多元素个性化对角线热图",
+        "title":  "多元素个性化对角线热图",
+        "source":  "heatmap\\多元素个性化对角线热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_多元素个性化气泡热图",
+        "title":  "多元素个性化气泡热图",
+        "source":  "heatmap\\多元素个性化气泡热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_多分组气泡热图",
+        "title":  "多分组气泡热图",
+        "source":  "heatmap\\多分组气泡热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_多层嵌套分面热图",
+        "title":  "多层嵌套分面热图",
+        "source":  "heatmap\\多层嵌套分面热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_多类别分面注释热图",
+        "title":  "多类别分面注释热图",
+        "source":  "heatmap\\多类别分面注释热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_多类别注释风格热图",
+        "title":  "多类别注释风格热图",
+        "source":  "heatmap\\多类别注释风格热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_多重注释分组热图",
+        "title":  "多重注释分组热图",
+        "source":  "heatmap\\多重注释分组热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_对角线相关性热图",
+        "title":  "对角线相关性热图",
+        "source":  "heatmap\\对角线相关性热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_差异表达基因的层次聚类热图",
+        "title":  "差异表达基因的层次聚类热图",
+        "source":  "heatmap\\差异表达基因的层次聚类热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_时间序列基因表达热图",
+        "title":  "时间序列基因表达热图",
+        "source":  "heatmap\\时间序列基因表达热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_极坐标热图添加聚类",
+        "title":  "极坐标热图添加聚类",
+        "source":  "heatmap\\极坐标热图添加聚类",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_气泡配对连线个性化热图",
+        "title":  "气泡配对连线个性化热图",
+        "source":  "heatmap\\气泡配对连线个性化热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_热图添加层次折叠聚类树",
+        "title":  "热图添加层次折叠聚类树",
+        "source":  "heatmap\\热图添加层次折叠聚类树",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_热图添加渐变色背景",
+        "title":  "热图添加渐变色背景",
+        "source":  "heatmap\\热图添加渐变色背景",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_环状分组热图",
+        "title":  "环状分组热图",
+        "source":  "heatmap\\环状分组热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_环状注释热图",
+        "title":  "环状注释热图",
+        "source":  "heatmap\\环状注释热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_相关性分面热图",
+        "title":  "相关性分面热图",
+        "source":  "heatmap\\相关性分面热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  6,
+        "files":  11
+    },
+    {
+        "id":  "plotcase_heatmap_相关性注释热图",
+        "title":  "相关性注释热图",
+        "source":  "heatmap\\相关性注释热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_相关性热图进阶",
+        "title":  "相关性热图进阶",
+        "source":  "heatmap\\相关性热图进阶",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_heatmap_离散气泡热图",
+        "title":  "离散气泡热图",
+        "source":  "heatmap\\离散气泡热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_离散热图与条图组合",
+        "title":  "离散热图与条图组合",
+        "source":  "heatmap\\离散热图与条图组合",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_系统发育树组合离散热图",
+        "title":  "系统发育树组合离散热图",
+        "source":  "heatmap\\系统发育树组合离散热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_heatmap_边框分组注释热图",
+        "title":  "边框分组注释热图",
+        "source":  "heatmap\\边框分组注释热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_heatmap_配对连线热图",
+        "title":  "配对连线热图",
+        "source":  "heatmap\\配对连线热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  6,
+        "files":  11
+    },
+    {
+        "id":  "plotcase_map_ggbump优雅绘制组合地图",
+        "title":  "ggbump优雅绘制组合地图",
+        "source":  "map\\ggbump优雅绘制组合地图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_map_地图嵌套子图",
+        "title":  "地图嵌套子图",
+        "source":  "map\\地图嵌套子图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_map_地图添加3D饼图注释",
+        "title":  "地图添加3D饼图注释",
+        "source":  "map\\地图添加3D饼图注释",
+        "mode":  "high",
+        "outputs":  3,
+        "scripts":  1,
+        "data":  4,
+        "files":  11
+    },
+    {
+        "id":  "plotcase_map_环状地图",
+        "title":  "环状地图",
+        "source":  "map\\环状地图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_map_连线地图",
+        "title":  "连线地图",
+        "source":  "map\\连线地图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_map_采样点地图",
+        "title":  "采样点地图",
+        "source":  "map\\采样点地图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_map_采样点地图进阶版",
+        "title":  "采样点地图进阶版",
+        "source":  "map\\采样点地图进阶版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_network_ggplot2优雅绘制网络图",
+        "title":  "ggplot2优雅绘制网络图",
+        "source":  "network\\ggplot2优雅绘制网络图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_ggraph构建疾病遗传调控网络图",
+        "title":  "ggraph构建疾病遗传调控网络图",
+        "source":  "network\\ggraph构建疾病遗传调控网络图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_ggraph环形网络图_多维数据圈层",
+        "title":  "ggraph环形网络图_多维数据圈层",
+        "source":  "network\\ggraph环形网络图_多维数据圈层",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_ggraph绘制代谢途径图",
+        "title":  "ggraph绘制代谢途径图",
+        "source":  "network\\ggraph绘制代谢途径图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_network_ggraph绘制环状网络图",
+        "title":  "ggraph绘制环状网络图",
+        "source":  "network\\ggraph绘制环状网络图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_GO通路相似性网络图_基于基因重叠度",
+        "title":  "GO通路相似性网络图_基于基因重叠度",
+        "source":  "network\\GO通路相似性网络图_基于基因重叠度",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_STRING_BioNet网络模块解析代码实战",
+        "title":  "STRING_BioNet网络模块解析代码实战",
+        "source":  "network\\STRING_BioNet网络模块解析代码实战",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_network_Treemap矩形树状GO富集分析图",
+        "title":  "Treemap矩形树状GO富集分析图",
+        "source":  "network\\Treemap矩形树状GO富集分析图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_network_分层气泡图_类别层次结构展示",
+        "title":  "分层气泡图_类别层次结构展示",
+        "source":  "network\\分层气泡图_类别层次结构展示",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_基因互作网络图",
+        "title":  "基因互作网络图",
+        "source":  "network\\基因互作网络图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_微生物与代谢物共生网络图",
+        "title":  "微生物与代谢物共生网络图",
+        "source":  "network\\微生物与代谢物共生网络图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_环形网络图的构建方法",
+        "title":  "环形网络图的构建方法",
+        "source":  "network\\环形网络图的构建方法",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_细胞通讯网络图",
+        "title":  "细胞通讯网络图",
+        "source":  "network\\细胞通讯网络图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_network_网络图_基础入门版",
+        "title":  "网络图_基础入门版",
+        "source":  "network\\网络图_基础入门版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_network_蛋白互作网络图",
+        "title":  "蛋白互作网络图",
+        "source":  "network\\蛋白互作网络图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_pie_3D饼图",
+        "title":  "3D饼图",
+        "source":  "pie\\3D饼图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_pie_ggplot2绘制月亮图",
+        "title":  "ggplot2绘制月亮图",
+        "source":  "pie\\ggplot2绘制月亮图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_pie_分裂饼图",
+        "title":  "分裂饼图",
+        "source":  "pie\\分裂饼图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_pie_多层饼图",
+        "title":  "多层饼图",
+        "source":  "pie\\多层饼图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_pie_循环绘制饼图",
+        "title":  "循环绘制饼图",
+        "source":  "pie\\循环绘制饼图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_ggplot2优雅的绘制增强版哑铃图",
+        "title":  "ggplot2优雅的绘制增强版哑铃图",
+        "source":  "point\\ggplot2优雅的绘制增强版哑铃图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_ggplot2绘制平滑曲线注释散点图",
+        "title":  "ggplot2绘制平滑曲线注释散点图",
+        "source":  "point\\ggplot2绘制平滑曲线注释散点图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_ggplot2绘制误差线点图",
+        "title":  "ggplot2绘制误差线点图",
+        "source":  "point\\ggplot2绘制误差线点图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_NMDS分析图",
+        "title":  "NMDS分析图",
+        "source":  "point\\NMDS分析图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_point_PCA散点图",
+        "title":  "PCA散点图",
+        "source":  "point\\PCA散点图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_PCOA分析图",
+        "title":  "PCOA分析图",
+        "source":  "point\\PCOA分析图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_point_三元相图",
+        "title":  "三元相图",
+        "source":  "point\\三元相图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_四象限散点图",
+        "title":  "四象限散点图",
+        "source":  "point\\四象限散点图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_多层级曼哈顿图",
+        "title":  "多层级曼哈顿图",
+        "source":  "point\\多层级曼哈顿图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_point_多组火山图",
+        "title":  "多组火山图",
+        "source":  "point\\多组火山图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_效应量森林图_分组比较与显著性标注",
+        "title":  "效应量森林图_分组比较与显著性标注",
+        "source":  "point\\效应量森林图_分组比较与显著性标注",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_散点图叠加多坐标轴",
+        "title":  "散点图叠加多坐标轴",
+        "source":  "point\\散点图叠加多坐标轴",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_散点图叠加多组拟合曲线",
+        "title":  "散点图叠加多组拟合曲线",
+        "source":  "point\\散点图叠加多组拟合曲线",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_散点图叠加拟合曲线_(基础入门)",
+        "title":  "散点图叠加拟合曲线_(基础入门)",
+        "source":  "point\\散点图叠加拟合曲线_(基础入门)",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_point_散点图叠加边际分布",
+        "title":  "散点图叠加边际分布",
+        "source":  "point\\散点图叠加边际分布",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  9,
+        "files":  14
+    },
+    {
+        "id":  "plotcase_point_散点饼图_(基础入门)",
+        "title":  "散点饼图_(基础入门)",
+        "source":  "point\\散点饼图_(基础入门)",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_曼哈顿图",
+        "title":  "曼哈顿图",
+        "source":  "point\\曼哈顿图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_气泡图高阶用法添加时间轨迹趋势线",
+        "title":  "气泡图高阶用法添加时间轨迹趋势线",
+        "source":  "point\\气泡图高阶用法添加时间轨迹趋势线",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_渐变火山图",
+        "title":  "渐变火山图",
+        "source":  "point\\渐变火山图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_火山图_(基础入门)",
+        "title":  "火山图_(基础入门)",
+        "source":  "point\\火山图_(基础入门)",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_point_火山图局部放大版",
+        "title":  "火山图局部放大版",
+        "source":  "point\\火山图局部放大版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_点线图_(基础入门)",
+        "title":  "点线图_(基础入门)",
+        "source":  "point\\点线图_(基础入门)",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_point_配对散点图_(基础入门)",
+        "title":  "配对散点图_(基础入门)",
+        "source":  "point\\配对散点图_(基础入门)",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_point,面积图_双Y轴散点面积组合图",
+        "title":  "双Y轴散点面积组合图",
+        "source":  "point,面积图\\双Y轴散点面积组合图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_sankey_多层级桑基图",
+        "title":  "多层级桑基图",
+        "source":  "sankey\\多层级桑基图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_sankey_桑基流向图",
+        "title":  "桑基流向图",
+        "source":  "sankey\\桑基流向图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_sankey_渐变色桑基图",
+        "title":  "渐变色桑基图",
+        "source":  "sankey\\渐变色桑基图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_sankey_渐变色桑基图_进阶版",
+        "title":  "渐变色桑基图_进阶版",
+        "source":  "sankey\\渐变色桑基图_进阶版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_sankey_节点融合桑基图",
+        "title":  "节点融合桑基图",
+        "source":  "sankey\\节点融合桑基图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_sankey,venn_桑基组合维恩图",
+        "title":  "桑基组合维恩图",
+        "source":  "sankey,venn\\桑基组合维恩图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_tree_ggtree绘制多层级进化树",
+        "title":  "ggtree绘制多层级进化树",
+        "source":  "tree\\ggtree绘制多层级进化树",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  7,
+        "files":  12
+    },
+    {
+        "id":  "plotcase_tree_ggtree绘制系统发育树",
+        "title":  "ggtree绘制系统发育树",
+        "source":  "tree\\ggtree绘制系统发育树",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_tree_多层级系统发育树图",
+        "title":  "多层级系统发育树图",
+        "source":  "tree\\多层级系统发育树图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  7,
+        "files":  12
+    },
+    {
+        "id":  "plotcase_venn_ggplot2绘制花瓣图",
+        "title":  "ggplot2绘制花瓣图",
+        "source":  "venn\\ggplot2绘制花瓣图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_venn_维恩图组合棒棒糖图",
+        "title":  "维恩图组合棒棒糖图",
+        "source":  "venn\\维恩图组合棒棒糖图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_venn_维恩点图",
+        "title":  "维恩点图",
+        "source":  "venn\\维恩点图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_venn,pie_维恩图组合饼图",
+        "title":  "维恩图组合饼图",
+        "source":  "venn,pie\\维恩图组合饼图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_violin_分裂小提琴图",
+        "title":  "分裂小提琴图",
+        "source":  "violin\\分裂小提琴图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_violin_分裂小提琴图分面版",
+        "title":  "分裂小提琴图分面版",
+        "source":  "violin\\分裂小提琴图分面版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_violin_小提琴图添加显著性标记",
+        "title":  "小提琴图添加显著性标记",
+        "source":  "violin\\小提琴图添加显著性标记",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_violin_小提琴图自定义刻度值",
+        "title":  "小提琴图自定义刻度值",
+        "source":  "violin\\小提琴图自定义刻度值",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_violin_配对连线半小提琴图",
+        "title":  "配对连线半小提琴图",
+        "source":  "violin\\配对连线半小提琴图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_云雨图_云雨图添加统计信息",
+        "title":  "云雨图添加统计信息",
+        "source":  "云雨图\\云雨图添加统计信息",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_冲积图_物种组成冲积图",
+        "title":  "物种组成冲积图",
+        "source":  "冲积图\\物种组成冲积图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_哑铃图_哑铃图进阶展示差异信息",
+        "title":  "哑铃图进阶展示差异信息",
+        "source":  "哑铃图\\哑铃图进阶展示差异信息",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_哑铃图_环形哑铃通路图",
+        "title":  "环形哑铃通路图",
+        "source":  "哑铃图\\环形哑铃通路图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_基因组图_geneviewer基因簇结构可视化",
+        "title":  "geneviewer基因簇结构可视化",
+        "source":  "基因组图\\geneviewer基因簇结构可视化",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_基因组图_常规基因组结构图",
+        "title":  "常规基因组结构图",
+        "source":  "基因组图\\常规基因组结构图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_基因组图_比较基因组结构图",
+        "title":  "比较基因组结构图",
+        "source":  "基因组图\\比较基因组结构图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_山脊图_山脊密度图",
+        "title":  "山脊密度图",
+        "source":  "山脊图\\山脊密度图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_折线图_折线图添加密度分布",
+        "title":  "折线图添加密度分布",
+        "source":  "折线图\\折线图添加密度分布",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_旭日图_旭日图_(基础入门)",
+        "title":  "旭日图_(基础入门)",
+        "source":  "旭日图\\旭日图_(基础入门)",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_曲线图_Kaplan_Meier生存曲线",
+        "title":  "Kaplan_Meier生存曲线",
+        "source":  "曲线图\\Kaplan_Meier生存曲线",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_曲线图_累积曲线图",
+        "title":  "累积曲线图",
+        "source":  "曲线图\\累积曲线图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  7,
+        "files":  12
+    },
+    {
+        "id":  "plotcase_森林图_多因素Cox森林图",
+        "title":  "多因素Cox森林图",
+        "source":  "森林图\\多因素Cox森林图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_森林图_森林图进阶图例映射版",
+        "title":  "森林图进阶图例映射版",
+        "source":  "森林图\\森林图进阶图例映射版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_气泡图_堆积气泡图",
+        "title":  "堆积气泡图",
+        "source":  "气泡图\\堆积气泡图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_流程图_流程图_基础版",
+        "title":  "流程图_基础版",
+        "source":  "流程图\\流程图_基础版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_流程图_流程图_进阶版",
+        "title":  "流程图_进阶版",
+        "source":  "流程图\\流程图_进阶版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_流程图_细胞网络通讯示意图",
+        "title":  "细胞网络通讯示意图",
+        "source":  "流程图\\细胞网络通讯示意图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  8
+    },
+    {
+        "id":  "plotcase_游泳图_游泳图_进阶版",
+        "title":  "游泳图_进阶版",
+        "source":  "游泳图\\游泳图_进阶版",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  6,
+        "files":  11
+    },
+    {
+        "id":  "plotcase_维诺图_维诺图",
+        "title":  "维诺图",
+        "source":  "维诺图\\维诺图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_维诺图_维诺图划分子区域",
+        "title":  "维诺图划分子区域",
+        "source":  "维诺图\\维诺图划分子区域",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  2,
+        "data":  4,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_综合图_ggplot2组合展示误差线点图与柱状图",
+        "title":  "ggplot2组合展示误差线点图与柱状图",
+        "source":  "综合图\\ggplot2组合展示误差线点图与柱状图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_综合图_lefse分析图",
+        "title":  "lefse分析图",
+        "source":  "综合图\\lefse分析图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  6,
+        "files":  11
+    },
+    {
+        "id":  "plotcase_综合图_多分组统计与差异变化综合图",
+        "title":  "多分组统计与差异变化综合图",
+        "source":  "综合图\\多分组统计与差异变化综合图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotcase_雷达图_雷达图批量绘制",
+        "title":  "雷达图批量绘制",
+        "source":  "雷达图\\雷达图批量绘制",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_面积图_ggplot2绘制极坐标面积图",
+        "title":  "ggplot2绘制极坐标面积图",
+        "source":  "面积图\\ggplot2绘制极坐标面积图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_面积图_堆砌流动面积图",
+        "title":  "堆砌流动面积图",
+        "source":  "面积图\\堆砌流动面积图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  9
+    },
+    {
+        "id":  "plotcase_面积图,barplot_柱状图组合面积图",
+        "title":  "柱状图组合面积图",
+        "source":  "面积图,barplot\\柱状图组合面积图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  10
+    },
+    {
+        "id":  "plotmaster_001箱线图+散点图",
+        "title":  "001箱线图+散点图",
+        "source":  "001箱线图+散点图",
+        "mode":  "high",
+        "outputs":  11,
+        "scripts":  1,
+        "data":  1,
+        "files":  17
+    },
+    {
+        "id":  "plotmaster_002渐变火山图",
+        "title":  "002渐变火山图",
+        "source":  "002渐变火山图",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  1,
+        "data":  1,
+        "files":  9
+    },
+    {
+        "id":  "plotmaster_003气泡图+相关性热图",
+        "title":  "003气泡图+相关性热图",
+        "source":  "003气泡图+相关性热图",
+        "mode":  "high",
+        "outputs":  7,
+        "scripts":  1,
+        "data":  1,
+        "files":  11
+    },
+    {
+        "id":  "plotmaster_004提琴图",
+        "title":  "004提琴图",
+        "source":  "004提琴图",
+        "mode":  "high",
+        "outputs":  9,
+        "scripts":  1,
+        "data":  2,
+        "files":  15
+    },
+    {
+        "id":  "plotmaster_005复杂热图",
+        "title":  "005复杂热图",
+        "source":  "005复杂热图",
+        "mode":  "high",
+        "outputs":  12,
+        "scripts":  1,
+        "data":  1,
+        "files":  17
+    },
+    {
+        "id":  "plotmaster_006复杂散点图",
+        "title":  "006复杂散点图",
+        "source":  "006复杂散点图",
+        "mode":  "high",
+        "outputs":  10,
+        "scripts":  1,
+        "data":  0,
+        "files":  12
+    },
+    {
+        "id":  "plotmaster_007气泡火山图",
+        "title":  "007气泡火山图",
+        "source":  "007气泡火山图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  2,
+        "files":  4
+    },
+    {
+        "id":  "plotmaster_008复杂热图02",
+        "title":  "008复杂热图02",
+        "source":  "008复杂热图02",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  1,
+        "data":  0,
+        "files":  7
+    },
+    {
+        "id":  "plotmaster_009甘特图",
+        "title":  "009甘特图",
+        "source":  "009甘特图",
+        "mode":  "high",
+        "outputs":  2,
+        "scripts":  3,
+        "data":  4,
+        "files":  12
+    },
+    {
+        "id":  "plotmaster_011批量散点图+拟合曲线",
+        "title":  "011批量散点图+拟合曲线",
+        "source":  "011批量散点图+拟合曲线",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  3
+    },
+    {
+        "id":  "plotmaster_012箱线图美化",
+        "title":  "012箱线图美化",
+        "source":  "012箱线图美化",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  25
+    },
+    {
+        "id":  "plotmaster_013复杂百分比柱状图",
+        "title":  "013复杂百分比柱状图",
+        "source":  "013复杂百分比柱状图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  3
+    },
+    {
+        "id":  "plotmaster_013渐变柱状图",
+        "title":  "013渐变柱状图",
+        "source":  "013渐变柱状图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  3
+    },
+    {
+        "id":  "plotmaster_015分半小提琴图",
+        "title":  "015分半小提琴图",
+        "source":  "015分半小提琴图",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  1,
+        "files":  5
+    },
+    {
+        "id":  "plotmaster_016复杂热图+渐变色连线",
+        "title":  "016复杂热图+渐变色连线",
+        "source":  "016复杂热图+渐变色连线",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  3
+    },
+    {
+        "id":  "plotmaster_017基因融合热图+堆积柱状图",
+        "title":  "017基因融合热图+堆积柱状图",
+        "source":  "017基因融合热图+堆积柱状图",
+        "mode":  "low",
+        "outputs":  3,
+        "scripts":  1,
+        "data":  1,
+        "files":  7
+    },
+    {
+        "id":  "plotmaster_018单细胞分组火山图",
+        "title":  "018单细胞分组火山图",
+        "source":  "018单细胞分组火山图",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  1,
+        "files":  7
+    },
+    {
+        "id":  "plotmaster_019堆积柱状图+折线+热图注释",
+        "title":  "019堆积柱状图+折线+热图注释",
+        "source":  "019堆积柱状图+折线+热图注释",
+        "mode":  "low",
+        "outputs":  3,
+        "scripts":  1,
+        "data":  0,
+        "files":  6
+    },
+    {
+        "id":  "plotmaster_020多组学九象限散点图",
+        "title":  "020多组学九象限散点图",
+        "source":  "020多组学九象限散点图",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  0,
+        "files":  18
+    },
+    {
+        "id":  "plotmaster_021分组散点图+直方图注释",
+        "title":  "021分组散点图+直方图注释",
+        "source":  "021分组散点图+直方图注释",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  3
+    },
+    {
+        "id":  "plotmaster_022复杂环形热图",
+        "title":  "022复杂环形热图",
+        "source":  "022复杂环形热图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  4
+    },
+    {
+        "id":  "plotmaster_023泛癌箱线图+显著性检验",
+        "title":  "023泛癌箱线图+显著性检验",
+        "source":  "023泛癌箱线图+显著性检验",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  5
+    },
+    {
+        "id":  "plotmaster_024矩阵饼图+分组注释",
+        "title":  "024矩阵饼图+分组注释",
+        "source":  "024矩阵饼图+分组注释",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  5
+    },
+    {
+        "id":  "plotmaster_025三维PCA散点图",
+        "title":  "025三维PCA散点图",
+        "source":  "025三维PCA散点图",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  1,
+        "data":  2,
+        "files":  25
+    },
+    {
+        "id":  "plotmaster_026相关性气泡图+显著性热图",
+        "title":  "026相关性气泡图+显著性热图",
+        "source":  "026相关性气泡图+显著性热图",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  1,
+        "data":  0,
+        "files":  18
+    },
+    {
+        "id":  "plotmaster_027箱线图+热图注释",
+        "title":  "027箱线图+热图注释",
+        "source":  "027箱线图+热图注释",
+        "mode":  "high",
+        "outputs":  3,
+        "scripts":  1,
+        "data":  5,
+        "files":  52
+    },
+    {
+        "id":  "plotmaster_028分面双向柱状图+热图注释",
+        "title":  "028分面双向柱状图+热图注释",
+        "source":  "028分面双向柱状图+热图注释",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  1,
+        "data":  5,
+        "files":  33
+    },
+    {
+        "id":  "plotmaster_029分面堆积面积图",
+        "title":  "029分面堆积面积图",
+        "source":  "029分面堆积面积图",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "plotmaster_030形状火山图",
+        "title":  "030形状火山图",
+        "source":  "030形状火山图",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  0,
+        "files":  5
+    },
+    {
+        "id":  "plotmaster_031环形散点图+环形热图",
+        "title":  "031环形散点图+环形热图",
+        "source":  "031环形散点图+环形热图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  6
+    },
+    {
+        "id":  "plotmaster_032表达定量雷达图",
+        "title":  "032表达定量雷达图",
+        "source":  "032表达定量雷达图",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  1,
+        "data":  2,
+        "files":  10
+    },
+    {
+        "id":  "plotmaster_033个性化森林图",
+        "title":  "033个性化森林图",
+        "source":  "033个性化森林图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  18
+    },
+    {
+        "id":  "plotmaster_034柱状图+抖动散点+误差棒",
+        "title":  "034柱状图+抖动散点+误差棒",
+        "source":  "034柱状图+抖动散点+误差棒",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  0,
+        "files":  18
+    },
+    {
+        "id":  "plotmaster_035堆积柱状图+百分比柱状图",
+        "title":  "035堆积柱状图+百分比柱状图",
+        "source":  "035堆积柱状图+百分比柱状图",
+        "mode":  "low",
+        "outputs":  3,
+        "scripts":  1,
+        "data":  2,
+        "files":  25
+    },
+    {
+        "id":  "plotmaster_036批量箱线图+多组间显著性检验",
+        "title":  "036批量箱线图+多组间显著性检验",
+        "source":  "036批量箱线图+多组间显著性检验",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  0,
+        "files":  17
+    },
+    {
+        "id":  "plotmaster_037分类变量环形热图",
+        "title":  "037分类变量环形热图",
+        "source":  "037分类变量环形热图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  4,
+        "files":  31
+    },
+    {
+        "id":  "plotmaster_038聚类热图+注释",
+        "title":  "038聚类热图+注释",
+        "source":  "038聚类热图+注释",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  18
+    },
+    {
+        "id":  "plotmaster_039雷达图+环形注释",
+        "title":  "039雷达图+环形注释",
+        "source":  "039雷达图+环形注释",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  17
+    },
+    {
+        "id":  "plotmaster_040密度直方图",
+        "title":  "040密度直方图",
+        "source":  "040密度直方图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  14
+    },
+    {
+        "id":  "plotmaster_041分半箱线图+抖动散点图",
+        "title":  "041分半箱线图+抖动散点图",
+        "source":  "041分半箱线图+抖动散点图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  18
+    },
+    {
+        "id":  "plotmaster_042批量散点图+批量折线图",
+        "title":  "042批量散点图+批量折线图",
+        "source":  "042批量散点图+批量折线图",
+        "mode":  "low",
+        "outputs":  3,
+        "scripts":  1,
+        "data":  1,
+        "files":  21
+    },
+    {
+        "id":  "plotmaster_043分块热图+注释",
+        "title":  "043分块热图+注释",
+        "source":  "043分块热图+注释",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  0,
+        "files":  19
+    },
+    {
+        "id":  "plotmaster_044百分比柱状图+误差棒",
+        "title":  "044百分比柱状图+误差棒",
+        "source":  "044百分比柱状图+误差棒",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  22
+    },
+    {
+        "id":  "plotmaster_045分组提琴图+显著性检验",
+        "title":  "045分组提琴图+显著性检验",
+        "source":  "045分组提琴图+显著性检验",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  23
+    },
+    {
+        "id":  "plotmaster_046环形层次聚类热图+批量环形饼图",
+        "title":  "046环形层次聚类热图+批量环形饼图",
+        "source":  "046环形层次聚类热图+批量环形饼图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  3
+    },
+    {
+        "id":  "plotmaster_047散点饼图",
+        "title":  "047散点饼图",
+        "source":  "047散点饼图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  5,
+        "files":  12
+    },
+    {
+        "id":  "plotmaster_049多组哑铃图",
+        "title":  "049多组哑铃图",
+        "source":  "049多组哑铃图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  20
+    },
+    {
+        "id":  "plotmaster_050复杂分组散点图",
+        "title":  "050复杂分组散点图",
+        "source":  "050复杂分组散点图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  2,
+        "files":  20
+    },
+    {
+        "id":  "plotmaster_051箱线图+抖动散点",
+        "title":  "051箱线图+抖动散点",
+        "source":  "051箱线图+抖动散点",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  17
+    },
+    {
+        "id":  "plotmaster_052细腰箱线图",
+        "title":  "052细腰箱线图",
+        "source":  "052细腰箱线图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  18
+    },
+    {
+        "id":  "plotmaster_053分组气泡图",
+        "title":  "053分组气泡图",
+        "source":  "053分组气泡图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  3,
+        "files":  29
+    },
+    {
+        "id":  "plotmaster_054分面森林图",
+        "title":  "054分面森林图",
+        "source":  "054分面森林图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  24
+    },
+    {
+        "id":  "plotmaster_055批量火山图",
+        "title":  "055批量火山图",
+        "source":  "055批量火山图",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  1,
+        "files":  20
+    },
+    {
+        "id":  "plotmaster_056复杂网络图",
+        "title":  "056复杂网络图",
+        "source":  "056复杂网络图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  6,
+        "files":  34
+    },
+    {
+        "id":  "plotmaster_057复杂进化树",
+        "title":  "057复杂进化树",
+        "source":  "057复杂进化树",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  0,
+        "files":  5
+    },
+    {
+        "id":  "plotmaster_058分面折线图+置信区间+误差棒",
+        "title":  "058分面折线图+置信区间+误差棒",
+        "source":  "058分面折线图+置信区间+误差棒",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  23
+    },
+    {
+        "id":  "plotmaster_059桑基气泡图",
+        "title":  "059桑基气泡图",
+        "source":  "059桑基气泡图",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  6,
+        "files":  36
+    },
+    {
+        "id":  "plotmaster_060复杂环形互作网络图",
+        "title":  "060复杂环形互作网络图",
+        "source":  "060复杂环形互作网络图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  5
+    },
+    {
+        "id":  "plotmaster_061散点图+双向误差棒",
+        "title":  "061散点图+双向误差棒",
+        "source":  "061散点图+双向误差棒",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  20
+    },
+    {
+        "id":  "plotmaster_062环形分组折线图",
+        "title":  "062环形分组折线图",
+        "source":  "062环形分组折线图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  32
+    },
+    {
+        "id":  "plotmaster_063_共定位矩阵散点图+柱状图注释",
+        "title":  "063 共定位矩阵散点图+柱状图注释",
+        "source":  "063 共定位矩阵散点图+柱状图注释",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  1,
+        "data":  2,
+        "files":  31
+    },
+    {
+        "id":  "plotmaster_48个性化桑基图",
+        "title":  "48个性化桑基图",
+        "source":  "48个性化桑基图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  1,
+        "files":  4
+    },
+    {
+        "id":  "plotmaster_双向柱状图",
+        "title":  "双向柱状图",
+        "source":  "双向柱状图",
+        "mode":  "low",
+        "outputs":  1,
+        "scripts":  1,
+        "data":  0,
+        "files":  3
+    },
+    {
+        "id":  "figures4papers_figure_brainteaser_brute_force_png",
+        "title":  "figure_brainteaser_brute_force",
+        "source":  "figure_brainteaser",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  5,
+        "data":  0,
+        "files":  10
+    },
+    {
+        "id":  "figures4papers_figure_brainteaser_correctness_by_category_png",
+        "title":  "figure_brainteaser_correctness_by_category",
+        "source":  "figure_brainteaser",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  5,
+        "data":  0,
+        "files":  10
+    },
+    {
+        "id":  "figures4papers_figure_brainteaser_correctness_by_subcategory_png",
+        "title":  "figure_brainteaser_correctness_by_subcategory",
+        "source":  "figure_brainteaser",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  5,
+        "data":  0,
+        "files":  10
+    },
+    {
+        "id":  "figures4papers_figure_brainteaser_rewriting_png",
+        "title":  "figure_brainteaser_rewriting",
+        "source":  "figure_brainteaser",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  5,
+        "data":  0,
+        "files":  10
+    },
+    {
+        "id":  "figures4papers_figure_brainteaser_selfcorrection_math_png",
+        "title":  "figure_brainteaser_selfcorrection_math",
+        "source":  "figure_brainteaser",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  5,
+        "data":  0,
+        "files":  10
+    },
+    {
+        "id":  "figures4papers_figure_CellSpliceNet_ablation_png",
+        "title":  "figure_CellSpliceNet_ablation",
+        "source":  "figure_CellSpliceNet",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "figures4papers_figure_CellSpliceNet_comparison_png",
+        "title":  "figure_CellSpliceNet_comparison",
+        "source":  "figure_CellSpliceNet",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
+        "title":  "figure_Cflows_diffusion_swiss_roll",
+        "source":  "figure_Cflows",
+        "mode":  "high",
+        "outputs":  7,
+        "scripts":  4,
+        "data":  0,
+        "files":  11
+    },
+    {
+        "id":  "figures4papers_figure_Cflows_fig2_comparison_GeneRegulatory_pdf",
+        "title":  "figure_Cflows_fig2_comparison_GeneRegulatory",
+        "source":  "figure_Cflows",
+        "mode":  "high",
+        "outputs":  7,
+        "scripts":  4,
+        "data":  0,
+        "files":  11
+    },
+    {
+        "id":  "figures4papers_figure_Cflows_fig2_comparison_GeneRegulatory_png",
+        "title":  "figure_Cflows_fig2_comparison_GeneRegulatory",
+        "source":  "figure_Cflows",
+        "mode":  "high",
+        "outputs":  7,
+        "scripts":  4,
+        "data":  0,
+        "files":  11
+    },
+    {
+        "id":  "figures4papers_figure_Cflows_fig2_comparison_Trajectory_pdf",
+        "title":  "figure_Cflows_fig2_comparison_Trajectory",
+        "source":  "figure_Cflows",
+        "mode":  "high",
+        "outputs":  7,
+        "scripts":  4,
+        "data":  0,
+        "files":  11
+    },
+    {
+        "id":  "figures4papers_figure_Cflows_fig2_comparison_Trajectory_png",
+        "title":  "figure_Cflows_fig2_comparison_Trajectory",
+        "source":  "figure_Cflows",
+        "mode":  "high",
+        "outputs":  7,
+        "scripts":  4,
+        "data":  0,
+        "files":  11
+    },
+    {
+        "id":  "figures4papers_figure_Cflows_figX_comparison_Ablation_pdf",
+        "title":  "figure_Cflows_figX_comparison_Ablation",
+        "source":  "figure_Cflows",
+        "mode":  "high",
+        "outputs":  7,
+        "scripts":  4,
+        "data":  0,
+        "files":  11
+    },
+    {
+        "id":  "figures4papers_figure_Cflows_figX_comparison_Ablation_png",
+        "title":  "figure_Cflows_figX_comparison_Ablation",
+        "source":  "figure_Cflows",
+        "mode":  "high",
+        "outputs":  7,
+        "scripts":  4,
+        "data":  0,
+        "files":  11
+    },
+    {
+        "id":  "figures4papers_figure_Dispersion_idea_png",
+        "title":  "figure_Dispersion_idea",
+        "source":  "figure_Dispersion",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "figures4papers_figure_Dispersion_illustration_png",
+        "title":  "figure_Dispersion_illustration",
+        "source":  "figure_Dispersion",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "figures4papers_figure_ImmunoStruct_bars_ablation_Cancer_png",
+        "title":  "figure_ImmunoStruct_bars_ablation_Cancer",
+        "source":  "figure_ImmunoStruct",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  0,
+        "files":  6
+    },
+    {
+        "id":  "figures4papers_figure_ImmunoStruct_bars_ablation_IEDB_png",
+        "title":  "figure_ImmunoStruct_bars_ablation_IEDB",
+        "source":  "figure_ImmunoStruct",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  0,
+        "files":  6
+    },
+    {
+        "id":  "figures4papers_figure_ImmunoStruct_bars_comparison_Cancer_png",
+        "title":  "figure_ImmunoStruct_bars_comparison_Cancer",
+        "source":  "figure_ImmunoStruct",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  0,
+        "files":  6
+    },
+    {
+        "id":  "figures4papers_figure_ImmunoStruct_bars_comparison_IEDB_png",
+        "title":  "figure_ImmunoStruct_bars_comparison_IEDB",
+        "source":  "figure_ImmunoStruct",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  0,
+        "files":  6
+    },
+    {
+        "id":  "figures4papers_figure_ophthal_review_composition_heatmap_png",
+        "title":  "figure_ophthal_review_composition_heatmap",
+        "source":  "figure_ophthal_review",
+        "mode":  "medium",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "figures4papers_figure_ophthal_review_trend_by_month_png",
+        "title":  "figure_ophthal_review_trend_by_month",
+        "source":  "figure_ophthal_review",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "figures4papers_figure_RNAGenScape_manifold_png",
+        "title":  "figure_RNAGenScape_manifold",
+        "source":  "figure_RNAGenScape",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  4,
+        "data":  0,
+        "files":  9
+    },
+    {
+        "id":  "figures4papers_figure_RNAGenScape_manifold_holes_png",
+        "title":  "figure_RNAGenScape_manifold_holes",
+        "source":  "figure_RNAGenScape",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  4,
+        "data":  0,
+        "files":  9
+    },
+    {
+        "id":  "figures4papers_figure_RNAGenScape_results_comparison_optimization_png",
+        "title":  "figure_RNAGenScape_results_comparison_optimization",
+        "source":  "figure_RNAGenScape",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  4,
+        "data":  0,
+        "files":  9
+    },
+    {
+        "id":  "figures4papers_figure_RNAGenScape_results_comparison_speed_png",
+        "title":  "figure_RNAGenScape_results_comparison_speed",
+        "source":  "figure_RNAGenScape",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  4,
+        "data":  0,
+        "files":  9
+    },
+    {
+        "id":  "figures4papers_figure_RNAGenScape_results_sweep_png",
+        "title":  "figure_RNAGenScape_results_sweep",
+        "source":  "figure_RNAGenScape",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  4,
+        "data":  0,
+        "files":  9
+    },
+    {
+        "id":  "figures4papers_figure_VIGIL_comparison_posttraining_png",
+        "title":  "figure_VIGIL_comparison_posttraining",
+        "source":  "figure_VIGIL",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "figures4papers_figure_VIGIL_comparison_radar_png",
+        "title":  "figure_VIGIL_comparison_radar",
+        "source":  "figure_VIGIL",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  0,
+        "files":  4
+    },
+    {
+        "id":  "figureya_survival_FigureYa1survivalCurve_update",
+        "title":  "FigureYa1survivalCurve_update",
+        "source":  "FigureYa1survivalCurve_update",
+        "mode":  "high",
+        "outputs":  6,
+        "scripts":  2,
+        "data":  3,
+        "files":  14
+    },
+    {
+        "id":  "figureya_survival_FigureYa6rHRsV2",
+        "title":  "FigureYa6rHRsV2",
+        "source":  "FigureYa6rHRsV2",
+        "mode":  "low",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  1,
+        "files":  7
+    },
+    {
+        "id":  "figureya_survival_FigureYa30nomogram_update",
+        "title":  "FigureYa30nomogram_update",
+        "source":  "FigureYa30nomogram_update",
+        "mode":  "high",
+        "outputs":  8,
+        "scripts":  4,
+        "data":  1,
+        "files":  15
+    },
+    {
+        "id":  "figureya_survival_FigureYa33DCA_update",
+        "title":  "FigureYa33DCA_update",
+        "source":  "FigureYa33DCA_update",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  3,
+        "data":  1,
+        "files":  11
+    },
+    {
+        "id":  "figureya_survival_FigureYa66UnivariateCox",
+        "title":  "FigureYa66UnivariateCox",
+        "source":  "FigureYa66UnivariateCox",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  4,
+        "data":  6,
+        "files":  17
+    },
+    {
+        "id":  "figureya_survival_FigureYa85timeROC",
+        "title":  "FigureYa85timeROC",
+        "source":  "FigureYa85timeROC",
+        "mode":  "medium",
+        "outputs":  2,
+        "scripts":  2,
+        "data":  1,
+        "files":  7
+    },
+    {
+        "id":  "figureya_survival_FigureYa128Prognostic",
+        "title":  "FigureYa128Prognostic",
+        "source":  "FigureYa128Prognostic",
+        "mode":  "high",
+        "outputs":  1,
+        "scripts":  2,
+        "data":  8,
+        "files":  13
+    },
+    {
+        "id":  "figureya_survival_FigureYa138NiceCalibration",
+        "title":  "FigureYa138NiceCalibration",
+        "source":  "FigureYa138NiceCalibration",
+        "mode":  "low",
+        "outputs":  3,
+        "scripts":  2,
+        "data":  1,
+        "files":  8
+    },
+    {
+        "id":  "figureya_survival_FigureYa141risk",
+        "title":  "FigureYa141risk",
+        "source":  "FigureYa141risk",
+        "mode":  "high",
+        "outputs":  6,
+        "scripts":  2,
+        "data":  2,
+        "files":  12
+    },
+    {
+        "id":  "figureya_survival_FigureYa143survCor_update",
+        "title":  "FigureYa143survCor_update",
+        "source":  "FigureYa143survCor_update",
+        "mode":  "high",
+        "outputs":  3,
+        "scripts":  2,
+        "data":  4,
+        "files":  14
+    },
+    {
+        "id":  "figureya_survival_FigureYa171subgroupSurv",
+        "title":  "FigureYa171subgroupSurv",
+        "source":  "FigureYa171subgroupSurv",
+        "mode":  "medium",
+        "outputs":  3,
+        "scripts":  2,
+        "data":  1,
+        "files":  8
+    },
+    {
+        "id":  "figureya_survival_FigureYa182RFSurvV2",
+        "title":  "FigureYa182RFSurvV2",
+        "source":  "FigureYa182RFSurvV2",
+        "mode":  "high",
+        "outputs":  5,
+        "scripts":  2,
+        "data":  4,
+        "files":  14
+    },
+    {
+        "id":  "figureya_survival_FigureYa183condSurv",
+        "title":  "FigureYa183condSurv",
+        "source":  "FigureYa183condSurv",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  3,
+        "files":  11
+    },
+    {
+        "id":  "figureya_survival_FigureYa187RMS",
+        "title":  "FigureYa187RMS",
+        "source":  "FigureYa187RMS",
+        "mode":  "low",
+        "outputs":  3,
+        "scripts":  2,
+        "data":  1,
+        "files":  7
+    },
+    {
+        "id":  "figureya_survival_FigureYa189timeCindex",
+        "title":  "FigureYa189timeCindex",
+        "source":  "FigureYa189timeCindex",
+        "mode":  "low",
+        "outputs":  3,
+        "scripts":  2,
+        "data":  2,
+        "files":  9
+    },
+    {
+        "id":  "figureya_survival_FigureYa193RiskTable",
+        "title":  "FigureYa193RiskTable",
+        "source":  "FigureYa193RiskTable",
+        "mode":  "high",
+        "outputs":  3,
+        "scripts":  2,
+        "data":  4,
+        "files":  11
+    },
+    {
+        "id":  "figureya_survival_FigureYa197SmoothHaz",
+        "title":  "FigureYa197SmoothHaz",
+        "source":  "FigureYa197SmoothHaz",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  2,
+        "files":  10
+    },
+    {
+        "id":  "figureya_survival_FigureYa210survivalScape",
+        "title":  "FigureYa210survivalScape",
+        "source":  "FigureYa210survivalScape",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  10,
+        "files":  18
+    },
+    {
+        "id":  "figureya_survival_FigureYa251NPHSurv",
+        "title":  "FigureYa251NPHSurv",
+        "source":  "FigureYa251NPHSurv",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  5,
+        "files":  13
+    },
+    {
+        "id":  "figureya_survival_FigureYa284pairwiseLogrank",
+        "title":  "FigureYa284pairwiseLogrank",
+        "source":  "FigureYa284pairwiseLogrank",
+        "mode":  "low",
+        "outputs":  3,
+        "scripts":  2,
+        "data":  1,
+        "files":  8
+    },
+    {
+        "id":  "figureya_survival_FigureYa299pancanSurv",
+        "title":  "FigureYa299pancanSurv",
+        "source":  "FigureYa299pancanSurv",
+        "mode":  "high",
+        "outputs":  4,
+        "scripts":  2,
+        "data":  5,
+        "files":  13
+    },
+    {
+        "id":  "figureya_survival_FigureYa305PMAPscore",
+        "title":  "FigureYa305PMAPscore",
+        "source":  "FigureYa305PMAPscore",
+        "mode":  "high",
+        "outputs":  6,
+        "scripts":  3,
+        "data":  1,
+        "files":  364
+    }
+]

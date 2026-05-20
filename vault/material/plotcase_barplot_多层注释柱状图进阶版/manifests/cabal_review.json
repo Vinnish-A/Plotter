@@ -1,0 +1,10 @@
+{
+  "case_id": "plotcase_barplot_多层注释柱状图进阶版",
+  "mode": "medium",
+  "keep_status": "live",
+  "visual_family": "bar_composite",
+  "uniqueness": "unknown",
+  "manual_override": true,
+  "reason": "manual UI group assignment",
+  "reviewed_at": "2026-05-19T10:30:24.480563+00:00"
+}

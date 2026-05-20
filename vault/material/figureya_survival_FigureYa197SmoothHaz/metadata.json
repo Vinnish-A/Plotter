@@ -1,0 +1,177 @@
+{
+  "id": "figureya_survival_FigureYa197SmoothHaz",
+  "title": "FigureYa197SmoothHaz",
+  "source": {
+    "root": "raw/FigureYa",
+    "original_path": "FigureYa197SmoothHaz"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "bar",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 10,
+    "outputs": 4,
+    "scripts": 2,
+    "raw_data": 2,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:11.525922+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "cowplot",
+      "dplyr",
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "export",
+      "extrafont",
+      "knitr",
+      "muhaz",
+      "openxlsx",
+      "remotes",
+      "survival",
+      "survminer"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:26.503940+00:00",
+    "records": [
+      {
+        "source": "figureya_survival_FigureYa197SmoothHaz/data_raw/input.xlsx",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TCGA-CDR.csv",
+          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TCGA-CDR_Notes.csv",
+          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__ExtraEndpoints.csv",
+          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__ExtraEndpoints_Notes.csv",
+          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Table4_PHAssumptionTests.csv",
+          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Table5_PHAssumptionTests.csv",
+          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TSS_Info.csv",
+          "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Fig2EFG_AdditionalInfo.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa197SmoothHaz/raw/input.xlsx",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__TCGA-CDR.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__TCGA-CDR_Notes.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__ExtraEndpoints.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__ExtraEndpoints_Notes.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__Table4_PHAssumptionTests.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__Table5_PHAssumptionTests.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__TSS_Info.csv",
+          "figureya_survival_FigureYa197SmoothHaz/raw/input__Fig2EFG_AdditionalInfo.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/easy_input.csv",
+    "grammar_geometry": "line",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 4.3867,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/FigureYa197SmoothHaz.Rmd",
+    "generated_source": "raw/smoothHaz.png",
+    "compat_xlsx": [
+      "raw/input.xlsx",
+      "raw/easy_input.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:43:28.858265+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_004_smoothHaz.pdf",
+      "selected": "raw/smoothHaz.pdf",
+      "page": 0,
+      "previous_rmse": 0.08704358374793382,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "bar",
+    "keywords": [
+      "bar",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "cowplot",
+      "dplyr",
+      "export",
+      "extrafont",
+      "ggplot2",
+      "knitr",
+      "muhaz",
+      "openxlsx",
+      "remotes",
+      "survival",
+      "survminer"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

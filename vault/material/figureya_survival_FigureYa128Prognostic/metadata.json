@@ -1,0 +1,225 @@
+{
+  "id": "figureya_survival_FigureYa128Prognostic",
+  "title": "FigureYa128Prognostic",
+  "source": {
+    "root": "raw/FigureYa",
+    "original_path": "FigureYa128Prognostic"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "heatmap"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 13,
+    "outputs": 1,
+    "scripts": 2,
+    "raw_data": 8,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:11.446342+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "BiocManager",
+      "knitr",
+      "survival",
+      "survivalROC"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:26.211561+00:00",
+    "records": [
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/data_raw/COAD_TPM.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/data_raw/COAD_TPM.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/data_raw/Coxoutput.OS.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/data_raw/Coxoutput.OS.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/data_raw/clinical_PANCAN_patient_with_followup.tsv",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/data_raw/clinical_PANCAN_patient_with_followup.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/data_raw/lasso_fea.rda",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/data_raw/lasso_fea_csv/_rdata_conversion_manifest.csv",
+          "figureya_survival_FigureYa128Prognostic/data_raw/lasso_fea_csv/object_summary.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/data_raw/signature_gene.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/data_raw/signature_gene.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/data_raw/top50gene.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/data_raw/top50gene.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/raw/COAD_TPM.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/raw/COAD_TPM.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/raw/Coxoutput.OS.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/raw/Coxoutput.OS.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/raw/clinical_PANCAN_patient_with_followup.tsv",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/raw/clinical_PANCAN_patient_with_followup.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/raw/lasso_fea.rda",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/raw/lasso_fea_csv/_rdata_conversion_manifest.csv",
+          "figureya_survival_FigureYa128Prognostic/raw/lasso_fea_csv/object_summary.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/raw/signature_gene.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/raw/signature_gene.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa128Prognostic/raw/top50gene.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa128Prognostic/raw/top50gene.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/easy_input_expr.csv",
+    "grammar_geometry": "line",
+    "row_count": 2000,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 4.3056,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "case_level_rendered_output",
+    "generated_source": "raw/AUCandKM.pdf",
+    "fallback_reason": "Missing lasso_fea.rda precomputed LASSO object; using provided case-level rendered AUC/KM output.",
+    "rebuilt_at": "2026-05-17T16:14:59.568564+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_AUCandKM.pdf",
+      "selected": "raw/AUCandKM.pdf",
+      "page": 0,
+      "previous_rmse": 0.0704639734535366,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "rendered_figure",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap"
+    ],
+    "visual_dependencies": [
+      "BiocManager",
+      "knitr",
+      "survival",
+      "survivalROC"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

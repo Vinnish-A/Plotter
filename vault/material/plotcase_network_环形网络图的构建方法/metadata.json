@@ -1,0 +1,163 @@
+{
+  "id": "plotcase_network_环形网络图的构建方法",
+  "title": "环形网络图的构建方法",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "network\\环形网络图的构建方法"
+  },
+  "mode": "high",
+  "chart_family": [
+    "network"
+  ],
+  "visual_keywords": [
+    "network_graph",
+    "node_link",
+    "layout",
+    "community"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_mappings": [
+      "node_id",
+      "node_label",
+      "node_group",
+      "node_size",
+      "edge_group",
+      "edge_direction",
+      "layout_x",
+      "layout_y"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "node-link graph tables"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.342804+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ggraph",
+      "igraph",
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:31.771562+00:00",
+    "records": [
+      {
+        "source": "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5a.csv",
+          "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5b.csv",
+          "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5c.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5a.csv",
+          "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5b.csv",
+          "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5c.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/41588_2025_2326_MOESM8_ESM__fig5b.csv",
+    "grammar_geometry": "network_graph",
+    "row_count": 49,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotmaster_060复杂环形互作网络图",
+    "reason": "visual_redundancy:network:network",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/41588_2025_2326_MOESM8_ESM.xlsx"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:31:09.462631+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.09890672582232249,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "network_graph",
+    "backend": "R/ggraph-igraph",
+    "unit": "node-link graph tables",
+    "required_data_roles": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_data_roles": [
+      "node_id",
+      "node_label",
+      "node_group",
+      "node_size",
+      "edge_group",
+      "edge_direction",
+      "layout_x",
+      "layout_y"
+    ]
+  }
+}

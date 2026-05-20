@@ -1,0 +1,225 @@
+{
+  "id": "figureya_survival_FigureYa299pancanSurv",
+  "title": "FigureYa299pancanSurv",
+  "source": {
+    "root": "raw/FigureYa",
+    "original_path": "FigureYa299pancanSurv"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "survival"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "ComplexHeatmap",
+    "circlize",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 13,
+    "outputs": 4,
+    "scripts": 2,
+    "raw_data": 5,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:11.562265+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "data.table",
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "BiocManager",
+      "ComplexHeatmap",
+      "circlize",
+      "forestplot",
+      "grid",
+      "knitr",
+      "survival",
+      "survminer"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:26.781763+00:00",
+    "records": [
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_combined dataframe with both gene expression and survival information.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/data_raw/output_combined_dataframe_with_both_gene_expression_and_survival_information.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_simple_sample_annotation.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/data_raw/output_simple_sample_annotation.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of cox result in pancancer.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_cox_result_in_pancancer.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of gene prognositicationin pancancer.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_gene_prognositicationin_pancancer.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of km result in pancancer.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_km_result_in_pancancer.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/raw/output_combined dataframe with both gene expression and survival information.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/raw/output_combined_dataframe_with_both_gene_expression_and_survival_information.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/raw/output_simple_sample_annotation.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/raw/output_simple_sample_annotation.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of cox result in pancancer.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_cox_result_in_pancancer.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of gene prognositicationin pancancer.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_gene_prognositicationin_pancancer.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of km result in pancancer.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_km_result_in_pancancer.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/output_combined_dataframe_with_both_gene_expression_and_survival_information.csv",
+    "grammar_geometry": "line",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 4.5667,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/_plotter_fallback_tree.R",
+    "generated_source": "raw/prognostic heatmap.pdf",
+    "fallback_reason": "original gheatmap path is incompatible with the installed ggplot2/ggtree stack",
+    "rebuilt_at": "2026-05-17T15:32:25.047048+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_003_forestplot_of_os_risk_table_in_pancancer.pdf",
+      "selected": "raw/forestplot of os risk table in pancancer.pdf",
+      "page": 0,
+      "previous_rmse": 0.1811202641852778,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ComplexHeatmap-circlize",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap",
+      "ComplexHeatmap",
+      "circlize",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "BiocManager",
+      "ComplexHeatmap",
+      "circlize",
+      "data.table",
+      "forestplot",
+      "ggplot2",
+      "grid",
+      "knitr",
+      "survival",
+      "survminer"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

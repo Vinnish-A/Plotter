@@ -1,0 +1,480 @@
+{
+  "case_count": 95,
+  "records": [
+    {
+      "case": "plotcase_barplot_ggplot2优雅的绘制径向条形图",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_barplot_ggplot2绘制菌群分布图",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_barplot_多元素组合分布条图",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_barplot_多层注释柱状图",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_barplot_多层注释柱状图进阶版",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_barplot_柱状图添加显著性标记_(进阶版)",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_barplot_柱状图添加显著性标记_基础版",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_barplot_环形条形图",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_barplot_配对连线条形图_进阶版",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_boxplot_多分组分面小提琴箱线图",
+      "grammar": "distribution",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_boxplot_多组配对连线箱线图",
+      "grammar": "distribution",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_boxplot_方差分析箱线图_进阶版",
+      "grammar": "distribution",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_circos_GO富集分析通路图",
+      "grammar": "chord_circos",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_circos_circlize优雅绘制多重注释弦图",
+      "grammar": "chord_circos",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_circos_circlize绘制和弦图",
+      "grammar": "chord_circos",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_circos_circlize绘制和弦图进阶版",
+      "grammar": "chord_circos",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_circos_circlize绘制融合基因图",
+      "grammar": "chord_circos",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_circos_多类别关联网络弦图",
+      "grammar": "chord_circos",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_circos_细胞通讯弦图_基础入门",
+      "grammar": "chord_circos",
+      "backend": "R"
+    },
+    {
+      "case": "plotcase_heatmap_3D热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_heatmap_ARG丰度与环境因子相关性网络热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_Mantel检验热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_circlize绘制环状聚类热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_heatmap_circlize风格多层次极坐标热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_heatmap_ggtree绘制环状聚类热图",
+      "grammar": "tree_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_heatmap_ggtree绘制离散型系统发育树热图",
+      "grammar": "tree_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_heatmap_ggtree绘制组合热图",
+      "grammar": "tree_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_回归方差分解热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_基因表达注释热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_heatmap_多元素个性化对角线热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_多元素个性化气泡热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_多分组气泡热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_多层嵌套分面热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_多类别分面注释热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_多类别注释风格热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_多重注释分组热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_对角线相关性热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_时间序列基因表达热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_极坐标热图添加聚类",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_气泡配对连线个性化热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_热图添加层次折叠聚类树",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_heatmap_环状分组热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_环状注释热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_heatmap_相关性分面热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_相关性注释热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_离散热图与条图组合",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_heatmap_系统发育树组合离散热图",
+      "grammar": "tree_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_heatmap_配对连线热图",
+      "grammar": "annotated_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_network_GO通路相似性网络图_基于基因重叠度",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_STRING_BioNet网络模块解析代码实战",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_Treemap矩形树状GO富集分析图",
+      "grammar": "tree_heatmap",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_network_ggplot2优雅绘制网络图",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_network_ggraph构建疾病遗传调控网络图",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_ggraph环形网络图_多维数据圈层",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_ggraph绘制代谢途径图",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_ggraph绘制环状网络图",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_分层气泡图_类别层次结构展示",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_微生物与代谢物共生网络图",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_环形网络图的构建方法",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_细胞通讯网络图",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_network_蛋白互作网络图",
+      "grammar": "network_graph",
+      "backend": "R/ggraph-igraph"
+    },
+    {
+      "case": "plotcase_pie_多层饼图",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_point_多层级曼哈顿图",
+      "grammar": "manhattan",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_point_多组火山图",
+      "grammar": "scatter_bubble",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_point_效应量森林图_分组比较与显著性标注",
+      "grammar": "forest_interval",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_point_散点图叠加多坐标轴",
+      "grammar": "scatter_bubble",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线",
+      "grammar": "scatter_bubble",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_point_火山图局部放大版",
+      "grammar": "scatter_bubble",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_sankey,venn_桑基组合维恩图",
+      "grammar": "alluvial_sankey",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_sankey_多层级桑基图",
+      "grammar": "alluvial_sankey",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_sankey_桑基流向图",
+      "grammar": "alluvial_sankey",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_sankey_渐变色桑基图",
+      "grammar": "alluvial_sankey",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_sankey_渐变色桑基图_进阶版",
+      "grammar": "alluvial_sankey",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_sankey_节点融合桑基图",
+      "grammar": "alluvial_sankey",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_tree_ggtree绘制多层级进化树",
+      "grammar": "tree_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_tree_ggtree绘制系统发育树",
+      "grammar": "tree_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_tree_多层级系统发育树图",
+      "grammar": "tree_heatmap",
+      "backend": "R/ggtree"
+    },
+    {
+      "case": "plotcase_violin_分裂小提琴图分面版",
+      "grammar": "distribution",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_violin_小提琴图添加显著性标记",
+      "grammar": "distribution",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_冲积图_物种组成冲积图",
+      "grammar": "alluvial_sankey",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_哑铃图_环形哑铃通路图",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_基因组图_geneviewer基因簇结构可视化",
+      "grammar": "genome_structure",
+      "backend": "R"
+    },
+    {
+      "case": "plotcase_基因组图_比较基因组结构图",
+      "grammar": "genome_structure",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_曲线图_Kaplan_Meier生存曲线",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_森林图_多因素Cox森林图",
+      "grammar": "forest_interval",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_森林图_森林图进阶图例映射版",
+      "grammar": "forest_interval",
+      "backend": "R/ComplexHeatmap-circlize"
+    },
+    {
+      "case": "plotcase_流程图_细胞网络通讯示意图",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_游泳图_游泳图_进阶版",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_维诺图_维诺图划分子区域",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_综合图_ggplot2组合展示误差线点图与柱状图",
+      "grammar": "bar_composite",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_综合图_lefse分析图",
+      "grammar": "network_graph",
+      "backend": "rendered_figure"
+    },
+    {
+      "case": "plotcase_综合图_多分组统计与差异变化综合图",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_雷达图_雷达图批量绘制",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    },
+    {
+      "case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "grammar": "network_graph",
+      "backend": "R/ggplot2"
+    }
+  ]
+}

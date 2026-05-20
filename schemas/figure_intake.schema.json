@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-plotter.local/schemas/figure_intake.schema.json",
+  "title": "Figure Intake",
+  "type": "object",
+  "required": ["case_id", "source", "original_image", "intake_status", "created_at"],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "required": ["origin_type"],
+      "properties": {
+        "origin_type": {"enum": ["foreign_code", "raw_figure", "vault_case", "generated_test"]},
+        "batch_id": {"type": "string"},
+        "original_path": {"type": "string"},
+        "notes": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "original_image": {"type": "string"},
+    "source_code": {"type": "array", "items": {"type": "string"}},
+    "raw_resources": {"type": "array", "items": {"type": "string"}},
+    "intake_status": {"enum": ["pending", "parsed", "standardized", "rejected"]},
+    "created_at": {"type": "string"},
+    "updated_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}

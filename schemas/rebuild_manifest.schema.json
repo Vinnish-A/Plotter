@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-plotter.local/schemas/rebuild_manifest.schema.json",
+  "title": "Rebuild Manifest",
+  "type": "object",
+  "required": ["case_id", "status", "entry", "outputs"],
+  "properties": {
+    "case_id": {"type": "string"},
+    "status": {"enum": ["build_success", "build_failed", "custom_required", "dependency_missing"]},
+    "entry": {"type": "string"},
+    "outputs": {
+      "type": "object",
+      "properties": {
+        "png": {"type": "string"},
+        "pdf": {"type": "string"},
+        "source_preview": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "dependencies": {"type": "object"},
+    "reason": {"type": "string"},
+    "rebuilt_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}

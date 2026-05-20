@@ -1,0 +1,144 @@
+{
+  "id": "plotcase_sankey_节点融合桑基图",
+  "title": "节点融合桑基图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "sankey\\节点融合桑基图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "flow"
+  ],
+  "visual_keywords": [
+    "alluvial",
+    "sankey",
+    "flow",
+    "stage_transition"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "stage",
+      "node",
+      "next_stage",
+      "next_node",
+      "value"
+    ],
+    "optional_mappings": [
+      "flow_id",
+      "group",
+      "node_color",
+      "label",
+      "order"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "stage-wise flow table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.652251+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "RColorBrewer",
+      "ggsankeyfier",
+      "magrittr",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:33.606480+00:00",
+    "records": [
+      {
+        "source": "plotcase_sankey_节点融合桑基图/data_raw/data/data1_1.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_sankey_节点融合桑基图/data_raw/data/data1_1.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_sankey_节点融合桑基图/raw/data/data1_1.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_sankey_节点融合桑基图/raw/data/data1_1.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/data1_1.csv",
+    "grammar_geometry": "alluvial_sankey",
+    "row_count": 80,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_sankey_渐变色桑基图_进阶版",
+    "reason": "visual_redundancy:network:sankey",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/data1_1.tsv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-18T07:50:21.583638+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "alluvial_sankey",
+    "backend": "R/ggplot2",
+    "unit": "stage-wise flow table",
+    "required_data_roles": [
+      "stage",
+      "node",
+      "next_stage",
+      "next_node",
+      "value"
+    ],
+    "optional_data_roles": [
+      "flow_id",
+      "group",
+      "node_color",
+      "label",
+      "order"
+    ]
+  }
+}

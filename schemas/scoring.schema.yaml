@@ -1,0 +1,34 @@
+type: object
+required:
+  - data_fidelity
+  - claim_fit
+  - readability
+  - insight_gain
+  - plot_worthiness
+properties:
+  data_fidelity:
+    type: number
+    minimum: 0
+    maximum: 1
+  claim_fit:
+    type: number
+    minimum: 0
+    maximum: 1
+  readability:
+    type: number
+    minimum: 0
+    maximum: 1
+  insight_gain:
+    type: number
+    minimum: 0
+    maximum: 1
+  defamiliarization:
+    type: string
+  plot_worthiness:
+    type: number
+    minimum: 0
+    maximum: 1
+  risks:
+    type: array
+    items:
+      type: string

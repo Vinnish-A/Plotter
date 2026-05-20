@@ -1,0 +1,24 @@
+{"case": "figureya_survival_FigureYa183condSurv", "status": "success", "script": "raw/FigureYa183condSurv.Rmd", "chosen": "raw/Rplots.pdf"}
+{"case": "figureya_survival_FigureYa299pancanSurv", "status": "success", "script": "raw/_plotter_fallback_tree.R", "chosen": "raw/prognostic heatmap.pdf"}
+{"case": "figureya_survival_FigureYa30nomogram_update", "status": "success", "script": "raw/FigureYa30nomogram_update.Rmd", "chosen": "raw/nomogram_regplot_cox.png"}
+{"case": "figureya_survival_FigureYa66UnivariateCox", "status": "success", "script": "raw/FigureYa66UnivariateCox.Rmd", "chosen": "raw/plot3.png"}
+{"case": "plotcase_circos_circlize绘制和弦图", "status": "success", "script": "raw/code.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotcase_heatmap_ggtree绘制离散型系统发育树热图", "status": "success", "script": "raw/_plotter_fallback_discrete_tree_heatmap.R", "chosen": "raw/plotter_fallback_discrete_tree_heatmap.png"}
+{"case": "plotcase_heatmap_多分组气泡热图", "status": "success", "script": "raw/code.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotcase_heatmap_多类别分面注释热图", "status": "success", "script": "raw/code.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotcase_heatmap_对角线相关性热图", "status": "success", "script": "raw/code.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotcase_heatmap_离散热图与条图组合", "status": "success", "script": "raw/code.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotcase_network_Treemap矩形树状GO富集分析图", "status": "success", "script": "raw/code.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotcase_network_ggraph环形网络图_多维数据圈层", "status": "success", "script": "raw/code.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotcase_sankey_渐变色桑基图_进阶版", "status": "success", "script": "raw/code.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotmaster_001箱线图+散点图", "status": "success", "script": "raw/box_scatter_plot.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotmaster_002渐变火山图", "status": "success", "script": "raw/vocanol_plot.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotmaster_004提琴图", "status": "success", "script": "raw/violin_plot.R", "chosen": "raw/violin_plot.png"}
+{"case": "plotmaster_009甘特图", "status": "success", "script": "raw/gantt.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotmaster_018单细胞分组火山图", "status": "success", "script": "raw/codes.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotmaster_023泛癌箱线图+显著性检验", "status": "success", "script": "raw/codes.R", "chosen": "raw/box_plot.png"}
+{"case": "plotmaster_025三维PCA散点图", "status": "success", "script": "raw/codes.R", "chosen": "raw/plot1.png"}
+{"case": "plotmaster_032表达定量雷达图", "status": "success", "script": "raw/codes.R", "chosen": "raw/Rplots.pdf"}
+{"case": "plotmaster_047散点饼图", "status": "success", "script": "raw/codes.R", "chosen": "raw/plot.png"}
+{"case": "plotmaster_050复杂分组散点图", "status": "success", "script": "raw/codes.R", "chosen": "raw/plot.png"}
+{"case": "plotmaster_48个性化桑基图", "status": "success", "script": "raw/codes.R", "chosen": "raw/plot.png"}

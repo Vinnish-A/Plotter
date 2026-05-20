@@ -1,0 +1,169 @@
+{
+  "id": "plotcase_heatmap_多类别分面注释热图",
+  "title": "多类别分面注释热图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "heatmap\\多类别分面注释热图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "heatmap"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "matrix_body",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_mappings": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "long matrix table with optional row/column annotations"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 10,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 5,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:12.044176+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "tibble"
+    ],
+    "special": [
+      "ggh4x",
+      "ggtext",
+      "magrittr",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:29.856490+00:00",
+    "records": [
+      {
+        "source": "plotcase_heatmap_多类别分面注释热图/data_raw/data/heta.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多类别分面注释热图/data_raw/data/heta.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_heatmap_多类别分面注释热图/data_raw/data/type.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多类别分面注释热图/data_raw/data/type.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_heatmap_多类别分面注释热图/raw/data/heta.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多类别分面注释热图/raw/data/heta.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_heatmap_多类别分面注释热图/raw/data/type.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多类别分面注释热图/raw/data/type.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/heta.csv",
+    "grammar_geometry": "annotated_heatmap",
+    "row_count": 27,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 5.2673,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/heta.tsv",
+      "raw/type.tsv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:33:00.797272+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.17455354254342645,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "annotated_heatmap",
+    "backend": "R/ggplot2",
+    "unit": "long matrix table with optional row/column annotations",
+    "required_data_roles": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_data_roles": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ]
+  }
+}

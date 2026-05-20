@@ -1,0 +1,10 @@
+stage,node,next_stage,next_node,value,flow_id,group,node_color,label,order
+S1,N1,S2,N2,13,F1,G1,,,1
+S2,N2,S3,N3,16,F2,G2,,,2
+S0,N3,S1,N0,19,F3,G0,,,3
+S1,N0,S2,N1,22,F4,G1,,,4
+S2,N1,S3,N2,25,F5,G2,,,5
+S0,N2,S1,N3,28,F6,G0,,,6
+S1,N3,S2,N0,31,F7,G1,,,7
+S2,N0,S3,N1,34,F8,G2,,,8
+S0,N1,S1,N2,37,F9,G0,,,9

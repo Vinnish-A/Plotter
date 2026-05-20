@@ -1,0 +1,16 @@
+    min    med   max              x  group group_col   p
+1  0.55  0.700  0.85  Acidobacteria group1   #e7a40e ***
+2  0.45  0.570  0.69 Actinobacteria group1   #e7a40e  **
+3  0.22  0.370  0.52  Bacteroidetes group1   #e7a40e  **
+4  0.67  0.805  0.94     Chlamydiae group1   #e7a40e   *
+5 -0.28 -0.175 -0.07    Chloroflexi group1   #e7a40e    
+6 -0.91 -0.765 -0.62     Firmicutes group1   #e7a40e   *
+                    p_col
+1  Postive effect(P<0.05)
+2  Postive effect(P<0.05)
+3  Postive effect(P<0.05)
+4  Postive effect(P<0.05)
+5 Negtive effect(P>=0.05)
+6  Negtive effect(P<0.05)
+
+[stderr]

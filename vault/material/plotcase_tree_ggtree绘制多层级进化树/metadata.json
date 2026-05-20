@@ -1,0 +1,205 @@
+{
+  "id": "plotcase_tree_ggtree绘制多层级进化树",
+  "title": "ggtree绘制多层级进化树",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "tree\\ggtree绘制多层级进化树"
+  },
+  "mode": "high",
+  "chart_family": [
+    "tree",
+    "tree_annotation"
+  ],
+  "visual_keywords": [
+    "tree",
+    "phylogeny",
+    "annotation_track",
+    "radial_or_rectangular_layout"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "node_id",
+      "parent_id",
+      "label"
+    ],
+    "optional_mappings": [
+      "branch_length",
+      "tip_group",
+      "track",
+      "track_value",
+      "track_class",
+      "heatmap_value"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "tree edges plus tip-level annotation table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 12,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 7,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.660833+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ape",
+      "ggnewscale",
+      "ggstar",
+      "ggtree",
+      "ggtreeExtra",
+      "tidyverse",
+      "vegan"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:33.669980+00:00",
+    "records": [
+      {
+        "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v4.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v4.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v9.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v9.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v4.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v4.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v9.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v9.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v4.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v4.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v9.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v9.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/v4.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制多层级进化树/raw/data/v4.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/v9.txt",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制多层级进化树/raw/data/v9.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/v4.csv",
+    "grammar_geometry": "tree_heatmap",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "complexity_assignment": {
+    "mode": "high",
+    "score": 5.5067,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/group.v4.txt",
+      "raw/group.v9.txt",
+      "raw/v4.txt",
+      "raw/v9.txt"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:31:14.400364+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.10142614122227989,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "tree_heatmap",
+    "backend": "R/ggtree",
+    "unit": "tree edges plus tip-level annotation table",
+    "required_data_roles": [
+      "node_id",
+      "parent_id",
+      "label"
+    ],
+    "optional_data_roles": [
+      "branch_length",
+      "tip_group",
+      "track",
+      "track_value",
+      "track_class",
+      "heatmap_value"
+    ]
+  }
+}

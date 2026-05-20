@@ -1,0 +1,39 @@
+  Glycometabolic.markers Quantile.midpoint Line.predication
+1                    FPG              0.13             0.77
+2                    FPG              0.38             0.82
+3                    FPG              0.63             0.86
+4                    FPG              0.88             0.91
+5                    GSP              0.13             2.49
+
+[stderr]
+Scale for fill is already present.
+Adding another scale for fill, which will replace the existing scale.
+Error in `palette()`:
+! Insufficient values in manual scale. 8 needed but only 4 provided.
+Backtrace:
+     ▆
+  1. └─ggplot2::ggplotGrob(p_tmp)
+  2.   ├─ggplot2::ggplot_gtable(ggplot_build(x))
+  3.   │ └─ggplot2:::attach_plot_env(data@plot@plot_env)
+  4.   │   └─base::options(ggplot2_plot_env = env)
+  5.   ├─ggplot2::ggplot_build(x)
+  6.   └─ggplot2 (local) `ggplot_build.ggplot2::ggplot`(x)
+  7.     └─plot@guides$build(npscales, plot@layers, plot@labels, data, plot@theme)
+  8.       └─ggplot2 (local) build(..., self = self)
+  9.         └─guides$train(scales, labels)
+ 10.           └─ggplot2 (local) train(..., self = self)
+ 11.             └─base::Map(...)
+ 12.               └─base::mapply(FUN = f, ..., SIMPLIFY = FALSE)
+ 13.                 └─ggplot2 (local) `<fn>`(...)
+ 14.                   └─guide$train(param, scale, aes, title = labels[[aes]])
+ 15.                     └─ggplot2 (local) train(..., self = self)
+ 16.                       ├─rlang::inject(self$extract_key(scale, !!!params))
+ 17.                       └─self$extract_key(...)
+ 18.                         └─ggplot2 (local) extract_key(...)
+ 19.                           └─scale$map(breaks)
+ 20.                             └─ggplot2 (local) map(..., self = self)
+ 21.                               └─self$palette(n)
+ 22.                                 └─ggplot2 (local) palette(...)
+ 23.                                   └─cli::cli_abort("Insufficient values in manual scale. {n} needed but only {length(values)} provided.")
+ 24.                                     └─rlang::abort(...)
+Execution halted

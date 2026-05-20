@@ -1,0 +1,25 @@
+type: object
+required:
+  - figure_id
+  - files
+  - code
+  - reproducibility
+  - checks
+properties:
+  figure_id:
+    type: string
+  files:
+    type: object
+    properties:
+      png:
+        type: string
+      pdf:
+        type: string
+      svg:
+        type: string
+  code:
+    type: object
+  reproducibility:
+    type: object
+  checks:
+    type: object

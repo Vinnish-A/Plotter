@@ -1,0 +1,1 @@
+geneviewer produces an interactive widget and the source script does not emit a static file; use the provided finished figure as the static Vault preview.

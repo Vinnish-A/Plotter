@@ -1,0 +1,130 @@
+{
+  "id": "plotmaster_004提琴图",
+  "title": "004提琴图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "004提琴图"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "3d_manifold",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 15,
+    "outputs": 9,
+    "scripts": 1,
+    "raw_data": 2,
+    "docs": 5
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:13.001428+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "patchwork"
+    ],
+    "special": [
+      "ggsignif"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data2.csv",
+    "grammar_geometry": "scatter",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 5.2767,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/violin_plot.R",
+    "generated_source": "raw/violin_plot.png",
+    "compat_xlsx": [
+      "raw/data1.csv",
+      "raw/data2.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:45:33.396689+00:00"
+  },
+  "complexity_review": {
+    "status": "reviewed_after_visual_folding",
+    "reason": "mode adjusted by final visual complexity and target live ratio high/medium/low = 0.2/0.3/0.5",
+    "previous_mode": "medium"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_violin_plot.pdf",
+      "selected": "raw/violin_plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.03341736254052532,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "3d_manifold",
+    "keywords": [
+      "3d_manifold",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "ggplot2",
+      "ggsignif",
+      "patchwork"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

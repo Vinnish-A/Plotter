@@ -1,0 +1,28 @@
+# A tibble: 6 × 4
+  Genes Samples                    Values group    
+  <chr> <chr>                       <dbl> <chr>    
+1 POLD3 Chip91481_r0_c23_Untreated   8.35 Untreated
+2 POLD3 Chip91481_r0_c27_Treated     5.12 Treated  
+3 POLD3 Chip91481_r0_c40_Untreated   5.12 Untreated
+4 POLD3 Chip91481_r0_c43_Untreated   5.12 Untreated
+5 POLD3 Chip91481_r0_c44_Untreated   6.54 Untreated
+6 POLD3 Chip91481_r0_c45_Untreated   9.84 Untreated
+
+[stderr]
+Loading required package: ggplot2
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+2: In stat_summary(data = data_new, aes(x = Genes, y = Values, fill = group),  :
+  Ignoring unknown aesthetics: fill
+3: In stat_compare_means(data = data_new, aes(x = Genes, y = Values,  :
+  Ignoring unknown aesthetics: fill

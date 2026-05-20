@@ -1,0 +1,140 @@
+{
+  "id": "plotcase_基因组图_比较基因组结构图",
+  "title": "比较基因组结构图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "基因组图\\比较基因组结构图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "genome_structure"
+  ],
+  "visual_keywords": [
+    "genome_structure",
+    "gene_arrow",
+    "synteny",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "segment_id",
+      "feature_id",
+      "start",
+      "end",
+      "strand",
+      "feature_class"
+    ],
+    "optional_mappings": [
+      "cluster",
+      "label",
+      "link_id",
+      "similarity",
+      "track",
+      "color_class"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "oriented genomic feature table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 8,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 3,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.807004+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "tidyheatmaps",
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "genome_structure",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "outputs/figure_001_cover.png",
+    "fallback_reason": "Visual audit fallback: original-code output existed but did not preserve the finished figure structure well enough for Vault preview (normalized correlation=0.0716, edge_ratio=0.8876).",
+    "previous_rebuild_attempt": {
+      "status": "success",
+      "script": "raw/code.R",
+      "generated_source": "raw/Rplots.pdf",
+      "compat_xlsx": [],
+      "returncode": 0,
+      "rebuilt_at": "2026-05-18T07:59:40.092807+00:00"
+    },
+    "rebuilt_at": "2026-05-18T08:06:20.378848+00:00"
+  },
+  "visual_audit": {
+    "status": "fallback_to_finished_figure",
+    "metric": {
+      "case": "plotcase_基因组图_比较基因组结构图",
+      "status": "success",
+      "mse": 0.0305,
+      "corr": 0.0716,
+      "edge_ratio": 0.8876
+    },
+    "audited_at": "2026-05-18T08:06:20.378864+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "genome_structure",
+    "backend": "R/ggplot2",
+    "unit": "oriented genomic feature table",
+    "required_data_roles": [
+      "segment_id",
+      "feature_id",
+      "start",
+      "end",
+      "strand",
+      "feature_class"
+    ],
+    "optional_data_roles": [
+      "cluster",
+      "label",
+      "link_id",
+      "similarity",
+      "track",
+      "color_class"
+    ]
+  }
+}

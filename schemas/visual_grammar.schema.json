@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-plotter.local/schemas/visual_grammar.schema.json",
+  "title": "Visual Grammar",
+  "type": "object",
+  "required": ["grammar_id", "figure_unit", "required_data_roles"],
+  "properties": {
+    "grammar_id": {"type": "string"},
+    "figure_unit": {"type": "string"},
+    "backend": {"type": "string"},
+    "visual_units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unit_id", "mark", "encoding"],
+        "properties": {
+          "unit_id": {"type": "string"},
+          "mark": {"type": "string"},
+          "encoding": {"type": "array", "items": {"type": "string"}},
+          "layout_role": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "required_data_roles": {"type": "array", "items": {"type": "string"}},
+    "optional_data_roles": {"type": "array", "items": {"type": "string"}},
+    "custom_boundaries": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,13 @@
+pvalue
+<0.0001  <0.001   <0.01   <0.05   >0.05 
+      6       8       9     101      66 
+
+[stderr]
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+There were 24 warnings (use warnings() to see them)

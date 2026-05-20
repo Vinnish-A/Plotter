@@ -1,0 +1,125 @@
+{
+  "id": "plotmaster_007气泡火山图",
+  "title": "007气泡火山图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "007气泡火山图"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "scatter",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 4,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 2,
+    "docs": 1
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:13.025940+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ggrepel",
+      "latex2exp"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/term_data.csv",
+    "grammar_geometry": "scatter",
+    "row_count": 100,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 3.82,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/vocanolPlot.R",
+    "generated_source": "raw/vocanol_Plot.png",
+    "compat_xlsx": [
+      "raw/DEG.csv",
+      "raw/term_data.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:45:36.395124+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_vocanol_Plot.pdf",
+      "selected": "raw/vocanol_Plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.10530752086044436,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "scatter",
+    "keywords": [
+      "scatter",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "ggplot2",
+      "ggrepel",
+      "latex2exp"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

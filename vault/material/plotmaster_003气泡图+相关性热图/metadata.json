@@ -1,0 +1,117 @@
+{
+  "id": "plotmaster_003气泡图+相关性热图",
+  "title": "003气泡图+相关性热图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "003气泡图+相关性热图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "group",
+      "gene",
+      "correlation",
+      "p_value",
+      "direction",
+      "p_value_bin",
+      "abs_correlation"
+    ],
+    "optional_mappings": [
+      "label",
+      "facet",
+      "annotation"
+    ],
+    "declared_raw_resources": [],
+    "note": "Standard CSV is the visual-grammar table for a grouped correlation bubble heatmap; raw expression matrix is retained only as source material."
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 11,
+    "outputs": 7,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 5
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.R",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2"
+    ],
+    "special": [
+      "Hmisc"
+    ]
+  },
+  "folded": {
+    "status": "folded_duplicate",
+    "canonical_case": "plotmaster_002渐变火山图",
+    "reason": "exact duplicate primary image hash",
+    "folded_at": "2026-05-17T06:59:22.739316+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/buble_plot.R",
+    "generated_source": "raw/cor_buble_heatmap.png",
+    "compat_xlsx": [
+      "raw/exprSet.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:34:24.080516+00:00"
+  },
+  "complexity_review": {
+    "status": "reviewed_after_visual_folding",
+    "reason": "mode adjusted by final visual complexity and target live ratio high/medium/low = 0.2/0.3/0.5",
+    "previous_mode": "high"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cor_buble_heatmap.pdf",
+      "selected": "raw/cor_buble_heatmap.pdf",
+      "page": 0,
+      "previous_rmse": 0.05470062939120212,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "Hmisc",
+      "ggplot2",
+      "tidyr"
+    ],
+    "runtime_dependencies": []
+  }
+}

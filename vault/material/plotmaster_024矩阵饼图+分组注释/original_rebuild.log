@@ -1,0 +1,22 @@
+# A tibble: 6 × 8
+  Mutated_Gene Subtype Q.value  Correlation_Type Mutations_type Mutations_number
+  <fct>        <fct>   <chr>    <chr>            <chr>                     <dbl>
+1 NOTCH1       G1      2.42464… Grey             Mutations not…               88
+2 NOTCH1       G1      2.42464… Exclusivity      Mutations in …              111
+3 NOTCH1       G2      0.76406… Grey             Mutations not…                1
+4 NOTCH1       G2      0.76406… Not significant  Mutations in …               10
+5 NOTCH1       G3      1        Grey             Mutations not…                3
+6 NOTCH1       G3      1        Not significant  Mutations in …                7
+# ℹ 2 more variables: group <int>, Grobname <chr>
+
+[stderr]
+Loading required package: tidyverse
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors

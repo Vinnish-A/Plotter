@@ -1,0 +1,1476 @@
+{
+  "created_at": "2026-05-17T12:53:30.972762+00:00",
+  "strategy": "fold by rebuilt visual grammar and subtype, not by data domain",
+  "dry_run": true,
+  "before_count": 261,
+  "after_count": 79,
+  "folded_count": 182,
+  "keep_quota": {
+    "scatter": 20,
+    "heatmap": 16,
+    "network": 12,
+    "line": 11,
+    "bar": 9,
+    "box": 8,
+    "radar": 3
+  },
+  "mode_counts": {},
+  "actions": [
+    {
+      "case": "figures4papers_figure_CellSpliceNet_ablation_png",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.696,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 3.616,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "figures4papers_figure_Dispersion_idea_png",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.756,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "figures4papers_figure_ImmunoStruct_bars_ablation_Cancer_png",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 1.696,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "figures4papers_figure_RNAGenScape_manifold_holes_png",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.216,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "figures4papers_figure_VIGIL_comparison_posttraining_png",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.696,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "figures4papers_figure_brainteaser_brute_force_png",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.296,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "figures4papers_figure_ophthal_review_composition_heatmap_png",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 3.126,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "figureya_survival_FigureYa138NiceCalibration",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 3.4609,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa141risk",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 4.0573,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa143survCor_update",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 4.1068,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa171subgroupSurv",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 3.6773,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa187RMS",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 3.7363,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa189timeCindex",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 3.8163,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa193RiskTable",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 4.0667,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa1survivalCurve_update",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 3.7567,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa210survivalScape",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 3.7456,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa284pairwiseLogrank",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 3.9467,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa33DCA_update",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 4.1116,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa6rHRsV2",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 2.7589,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "figureya_survival_FigureYa85timeROC",
+      "canonical_case": "figureya_survival_FigureYa66UnivariateCox",
+      "geometry": "line",
+      "subtype": "survival",
+      "score": 3.3755,
+      "reason": "visual_redundancy:line:survival"
+    },
+    {
+      "case": "plotcase_barplot_ggplot2绘制小清新版箭头图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.3128,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_个性化环状条形图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.2735,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_区域缩柱状图_(基础入门)",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.4073,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_基因富集分析条图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.4023,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_多元素组合分布条图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.808,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_局部放大柱状图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.4411,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_条形图与直方分布图组合",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.64,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_极坐标堆砌柱状图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.7482,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_正负分布堆砌条形图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.3567,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_barplot_配对连线条图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.2223,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_boxplot_几何阴影填充箱线图",
+      "canonical_case": "plotcase_boxplot_多分组分面小提琴箱线图",
+      "geometry": "box",
+      "subtype": "box",
+      "score": 2.316,
+      "reason": "visual_redundancy:box:box"
+    },
+    {
+      "case": "plotcase_boxplot_箱线图_基础入门版",
+      "canonical_case": "plotcase_boxplot_多分组分面小提琴箱线图",
+      "geometry": "box",
+      "subtype": "box",
+      "score": 2.3376,
+      "reason": "visual_redundancy:box:box"
+    },
+    {
+      "case": "plotcase_boxplot_配对连线箱线图",
+      "canonical_case": "plotcase_boxplot_多分组分面小提琴箱线图",
+      "geometry": "box",
+      "subtype": "box",
+      "score": 3.5919,
+      "reason": "visual_redundancy:box:box"
+    },
+    {
+      "case": "plotcase_circos_GO富集分析通路图",
+      "canonical_case": "plotcase_circos_circlize绘制和弦图",
+      "geometry": "network",
+      "subtype": "circos",
+      "score": 4.1667,
+      "reason": "visual_redundancy:network:circos"
+    },
+    {
+      "case": "plotcase_circos_circlize优雅绘制多重注释弦图",
+      "canonical_case": "plotcase_circos_circlize绘制和弦图",
+      "geometry": "network",
+      "subtype": "circos",
+      "score": 4.2167,
+      "reason": "visual_redundancy:network:circos"
+    },
+    {
+      "case": "plotcase_circos_circlize绘制和弦图进阶版",
+      "canonical_case": "plotcase_circos_circlize绘制和弦图",
+      "geometry": "network",
+      "subtype": "circos",
+      "score": 4.39,
+      "reason": "visual_redundancy:network:circos"
+    },
+    {
+      "case": "plotcase_circos_circlize绘制融合基因图",
+      "canonical_case": "plotcase_circos_circlize绘制和弦图",
+      "geometry": "network",
+      "subtype": "circos",
+      "score": 4.3173,
+      "reason": "visual_redundancy:network:circos"
+    },
+    {
+      "case": "plotcase_circos_多类别关联网络弦图",
+      "canonical_case": "plotcase_circos_circlize绘制和弦图",
+      "geometry": "network",
+      "subtype": "circos",
+      "score": 3.916,
+      "reason": "visual_redundancy:network:circos"
+    },
+    {
+      "case": "plotcase_circos_细胞通讯和弦图",
+      "canonical_case": "plotcase_circos_circlize绘制和弦图",
+      "geometry": "network",
+      "subtype": "circos",
+      "score": 4.0148,
+      "reason": "visual_redundancy:network:circos"
+    },
+    {
+      "case": "plotcase_circos_细胞通讯弦图_基础入门",
+      "canonical_case": "plotcase_circos_circlize绘制和弦图",
+      "geometry": "network",
+      "subtype": "circos",
+      "score": 2.346,
+      "reason": "visual_redundancy:network:circos"
+    },
+    {
+      "case": "plotcase_heatmap_3D热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.4869,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_ARG丰度与环境因子相关性网络热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.0867,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_Mantel检验热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 3.466,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_circlize绘制环状聚类热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.33,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_corrplot绘制相关性热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 3.226,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_ggforce标记关键信息",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 3.046,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_ggplot2绘制连续型热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 3.9989,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_ggtree绘制环状聚类热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.3852,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_ggtree绘制组合热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.2727,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+      "canonical_case": "plotcase_heatmap_多分组气泡热图",
+      "geometry": "heatmap",
+      "subtype": "气泡",
+      "score": 3.466,
+      "reason": "visual_redundancy:heatmap:气泡"
+    },
+    {
+      "case": "plotcase_heatmap_tidyheatmaps轻松绘制热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 3.106,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_分组注释标记热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.5734,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_分面热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.5582,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_回归方差分解热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.3691,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_基因表达注释热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.8134,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_多元素个性化对角线热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.3904,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_多元素个性化气泡热图",
+      "canonical_case": "plotcase_heatmap_多分组气泡热图",
+      "geometry": "heatmap",
+      "subtype": "气泡",
+      "score": 4.6693,
+      "reason": "visual_redundancy:heatmap:气泡"
+    },
+    {
+      "case": "plotcase_heatmap_多类别注释风格热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.6533,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_多重注释分组热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.5278,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_差异表达基因的层次聚类热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.8267,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_极坐标热图添加聚类",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 3.456,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_气泡配对连线个性化热图",
+      "canonical_case": "plotcase_heatmap_多分组气泡热图",
+      "geometry": "heatmap",
+      "subtype": "气泡",
+      "score": 4.1333,
+      "reason": "visual_redundancy:heatmap:气泡"
+    },
+    {
+      "case": "plotcase_heatmap_热图添加层次折叠聚类树",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.5071,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_热图添加渐变色背景",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.9467,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_环状分组热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.0256,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_环状注释热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.9077,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_相关性分面热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.6233,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_相关性注释热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.4857,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_相关性热图进阶",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 3.816,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_离散气泡热图",
+      "canonical_case": "plotcase_heatmap_多分组气泡热图",
+      "geometry": "heatmap",
+      "subtype": "气泡",
+      "score": 4.3669,
+      "reason": "visual_redundancy:heatmap:气泡"
+    },
+    {
+      "case": "plotcase_heatmap_边框分组注释热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.2423,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_heatmap_配对连线热图",
+      "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+      "geometry": "heatmap",
+      "subtype": "map",
+      "score": 4.2624,
+      "reason": "visual_redundancy:heatmap:map"
+    },
+    {
+      "case": "plotcase_map_地图添加3D饼图注释",
+      "canonical_case": "plotcase_map_采样点地图进阶版",
+      "geometry": "scatter",
+      "subtype": "map",
+      "score": 3.2748,
+      "reason": "visual_redundancy:scatter:map"
+    },
+    {
+      "case": "plotcase_map_环状地图",
+      "canonical_case": "plotcase_map_采样点地图进阶版",
+      "geometry": "scatter",
+      "subtype": "map",
+      "score": 1.916,
+      "reason": "visual_redundancy:scatter:map"
+    },
+    {
+      "case": "plotcase_map_连线地图",
+      "canonical_case": "plotcase_map_采样点地图进阶版",
+      "geometry": "scatter",
+      "subtype": "map",
+      "score": 1.976,
+      "reason": "visual_redundancy:scatter:map"
+    },
+    {
+      "case": "plotcase_map_采样点地图",
+      "canonical_case": "plotcase_map_采样点地图进阶版",
+      "geometry": "scatter",
+      "subtype": "map",
+      "score": 3.4294,
+      "reason": "visual_redundancy:scatter:map"
+    },
+    {
+      "case": "plotcase_network_GO通路相似性网络图_基于基因重叠度",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.1067,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_ggplot2优雅绘制网络图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.41,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_ggraph构建疾病遗传调控网络图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.9384,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_ggraph绘制代谢途径图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.1404,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_ggraph绘制环状网络图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.77,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_分层气泡图_类别层次结构展示",
+      "canonical_case": "plotmaster_059桑基气泡图",
+      "geometry": "network",
+      "subtype": "气泡",
+      "score": 5.0267,
+      "reason": "visual_redundancy:network:气泡"
+    },
+    {
+      "case": "plotcase_network_基因互作网络图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.3228,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_微生物与代谢物共生网络图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 3.306,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_环形网络图的构建方法",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.7696,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_细胞通讯网络图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.7371,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_网络图_基础入门版",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 3.8135,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_network_蛋白互作网络图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.3651,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_pie_3D饼图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.1679,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_pie_ggplot2绘制月亮图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.2348,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_pie_分裂饼图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.036,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_pie_多层饼图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.3715,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_pie_循环绘制饼图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.4872,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point,面积图_双Y轴散点面积组合图",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 3.3347,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotcase_point_NMDS分析图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.7767,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_PCA散点图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.8784,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_PCOA分析图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.5672,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_ggplot2优雅的绘制增强版哑铃图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.6527,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_ggplot2绘制平滑曲线注释散点图",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 3.3802,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotcase_point_ggplot2绘制误差线点图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.9144,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_三元相图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.5767,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_四象限散点图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.6367,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_多层级曼哈顿图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.146,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_效应量森林图_分组比较与显著性标注",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.4802,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_散点图叠加多坐标轴",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.6367,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_散点图叠加多组拟合曲线",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 3.7627,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotcase_point_散点图叠加拟合曲线_(基础入门)",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 2.2467,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotcase_point_散点图叠加边际分布",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.296,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_散点饼图_(基础入门)",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.4283,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_曼哈顿图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.6967,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线",
+      "canonical_case": "plotmaster_053分组气泡图",
+      "geometry": "scatter",
+      "subtype": "气泡",
+      "score": 3.3569,
+      "reason": "visual_redundancy:scatter:气泡"
+    },
+    {
+      "case": "plotcase_point_渐变火山图",
+      "canonical_case": "plotmaster_002渐变火山图",
+      "geometry": "scatter",
+      "subtype": "火山",
+      "score": 3.6367,
+      "reason": "visual_redundancy:scatter:火山"
+    },
+    {
+      "case": "plotcase_point_火山图_(基础入门)",
+      "canonical_case": "plotmaster_002渐变火山图",
+      "geometry": "scatter",
+      "subtype": "火山",
+      "score": 1.016,
+      "reason": "visual_redundancy:scatter:火山"
+    },
+    {
+      "case": "plotcase_point_点线图_(基础入门)",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.7248,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_point_配对散点图_(基础入门)",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.4548,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_sankey,venn_桑基组合维恩图",
+      "canonical_case": "plotcase_sankey_渐变色桑基图_进阶版",
+      "geometry": "network",
+      "subtype": "sankey",
+      "score": 3.776,
+      "reason": "visual_redundancy:network:sankey"
+    },
+    {
+      "case": "plotcase_sankey_多层级桑基图",
+      "canonical_case": "plotcase_sankey_渐变色桑基图_进阶版",
+      "geometry": "network",
+      "subtype": "sankey",
+      "score": 4.5904,
+      "reason": "visual_redundancy:network:sankey"
+    },
+    {
+      "case": "plotcase_sankey_桑基流向图",
+      "canonical_case": "plotcase_sankey_渐变色桑基图_进阶版",
+      "geometry": "network",
+      "subtype": "sankey",
+      "score": 4.8002,
+      "reason": "visual_redundancy:network:sankey"
+    },
+    {
+      "case": "plotcase_sankey_渐变色桑基图",
+      "canonical_case": "plotcase_sankey_渐变色桑基图_进阶版",
+      "geometry": "network",
+      "subtype": "sankey",
+      "score": 4.2682,
+      "reason": "visual_redundancy:network:sankey"
+    },
+    {
+      "case": "plotcase_sankey_节点融合桑基图",
+      "canonical_case": "plotcase_sankey_渐变色桑基图_进阶版",
+      "geometry": "network",
+      "subtype": "sankey",
+      "score": 4.5367,
+      "reason": "visual_redundancy:network:sankey"
+    },
+    {
+      "case": "plotcase_tree_ggtree绘制系统发育树",
+      "canonical_case": "plotcase_tree_多层级系统发育树图",
+      "geometry": "network",
+      "subtype": "tree",
+      "score": 4.9671,
+      "reason": "visual_redundancy:network:tree"
+    },
+    {
+      "case": "plotcase_venn,pie_维恩图组合饼图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.326,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_venn_ggplot2绘制花瓣图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.856,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_venn_维恩图组合棒棒糖图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.386,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_venn_维恩点图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.6367,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_violin_分裂小提琴图",
+      "canonical_case": "plotcase_violin_分裂小提琴图分面版",
+      "geometry": "box",
+      "subtype": "violin",
+      "score": 3.7967,
+      "reason": "visual_redundancy:box:violin"
+    },
+    {
+      "case": "plotcase_violin_小提琴图自定义刻度值",
+      "canonical_case": "plotcase_violin_分裂小提琴图分面版",
+      "geometry": "box",
+      "subtype": "violin",
+      "score": 3.7367,
+      "reason": "visual_redundancy:box:violin"
+    },
+    {
+      "case": "plotcase_violin_配对连线半小提琴图",
+      "canonical_case": "plotcase_violin_分裂小提琴图分面版",
+      "geometry": "box",
+      "subtype": "violin",
+      "score": 3.499,
+      "reason": "visual_redundancy:box:violin"
+    },
+    {
+      "case": "plotcase_云雨图_云雨图添加统计信息",
+      "canonical_case": "plotcase_boxplot_多分组分面小提琴箱线图",
+      "geometry": "box",
+      "subtype": "box",
+      "score": 3.6471,
+      "reason": "visual_redundancy:box:box"
+    },
+    {
+      "case": "plotcase_冲积图_物种组成冲积图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.6967,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_哑铃图_哑铃图进阶展示差异信息",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.1682,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_哑铃图_环形哑铃通路图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.1682,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_基因组图_geneviewer基因簇结构可视化",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.736,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_基因组图_常规基因组结构图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.406,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_基因组图_比较基因组结构图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.796,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_山脊图_山脊密度图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.3479,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_折线图_折线图添加密度分布",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 3.5967,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotcase_旭日图_旭日图_(基础入门)",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 1.9782,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_曲线图_累积曲线图",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 3.6567,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotcase_森林图_多因素Cox森林图",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 3.4181,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotcase_森林图_森林图进阶图例映射版",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.0804,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_气泡图_堆积气泡图",
+      "canonical_case": "plotmaster_053分组气泡图",
+      "geometry": "scatter",
+      "subtype": "气泡",
+      "score": 3.016,
+      "reason": "visual_redundancy:scatter:气泡"
+    },
+    {
+      "case": "plotcase_流程图_流程图_基础版",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 2.566,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_流程图_流程图_进阶版",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 4.6476,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_流程图_细胞网络通讯示意图",
+      "canonical_case": "plotmaster_060复杂环形互作网络图",
+      "geometry": "network",
+      "subtype": "network",
+      "score": 2.896,
+      "reason": "visual_redundancy:network:network"
+    },
+    {
+      "case": "plotcase_维诺图_维诺图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.016,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_维诺图_维诺图划分子区域",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.7756,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_综合图_lefse分析图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.6767,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotcase_面积图,barplot_柱状图组合面积图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.7569,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotcase_面积图_堆砌流动面积图",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 3.5367,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotmaster_008复杂热图02",
+      "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
+      "geometry": "heatmap",
+      "subtype": "heatmap",
+      "score": 4.426,
+      "reason": "visual_redundancy:heatmap:heatmap"
+    },
+    {
+      "case": "plotmaster_011批量散点图+拟合曲线",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 2.416,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotmaster_012箱线图美化",
+      "canonical_case": "plotmaster_023泛癌箱线图+显著性检验",
+      "geometry": "box",
+      "subtype": "箱线",
+      "score": 2.856,
+      "reason": "visual_redundancy:box:箱线"
+    },
+    {
+      "case": "plotmaster_013复杂百分比柱状图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.566,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotmaster_013渐变柱状图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.096,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotmaster_016复杂热图+渐变色连线",
+      "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
+      "geometry": "heatmap",
+      "subtype": "heatmap",
+      "score": 3.946,
+      "reason": "visual_redundancy:heatmap:heatmap"
+    },
+    {
+      "case": "plotmaster_019堆积柱状图+折线+热图注释",
+      "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
+      "geometry": "heatmap",
+      "subtype": "heatmap",
+      "score": 4.126,
+      "reason": "visual_redundancy:heatmap:heatmap"
+    },
+    {
+      "case": "plotmaster_020多组学九象限散点图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.336,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotmaster_021分组散点图+直方图注释",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.626,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotmaster_026相关性气泡图+显著性热图",
+      "canonical_case": "plotcase_heatmap_多分组气泡热图",
+      "geometry": "heatmap",
+      "subtype": "气泡",
+      "score": 4.126,
+      "reason": "visual_redundancy:heatmap:气泡"
+    },
+    {
+      "case": "plotmaster_029分面堆积面积图",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 2.826,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotmaster_030形状火山图",
+      "canonical_case": "plotmaster_002渐变火山图",
+      "geometry": "scatter",
+      "subtype": "火山",
+      "score": 2.636,
+      "reason": "visual_redundancy:scatter:火山"
+    },
+    {
+      "case": "plotmaster_031环形散点图+环形热图",
+      "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
+      "geometry": "heatmap",
+      "subtype": "heatmap",
+      "score": 3.89,
+      "reason": "visual_redundancy:heatmap:heatmap"
+    },
+    {
+      "case": "plotmaster_033个性化森林图",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 3.3073,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotmaster_034柱状图+抖动散点+误差棒",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.276,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotmaster_035堆积柱状图+百分比柱状图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.616,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotmaster_036批量箱线图+多组间显著性检验",
+      "canonical_case": "plotmaster_023泛癌箱线图+显著性检验",
+      "geometry": "box",
+      "subtype": "箱线",
+      "score": 3.556,
+      "reason": "visual_redundancy:box:箱线"
+    },
+    {
+      "case": "plotmaster_038聚类热图+注释",
+      "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
+      "geometry": "heatmap",
+      "subtype": "heatmap",
+      "score": 3.886,
+      "reason": "visual_redundancy:heatmap:heatmap"
+    },
+    {
+      "case": "plotmaster_040密度直方图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.156,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotmaster_041分半箱线图+抖动散点图",
+      "canonical_case": "plotmaster_023泛癌箱线图+显著性检验",
+      "geometry": "box",
+      "subtype": "箱线",
+      "score": 2.616,
+      "reason": "visual_redundancy:box:箱线"
+    },
+    {
+      "case": "plotmaster_042批量散点图+批量折线图",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 2.736,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotmaster_043分块热图+注释",
+      "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
+      "geometry": "heatmap",
+      "subtype": "heatmap",
+      "score": 3.886,
+      "reason": "visual_redundancy:heatmap:heatmap"
+    },
+    {
+      "case": "plotmaster_044百分比柱状图+误差棒",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.236,
+      "reason": "visual_redundancy:bar:bar"
+    },
+    {
+      "case": "plotmaster_045分组提琴图+显著性检验",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.926,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotmaster_046环形层次聚类热图+批量环形饼图",
+      "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
+      "geometry": "heatmap",
+      "subtype": "heatmap",
+      "score": 3.826,
+      "reason": "visual_redundancy:heatmap:heatmap"
+    },
+    {
+      "case": "plotmaster_051箱线图+抖动散点",
+      "canonical_case": "plotmaster_023泛癌箱线图+显著性检验",
+      "geometry": "box",
+      "subtype": "箱线",
+      "score": 2.556,
+      "reason": "visual_redundancy:box:箱线"
+    },
+    {
+      "case": "plotmaster_052细腰箱线图",
+      "canonical_case": "plotmaster_023泛癌箱线图+显著性检验",
+      "geometry": "box",
+      "subtype": "箱线",
+      "score": 2.556,
+      "reason": "visual_redundancy:box:箱线"
+    },
+    {
+      "case": "plotmaster_058分面折线图+置信区间+误差棒",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 3.5523,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotmaster_061散点图+双向误差棒",
+      "canonical_case": "plotmaster_004提琴图",
+      "geometry": "scatter",
+      "subtype": "scatter",
+      "score": 2.536,
+      "reason": "visual_redundancy:scatter:scatter"
+    },
+    {
+      "case": "plotmaster_062环形分组折线图",
+      "canonical_case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "geometry": "line",
+      "subtype": "line",
+      "score": 2.646,
+      "reason": "visual_redundancy:line:line"
+    },
+    {
+      "case": "plotmaster_双向柱状图",
+      "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
+      "geometry": "bar",
+      "subtype": "bar",
+      "score": 2.036,
+      "reason": "visual_redundancy:bar:bar"
+    }
+  ]
+}

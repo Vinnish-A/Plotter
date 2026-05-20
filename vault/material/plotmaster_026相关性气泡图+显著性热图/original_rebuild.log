@@ -1,0 +1,43 @@
+# A tibble: 6 × 3
+  x     y         cor
+  <fct> <fct>   <dbl>
+1 step1 step1  1     
+2 step1 step2 -0.200 
+3 step1 step3  0.0338
+4 step1 step4  0.0202
+5 step1 step5 -0.0130
+6 step1 step6 -0.135 
+
+[stderr]
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:dplyr’:
+
+    src, summarize
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Warning message:
+Removed 210 rows containing missing values or values outside the scale range
+(`geom_point()`). 
+Warning message:
+Removed 210 rows containing missing values or values outside the scale range
+(`geom_point()`). 
+Warning message:
+Removed 210 rows containing missing values or values outside the scale range
+(`geom_point()`). 
+Warning message:
+Removed 210 rows containing missing values or values outside the scale range
+(`geom_point()`). 

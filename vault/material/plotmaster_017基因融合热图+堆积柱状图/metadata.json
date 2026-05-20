@@ -1,0 +1,160 @@
+{
+  "id": "plotmaster_017基因融合热图+堆积柱状图",
+  "title": "017基因融合热图+堆积柱状图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "017基因融合热图+堆积柱状图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "ComplexHeatmap",
+    "circlize",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 7,
+    "outputs": 3,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 4
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:13.098902+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "patchwork"
+    ],
+    "special": [
+      "ComplexHeatmap",
+      "circlize",
+      "ggplotify",
+      "ggsci",
+      "tidyverse",
+      "xlsx"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:35.456280+00:00",
+    "records": [
+      {
+        "source": "plotmaster_017基因融合热图+堆积柱状图/data_raw/41467_2022_31780_MOESM9_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_017基因融合热图+堆积柱状图/data_raw/41467_2022_31780_MOESM9_ESM.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotmaster_017基因融合热图+堆积柱状图/raw/41467_2022_31780_MOESM9_ESM.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_017基因融合热图+堆积柱状图/raw/41467_2022_31780_MOESM9_ESM.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/41467_2022_31780_MOESM9_ESM.csv",
+    "grammar_geometry": "heatmap",
+    "row_count": 516,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "high",
+    "score": 5.572,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/Stack_Barplot.png",
+    "compat_xlsx": [
+      "raw/41467_2022_31780_MOESM9_ESM.xlsx"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:31:25.617667+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_Barplot_Heatmap.pdf",
+      "selected": "raw/Barplot_Heatmap.pdf",
+      "page": 0,
+      "previous_rmse": 0.2581806062052034,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ComplexHeatmap-circlize",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap",
+      "ComplexHeatmap",
+      "circlize",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "ComplexHeatmap",
+      "circlize",
+      "ggplot2",
+      "ggplotify",
+      "ggsci",
+      "patchwork",
+      "tidyverse",
+      "xlsx"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

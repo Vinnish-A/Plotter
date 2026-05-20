@@ -1,0 +1,172 @@
+{
+  "id": "plotmaster_050复杂分组散点图",
+  "title": "050复杂分组散点图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "050复杂分组散点图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 20,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 2,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:13.356070+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ggnewscale",
+      "ggrepel",
+      "latex2exp",
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:36.245251+00:00",
+    "records": [
+      {
+        "source": "plotmaster_050复杂分组散点图/data_raw/total_w_unc.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__cell_type_densities.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__total_immune_densities.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__num_by_cell_and_system.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__num_unc_by_cell_and_system.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_cell_and_system.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_unc_by_cell_and_s_system.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__numbers_by_cell_type.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__numbers_by_systems.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_cell_type.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_systems.csv",
+          "plotmaster_050复杂分组散点图/data_raw/total_w_unc__totals.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotmaster_050复杂分组散点图/raw/total_w_unc.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__cell_type_densities.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__total_immune_densities.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__num_by_cell_and_system.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__num_unc_by_cell_and_system.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_cell_and_system.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_unc_by_cell_and_s_system.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__numbers_by_cell_type.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__numbers_by_systems.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_cell_type.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_systems.csv",
+          "plotmaster_050复杂分组散点图/raw/total_w_unc__totals.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/.RData_csv/plot_data.csv",
+    "grammar_geometry": "scatter",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 4.8467,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/plot.png",
+    "compat_xlsx": [
+      "raw/total_w_unc.xlsx"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:34:44.580996+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plot.pdf",
+      "selected": "raw/plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.09015707921942674,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "ggnewscale",
+      "ggplot2",
+      "ggrepel",
+      "latex2exp",
+      "readxl",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

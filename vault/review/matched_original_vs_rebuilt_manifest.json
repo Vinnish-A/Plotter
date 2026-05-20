@@ -1,0 +1,402 @@
+[
+  {
+    "case": "figureya_survival_FigureYa183condSurv",
+    "mode": "medium",
+    "original": "vault/material/figureya_survival_FigureYa183condSurv/outputs/figure_001_conditional_survival_curve.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa183condSurv/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "conditional_survival_curve"
+  },
+  {
+    "case": "figureya_survival_FigureYa299pancanSurv",
+    "mode": "medium",
+    "original": "vault/material/figureya_survival_FigureYa299pancanSurv/outputs/figure_003_forestplot_of_os_risk_table_in_pancancer.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa299pancanSurv/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "forestplot of os risk table in pancancer"
+  },
+  {
+    "case": "figureya_survival_FigureYa30nomogram_update",
+    "mode": "medium",
+    "original": "vault/material/figureya_survival_FigureYa30nomogram_update/outputs/figure_007_nomogram_regplot_cox.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa30nomogram_update/outputs/rebuilt.png",
+    "rmse": 0.005577291860333861,
+    "source_stem": "nomogram_regplot_cox"
+  },
+  {
+    "case": "figureya_survival_FigureYa66UnivariateCox",
+    "mode": "medium",
+    "original": "vault/material/figureya_survival_FigureYa66UnivariateCox/outputs/figure_002_plot1.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa66UnivariateCox/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot1"
+  },
+  {
+    "case": "plotcase_circos_circlize绘制和弦图",
+    "mode": "medium",
+    "original": "vault/material/plotcase_circos_circlize绘制和弦图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_circos_circlize绘制和弦图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_ARG丰度与环境因子相关性网络热图",
+    "mode": "medium",
+    "original": "vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_circlize风格多层次极坐标热图",
+    "mode": "high",
+    "original": "vault/material/plotcase_heatmap_circlize风格多层次极坐标热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_circlize风格多层次极坐标热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_ggtree绘制离散型系统发育树热图",
+    "mode": "medium",
+    "original": "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_ggtree绘制组合热图",
+    "mode": "high",
+    "original": "vault/material/plotcase_heatmap_ggtree绘制组合热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_ggtree绘制组合热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_多分组气泡热图",
+    "mode": "medium",
+    "original": "vault/material/plotcase_heatmap_多分组气泡热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_多分组气泡热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_多层嵌套分面热图",
+    "mode": "high",
+    "original": "vault/material/plotcase_heatmap_多层嵌套分面热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_多层嵌套分面热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_多类别分面注释热图",
+    "mode": "medium",
+    "original": "vault/material/plotcase_heatmap_多类别分面注释热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_多类别分面注释热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_多重注释分组热图",
+    "mode": "high",
+    "original": "vault/material/plotcase_heatmap_多重注释分组热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_多重注释分组热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_对角线相关性热图",
+    "mode": "medium",
+    "original": "vault/material/plotcase_heatmap_对角线相关性热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_对角线相关性热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_极坐标热图添加聚类",
+    "mode": "medium",
+    "original": "vault/material/plotcase_heatmap_极坐标热图添加聚类/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_极坐标热图添加聚类/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_离散热图与条图组合",
+    "mode": "medium",
+    "original": "vault/material/plotcase_heatmap_离散热图与条图组合/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_离散热图与条图组合/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_heatmap_系统发育树组合离散热图",
+    "mode": "high",
+    "original": "vault/material/plotcase_heatmap_系统发育树组合离散热图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_heatmap_系统发育树组合离散热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_network_STRING_BioNet网络模块解析代码实战",
+    "mode": "medium",
+    "original": "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_network_Treemap矩形树状GO富集分析图",
+    "mode": "medium",
+    "original": "vault/material/plotcase_network_Treemap矩形树状GO富集分析图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_network_Treemap矩形树状GO富集分析图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_network_ggraph构建疾病遗传调控网络图",
+    "mode": "high",
+    "original": "vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_network_ggraph环形网络图_多维数据圈层",
+    "mode": "medium",
+    "original": "vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_network_环形网络图的构建方法",
+    "mode": "high",
+    "original": "vault/material/plotcase_network_环形网络图的构建方法/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_network_环形网络图的构建方法/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_sankey,venn_桑基组合维恩图",
+    "mode": "high",
+    "original": "vault/material/plotcase_sankey,venn_桑基组合维恩图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_sankey,venn_桑基组合维恩图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_sankey_多层级桑基图",
+    "mode": "medium",
+    "original": "vault/material/plotcase_sankey_多层级桑基图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_sankey_多层级桑基图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_sankey_渐变色桑基图_进阶版",
+    "mode": "medium",
+    "original": "vault/material/plotcase_sankey_渐变色桑基图_进阶版/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_sankey_渐变色桑基图_进阶版/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_tree_ggtree绘制多层级进化树",
+    "mode": "high",
+    "original": "vault/material/plotcase_tree_ggtree绘制多层级进化树/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_tree_ggtree绘制多层级进化树/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotcase_tree_多层级系统发育树图",
+    "mode": "high",
+    "original": "vault/material/plotcase_tree_多层级系统发育树图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_tree_多层级系统发育树图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cover"
+  },
+  {
+    "case": "plotmaster_001箱线图+散点图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_001箱线图+散点图/outputs/figure_001_down_boxplot.pdf",
+    "rebuilt": "vault/material/plotmaster_001箱线图+散点图/outputs/rebuilt.png",
+    "rmse": 0.06751844706677783,
+    "source_stem": "down_boxplot"
+  },
+  {
+    "case": "plotmaster_002渐变火山图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_002渐变火山图/outputs/figure_001_vocanol_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_002渐变火山图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "vocanol_plot"
+  },
+  {
+    "case": "plotmaster_003气泡图+相关性热图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_003气泡图+相关性热图/outputs/figure_001_cor_buble_heatmap.pdf",
+    "rebuilt": "vault/material/plotmaster_003气泡图+相关性热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "cor_buble_heatmap"
+  },
+  {
+    "case": "plotmaster_005复杂热图",
+    "mode": "high",
+    "original": "vault/material/plotmaster_005复杂热图/outputs/figure_002_heatmap.pdf",
+    "rebuilt": "vault/material/plotmaster_005复杂热图/outputs/rebuilt.png",
+    "rmse": 0.11995064375123038,
+    "source_stem": "Heatmap"
+  },
+  {
+    "case": "plotmaster_008复杂热图02",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_008复杂热图02/outputs/figure_002_heatmap.pdf",
+    "rebuilt": "vault/material/plotmaster_008复杂热图02/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "heatmap"
+  },
+  {
+    "case": "plotmaster_009甘特图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_009甘特图/outputs/figure_002_Geom_gantt.pdf",
+    "rebuilt": "vault/material/plotmaster_009甘特图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "Geom_gantt"
+  },
+  {
+    "case": "plotmaster_017基因融合热图+堆积柱状图",
+    "mode": "high",
+    "original": "vault/material/plotmaster_017基因融合热图+堆积柱状图/outputs/figure_001_Barplot_Heatmap.pdf",
+    "rebuilt": "vault/material/plotmaster_017基因融合热图+堆积柱状图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "Barplot_Heatmap"
+  },
+  {
+    "case": "plotmaster_018单细胞分组火山图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_018单细胞分组火山图/outputs/figure_001_p1.pdf",
+    "rebuilt": "vault/material/plotmaster_018单细胞分组火山图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "p1"
+  },
+  {
+    "case": "plotmaster_022复杂环形热图",
+    "mode": "high",
+    "original": "vault/material/plotmaster_022复杂环形热图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_022复杂环形热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot"
+  },
+  {
+    "case": "plotmaster_023泛癌箱线图+显著性检验",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_023泛癌箱线图+显著性检验/outputs/figure_001_box_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_023泛癌箱线图+显著性检验/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "box_plot"
+  },
+  {
+    "case": "plotmaster_024矩阵饼图+分组注释",
+    "mode": "high",
+    "original": "vault/material/plotmaster_024矩阵饼图+分组注释/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_024矩阵饼图+分组注释/outputs/rebuilt.png",
+    "rmse": 0.009715589128523857,
+    "source_stem": "plot"
+  },
+  {
+    "case": "plotmaster_025三维PCA散点图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_025三维PCA散点图/outputs/figure_002_plot1_ai.pdf",
+    "rebuilt": "vault/material/plotmaster_025三维PCA散点图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot1_ai"
+  },
+  {
+    "case": "plotmaster_026相关性气泡图+显著性热图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_026相关性气泡图+显著性热图/outputs/figure_004_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_026相关性气泡图+显著性热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot"
+  },
+  {
+    "case": "plotmaster_028分面双向柱状图+热图注释",
+    "mode": "high",
+    "original": "vault/material/plotmaster_028分面双向柱状图+热图注释/outputs/figure_001_combined.pdf",
+    "rebuilt": "vault/material/plotmaster_028分面双向柱状图+热图注释/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "combined"
+  },
+  {
+    "case": "plotmaster_032表达定量雷达图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_032表达定量雷达图/outputs/figure_001_AI拼图.pdf",
+    "rebuilt": "vault/material/plotmaster_032表达定量雷达图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "AI拼图"
+  },
+  {
+    "case": "plotmaster_037分类变量环形热图",
+    "mode": "high",
+    "original": "vault/material/plotmaster_037分类变量环形热图/outputs/figure_001_plot_AI.pdf",
+    "rebuilt": "vault/material/plotmaster_037分类变量环形热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot_AI"
+  },
+  {
+    "case": "plotmaster_047散点饼图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_047散点饼图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_047散点饼图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot"
+  },
+  {
+    "case": "plotmaster_050复杂分组散点图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_050复杂分组散点图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_050复杂分组散点图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot"
+  },
+  {
+    "case": "plotmaster_056复杂网络图",
+    "mode": "high",
+    "original": "vault/material/plotmaster_056复杂网络图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_056复杂网络图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot"
+  },
+  {
+    "case": "plotmaster_059桑基气泡图",
+    "mode": "high",
+    "original": "vault/material/plotmaster_059桑基气泡图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_059桑基气泡图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot"
+  },
+  {
+    "case": "plotmaster_060复杂环形互作网络图",
+    "mode": "high",
+    "original": "vault/material/plotmaster_060复杂环形互作网络图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_060复杂环形互作网络图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot"
+  },
+  {
+    "case": "plotmaster_063_共定位矩阵散点图+柱状图注释",
+    "mode": "high",
+    "original": "vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/outputs/figure_002_plot_AI.pdf",
+    "rebuilt": "vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot_AI"
+  },
+  {
+    "case": "plotmaster_48个性化桑基图",
+    "mode": "medium",
+    "original": "vault/material/plotmaster_48个性化桑基图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_48个性化桑基图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "source_stem": "plot"
+  }
+]

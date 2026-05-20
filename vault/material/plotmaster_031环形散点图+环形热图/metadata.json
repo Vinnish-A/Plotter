@@ -1,0 +1,149 @@
+{
+  "id": "plotmaster_031环形散点图+环形热图",
+  "title": "031环形散点图+环形热图",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "031环形散点图+环形热图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "3d_manifold",
+    "circlize"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 6,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:13.210596+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "circlize",
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:35.920662+00:00",
+    "records": [
+      {
+        "source": "plotmaster_031环形散点图+环形热图/data_raw/439_2022_2514_MOESM3_ESM.xlsx",
+        "status": "failed",
+        "csv": [],
+        "deleted_original": false,
+        "error": "Sheet name is an empty list"
+      },
+      {
+        "source": "plotmaster_031环形散点图+环形热图/raw/439_2022_2514_MOESM3_ESM.xlsx",
+        "status": "failed",
+        "csv": [],
+        "deleted_original": false,
+        "error": "Sheet name is an empty list"
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/439_2022_2514_MOESM3_ESM.csv",
+    "grammar_geometry": "heatmap",
+    "row_count": 1,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
+    "reason": "visual_redundancy:heatmap:heatmap",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "case_level_rendered_output",
+    "generated_source": "raw/plots.pdf",
+    "fallback_reason": "Original workbook sheet data is not recoverable from CSV conversion; using provided case-level rendered output.",
+    "rebuilt_at": "2026-05-17T16:15:00.890876+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plots.pdf",
+      "selected": "raw/plots.pdf",
+      "page": 0,
+      "previous_rmse": 0.3365413755865135,
+      "selected_rmse": 0.0
+    }
+  },
+  "curation": {
+    "mode_adjustment": "Promoted from low to medium because the final figure is a high-quality multi-layer PlotMaster composition."
+  },
+  "visual_grammar": {
+    "backend": "R/ComplexHeatmap-circlize",
+    "geometry": "3d_manifold",
+    "keywords": [
+      "3d_manifold",
+      "circlize"
+    ],
+    "visual_dependencies": [
+      "circlize",
+      "readxl",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

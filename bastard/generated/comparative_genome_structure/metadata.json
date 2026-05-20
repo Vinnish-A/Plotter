@@ -1,0 +1,33 @@
+{
+  "case_id": "comparative_genome_structure",
+  "intent": "Use a comparative genome template: directional gene arrows, family color mapping, and cross-sample synteny connectors.",
+  "complexity": "high",
+  "template_refs": [
+    "plotcase_基因组图_geneviewer基因簇结构可视化",
+    "plotcase_基因组图_比较基因组结构图"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "record_type",
+    "sample",
+    "gene_id",
+    "start",
+    "end",
+    "strand",
+    "family",
+    "sample_a",
+    "sample_b",
+    "gene_a",
+    "gene_b",
+    "identity",
+    "block_id"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}

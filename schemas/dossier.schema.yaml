@@ -1,0 +1,46 @@
+type: object
+required:
+  - id
+  - title
+  - origin
+  - intent
+  - required_data
+  - function_signature
+  - supports
+properties:
+  id:
+    type: string
+  title:
+    type: string
+  origin:
+    type: object
+  intent:
+    type: array
+    items:
+      type: string
+  complexity:
+    type: object
+  defamiliarization:
+    type: object
+  required_data:
+    type: array
+    items:
+      type: string
+  optional_data:
+    type: array
+    items:
+      type: string
+  function_signature:
+    type: object
+  supports:
+    type: object
+  best_for:
+    type: array
+    items:
+      type: string
+  bad_for:
+    type: array
+    items:
+      type: string
+  minimal_reproducible_example:
+    type: object

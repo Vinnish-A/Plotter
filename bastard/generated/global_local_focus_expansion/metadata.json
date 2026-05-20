@@ -1,0 +1,29 @@
+{
+  "case_id": "global_local_focus_expansion",
+  "intent": "Use a PlotMaster-style overview-detail scatter grammar to expand one highlighted class into sample-level detail.",
+  "complexity": "high",
+  "template_refs": [
+    "plotmaster_020多组学九象限散点图",
+    "plotmaster_021分组散点图+直方图注释"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "layer",
+    "major_class",
+    "x",
+    "y",
+    "value",
+    "highlight",
+    "sample_x",
+    "sample_y",
+    "uncertainty"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}

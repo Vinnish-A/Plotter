@@ -1,0 +1,251 @@
+---
+title: "FigureYa251NPHSurv"
+params:
+  author: "Xiaofan Lu"
+  reviewers: "Ying Ge, Hui Huang"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    theme: flatly
+    highlight: tango
+    code_folding: show
+---
+
+**Author(s)**: `r params$author`  
+**Reviewers**: `r params$reviewers`  
+**Date**: `r Sys.Date()`  
+
+## Academic Citation
+If you use this code in your work or research, we kindly request that you cite our publication:
+
+- Xiaofan Lu, et al. (2025). FigureYa: A Standardized Visualization Framework for Enhancing Biomedical Data Interpretation and Research Efficiency. iMetaMed. https://doi.org/10.1002/imm3.70005
+
+If you use MOVICS in published research, please cite:
+
+- Xiaofan Lu, Jialin Meng, Yujie Zhou, Liyun Jiang, Fangrong Yan, MOVICS: an R package for multi-omics integration and visualization in cancer subtyping, Bioinformatics, Volume 36, Issue 22-23, December 2020, Pages 5539–5541, https://doi.org/10.1093/bioinformatics/btaa1018
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 需求描述 Requirement Description
+
+用了两种非比例风险的预后模型来计算接受了免疫治疗的队列的生存差异，包括RMS限制性生存均值以及long-term survival分析。这个在临床中很有意义，因为免疫治疗患者确实存在他说的“delayed effect”延迟效应。
+
+The author used two non-proportional risk prognostic models to calculate the difference in survival in the cohort that received immunotherapy, including RMS-limiting mean survival and long-term survival analysis. This is very meaningful in clinical practice, because immunotherapy patients do have the "delayed effect".
+
+![](example.jpg)
+
+From <https://onlinelibrary.wiley.com/doi/10.1002/ctm2.601> Supplementary Figure S4a
+
+## 应用场景 Application Scenarios
+
+采用非比例风险的生存模型（non-proportional-hazard survival model, NPHSurv）评价接受免疫治疗患者的预后情况
+
+The non-proportional-hazard survival model (NPHSurv) was used to evaluate the prognosis of patients receiving immunotherapy
+
+original text：**To evaluate the treatment effect of immune checkpoint inhibitors on different iCSs in the IMvigor210 cohort**, we compared the RMS time difference at six months and one year after treatment. We found that the iBS4 subtype showed a significantly poorer outcome than immune-hot iCSs (i.e., iBS1 and iLS2; both P < 0.05 at 6 months, both P < 0.1 at 12 months) and had a segregated survival curve compared to the immune-cold iLS3 subtype (Supplementary Figure S4a). Due to the ***delayed clinical effect of immunotherapy**, we also compared the long-term survival rates after three months of treatment. Consistently, the iBS4 subtype was associated with significantly poorer long-term survival than the immune-hot iBS1 (P = 0.046) and iLS2 (P = 0.027) subtypes and the immune-cold iLS3 subtype (P = 0.095), suggesting its high malignancy and potential resistance to immune checkpoint blockade (Supplementary Figure S4b). 
+
+Xiaofan Lu写了一个神奇的R包 MOVICS，用自己的数据跑一遍，文章里的key Figure就出来了。
+
+怎么把这些图组织到一起讲故事呢？这篇文章是个很好的应用MOVICS的例子。
+
+Xiaofan Lu wrote a magical R package MOVICS, ran his own data, and the key Figure in the article came out.
+
+How to organize these pictures together to tell a story? This article is a good example of applying
+
+例文中很多图我们都实现过，例如：
+
+- Figure 1C的画法可参考FigureYa196PanPie，1DE可参考FigureYa251NPHSurv
+- Figure 2A的算法可参考FigureYa249Regulon，B的画法可参考FigureYa248MutLandscape
+- Figure 3A由FigureYa255TIME复现，F可参考FigureYa106immunotherapy
+- Figure 4B可参考FigureYa12box，F可参考FigureYa162boxViolin，H-L可参考FigureYa35batch_bestSeparation，M 可参考FigureYa144DiagHeatmap或<https://mp.weixin.qq.com/s/34WRZRBVPHUNRLlzNH2nzw>
+- Figure S3批次矫正PCA可参考FigureYa203ComBat
+- Figure 4de可参考FigureYa25sankey和FigureYa125Fishertest
+
+Many of the figures in the example article:
+
+- For plotting method of Figure 1C, refer to FigureYa196PanPie; for Figure 1DE, refer to FigureYa251NPHSurv
+- For algorithm of Figure 2A, refer to FigureYa249Regulon; for plotting method of Figure 2B, refer to FigureYa248MutLandscape
+- Figure 3A is reproduced by FigureYa255TIME; for Figure 3F, refer to FigureYa106immunotherapy
+- For Figure 4B, refer to FigureYa12box; for Figure 4F, refer to FigureYa162boxViolin; for Figure 4H-L, refer to FigureYa35batch_bestSeparation, for Figure 4M, refer to FigureYa144DiagHeatmap or <https://mp.weixin.qq.com/s/34WRZRBVPHUNRLlzNH2nzw>
+- For Figure S3 batch correction PCA, refer to FigureYa203ComBat
+- For Figure 4de, refer to FigureYa25sankey and FigureYa125Fishertest
+
+## 环境设置 Environment settings
+
+```{r}
+source("install_dependencies.R")
+library(survRM2) # 用于计算RMS限制性生存均值 # Used to calculate RMS limiting mean survival
+library(ComparisonSurv) # 用于计算long-term survival长期生存模型 # Used to calculate long-term survival model
+library(ggplot2) # 画图包 # Drawing package
+library(ggpubr) # 画图包 # Drawing package
+library(survminer) # 画生存曲线包 # Draw survival curve package
+
+Sys.setenv(LANGUAGE = "en") #显示英文报错信息 # error messages are displayed in English
+options(stringsAsFactors = FALSE) #禁止chr转成factor # chr is not allowed to be converted to factor
+``` 
+
+## 输入文件 Input the file
+
+easy_input_annCol.txt，亚型信息。
+
+easy_input_surv.txt，预后信息。
+
+easy_input_annCol.txt, subtype information.
+
+easy_input_surv.txt. Prognostic information.
+
+```{r}
+# 读取经过NTP预测的IMvigor210队列的CMOIC亚型
+# Read the CMOIC isoform of the IMvigor210 cohort predicted by NTP
+annCol.imvigor210 <- read.table("easy_input_annCol.txt",sep = "\t",row.names = 1,check.names = F,stringsAsFactors = F,header = T)
+
+# 读取IMvigor210队列的预后信息
+# Read the prognosis information of the IMvigor210 queue
+imvigor210.surv <- read.table("easy_input_surv.txt",sep = "\t",row.names = 1,check.names = F,stringsAsFactors = F,header = T)
+```
+
+## 采用非比例风险的生存模型（non-proportional-hazard survival model, NPHSurv）评价接受免疫治疗患者的预后情况 The non-proportional-hazard survival model (NPHSurv) was used to evaluate the prognosis of patients receiving immunotherapy
+
+```{r}
+# 构建完整的预后和亚型信息
+# Construct complete prognosis and subtype information
+surv <- cbind.data.frame(annCol.imvigor210,imvigor210.surv[rownames(annCol.imvigor210),])
+surv$os <- surv$os * 30 # 生存时间由月换算成日 # Time to live is converted from months to days
+
+# 循环计算非比例风险生存模型的统计显著性
+# Statistical significance of non-proportional risk survival models is calculated in a circular manner
+subt <- c("CS1","CS2","CS3","CS4") # 目前定义的亚型名 # The name of the subtype as currently defined
+tau1 <- 180 # 第一次计算RMS的时间截点（半年） # Cut-off point for the first RMS calculation (half a year)
+tau2 <- 365 # 第二次计算RMS的时间截点（1年） # Time cut-off point for calculating RMS for the second time (1 year)
+t0 <- 90 # 认为免疫治疗延迟效应的时间（3个月） # Time to consider the delayed effect of immunotherapy (3 months)
+rms.mat1 <- as.data.frame(matrix(0, ncol = length(subt), nrow = (length(subt)),dimnames = list(subt,subt))) # 初始化半年的RMS模型的p值矩阵 # Initialize the p-value matrix of the half-year RMS model
+rms.mat2 <- as.data.frame(matrix(0, ncol = length(subt), nrow = (length(subt)),dimnames = list(subt,subt))) # 初始化一年的RMS模型的p值矩阵 # Initialize the p-value matrix of the RMS model for one year
+lts.mat <- as.data.frame(matrix(0, ncol = length(subt), nrow = (length(subt)),dimnames = list(subt,subt))) # 初始化延迟效应的长期生存模型的p值矩阵 # Initialize the p-value matrix of the long-term survival model of the delay effect
+
+for(i in subt) {
+  for (j in subt) {
+    if(i == j) {
+      next
+    } else {
+        tmp <- surv[which(surv$CMOIC %in% c(i,j)),] # 若亚型相同时则跳过 # Skip if the subtype is the same
+        
+        # 计算6个月时的RMS
+        # Calculate RMS at 6 months
+        rmst1 <- rmst2(time = tmp$os,
+                      status = tmp$censOS,
+                      arm = ifelse(tmp$CMOIC == i,1,0), # 谁为参考不重要，p值不发生变化，但是RMS diff以及RMS ratio会改变，可根据需要自己查看rmst1中的结果 # It doesn't matter who is the reference, the p-value does not change, but the RMS diff and RMS ratio will change, you can check the results in rmst1 by yourself as needed
+                      tau = tau1)
+        rms.mat1[i,j] <- rmst1$unadjusted.result[1,4]
+        
+        # 计算12个月时的RMS
+        # RMS at 12 months is calculated
+        rmst2 <- rmst2(time = tmp$os,
+                       status = tmp$censOS,
+                       arm = ifelse(tmp$CMOIC == i,1,0),
+                       tau = tau2)
+        rms.mat2[i,j] <- rmst2$unadjusted.result[1,4]
+        
+        # 计算3个月延迟以后的长期生存率
+        # Long-term survival after a 3-month delay was calculated
+        lts <- Long.test(time = tmp$os,
+                         status = tmp$censOS,
+                         group = ifelse(tmp$CMOIC == i,1,0), # 谁为参考不重要，p值不发生变化，统计量符号会改变 # It doesn't matter who the reference is, the p-value doesn't change, the statistic symbol changes
+                         t0 = t0) # t0为延迟起效的时间 # t0 is the time for the delay to take effect
+        lts.mat[i,j] <- lts$pvalue[4] # 这里我取的是第四个统计量Chi-square(Qua) # Here I take the fourth statistic, Chi-square(Qua)
+      }
+  }
+}
+
+# 输出p值矩阵
+# Output p-value matrix
+write.table(rms.mat1,file = paste0("output_restricted mean survival p value matrix at ", tau1," cutoff.txt"),sep = "\t",row.names = T,col.names = NA,quote = F)
+write.table(rms.mat2,file = paste0("output_restricted mean survival p value matrix at ", tau2," cutoff.txt"),sep = "\t",row.names = T,col.names = NA,quote = F)
+write.table(lts.mat,file = paste0("output_long term survival p value matrix after ", t0," delayed effect.txt"),sep = "\t",row.names = T,col.names = NA,quote = F)
+```
+
+## 开始画图 Start drawing
+
+这里只绘制基本图形，细节均需要Illustrator补充。
+
+Only basic graphics are drawn here, and the details need to be supplemented by Illustrator.
+
+```{r}
+# 设置颜色
+# Set the color
+clust.col <- c("#DD492E","#40548A","#32A087","#EC7D21")
+
+tmp <- surv
+tmp$os <- tmp$os/30 # 生存时间改为月 # Survival time changed to months
+fit <- survfit(Surv(os, censOS) ~ CMOIC,
+               data      = tmp,
+               type      = "kaplan-meier",
+               error     = "greenwood",
+               conf.type = "plain",
+               na.action = na.exclude)
+names(fit$strata) <- gsub("CMOIC=", "", names(fit$strata)) # 去掉亚组名中的CMOIC字样 # Removed the word CMOIC from the subgroup name
+p <- suppressWarnings(ggsurvplot(fit               = fit,
+                                 conf.int          = FALSE,
+                                 risk.table        = FALSE,
+                                 risk.table.col    = "strata",
+                                 palette           = clust.col,
+                                 data              = tmp,
+                                 censor            = TRUE,
+                                 size              = 1,
+                                 xlim              = c(0,12), # 第一张KM曲线是用来做RMS，所以只显示到12个月时间，AI补充两个p值矩阵 # The first KM curve is used for RMS, so it is only displayed up to 12 months, and the AI supplements two p-value matrices
+                                 break.time.by     = 2,
+                                 legend.title      = "",
+                                 pval              = FALSE, # 不使用log-rank检验总体预后情况 # Do not use log-rank to test for overall prognosis
+                                 surv.median.line  = "none",
+                                 xlab              = "Time (Months)",
+                                 ylab              = "Overall survival",
+                                 risk.table.y.text = FALSE)) 
+p$plot <- p$plot + 
+  theme_bw() +
+  theme(axis.text.x = element_text(size = 10,colour = "black"),
+        axis.text.y = element_text(colour = "black",size = 10),
+        panel.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.position = "top") +
+  geom_vline(xintercept = 6, color="black", linetype="longdash", size=0.3) + # 在第6个月处加虚线 # Add a dotted line at the 6th month
+  geom_vline(xintercept = 12, color="black", linetype="longdash", size=0.3) # 在第12个月处加虚线 # Add a dotted line at the 12th month
+ggsave("kaplan meier curve1.pdf",width = 5,height = 5)
+
+p <- suppressWarnings(ggsurvplot(fit               = fit,
+                                 conf.int          = FALSE,
+                                 risk.table        = FALSE,
+                                 risk.table.col    = "strata",
+                                 palette           = clust.col,
+                                 data              = tmp,
+                                 censor            = TRUE,
+                                 size              = 1,
+                                 xlim              = c(0,24), # 第二张KM曲线是长期生存，显示到2年时间，前3个月的延迟效应需要AI修饰 # The second KM curve is long-term survival, showing that up to 2 years, the delay effect of the first 3 months needs to be modified by AI
+                                 break.time.by     = 3,
+                                 legend.title      = "",
+                                 pval              = FALSE,
+                                 surv.median.line  = "none",
+                                 xlab              = "Time (Months)",
+                                 ylab              = "Overall survival",
+                                 risk.table.y.text = FALSE)) 
+p$plot <- p$plot + 
+  theme_bw() +
+  theme(axis.text.x = element_text(size = 10,colour = "black"),
+        axis.text.y = element_text(colour = "black",size = 10),
+        panel.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.position = "top") +
+  geom_vline(xintercept = 3, color="black", linetype="longdash", size=0.3) # 在第3个月处加虚线 # Add a dotted line at the 3rd month
+ggsave("kaplan meier curve2.pdf",width = 5,height = 5)
+```
+
+## Session Info
+
+```{r}
+sessionInfo()
+```

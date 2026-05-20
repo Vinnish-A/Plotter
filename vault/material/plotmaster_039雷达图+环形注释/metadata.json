@@ -1,0 +1,127 @@
+{
+  "id": "plotmaster_039雷达图+环形注释",
+  "title": "039雷达图+环形注释",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "039雷达图+环形注释"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "network",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 17,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 1,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:13.275593+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "patchwork"
+    ],
+    "special": [
+      "ggradar",
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "radar",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 3.956,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/plot.png",
+    "compat_xlsx": [],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:45:54.393723+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_plot.pdf",
+      "selected": "raw/plot.pdf",
+      "page": 0,
+      "previous_rmse": 0.11954016606536218,
+      "selected_rmse": 0.0
+    }
+  },
+  "curation": {
+    "mode_adjustment": "Promoted from low to medium because the final figure is a high-quality multi-layer PlotMaster composition."
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "network",
+    "keywords": [
+      "network",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "ggplot2",
+      "ggradar",
+      "patchwork",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "total": 79,
+  "rebuilt": 79,
+  "mode_counts": {
+    "low": 39,
+    "medium": 24,
+    "high": 16
+  },
+  "geometry_counts": {
+    "line": 11,
+    "bar": 9,
+    "box": 8,
+    "network": 12,
+    "heatmap": 16,
+    "scatter": 20,
+    "radar": 3
+  },
+  "records": [
+    {
+      "case": "figureya_survival_FigureYa128Prognostic",
+      "mode": "low",
+      "score": 4.3056,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "figureya_survival_FigureYa182RFSurvV2",
+      "mode": "low",
+      "score": 4.3067,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "figureya_survival_FigureYa183condSurv",
+      "mode": "medium",
+      "score": 4.5144,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "figureya_survival_FigureYa197SmoothHaz",
+      "mode": "low",
+      "score": 4.3867,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "figureya_survival_FigureYa251NPHSurv",
+      "mode": "low",
+      "score": 4.1508,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "figureya_survival_FigureYa299pancanSurv",
+      "mode": "medium",
+      "score": 4.5667,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "figureya_survival_FigureYa305PMAPscore",
+      "mode": "low",
+      "score": 2.79,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "figureya_survival_FigureYa30nomogram_update",
+      "mode": "medium",
+      "score": 4.6716,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "figureya_survival_FigureYa66UnivariateCox",
+      "mode": "medium",
+      "score": 5.1067,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_barplot_ggplot2优雅的绘制径向条形图",
+      "mode": "low",
+      "score": 3.1136,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_barplot_ggplot2绘制菌群分布图",
+      "mode": "low",
+      "score": 3.2767,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_barplot_多层注释柱状图",
+      "mode": "low",
+      "score": 3.4615,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_barplot_多层注释柱状图进阶版",
+      "mode": "low",
+      "score": 3.5996,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_barplot_柱状图添加显著性标记_(进阶版)",
+      "mode": "low",
+      "score": 2.9367,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_barplot_柱状图添加显著性标记_基础版",
+      "mode": "low",
+      "score": 2.8435,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_barplot_环形条形图",
+      "mode": "low",
+      "score": 2.9399,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_barplot_配对连线条形图_进阶版",
+      "mode": "low",
+      "score": 2.9456,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_boxplot_多分组分面小提琴箱线图",
+      "mode": "low",
+      "score": 4.3167,
+      "geometry": "box",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_boxplot_多组配对连线箱线图",
+      "mode": "low",
+      "score": 3.935,
+      "geometry": "box",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_boxplot_方差分析箱线图_进阶版",
+      "mode": "low",
+      "score": 3.8819,
+      "geometry": "box",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_circos_circlize绘制和弦图",
+      "mode": "medium",
+      "score": 5.2667,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_heatmap_circlize风格多层次极坐标热图",
+      "mode": "high",
+      "score": 5.6467,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_heatmap_ggtree绘制离散型系统发育树热图",
+      "mode": "medium",
+      "score": 5.0062,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_heatmap_多分组气泡热图",
+      "mode": "medium",
+      "score": 4.7169,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_heatmap_多层嵌套分面热图",
+      "mode": "high",
+      "score": 5.8905,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_heatmap_多类别分面注释热图",
+      "mode": "medium",
+      "score": 5.2673,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_heatmap_对角线相关性热图",
+      "mode": "medium",
+      "score": 5.0667,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_heatmap_离散热图与条图组合",
+      "mode": "medium",
+      "score": 5.2367,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_heatmap_系统发育树组合离散热图",
+      "mode": "high",
+      "score": 5.8249,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_map_ggbump优雅绘制组合地图",
+      "mode": "low",
+      "score": 4.1667,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_map_地图嵌套子图",
+      "mode": "low",
+      "score": 4.0067,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_map_采样点地图进阶版",
+      "mode": "low",
+      "score": 4.345,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_network_ggraph环形网络图_多维数据圈层",
+      "mode": "medium",
+      "score": 5.1479,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_network_STRING_BioNet网络模块解析代码实战",
+      "mode": "high",
+      "score": 5.2867,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_network_Treemap矩形树状GO富集分析图",
+      "mode": "medium",
+      "score": 5.0602,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_point_多组火山图",
+      "mode": "low",
+      "score": 3.9267,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_point_火山图局部放大版",
+      "mode": "low",
+      "score": 4.1067,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_sankey_渐变色桑基图_进阶版",
+      "mode": "medium",
+      "score": 5.1337,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_tree_ggtree绘制多层级进化树",
+      "mode": "high",
+      "score": 5.5067,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_tree_多层级系统发育树图",
+      "mode": "high",
+      "score": 5.7967,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_violin_分裂小提琴图分面版",
+      "mode": "low",
+      "score": 3.9559,
+      "geometry": "box",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_violin_小提琴图添加显著性标记",
+      "mode": "low",
+      "score": 3.8219,
+      "geometry": "box",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_曲线图_Kaplan_Meier生存曲线",
+      "mode": "low",
+      "score": 2.7223,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_游泳图_游泳图_进阶版",
+      "mode": "low",
+      "score": 3.9594,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_综合图_ggplot2组合展示误差线点图与柱状图",
+      "mode": "low",
+      "score": 3.0379,
+      "geometry": "bar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_综合图_多分组统计与差异变化综合图",
+      "mode": "low",
+      "score": 4.1867,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_雷达图_雷达图批量绘制",
+      "mode": "low",
+      "score": 3.2728,
+      "geometry": "radar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "mode": "low",
+      "score": 4.1267,
+      "geometry": "line",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_001箱线图+散点图",
+      "mode": "medium",
+      "score": 4.7145,
+      "geometry": "box",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_002渐变火山图",
+      "mode": "medium",
+      "score": 4.5967,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_004提琴图",
+      "mode": "medium",
+      "score": 5.2767,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_005复杂热图",
+      "mode": "high",
+      "score": 6.0184,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_006复杂散点图",
+      "mode": "low",
+      "score": 3.886,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_007气泡火山图",
+      "mode": "low",
+      "score": 3.82,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_009甘特图",
+      "mode": "medium",
+      "score": 4.9367,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_015分半小提琴图",
+      "mode": "low",
+      "score": 4.0984,
+      "geometry": "box",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_017基因融合热图+堆积柱状图",
+      "mode": "high",
+      "score": 5.572,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_018单细胞分组火山图",
+      "mode": "medium",
+      "score": 4.4167,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_022复杂环形热图",
+      "mode": "high",
+      "score": 5.8967,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_023泛癌箱线图+显著性检验",
+      "mode": "medium",
+      "score": 4.8067,
+      "geometry": "box",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_024矩阵饼图+分组注释",
+      "mode": "high",
+      "score": 5.5467,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_025三维PCA散点图",
+      "mode": "medium",
+      "score": 4.9472,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_027箱线图+热图注释",
+      "mode": "low",
+      "score": 4.346,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_028分面双向柱状图+热图注释",
+      "mode": "high",
+      "score": 6.6967,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_032表达定量雷达图",
+      "mode": "medium",
+      "score": 4.5033,
+      "geometry": "radar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_037分类变量环形热图",
+      "mode": "high",
+      "score": 5.7267,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_039雷达图+环形注释",
+      "mode": "low",
+      "score": 3.956,
+      "geometry": "radar",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_047散点饼图",
+      "mode": "medium",
+      "score": 4.5,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_049多组哑铃图",
+      "mode": "low",
+      "score": 3.968,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_050复杂分组散点图",
+      "mode": "medium",
+      "score": 4.8467,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_053分组气泡图",
+      "mode": "low",
+      "score": 3.9995,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_054分面森林图",
+      "mode": "low",
+      "score": 4.09,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_055批量火山图",
+      "mode": "low",
+      "score": 4.282,
+      "geometry": "scatter",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_056复杂网络图",
+      "mode": "high",
+      "score": 5.892,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_057复杂进化树",
+      "mode": "low",
+      "score": 4.086,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_059桑基气泡图",
+      "mode": "high",
+      "score": 5.576,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_060复杂环形互作网络图",
+      "mode": "high",
+      "score": 6.202,
+      "geometry": "network",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_063_共定位矩阵散点图+柱状图注释",
+      "mode": "high",
+      "score": 5.3984,
+      "geometry": "heatmap",
+      "rebuilt": true
+    },
+    {
+      "case": "plotmaster_48个性化桑基图",
+      "mode": "medium",
+      "score": 4.5359,
+      "geometry": "network",
+      "rebuilt": true
+    }
+  ]
+}

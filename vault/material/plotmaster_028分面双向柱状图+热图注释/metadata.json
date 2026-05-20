@@ -1,0 +1,164 @@
+{
+  "id": "plotmaster_028分面双向柱状图+热图注释",
+  "title": "028分面双向柱状图+热图注释",
+  "source": {
+    "root": "raw/PlotMaster",
+    "original_path": "028分面双向柱状图+热图注释"
+  },
+  "mode": "high",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "ComplexHeatmap",
+    "circlize"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 33,
+    "outputs": 5,
+    "scripts": 1,
+    "raw_data": 5,
+    "docs": 6
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:13.186405+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "patchwork"
+    ],
+    "special": [
+      "ComplexHeatmap",
+      "circlize",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:35.767132+00:00",
+    "records": [
+      {
+        "source": "plotmaster_028分面双向柱状图+热图注释/data_raw/otu_taxa_table1.txt",
+        "status": "converted",
+        "csv": [
+          "plotmaster_028分面双向柱状图+热图注释/data_raw/otu_taxa_table1.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotmaster_028分面双向柱状图+热图注释/data_raw/otu_taxa_table2.txt",
+        "status": "converted",
+        "csv": [
+          "plotmaster_028分面双向柱状图+热图注释/data_raw/otu_taxa_table2.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotmaster_028分面双向柱状图+热图注释/raw/otu_taxa_table1.txt",
+        "status": "converted",
+        "csv": [
+          "plotmaster_028分面双向柱状图+热图注释/raw/otu_taxa_table1.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotmaster_028分面双向柱状图+热图注释/raw/otu_taxa_table2.txt",
+        "status": "converted",
+        "csv": [
+          "plotmaster_028分面双向柱状图+热图注释/raw/otu_taxa_table2.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/otu_taxa_table1.csv",
+    "grammar_geometry": "heatmap",
+    "row_count": 800,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "high",
+    "score": 6.6967,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/codes.R",
+    "generated_source": "raw/p1_p2.png",
+    "compat_xlsx": [],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:31:43.395956+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_combined.pdf",
+      "selected": "raw/combined.pdf",
+      "page": 0,
+      "previous_rmse": 0.15545258981185525,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ComplexHeatmap-circlize",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap",
+      "ComplexHeatmap",
+      "circlize"
+    ],
+    "visual_dependencies": [
+      "ComplexHeatmap",
+      "circlize",
+      "patchwork",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "installed_count": 14,
+  "installed": [
+    ".codex/skills/mattpocock/engineering/diagnose",
+    ".codex/skills/mattpocock/engineering/grill-with-docs",
+    ".codex/skills/mattpocock/engineering/triage",
+    ".codex/skills/mattpocock/engineering/improve-codebase-architecture",
+    ".codex/skills/mattpocock/engineering/setup-matt-pocock-skills",
+    ".codex/skills/mattpocock/engineering/tdd",
+    ".codex/skills/mattpocock/engineering/to-issues",
+    ".codex/skills/mattpocock/engineering/to-prd",
+    ".codex/skills/mattpocock/engineering/zoom-out",
+    ".codex/skills/mattpocock/engineering/prototype",
+    ".codex/skills/mattpocock/productivity/caveman",
+    ".codex/skills/mattpocock/productivity/grill-me",
+    ".codex/skills/mattpocock/productivity/handoff",
+    ".codex/skills/mattpocock/productivity/write-a-skill"
+  ]
+}

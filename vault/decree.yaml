@@ -1,0 +1,31 @@
+decree:
+  required_fields:
+    - template_id
+    - title
+    - scientific_intent
+    - supported_data
+    - required_data
+    - optional_data
+    - plotting_function
+    - minimal_reproducible_example
+    - synthetic_demo_data
+    - preview_image
+    - complexity_score
+    - defamiliarization_score
+    - failure_cases
+    - dependencies
+    - export_formats
+  code_rules:
+    - no_hidden_absolute_paths
+    - must_have_demo_data
+    - must_have_single_entry_function
+    - must_be_runnable_from_clean_session
+    - must_generate_preview_image
+    - must_record_package_versions
+  figure_rules:
+    - must_state_visual_intent
+    - must_state_best_use_cases
+    - must_state_bad_use_cases
+    - must_declare_data_mappings
+    - must_declare_highlight_support
+    - must_declare_composition_support

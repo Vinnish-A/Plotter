@@ -1,0 +1,164 @@
+{
+  "id": "plotcase_network_蛋白互作网络图",
+  "title": "蛋白互作网络图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "network\\蛋白互作网络图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "network"
+  ],
+  "visual_keywords": [
+    "network_graph",
+    "node_link",
+    "layout",
+    "community"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_mappings": [
+      "node_id",
+      "node_label",
+      "node_group",
+      "node_size",
+      "edge_group",
+      "edge_direction",
+      "layout_x",
+      "layout_y"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "node-link graph tables"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.366873+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ggraph",
+      "igraph",
+      "tidygraph",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:31.901069+00:00",
+    "records": [
+      {
+        "source": "plotcase_network_蛋白互作网络图/data_raw/data/string_interactions.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_蛋白互作网络图/data_raw/data/string_interactions.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_network_蛋白互作网络图/raw/data/string_interactions.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_蛋白互作网络图/raw/data/string_interactions.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/string_interactions.csv",
+    "grammar_geometry": "network_graph",
+    "row_count": 39,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotmaster_060复杂环形互作网络图",
+    "reason": "visual_redundancy:network:network",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "outputs/figure_001_cover.png",
+    "fallback_reason": "Visual audit fallback: original-code output existed but did not preserve the finished figure structure well enough for Vault preview (normalized correlation=0.2385, edge_ratio=0.6442).",
+    "previous_rebuild_attempt": {
+      "status": "success",
+      "script": "raw/code.R",
+      "generated_source": "raw/Rplots.pdf",
+      "compat_xlsx": [
+        "raw/string_interactions.tsv"
+      ],
+      "returncode": 1,
+      "rebuilt_at": "2026-05-18T07:50:08.756612+00:00"
+    },
+    "rebuilt_at": "2026-05-18T08:06:19.724138+00:00"
+  },
+  "visual_audit": {
+    "status": "fallback_to_finished_figure",
+    "metric": {
+      "case": "plotcase_network_蛋白互作网络图",
+      "status": "success",
+      "mse": 0.01,
+      "corr": 0.2385,
+      "edge_ratio": 0.6442
+    },
+    "audited_at": "2026-05-18T08:06:19.724155+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "network_graph",
+    "backend": "R/ggraph-igraph",
+    "unit": "node-link graph tables",
+    "required_data_roles": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_data_roles": [
+      "node_id",
+      "node_label",
+      "node_group",
+      "node_size",
+      "edge_group",
+      "edge_direction",
+      "layout_x",
+      "layout_y"
+    ]
+  }
+}

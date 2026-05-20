@@ -1,0 +1,108 @@
+
+[stderr]
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   4.0.3     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+ggtree v3.14.0 Learn more at https://yulab-smu.top/contribution-tree-data/
+
+Please cite:
+
+Shuangbin Xu, Lin Li, Xiao Luo, Meijun Chen, Wenli Tang, Li Zhan, Zehan
+Dai, Tommy T. Lam, Yi Guan, Guangchuang Yu. Ggtree: A serialized data
+object for visualization of a phylogenetic tree and annotation data.
+iMeta 2022, 1(4):e56. doi:10.1002/imt2.56
+
+Attaching package: ‘ggtree’
+
+The following object is masked from ‘package:tidyr’:
+
+    expand
+
+ggtreeExtra v1.16.0 For help: https://yulab-smu.top/treedata-book/
+
+If you use the ggtree package suite in published research, please cite
+the appropriate paper(s):
+
+S Xu, Z Dai, P Guo, X Fu, S Liu, L Zhou, W Tang, T Feng, M Chen, L
+Zhan, T Wu, E Hu, Y Jiang, X Bo, G Yu. ggtreeExtra: Compact
+visualization of richly annotated phylogenetic data. Molecular Biology
+and Evolution. 2021, 38(9):4039-4042. doi: 10.1093/molbev/msab166
+
+Attaching package: ‘ape’
+
+The following object is masked from ‘package:ggtree’:
+
+    rotate
+
+The following object is masked from ‘package:dplyr’:
+
+    where
+
+Warning messages:
+1: `aes_()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`
+ℹ The deprecated feature was likely used in the ggtree package.
+  Please report the issue at <https://github.com/YuLab-SMU/ggtree/issues>. 
+2: In fortify(data, ...) : Arguments in `...` must be used.
+✖ Problematic arguments:
+• as.Date = as.Date
+• yscale_mapping = yscale_mapping
+• hang = hang
+ℹ Did you misspell an argument name?
+3: `aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information.
+ℹ The deprecated feature was likely used in the ggtree package.
+  Please report the issue at <https://github.com/YuLab-SMU/ggtree/issues>. 
+4: The column of x aesthetic only have one unique value with `geom = geom_tile`,
+and the `width` of `geom_tile()` is not provided, the `pwidth` will be as
+`width`. 
+5: The column of x aesthetic only have one unique value with `geom = geom_tile`,
+and the `width` of `geom_tile()` is not provided, the `pwidth` will be as
+`width`. 
+Error in `geom_segment2()`:
+! Problem while converting geom to grob.
+ℹ Error occurred in the 3rd layer.
+Caused by error in `is.waive()`:
+! could not find function "is.waive"
+Backtrace:
+     ▆
+  1. ├─ggplot2::ggsave(...)
+  2. │ └─base::lapply(plot, grid.draw)
+  3. │   ├─grid (local) FUN(X[[i]], ...)
+  4. │   └─ggplot2 (local) `grid.draw.ggplot2::ggplot`(X[[i]], ...)
+  5. │     ├─base::print(x)
+  6. │     └─ggplot2 (local) `print.ggplot2::ggplot`(x)
+  7. │       ├─ggplot2::ggplot_gtable(data)
+  8. │       └─ggplot2 (local) `ggplot_gtable.ggplot2::ggplot_built`(data)
+  9. │         └─ggplot2:::by_layer(...)
+ 10. │           ├─rlang::try_fetch(...)
+ 11. │           │ ├─base::tryCatch(...)
+ 12. │           │ │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 13. │           │ │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 14. │           │ │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 15. │           │ └─base::withCallingHandlers(...)
+ 16. │           └─ggplot2 (local) f(l = layers[[i]], d = data[[i]])
+ 17. │             └─l$draw_geom(d, layout)
+ 18. │               └─ggplot2 (local) draw_geom(..., self = self)
+ 19. │                 └─self$geom$draw_layer(...)
+ 20. │                   └─ggplot2 (local) draw_layer(..., self = self)
+ 21. │                     └─base::lapply(...)
+ 22. │                       └─ggplot2 (local) FUN(X[[i]], ...)
+ 23. │                         ├─rlang::inject(self$draw_panel(data, panel_params, coord, !!!params))
+ 24. │                         └─self$draw_panel(...)
+ 25. │                           └─ggtree (local) draw_panel(...)
+ 26. │                             └─ggplot2:::empty(data)
+ 27. └─base::.handleSimpleError(...)
+ 28.   └─rlang (local) h(simpleError(msg, call))
+ 29.     └─handlers[[1L]](cnd)
+ 30.       └─cli::cli_abort(...)
+ 31.         └─rlang::abort(...)
+Execution halted

@@ -1,0 +1,19 @@
+     x    y
+x 1.00 0.78
+y 0.78 1.00
+
+n= 100 
+
+
+P
+  x  y 
+x     0
+y  0   
+
+[stderr]
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+`geom_smooth()` using formula = 'y ~ x'

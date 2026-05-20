@@ -1,0 +1,166 @@
+{
+  "id": "plotcase_tree_ggtree绘制系统发育树",
+  "title": "ggtree绘制系统发育树",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "tree\\ggtree绘制系统发育树"
+  },
+  "mode": "high",
+  "chart_family": [
+    "tree",
+    "tree_annotation"
+  ],
+  "visual_keywords": [
+    "tree",
+    "phylogeny",
+    "annotation_track",
+    "radial_or_rectangular_layout"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "node_id",
+      "parent_id",
+      "label"
+    ],
+    "optional_mappings": [
+      "branch_length",
+      "tip_group",
+      "track",
+      "track_value",
+      "track_class",
+      "heatmap_value"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "tree edges plus tip-level annotation table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 10,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 5,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.669119+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "dplyr",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "MetBrewer",
+      "RColorBrewer",
+      "ape",
+      "ggnewscale",
+      "ggtree",
+      "ggtreeExtra",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:33.730922+00:00",
+    "records": [
+      {
+        "source": "plotcase_tree_ggtree绘制系统发育树/data_raw/data/DEseq.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制系统发育树/data_raw/data/DEseq.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_tree_ggtree绘制系统发育树/raw/data/DEseq.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_tree_ggtree绘制系统发育树/raw/data/DEseq.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/data.csv",
+    "grammar_geometry": "tree_heatmap",
+    "row_count": 127,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_tree_多层级系统发育树图",
+    "reason": "visual_redundancy:network:tree",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "outputs/figure_001_cover.png",
+    "fallback_reason": "Visual audit fallback: original-code output existed but did not preserve the finished figure structure well enough for Vault preview (normalized correlation=0.1046, edge_ratio=0.5577).",
+    "previous_rebuild_attempt": {
+      "status": "success",
+      "script": "raw/code.R",
+      "generated_source": "raw/Rplots.pdf",
+      "compat_xlsx": [
+        "raw/DEseq.tsv",
+        "raw/data.csv"
+      ],
+      "returncode": 0,
+      "rebuilt_at": "2026-05-18T07:50:23.675465+00:00"
+    },
+    "rebuilt_at": "2026-05-18T08:06:20.239766+00:00"
+  },
+  "visual_audit": {
+    "status": "fallback_to_finished_figure",
+    "metric": {
+      "case": "plotcase_tree_ggtree绘制系统发育树",
+      "status": "success",
+      "mse": 0.0231,
+      "corr": 0.1046,
+      "edge_ratio": 0.5577
+    },
+    "audited_at": "2026-05-18T08:06:20.239784+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "tree_heatmap",
+    "backend": "R/ggtree",
+    "unit": "tree edges plus tip-level annotation table",
+    "required_data_roles": [
+      "node_id",
+      "parent_id",
+      "label"
+    ],
+    "optional_data_roles": [
+      "branch_length",
+      "tip_group",
+      "track",
+      "track_value",
+      "track_class",
+      "heatmap_value"
+    ]
+  }
+}

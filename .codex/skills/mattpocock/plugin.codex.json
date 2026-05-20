@@ -1,0 +1,23 @@
+{
+  "name": "mattpocock-skills-codex-local",
+  "source": "https://github.com/mattpocock/skills",
+  "source_ref": "e74f0061bb67222181640effa98c675bdb2fdaa7",
+  "installed_for": "codex",
+  "install_scope": "project-root",
+  "skills": [
+    "engineering/diagnose",
+    "engineering/grill-with-docs",
+    "engineering/triage",
+    "engineering/improve-codebase-architecture",
+    "engineering/setup-matt-pocock-skills",
+    "engineering/tdd",
+    "engineering/to-issues",
+    "engineering/to-prd",
+    "engineering/zoom-out",
+    "engineering/prototype",
+    "productivity/caveman",
+    "productivity/grill-me",
+    "productivity/handoff",
+    "productivity/write-a-skill"
+  ]
+}

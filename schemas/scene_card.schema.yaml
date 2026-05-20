@@ -1,0 +1,43 @@
+type: object
+required:
+  - scene_id
+  - scientific_intent
+  - data_type
+  - must_use
+  - target_complexity
+  - target_defamiliarization
+properties:
+  scene_id:
+    type: string
+  scientific_intent:
+    type: array
+    items:
+      type: string
+  data_type:
+    type: array
+    items:
+      type: string
+  must_use:
+    type: array
+    items:
+      type: string
+  optional:
+    type: array
+    items:
+      type: string
+  target_complexity:
+    type: object
+    properties:
+      level:
+        enum: [low, medium, high, custom, simple, complex, awesome]
+  target_defamiliarization:
+    type: object
+    properties:
+      level:
+        type: string
+  required_output:
+    type: object
+  constraints:
+    type: array
+    items:
+      type: string

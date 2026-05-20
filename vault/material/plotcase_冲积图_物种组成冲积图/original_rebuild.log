@@ -1,0 +1,1 @@
+Visual audit fallback: original-code output existed but did not preserve the finished figure structure well enough for Vault preview (normalized correlation=-1.0, edge_ratio=0.0).

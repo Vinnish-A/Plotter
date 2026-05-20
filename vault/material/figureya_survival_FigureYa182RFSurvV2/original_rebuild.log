@@ -1,0 +1,442 @@
+Starting R package installation...
+===========================================
+
+Installing CRAN packages...
+Installing CRAN package: randomForestSRC 
+begin installing package ‘visNetwork’
+begin installing package ‘fstcore’
+begin installing package ‘data.tree’
+* installing *source* package ‘data.tree’ ...
+** package ‘data.tree’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (data.tree)
+* installing *source* package ‘visNetwork’ ...
+** package ‘visNetwork’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (visNetwork)
+begin installing package ‘DiagrammeR’
+* installing *source* package ‘DiagrammeR’ ...
+** package ‘DiagrammeR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (DiagrammeR)
+begin installing package ‘randomForestSRC’
+* installing *source* package ‘fstcore’ ...
+** package ‘fstcore’ successfully unpacked and MD5 sums checked
+** using staged installation
+1.8.0
+Found pkg-config cflags and libs for LZ4!
+1.8.0
+Found pkg-config cflags and libs for ZSTD!
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/RtmpAsKXWC/R.INSTALLe1870ac25ce5/fstcore/src'
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c flex_store.cpp -o flex_store.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fst_blockrunner_char.cpp -o fst_blockrunner_char.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fst_compress.cpp -o fst_compress.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fst_error.cpp -o fst_error.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fst_table.cpp -o fst_table.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c openmp.cpp -o openmp.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c versions.cpp -o versions.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/compression/compression.cpp -o fstlib/compression/compression.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/compression/compressor.cpp -o fstlib/compression/compressor.o
+ar rcs libCOMPRESSION.a fstlib/compression/compression.o fstlib/compression/compressor.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/interface/openmphelper.cpp -o fstlib/interface/openmphelper.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/interface/fststore.cpp -o fstlib/interface/fststore.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/logical/logical_v10.cpp -o fstlib/logical/logical_v10.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/integer/integer_v8.cpp -o fstlib/integer/integer_v8.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/byte/byte_v12.cpp -o fstlib/byte/byte_v12.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/double/double_v9.cpp -o fstlib/double/double_v9.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/character/character_v6.cpp -o fstlib/character/character_v6.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/factor/factor_v7.cpp -o fstlib/factor/factor_v7.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/blockstreamer/blockstreamer_v2.cpp -o fstlib/blockstreamer/blockstreamer_v2.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/integer64/integer64_v11.cpp -o fstlib/integer64/integer64_v11.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'    -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fstlib/byteblock/byteblock_v13.cpp -o fstlib/byteblock/byteblock_v13.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/LZ4 -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c fstlib/ZSTD/common/xxhash.c -o fstlib/ZSTD/common/xxhash.o
+ar rcs libFRAME.a fstlib/interface/openmphelper.o fstlib/interface/fststore.o fstlib/logical/logical_v10.o fstlib/integer/integer_v8.o fstlib/byte/byte_v12.o fstlib/double/double_v9.o fstlib/character/character_v6.o fstlib/factor/factor_v7.o fstlib/blockstreamer/blockstreamer_v2.o fstlib/integer64/integer64_v11.o fstlib/byteblock/byteblock_v13.o fstlib/ZSTD/common/xxhash.o
+g++ -std=gnu++17 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o fstcore.so RcppExports.o flex_store.o fst_blockrunner_char.o fst_compress.o fst_error.o fst_table.o openmp.o versions.o -fopenmp ./libFRAME.a ./libCOMPRESSION.a -llz4 -lzstd -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpAsKXWC/R.INSTALLe1870ac25ce5/fstcore/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-fstcore/00new/fstcore/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (fstcore)
+begin installing package ‘fst’
+* installing *source* package ‘fst’ ...
+** package ‘fst’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/RtmpYbRJJ6/R.INSTALLe1d3d2c0f7e4e/fst/src'
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/fstcore/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/fstcore/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c flex_store.cpp -o flex_store.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/fstcore/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c fst_compress.cpp -o fst_compress.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/fstcore/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c openmp.cpp -o openmp.o
+g++ -std=gnu++17 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o fst.so RcppExports.o flex_store.o fst_compress.o openmp.o -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpYbRJJ6/R.INSTALLe1d3d2c0f7e4e/fst/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-fst/00new/fst/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (fst)
+* installing *source* package ‘randomForestSRC’ ...
+** package ‘randomForestSRC’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/RtmpXqI6ig/R.INSTALLe1b947031b28e/randomForestSRC/src'
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c R_init_randomForestSRC.c -o R_init_randomForestSRC.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c bootstrap.c -o bootstrap.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c classification.c -o classification.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c diagnostic.c -o diagnostic.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c entryGeneric.c -o entryGeneric.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c factorOps.c -o factorOps.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c importance.c -o importance.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c importanceAnti.c -o importanceAnti.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c importancePerm.c -o importancePerm.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c importanceRand.c -o importanceRand.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c impute.c -o impute.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c internal.c -o internal.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c leafLink.c -o leafLink.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c marginal.c -o marginal.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c nodeOps.c -o nodeOps.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c nrutil.c -o nrutil.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c partial.c -o partial.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c polarity.c -o polarity.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c processEnsemble.c -o processEnsemble.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c quantile.c -o quantile.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c random.c -o random.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c regression.c -o regression.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rfsrc.c -o rfsrc.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rfsrcUtil.c -o rfsrcUtil.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c sampling.c -o sampling.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c sexpOutgoing.c -o sexpOutgoing.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c sortedLink.c -o sortedLink.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c split.c -o split.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitClas.c -o splitClas.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitCustom.c -o splitCustom.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitCustomDriver.c -o splitCustomDriver.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitGreedy.c -o splitGreedy.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitMahalanobis.c -o splitMahalanobis.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitMult.c -o splitMult.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitQuantile.c -o splitQuantile.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitRegr.c -o splitRegr.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitSurv.c -o splitSurv.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitUtil.c -o splitUtil.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c splitUtilSurv.c -o splitUtilSurv.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c stack.c -o stack.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c stackOutput.c -o stackOutput.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c stackOutputQQ.c -o stackOutputQQ.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c stackParallel.c -o stackParallel.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c stackPreDefined.c -o stackPreDefined.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c survival.c -o survival.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c survivalE.c -o survivalE.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c svdUtil.c -o svdUtil.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c termOps.c -o termOps.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c trace.c -o trace.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c tree.c -o tree.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c treeJIT.c -o treeJIT.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c treeUtil.c -o treeUtil.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c cindex.c -o cindex.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c distance.c -o distance.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c entry.c -o entry.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c error.c -o error.o
+gcc -I"/usr/share/R/include" -DNDEBUG -Ishared     -fopenmp -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c nativeUtil.c -o nativeUtil.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o randomForestSRC.so R_init_randomForestSRC.o bootstrap.o classification.o diagnostic.o entryGeneric.o factorOps.o importance.o importanceAnti.o importancePerm.o importanceRand.o impute.o internal.o leafLink.o marginal.o nodeOps.o nrutil.o partial.o polarity.o processEnsemble.o quantile.o random.o regression.o rfsrc.o rfsrcUtil.o sampling.o sexpOutgoing.o sortedLink.o split.o splitClas.o splitCustom.o splitCustomDriver.o splitGreedy.o splitMahalanobis.o splitMult.o splitQuantile.o splitRegr.o splitSurv.o splitUtil.o splitUtilSurv.o stack.o stackOutput.o stackOutputQQ.o stackParallel.o stackPreDefined.o survival.o survivalE.o svdUtil.o termOps.o trace.o tree.o treeJIT.o treeUtil.o cindex.o distance.o entry.o error.o nativeUtil.o -fopenmp -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpXqI6ig/R.INSTALLe1b947031b28e/randomForestSRC/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-randomForestSRC/00new/randomForestSRC/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (randomForestSRC)
+Successfully installed: randomForestSRC 
+Package already installed: survival 
+
+Installing randomSurvivalForest from source...
+Installing package from source: https://cran.r-project.org/src/contrib/Archive/randomSurvivalForest/randomSurvivalForest_3.6.4.tar.gz 
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c nodeOps.c -o nodeOps.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c nrutil.c -o nrutil.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsf.c -o rsf.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfBootstrap.c -o rsfBootstrap.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfEntry.c -o rsfEntry.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfFactorOps.c -o rsfFactorOps.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfImportance.c -o rsfImportance.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfImpute.c -o rsfImpute.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfSplit.c -o rsfSplit.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfSplitUtil.c -o rsfSplitUtil.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfStack.c -o rsfStack.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfTree.c -o rsfTree.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rsfUtil.c -o rsfUtil.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c trace.c -o trace.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o randomSurvivalForest.so nodeOps.o nrutil.o rsf.o rsfBootstrap.o rsfEntry.o rsfFactorOps.o rsfImportance.o rsfImpute.o rsfSplit.o rsfSplitUtil.o rsfStack.o rsfTree.o rsfUtil.o trace.o -L/usr/lib/R/lib -lR
+Successfully installed package from source
+
+===========================================
+Package installation completed!
+You can now run your R scripts in this directory.
+5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95%       gene        HR          z    pvalue     lower    upper
+1   TSPAN6 1.1675062  1.0443178 0.2963384 0.8730275 1.561315
+2     TNMD 1.0320474  0.2759680 0.7825727 0.8249027 1.291209
+3     DPM1 0.9264529 -0.4112470 0.6808914 0.6437340 1.333338
+4    SCYL3 0.9424900 -0.1831085 0.8547129 0.4999644 1.776701
+5 C1ORF112 0.8880511 -0.4227189 0.6725004 0.5121145 1.539958
+6      FGR 1.0286699  0.2368115 0.8128031 0.8140924 1.299806
+
+               Importance   Relative Imp
+KRT15              0.0176         1.0000
+DNAJB2             0.0069         0.3929
+AL031777.1         0.0064         0.3643
+IGFBP3             0.0055         0.3143
+NCLP1              0.0050         0.2857
+LANCL3             0.0049         0.2786
+URGCP_MRPS24       0.0043         0.2429
+AC034213.1         0.0038         0.2143
+GJA3               0.0033         0.1857
+MIR574             0.0031         0.1786
+FOXH1              0.0031         0.1786
+RABGGTA            0.0029         0.1643
+AC010973.2         0.0026         0.1500
+AC128689.1         0.0023         0.1286
+LINC00261          0.0021         0.1214
+ELK2BP             0.0021         0.1214
+MIR103A2           0.0021         0.1214
+AL158847.1         0.0019         0.1071
+LINC01507          0.0019         0.1071
+EVA1B              0.0019         0.1071
+GRN                0.0019         0.1071
+KHDC1L             0.0018         0.1000
+GABRD              0.0018         0.1000
+DLX1               0.0018         0.1000
+NPM1P25            0.0016         0.0929
+TIMP1              0.0016         0.0929
+LINC02303          0.0015         0.0857
+AC116614.1         0.0015         0.0857
+NARF               0.0015         0.0857
+MIR210             0.0014         0.0786
+NECAB3             0.0014         0.0786
+AC093668.1         0.0013         0.0714
+AC113367.2         0.0013         0.0714
+NMRAL2P            0.0013         0.0714
+CCKBR              0.0013         0.0714
+PPARGC1A           0.0013         0.0714
+CRYBA4             0.0011         0.0643
+JAG2               0.0011         0.0643
+LAMP5              0.0011         0.0643
+HPCAL1             0.0011         0.0643
+AC069148.1         0.0010         0.0571
+AC106886.1         0.0010         0.0571
+TMEM250            0.0010         0.0571
+ANKRD30BP3         0.0010         0.0571
+MAGEA1             0.0010         0.0571
+CDC42SE2           0.0010         0.0571
+PADI1              0.0010         0.0571
+AL512324.3         0.0009         0.0500
+AL161752.1         0.0009         0.0500
+AL133467.2         0.0009         0.0500
+MAGEA12            0.0009         0.0500
+DYNC1I1            0.0009         0.0500
+KCP                0.0009         0.0500
+PHF1               0.0009         0.0500
+TMEM101            0.0009         0.0500
+SLC30A9            0.0009         0.0500
+AL049870.2         0.0008         0.0429
+AC005841.1         0.0008         0.0429
+BGLAP              0.0008         0.0429
+AC004951.2         0.0008         0.0429
+MIR503HG           0.0008         0.0429
+TPRXL              0.0008         0.0429
+RAB3IL1            0.0008         0.0429
+IFIT5              0.0008         0.0429
+MIR6846            0.0006         0.0357
+IKBKGP1            0.0006         0.0357
+AC132812.1         0.0006         0.0357
+AL365356.5         0.0006         0.0357
+AC093157.1         0.0006         0.0357
+LINC02474          0.0006         0.0357
+ITLN1              0.0006         0.0357
+TTC21A             0.0006         0.0357
+AP006621.5         0.0005         0.0286
+AC010997.4         0.0005         0.0286
+TMSB4XP1           0.0005         0.0286
+SAPCD2P3           0.0005         0.0286
+AL358394.1         0.0005         0.0286
+S1PR3              0.0005         0.0286
+C22ORF34           0.0005         0.0286
+SOCS6              0.0005         0.0286
+KRT4               0.0005         0.0286
+TRAPPC8            0.0005         0.0286
+MMAA               0.0005         0.0286
+AC003101.2         0.0004         0.0214
+AL512324.1         0.0004         0.0214
+MAN1B1_AS1         0.0004         0.0214
+AC009097.4         0.0004         0.0214
+LINC01989          0.0004         0.0214
+AC126696.3         0.0004         0.0214
+AL133367.1         0.0004         0.0214
+AC017100.1         0.0004         0.0214
+PGAM5P1            0.0004         0.0214
+AC004951.3         0.0004         0.0214
+LINC01143          0.0004         0.0214
+LINC00899          0.0004         0.0214
+ZBTB46_AS1         0.0004         0.0214
+TMEM213            0.0004         0.0214
+CCDC151            0.0004         0.0214
+SEPT5              0.0004         0.0214
+FASTK              0.0004         0.0214
+null device 
+          1 
+
+[stderr]
+Installing package into ‘/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘visNetwork’, ‘fstcore’, ‘data.tree’, ‘DiagrammeR’, ‘fst’
+
+trying URL 'https://cloud.r-project.org/src/contrib/visNetwork_2.1.4.tar.gz'
+Content type 'application/x-gzip' length 4269530 bytes (4.1 MB)
+==================================================
+downloaded 4.1 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/fstcore_0.10.0.tar.gz'
+Content type 'application/x-gzip' length 643350 bytes (628 KB)
+==================================================
+downloaded 628 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/data.tree_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 1610346 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/DiagrammeR_1.0.12.tar.gz'
+Content type 'application/x-gzip' length 1235201 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/fst_0.9.8.tar.gz'
+Content type 'application/x-gzip' length 274495 bytes (268 KB)
+==================================================
+downloaded 268 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/randomForestSRC_3.6.2.tar.gz'
+Content type 'application/x-gzip' length 1281488 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+
+The downloaded source packages are in
+	‘/tmp/RtmpRmXm9e/downloaded_packages’
+Installing package into ‘/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘randomSurvivalForest’ ...
+** package ‘randomSurvivalForest’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+rsfFactorOps.c: In function ‘bookFactor’:
+rsfFactorOps.c:131:79: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘long unsigned int’ [-Wformat=]
+  131 |     Rprintf("\nRSF:  Requested %10d, Minimum Allowed %10d, Maximum Allowed %10d. ", f -> r, 2, MAX_EXACT_LEVEL);
+      |                                                                            ~~~^
+      |                                                                               |
+      |                                                                               int
+      |                                                                            %10ld
+rsfTree.c: In function ‘getTerminalNode’:
+rsfTree.c:76:30: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 4 has type ‘Node *’ {aka ‘struct node *’} [-Wformat=]
+   76 |       Rprintf(" %12d %12d %12x %12d \n", i,
+      |                           ~~~^
+      |                              |
+      |                              unsigned int
+   77 |               _bootMembershipFlag[i], _nodeMembership[i],
+      |                                       ~~~~~~~~~~~~~~~~~~
+      |                                                      |
+      |                                                      Node * {aka struct node *}
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-randomSurvivalForest/00new/randomSurvivalForest/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (randomSurvivalForest)
+
+ randomForestSRC 3.6.2 
+ 
+ Type rfsrc.news() to see new features, changes, and bug fixes. 
+ 
+
+
+ randomSurvivalForest 3.6.4 
+ 
+ Type rsf.news() to see new features, changes, and bug fixes. 
+ 
+
+
+Attaching package: ‘randomSurvivalForest’
+
+The following objects are masked from ‘package:randomForestSRC’:
+
+    max.subtree, plot.variable, vimp
+
+There were 50 or more warnings (use warnings() to see the first 50)
+Warning message:
+In randomSurvivalForest::rsf(Surv(OS.time, OS) ~ ., data = dt.rf,  : 
+This package has been deprecated. Please upgrade to the new package 'randomForestSRC'.
+

@@ -1,0 +1,702 @@
+[
+  {
+    "case": "figureya_survival_FigureYa128Prognostic",
+    "mode": "low",
+    "original": "vault/material/figureya_survival_FigureYa128Prognostic/outputs/figure_001_AUCandKM.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa128Prognostic/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/figureya_survival_FigureYa128Prognostic/raw/AUCandKM.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "figureya_survival_FigureYa182RFSurvV2",
+    "mode": "low",
+    "original": "vault/material/figureya_survival_FigureYa182RFSurvV2/outputs/figure_001_error_rate_and_importance_derived_from_package.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa182RFSurvV2/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/figureya_survival_FigureYa182RFSurvV2/raw/error rate and importance derived from package.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "figureya_survival_FigureYa197SmoothHaz",
+    "mode": "low",
+    "original": "vault/material/figureya_survival_FigureYa197SmoothHaz/outputs/figure_004_smoothHaz.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa197SmoothHaz/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/figureya_survival_FigureYa197SmoothHaz/raw/smoothHaz.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "figureya_survival_FigureYa251NPHSurv",
+    "mode": "low",
+    "original": "vault/material/figureya_survival_FigureYa251NPHSurv/outputs/figure_004_kaplan_meier_curve2.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa251NPHSurv/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/figureya_survival_FigureYa251NPHSurv/raw/kaplan meier curve2.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "figureya_survival_FigureYa305PMAPscore",
+    "mode": "low",
+    "original": "vault/material/figureya_survival_FigureYa305PMAPscore/outputs/figure_003_km_curve.pdf",
+    "rebuilt": "vault/material/figureya_survival_FigureYa305PMAPscore/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/figureya_survival_FigureYa305PMAPscore/raw/km_curve.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_barplot_ggplot2优雅的绘制径向条形图",
+    "mode": "low",
+    "original": "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_barplot_ggplot2绘制菌群分布图",
+    "mode": "low",
+    "original": "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_barplot_多层注释柱状图",
+    "mode": "low",
+    "original": "vault/material/plotcase_barplot_多层注释柱状图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_barplot_多层注释柱状图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_barplot_多层注释柱状图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_barplot_多层注释柱状图进阶版",
+    "mode": "low",
+    "original": "vault/material/plotcase_barplot_多层注释柱状图进阶版/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_barplot_多层注释柱状图进阶版/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_barplot_多层注释柱状图进阶版/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_barplot_柱状图添加显著性标记_(进阶版)",
+    "mode": "low",
+    "original": "vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_barplot_柱状图添加显著性标记_基础版",
+    "mode": "low",
+    "original": "vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_barplot_环形条形图",
+    "mode": "low",
+    "original": "vault/material/plotcase_barplot_环形条形图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_barplot_环形条形图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_barplot_环形条形图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_barplot_配对连线条形图_进阶版",
+    "mode": "low",
+    "original": "vault/material/plotcase_barplot_配对连线条形图_进阶版/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_barplot_配对连线条形图_进阶版/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_barplot_配对连线条形图_进阶版/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_boxplot_多分组分面小提琴箱线图",
+    "mode": "low",
+    "original": "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_boxplot_多分组分面小提琴箱线图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_boxplot_多组配对连线箱线图",
+    "mode": "low",
+    "original": "vault/material/plotcase_boxplot_多组配对连线箱线图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_boxplot_多组配对连线箱线图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_boxplot_多组配对连线箱线图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_boxplot_方差分析箱线图_进阶版",
+    "mode": "low",
+    "original": "vault/material/plotcase_boxplot_方差分析箱线图_进阶版/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_boxplot_方差分析箱线图_进阶版/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_boxplot_方差分析箱线图_进阶版/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_point_多组火山图",
+    "mode": "low",
+    "original": "vault/material/plotcase_point_多组火山图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_point_多组火山图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_point_多组火山图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_point_火山图局部放大版",
+    "mode": "low",
+    "original": "vault/material/plotcase_point_火山图局部放大版/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_point_火山图局部放大版/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_point_火山图局部放大版/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_violin_分裂小提琴图分面版",
+    "mode": "low",
+    "original": "vault/material/plotcase_violin_分裂小提琴图分面版/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_violin_分裂小提琴图分面版/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_violin_分裂小提琴图分面版/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_violin_小提琴图添加显著性标记",
+    "mode": "low",
+    "original": "vault/material/plotcase_violin_小提琴图添加显著性标记/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_violin_小提琴图添加显著性标记/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_violin_小提琴图添加显著性标记/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_曲线图_Kaplan_Meier生存曲线",
+    "mode": "low",
+    "original": "vault/material/plotcase_曲线图_Kaplan_Meier生存曲线/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_曲线图_Kaplan_Meier生存曲线/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_曲线图_Kaplan_Meier生存曲线/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_游泳图_游泳图_进阶版",
+    "mode": "low",
+    "original": "vault/material/plotcase_游泳图_游泳图_进阶版/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_游泳图_游泳图_进阶版/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_游泳图_游泳图_进阶版/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_综合图_ggplot2组合展示误差线点图与柱状图",
+    "mode": "low",
+    "original": "vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_综合图_多分组统计与差异变化综合图",
+    "mode": "low",
+    "original": "vault/material/plotcase_综合图_多分组统计与差异变化综合图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_综合图_多分组统计与差异变化综合图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_综合图_多分组统计与差异变化综合图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_雷达图_雷达图批量绘制",
+    "mode": "low",
+    "original": "vault/material/plotcase_雷达图_雷达图批量绘制/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_雷达图_雷达图批量绘制/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_雷达图_雷达图批量绘制/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+    "mode": "low",
+    "original": "vault/material/plotcase_面积图_ggplot2绘制极坐标面积图/outputs/figure_001_cover.png",
+    "rebuilt": "vault/material/plotcase_面积图_ggplot2绘制极坐标面积图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotcase_面积图_ggplot2绘制极坐标面积图/raw/cover.png",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_004提琴图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_004提琴图/outputs/figure_001_violin_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_004提琴图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_004提琴图/raw/violin_plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_006复杂散点图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_006复杂散点图/outputs/figure_002_scatter_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_006复杂散点图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_006复杂散点图/raw/scatter_plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_007气泡火山图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_007气泡火山图/outputs/figure_001_vocanol_Plot.pdf",
+    "rebuilt": "vault/material/plotmaster_007气泡火山图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_007气泡火山图/raw/vocanol_Plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_015分半小提琴图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_015分半小提琴图/outputs/figure_001_violin_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_015分半小提琴图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_015分半小提琴图/raw/violin_plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_016复杂热图+渐变色连线",
+    "mode": "low",
+    "original": "vault/material/plotmaster_016复杂热图+渐变色连线/outputs/figure_001_heatmap.pdf",
+    "rebuilt": "vault/material/plotmaster_016复杂热图+渐变色连线/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_016复杂热图+渐变色连线/raw/heatmap.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_019堆积柱状图+折线+热图注释",
+    "mode": "low",
+    "original": "vault/material/plotmaster_019堆积柱状图+折线+热图注释/outputs/figure_002_legend.pdf",
+    "rebuilt": "vault/material/plotmaster_019堆积柱状图+折线+热图注释/outputs/rebuilt.png",
+    "rmse": 0.01496440171006997,
+    "changed": false,
+    "best": {
+      "path": "vault/material/plotmaster_019堆积柱状图+折线+热图注释/raw/legend.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_020多组学九象限散点图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_020多组学九象限散点图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_020多组学九象限散点图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_020多组学九象限散点图/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_021分组散点图+直方图注释",
+    "mode": "low",
+    "original": "vault/material/plotmaster_021分组散点图+直方图注释/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_021分组散点图+直方图注释/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_021分组散点图+直方图注释/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_027箱线图+热图注释",
+    "mode": "low",
+    "original": "vault/material/plotmaster_027箱线图+热图注释/outputs/figure_003_plots.pdf",
+    "rebuilt": "vault/material/plotmaster_027箱线图+热图注释/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_027箱线图+热图注释/raw/plots.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_029分面堆积面积图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_029分面堆积面积图/outputs/figure_002_plot2.pdf",
+    "rebuilt": "vault/material/plotmaster_029分面堆积面积图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_029分面堆积面积图/raw/plot2.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_031环形散点图+环形热图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_031环形散点图+环形热图/outputs/figure_001_plots.pdf",
+    "rebuilt": "vault/material/plotmaster_031环形散点图+环形热图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_031环形散点图+环形热图/raw/plots.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_033个性化森林图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_033个性化森林图/outputs/figure_001_plots.pdf",
+    "rebuilt": "vault/material/plotmaster_033个性化森林图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_033个性化森林图/raw/plots.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_038聚类热图+注释",
+    "mode": "low",
+    "original": "vault/material/plotmaster_038聚类热图+注释/outputs/figure_001_plots.pdf",
+    "rebuilt": "vault/material/plotmaster_038聚类热图+注释/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_038聚类热图+注释/raw/plots.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_039雷达图+环形注释",
+    "mode": "low",
+    "original": "vault/material/plotmaster_039雷达图+环形注释/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_039雷达图+环形注释/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_039雷达图+环形注释/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_043分块热图+注释",
+    "mode": "low",
+    "original": "vault/material/plotmaster_043分块热图+注释/outputs/figure_002_plot2.pdf",
+    "rebuilt": "vault/material/plotmaster_043分块热图+注释/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_043分块热图+注释/raw/plot2.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_046环形层次聚类热图+批量环形饼图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_046环形层次聚类热图+批量环形饼图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_046环形层次聚类热图+批量环形饼图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_046环形层次聚类热图+批量环形饼图/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_049多组哑铃图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_049多组哑铃图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_049多组哑铃图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_049多组哑铃图/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_053分组气泡图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_053分组气泡图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_053分组气泡图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_053分组气泡图/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_054分面森林图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_054分面森林图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_054分面森林图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_054分面森林图/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_055批量火山图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_055批量火山图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_055批量火山图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_055批量火山图/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_057复杂进化树",
+    "mode": "low",
+    "original": "vault/material/plotmaster_057复杂进化树/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_057复杂进化树/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_057复杂进化树/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_058分面折线图+置信区间+误差棒",
+    "mode": "low",
+    "original": "vault/material/plotmaster_058分面折线图+置信区间+误差棒/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_058分面折线图+置信区间+误差棒/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_058分面折线图+置信区间+误差棒/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_061散点图+双向误差棒",
+    "mode": "low",
+    "original": "vault/material/plotmaster_061散点图+双向误差棒/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_061散点图+双向误差棒/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_061散点图+双向误差棒/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  },
+  {
+    "case": "plotmaster_062环形分组折线图",
+    "mode": "low",
+    "original": "vault/material/plotmaster_062环形分组折线图/outputs/figure_001_plot.pdf",
+    "rebuilt": "vault/material/plotmaster_062环形分组折线图/outputs/rebuilt.png",
+    "rmse": 0.0,
+    "changed": true,
+    "best": {
+      "path": "vault/material/plotmaster_062环形分组折线图/raw/plot.pdf",
+      "page": 0,
+      "score": 0.0,
+      "source": "raw_candidate"
+    }
+  }
+]

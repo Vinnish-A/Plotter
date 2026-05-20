@@ -1,0 +1,170 @@
+{
+  "id": "plotcase_network_Treemap矩形树状GO富集分析图",
+  "title": "Treemap矩形树状GO富集分析图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "network\\Treemap矩形树状GO富集分析图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "tree",
+    "tree_annotation"
+  ],
+  "visual_keywords": [
+    "tree",
+    "phylogeny",
+    "annotation_track",
+    "radial_or_rectangular_layout"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "node_id",
+      "parent_id",
+      "label"
+    ],
+    "optional_mappings": [
+      "branch_length",
+      "tip_group",
+      "track",
+      "track_value",
+      "track_class",
+      "heatmap_value"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "tree edges plus tip-level annotation table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 10,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 5,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:12.310574+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "BiocManager",
+      "clusterProfiler",
+      "org.Hs.eg.db",
+      "rrvgo",
+      "tidyverse",
+      "treemapify"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:31.324732+00:00",
+    "records": [
+      {
+        "source": "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_background_gene_universe.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_background_gene_universe.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_master_file_FT_cilia_proteome.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_master_file_FT_cilia_proteome.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_background_gene_universe.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_background_gene_universe.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_master_file_FT_cilia_proteome.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_master_file_FT_cilia_proteome.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/Source_data_master_file_FT_cilia_proteome.csv",
+    "grammar_geometry": "tree_heatmap",
+    "row_count": 310,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 5.0602,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/Source_data_background_gene_universe.tsv",
+      "raw/Source_data_master_file_FT_cilia_proteome.tsv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:34:10.350040+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.3498876111606834,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "tree_heatmap",
+    "backend": "R/ggplot2",
+    "unit": "tree edges plus tip-level annotation table",
+    "required_data_roles": [
+      "node_id",
+      "parent_id",
+      "label"
+    ],
+    "optional_data_roles": [
+      "branch_length",
+      "tip_group",
+      "track",
+      "track_value",
+      "track_class",
+      "heatmap_value"
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "id": "plotcase_游泳图_游泳图_进阶版",
+  "title": "游泳图_进阶版",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "游泳图\\游泳图_进阶版"
+  },
+  "mode": "low",
+  "chart_family": [
+    "network"
+  ],
+  "visual_keywords": [
+    "network_graph",
+    "node_link",
+    "layout",
+    "community"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_mappings": [
+      "node_id",
+      "node_label",
+      "node_group",
+      "node_size",
+      "edge_group",
+      "edge_direction",
+      "layout_x",
+      "layout_y"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "node-link graph tables"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 11,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 6,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:12.903811+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "aplot",
+      "devtools",
+      "ggnewscale",
+      "ggrepel",
+      "swimplot",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:34.860912+00:00",
+    "records": [
+      {
+        "source": "plotcase_游泳图_游泳图_进阶版/data_raw/data/anno_df.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_游泳图_游泳图_进阶版/data_raw/data/anno_df.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_游泳图_游泳图_进阶版/raw/data/anno_df.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_游泳图_游泳图_进阶版/raw/data/anno_df.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/Response_outcome.csv",
+    "grammar_geometry": "network_graph",
+    "row_count": 221,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 3.9594,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/Response_outcome.csv",
+      "raw/Response_outcome_endpoint.csv",
+      "raw/anno_df.tsv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T16:05:44.258608+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.1633279931129759,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "network_graph",
+    "backend": "R/ggplot2",
+    "unit": "node-link graph tables",
+    "required_data_roles": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_data_roles": [
+      "node_id",
+      "node_label",
+      "node_group",
+      "node_size",
+      "edge_group",
+      "edge_direction",
+      "layout_x",
+      "layout_y"
+    ]
+  }
+}

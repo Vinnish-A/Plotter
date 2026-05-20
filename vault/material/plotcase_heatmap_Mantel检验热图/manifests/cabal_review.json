@@ -1,0 +1,10 @@
+{
+  "case_id": "plotcase_heatmap_Mantel检验热图",
+  "mode": "medium",
+  "keep_status": "live",
+  "visual_family": "annotated_heatmap",
+  "uniqueness": "unknown",
+  "manual_override": true,
+  "reason": "manual UI group assignment",
+  "reviewed_at": "2026-05-19T10:32:03.164302+00:00"
+}

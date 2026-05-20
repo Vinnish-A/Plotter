@@ -1,0 +1,148 @@
+{
+  "id": "figureya_survival_FigureYa183condSurv",
+  "title": "FigureYa183condSurv",
+  "source": {
+    "root": "raw/FigureYa",
+    "original_path": "FigureYa183condSurv"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "survival"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 11,
+    "outputs": 4,
+    "scripts": 2,
+    "raw_data": 3,
+    "docs": 2
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:11.494119+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "dplyr",
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "patchwork",
+      "purrr",
+      "tibble"
+    ],
+    "special": [
+      "BiocManager",
+      "RColorBrewer",
+      "condsurv",
+      "ggpubr",
+      "knitr",
+      "stats",
+      "survival",
+      "survminer",
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/easy_input.csv",
+    "grammar_geometry": "line",
+    "row_count": 500,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 4.5144,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/FigureYa183condSurv.Rmd",
+    "generated_source": "raw/conditional_survival_curve.png",
+    "compat_xlsx": [
+      "raw/conditional_survival_matrix.csv",
+      "raw/easy_input.csv",
+      "raw/number_at_risk.csv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:32:22.950863+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_conditional_survival_curve.pdf",
+      "selected": "raw/conditional_survival_curve.pdf",
+      "page": 0,
+      "previous_rmse": 0.03565525303669908,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "BiocManager",
+      "RColorBrewer",
+      "condsurv",
+      "dplyr",
+      "ggplot2",
+      "ggpubr",
+      "knitr",
+      "patchwork",
+      "purrr",
+      "stats",
+      "survival",
+      "survminer",
+      "tibble",
+      "tidyverse"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

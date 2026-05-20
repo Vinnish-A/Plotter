@@ -1,0 +1,147 @@
+{
+  "id": "figureya_survival_FigureYa30nomogram_update",
+  "title": "FigureYa30nomogram_update",
+  "source": {
+    "root": "raw/FigureYa",
+    "original_path": "FigureYa30nomogram_update"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "nomogram"
+  ],
+  "visual_keywords": [
+    "3d_manifold"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 15,
+    "outputs": 8,
+    "scripts": 4,
+    "raw_data": 1,
+    "docs": 7
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:11.578636+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "BiocManager",
+      "beanplot",
+      "knitr",
+      "kulife",
+      "nomogramEx",
+      "regplot",
+      "rms",
+      "survival",
+      "vioplot"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:26.927605+00:00",
+    "records": [
+      {
+        "source": "figureya_survival_FigureYa30nomogram_update/data_raw/easy_input.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa30nomogram_update/data_raw/easy_input.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa30nomogram_update/raw/easy_input.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa30nomogram_update/raw/easy_input.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/easy_input.csv",
+    "grammar_geometry": "line",
+    "row_count": 418,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "medium",
+    "score": 4.6716,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/FigureYa30nomogram_update.Rmd",
+    "generated_source": "raw/nomogram_regplot_cox.png",
+    "compat_xlsx": [
+      "raw/easy_input.txt"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:32:47.558735+00:00"
+  },
+  "visual_grammar": {
+    "backend": "unspecified",
+    "geometry": "3d_manifold",
+    "keywords": [
+      "3d_manifold"
+    ],
+    "visual_dependencies": [
+      "BiocManager",
+      "beanplot",
+      "knitr",
+      "kulife",
+      "nomogramEx",
+      "regplot",
+      "rms",
+      "survival",
+      "vioplot"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

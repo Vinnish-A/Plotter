@@ -1,0 +1,43 @@
+  CancerType  low high means metastasis number
+1   Prostate 0.80 0.95 0.875    Primary    217
+2   Prostate 0.60 0.80 0.700  Bone Met.     77
+3   Prostate 0.45 0.70 0.575  Lung Met.     19
+4   Prostate 0.25 0.80 0.525 Brain Met.      7
+5   Prostate 0.27 0.50 0.385 Liver Met.     38
+6       Lung 0.55 0.72 0.635    Primary    952
+
+ Bone Met. Brain Met. Liver Met.  Lung Met.    Primary 
+         4          4          4          4          4 
+
+[stderr]
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Warning messages:
+1: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+2: In geom_rect(aes(xmin = 0, xmax = Inf, ymin = 1.5, ymax = 2.5),  :
+  All aesthetics have length 1, but the data has 20 rows.
+ℹ Please consider using `annotate()` or provide this layer with data containing
+  a single row.
+3: In geom_rect(aes(xmin = 0, xmax = Inf, ymin = 3.5, ymax = 4.5),  :
+  All aesthetics have length 1, but the data has 20 rows.
+ℹ Please consider using `annotate()` or provide this layer with data containing
+  a single row.
+Warning messages:
+1: In geom_rect(aes(xmin = 0, xmax = Inf, ymin = 1.5, ymax = 2.5),  :
+  All aesthetics have length 1, but the data has 20 rows.
+ℹ Please consider using `annotate()` or provide this layer with data containing
+  a single row.
+2: In geom_rect(aes(xmin = 0, xmax = Inf, ymin = 3.5, ymax = 4.5),  :
+  All aesthetics have length 1, but the data has 20 rows.
+ℹ Please consider using `annotate()` or provide this layer with data containing
+  a single row.

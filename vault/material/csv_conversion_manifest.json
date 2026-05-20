@@ -1,0 +1,4568 @@
+{
+  "root": "/mnt/f/Plotter/vault/material",
+  "delete_originals": true,
+  "total": 479,
+  "converted": 479,
+  "failed": 0,
+  "deleted_originals": 479,
+  "records": [
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/data_raw/COAD_TPM.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/data_raw/COAD_TPM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/data_raw/Coxoutput.OS.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/data_raw/Coxoutput.OS.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/data_raw/clinical_PANCAN_patient_with_followup.tsv",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/data_raw/clinical_PANCAN_patient_with_followup.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/data_raw/lasso_fea.rda",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/data_raw/lasso_fea_csv/_rdata_conversion_manifest.csv",
+        "figureya_survival_FigureYa128Prognostic/data_raw/lasso_fea_csv/object_summary.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/data_raw/signature_gene.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/data_raw/signature_gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/data_raw/top50gene.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/data_raw/top50gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/raw/COAD_TPM.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/raw/COAD_TPM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/raw/Coxoutput.OS.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/raw/Coxoutput.OS.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/raw/clinical_PANCAN_patient_with_followup.tsv",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/raw/clinical_PANCAN_patient_with_followup.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/raw/lasso_fea.rda",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/raw/lasso_fea_csv/_rdata_conversion_manifest.csv",
+        "figureya_survival_FigureYa128Prognostic/raw/lasso_fea_csv/object_summary.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/raw/signature_gene.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/raw/signature_gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa128Prognostic/raw/top50gene.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa128Prognostic/raw/top50gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa138NiceCalibration/data_raw/easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa138NiceCalibration/data_raw/easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa138NiceCalibration/raw/easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa138NiceCalibration/raw/easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa141risk/data_raw/easy_input_sig.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa141risk/data_raw/easy_input_sig.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa141risk/raw/easy_input_sig.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa141risk/raw/easy_input_sig.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/data_raw/MANIFEST.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/data_raw/MANIFEST.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/data_raw/msi_results_COADREAD.rda",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/data_raw/msi_results_COADREAD_csv/_rdata_conversion_manifest.csv",
+        "figureya_survival_FigureYa143survCor_update/data_raw/msi_results_COADREAD_csv/msi_results.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/data_raw/survival_COADREAD_survival.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/data_raw/survival_COADREAD_survival.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/data_raw/survival_SKCM_survival.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/data_raw/survival_SKCM_survival.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/raw/MANIFEST.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/raw/MANIFEST.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/raw/TCGA.COADREAD.sampleMap_COADREAD_clinicalMatrix",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/raw/TCGA.COADREAD.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/raw/TCGA.SKCM.sampleMap_SKCM_clinicalMatrix",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/raw/TCGA.SKCM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/raw/msi_results_COADREAD.rda",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/raw/msi_results_COADREAD_csv/_rdata_conversion_manifest.csv",
+        "figureya_survival_FigureYa143survCor_update/raw/msi_results_COADREAD_csv/msi_results.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/raw/survival_COADREAD_survival.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/raw/survival_COADREAD_survival.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa143survCor_update/raw/survival_SKCM_survival.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa143survCor_update/raw/survival_SKCM_survival.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa193RiskTable/data_raw/gse39582.expr.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa193RiskTable/data_raw/gse39582.expr.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa193RiskTable/data_raw/gse39582.surv.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa193RiskTable/data_raw/gse39582.surv.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa193RiskTable/data_raw/tcga.expr.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa193RiskTable/data_raw/tcga.expr.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa193RiskTable/data_raw/tcga.surv.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa193RiskTable/data_raw/tcga.surv.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa193RiskTable/raw/gse39582.expr.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa193RiskTable/raw/gse39582.expr.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa193RiskTable/raw/gse39582.surv.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa193RiskTable/raw/gse39582.surv.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa193RiskTable/raw/tcga.expr.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa193RiskTable/raw/tcga.expr.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa193RiskTable/raw/tcga.surv.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa193RiskTable/raw/tcga.surv.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa197SmoothHaz/data_raw/input.xlsx",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TCGA-CDR.csv",
+        "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TCGA-CDR_Notes.csv",
+        "figureya_survival_FigureYa197SmoothHaz/data_raw/input__ExtraEndpoints.csv",
+        "figureya_survival_FigureYa197SmoothHaz/data_raw/input__ExtraEndpoints_Notes.csv",
+        "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Table4_PHAssumptionTests.csv",
+        "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Table5_PHAssumptionTests.csv",
+        "figureya_survival_FigureYa197SmoothHaz/data_raw/input__TSS_Info.csv",
+        "figureya_survival_FigureYa197SmoothHaz/data_raw/input__Fig2EFG_AdditionalInfo.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa197SmoothHaz/raw/input.xlsx",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa197SmoothHaz/raw/input__TCGA-CDR.csv",
+        "figureya_survival_FigureYa197SmoothHaz/raw/input__TCGA-CDR_Notes.csv",
+        "figureya_survival_FigureYa197SmoothHaz/raw/input__ExtraEndpoints.csv",
+        "figureya_survival_FigureYa197SmoothHaz/raw/input__ExtraEndpoints_Notes.csv",
+        "figureya_survival_FigureYa197SmoothHaz/raw/input__Table4_PHAssumptionTests.csv",
+        "figureya_survival_FigureYa197SmoothHaz/raw/input__Table5_PHAssumptionTests.csv",
+        "figureya_survival_FigureYa197SmoothHaz/raw/input__TSS_Info.csv",
+        "figureya_survival_FigureYa197SmoothHaz/raw/input__Fig2EFG_AdditionalInfo.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa1survivalCurve_update/data_raw/easy_input_2.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa1survivalCurve_update/data_raw/easy_input_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa1survivalCurve_update/data_raw/easy_input_3.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa1survivalCurve_update/data_raw/easy_input_3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa1survivalCurve_update/data_raw/not_easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa1survivalCurve_update/data_raw/not_easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa1survivalCurve_update/raw/easy_input_2.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa1survivalCurve_update/raw/easy_input_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa1survivalCurve_update/raw/easy_input_3.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa1survivalCurve_update/raw/easy_input_3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa1survivalCurve_update/raw/not_easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa1survivalCurve_update/raw/not_easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/data_raw/cox HR in survival landscape.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/data_raw/cox_HR_in_survival_landscape.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/data_raw/cox pvalue in survival landscape.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/data_raw/cox_pvalue_in_survival_landscape.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/data_raw/cox_genes associated with the OS.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/data_raw/cox_genes_associated_with_the_OS.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/data_raw/easy_input_gene.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/data_raw/easy_input_gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/data_raw/logrank HR in survival landscape.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/data_raw/logrank_HR_in_survival_landscape.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/data_raw/logrank pvalue in survival landscape.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/data_raw/logrank_pvalue_in_survival_landscape.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/data_raw/logrank_genes associated with the OS.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/data_raw/logrank_genes_associated_with_the_OS.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/data_raw/pancancerSurvivalData.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/data_raw/pancancerSurvivalData.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/raw/cox HR in survival landscape.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/raw/cox_HR_in_survival_landscape.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/raw/cox pvalue in survival landscape.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/raw/cox_pvalue_in_survival_landscape.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/raw/cox_genes associated with the OS.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/raw/cox_genes_associated_with_the_OS.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/raw/easy_input_gene.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/raw/easy_input_gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/raw/logrank HR in survival landscape.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/raw/logrank_HR_in_survival_landscape.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/raw/logrank pvalue in survival landscape.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/raw/logrank_pvalue_in_survival_landscape.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/raw/logrank_genes associated with the OS.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/raw/logrank_genes_associated_with_the_OS.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa210survivalScape/raw/pancancerSurvivalData.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa210survivalScape/raw/pancancerSurvivalData.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_annCol.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_annCol.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_surv.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_surv.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_long term survival p value matrix after 90 delayed effect.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/data_raw/output_long_term_survival_p_value_matrix_after_90_delayed_effect.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted mean survival p value matrix at 180 cutoff.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted_mean_survival_p_value_matrix_at_180_cutoff.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted mean survival p value matrix at 365 cutoff.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted_mean_survival_p_value_matrix_at_365_cutoff.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/raw/easy_input_annCol.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/raw/easy_input_annCol.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/raw/easy_input_surv.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/raw/easy_input_surv.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/raw/output_long term survival p value matrix after 90 delayed effect.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/raw/output_long_term_survival_p_value_matrix_after_90_delayed_effect.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/raw/output_restricted mean survival p value matrix at 180 cutoff.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/raw/output_restricted_mean_survival_p_value_matrix_at_180_cutoff.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa251NPHSurv/raw/output_restricted mean survival p value matrix at 365 cutoff.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa251NPHSurv/raw/output_restricted_mean_survival_p_value_matrix_at_365_cutoff.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa284pairwiseLogrank/data_raw/easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa284pairwiseLogrank/data_raw/easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa284pairwiseLogrank/raw/easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa284pairwiseLogrank/raw/easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_combined dataframe with both gene expression and survival information.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/data_raw/output_combined_dataframe_with_both_gene_expression_and_survival_information.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_simple_sample_annotation.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/data_raw/output_simple_sample_annotation.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of cox result in pancancer.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_cox_result_in_pancancer.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of gene prognositicationin pancancer.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_gene_prognositicationin_pancancer.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary of km result in pancancer.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/data_raw/output_summary_of_km_result_in_pancancer.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/raw/output_combined dataframe with both gene expression and survival information.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/raw/output_combined_dataframe_with_both_gene_expression_and_survival_information.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/raw/output_simple_sample_annotation.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/raw/output_simple_sample_annotation.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of cox result in pancancer.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_cox_result_in_pancancer.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of gene prognositicationin pancancer.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_gene_prognositicationin_pancancer.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa299pancanSurv/raw/output_summary of km result in pancancer.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa299pancanSurv/raw/output_summary_of_km_result_in_pancancer.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA.RData",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA_csv/_rdata_conversion_manifest.csv",
+        "figureya_survival_FigureYa305PMAPscore/data_raw/InputData/hsaSPIA_csv/object_summary.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA.RData",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA_csv/_rdata_conversion_manifest.csv",
+        "figureya_survival_FigureYa305PMAPscore/raw/InputData/hsaSPIA_csv/object_summary.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa30nomogram_update/data_raw/easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa30nomogram_update/data_raw/easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa30nomogram_update/raw/easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa30nomogram_update/raw/easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa33DCA_update/data_raw/easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa33DCA_update/data_raw/easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa33DCA_update/raw/easy_input.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa33DCA_update/raw/easy_input.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa66UnivariateCox/data_raw/TCGA_phenotype_denseDataOnlyDownload.tsv",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa66UnivariateCox/data_raw/TCGA_phenotype_denseDataOnlyDownload.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa66UnivariateCox/data_raw/samplepair.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa66UnivariateCox/data_raw/samplepair.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa66UnivariateCox/raw/TCGA_phenotype_denseDataOnlyDownload.tsv",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa66UnivariateCox/raw/TCGA_phenotype_denseDataOnlyDownload.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa66UnivariateCox/raw/samplepair.txt",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa66UnivariateCox/raw/samplepair.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_ggplot2优雅的绘制径向条形图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_ggplot2优雅的绘制径向条形图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_ggplot2优雅的绘制径向条形图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_ggplot2优雅的绘制径向条形图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_ggplot2绘制小清新版箭头图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_ggplot2绘制小清新版箭头图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_ggplot2绘制小清新版箭头图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_ggplot2绘制小清新版箭头图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_ggplot2绘制菌群分布图/data_raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_ggplot2绘制菌群分布图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_ggplot2绘制菌群分布图/raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_ggplot2绘制菌群分布图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_个性化环状条形图/data_raw/data/data_2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_个性化环状条形图/data_raw/data/data_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_个性化环状条形图/raw/data/data_2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_个性化环状条形图/raw/data/data_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_区域缩柱状图_(基础入门)/data_raw/data/17GUSformat.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_区域缩柱状图_(基础入门)/data_raw/data/17GUSformat__Sheet1.csv",
+        "plotcase_barplot_区域缩柱状图_(基础入门)/data_raw/data/17GUSformat__Sheet2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_区域缩柱状图_(基础入门)/raw/data/17GUSformat.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_区域缩柱状图_(基础入门)/raw/data/17GUSformat__Sheet1.csv",
+        "plotcase_barplot_区域缩柱状图_(基础入门)/raw/data/17GUSformat__Sheet2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_多元素组合分布条图/data_raw/data/43016_2026_1303_MOESM3_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_多元素组合分布条图/data_raw/data/43016_2026_1303_MOESM3_ESM__production-based_emission.csv",
+        "plotcase_barplot_多元素组合分布条图/data_raw/data/43016_2026_1303_MOESM3_ESM__consumption-based_emission.csv",
+        "plotcase_barplot_多元素组合分布条图/data_raw/data/43016_2026_1303_MOESM3_ESM__pie_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_多元素组合分布条图/raw/data/43016_2026_1303_MOESM3_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_多元素组合分布条图/raw/data/43016_2026_1303_MOESM3_ESM__production-based_emission.csv",
+        "plotcase_barplot_多元素组合分布条图/raw/data/43016_2026_1303_MOESM3_ESM__consumption-based_emission.csv",
+        "plotcase_barplot_多元素组合分布条图/raw/data/43016_2026_1303_MOESM3_ESM__pie_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_多层注释柱状图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_多层注释柱状图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_多层注释柱状图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_多层注释柱状图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_多层注释柱状图进阶版/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_多层注释柱状图进阶版/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_多层注释柱状图进阶版/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_多层注释柱状图进阶版/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_局部放大柱状图/data_raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_局部放大柱状图/data_raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_局部放大柱状图/data_raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_局部放大柱状图/data_raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_局部放大柱状图/raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_局部放大柱状图/raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_局部放大柱状图/raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_局部放大柱状图/raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_条形图与直方分布图组合/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_条形图与直方分布图组合/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_条形图与直方分布图组合/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_条形图与直方分布图组合/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_极坐标堆砌柱状图/data_raw/data/realm_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_极坐标堆砌柱状图/data_raw/data/realm_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_极坐标堆砌柱状图/raw/data/realm_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_极坐标堆砌柱状图/raw/data/realm_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_柱状图添加显著性标记_(进阶版)/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_柱状图添加显著性标记_(进阶版)/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_柱状图添加显著性标记_(进阶版)/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_柱状图添加显著性标记_(进阶版)/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_柱状图添加显著性标记_基础版/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_柱状图添加显著性标记_基础版/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_柱状图添加显著性标记_基础版/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_柱状图添加显著性标记_基础版/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_正负分布堆砌条形图/data_raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_正负分布堆砌条形图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_正负分布堆砌条形图/raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_正负分布堆砌条形图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_环形条形图/data_raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_环形条形图/data_raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_环形条形图/raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_环形条形图/raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_配对连线条图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_配对连线条图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_配对连线条图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_配对连线条图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_配对连线条形图_进阶版/data_raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_配对连线条形图_进阶版/data_raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_配对连线条形图_进阶版/data_raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_配对连线条形图_进阶版/data_raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_配对连线条形图_进阶版/raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_配对连线条形图_进阶版/raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_barplot_配对连线条形图_进阶版/raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_barplot_配对连线条形图_进阶版/raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_多分组分面小提琴箱线图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_多分组分面小提琴箱线图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_多分组分面小提琴箱线图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_多分组分面小提琴箱线图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_多组配对连线箱线图/data_raw/data/cell_abundance_sample_timepoint.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_多组配对连线箱线图/data_raw/data/cell_abundance_sample_timepoint.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_多组配对连线箱线图/raw/data/cell_abundance_sample_timepoint.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_多组配对连线箱线图/raw/data/cell_abundance_sample_timepoint.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_方差分析箱线图_进阶版/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_方差分析箱线图_进阶版/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_方差分析箱线图_进阶版/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_方差分析箱线图_进阶版/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_箱线图_基础入门版/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_箱线图_基础入门版/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_箱线图_基础入门版/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_箱线图_基础入门版/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_配对连线箱线图/data_raw/data/boxplot_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_配对连线箱线图/data_raw/data/boxplot_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_boxplot_配对连线箱线图/raw/data/boxplot_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_boxplot_配对连线箱线图/raw/data/boxplot_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_GO富集分析通路图/data_raw/data/GO_pathway.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_GO富集分析通路图/data_raw/data/GO_pathway.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_GO富集分析通路图/raw/data/GO_pathway.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_GO富集分析通路图/raw/data/GO_pathway.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize优雅绘制多重注释弦图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize优雅绘制多重注释弦图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize优雅绘制多重注释弦图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize优雅绘制多重注释弦图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_aPDL1.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_aTIGIT.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_Combo.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_Combo_FTY.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6a_control.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_aPDL1.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_aTIGIT.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_Combo.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_Combo_FTY.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6b_control.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_aPDL1.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_aTIGIT.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_Combo.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_Combo_FTY.csv",
+        "plotcase_circos_circlize绘制和弦图/data_raw/data/43018_2024_870_MOESM8_ESM__Fig6c_control.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_aPDL1.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_aTIGIT.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_Combo.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_Combo_FTY.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6a_control.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_aPDL1.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_aTIGIT.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_Combo.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_Combo_FTY.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6b_control.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_aPDL1.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_aTIGIT.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_Combo.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_Combo_FTY.csv",
+        "plotcase_circos_circlize绘制和弦图/raw/data/43018_2024_870_MOESM8_ESM__Fig6c_control.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制和弦图进阶版/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制和弦图进阶版/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制和弦图进阶版/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制和弦图进阶版/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制融合基因图/data_raw/data/bed.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制融合基因图/data_raw/data/bed.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制融合基因图/data_raw/data/link1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制融合基因图/data_raw/data/link1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制融合基因图/data_raw/data/link2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制融合基因图/data_raw/data/link2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制融合基因图/raw/data/bed.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制融合基因图/raw/data/bed.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制融合基因图/raw/data/link1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制融合基因图/raw/data/link1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_circlize绘制融合基因图/raw/data/link2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_circlize绘制融合基因图/raw/data/link2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_细胞通讯和弦图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_细胞通讯和弦图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_circos_细胞通讯和弦图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_circos_细胞通讯和弦图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_3D热图/data_raw/data/data3.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_3D热图/data_raw/data/data3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_3D热图/raw/data/data3.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_3D热图/raw/data/data3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ARG丰度与环境因子相关性网络热图/data_raw/data/41586_2026_10413_MOESM7_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ARG丰度与环境因子相关性网络热图/data_raw/data/41586_2026_10413_MOESM7_ESM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ARG丰度与环境因子相关性网络热图/raw/data/41586_2026_10413_MOESM7_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ARG丰度与环境因子相关性网络热图/raw/data/41586_2026_10413_MOESM7_ESM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_circlize绘制环状聚类热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_circlize绘制环状聚类热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_circlize绘制环状聚类热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_circlize绘制环状聚类热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_circlize风格多层次极坐标热图/data_raw/data/41591_2025_3891_MOESM5_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_circlize风格多层次极坐标热图/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1b.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_1.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_2.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_1.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_2.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_1.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_circlize风格多层次极坐标热图/raw/data/41591_2025_3891_MOESM5_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_circlize风格多层次极坐标热图/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1b.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_1.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_2.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_1.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_2.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_1.csv",
+        "plotcase_heatmap_circlize风格多层次极坐标热图/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggplot2绘制连续型热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggplot2绘制连续型热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggplot2绘制连续型热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggplot2绘制连续型热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggtree绘制环状聚类热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggtree绘制环状聚类热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggtree绘制环状聚类热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggtree绘制环状聚类热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggtree绘制离散型系统发育树热图/data_raw/data/RAxML_bipartitions.allUK_1000.nwk",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggtree绘制离散型系统发育树热图/data_raw/data/RAxML_bipartitions.allUK_1000.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/data/RAxML_bipartitions.allUK_1000.nwk",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/data/RAxML_bipartitions.allUK_1000.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggtree绘制组合热图/data_raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggtree绘制组合热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggtree绘制组合热图/data_raw/data/group.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggtree绘制组合热图/data_raw/data/group.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggtree绘制组合热图/raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggtree绘制组合热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_ggtree绘制组合热图/raw/data/group.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_ggtree绘制组合热图/raw/data/group.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_分组注释标记热图/data_raw/data/41586_2026_10453_MOESM11_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_分组注释标记热图/data_raw/data/41586_2026_10453_MOESM11_ESM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_分组注释标记热图/raw/data/41586_2026_10453_MOESM11_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_分组注释标记热图/raw/data/41586_2026_10453_MOESM11_ESM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_分面热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_分面热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_分面热图/data_raw/data/group.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_分面热图/data_raw/data/group.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_分面热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_分面热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_分面热图/raw/data/group.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_分面热图/raw/data/group.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_回归方差分解热图/data_raw/data/env.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_回归方差分解热图/data_raw/data/env.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_回归方差分解热图/data_raw/data/spe.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_回归方差分解热图/data_raw/data/spe.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_回归方差分解热图/raw/data/env.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_回归方差分解热图/raw/data/env.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_回归方差分解热图/raw/data/spe.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_回归方差分解热图/raw/data/spe.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_基因表达注释热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_基因表达注释热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_基因表达注释热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_基因表达注释热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多元素个性化对角线热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多元素个性化对角线热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多元素个性化对角线热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多元素个性化对角线热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多元素个性化气泡热图/data_raw/data/heat.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多元素个性化气泡热图/data_raw/data/heat.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多元素个性化气泡热图/raw/data/heat.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多元素个性化气泡热图/raw/data/heat.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多分组气泡热图/data_raw/data/prevlance.stat5.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多分组气泡热图/data_raw/data/prevlance.stat5.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多分组气泡热图/raw/data/prevlance.stat5.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多分组气泡热图/raw/data/prevlance.stat5.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2a_1.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2a_2.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2b_1.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2b_2.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_1.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_2.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_3.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_4.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_5.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_6.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_1.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_2.csv",
+        "plotcase_heatmap_多层嵌套分面热图/data_raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2a_1.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2a_2.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2b_1.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2b_2.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_1.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_2.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_3.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_4.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_5.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2c_6.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_1.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_2.csv",
+        "plotcase_heatmap_多层嵌套分面热图/raw/data/41591_2025_3891_MOESM6_ESM__source_data_fig2d_3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多类别分面注释热图/data_raw/data/heta.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多类别分面注释热图/data_raw/data/heta.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多类别分面注释热图/data_raw/data/type.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多类别分面注释热图/data_raw/data/type.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多类别分面注释热图/raw/data/heta.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多类别分面注释热图/raw/data/heta.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多类别分面注释热图/raw/data/type.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多类别分面注释热图/raw/data/type.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多类别注释风格热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多类别注释风格热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多类别注释风格热图/data_raw/data/group.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多类别注释风格热图/data_raw/data/group.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多类别注释风格热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多类别注释风格热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多类别注释风格热图/raw/data/group.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多类别注释风格热图/raw/data/group.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多重注释分组热图/data_raw/data/data.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多重注释分组热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_多重注释分组热图/raw/data/data.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_多重注释分组热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4b.csv",
+        "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4c.csv",
+        "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4d.csv",
+        "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4f.csv",
+        "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4g_h.csv",
+        "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4j.csv",
+        "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4k.csv",
+        "plotcase_heatmap_对角线相关性热图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4l.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4b.csv",
+        "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4c.csv",
+        "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4d.csv",
+        "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4f.csv",
+        "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4g_h.csv",
+        "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4j.csv",
+        "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4k.csv",
+        "plotcase_heatmap_对角线相关性热图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4l.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_差异表达基因的层次聚类热图/data_raw/data/heatmap_gene.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_差异表达基因的层次聚类热图/data_raw/data/heatmap_gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_差异表达基因的层次聚类热图/raw/data/heatmap_gene.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_差异表达基因的层次聚类热图/raw/data/heatmap_gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_气泡配对连线个性化热图/data_raw/data/heatmap1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_气泡配对连线个性化热图/data_raw/data/heatmap1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_气泡配对连线个性化热图/data_raw/data/heatmap2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_气泡配对连线个性化热图/data_raw/data/heatmap2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_气泡配对连线个性化热图/raw/data/heatmap1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_气泡配对连线个性化热图/raw/data/heatmap1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_气泡配对连线个性化热图/raw/data/heatmap2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_气泡配对连线个性化热图/raw/data/heatmap2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source Data to Main Figures.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1a.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1c.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1d.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1e.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1f.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1g.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1h.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.1i.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.2a.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.2b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.2c.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.3ab.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.3cd.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.3ef.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.3gh.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.3i.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.4a.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.4b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.5a.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.5b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.5c.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.5d.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.5e.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.6b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.6c.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.6d.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.6e.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.6f.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.6g.csv",
+        "plotcase_heatmap_热图添加渐变色背景/data_raw/data/Source_Data_to_Main_Figures__Fig.6h.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_热图添加渐变色背景/raw/data/Source Data to Main Figures.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1a.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1c.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1d.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1e.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1f.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1g.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1h.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.1i.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.2a.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.2b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.2c.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.3ab.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.3cd.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.3ef.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.3gh.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.3i.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.4a.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.4b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.5a.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.5b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.5c.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.5d.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.5e.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.6b.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.6c.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.6d.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.6e.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.6f.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.6g.csv",
+        "plotcase_heatmap_热图添加渐变色背景/raw/data/Source_Data_to_Main_Figures__Fig.6h.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_环状分组热图/data_raw/data/group2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_环状分组热图/data_raw/data/group2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_环状分组热图/data_raw/data/heatmap.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_环状分组热图/data_raw/data/heatmap.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_环状分组热图/raw/data/group2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_环状分组热图/raw/data/group2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_环状分组热图/raw/data/heatmap.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_环状分组热图/raw/data/heatmap.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_环状注释热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_环状注释热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_环状注释热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_环状注释热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_相关性分面热图/data_raw/data/annotation.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_相关性分面热图/data_raw/data/annotation.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_相关性分面热图/data_raw/data/env.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_相关性分面热图/data_raw/data/env.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_相关性分面热图/data_raw/data/genus.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_相关性分面热图/data_raw/data/genus.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_相关性分面热图/raw/data/annotation.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_相关性分面热图/raw/data/annotation.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_相关性分面热图/raw/data/env.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_相关性分面热图/raw/data/env.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_相关性分面热图/raw/data/genus.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_相关性分面热图/raw/data/genus.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_相关性注释热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_相关性注释热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_相关性注释热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_相关性注释热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_离散气泡热图/data_raw/data/data3.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_离散气泡热图/data_raw/data/data3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_离散气泡热图/raw/data/data3.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_离散气泡热图/raw/data/data3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig1b.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig1c.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig1d.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig2a.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig2b.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig2g.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig2h.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3a.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3b-e.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3g.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3h.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig3i.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig4a-b.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig4c-e.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig4f-h.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig5a__c__and_d.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig5b.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig5e.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6b.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6c.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6d-e.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6f.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__Fig6g.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__FigS3.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__FigS4.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S5A.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S5B.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S5C.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S6.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S7.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S8A.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S8B.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S9A.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S9B.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S10A.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S10B.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S10C.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S11A.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S11B.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S12A.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S12B.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S12C.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S13A.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S13B.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S15A.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S15B.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S15C.csv",
+        "plotcase_heatmap_离散热图与条图组合/data_raw/data/41467_2022_35431_MOESM8_ESM__S16.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig1b.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig1c.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig1d.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig2a.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig2b.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig2g.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig2h.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3a.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3b-e.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3g.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3h.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig3i.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig4a-b.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig4c-e.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig4f-h.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig5a__c__and_d.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig5b.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig5e.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6b.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6c.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6d-e.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6f.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__Fig6g.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__FigS3.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__FigS4.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S5A.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S5B.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S5C.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S6.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S7.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S8A.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S8B.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S9A.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S9B.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S10A.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S10B.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S10C.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S11A.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S11B.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S12A.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S12B.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S12C.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S13A.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S13B.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S15A.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S15B.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S15C.csv",
+        "plotcase_heatmap_离散热图与条图组合/raw/data/41467_2022_35431_MOESM8_ESM__S16.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_系统发育树组合离散热图/data_raw/data/Fig2a.tree",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_系统发育树组合离散热图/data_raw/data/Fig2a.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_系统发育树组合离散热图/raw/data/Fig2a.tree",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_系统发育树组合离散热图/raw/data/Fig2a.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_边框分组注释热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_边框分组注释热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_边框分组注释热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_边框分组注释热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_配对连线热图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_配对连线热图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_配对连线热图/data_raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_配对连线热图/data_raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_配对连线热图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_配对连线热图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_heatmap_配对连线热图/raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_heatmap_配对连线热图/raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_ggbump优雅绘制组合地图/data_raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_ggbump优雅绘制组合地图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_ggbump优雅绘制组合地图/raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_ggbump优雅绘制组合地图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_地图嵌套子图/data_raw/data/ASIR.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_地图嵌套子图/data_raw/data/ASIR.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_地图嵌套子图/data_raw/data/map.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_地图嵌套子图/data_raw/data/map.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_地图嵌套子图/raw/data/ASIR.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_地图嵌套子图/raw/data/ASIR.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_地图嵌套子图/raw/data/map.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_地图嵌套子图/raw/data/map.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_地图添加3D饼图注释/data_raw/data/region.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_地图添加3D饼图注释/data_raw/data/region.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_地图添加3D饼图注释/raw/data/region.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_地图添加3D饼图注释/raw/data/region.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_采样点地图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_采样点地图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_采样点地图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_采样点地图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_采样点地图进阶版/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_采样点地图进阶版/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_采样点地图进阶版/data_raw/data/map.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_采样点地图进阶版/data_raw/data/map.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_采样点地图进阶版/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_采样点地图进阶版/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_map_采样点地图进阶版/raw/data/map.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_map_采样点地图进阶版/raw/data/map.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_GO通路相似性网络图_基于基因重叠度/data_raw/data/GO_pathway.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_GO通路相似性网络图_基于基因重叠度/data_raw/data/GO_pathway.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_GO通路相似性网络图_基于基因重叠度/raw/data/GO_pathway.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_GO通路相似性网络图_基于基因重叠度/raw/data/GO_pathway.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_PBMC_DESeq2.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_NK_DESeq2.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_NK.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_B.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD14Mono.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD16Mono.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD4T.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD8T.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_DC.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_PB.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_pDC.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DEG_ProlifLymph.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__NK_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__NK_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__B_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__B_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD14Mono_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD14Mono_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD16Mono_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD16Mono_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD4T_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD4T_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD8T_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__CD8T_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__DC_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__PB_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__PB_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__pDC_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__ProlifLymph_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/41590_2025_2341_MOESM4_ESM__ProlifLymph_Narrow_KEGG.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/stringdb_NK_background.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/data_raw/data/stringdb_NK_background.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_PBMC_DESeq2.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_NK_DESeq2.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_NK.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_B.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD14Mono.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD16Mono.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD4T.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_CD8T.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_DC.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_PB.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_pDC.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DEG_ProlifLymph.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__NK_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__NK_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__B_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__B_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD14Mono_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD14Mono_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD16Mono_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD16Mono_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD4T_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD4T_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD8T_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__CD8T_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__DC_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__PB_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__PB_Narrow_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__pDC_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__ProlifLymph_Broad_KEGG.csv",
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/41590_2025_2341_MOESM4_ESM__ProlifLymph_Narrow_KEGG.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/stringdb_NK_background.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_STRING_BioNet网络模块解析代码实战/raw/data/stringdb_NK_background.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_background_gene_universe.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_background_gene_universe.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_master_file_FT_cilia_proteome.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_Treemap矩形树状GO富集分析图/data_raw/data/Source_data_master_file_FT_cilia_proteome.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_background_gene_universe.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_background_gene_universe.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_master_file_FT_cilia_proteome.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_Treemap矩形树状GO富集分析图/raw/data/Source_data_master_file_FT_cilia_proteome.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggplot2优雅绘制网络图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggplot2优雅绘制网络图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggplot2优雅绘制网络图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggplot2优雅绘制网络图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7b.csv",
+        "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7c.csv",
+        "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7d.csv",
+        "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7f.csv",
+        "plotcase_network_ggraph构建疾病遗传调控网络图/data_raw/data/43587_2025_1027_MOESM9_ESM__Figure_7g.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7b.csv",
+        "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7c.csv",
+        "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7d.csv",
+        "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7f.csv",
+        "plotcase_network_ggraph构建疾病遗传调控网络图/raw/data/43587_2025_1027_MOESM9_ESM__Figure_7g.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggraph环形网络图_多维数据圈层/data_raw/data/network_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggraph环形网络图_多维数据圈层/data_raw/data/network_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggraph环形网络图_多维数据圈层/raw/data/network_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggraph环形网络图_多维数据圈层/raw/data/network_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggraph绘制代谢途径图/data_raw/data/oppp_edges.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggraph绘制代谢途径图/data_raw/data/oppp_edges.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggraph绘制代谢途径图/data_raw/data/oppp_nodes.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggraph绘制代谢途径图/data_raw/data/oppp_nodes.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggraph绘制代谢途径图/raw/data/oppp_edges.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggraph绘制代谢途径图/raw/data/oppp_edges.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_ggraph绘制代谢途径图/raw/data/oppp_nodes.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_ggraph绘制代谢途径图/raw/data/oppp_nodes.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_分层气泡图_类别层次结构展示/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_分层气泡图_类别层次结构展示/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_分层气泡图_类别层次结构展示/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_分层气泡图_类别层次结构展示/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_基因互作网络图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_基因互作网络图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_基因互作网络图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_基因互作网络图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5a.csv",
+        "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5b.csv",
+        "plotcase_network_环形网络图的构建方法/data_raw/data/41588_2025_2326_MOESM8_ESM__fig5c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5a.csv",
+        "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5b.csv",
+        "plotcase_network_环形网络图的构建方法/raw/data/41588_2025_2326_MOESM8_ESM__fig5c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_网络图_基础入门版/data_raw/data/edge.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_网络图_基础入门版/data_raw/data/edge.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_网络图_基础入门版/data_raw/data/node.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_网络图_基础入门版/data_raw/data/node.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_网络图_基础入门版/raw/data/edge.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_网络图_基础入门版/raw/data/edge.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_网络图_基础入门版/raw/data/node.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_网络图_基础入门版/raw/data/node.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_蛋白互作网络图/data_raw/data/string_interactions.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_蛋白互作网络图/data_raw/data/string_interactions.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_network_蛋白互作网络图/raw/data/string_interactions.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_network_蛋白互作网络图/raw/data/string_interactions.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_pie_3D饼图/data_raw/data/41588_2025_2351_MOESM6_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_pie_3D饼图/data_raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2c.csv",
+        "plotcase_pie_3D饼图/data_raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2d.csv",
+        "plotcase_pie_3D饼图/data_raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2e.csv",
+        "plotcase_pie_3D饼图/data_raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2f.csv",
+        "plotcase_pie_3D饼图/data_raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2g.csv",
+        "plotcase_pie_3D饼图/data_raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2h.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_pie_3D饼图/raw/data/41588_2025_2351_MOESM6_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_pie_3D饼图/raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2c.csv",
+        "plotcase_pie_3D饼图/raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2d.csv",
+        "plotcase_pie_3D饼图/raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2e.csv",
+        "plotcase_pie_3D饼图/raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2f.csv",
+        "plotcase_pie_3D饼图/raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2g.csv",
+        "plotcase_pie_3D饼图/raw/data/41588_2025_2351_MOESM6_ESM__source_data_Figure_2h.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_pie_多层饼图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_pie_多层饼图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_pie_多层饼图/data_raw/data/group.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_pie_多层饼图/data_raw/data/group.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_pie_多层饼图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_pie_多层饼图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_pie_多层饼图/raw/data/group.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_pie_多层饼图/raw/data/group.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point,面积图_双Y轴散点面积组合图/data_raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point,面积图_双Y轴散点面积组合图/data_raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point,面积图_双Y轴散点面积组合图/raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point,面积图_双Y轴散点面积组合图/raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_NMDS分析图/data_raw/data/18SV9.norm.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_NMDS分析图/data_raw/data/18SV9.norm.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_NMDS分析图/data_raw/data/group.v9.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_NMDS分析图/data_raw/data/group.v9.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_NMDS分析图/raw/data/18SV9.norm.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_NMDS分析图/raw/data/18SV9.norm.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_NMDS分析图/raw/data/group.v9.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_NMDS分析图/raw/data/group.v9.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_PCA散点图/data_raw/data/F1.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_PCA散点图/data_raw/data/F1__Fig_1a_taxonomy_PCA.csv",
+        "plotcase_point_PCA散点图/data_raw/data/F1__Fig_1a_metagenome_PCA.csv",
+        "plotcase_point_PCA散点图/data_raw/data/F1__Fig_1b_species_abund.csv",
+        "plotcase_point_PCA散点图/data_raw/data/F1__Fig_1c_KEGG_module.csv",
+        "plotcase_point_PCA散点图/data_raw/data/F1__Fig_1d_bin_taxa.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_PCA散点图/raw/data/F1.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_PCA散点图/raw/data/F1__Fig_1a_taxonomy_PCA.csv",
+        "plotcase_point_PCA散点图/raw/data/F1__Fig_1a_metagenome_PCA.csv",
+        "plotcase_point_PCA散点图/raw/data/F1__Fig_1b_species_abund.csv",
+        "plotcase_point_PCA散点图/raw/data/F1__Fig_1c_KEGG_module.csv",
+        "plotcase_point_PCA散点图/raw/data/F1__Fig_1d_bin_taxa.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_ggplot2优雅的绘制增强版哑铃图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_ggplot2优雅的绘制增强版哑铃图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_ggplot2优雅的绘制增强版哑铃图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_ggplot2优雅的绘制增强版哑铃图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_ggplot2绘制误差线点图/data_raw/data/F1-b.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_ggplot2绘制误差线点图/data_raw/data/F1-b.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_ggplot2绘制误差线点图/raw/data/F1-b.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_ggplot2绘制误差线点图/raw/data/F1-b.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_三元相图/data_raw/data/41586_2025_9686_MOESM9_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_三元相图/data_raw/data/41586_2025_9686_MOESM9_ESM__Fig5a.csv",
+        "plotcase_point_三元相图/data_raw/data/41586_2025_9686_MOESM9_ESM__Fig5b.csv",
+        "plotcase_point_三元相图/data_raw/data/41586_2025_9686_MOESM9_ESM__Fig5c.csv",
+        "plotcase_point_三元相图/data_raw/data/41586_2025_9686_MOESM9_ESM__Fig5g.csv",
+        "plotcase_point_三元相图/data_raw/data/41586_2025_9686_MOESM9_ESM__Fig5i.csv",
+        "plotcase_point_三元相图/data_raw/data/41586_2025_9686_MOESM9_ESM__Fig5j_1.csv",
+        "plotcase_point_三元相图/data_raw/data/41586_2025_9686_MOESM9_ESM__Fig5j_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_三元相图/raw/data/41586_2025_9686_MOESM9_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_三元相图/raw/data/41586_2025_9686_MOESM9_ESM__Fig5a.csv",
+        "plotcase_point_三元相图/raw/data/41586_2025_9686_MOESM9_ESM__Fig5b.csv",
+        "plotcase_point_三元相图/raw/data/41586_2025_9686_MOESM9_ESM__Fig5c.csv",
+        "plotcase_point_三元相图/raw/data/41586_2025_9686_MOESM9_ESM__Fig5g.csv",
+        "plotcase_point_三元相图/raw/data/41586_2025_9686_MOESM9_ESM__Fig5i.csv",
+        "plotcase_point_三元相图/raw/data/41586_2025_9686_MOESM9_ESM__Fig5j_1.csv",
+        "plotcase_point_三元相图/raw/data/41586_2025_9686_MOESM9_ESM__Fig5j_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_四象限散点图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_四象限散点图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_四象限散点图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_四象限散点图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_多组火山图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_多组火山图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_多组火山图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_多组火山图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_效应量森林图_分组比较与显著性标注/data_raw/data/F1_f.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_效应量森林图_分组比较与显著性标注/data_raw/data/F1_f.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_效应量森林图_分组比较与显著性标注/raw/data/F1_f.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_效应量森林图_分组比较与显著性标注/raw/data/F1_f.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1b.csv",
+        "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_1.csv",
+        "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_2.csv",
+        "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_1.csv",
+        "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_2.csv",
+        "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_1.csv",
+        "plotcase_point_散点图叠加多坐标轴/data_raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1b.csv",
+        "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_1.csv",
+        "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1c_2.csv",
+        "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_1.csv",
+        "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1d_2.csv",
+        "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_1.csv",
+        "plotcase_point_散点图叠加多坐标轴/raw/data/41591_2025_3891_MOESM5_ESM__source_data_fig1e_2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加多组拟合曲线/data_raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加多组拟合曲线/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加多组拟合曲线/raw/data/data.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加多组拟合曲线/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.1b.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.1c.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.1d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.2a.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.2b.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.2c.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.2d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.3d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.3e.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.3f.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.3g.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.3h.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.4a.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.4b.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.4c.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.4d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.4h.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.6a.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.6b.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.6c.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig.6d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/41467_2025_60327_MOESM6_ESM__Fig._6e.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/data_raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.1b.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.1c.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.1d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.2a.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.2b.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.2c.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.2d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.3d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.3e.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.3f.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.3g.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.3h.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.4a.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.4b.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.4c.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.4d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.4h.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.6a.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.6b.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.6c.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig.6d.csv",
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/41467_2025_60327_MOESM6_ESM__Fig._6e.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加拟合曲线_(基础入门)/raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/data_raw/data/F7a.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/data_raw/data/F7a.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/data_raw/data/F7b.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/data_raw/data/F7b.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/data_raw/data/F7c.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/data_raw/data/F7c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/data_raw/data/F7d.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/data_raw/data/F7d.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/data_raw/data/F7e.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/data_raw/data/F7e.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/data_raw/data/F7f.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/data_raw/data/F7f.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/raw/data/F7a.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/raw/data/F7a.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/raw/data/F7b.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/raw/data/F7b.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/raw/data/F7c.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/raw/data/F7c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/raw/data/F7d.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/raw/data/F7d.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/raw/data/F7e.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/raw/data/F7e.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点图叠加边际分布/raw/data/F7f.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点图叠加边际分布/raw/data/F7f.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点饼图_(基础入门)/data_raw/data/pie2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点饼图_(基础入门)/data_raw/data/pie2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_散点饼图_(基础入门)/raw/data/pie2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_散点饼图_(基础入门)/raw/data/pie2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_曼哈顿图/data_raw/data/chr.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_曼哈顿图/data_raw/data/chr.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_曼哈顿图/raw/data/chr.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_曼哈顿图/raw/data/chr.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/data_raw/data/F1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/data_raw/data/F1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/raw/data/F1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_气泡图高阶用法添加时间轨迹趋势线/raw/data/F1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4b.csv",
+        "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4c.csv",
+        "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4d.csv",
+        "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4f.csv",
+        "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4g_h.csv",
+        "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4j.csv",
+        "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4k.csv",
+        "plotcase_point_渐变火山图/data_raw/data/41586_2025_9686_MOESM8_ESM__Fig4l.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4b.csv",
+        "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4c.csv",
+        "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4d.csv",
+        "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4f.csv",
+        "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4g_h.csv",
+        "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4j.csv",
+        "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4k.csv",
+        "plotcase_point_渐变火山图/raw/data/41586_2025_9686_MOESM8_ESM__Fig4l.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_火山图局部放大版/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_火山图局部放大版/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_火山图局部放大版/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_火山图局部放大版/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_点线图_(基础入门)/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_点线图_(基础入门)/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_点线图_(基础入门)/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_点线图_(基础入门)/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_配对散点图_(基础入门)/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_配对散点图_(基础入门)/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_配对散点图_(基础入门)/data_raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_配对散点图_(基础入门)/data_raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_配对散点图_(基础入门)/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_配对散点图_(基础入门)/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_point_配对散点图_(基础入门)/raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_point_配对散点图_(基础入门)/raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_多层级桑基图/data_raw/data/sankey_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_多层级桑基图/data_raw/data/sankey_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_多层级桑基图/raw/data/sankey_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_多层级桑基图/raw/data/sankey_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_桑基流向图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_桑基流向图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_桑基流向图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_桑基流向图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_渐变色桑基图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_渐变色桑基图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_渐变色桑基图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_渐变色桑基图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_渐变色桑基图_进阶版/data_raw/data/F5d.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_渐变色桑基图_进阶版/data_raw/data/F5d.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_渐变色桑基图_进阶版/raw/data/F5d.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_渐变色桑基图_进阶版/raw/data/F5d.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_节点融合桑基图/data_raw/data/data1_1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_节点融合桑基图/data_raw/data/data1_1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_sankey_节点融合桑基图/raw/data/data1_1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_sankey_节点融合桑基图/raw/data/data1_1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v4.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v4.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v9.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/group.v9.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v4.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v4.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v9.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制多层级进化树/data_raw/data/v9.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v4.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v4.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v9.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制多层级进化树/raw/data/group.v9.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/v4.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制多层级进化树/raw/data/v4.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制多层级进化树/raw/data/v9.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制多层级进化树/raw/data/v9.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制系统发育树/data_raw/data/DEseq.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制系统发育树/data_raw/data/DEseq.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_ggtree绘制系统发育树/raw/data/DEseq.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_ggtree绘制系统发育树/raw/data/DEseq.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_Presence_Datasets.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_Presence_Datasets.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_bact_gtdtk_midroot.tree",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_bact_gtdtk_midroot.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_cov_sum.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_cov_sum.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_tax.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_多层级系统发育树图/data_raw/data/pMAGs_tax.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_Presence_Datasets.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_Presence_Datasets.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_bact_gtdtk_midroot.tree",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_bact_gtdtk_midroot.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_cov_sum.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_cov_sum.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_tax.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_tree_多层级系统发育树图/raw/data/pMAGs_tax.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_venn_维恩点图/data_raw/data/NCOMMS-24-29043C_Source Data to Main Figures.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_venn_维恩点图/data_raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1a.csv",
+        "plotcase_venn_维恩点图/data_raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1b.csv",
+        "plotcase_venn_维恩点图/data_raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_venn_维恩点图/raw/data/NCOMMS-24-29043C_Source Data to Main Figures.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_venn_维恩点图/raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1a.csv",
+        "plotcase_venn_维恩点图/raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1b.csv",
+        "plotcase_venn_维恩点图/raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_分裂小提琴图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_分裂小提琴图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_分裂小提琴图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_分裂小提琴图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_分裂小提琴图分面版/data_raw/data/violin_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_分裂小提琴图分面版/data_raw/data/violin_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_分裂小提琴图分面版/raw/data/violin_data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_分裂小提琴图分面版/raw/data/violin_data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_小提琴图添加显著性标记/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_小提琴图添加显著性标记/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_小提琴图添加显著性标记/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_小提琴图添加显著性标记/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_小提琴图自定义刻度值/data_raw/data/gene.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_小提琴图自定义刻度值/data_raw/data/gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_小提琴图自定义刻度值/raw/data/gene.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_小提琴图自定义刻度值/raw/data/gene.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_配对连线半小提琴图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_配对连线半小提琴图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_violin_配对连线半小提琴图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_violin_配对连线半小提琴图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_云雨图_云雨图添加统计信息/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_云雨图_云雨图添加统计信息/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_云雨图_云雨图添加统计信息/data_raw/data/data3.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_云雨图_云雨图添加统计信息/data_raw/data/data3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_云雨图_云雨图添加统计信息/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_云雨图_云雨图添加统计信息/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_云雨图_云雨图添加统计信息/raw/data/data3.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_云雨图_云雨图添加统计信息/raw/data/data3.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_冲积图_物种组成冲积图/data_raw/data/NCOMMS-24-29043C_Source Data to Main Figures.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_冲积图_物种组成冲积图/data_raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1a.csv",
+        "plotcase_冲积图_物种组成冲积图/data_raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1b.csv",
+        "plotcase_冲积图_物种组成冲积图/data_raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_冲积图_物种组成冲积图/raw/data/NCOMMS-24-29043C_Source Data to Main Figures.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_冲积图_物种组成冲积图/raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1a.csv",
+        "plotcase_冲积图_物种组成冲积图/raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1b.csv",
+        "plotcase_冲积图_物种组成冲积图/raw/data/NCOMMS-24-29043C_Source_Data_to_Main_Figures__Fig.1c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_哑铃图_哑铃图进阶展示差异信息/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_哑铃图_哑铃图进阶展示差异信息/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_哑铃图_哑铃图进阶展示差异信息/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_哑铃图_哑铃图进阶展示差异信息/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_哑铃图_环形哑铃通路图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_哑铃图_环形哑铃通路图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_哑铃图_环形哑铃通路图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_哑铃图_环形哑铃通路图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_折线图_折线图添加密度分布/data_raw/data/f1g.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_折线图_折线图添加密度分布/data_raw/data/f1g.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_折线图_折线图添加密度分布/raw/data/f1g.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_折线图_折线图添加密度分布/raw/data/f1g.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_旭日图_旭日图_(基础入门)/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_旭日图_旭日图_(基础入门)/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_旭日图_旭日图_(基础入门)/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_旭日图_旭日图_(基础入门)/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_曲线图_累积曲线图/data_raw/data/F6-b.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_曲线图_累积曲线图/data_raw/data/F6-b.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_曲线图_累积曲线图/data_raw/data/F6-e.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_曲线图_累积曲线图/data_raw/data/F6-e.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_曲线图_累积曲线图/data_raw/data/F6e-CYT.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_曲线图_累积曲线图/data_raw/data/F6e-CYT.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_曲线图_累积曲线图/data_raw/data/F6e-MHC.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_曲线图_累积曲线图/data_raw/data/F6e-MHC.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_曲线图_累积曲线图/raw/data/F6-b.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_曲线图_累积曲线图/raw/data/F6-b.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_曲线图_累积曲线图/raw/data/F6-e.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_曲线图_累积曲线图/raw/data/F6-e.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_曲线图_累积曲线图/raw/data/F6e-CYT.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_曲线图_累积曲线图/raw/data/F6e-CYT.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_曲线图_累积曲线图/raw/data/F6e-MHC.txt",
+      "status": "converted",
+      "csv": [
+        "plotcase_曲线图_累积曲线图/raw/data/F6e-MHC.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM__Overview.csv",
+        "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM__Figure1a.csv",
+        "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM__Figure1b_d-h.csv",
+        "plotcase_森林图_多因素Cox森林图/data_raw/data/43018_2025_1072_MOESM3_ESM__Figure1c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM__Overview.csv",
+        "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM__Figure1a.csv",
+        "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM__Figure1b_d-h.csv",
+        "plotcase_森林图_多因素Cox森林图/raw/data/43018_2025_1072_MOESM3_ESM__Figure1c.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_森林图_森林图进阶图例映射版/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_森林图_森林图进阶图例映射版/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_森林图_森林图进阶图例映射版/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_森林图_森林图进阶图例映射版/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_气泡图_堆积气泡图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_气泡图_堆积气泡图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_气泡图_堆积气泡图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_气泡图_堆积气泡图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_游泳图_游泳图_进阶版/data_raw/data/anno_df.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_游泳图_游泳图_进阶版/data_raw/data/anno_df.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_游泳图_游泳图_进阶版/raw/data/anno_df.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_游泳图_游泳图_进阶版/raw/data/anno_df.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_维诺图_维诺图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_维诺图_维诺图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_维诺图_维诺图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_维诺图_维诺图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_维诺图_维诺图划分子区域/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_维诺图_维诺图划分子区域/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_维诺图_维诺图划分子区域/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_维诺图_维诺图划分子区域/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_综合图_ggplot2组合展示误差线点图与柱状图/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_综合图_ggplot2组合展示误差线点图与柱状图/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_综合图_ggplot2组合展示误差线点图与柱状图/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_综合图_ggplot2组合展示误差线点图与柱状图/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1b.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1c.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_1.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_2.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_3.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1f.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/data_raw/data/41586_2025_9686_MOESM5_ESM__Fig1g.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1b.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1c.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_1.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_2.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1e_3.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1f.csv",
+        "plotcase_综合图_多分组统计与差异变化综合图/raw/data/41586_2025_9686_MOESM5_ESM__Fig1g.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_雷达图_雷达图批量绘制/data_raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_雷达图_雷达图批量绘制/data_raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_雷达图_雷达图批量绘制/raw/data/data.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_雷达图_雷达图批量绘制/raw/data/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_面积图,barplot_柱状图组合面积图/data_raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_面积图,barplot_柱状图组合面积图/data_raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_面积图,barplot_柱状图组合面积图/data_raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_面积图,barplot_柱状图组合面积图/data_raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_面积图,barplot_柱状图组合面积图/raw/data/data1.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_面积图,barplot_柱状图组合面积图/raw/data/data1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_面积图,barplot_柱状图组合面积图/raw/data/data2.tsv",
+      "status": "converted",
+      "csv": [
+        "plotcase_面积图,barplot_柱状图组合面积图/raw/data/data2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2b_1.csv",
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2b_2.csv",
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2c_d_e.csv",
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2f_g.csv",
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2h_1.csv",
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2h_2.csv",
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2h_3.csv",
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2i.csv",
+        "plotcase_面积图_堆砌流动面积图/data_raw/data/41586_2025_9686_MOESM6_ESM__Fig2j.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2b_1.csv",
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2b_2.csv",
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2c_d_e.csv",
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2f_g.csv",
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2h_1.csv",
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2h_2.csv",
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2h_3.csv",
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2i.csv",
+        "plotcase_面积图_堆砌流动面积图/raw/data/41586_2025_9686_MOESM6_ESM__Fig2j.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_005复杂热图/data_raw/rownames.txt",
+      "status": "converted",
+      "csv": [
+        "plotmaster_005复杂热图/data_raw/rownames.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_005复杂热图/raw/rownames.txt",
+      "status": "converted",
+      "csv": [
+        "plotmaster_005复杂热图/raw/rownames.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_017基因融合热图+堆积柱状图/data_raw/41467_2022_31780_MOESM9_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_017基因融合热图+堆积柱状图/data_raw/41467_2022_31780_MOESM9_ESM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_017基因融合热图+堆积柱状图/raw/41467_2022_31780_MOESM9_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_017基因融合热图+堆积柱状图/raw/41467_2022_31780_MOESM9_ESM.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Guide.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_1.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_2.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_3.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_4.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_5.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_6.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_7.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_8.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_9.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_10.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_11.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_12.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_13.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_14.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_15.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_16.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_17.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_18.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_19.csv",
+        "plotmaster_022复杂环形热图/data_raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_20.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Guide.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_1.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_2.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_3.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_4.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_5.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_6.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_7.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_8.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_9.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_10.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_11.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_12.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_13.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_14.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_15.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_16.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_17.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_18.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_19.csv",
+        "plotmaster_022复杂环形热图/raw/41591_2022_1686_MOESM3_ESM__Supplementary_Table_20.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Outline.csv",
+        "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Gene_mutations-Subtype.csv",
+        "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Categories-Subtype.csv",
+        "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Gene_mutation-Gene_mutation.csv",
+        "plotmaster_024矩阵饼图+分组注释/data_raw/pnas.2120787119.sd06__Categories-Categories.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Outline.csv",
+        "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Gene_mutations-Subtype.csv",
+        "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Categories-Subtype.csv",
+        "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Gene_mutation-Gene_mutation.csv",
+        "plotmaster_024矩阵饼图+分组注释/raw/pnas.2120787119.sd06__Categories-Categories.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_025三维PCA散点图/data_raw/Figure4A-DiffusionMap.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_025三维PCA散点图/data_raw/Figure4A-DiffusionMap.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_025三维PCA散点图/raw/Figure4A-DiffusionMap.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_025三维PCA散点图/raw/Figure4A-DiffusionMap.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_028分面双向柱状图+热图注释/data_raw/otu_taxa_table1.txt",
+      "status": "converted",
+      "csv": [
+        "plotmaster_028分面双向柱状图+热图注释/data_raw/otu_taxa_table1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_028分面双向柱状图+热图注释/data_raw/otu_taxa_table2.txt",
+      "status": "converted",
+      "csv": [
+        "plotmaster_028分面双向柱状图+热图注释/data_raw/otu_taxa_table2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_028分面双向柱状图+热图注释/raw/otu_taxa_table1.txt",
+      "status": "converted",
+      "csv": [
+        "plotmaster_028分面双向柱状图+热图注释/raw/otu_taxa_table1.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_028分面双向柱状图+热图注释/raw/otu_taxa_table2.txt",
+      "status": "converted",
+      "csv": [
+        "plotmaster_028分面双向柱状图+热图注释/raw/otu_taxa_table2.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_031环形散点图+环形热图/data_raw/439_2022_2514_MOESM3_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_031环形散点图+环形热图/data_raw/439_2022_2514_MOESM3_ESM.csv"
+      ],
+      "deleted_original": true,
+      "conversion_note": "summary_only: workbook could not be parsed by openpyxl"
+    },
+    {
+      "source": "plotmaster_031环形散点图+环形热图/raw/439_2022_2514_MOESM3_ESM.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_031环形散点图+环形热图/raw/439_2022_2514_MOESM3_ESM.csv"
+      ],
+      "deleted_original": true,
+      "conversion_note": "summary_only: workbook could not be parsed by openpyxl"
+    },
+    {
+      "source": "plotmaster_032表达定量雷达图/data_raw/radar.eg.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_032表达定量雷达图/data_raw/radar.eg.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_032表达定量雷达图/data_raw/radar_groups.eg.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_032表达定量雷达图/data_raw/radar_groups.eg.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_032表达定量雷达图/raw/radar.eg.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_032表达定量雷达图/raw/radar.eg.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_032表达定量雷达图/raw/radar_groups.eg.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_032表达定量雷达图/raw/radar_groups.eg.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__alzRG.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__GWAS_catalog.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__UK_BioBank_GWAS.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__DisGeNET.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__WIKIPATHWAY.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__RWR_prediction.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__kmeans_prediction.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-4__spectral_clust_prediction.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DRUG_TARGET.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DEG_for_microarray.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DEG_for_bulk_RNA-seq.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DEG_for_proteomics_study.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DAM_DEG_in_module.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__DAA_DEG_in_module.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__multi-omics_validation.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__detail_proteomics_DEPs.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__detail_microarray_DEGs.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__detail_bulk_DEGs.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE140511.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE98969.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE138852.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE147528.csv",
+        "plotmaster_037分类变量环形热图/data_raw/NIHMS1854082-supplement-5__GSE157827.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__alzRG.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__GWAS_catalog.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__UK_BioBank_GWAS.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__DisGeNET.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__WIKIPATHWAY.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__RWR_prediction.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__kmeans_prediction.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-4__spectral_clust_prediction.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DRUG_TARGET.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_microarray.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_bulk_RNA-seq.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DEG_for_proteomics_study.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DAM_DEG_in_module.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__DAA_DEG_in_module.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__multi-omics_validation.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__detail_proteomics_DEPs.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__detail_microarray_DEGs.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__detail_bulk_DEGs.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE140511.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE98969.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE138852.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE147528.csv",
+        "plotmaster_037分类变量环形热图/raw/NIHMS1854082-supplement-5__GSE157827.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data file S7.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1C.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1D_and_Fig._S2G.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1G.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1H_and_Fig._S5I.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2C_and_Fig._S6E.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2D_and_Fig._S6H.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2E_and_Fig._S6G.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._3D.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._3H.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._4F.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5C.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5F.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5G_and_Fig._S12F.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S1F.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S2E.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S2I.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S3D.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S5I.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7B.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7C.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7F.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S8B.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9E.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9F.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9G.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S10A.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S11E.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S12A.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S12H.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker genes for cell types.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker_genes_for_cell_types__Marker_genes_of_Lin-CD34_cells.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker_genes_for_cell_types__Marker_genes_of_TNCs.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet results in Fig2(WithoutP4).xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Demuxlet_validation.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_Lin-CD34__cells.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_TNCs__BM.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_TNCs__PB.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Corelation_of_STR_and_Demuxlet.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA gene sets.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA_gene_sets__GSEA_name.csv",
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA_gene_sets__Gene_symbol.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS5_Upregulated genes in validated S100high Neu2 enriched GO terms.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/data_raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS5_Upregulated_genes_in_validated_S100high_Neu2_enriched_GO_terms.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data file S7.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1C.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1D_and_Fig._S2G.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1G.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._1H_and_Fig._S5I.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2C_and_Fig._S6E.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2D_and_Fig._S6H.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._2E_and_Fig._S6G.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._3D.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._3H.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._4F.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5C.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5F.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._5G_and_Fig._S12F.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S1F.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S2E.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S2I.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S3D.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S5I.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7B.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7C.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S7F.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S8B.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9E.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9F.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S9G.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S10A.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S11E.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S12A.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/Data_file_S7__Fig._S12H.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker genes for cell types.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker_genes_for_cell_types__Marker_genes_of_Lin-CD34_cells.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS2_Marker_genes_for_cell_types__Marker_genes_of_TNCs.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet results in Fig2(WithoutP4).xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Demuxlet_validation.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_Lin-CD34__cells.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_TNCs__BM.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Residual_TNCs__PB.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS3_Demuxlet_results_in_Fig2_WithoutP4__Corelation_of_STR_and_Demuxlet.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA gene sets.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA_gene_sets__GSEA_name.csv",
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS4_GSEA_gene_sets__Gene_symbol.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS5_Upregulated genes in validated S100high Neu2 enriched GO terms.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_047散点饼图/raw/sciimmunol.abn6429_data_s1_to_s7/DatafileS5_Upregulated_genes_in_validated_S100high_Neu2_enriched_GO_terms.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_050复杂分组散点图/data_raw/total_w_unc.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__cell_type_densities.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__total_immune_densities.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__num_by_cell_and_system.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__num_unc_by_cell_and_system.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_cell_and_system.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_unc_by_cell_and_s_system.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__numbers_by_cell_type.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__numbers_by_systems.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_cell_type.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__mass_by_systems.csv",
+        "plotmaster_050复杂分组散点图/data_raw/total_w_unc__totals.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_050复杂分组散点图/raw/total_w_unc.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__cell_type_densities.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__total_immune_densities.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__num_by_cell_and_system.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__num_unc_by_cell_and_system.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_cell_and_system.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_unc_by_cell_and_s_system.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__numbers_by_cell_type.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__numbers_by_systems.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_cell_type.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__mass_by_systems.csv",
+        "plotmaster_050复杂分组散点图/raw/total_w_unc__totals.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_055批量火山图/data_raw/Supplemental Excel Table.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S1.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S2.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S3.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S4.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S5.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S6.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S7.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S8.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S10.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S11.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S12.csv",
+        "plotmaster_055批量火山图/data_raw/Supplemental_Excel_Table__Excel_Table_S13.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_055批量火山图/raw/Supplemental Excel Table.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S1.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S2.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S3.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S4.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S5.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S6.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S7.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S8.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S10.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S11.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S12.csv",
+        "plotmaster_055批量火山图/raw/Supplemental_Excel_Table__Excel_Table_S13.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_056复杂网络图/data_raw/Supplemental Excel Table.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S1.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S2.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S3.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S4.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S5.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S6.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S7.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S8.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S10.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S11.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S12.csv",
+        "plotmaster_056复杂网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S13.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_056复杂网络图/raw/Supplemental Excel Table.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S1.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S2.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S3.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S4.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S5.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S6.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S7.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S8.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S10.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S11.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S12.csv",
+        "plotmaster_056复杂网络图/raw/Supplemental_Excel_Table__Excel_Table_S13.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_059桑基气泡图/data_raw/GO_enrichment_stat.txt",
+      "status": "converted",
+      "csv": [
+        "plotmaster_059桑基气泡图/data_raw/GO_enrichment_stat.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_059桑基气泡图/raw/GO_enrichment_stat.txt",
+      "status": "converted",
+      "csv": [
+        "plotmaster_059桑基气泡图/raw/GO_enrichment_stat.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_060复杂环形互作网络图/data_raw/Supplemental Excel Table.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S1.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S2.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S3.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S4.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S5.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S6.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S7.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S8.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S10.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S11.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S12.csv",
+        "plotmaster_060复杂环形互作网络图/data_raw/Supplemental_Excel_Table__Excel_Table_S13.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_060复杂环形互作网络图/raw/Supplemental Excel Table.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S1.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S2.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S3.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S4.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S5.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S6.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S7.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S8.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S9.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S10.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S11.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S12.csv",
+        "plotmaster_060复杂环形互作网络图/raw/Supplemental_Excel_Table__Excel_Table_S13.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_063_共定位矩阵散点图+柱状图注释/data_raw/data.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_063_共定位矩阵散点图+柱状图注释/data_raw/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "plotmaster_063_共定位矩阵散点图+柱状图注释/raw/data.xlsx",
+      "status": "converted",
+      "csv": [
+        "plotmaster_063_共定位矩阵散点图+柱状图注释/raw/data.csv"
+      ],
+      "deleted_original": true
+    },
+    {
+      "source": "figureya_survival_FigureYa66UnivariateCox/raw/Survival_SupplementalTable_S1_20171025_xena_sp",
+      "status": "converted",
+      "csv": [
+        "figureya_survival_FigureYa66UnivariateCox/raw/Survival_SupplementalTable_S1_20171025_xena_sp.csv"
+      ],
+      "deleted_original": true,
+      "conversion_note": "extensionless text table converted after main pass"
+    }
+  ],
+  "cleanup": {
+    "removed_rproj_user_dirs": 45,
+    "excel_summary_csv": 2,
+    "hidden_rdata_converted": 2
+  }
+}

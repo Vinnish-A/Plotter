@@ -1,0 +1,157 @@
+{
+  "id": "plotcase_heatmap_多重注释分组热图",
+  "title": "多重注释分组热图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "heatmap\\多重注释分组热图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "heatmap"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "matrix_body",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_mappings": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "long matrix table with optional row/column annotations"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.060481+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "MetBrewer",
+      "grid",
+      "jjAnno",
+      "readxl",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:29.983941+00:00",
+    "records": [
+      {
+        "source": "plotcase_heatmap_多重注释分组热图/data_raw/data/data.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多重注释分组热图/data_raw/data/data.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_heatmap_多重注释分组热图/raw/data/data.xlsx",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多重注释分组热图/raw/data/data.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/data.csv",
+    "grammar_geometry": "annotated_heatmap",
+    "row_count": 32,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+    "reason": "visual_redundancy:heatmap:map",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/data.xlsx"
+    ],
+    "returncode": 1,
+    "rebuilt_at": "2026-05-17T15:31:04.349748+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.18206413036417787,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "annotated_heatmap",
+    "backend": "R/ggplot2",
+    "unit": "long matrix table with optional row/column annotations",
+    "required_data_roles": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_data_roles": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ]
+  }
+}

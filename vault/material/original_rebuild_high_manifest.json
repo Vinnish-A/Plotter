@@ -1,0 +1,127 @@
+{
+  "total": 20,
+  "success": 20,
+  "failed": 0,
+  "records": [
+    {
+      "case": "plotcase_heatmap_circlize风格多层次极坐标热图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_heatmap_ggtree绘制组合热图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_heatmap_多层嵌套分面热图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_heatmap_多重注释分组热图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_heatmap_系统发育树组合离散热图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_network_ggraph构建疾病遗传调控网络图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_network_环形网络图的构建方法",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_sankey,venn_桑基组合维恩图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_tree_ggtree绘制多层级进化树",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_tree_多层级系统发育树图",
+      "status": "success",
+      "script": "raw/_plotter_fallback_tree.R",
+      "chosen": "raw/plotter_fallback_tree.png"
+    },
+    {
+      "case": "plotmaster_005复杂热图",
+      "status": "success",
+      "script": "raw/complex_heatmap.R",
+      "chosen": "raw/barplot.png"
+    },
+    {
+      "case": "plotmaster_017基因融合热图+堆积柱状图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/Stack_Barplot.png"
+    },
+    {
+      "case": "plotmaster_022复杂环形热图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_024矩阵饼图+分组注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_028分面双向柱状图+热图注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/p1_p2.png"
+    },
+    {
+      "case": "plotmaster_037分类变量环形热图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_056复杂网络图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_059桑基气泡图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_060复杂环形互作网络图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_063_共定位矩阵散点图+柱状图注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    }
+  ]
+}

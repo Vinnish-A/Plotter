@@ -1,0 +1,147 @@
+{
+  "id": "plotcase_violin_分裂小提琴图分面版",
+  "title": "分裂小提琴图分面版",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "violin\\分裂小提琴图分面版"
+  },
+  "mode": "low",
+  "chart_family": [
+    "distribution"
+  ],
+  "visual_keywords": [
+    "distribution",
+    "box_violin",
+    "group_compare"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "group",
+      "value"
+    ],
+    "optional_mappings": [
+      "subgroup",
+      "paired_id",
+      "p_value",
+      "facet",
+      "label"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "observation-level group-value table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "R",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:12.726368+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "devtools",
+      "ggpp",
+      "ggpubr",
+      "introdataviz",
+      "tidyverse",
+      "vroom"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:33.982316+00:00",
+    "records": [
+      {
+        "source": "plotcase_violin_分裂小提琴图分面版/data_raw/data/violin_data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_violin_分裂小提琴图分面版/data_raw/data/violin_data.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_violin_分裂小提琴图分面版/raw/data/violin_data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_violin_分裂小提琴图分面版/raw/data/violin_data.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/violin_data.csv",
+    "grammar_geometry": "distribution",
+    "row_count": 280,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 3.9559,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/code.R",
+    "generated_source": "raw/Rplots.pdf",
+    "compat_xlsx": [
+      "raw/violin_data.tsv"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T16:08:38.131984+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_001_cover.png",
+      "selected": "raw/cover.png",
+      "page": 0,
+      "previous_rmse": 0.11646483854580791,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "grammar_id": "distribution",
+    "backend": "R/ggplot2",
+    "unit": "observation-level group-value table",
+    "required_data_roles": [
+      "group",
+      "value"
+    ],
+    "optional_data_roles": [
+      "subgroup",
+      "paired_id",
+      "p_value",
+      "facet",
+      "label"
+    ]
+  }
+}

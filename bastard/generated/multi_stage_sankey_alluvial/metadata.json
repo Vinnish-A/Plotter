@@ -1,0 +1,29 @@
+{
+  "case_id": "multi_stage_sankey_alluvial",
+  "intent": "Use a Sankey/alluvial grammar: conserved staged flows, ordered nodes, smooth ribbons, and readable external labels.",
+  "complexity": "high",
+  "template_refs": [
+    "plotcase_sankey_桑基流向图",
+    "plotcase_sankey_节点融合桑基图",
+    "plotmaster_48个性化桑基图"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "stage",
+    "node",
+    "next_stage",
+    "next_node",
+    "value",
+    "group",
+    "node_order",
+    "label_priority"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}

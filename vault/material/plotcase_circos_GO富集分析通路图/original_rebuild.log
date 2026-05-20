@@ -1,0 +1,442 @@
+rlang       (1.1.5 -> 1.2.0) [CRAN]
+lifecycle   (1.0.4 -> 1.0.5) [CRAN]
+glue        (1.8.0 -> 1.8.1) [CRAN]
+cli         (3.6.3 -> 3.6.6) [CRAN]
+viridisLite (0.4.2 -> 0.4.3) [CRAN]
+R6          (2.5.1 -> 2.6.1) [CRAN]
+cpp11       (0.5.1 -> 0.5.5) [CRAN]
+vctrs       (0.6.5 -> 0.7.3) [CRAN]
+S7          (0.2.0 -> 0.2.2) [CRAN]
+isoband     (0.2.7 -> 0.3.0) [CRAN]
+begin installing package ‘glue’
+begin installing package ‘rlang’
+begin installing package ‘cli’
+begin installing package ‘viridisLite’
+begin installing package ‘R6’
+begin installing package ‘cpp11’
+begin installing package ‘S7’
+* installing *source* package ‘viridisLite’ ...
+** package ‘viridisLite’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (viridisLite)
+* installing *source* package ‘R6’ ...
+** package ‘R6’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (R6)
+* installing *source* package ‘cpp11’ ...
+** package ‘cpp11’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (cpp11)
+* installing *source* package ‘glue’ ...
+** package ‘glue’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/RtmpPn9Ejy/R.INSTALLf0d467ff94cce/glue/src'
+gcc -I"/usr/share/R/include" -DNDEBUG      -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c glue.c -o glue.o
+gcc -I"/usr/share/R/include" -DNDEBUG      -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c init.c -o init.o
+gcc -I"/usr/share/R/include" -DNDEBUG      -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c trim.c -o trim.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o glue.so glue.o init.o trim.o -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpPn9Ejy/R.INSTALLf0d467ff94cce/glue/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-glue/00new/glue/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (glue)
+* installing *source* package ‘S7’ ...
+** package ‘S7’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/Rtmpzewubv/R.INSTALLf0d52a697369/S7/src'
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c init.c -o init.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c method-dispatch.c -o method-dispatch.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c prop.c -o prop.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o S7.so init.o method-dispatch.o prop.o -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmpzewubv/R.INSTALLf0d52a697369/S7/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-S7/00new/S7/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (S7)
+* installing *source* package ‘cli’ ...
+** package ‘cli’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/RtmpnxZFAB/R.INSTALLf0d446d8acf59/cli/src'
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c ansi.c -o ansi.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c cleancall.c -o cleancall.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c diff.c -o diff.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c errors.c -o errors.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c glue.c -o glue.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c init.c -o init.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c inst.c -o inst.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c keypress-unix.c -o keypress-unix.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c keypress-win.c -o keypress-win.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c keypress.c -o keypress.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c md5.c -o md5.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c progress-altrep.c -o progress-altrep.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c progress.c -o progress.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c sha1.c -o sha1.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c sha256.c -o sha256.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c thread.c -o thread.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c tty.c -o tty.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c utf8.c -o utf8.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c utils.c -o utils.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c vt.c -o vt.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c vtparse.c -o vtparse.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c vtparse_table.c -o vtparse_table.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c win-utf8.c -o win-utf8.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c winfiles.c -o winfiles.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c xxhash.c -o xxhash.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I../inst/include     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c xxhash2.c -o xxhash2.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o cli.so ansi.o cleancall.o diff.o errors.o glue.o init.o inst.o keypress-unix.o keypress-win.o keypress.o md5.o progress-altrep.o progress.o sha1.o sha256.o thread.o tty.o utf8.o utils.o vt.o vtparse.o vtparse_table.o win-utf8.o winfiles.o xxhash.o xxhash2.o -lpthread -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpnxZFAB/R.INSTALLf0d446d8acf59/cli/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-cli/00new/cli/libs
+** R
+** exec
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (cli)
+* installing *source* package ‘rlang’ ...
+** package ‘rlang’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/RtmpDhtDSL/R.INSTALLf0d4a4f125973/rlang/src'
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang/     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c capture.c -o capture.o
+touch internal.c
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang/     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c internal.c -o internal.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang/     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rlang.c -o rlang.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang/     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c version.c -o version.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o rlang.so capture.o internal.o rlang.o version.o -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpDhtDSL/R.INSTALLf0d4a4f125973/rlang/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-rlang/00new/rlang/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (rlang)
+begin installing package ‘lifecycle’
+begin installing package ‘isoband’
+* installing *source* package ‘lifecycle’ ...
+** package ‘lifecycle’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (lifecycle)
+begin installing package ‘vctrs’
+* installing *source* package ‘isoband’ ...
+** package ‘isoband’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/Rtmp7XFKLZ/R.INSTALLf119536ceaf25/isoband/src'
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/cpp11/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c clip-lines.cpp -o clip-lines.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/cpp11/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/cpp11/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c isoband.cpp -o isoband.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/cpp11/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c polygon.cpp -o polygon.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/cpp11/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c separate-polygons.cpp -o separate-polygons.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/cpp11/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c test-clip-lines.cpp -o test-clip-lines.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/cpp11/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c test-runner.cpp -o test-runner.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/cpp11/include'     -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2   -c test-separate-polygons.cpp -o test-separate-polygons.o
+g++ -std=gnu++17 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o isoband.so clip-lines.o cpp11.o isoband.o polygon.o separate-polygons.o test-clip-lines.o test-runner.o test-separate-polygons.o -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp7XFKLZ/R.INSTALLf119536ceaf25/isoband/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-isoband/00new/isoband/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (isoband)
+* installing *source* package ‘vctrs’ ...
+** package ‘vctrs’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0’
+make[1]: Entering directory '/tmp/RtmpmbPHFm/R.INSTALLf123b758bf753/vctrs/src'
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c altrep-lazy-character.c -o altrep-lazy-character.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c altrep-rle.c -o altrep-rle.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c altrep.c -o altrep.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c arg-counter.c -o arg-counter.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c arg.c -o arg.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c assert.c -o assert.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c bind.c -o bind.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c c.c -o c.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c callables.c -o callables.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c case-when.c -o case-when.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c cast-bare.c -o cast-bare.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c cast-dispatch.c -o cast-dispatch.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c cast.c -o cast.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c compare.c -o compare.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c complete.c -o complete.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c conditions.c -o conditions.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c dictionary.c -o dictionary.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c dim.c -o dim.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c empty.c -o empty.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c encoding.c -o encoding.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c equal.c -o equal.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c expand.c -o expand.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c fields.c -o fields.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c fill.c -o fill.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c globals.c -o globals.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c group.c -o group.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c growable.c -o growable.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c hash.c -o hash.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c if-else.c -o if-else.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c init.c -o init.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c interval.c -o interval.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c list-combine.c -o list-combine.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c list-unchop.c -o list-unchop.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c match-joint.c -o match-joint.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c match.c -o match.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c missing.c -o missing.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c names.c -o names.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c order-collate.c -o order-collate.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c order-groups.c -o order-groups.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c order-sortedness.c -o order-sortedness.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c order.c -o order.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c parallel.c -o parallel.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c poly-op.c -o poly-op.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c proxy-restore.c -o proxy-restore.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c proxy.c -o proxy.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c ptype-common.c -o ptype-common.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c ptype.c -o ptype.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c ptype2-dispatch.c -o ptype2-dispatch.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c ptype2.c -o ptype2.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rank.c -o rank.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c recode.c -o recode.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rep.c -o rep.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rlang-dev.c -o rlang-dev.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c rlang.c -o rlang.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c runs.c -o runs.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c set.c -o set.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c shape.c -o shape.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c size-common.c -o size-common.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c size.c -o size.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c slice-array.c -o slice-array.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c slice-assign-array.c -o slice-assign-array.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c slice-assign.c -o slice-assign.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c slice-chop.c -o slice-chop.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c slice-interleave.c -o slice-interleave.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c slice.c -o slice.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c split.c -o split.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c subscript-loc.c -o subscript-loc.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c subscript.c -o subscript.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c type-data-frame.c -o type-data-frame.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c type-date-time.c -o type-date-time.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c type-factor.c -o type-factor.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c type-info.c -o type-info.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c type-integer64.c -o type-integer64.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c type-tibble.c -o type-tibble.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c typeof2-s3.c -o typeof2-s3.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c typeof2.c -o typeof2.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c unspecified.c -o unspecified.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c utils-dispatch.c -o utils-dispatch.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c utils.c -o utils.o
+gcc -I"/usr/share/R/include" -DNDEBUG -I./rlang     -fvisibility=hidden -fpic  -g -O2 -ffile-prefix-map=/build/r-base-6tgf7J/r-base-4.4.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c version.c -o version.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o vctrs.so altrep-lazy-character.o altrep-rle.o altrep.o arg-counter.o arg.o assert.o bind.o c.o callables.o case-when.o cast-bare.o cast-dispatch.o cast.o compare.o complete.o conditions.o dictionary.o dim.o empty.o encoding.o equal.o expand.o fields.o fill.o globals.o group.o growable.o hash.o if-else.o init.o interval.o list-combine.o list-unchop.o match-joint.o match.o missing.o names.o order-collate.o order-groups.o order-sortedness.o order.o parallel.o poly-op.o proxy-restore.o proxy.o ptype-common.o ptype.o ptype2-dispatch.o ptype2.o rank.o recode.o rep.o rlang-dev.o rlang.o runs.o set.o shape.o size-common.o size.o slice-array.o slice-assign-array.o slice-assign.o slice-chop.o slice-interleave.o slice.o split.o subscript-loc.o subscript.o type-data-frame.o type-date-time.o type-factor.o type-info.o type-integer64.o type-tibble.o typeof2-s3.o typeof2.o unspecified.o utils-dispatch.o utils.o version.o -L/usr/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpmbPHFm/R.INSTALLf123b758bf753/vctrs/src'
+installing to /home/vinnish/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-vctrs/00new/vctrs/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (vctrs)
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpAZ1QbG/remotesf0cef28143d14/wencke-wencke.github.io-91963fe/DESCRIPTION’ ... OK
+* preparing ‘GOplot’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘GOplot_1.0.2.tar.gz’
+
+
+[stderr]
+Loading required package: usethis
+Using github PAT from envvar GITHUB_TOKEN. Use `gitcreds::gitcreds_set()` and unset GITHUB_TOKEN in .Renviron (or elsewhere) if you want to use the more secure git credential store instead.
+Downloading GitHub repo wencke/wencke.github.io@HEAD
+Installing 10 packages: rlang, lifecycle, glue, cli, viridisLite, R6, cpp11, vctrs, S7, isoband
+Installing packages into ‘/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4’
+(as ‘lib’ is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/rlang_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 780860 bytes (762 KB)
+==================================================
+downloaded 762 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/lifecycle_1.0.5.tar.gz'
+Content type 'application/x-gzip' length 107137 bytes (104 KB)
+==================================================
+downloaded 104 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/glue_1.8.1.tar.gz'
+Content type 'application/x-gzip' length 129786 bytes (126 KB)
+==================================================
+downloaded 126 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/cli_3.6.6.tar.gz'
+Content type 'application/x-gzip' length 644134 bytes (629 KB)
+==================================================
+downloaded 629 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/viridisLite_0.4.3.tar.gz'
+Content type 'application/x-gzip' length 1269031 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/R6_2.6.1.tar.gz'
+Content type 'application/x-gzip' length 64507 bytes (62 KB)
+==================================================
+downloaded 62 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/cpp11_0.5.5.tar.gz'
+Content type 'application/x-gzip' length 304823 bytes (297 KB)
+==================================================
+downloaded 297 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/vctrs_0.7.3.tar.gz'
+Content type 'application/x-gzip' length 1083213 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/S7_0.2.2.tar.gz'
+Content type 'application/x-gzip' length 184632 bytes (180 KB)
+==================================================
+downloaded 180 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/isoband_0.3.0.tar.gz'
+Content type 'application/x-gzip' length 1593511 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+
+The downloaded source packages are in
+	‘/tmp/RtmpAZ1QbG/downloaded_packages’
+Installing package into ‘/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘GOplot’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (GOplot)
+Loading required package: ggplot2
+Loading required package: ggdendro
+Loading required package: gridExtra
+Loading required package: RColorBrewer
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::combine() masks gridExtra::combine()
+✖ dplyr::filter()  masks stats::filter()
+✖ dplyr::lag()     masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Scale for fill is already present.
+Adding another scale for fill, which will replace the existing scale.
+Warning messages:
+1: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the GOplot package.
+  Please report the issue at
+  <https://github.com/wencke/wencke.github.io/issues>. 
+2: Using size for a discrete variable is not advised. 
+3: Removed 5 rows containing missing values or values outside the scale range
+(`geom_point()`). 

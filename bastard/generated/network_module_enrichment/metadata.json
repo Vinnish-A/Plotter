@@ -1,0 +1,31 @@
+{
+  "case_id": "network_module_enrichment",
+  "intent": "Use a network template and compose it with a side enrichment track without subplot labels.",
+  "complexity": "high",
+  "template_refs": [
+    "plotcase_network_ggraph构建疾病遗传调控网络图",
+    "plotcase_network_GO通路相似性网络图_基于基因重叠度"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "record_type",
+    "module",
+    "node_id",
+    "source",
+    "target",
+    "weight",
+    "x",
+    "y",
+    "node_size",
+    "term",
+    "score"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}

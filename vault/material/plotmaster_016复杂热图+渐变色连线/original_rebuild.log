@@ -1,0 +1,53 @@
+        sample1    sample2   sample3     sample4    sample5
+gene1 0.0340075 0.15337272 0.3386218 0.074078938 0.07734500
+gene2 0.2110838 0.14153413 0.1200538 0.411589221 0.14621194
+gene3 0.1280010 0.19619733 0.0129151 0.007162536 0.16582250
+gene4 0.1467842 0.41953085 0.1522402 0.055839751 0.36604670
+gene5 0.3245045 0.09356753 0.4598109 0.278887886 0.04280965
+
+[stderr]
+Loading required package: grid
+========================================
+ComplexHeatmap version 2.22.0
+Bioconductor page: http://bioconductor.org/packages/ComplexHeatmap/
+Github page: https://github.com/jokergoo/ComplexHeatmap
+Documentation: http://jokergoo.github.io/ComplexHeatmap-reference
+
+If you use it in published research, please cite either one:
+- Gu, Z. Complex Heatmap Visualization. iMeta 2022.
+- Gu, Z. Complex heatmaps reveal patterns and correlations in multidimensional 
+    genomic data. Bioinformatics 2016.
+
+
+The new InteractiveComplexHeatmap package can directly export static 
+complex heatmaps into an interactive Shiny app with zero effort. Have a try!
+
+This message can be suppressed by:
+  suppressPackageStartupMessages(library(ComplexHeatmap))
+========================================
+
+========================================
+circlize version 0.4.16
+CRAN page: https://cran.r-project.org/package=circlize
+Github page: https://github.com/jokergoo/circlize
+Documentation: https://jokergoo.github.io/circlize_book/book/
+
+If you use it in published research, please cite:
+Gu, Z. circlize implements and enhances circular visualization
+  in R. Bioinformatics 2014.
+
+This message can be suppressed by:
+  suppressPackageStartupMessages(library(circlize))
+========================================
+
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+Warning messages:
+1: `aes_()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`
+ℹ The deprecated feature was likely used in the ggplotify package.
+  Please report the issue at
+  <https://github.com/GuangchuangYu/ggplotify/issues>. 
+2: `stat(index)` was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(index)` instead. 

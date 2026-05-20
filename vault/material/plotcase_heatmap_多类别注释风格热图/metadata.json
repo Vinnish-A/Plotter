@@ -1,0 +1,176 @@
+{
+  "id": "plotcase_heatmap_多类别注释风格热图",
+  "title": "多类别注释风格热图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "heatmap\\多类别注释风格热图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "heatmap"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "matrix_body",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_mappings": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "long matrix table with optional row/column annotations"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 10,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 5,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.051988+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "legendry",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:29.919949+00:00",
+    "records": [
+      {
+        "source": "plotcase_heatmap_多类别注释风格热图/data_raw/data/data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多类别注释风格热图/data_raw/data/data.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_heatmap_多类别注释风格热图/data_raw/data/group.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多类别注释风格热图/data_raw/data/group.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_heatmap_多类别注释风格热图/raw/data/data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多类别注释风格热图/raw/data/data.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_heatmap_多类别注释风格热图/raw/data/group.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_heatmap_多类别注释风格热图/raw/data/group.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/data.csv",
+    "grammar_geometry": "annotated_heatmap",
+    "row_count": 19,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_heatmap_多层嵌套分面热图",
+    "reason": "visual_redundancy:heatmap:map",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "outputs/figure_001_cover.png",
+    "fallback_reason": "Visual audit fallback: original-code output existed but did not preserve the finished figure structure well enough for Vault preview (normalized correlation=0.1388, edge_ratio=0.6049).",
+    "previous_rebuild_attempt": {
+      "status": "success",
+      "script": "raw/code.R",
+      "generated_source": "raw/Rplots.pdf",
+      "compat_xlsx": [
+        "raw/data.tsv",
+        "raw/group.tsv"
+      ],
+      "returncode": 0,
+      "rebuilt_at": "2026-05-18T07:50:48.698614+00:00"
+    },
+    "rebuilt_at": "2026-05-18T08:06:18.984741+00:00"
+  },
+  "visual_audit": {
+    "status": "fallback_to_finished_figure",
+    "metric": {
+      "case": "plotcase_heatmap_多类别注释风格热图",
+      "status": "success",
+      "mse": 0.0939,
+      "corr": 0.1388,
+      "edge_ratio": 0.6049
+    },
+    "audited_at": "2026-05-18T08:06:18.984757+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "annotated_heatmap",
+    "backend": "R/ggplot2",
+    "unit": "long matrix table with optional row/column annotations",
+    "required_data_roles": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_data_roles": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ]
+  }
+}

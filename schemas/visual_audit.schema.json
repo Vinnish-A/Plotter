@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-plotter.local/schemas/visual_audit.schema.json",
+  "title": "Visual Audit",
+  "type": "object",
+  "required": ["case_id", "status", "original", "rebuilt"],
+  "properties": {
+    "case_id": {"type": "string"},
+    "status": {"enum": ["pass", "fallback_to_finished_figure", "fail", "needs_human_review"]},
+    "original": {"type": "string"},
+    "rebuilt": {"type": "string"},
+    "structural_equivalence": {"type": "string"},
+    "metrics": {"type": "object"},
+    "issues": {"type": "array", "items": {"type": "string"}},
+    "audited_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}

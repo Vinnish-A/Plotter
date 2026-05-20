@@ -1,0 +1,111 @@
+{
+  "id": "plotcase_heatmap_时间序列基因表达热图",
+  "title": "时间序列基因表达热图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "heatmap\\时间序列基因表达热图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "heatmap"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "matrix_body",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "status": "pending_standardization_from_raw_files",
+    "raw_data_file_count": 3,
+    "required_mappings": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_mappings": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ],
+    "note": "Only raw data files were moved. No source code was executed and no data abstraction was forced during this pass.",
+    "optional_csv": "data_optional.csv",
+    "declared_raw_resources": [],
+    "data_unit": "long matrix table with optional row/column annotations"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 8,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 3,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "R",
+    "entry": "plot.R",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": true,
+    "linux_ready": false,
+    "complexity_mode": "high"
+  },
+  "dependencies": {
+    "core": [],
+    "special": [
+      "ClusterGVis",
+      "devtools",
+      "tidyverse"
+    ]
+  },
+  "folded": {
+    "status": "folded_duplicate",
+    "canonical_case": "plotcase_heatmap_tidyheatmaps轻松绘制热图",
+    "reason": "exact duplicate primary code hash",
+    "folded_at": "2026-05-17T06:59:26.606632+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "raw/cover.png",
+    "fallback_reason": "ClusterGVis 0.99.9 is unavailable for the installed R stack; use the provided finished figure until a compatible R/Bioconductor environment is pinned.",
+    "rebuilt_at": "2026-05-18T08:04:11.115166+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "annotated_heatmap",
+    "backend": "R/ggplot2",
+    "unit": "long matrix table with optional row/column annotations",
+    "required_data_roles": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_data_roles": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ]
+  },
+  "standardization": {
+    "grammar_geometry": "annotated_heatmap",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  }
+}

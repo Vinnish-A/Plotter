@@ -1,0 +1,237 @@
+Starting R package installation...
+===========================================
+
+Installing CRAN packages...
+Package already installed: nomogramEx 
+Installing CRAN package: regplot 
+Successfully installed: regplot 
+Package already installed: rms 
+Package already installed: survival 
+
+===========================================
+Package installation completed!
+You can now run your R scripts in this directory.
+  time status trt      age sex ascites hepato spiders edema bili chol albumin
+1  400      2   1 58.76523   f       1      1       1   1.0 14.5  261    2.60
+2 4500      0   1 56.44627   f       0      1       1   0.0  1.1  302    4.14
+3 1012      2   1 70.07255   m       0      0       0   0.5  1.4  176    3.48
+4 1925      2   1 54.74059   f       0      1       1   0.5  1.8  244    2.54
+5 1504      1   2 38.10541   f       0      1       1   0.0  3.4  279    3.53
+6 2503      2   2 66.25873   f       0      1       0   0.0  0.8  248    3.98
+  copper alk.phos    ast trig platelet protime stage catbili  died
+1    156   1718.0 137.95  172      190    12.2     4    high  TRUE
+2     54   7394.8 113.52   88      221    10.6     3     low FALSE
+3    210    516.0  96.10   55      151    12.0     4     low  TRUE
+4     64   6121.8  60.63   92      183    10.3     4     low  TRUE
+5    143    671.0 113.15   72      136    10.9     3  medium FALSE
+6     50    944.0  93.00   63       NA    11.0     3     low  TRUE
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+     41    1093    1730    1918    2614    4795 
+Frequencies of Missing Values Due to Each Variable
+Surv(time, died)              age          catbili              sex 
+               0                0                0                0 
+          copper            stage              trt 
+             108                6              106 
+
+Cox Proportional Hazards Model
+
+cph(formula = Surv(time, died) ~ age + catbili + sex + copper + 
+    stage + trt, data = pbc, na.action = na.delete, x = T, y = T, 
+    surv = T)
+
+
+                       Model Tests    Discrimination    
+                                             Indexes    
+Obs       310    LR chi2    161.30    R2       0.413    
+Events    124    d.f.            7    R2(7,310)0.392    
+Center 4.3475    Pr(> chi2) 0.0000    R2(7,124)0.712    
+                 Score chi2 199.30    Dxy      0.672    
+                 Pr(> chi2) 0.0000                      
+
+               Coef    S.E.   Wald Z Pr(>|Z|)
+age             0.0322 0.0091  3.53  0.0004  
+catbili=medium  1.4084 0.2489  5.66  <0.0001 
+catbili=high    1.8117 0.2493  7.27  <0.0001 
+sex=m          -0.2581 0.2818 -0.92  0.3596  
+copper          0.0031 0.0011  2.91  0.0036  
+stage           0.5431 0.1325  4.10  <0.0001 
+trt             0.1106 0.1902  0.58  0.5608  
+
+null device 
+          1 
+$RESULT
+[1] "The equation of each variable as follows:"
+
+[[2]]
+[1] "points = 0 * age ^3 + 0 * age ^2 + 1.720070183 * age + -43.001754587"
+
+[[3]]
+    catbili
+13  0.00000
+14 75.29340
+15 96.85421
+
+[[4]]
+        sex
+16 13.79964
+17  0.00000
+
+[[5]]
+[1] "points = 0 * copper ^3 + 0 * copper ^2 + 0.166666667 * copper + 0"
+
+[[6]]
+      stage
+31  0.00000
+32 29.03326
+33 58.06653
+34 87.09979
+
+[[7]]
+        trt
+35 0.000000
+36 5.914188
+
+[[8]]
+[1] "5-year survival Probability = 5.9e-08 * points ^3 + -5.1054e-05 * points ^2 + 0.008126192 * points + 0.583874866"
+
+[[9]]
+[1] "8-year survival Probability = 5.9e-08 * points ^3 + -4.3812e-05 * points ^2 + 0.004242289 * points + 0.835039968"
+
+[[1]]
+  trt Points
+1   1     36
+
+[[2]]
+  stage Points
+1     1      0
+2     2     19
+3     3     37
+4     4     56
+
+[[3]]
+  copper Points
+1      0     27
+2    100     38
+3    200     49
+4    300     59
+5    400     70
+6    500     81
+7    600     92
+
+[[4]]
+     sex Points
+sex2   m     29
+sex1   f     38
+
+[[5]]
+         catbili Points
+catbili1     low     38
+catbili2  medium     86
+catbili3    high    100
+
+[[6]]
+  age Points
+1  25     10
+2  35     21
+3  45     32
+4  55     43
+5  65     54
+6  75     65
+
+[[7]]
+  Total Points Pr( time < 1095 )
+1          150            0.0069
+2          200            0.0292
+3          250            0.1196
+4          300            0.4215
+5          350            0.9047
+6          400            1.0000
+
+null device 
+          1 
+[[1]]
+  copper Points
+1      0     26
+2    100     39
+3    200     51
+4    300     64
+5    400     76
+6    500     89
+7    600    102
+
+[[2]]
+     sex Points
+sex1   f     38
+sex2   m     47
+
+[[3]]
+         catbili Points
+catbili1     low     38
+catbili2  medium     77
+catbili3    high     93
+
+[[4]]
+   age Points
+1   25     -2
+2   30      6
+3   35     14
+4   40     22
+5   45     30
+6   50     38
+7   55     46
+8   60     55
+9   65     63
+10  70     71
+11  75     79
+12  80     87
+
+[[5]]
+   Total Points Pr( died )
+1           100    0.03034
+2           120    0.06589
+3           140    0.13720
+4           160    0.26390
+5           180    0.44700
+6           200    0.64570
+7           220    0.80420
+8           240    0.90250
+9           260    0.95430
+10          280    0.97920
+11          300    0.99070
+12          320    0.99580
+
+null device 
+          1 
+Using Cox survival estimates at 1825 Days
+null device 
+          1 
+Using Cox survival estimates at 2920 Days
+null device 
+          1 
+null device 
+          1 
+
+[stderr]
+Installing package into ‘/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4’
+(as ‘lib’ is unspecified)
+Warning message:
+package ‘regplot’ is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
+Loading required package: Hmisc
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Regression  pbccox coxph formula:
+Surv(time, died) `~` age + catbili + sex + copper + stage + trt
+CI: 0.0634(0.0339,0.0919)
+CI: 0.119(0.0699,0.166)
+Regression  pbcglm glm formula:
+died `~` age + catbili + sex + copper
+CI: 6.03(2.99,12.2)

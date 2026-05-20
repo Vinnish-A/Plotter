@@ -1,0 +1,13 @@
+{
+  "total": 1,
+  "success": 1,
+  "failed": 0,
+  "records": [
+    {
+      "case": "plotmaster_019堆积柱状图+折线+热图注释",
+      "status": "success",
+      "script": "case_level_rendered_output",
+      "chosen": "raw/final_plot.pdf"
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "total": 50,
+  "success": 36,
+  "failed": 14,
+  "records": [
+    {
+      "case": "figureya_survival_FigureYa128Prognostic",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/FigureYa128Prognostic.Rmd",
+          "returncode": 1,
+          "stderr": "Error in read.table(\"clinical_PANCAN_patient_with_followup.tsv\", sep = \"\\t\",  : \n  more columns than column names\nExecution halted\n",
+          "stdout": "Starting R package installation...\n===========================================\n\nInstalling CRAN packages...\nPackage already installed: glmnet \nPackage already installed: pbapply \nPackage already installed: survival \nPackage already installed: survivalROC \n\n===========================================\nPackage installation completed!\nYou can now run your R scripts in this directory.\n       COAD-3710 COAD-A00U COAD-3854\nTSPAN6     30.63    115.65     69.81\nTNMD        0.25      0.48      0.18\nDPM1      100.17    135.15     81.35\n"
+        }
+      ]
+    },
+    {
+      "case": "figureya_survival_FigureYa182RFSurvV2",
+      "status": "success",
+      "script": "raw/FigureYa182RFSurvV2.Rmd",
+      "chosen": "raw/error rate and importance derived from package.png"
+    },
+    {
+      "case": "figureya_survival_FigureYa197SmoothHaz",
+      "status": "success",
+      "script": "raw/FigureYa197SmoothHaz.Rmd",
+      "chosen": "raw/smoothHaz.png"
+    },
+    {
+      "case": "figureya_survival_FigureYa251NPHSurv",
+      "status": "success",
+      "script": "raw/FigureYa251NPHSurv.Rmd",
+      "chosen": "raw/kaplan meier curve2.png"
+    },
+    {
+      "case": "figureya_survival_FigureYa305PMAPscore",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/utils.R",
+          "returncode": 0,
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "script": "raw/FigureYa305PMAPscore.Rmd",
+          "returncode": 1,
+          "stderr": "Installing package into ‘/home/vinnish/R/x86_64-pc-linux-gnu-library/4.4’\n(as ‘lib’ is unspecified)\n'getOption(\"repos\")' replaces Bioconductor standard repositories, see\n'help(\"repositories\", package = \"BiocManager\")' for details.\nReplacement repositories:\n    CRAN: https://cloud.r-project.org/\nBioconductor version 3.20 (BiocManager 1.30.25), R 4.4.2 (2024-10-31)\nInstalling package(s) 'SPIA'\nalso installing the dependencies ‘Rgraphviz’, ‘KEGGgraph’\n\ntrying URL 'https://bioconductor.org//packages/3.20/bioc/src/contrib/Rgraphviz_2.50.0.tar.gz'\nContent type 'application/gzip' length 7724206 bytes (7.4 MB)\n==================================================\ndownloaded 7.4 MB\n\ntrying URL 'https://bioconductor.org//packages/3.20/bioc/src/contrib/KEGGgraph_1.66.0.tar.gz'\nContent type 'application/gzip' length 1381008 bytes (1.3 MB)\n==================================================\ndownloaded 1.3 MB\n\ntrying URL 'https://bioconductor.org//packages/3.20/bioc/src/contrib/SPIA_2.58.0.tar.gz'\nContent type 'application/gzip' length 2673581 bytes (2.5 MB)\n==================================================\ndownloaded 2.5 MB\n\n\nThe downloaded source packages are in\n\t‘/tmp/RtmpuCR0kZ/downloaded_packages’\nWarning message:\npackage ‘PMAPscore’ is not available for this version of R\n\nA version of this package for your version of R might be available elsewhere,\nsee the ideas at\nhttps://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages \nError in library(PMAPscore) : there is no package called ‘PMAPscore’\nExecution halted\n",
+          "stdout": " package keeps a record of temporary installation path\n* DONE (KEGGgraph)\nbegin installing package ‘SPIA’\n* installing *source* package ‘SPIA’ ...\n** package ‘SPIA’ successfully unpacked and MD5 sums checked\n** using staged installation\n** R\n** data\n** inst\n** byte-compile and prepare package for lazy loading\n** help\n*** installing help indices\n** building package indices\n** installing vignettes\n** testing if installed package can be loaded from temporary location\n** testing if installed package can be loaded from final location\n** testing if installed package keeps a record of temporary installation path\n* DONE (SPIA)\nSuccessfully installed: SPIA \nPackage already installed: ComplexHeatmap \nPackage already installed: KEGGREST \n\n===========================================\nPackage installation completed!\n\nTesting package availability...\n✅ SPIA is available\n❌ PMAPscore is NOT available\n✅ ComplexHeatmap is available\n✅ KEGGREST is available\nYou can now run your R scripts in this directory.\n"
+        }
+      ]
+    },
+    {
+      "case": "plotcase_barplot_ggplot2优雅的绘制径向条形图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_barplot_ggplot2绘制菌群分布图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_barplot_多层注释柱状图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_barplot_多层注释柱状图进阶版",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/code.R",
+          "returncode": 1,
+          "stderr": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\nRows: 49 Columns: 1\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \"\\t\"\nchr (1): Counts\ttype\tgroup1\tgroup2\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\nError in `mutate()`:\nℹ In argument: `type = factor(type, levels = dox_levels)`.\nCaused by error:\n! object 'type' not found\nBacktrace:\n     ▆\n  1. ├─df %>% ...\n  2. ├─dplyr::mutate(...)\n  3. ├─dplyr:::mutate.data.frame(...)\n  4. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)\n  5. │   ├─base::withCallingHandlers(...)\n  6. │   └─dplyr:::mutate_col(dots[[i]], data, mask, new_columns)\n  7. │     └─mask$eval_all_mutate(quo)\n  8. │       └─dplyr (local) eval()\n  9. ├─base::factor(type, levels = dox_levels)\n 10. └─base::.handleSimpleError(`<fn>`, \"object 'type' not found\", base::quote(NULL))\n 11.   └─dplyr (local) h(simpleError(msg, call))\n 12.     └─rlang::abort(message, class = error_class, parent = parent, call = error_call)\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotcase_barplot_柱状图添加显著性标记_(进阶版)",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_barplot_柱状图添加显著性标记_基础版",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_barplot_环形条形图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_barplot_配对连线条形图_进阶版",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/code.R",
+          "returncode": 1,
+          "stderr": "──────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\nRows: 20 Columns: 1\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): definition\tn\tpct\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\nRows: 20 Columns: 1\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): definition\tn\tpct\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\nError in `mutate()`:\nℹ In argument: `rank = rank(desc(n), ties.method = \"first\")`.\nℹ In group 1: `grp = \"Big Dave's\"`.\nCaused by error in `desc()`:\n! `x` must be a vector, not a function.\nBacktrace:\n     ▆\n  1. ├─... %>% ungroup()\n  2. ├─dplyr::ungroup(.)\n  3. ├─dplyr::mutate(., rank = rank(desc(n), ties.method = \"first\"))\n  4. ├─dplyr:::mutate.data.frame(., rank = rank(desc(n), ties.method = \"first\"))\n  5. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)\n  6. │   ├─base::withCallingHandlers(...)\n  7. │   └─dplyr:::mutate_col(dots[[i]], data, mask, new_columns)\n  8. │     └─mask$eval_all_mutate(quo)\n  9. │       └─dplyr (local) eval()\n 10. ├─base::rank(desc(n), ties.method = \"first\")\n 11. ├─dplyr::desc(n)\n 12. │ └─vctrs::obj_check_vector(x)\n 13. └─vctrs:::stop_scalar_type(`<fn>`(`<fn>`), \"x\", `<env>`)\n 14.   └─vctrs:::stop_vctrs(...)\n 15.     └─rlang::abort(message, class = c(class, \"vctrs_error\"), ..., call = call)\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotcase_boxplot_多分组分面小提琴箱线图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_boxplot_多组配对连线箱线图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/CD8_cell_all_sample.pdf"
+    },
+    {
+      "case": "plotcase_boxplot_方差分析箱线图_进阶版",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_point_多组火山图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_point_火山图局部放大版",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/code.R",
+          "returncode": 1,
+          "stderr": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\nError in library(ggmagnify) : there is no package called ‘ggmagnify’\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotcase_violin_分裂小提琴图分面版",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/code.R",
+          "returncode": 1,
+          "stderr": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n\nAttaching package: ‘vroom’\n\nThe following objects are masked from ‘package:readr’:\n\n    as.col_spec, col_character, col_date, col_datetime, col_double,\n    col_factor, col_guess, col_integer, col_logical, col_number,\n    col_skip, col_time, cols, cols_condense, cols_only, date_names,\n    date_names_lang, date_names_langs, default_locale, fwf_cols,\n    fwf_empty, fwf_positions, fwf_widths, locale, output_column,\n    problems, spec\n\nError in library(introdataviz) : \n  there is no package called ‘introdataviz’\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotcase_violin_小提琴图添加显著性标记",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_曲线图_Kaplan_Meier生存曲线",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_游泳图_游泳图_进阶版",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/code.R",
+          "returncode": 1,
+          "stderr": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\nError in library(swimplot) : there is no package called ‘swimplot’\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotcase_综合图_ggplot2组合展示误差线点图与柱状图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_综合图_多分组统计与差异变化综合图",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_雷达图_雷达图批量绘制",
+      "status": "success",
+      "script": "raw/code.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotcase_面积图_ggplot2绘制极坐标面积图",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/code.R",
+          "returncode": 1,
+          "stderr": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\nError in library(ggstream) : there is no package called ‘ggstream’\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotmaster_004提琴图",
+      "status": "success",
+      "script": "raw/violin_plot.R",
+      "chosen": "raw/violin_plot.png"
+    },
+    {
+      "case": "plotmaster_006复杂散点图",
+      "status": "success",
+      "script": "raw/scatter_plot.R",
+      "chosen": "raw/scatter_plot.png"
+    },
+    {
+      "case": "plotmaster_007气泡火山图",
+      "status": "success",
+      "script": "raw/vocanolPlot.R",
+      "chosen": "raw/vocanol_Plot.png"
+    },
+    {
+      "case": "plotmaster_015分半小提琴图",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/split_violin_plot.R",
+          "returncode": 1,
+          "stderr": "Error in library(gghalves) : there is no package called ‘gghalves’\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotmaster_016复杂热图+渐变色连线",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/heatmap.png"
+    },
+    {
+      "case": "plotmaster_019堆积柱状图+折线+热图注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/legend.png"
+    },
+    {
+      "case": "plotmaster_020多组学九象限散点图",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/scatter_plot.R",
+          "returncode": 1,
+          "stderr": "Error in ggplot(data) + draw_axis_line <- function(length_x, length_y,  : \n  could not find function \"+<-\"\nExecution halted\n",
+          "stdout": "     mRNA_FC      RPF_FC\n1  0.9682247 -0.08571711\n2 -1.5380945 -2.27956791\n3  1.0692371  1.89697013\n4 -0.1073837 -0.37855522\n5  0.5028402  1.06461425\n6 -0.3085501 -0.19911549\n"
+        }
+      ]
+    },
+    {
+      "case": "plotmaster_021分组散点图+直方图注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_027箱线图+热图注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plots.png"
+    },
+    {
+      "case": "plotmaster_029分面堆积面积图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot2.png"
+    },
+    {
+      "case": "plotmaster_031环形散点图+环形热图",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/codes.R",
+          "returncode": 1,
+          "stderr": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\nError: Can't retrieve sheet in position 2, only 1 sheet(s) found.\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotmaster_033个性化森林图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plots.png"
+    },
+    {
+      "case": "plotmaster_038聚类热图+注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plots.png"
+    },
+    {
+      "case": "plotmaster_039雷达图+环形注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_043分块热图+注释",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot2.png"
+    },
+    {
+      "case": "plotmaster_046环形层次聚类热图+批量环形饼图",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/codes.R",
+          "returncode": 1,
+          "stderr": "========================================\ncirclize version 0.4.16\nCRAN page: https://cran.r-project.org/package=circlize\nGithub page: https://github.com/jokergoo/circlize\nDocumentation: https://jokergoo.github.io/circlize_book/book/\n\nIf you use it in published research, please cite:\nGu, Z. circlize implements and enhances circular visualization\n  in R. Bioinformatics 2014.\n\nThis message can be suppressed by:\n  suppressPackageStartupMessages(library(circlize))\n========================================\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\nscatterpie v0.2.4 Learn more at https://yulab-smu.top/\n\n\nWarning message:\n`aes_()` was deprecated in ggplot2 3.0.0.\nℹ Please use tidy evaluation idioms with `aes()`\nℹ The deprecated feature was likely used in the scatterpie package.\n  Please report the issue to the authors. \nError in viewport(width = 1, height = 1, x = 0.5, y = 0.5) : \n  could not find function \"viewport\"\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    },
+    {
+      "case": "plotmaster_049多组哑铃图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_053分组气泡图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_054分面森林图",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotmaster_055批量火山图",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/codes.R",
+          "returncode": 1,
+          "stderr": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n\nAttaching package: ‘cowplot’\n\nThe following object is masked from ‘package:lubridate’:\n\n    stamp\n\nError in loadNamespace(x) : there is no package called ‘ggVolcano’\nCalls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart\nExecution halted\n",
+          "stdout": "\n DBP DPHP TiBP TMPP TPHP \n 101   32  221  213  308 \n"
+        }
+      ]
+    },
+    {
+      "case": "plotmaster_057复杂进化树",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotmaster_058分面折线图+置信区间+误差棒",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/Rplots.pdf"
+    },
+    {
+      "case": "plotmaster_061散点图+双向误差棒",
+      "status": "success",
+      "script": "raw/codes.R",
+      "chosen": "raw/plot.png"
+    },
+    {
+      "case": "plotmaster_062环形分组折线图",
+      "status": "failed",
+      "errors": [
+        {
+          "script": "raw/codes.R",
+          "returncode": 1,
+          "stderr": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\nError: object 'coordy' not found\nExecution halted\n",
+          "stdout": ""
+        }
+      ]
+    }
+  ]
+}

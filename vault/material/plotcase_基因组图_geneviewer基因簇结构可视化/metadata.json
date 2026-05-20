@@ -1,0 +1,120 @@
+{
+  "id": "plotcase_基因组图_geneviewer基因簇结构可视化",
+  "title": "geneviewer基因簇结构可视化",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "基因组图\\geneviewer基因簇结构可视化"
+  },
+  "mode": "high",
+  "chart_family": [
+    "genome_structure"
+  ],
+  "visual_keywords": [
+    "genome_structure",
+    "gene_arrow",
+    "synteny",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "segment_id",
+      "feature_id",
+      "start",
+      "end",
+      "strand",
+      "feature_class"
+    ],
+    "optional_mappings": [
+      "cluster",
+      "label",
+      "link_id",
+      "similarity",
+      "track",
+      "color_class"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "oriented genomic feature table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 8,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 3,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.790778+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "geneviewer"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "genome_structure",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "raw/cover.png",
+    "fallback_reason": "geneviewer produces an interactive widget and the source script does not emit a static file; use the provided finished figure as the static Vault preview.",
+    "rebuilt_at": "2026-05-18T08:04:11.164803+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "genome_structure",
+    "backend": "R",
+    "unit": "oriented genomic feature table",
+    "required_data_roles": [
+      "segment_id",
+      "feature_id",
+      "start",
+      "end",
+      "strand",
+      "feature_class"
+    ],
+    "optional_data_roles": [
+      "cluster",
+      "label",
+      "link_id",
+      "similarity",
+      "track",
+      "color_class"
+    ]
+  }
+}

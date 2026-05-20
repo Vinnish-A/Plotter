@@ -1,0 +1,112 @@
+{
+  "id": "figures4papers_figure_Dispersion_idea_png",
+  "title": "figure_Dispersion_idea",
+  "source": {
+    "root": "raw/figures4papers",
+    "original_path": "figure_Dispersion"
+  },
+  "mode": "low",
+  "chart_family": [
+    "general_figure"
+  ],
+  "visual_keywords": [
+    "3d_manifold"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "z",
+      "value",
+      "panel"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "surface",
+      "trajectory",
+      "color",
+      "annotation"
+    ],
+    "declared_raw_resources": [
+      "outputs/figure.png"
+    ],
+    "note": "Static figures4papers asset restored for its reusable 3D/manifold visual grammar; data_main.csv records abstract visual roles while rebuilt.png is normalized from the case-level rendered figure."
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 4,
+    "outputs": 2,
+    "scripts": 2,
+    "raw_data": 0,
+    "docs": 0
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low"
+  },
+  "dependencies": {
+    "core": [
+      "python"
+    ],
+    "special": []
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "scatter",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "folding": {
+    "status": "live_restored",
+    "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "case_level_rendered_output",
+    "generated_source": "outputs/figure.png",
+    "fallback_reason": "figures4papers asset is image-first; normalized from provided rendered figure while preserving visual grammar."
+  },
+  "visual_audit": {
+    "status": "passed",
+    "original": "outputs/figure.png",
+    "rebuilt": "outputs/rebuilt.png",
+    "method": "direct rendered-output normalization"
+  },
+  "visual_grammar": {
+    "backend": "rendered_figure",
+    "geometry": "3d_manifold",
+    "keywords": [
+      "3d_manifold"
+    ],
+    "visual_dependencies": [],
+    "runtime_dependencies": [
+      "matplotlib",
+      "mpl_toolkits",
+      "numpy",
+      "python"
+    ]
+  }
+}

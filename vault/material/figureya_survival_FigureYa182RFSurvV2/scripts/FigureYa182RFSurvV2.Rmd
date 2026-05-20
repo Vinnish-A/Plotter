@@ -1,0 +1,234 @@
+---
+title: "FigureYa182RFSurvV2"
+params:
+  author: "Xiaofan Lu"
+  reviewer: "Ying Ge, Junyi Shen"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    theme: flatly
+    highlight: tango
+    code_folding: show
+---
+
+**Author(s)**: `r params$author`  
+**Reviewer(s)**: `r params$reviewer`  
+**Date**: `r Sys.Date()`  
+
+## Academic Citation
+If you use this code in your work or research, we kindly request that you cite our publication:
+
+Xiaofan Lu, et al. (2025). FigureYa: A Standardized Visualization Framework for Enhancing Biomedical Data Interpretation and Research Efficiency. iMetaMed. https://doi.org/10.1002/imm3.70005
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 需求描述 Requirement
+
+根据随机生存森林分析进一步筛选并优化变量，从而达到降维的功能，完成Figure5的作图
+
+Based on the random survival forest analysis, further screen and optimize the variables to achieve the function of dimensionality reduction and complete the plotting of Figure5
+
+![](example.png)
+
+From <https://www.frontiersin.org/articles/10.3389/fonc.2020.00595/full>
+
+FIGURE 5 | (A) Error rate for the data as a function of the classification tree; (B) out-of-bag importance values for the predictors.
+
+## 应用场景 Application Scenarios
+
+使用随机森林对生存数据降维，根据变量重要性排序并筛选基因组成prognostic signature
+
+The survival data was dimensionally reduced using random forest, and the prognostic signature of genetic composition was sorted and screened according to the importance of variables
+
+## 环境设置 Environment Setup
+
+```{r}
+source("install_dependencies.R")
+library(survival) # 生存分析包  # Survival analysis package
+library(randomForestSRC) # 随机森林包  # Random forest package
+library(randomSurvivalForest) # 随机森林包  # Random forest package
+Sys.setenv(LANGUAGE = "en") #显示英文报错信息  # Display an English error message
+options(stringsAsFactors = FALSE) #禁止chr转成factor  # prohibit chr from being converted to factor
+```
+
+自定义函数
+Custom function
+
+```{r}
+# 显示进程
+# Show Process
+display.progress = function (index, totalN, breakN=20) {
+  if ( index %% ceiling(totalN/breakN)  ==0  ) {
+    cat(paste(round(index*100/totalN), "% ", sep=""))
+  }
+}  
+
+# 相对重要性（relative importance）；其实就是把重要性划分到0-1区间内
+# relative importance; In fact, it is to divide the importance into the range of 0 to 1
+# range01 <- function(x){(x-min(x))/(max(x)-min(x))}
+```
+
+## 输入文件 Input File
+
+easy_input_expr.csv，表达矩阵。
+
+easy_input_cli.csv，临床信息。这两个文件跟FigureYa128Prognostic的一样，可以对比感受一下筛选效果。
+
+easy_input_expr.csv, expressing matrix.
+
+easy_input_cli.csv, clinical information. These two documents are the same as those in FigureYa128Prognostic. You can compare them to get a sense of the screening effect.
+
+```{r}
+# 加载数据（来自FigureYa128Prognostic）
+# Loading Data (from FigureYa128Prognostic)
+exp <- read.csv("easy_input_expr.csv",header = T,row.names = 1,check.names = F,stringsAsFactors = F)
+cli <- read.csv("easy_input_cli.csv",header = T,row.names = 1,check.names = F,stringsAsFactors = F)
+
+# 提取既有表达数据又有临床数据的样本
+# Extract samples that have both expressive data and clinical data
+com_sam <- intersect(colnames(exp),rownames(cli)) 
+exp <- exp[,com_sam]
+cli <- cli[com_sam,]
+
+# 去除无表达的基因并log变换
+# Remove unexpressed genes and perform log transformation
+exp <- exp[rowSums(exp) > 0,]
+exp <- log2(exp + 1)
+```
+
+## 单变量cox模型筛选预后基因 Univariate cox model for screening prognostic genes
+
+理论上表达谱会优先进行一些筛选，如原文使用单变量cox模型筛选预后基因(P < 0.01)。
+
+这步运行时间稍长，我这里运行不到10min。
+
+Theoretically, the expression profile would prioritize some screenings, such as the original text using a univariate cox model to screen prognostic genes (P < 0.01).
+
+This step takes a bit longer to run. I run it for less than 10 minutes here.
+
+```{r}
+# 过滤出与OS有关的基因
+# Filter out genes related to OS
+cox.pcutoff <- 0.01 # 例文阈值设为0.01  # The threshold in the example is set to 0.01
+Coxoutput.OS <- NULL
+for (i in 1:nrow(exp)) {
+  display.progress(index = i,totalN = nrow(exp)) # 显示进度   # shows progress
+  
+  # 产生临时变量存储生存以及变量表达值
+  # Generate temporary variables to store survival and variable expression values
+  tmp <- data.frame(gene = as.numeric(exp[i,]),
+                    OS.time = cli[,"OS.time"],
+                    OS = cli[,"OS"],
+                    stringsAsFactors = F)
+  
+  # 单变量cox比例风险模型
+  # Univariate cox proportional hazards model
+  cox <- coxph(Surv(OS.time, OS) ~ gene, data = tmp)
+  coxSummary = summary(cox)
+  
+  # 生成cox结果数据框，包括基因名，风险比，z值，waldtest p值，以及HR置信区间
+  # Generate cox result data frames, including gene names, hazard ratios, Z-values, waldtest P-values, and HR confidence intervals
+  Coxoutput.OS=rbind.data.frame(Coxoutput.OS,data.frame(gene=rownames(exp)[i],
+                                                        HR=as.numeric(coxSummary$coefficients[,"exp(coef)"]),
+                                                        z=as.numeric(coxSummary$coefficients[,"z"]),
+                                                        pvalue=as.numeric(coxSummary$coefficients[,"Pr(>|z|)"]),
+                                                        lower=as.numeric(coxSummary$conf.int[,3]),
+                                                        upper=as.numeric(coxSummary$conf.int[,4]),
+                                                        stringsAsFactors = F),
+                                stringsAsFactors = F)
+}
+head(Coxoutput.OS)
+write.csv(Coxoutput.OS,"univariate cox regression for gene filtering.csv",row.names = F,quote = F)
+```
+
+## 随机森林进一步降维 The random forest further reduces dimensions
+
+```{r}
+gene.sel <- Coxoutput.OS[which(Coxoutput.OS$pvalue < cox.pcutoff),"gene"]
+tmp <- exp[gene.sel,]; rownames(tmp) <- gsub("-","_",rownames(tmp)) # 防止出现“-”导致程序报错 # Prevent the occurrence of "-" from causing program errors
+dt.rf <- cbind.data.frame(cli,t(tmp))
+
+ntree <- 1000
+surv.rf <- randomSurvivalForest::rsf(Surv(OS.time, OS) ~ ., 
+                                     data = dt.rf, 
+                                     ntree = ntree,
+                                     seed = 12345678)
+```
+
+## 开始画图 Start drawing
+
+### 用包里自带的函数直接出图 Use the built-in functions in the package to directly generate the graph
+
+```{r, fig.height=12, fig.width=12}
+pdf("error rate and importance derived from package.pdf",width = 12,height = 12)
+randomSurvivalForest::plot.error(surv.rf)
+dev.off()
+```
+
+### 自定义画图 Custom drawing
+
+```{r}
+# 图1. 错误率
+# Figure 1. Error Rate
+err.rate <- surv.rf$err.rate
+pdf("error rate.pdf",width = 5,height = 5)
+par(bty = "o", mgp = c(1.5,.33,0), mar = c(3,4,1,2),las = 1, tcl = -.25)
+plot(1:ntree,err.rate,
+     xlab = "Number of Trees",
+     ylab = "",
+     type = "l",
+     las = 1,
+     cex = 1.5)
+mtext("Error Rate",side = 2,line = 2.5,las = 3)
+invisible(dev.off())
+
+# 图2. 重要性
+# Figure 2. Importance
+raw.imp <- surv.rf$importance; names(raw.imp) <- gsub("_","-",names(raw.imp)) # 将基因名的“_”还原为“-” # will gene name "_" to "-"
+rel.imp <- raw.imp/max(abs(raw.imp)) # calculate relative importance
+
+# 输出重要性矩阵
+# Output the importance matrix
+imp.res <- data.frame(gene = names(raw.imp),
+                      raw.importance = raw.imp,
+                      rel.importance = rel.imp,
+                      stringsAsFactors = F)
+write.csv(imp.res[order(imp.res$rel.importance,decreasing = T),],"importance result.csv",row.names = F,quote = F)
+
+# 筛选后画图
+# Draw a picture after filtering
+imp.cutoff <- 0.2 # 原文的重要性阈值为0.65  # The importance threshold of the original text is 0.65
+rel.imp.sel <- rel.imp[rel.imp > imp.cutoff] # 取出大于阈值的变量  # Retrieve variables greater than the threshold
+rel.imp.sel <- sort(rel.imp.sel) # 根据重要性排序  # Sort by importance
+xrange <- range(pretty(range(rel.imp.sel))) # 根据重要性区间确定x轴范围  # Determine the X-axis range based on the importance interval
+yrange <- c(1,length(rel.imp.sel))  # 根据重要变量个数确定y轴范围  # Determine the Y-axis range based on the number of important variables
+
+pdf("relative importance.pdf",width = 5,height = 5)
+par(bty = "o", mgp = c(1.5,.33,0), mar = c(3,6,1,2),las = 1, tcl = -.25)
+plot(NULL,NULL,
+     xlim = xrange,
+     ylim = yrange,
+     xlab = "Variable Relative Importance",
+     ylab = "",
+     yaxt = "n",
+     las = 1)
+axis(side = 2,at = 1:length(rel.imp.sel),names(rel.imp.sel)) # 补齐y轴  # Complete the Y-axis
+for (i in 1:length(rel.imp.sel)) { # 循环添加线 # loop to add lines
+  lines(c(xrange[1],rel.imp.sel[i]),
+        c(i,i),
+        lwd = 2.5,
+        col = "steelblue") # 颜色可修改   # Color can be modified
+}
+invisible(dev.off())
+```
+
+## Session Info
+
+```{r}
+sessionInfo()
+```

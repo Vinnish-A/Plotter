@@ -1,0 +1,141 @@
+{
+  "id": "plotcase_circos_多类别关联网络弦图",
+  "title": "多类别关联网络弦图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "circos\\多类别关联网络弦图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "circos",
+    "chord_network"
+  ],
+  "visual_keywords": [
+    "circos",
+    "chord_network",
+    "radial_layout",
+    "link_weight"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_mappings": [
+      "source_group",
+      "target_group",
+      "direction",
+      "sector_order",
+      "sector_color",
+      "label"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "edge list or adjacency matrix normalized to source-target-weight"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:11.854909+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "dplyr",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ComplexHeatmap",
+      "circlize",
+      "grid",
+      "reshape2",
+      "viridis"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "chord_circos",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_circos_circlize绘制和弦图",
+    "reason": "visual_redundancy:network:circos",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "outputs/figure_001_cover.png",
+    "fallback_reason": "Visual audit fallback: original-code output existed but did not preserve the finished figure structure well enough for Vault preview (normalized correlation=0.2407, edge_ratio=0.8954).",
+    "previous_rebuild_attempt": {
+      "status": "success",
+      "script": "raw/code.R",
+      "generated_source": "raw/Rplots.pdf",
+      "compat_xlsx": [
+        "raw/circle.CSV"
+      ],
+      "returncode": 0,
+      "rebuilt_at": "2026-05-18T08:02:39.211413+00:00"
+    },
+    "rebuilt_at": "2026-05-18T08:06:18.404181+00:00"
+  },
+  "visual_audit": {
+    "status": "fallback_to_finished_figure",
+    "metric": {
+      "case": "plotcase_circos_多类别关联网络弦图",
+      "status": "success",
+      "mse": 0.0101,
+      "corr": 0.2407,
+      "edge_ratio": 0.8954
+    },
+    "audited_at": "2026-05-18T08:06:18.404198+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "chord_circos",
+    "backend": "R/ComplexHeatmap-circlize",
+    "unit": "edge list or adjacency matrix normalized to source-target-weight",
+    "required_data_roles": [
+      "source",
+      "target",
+      "weight"
+    ],
+    "optional_data_roles": [
+      "source_group",
+      "target_group",
+      "direction",
+      "sector_order",
+      "sector_color",
+      "label"
+    ]
+  }
+}

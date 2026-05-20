@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vault</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Vault</h1>
+        <p id="summary">Loading assets...</p>
+      </div>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search assets" aria-label="Search assets">
+        <div id="modeGroup" class="segmented" role="group" aria-label="Filter by mode"></div>
+        <label class="toggle"><input id="rebuiltOnly" type="checkbox"> Rebuilt only</label>
+      </div>
+    </header>
+
+    <main>
+      <section id="grid" class="grid" aria-live="polite"></section>
+      <p id="empty" class="empty" hidden>No visible assets match the current filters.</p>
+    </main>
+
+    <dialog id="sourceDialog" class="source-dialog">
+      <div class="dialog-shell">
+        <header class="dialog-header">
+          <div>
+            <h2 id="sourceTitle">Asset source</h2>
+            <p id="sourceMeta"></p>
+          </div>
+          <button id="closeSource" class="icon-button" type="button" aria-label="Close source panel">&times;</button>
+        </header>
+        <div class="dialog-grid">
+          <section class="source-preview">
+            <img id="sourceImage" alt="">
+          </section>
+          <section class="source-info">
+            <h3>Keywords</h3>
+            <div id="sourceKeywords" class="pill-list"></div>
+
+            <h3>Group</h3>
+            <div id="sourceGroupEditor" class="group-editor" role="group" aria-label="Move asset to group"></div>
+            <p id="sourceGroupStatus" class="save-status"></p>
+
+            <h3>Data Form</h3>
+            <dl id="sourceData" class="data-list"></dl>
+
+            <h3>Original Source</h3>
+            <p id="originalSourcePath" class="code-path"></p>
+            <div class="code-block">
+              <pre id="originalSourceCode" class="code-view">Loading source...</pre>
+              <button id="copyOriginalSource" class="copy-code-button" type="button" data-copy-target="originalSourceCode" aria-label="Copy code" title="Copy code">
+                <svg class="copy-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="8" y="8" width="10" height="10" rx="2"></rect>
+                  <path d="M6 16H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m5 12 4 4L19 6"></path>
+                </svg>
+              </button>
+            </div>
+
+            <h3>Standard Entry</h3>
+            <p id="sourceCodePath" class="code-path"></p>
+            <div class="code-block">
+              <pre id="sourceCode" class="code-view compact">Loading source...</pre>
+              <button id="copyStandardEntry" class="copy-code-button" type="button" data-copy-target="sourceCode" aria-label="Copy code" title="Copy code">
+                <svg class="copy-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="8" y="8" width="10" height="10" rx="2"></rect>
+                  <path d="M6 16H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m5 12 4 4L19 6"></path>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="assets_manifest.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

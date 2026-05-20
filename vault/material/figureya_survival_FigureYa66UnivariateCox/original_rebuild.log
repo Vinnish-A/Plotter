@@ -1,0 +1,126 @@
+Starting R package installation...
+===========================================
+
+Installing required CRAN packages...
+✓ Package already installed: tidyverse 
+✓ Package already installed: ggplot2 
+✓ Package already installed: survival 
+✓ Package already installed: stringr 
+✓ Package already installed: viridis 
+✓ Package already installed: scales 
+
+===========================================
+Package installation completed!
+
+Verifying package installation:
+✓ tidyverse is installed
+✓ ggplot2 is installed
+✓ survival is installed
+✓ stringr is installed
+✓ viridis is installed
+✓ scales is installed
+
+Testing package loading...
+
+You can now run your R scripts in this directory.
+           sample tissue            type type2
+1 TCGA-D3-A1QA-07   SKCM SKCM_tumor_TCGA tumor
+2 TCGA-DE-A4MD-06   THCA THCA_tumor_TCGA tumor
+3 TCGA-J8-A3O2-06   THCA THCA_tumor_TCGA tumor
+4 TCGA-J8-A3YH-06   THCA THCA_tumor_TCGA tumor
+5 TCGA-EM-A2P1-06   THCA THCA_tumor_TCGA tumor
+6 TCGA-J8-A4HW-06   THCA THCA_tumor_TCGA tumor
+ [1] "sample"                              "X_PATIENT"                          
+ [3] "cancer.type.abbreviation"            "age_at_initial_pathologic_diagnosis"
+ [5] "gender"                              "race"                               
+ [7] "ajcc_pathologic_tumor_stage"         "clinical_stage"                     
+ [9] "histological_type"                   "histological_grade"                 
+[11] "initial_pathologic_dx_year"          "menopause_status"                   
+[13] "birth_days_to"                       "vital_status"                       
+[15] "tumor_status"                        "last_contact_days_to"               
+[17] "death_days_to"                       "cause_of_death"                     
+[19] "new_tumor_event_type"                "new_tumor_event_site"               
+[21] "new_tumor_event_site_other"          "new_tumor_event_dx_days_to"         
+[23] "treatment_outcome_first_course"      "margin_status"                      
+[25] "residual_tumor"                      "OS"                                 
+[27] "OS.time"                             "DSS"                                
+[29] "DSS.time"                            "DFI"                                
+[31] "DFI.time"                            "PFI"                                
+[33] "PFI.time"                            "Redaction"                          
+                         sample    X_PATIENT OS OS.time
+TCGA-05-4244-01 TCGA-05-4244-01 TCGA-05-4244  0       0
+TCGA-05-4249-01 TCGA-05-4249-01 TCGA-05-4249  0    1523
+TCGA-05-4250-01 TCGA-05-4250-01 TCGA-05-4250  1     121
+TCGA-05-4382-01 TCGA-05-4382-01 TCGA-05-4382  0     607
+TCGA-05-4384-01 TCGA-05-4384-01 TCGA-05-4384  0     426
+                  CD52 SPARCL1  LAMP3   SGK1   KLF6
+TCGA-44-6778-01 8.2608  7.3362 7.3159 7.2690 6.7948
+TCGA-05-4420-01 4.8778  6.0764 2.1080 3.6816 3.9910
+TCGA-64-1679-01 6.0020  6.1185 3.5249 6.4951 5.7573
+TCGA-49-6744-01 8.1224  7.4714 5.4423 6.2202 5.9072
+TCGA-55-6982-01 7.2440  6.0510 3.9819 4.6393 4.9482
+                OS OS.time   CD52 SPARCL1  LAMP3
+TCGA-05-4244-01  0       0 7.7442  5.3650 4.3688
+TCGA-05-4250-01  1     121 6.8349  6.1926 3.8136
+TCGA-05-4382-01  0     607 7.2452  6.4138 1.5216
+TCGA-05-4384-01  0     426 7.1914  6.8868 5.9903
+TCGA-05-4389-01  0    1369 8.0108  4.4803 4.3541
+                OS OS.time   CD52 SPARCL1  LAMP3   SGK1
+TCGA-05-4244-01  0       0 7.7442  5.3650 4.3688 5.7445
+TCGA-05-4250-01  1     121 6.8349  6.1926 3.8136 6.0640
+TCGA-05-4382-01  0     607 7.2452  6.4138 1.5216 5.5681
+       gene        HR         z       pvalue     lower     upper
+1 C20orf197 0.8692715 -4.525712 6.019249e-06 0.8180980 0.9236461
+2     NEIL3 1.1857460  4.055551 5.001621e-05 1.0920261 1.2875091
+3   PKHD1L1 0.9004394 -3.746543 1.792881e-04 0.8523693 0.9512203
+4    DEPDC1 1.2006680  3.702220 2.137213e-04 1.0898739 1.3227251
+5      PKIB 1.1656775  3.301101 9.630614e-04 1.0642626 1.2767565
+6    KCNK17 0.8888971 -3.288202 1.008296e-03 0.8286362 0.9535403
+
+[stderr]
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   4.0.3     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Loading required package: viridisLite
+
+Attaching package: ‘scales’
+
+The following object is masked from ‘package:viridis’:
+
+    viridis_pal
+
+The following object is masked from ‘package:purrr’:
+
+    discard
+
+The following object is masked from ‘package:readr’:
+
+    col_factor
+
+`height` was translated to `width`.
+Warning messages:
+1: `geom_errorbarh()` was deprecated in ggplot2 4.0.0.
+ℹ Please use the `orientation` argument of `geom_errorbar()` instead. 
+2: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the ggplot2 package.
+  Please report the issue at <https://github.com/tidyverse/ggplot2/issues>. 
+3: `coord_trans()` was deprecated in ggplot2 4.0.0.
+ℹ Please use `coord_transform()` instead. 
+`height` was translated to `width`.
+`height` was translated to `width`.
+`height` was translated to `width`.
+`height` was translated to `width`.
+Warning message:
+The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead. 
+`height` was translated to `width`.
+`height` was translated to `width`.
+`height` was translated to `width`.

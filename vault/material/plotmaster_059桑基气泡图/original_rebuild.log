@@ -1,0 +1,57 @@
+    ONTOLOGY         ID
+179       BP GO:0031396
+170       BP GO:2000027
+159       BP GO:1902750
+118       BP GO:0044106
+229       MF GO:0015077
+50        BP GO:0033157
+                                                       Description GeneRatio
+179                           regulation of protein ubiquitination   41/2271
+170                       regulation of animal organ morphogenesis   48/2271
+159        negative regulation of cell cycle G2/M phase transition   25/2271
+118                               cellular amine metabolic process   30/2271
+229 monovalent inorganic cation transmembrane transporter activity   75/2327
+50                   regulation of intracellular protein transport   55/2271
+      BgRatio       pvalue    p.adjust      qvalue
+179 211/18866 1.269638e-03 0.043479773 0.040228216
+170 254/18866 9.752327e-04 0.035165743 0.032535936
+159 108/18866 8.884049e-04 0.034251081 0.031689675
+118 131/18866 3.505278e-04 0.018209624 0.016847850
+229 381/18352 6.130340e-05 0.005767628 0.005350604
+50  264/18866 3.039585e-05 0.003685953 0.003410306
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     geneID
+179                                                                                                                                                                                                                                                                         GCLC/DCUN1D1/UBE2D1/HSP90AA1/DNAJA1/OTUB2/RBX1/NDFIP2/FZR1/GSK3A/UBE2S/BIRC2/SKP1/CDC20/NMI/NDFIP1/GPS2/DYSF/DNAJB2/USP44/RAB1A/ARRB2/SH3RF2/PINK1/DTX3L/MAD2L1/FAM107A/CENPX/UBB/UBE2C/SPSB4/SPHK1/SVBP/SIAH2/PTTG1IP/UBE2L3/ISG15/DCUN1D3/PELI1/HSPA1B/HSPA1A
+170                                                                                                                                                                                                                                                ISL1/PSMA4/AP2S1/DMRT3/FGFR2/NTN4/XBP1/PSMA3/PSMB5/PSME2/BMP7/PSMA7/PLEKHA4/FGF1/STAT1/PSMF1/WNT2B/ANKRD6/PSMB7/PIM1/SULF1/NKD1/CLTC/ARRB2/CARM1/PSMB6/PSMA5/RSPO2/PSMA8/TIAM1/PSMB4/AP2M1/VANGL2/PSMD6/PRICKLE2/RBPJ/FZD4/PSMD2/BASP1/CAV3/NOG/RXRA/MAGI2/AP2A1/PSMB8/PSMB9/HNF1B/PSMB3
+159                                                                                                                                                                                                                                                                                                                                                                                      PSMA4/RBX1/PSMA3/PSMB5/PSME2/PSMA7/FZR1/BABAM1/SKP1/PSMF1/PSMB7/PSMB6/PSMA5/PSMA8/PSMB4/PSMD6/RAD21/CDK1/PSMD2/FBXL7/FOXO4/HUS1B/PSMB8/PSMB9/PSMB3
+118                                                                                                                                                                                                                                                                                                                                                            GDE1/PSMA4/SMOX/SIRT4/PSMA3/PSMB5/PSME2/PSMA7/OAZ1/ODC1/PSMF1/SAT1/PSMB7/HDC/PSMB6/AZIN2/PSMA5/PSMA8/PSMB4/PSMD6/HPRT1/GPR37/SULT1B1/PSMD2/HTR1A/OAZ2/IDO2/PSMB8/PSMB9/PSMB3
+229 ABCC8/SLC11A1/ATP1A2/KCNH2/SLC6A15/ASIC4/TMEM38A/KCNN2/KCNK2/ATP6V1D/KCNN4/SLC17A7/SLC1A6/ATP6V0A4/PKD2L1/SLC6A4/SCNN1A/COX6A1/RHAG/COX7A2/SLC4A9/ATP5PB/SLC5A9/ATP5F1E/COX6B1/COX7C/ATP1B2/SLC6A8/COX7B/SLC6A6/SLC9A5/COX5B/KCNH1/SLC10A6/ATP6V1B2/ATP6V0D2/GRIK4/SCN2B/ATP5MC3/ATP5PF/ATP6V1C1/SLC28A1/KCNJ15/SLC34A2/SLC13A3/KCNB1/SLC45A3/SLC5A11/OTOP1/HCN1/SLC13A4/KCNV1/COX6C/ATP5F1C/CYB5A/SCNN1G/ATP5MG/ATP5PD/KCNV2/SCNN1B/COX8A/SLC9A4/KCNIP1/KCNB2/OTOP2/ATP6V0C/SLC36A3/RHD/SLC24A5/RHCE/NDUFA4/CCT8L2/SLC12A8/AQP1/ATP5MF
+50                                                                                                                                                                                             ARHGAP44/AKAP8L/GTSE1/TP73/SIRT4/SH3GLB1/PPM1A/E2F1/ZDHHC2/BNIP3L/OAZ1/GSK3A/YWHAE/UBE2D3/MAPK14/RAB23/SNX3/PDCD10/HTRA2/RHOU/TARDBP/IL1B/YWHAH/ATP5IF1/RAN/INPP5K/CD36/TXN/ANP32B/KIF20B/PMAIP1/STOM/CABP1/KCNB1/PINK1/DMTN/IFI27/NDEL1/MTCL1/MFF/YWHAG/CDK1/KIF5B/OAZ2/YOD1/SLC35D3/UBE2L3/SVIP/TFDP1/UBL5/UBE2J1/LEPROT/FIS1/SIAH3/PPP3R1
+    Count ymax ymin label
+179    41    2    0   1.0
+170    48    4    2   3.0
+159    25    5    4   4.5
+118    30    7    5   6.0
+229    75   10    7   8.5
+50     55   11   10  10.5
+pdf 
+  2 
+
+[stderr]
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.2.1
+✔ purrr     1.0.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning message:
+attributes are not identical across measure variables; they will be dropped 
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:lubridate’:
+
+    stamp
+

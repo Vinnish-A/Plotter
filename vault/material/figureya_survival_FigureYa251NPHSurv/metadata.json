@@ -1,0 +1,221 @@
+{
+  "id": "figureya_survival_FigureYa251NPHSurv",
+  "title": "FigureYa251NPHSurv",
+  "source": {
+    "root": "raw/FigureYa",
+    "original_path": "FigureYa251NPHSurv"
+  },
+  "mode": "low",
+  "chart_family": [
+    "survival"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "ggplot2"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "x",
+      "y",
+      "value"
+    ],
+    "optional_mappings": [
+      "group",
+      "label",
+      "facet",
+      "source",
+      "target",
+      "weight",
+      "lower",
+      "upper"
+    ],
+    "declared_raw_resources": []
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 13,
+    "outputs": 4,
+    "scripts": 2,
+    "raw_data": 5,
+    "docs": 3
+  },
+  "build": {
+    "status": "build_success",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": true,
+    "complexity_mode": "low",
+    "last_built_at": "2026-05-17T12:30:11.546189+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "ggplot2",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "BiocManager",
+      "ComparisonSurv",
+      "ggpubr",
+      "knitr",
+      "survRM2",
+      "survminer"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:26.673799+00:00",
+    "records": [
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_annCol.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_annCol.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_surv.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/data_raw/easy_input_surv.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_long term survival p value matrix after 90 delayed effect.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/data_raw/output_long_term_survival_p_value_matrix_after_90_delayed_effect.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted mean survival p value matrix at 180 cutoff.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted_mean_survival_p_value_matrix_at_180_cutoff.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted mean survival p value matrix at 365 cutoff.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/data_raw/output_restricted_mean_survival_p_value_matrix_at_365_cutoff.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/raw/easy_input_annCol.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/raw/easy_input_annCol.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/raw/easy_input_surv.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/raw/easy_input_surv.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/raw/output_long term survival p value matrix after 90 delayed effect.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/raw/output_long_term_survival_p_value_matrix_after_90_delayed_effect.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/raw/output_restricted mean survival p value matrix at 180 cutoff.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/raw/output_restricted_mean_survival_p_value_matrix_at_180_cutoff.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "figureya_survival_FigureYa251NPHSurv/raw/output_restricted mean survival p value matrix at 365 cutoff.txt",
+        "status": "converted",
+        "csv": [
+          "figureya_survival_FigureYa251NPHSurv/raw/output_restricted_mean_survival_p_value_matrix_at_365_cutoff.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/easy_input_surv.csv",
+    "grammar_geometry": "line",
+    "row_count": 298,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
+  },
+  "complexity_assignment": {
+    "mode": "low",
+    "score": 4.1508,
+    "basis": "post-rebuilt visual grammar complexity quantile"
+  },
+  "rebuild_from_original_code": {
+    "status": "success",
+    "script": "raw/FigureYa251NPHSurv.Rmd",
+    "generated_source": "raw/kaplan meier curve2.png",
+    "compat_xlsx": [
+      "raw/ cutoff.txt",
+      "raw/ delayed effect.txt",
+      "raw/easy_input_annCol.txt",
+      "raw/easy_input_surv.txt"
+    ],
+    "returncode": 0,
+    "rebuilt_at": "2026-05-17T15:43:54.522282+00:00"
+  },
+  "visual_audit": {
+    "rebuilt_source_selected_by_similarity": {
+      "original": "outputs/figure_004_kaplan_meier_curve2.pdf",
+      "selected": "raw/kaplan meier curve2.pdf",
+      "page": 0,
+      "previous_rmse": 0.08940010083080291,
+      "selected_rmse": 0.0
+    }
+  },
+  "visual_grammar": {
+    "backend": "R/ggplot2",
+    "geometry": "heatmap",
+    "keywords": [
+      "heatmap",
+      "ggplot2"
+    ],
+    "visual_dependencies": [
+      "BiocManager",
+      "ComparisonSurv",
+      "ggplot2",
+      "ggpubr",
+      "knitr",
+      "survRM2",
+      "survminer"
+    ],
+    "runtime_dependencies": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "python"
+    ]
+  }
+}

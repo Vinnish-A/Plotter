@@ -1,0 +1,162 @@
+{
+  "id": "plotcase_sankey_渐变色桑基图",
+  "title": "渐变色桑基图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "sankey\\渐变色桑基图"
+  },
+  "mode": "high",
+  "chart_family": [
+    "flow"
+  ],
+  "visual_keywords": [
+    "alluvial",
+    "sankey",
+    "flow",
+    "stage_transition"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "stage",
+      "node",
+      "next_stage",
+      "next_node",
+      "value"
+    ],
+    "optional_mappings": [
+      "flow_id",
+      "group",
+      "node_color",
+      "label",
+      "order"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "stage-wise flow table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.635822+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "ggnewscale",
+      "ggsankeyfier",
+      "grid",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:33.477852+00:00",
+    "records": [
+      {
+        "source": "plotcase_sankey_渐变色桑基图/data_raw/data/data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_sankey_渐变色桑基图/data_raw/data/data.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_sankey_渐变色桑基图/raw/data/data.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_sankey_渐变色桑基图/raw/data/data.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/data.csv",
+    "grammar_geometry": "alluvial_sankey",
+    "row_count": 26,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_sankey_渐变色桑基图_进阶版",
+    "reason": "visual_redundancy:network:sankey",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "outputs/figure_001_cover.png",
+    "fallback_reason": "Visual audit fallback: original-code output existed but did not preserve the finished figure structure well enough for Vault preview (normalized correlation=0.4324, edge_ratio=0.8586).",
+    "previous_rebuild_attempt": {
+      "status": "success",
+      "script": "raw/code.R",
+      "generated_source": "raw/Rplots.pdf",
+      "compat_xlsx": [
+        "raw/data.tsv"
+      ],
+      "returncode": 0,
+      "rebuilt_at": "2026-05-18T07:50:19.415162+00:00"
+    },
+    "rebuilt_at": "2026-05-18T08:06:20.143995+00:00"
+  },
+  "visual_audit": {
+    "status": "fallback_to_finished_figure",
+    "metric": {
+      "case": "plotcase_sankey_渐变色桑基图",
+      "status": "success",
+      "mse": 0.021,
+      "corr": 0.4324,
+      "edge_ratio": 0.8586
+    },
+    "audited_at": "2026-05-18T08:06:20.144011+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "alluvial_sankey",
+    "backend": "R/ggplot2",
+    "unit": "stage-wise flow table",
+    "required_data_roles": [
+      "stage",
+      "node",
+      "next_stage",
+      "next_node",
+      "value"
+    ],
+    "optional_data_roles": [
+      "flow_id",
+      "group",
+      "node_color",
+      "label",
+      "order"
+    ]
+  }
+}

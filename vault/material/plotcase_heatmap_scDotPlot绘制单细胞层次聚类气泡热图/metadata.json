@@ -1,0 +1,123 @@
+{
+  "id": "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
+  "title": "scDotPlot绘制单细胞层次聚类气泡热图",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "heatmap\\scDotPlot绘制单细胞层次聚类气泡热图"
+  },
+  "mode": "medium",
+  "chart_family": [
+    "heatmap"
+  ],
+  "visual_keywords": [
+    "heatmap",
+    "matrix_body",
+    "annotation_tracks"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_mappings": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "long matrix table with optional row/column annotations"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 8,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 3,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "medium",
+    "last_built_at": "2026-05-17T12:30:11.964772+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "dplyr",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "special": [
+      "AnnotationDbi",
+      "BiocManager",
+      "ggsci",
+      "scDotPlot",
+      "scRNAseq",
+      "scran",
+      "scuttle",
+      "tidyverse"
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "synthetic_from_case_identity",
+    "grammar_geometry": "annotated_heatmap",
+    "row_count": 36,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotcase_heatmap_多分组气泡热图",
+    "reason": "visual_redundancy:heatmap:气泡",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "raw/cover.png",
+    "fallback_reason": "Bioconductor scRNAseq dataset package is unavailable in this Linux environment; use the provided finished figure until the dependency cache is available.",
+    "rebuilt_at": "2026-05-18T08:04:10.948137+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "annotated_heatmap",
+    "backend": "R/ggplot2",
+    "unit": "long matrix table with optional row/column annotations",
+    "required_data_roles": [
+      "row_id",
+      "column_id",
+      "value"
+    ],
+    "optional_data_roles": [
+      "row_group",
+      "column_group",
+      "annotation_track",
+      "annotation_value",
+      "label",
+      "size_value",
+      "facet"
+    ]
+  }
+}

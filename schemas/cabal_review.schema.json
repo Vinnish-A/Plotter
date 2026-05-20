@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-plotter.local/schemas/cabal_review.schema.json",
+  "title": "Cabal Review",
+  "type": "object",
+  "required": ["case_id", "mode", "keep_status", "visual_family", "uniqueness"],
+  "properties": {
+    "case_id": {"type": "string"},
+    "mode": {"enum": ["low", "medium", "high", "custom"]},
+    "keep_status": {"enum": ["live", "folded", "rejected"]},
+    "visual_family": {"type": "string"},
+    "uniqueness": {"enum": ["distinct", "near_duplicate", "duplicate", "unknown"]},
+    "manual_override": {"type": "boolean"},
+    "reason": {"type": "string"},
+    "reviewed_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,24 @@
+type: object
+required:
+  - interface
+  - main_csv
+  - required_mappings
+properties:
+  interface:
+    enum: [single_csv, single_csv_target]
+  main_csv:
+    const: data_main.csv
+  optional_csv:
+    const: data_optional.csv
+  required_mappings:
+    type: array
+    items:
+      type: string
+  optional_mappings:
+    type: array
+    items:
+      type: string
+  declared_raw_resources:
+    type: array
+    items:
+      type: string

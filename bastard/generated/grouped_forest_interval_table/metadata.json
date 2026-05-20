@@ -1,0 +1,27 @@
+{
+  "case_id": "grouped_forest_interval_table",
+  "intent": "Use a forest-plot grammar: grouped interval estimates, a reference line, and a compact significance side strip.",
+  "complexity": "medium",
+  "template_refs": [
+    "plotcase_森林图_多因素Cox森林图",
+    "plotcase_森林图_森林图进阶图例映射版"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "term",
+    "group",
+    "estimate",
+    "lower",
+    "upper",
+    "p_value",
+    "row_order"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}

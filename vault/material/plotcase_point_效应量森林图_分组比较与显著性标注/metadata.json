@@ -1,0 +1,160 @@
+{
+  "id": "plotcase_point_效应量森林图_分组比较与显著性标注",
+  "title": "效应量森林图_分组比较与显著性标注",
+  "source": {
+    "root": "raw/plotcase_export",
+    "original_path": "point\\效应量森林图_分组比较与显著性标注"
+  },
+  "mode": "high",
+  "chart_family": [
+    "forest_plot"
+  ],
+  "visual_keywords": [
+    "forest_plot",
+    "interval",
+    "effect_size",
+    "reference_line"
+  ],
+  "data_contract": {
+    "interface": "single_csv",
+    "main_csv": "data_main.csv",
+    "optional_csv": "data_optional.csv",
+    "required_mappings": [
+      "term",
+      "estimate",
+      "lower",
+      "upper"
+    ],
+    "optional_mappings": [
+      "p_value",
+      "group",
+      "reference",
+      "label",
+      "row_order"
+    ],
+    "declared_raw_resources": [],
+    "data_unit": "interval estimate table"
+  },
+  "files": {
+    "guide": "agent_guide.md",
+    "raw_files": "raw_files.txt",
+    "raw_dir": "raw",
+    "scripts_dir": "scripts",
+    "data_raw_dir": "data_raw",
+    "outputs_dir": "outputs"
+  },
+  "counts": {
+    "total_files": 9,
+    "outputs": 1,
+    "scripts": 1,
+    "raw_data": 4,
+    "docs": 3
+  },
+  "build": {
+    "status": "custom_required",
+    "language": "Python",
+    "entry": "plot.py",
+    "output": "outputs/rebuilt.png",
+    "requires_optional_data": false,
+    "linux_ready": false,
+    "complexity_mode": "high",
+    "last_built_at": "2026-05-17T12:30:12.505056+00:00"
+  },
+  "dependencies": {
+    "core": [
+      "matplotlib",
+      "numpy",
+      "pandas",
+      "tibble"
+    ],
+    "special": [
+      "car",
+      "lme4",
+      "tidyverse"
+    ]
+  },
+  "data_conversion": {
+    "csv_only_data_inputs": true,
+    "updated_at": "2026-05-17T06:55:32.595188+00:00",
+    "records": [
+      {
+        "source": "plotcase_point_效应量森林图_分组比较与显著性标注/data_raw/data/F1_f.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_point_效应量森林图_分组比较与显著性标注/data_raw/data/F1_f.csv"
+        ],
+        "deleted_original": true
+      },
+      {
+        "source": "plotcase_point_效应量森林图_分组比较与显著性标注/raw/data/F1_f.tsv",
+        "status": "converted",
+        "csv": [
+          "plotcase_point_效应量森林图_分组比较与显著性标注/raw/data/F1_f.csv"
+        ],
+        "deleted_original": true
+      }
+    ]
+  },
+  "standardization": {
+    "status": "standardized_first_pass",
+    "source_csv": "data_raw/data/F1_f.csv",
+    "grammar_geometry": "forest_interval",
+    "row_count": 96,
+    "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match.",
+    "abstraction_note": "Data roles are visual grammar roles, not source-domain field dumps.",
+    "data_main_status": "abstract_visual_grammar_demo",
+    "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
+  },
+  "folded": {
+    "status": "folded_visual_redundancy",
+    "canonical_case": "plotmaster_004提琴图",
+    "reason": "visual_redundancy:scatter:scatter",
+    "folded_at": "2026-05-17T12:54:06.042070+00:00"
+  },
+  "rebuild_from_original_code": {
+    "status": "custom_required",
+    "script": "case_level_rendered_output",
+    "generated_source": "outputs/figure_001_cover.png",
+    "fallback_reason": "Visual audit fallback: original-code output existed but did not preserve the finished figure structure well enough for Vault preview (normalized correlation=0.3109, edge_ratio=0.8764).",
+    "previous_rebuild_attempt": {
+      "status": "success",
+      "script": "raw/code.R",
+      "generated_source": "raw/Rplots.pdf",
+      "compat_xlsx": [
+        "raw/F1_f.tsv"
+      ],
+      "returncode": 0,
+      "rebuilt_at": "2026-05-18T07:50:12.149693+00:00"
+    },
+    "rebuilt_at": "2026-05-18T08:06:19.961154+00:00"
+  },
+  "visual_audit": {
+    "status": "fallback_to_finished_figure",
+    "metric": {
+      "case": "plotcase_point_效应量森林图_分组比较与显著性标注",
+      "status": "success",
+      "mse": 0.0068,
+      "corr": 0.3109,
+      "edge_ratio": 0.8764
+    },
+    "audited_at": "2026-05-18T08:06:19.961171+00:00"
+  },
+  "visual_grammar": {
+    "grammar_id": "forest_interval",
+    "backend": "R/ggplot2",
+    "unit": "interval estimate table",
+    "required_data_roles": [
+      "term",
+      "estimate",
+      "lower",
+      "upper"
+    ],
+    "optional_data_roles": [
+      "p_value",
+      "group",
+      "reference",
+      "label",
+      "row_order"
+    ]
+  }
+}

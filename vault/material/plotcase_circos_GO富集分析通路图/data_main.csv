@@ -1,0 +1,8 @@
+source,target,weight,source_group,target_group,direction,sector_order,sector_color,label,node_id,node_label
+N1,N2,0.36,G1,G2,,,,,N1,Node 1
+N2,N3,0.47,G2,G0,,,,,N2,Node 2
+N3,N4,0.58,G0,G1,,,,,N3,Node 3
+N4,N5,0.69,G1,G2,,,,,N4,Node 4
+N5,N6,0.8,G2,G0,,,,,N5,Node 5
+N6,N1,0.91,G0,G1,,,,,N6,Node 6
+N7,N2,1.02,G1,G2,,,,,N7,Node 7

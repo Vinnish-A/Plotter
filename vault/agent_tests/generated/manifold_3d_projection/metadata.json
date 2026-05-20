@@ -1,0 +1,26 @@
+{
+  "case_id": "manifold_3d_projection",
+  "intent": "Use the figures4papers manifold grammar: 3D trajectory, two projections, and one smoothed signal track inside one figure.",
+  "complexity": "medium",
+  "template_refs": [
+    "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
+    "figures4papers_figure_RNAGenScape_manifold_png"
+  ],
+  "input": "data_main.csv",
+  "output": "outputs/rebuilt.png",
+  "pdf_output": "outputs/rebuilt.pdf",
+  "required_columns": [
+    "x",
+    "y",
+    "z",
+    "value",
+    "trajectory",
+    "group"
+  ],
+  "test_contract": [
+    "CSV is the only data interface.",
+    "The task must inherit declared Vault visual grammar instead of inventing arbitrary subplots.",
+    "The figure is one independent unit; do not add A/B/C/D panel labels.",
+    "Internal layout, text scale, color, and annotation density are part of the test."
+  ]
+}
