@@ -1,0 +1,268 @@
+id: plotcase_barplot_多元素组合分布条图
+title: 多元素组合分布条图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
+origin:
+  case_dir: vault/material/plotcase_barplot_多元素组合分布条图
+  source:
+    root: raw/plotcase_export
+    original_path: barplot\多元素组合分布条图
+scientific_intent:
+- render reusable pie visual grammar
+- 'case-specific title: 多元素组合分布条图'
+- 'subtype: pie_or_donut'
+- 'keyword evidence: pie'
+intent:
+- render reusable pie visual grammar
+- 'case-specific title: 多元素组合分布条图'
+- 'subtype: pie_or_donut'
+- 'keyword evidence: pie'
+visual_grammar:
+  geometry: pie
+  subtype: pie_or_donut
+  keyword_evidence:
+  - pie
+visual_genes:
+  layout:
+  - pie_body
+  marks:
+  - primary_mark
+  - label
+  - legend
+  encodings:
+  - x
+  - y
+  - value
+  - group
+  narrative:
+  - pie_specific_comparison
+  emphasis:
+  - focus_layer
+  - clear_legend
+  subtype:
+  - pie_or_donut
+data_roles:
+  required:
+    category:
+      kind: categorical
+      semantic: category
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - C1
+        - C2
+        - C3
+        - C4
+        - C5
+    value:
+      kind: quantitative
+      semantic: value
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - '0.3'
+        - '0.4'
+        - '0.5'
+        - '0.6'
+        - '0.7'
+        min_sample: 0.3
+        max_sample: 1.1
+  optional:
+    group:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id003
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - G1
+        - G2
+        - G0
+    stack:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+        examples:
+        - S1
+        - S2
+        - S3
+        - S0
+    error_low:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - '0.18'
+        - '0.26'
+        - '0.34'
+        - '0.42'
+        - '0.5'
+        min_sample: 0.18
+        max_sample: 0.82
+    error_high:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - '0.42'
+        - '0.54'
+        - '0.66'
+        - '0.78'
+        - '0.9'
+        min_sample: 0.42
+        max_sample: 1.38
+    line_value:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - '0.479'
+        - '0.841'
+        - '0.997'
+        - '0.909'
+        - '0.598'
+        min_sample: -0.978
+        max_sample: 0.997
+    annotation_value:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    label:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+required_data:
+- category
+- value
+optional_data:
+- group
+- stack
+- error_low
+- error_high
+- line_value
+- annotation_value
+- label
+data_profile:
+  main_csv:
+    columns:
+    - category
+    - value
+    - group
+    - stack
+    - error_low
+    - error_high
+    - line_value
+    - annotation_value
+    - label
+    row_count_sampled: 9
+    profiles:
+      category: *id001
+      value: *id002
+      group: *id003
+      stack: *id004
+      error_low: *id005
+      error_high: *id006
+      line_value: *id007
+      annotation_value: *id008
+      label: *id009
+  optional_csv: null
+optional_modules:
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: true
+  composition: false
+  detail_panel: false
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: high
+defamiliarization:
+  level: U2
+best_for:
+- 多元素组合分布条图
+- 'pie/pie_or_donut grammar with roles: category, value'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+failure_cases:
+- Missing output image
+- Blank image
+- Wrong geometry selected by title/metadata conflict
+- Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png
+  exists: true
+  width: 1234
+  height: 712
+  mean_luma: 232.052
+  stddev_luma: 44.856
+minimal_reproducible_example:
+  data: vault/material/plotcase_barplot_多元素组合分布条图/data_main.csv
+  entry: vault/material/plotcase_barplot_多元素组合分布条图/plot.py
+  preview: vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null

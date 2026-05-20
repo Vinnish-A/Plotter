@@ -1,0 +1,291 @@
+id: plotcase_森林图_多因素Cox森林图
+title: 多因素Cox森林图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
+origin:
+  case_dir: vault/material/plotcase_森林图_多因素Cox森林图
+  source:
+    root: raw/plotcase_export
+    original_path: 森林图\多因素Cox森林图
+scientific_intent:
+- compare effect sizes and uncertainty intervals
+- 'case-specific title: 多因素Cox森林图'
+- 'subtype: interval_forest'
+- 'keyword evidence: 森林'
+- 'keyword evidence: forest'
+- 'keyword evidence: cox'
+intent:
+- compare effect sizes and uncertainty intervals
+- 'case-specific title: 多因素Cox森林图'
+- 'subtype: interval_forest'
+- 'keyword evidence: 森林'
+- 'keyword evidence: forest'
+- 'keyword evidence: cox'
+visual_grammar:
+  geometry: forest
+  subtype: interval_forest
+  keyword_evidence:
+  - 森林
+  - forest
+  - cox
+visual_genes:
+  layout:
+  - label_rail
+  - interval_axis
+  marks:
+  - point_estimate
+  - confidence_interval
+  - reference_line
+  - row_label
+  encodings:
+  - estimate
+  - lower
+  - upper
+  - group
+  - p_value
+  narrative:
+  - effect_size_comparison
+  - uncertainty_reading
+  emphasis:
+  - reference_line
+  - row_alignment
+  subtype:
+  - interval_forest
+data_roles:
+  required:
+    term:
+      kind: categorical
+      semantic: term
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+        examples:
+        - Term 1
+        - Term 2
+        - Term 3
+        - Term 4
+        - Term 5
+    estimate:
+      kind: quantitative
+      semantic: estimate
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+        examples:
+        - '-0.39'
+        - '-0.26'
+        - '-0.13'
+        - '0.0'
+        - '0.13'
+        min_sample: -0.39
+        max_sample: 0.52
+    lower:
+      kind: quantitative
+      semantic: lower
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+        examples:
+        - '-0.61'
+        - '-0.48'
+        - '-0.35'
+        - '-0.22'
+        - '-0.09'
+        min_sample: -0.61
+        max_sample: 0.3
+    upper:
+      kind: quantitative
+      semantic: upper
+      source: data_main.csv
+      profile: &id004
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+        examples:
+        - '-0.17'
+        - '-0.04'
+        - '0.09'
+        - '0.22'
+        - '0.35'
+        min_sample: -0.17
+        max_sample: 0.74
+  optional:
+    p_value:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+        examples:
+        - '0.005'
+        - '0.01'
+        - '0.015'
+        - '0.02'
+        - '0.025'
+        min_sample: 0.005
+        max_sample: 0.04
+    group:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - G1
+        - G2
+        - G0
+    reference:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    label:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    row_order:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+        examples:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        min_sample: 1.0
+        max_sample: 8.0
+required_data:
+- term
+- estimate
+- lower
+- upper
+optional_data:
+- p_value
+- group
+- reference
+- label
+- row_order
+data_profile:
+  main_csv:
+    columns:
+    - term
+    - estimate
+    - lower
+    - upper
+    - p_value
+    - group
+    - reference
+    - label
+    - row_order
+    row_count_sampled: 8
+    profiles:
+      term: *id001
+      estimate: *id002
+      lower: *id003
+      upper: *id004
+      p_value: *id005
+      group: *id006
+      reference: *id007
+      label: *id008
+      row_order: *id009
+  optional_csv: null
+optional_modules:
+  uncertainty_interval:
+    requires_any:
+    - - lower
+      - upper
+    - - se
+    - - ci_low
+      - ci_high
+    can_query_environment: true
+    available_from_main_csv: true
+    fallback_if_missing: do_not_show_uncertainty
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: true
+  composition: false
+  detail_panel: false
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: medium
+defamiliarization:
+  level: U2
+best_for:
+- 多因素Cox森林图
+- 'forest/interval_forest grammar with roles: term, estimate, lower, upper'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+failure_cases:
+- Missing output image
+- Blank image
+- Wrong geometry selected by title/metadata conflict
+- Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png
+  exists: true
+  width: 1358
+  height: 1537
+  mean_luma: 229.3928
+  stddev_luma: 41.5517
+minimal_reproducible_example:
+  data: vault/material/plotcase_森林图_多因素Cox森林图/data_main.csv
+  entry: vault/material/plotcase_森林图_多因素Cox森林图/plot.py
+  preview: vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: false
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null

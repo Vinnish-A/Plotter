@@ -97,12 +97,6 @@
     "data_main_status": "abstract_visual_grammar_demo",
     "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
   },
-  "folded": {
-    "status": "folded_visual_redundancy",
-    "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
-    "reason": "visual_redundancy:bar:bar",
-    "folded_at": "2026-05-17T12:54:06.042070+00:00"
-  },
   "rebuild_from_original_code": {
     "status": "success",
     "script": "raw/code.R",
@@ -132,11 +126,11 @@
     ]
   },
   "vault_status": {
-    "live": false,
-    "folded": true,
+    "live": true,
+    "folded": false,
     "restored_from_fold": false,
-    "canonical_case": "plotcase_barplot_多层注释柱状图进阶版",
-    "reason": "visual_redundancy:bar:bar"
+    "canonical_case": null,
+    "reason": "material asset is an accepted unfolded Vault case"
   },
   "rebuild_class": {
     "source_code_rebuild": true,

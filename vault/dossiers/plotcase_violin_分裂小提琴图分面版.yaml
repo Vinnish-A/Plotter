@@ -1,57 +1,143 @@
 id: plotcase_violin_分裂小提琴图分面版
 title: 分裂小提琴图分面版
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotcase_violin_分裂小提琴图分面版
   source:
     root: raw/plotcase_export
     original_path: violin\分裂小提琴图分面版
-scientific_intent: &id001
-- distribution visual grammar
-- distribution
-- distribution
-- box_violin
-- group_compare
-intent: *id001
+scientific_intent:
+- compare distribution shapes across groups
+- 'case-specific title: 分裂小提琴图分面版'
+- 'subtype: violin'
+- 'keyword evidence: 小提琴'
+- 'keyword evidence: violin'
+intent:
+- compare distribution shapes across groups
+- 'case-specific title: 分裂小提琴图分面版'
+- 'subtype: violin'
+- 'keyword evidence: 小提琴'
+- 'keyword evidence: violin'
+visual_grammar:
+  geometry: violin
+  subtype: violin
+  keyword_evidence:
+  - 小提琴
+  - violin
 visual_genes:
   layout:
-  - cartesian
+  - categorical_axis
+  - density_shape
   marks:
+  - violin
+  - box_or_median
   - point
   encodings:
-  - x
-  - y
-  - color
-  - size
+  - group
+  - value
+  - density
+  - facet
   narrative:
-  - global_comparison
+  - distribution_shape_comparison
   emphasis:
-  - focus_halo
-  - callout
-  - reserved_label_space
+  - split_group_symmetry
+  - median_anchor
+  subtype:
+  - violin
 data_roles:
   required:
     group:
-      kind: inferred
+      kind: categorical
       semantic: group
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+        examples:
+        - G1
+        - G2
+        - G3
+        - G0
     value:
-      kind: inferred
+      kind: quantitative
       semantic: value
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 24
+        examples:
+        - '0.377'
+        - '0.718'
+        - '0.991'
+        - '1.172'
+        - '1.245'
+        min_sample: -0.299
+        max_sample: 2.189
   optional:
     subgroup:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id003
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - S1
+        - S0
     paired_id:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+        examples:
+        - P0
+        - P1
+        - P2
+        - P3
+        - P4
     p_value:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+        examples:
+        - '0.02'
+        min_sample: 0.02
+        max_sample: 0.02
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - F1
+        - F2
+        - F0
     label:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
 required_data:
 - group
 - value
@@ -61,41 +147,39 @@ optional_data:
 - p_value
 - facet
 - label
-optional_modules:
-  detail_panel:
-    requires:
-    - group
-    - sample_x
-    - sample_y
-    can_query_environment: true
-    fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
+data_profile:
+  main_csv:
+    columns:
     - group
     - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
-  uncertainty_interval:
-    requires_any:
-    - - lower
-      - upper
-    - - se
-    - - ci_low
-      - ci_high
-    can_query_environment: true
-    fallback_if_missing: do_not_show_uncertainty
+    - subgroup
+    - paired_id
+    - p_value
+    - facet
+    - label
+    row_count_sampled: 24
+    profiles:
+      group: *id001
+      value: *id002
+      subgroup: *id003
+      paired_id: *id004
+      p_value: *id005
+      facet: *id006
+      label: *id007
+  optional_csv: null
+optional_modules:
   subgroup_color:
     requires:
     - subgroup
     can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: use_primary_group_only
-  network_weight:
+  label_layer:
     requires:
-    - source
-    - target
-    - weight
-    enabled_by_default: false
-    fallback_if_missing: draw_unweighted_edges
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
 function_signature:
   name: plot
   arguments:
@@ -117,17 +201,26 @@ style_compatibility:
 complexity:
   level: low
 defamiliarization:
-  level: U2
+  level: U1
 best_for:
-- 'Reusable distribution cases with roles: group, value'
+- 分裂小提琴图分面版
+- 'violin/violin grammar with roles: group, value'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_violin_分裂小提琴图分面版/outputs/rebuilt.png
+  exists: true
+  width: 1733
+  height: 858
+  mean_luma: 244.127
+  stddev_luma: 36.6435
 minimal_reproducible_example:
   data: vault/material/plotcase_violin_分裂小提琴图分面版/data_main.csv
   entry: vault/material/plotcase_violin_分裂小提琴图分面版/plot.py

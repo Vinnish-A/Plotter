@@ -1,68 +1,223 @@
 id: plotmaster_062环形分组折线图
 title: 062环形分组折线图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotmaster_062环形分组折线图
   source:
     root: raw/PlotMaster
     original_path: 062环形分组折线图
-scientific_intent: &id001
-- network visual grammar
-- general_figure
-- network
-intent: *id001
+scientific_intent:
+- show relationships among entities
+- highlight modules or weighted links
+- 'case-specific title: 062环形分组折线图'
+- 'subtype: node_link_network'
+- 'keyword evidence: network'
+intent:
+- show relationships among entities
+- highlight modules or weighted links
+- 'case-specific title: 062环形分组折线图'
+- 'subtype: node_link_network'
+- 'keyword evidence: network'
+visual_grammar:
+  geometry: network
+  subtype: node_link_network
+  keyword_evidence:
+  - network
 visual_genes:
   layout:
   - node_link
-  - radial_or_layered
+  - radial_or_force_directed
   marks:
   - node
   - edge
   - label
+  - module_boundary
   encodings:
-  - color
-  - weight
+  - node_color
+  - node_size
+  - edge_weight
   - group
   narrative:
   - relationship_structure
+  - module_or_pathway_context
   emphasis:
-  - module_highlight
   - edge_deemphasis
+  - module_highlight
+  - label_budget
+  subtype:
+  - node_link_network
 data_roles:
   required:
     x:
-      kind: inferred
+      kind: quantitative
       semantic: x
+      source: data_main.csv
+      profile: &id001
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        min_sample: 0.0
+        max_sample: 35.0
     y:
-      kind: inferred
+      kind: quantitative
       semantic: y
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - '0.45422341911143493'
+        - '-0.29385916681643853'
+        - '0.3103926147319407'
+        - '0.7249016949335512'
+        - '0.8073952646565138'
+        min_sample: -1.1027523437016502
+        max_sample: 1.3791450418623878
     value:
-      kind: inferred
+      kind: quantitative
       semantic: value
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - '0.45422341911143493'
+        - '-0.29385916681643853'
+        - '0.3103926147319407'
+        - '0.7249016949335512'
+        - '0.8073952646565138'
+        min_sample: -1.1027523437016502
+        max_sample: 1.3791450418623878
   optional:
     group:
-      kind: inferred
+      kind: text
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - item_01
+        - item_02
+        - item_03
+        - item_04
+        - item_05
     label:
-      kind: inferred
+      kind: text
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - item_01
+        - item_02
+        - item_03
+        - item_04
+        - item_05
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     source:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        min_sample: 0.0
+        max_sample: 35.0
     target:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - '0.45422341911143493'
+        - '-0.29385916681643853'
+        - '0.3103926147319407'
+        - '0.7249016949335512'
+        - '0.8073952646565138'
+        min_sample: -1.1027523437016502
+        max_sample: 1.3791450418623878
     weight:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - '0.45422341911143493'
+        - '-0.29385916681643853'
+        - '0.3103926147319407'
+        - '0.7249016949335512'
+        - '0.8073952646565138'
+        min_sample: -1.1027523437016502
+        max_sample: 1.3791450418623878
     lower:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - '0.31128002500399443'
+        - '-0.43680256092387904'
+        - '0.1674492206245002'
+        - '0.5819583008261107'
+        - '0.6644518705490733'
+        min_sample: -1.2456957378090907
+        max_sample: 1.2362016477549473
     upper:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+        examples:
+        - '0.5971668132188754'
+        - '-0.15091577270899806'
+        - '0.4533360088393812'
+        - '0.8678450890409917'
+        - '0.9503386587639543'
+        min_sample: -0.9598089495942097
+        max_sample: 1.5220884359698283
 required_data:
 - x
 - y
@@ -76,41 +231,49 @@ optional_data:
 - weight
 - lower
 - upper
-optional_modules:
-  detail_panel:
-    requires:
-    - group
-    - sample_x
-    - sample_y
-    can_query_environment: true
-    fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
-    - group
+data_profile:
+  main_csv:
+    columns:
+    - x
+    - y
     - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
-  uncertainty_interval:
-    requires_any:
-    - - lower
-      - upper
-    - - se
-    - - ci_low
-      - ci_high
-    can_query_environment: true
-    fallback_if_missing: do_not_show_uncertainty
-  subgroup_color:
-    requires:
-    - subgroup
-    can_query_environment: true
-    fallback_if_missing: use_primary_group_only
-  network_weight:
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    row_count_sampled: 36
+    profiles:
+      x: *id001
+      y: *id002
+      value: *id003
+      group: *id004
+      label: *id005
+      facet: *id006
+      source: *id007
+      target: *id008
+      weight: *id009
+      lower: *id010
+      upper: *id011
+  optional_csv: null
+optional_modules:
+  weighted_relationship:
     requires:
     - source
     - target
     - weight
-    enabled_by_default: true
+    can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: draw_unweighted_edges
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
 function_signature:
   name: plot
   arguments:
@@ -134,15 +297,24 @@ complexity:
 defamiliarization:
   level: U2
 best_for:
-- 'Reusable network cases with roles: x, y, value'
+- 062环形分组折线图
+- 'network/node_link_network grammar with roles: x, y, value'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotmaster_062环形分组折线图/outputs/rebuilt.png
+  exists: true
+  width: 1008
+  height: 1008
+  mean_luma: 249.1894
+  stddev_luma: 27.8345
 minimal_reproducible_example:
   data: vault/material/plotmaster_062环形分组折线图/data_main.csv
   entry: vault/material/plotmaster_062环形分组折线图/plot.py
@@ -155,7 +327,6 @@ rebuild_class:
 vault_status:
   live: true
   folded: false
-  restored_from_fold: true
+  restored_from_fold: false
   canonical_case: null
-  reason: retained after visual folding review; complex or distinctive non-map visual
-    grammar
+  reason: null

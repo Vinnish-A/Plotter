@@ -47,6 +47,7 @@ closed_loop:
 
 material_contract:
   root: vault/material
+  invariant: every case under vault/material is unfolded live material; folded memory lives under vault/folded_assets
   main_csv: data_main.csv
   optional_csv: data_optional.csv
   standard_outputs:

@@ -57,9 +57,9 @@ Use `cabal/tools/` for grouping, visual grammar review, scoring support, folding
 
 ## Vault Architecture
 
-Vault is accepted asset memory, not a raw-file dumping area. It has 8 storage zones plus 2 compatibility wrappers:
+Vault is accepted asset memory, not a raw-file dumping area. It has 8 storage zones:
 
-1. `vault/material/`: live accepted cases; this is the primary store for standardized assets.
+1. `vault/material/`: unfolded accepted cases; this is the primary store for standardized assets and every case here must be live.
 2. `vault/review/`: visual audit records, Cabal review manifests, contact sheets, and similarity artifacts.
 3. `vault/folded_assets/`: folded or quarantined assets that should remain recoverable but not appear as primary UI assets.
 4. `vault/dossiers/`: reusable visual grammar or template dossiers.
@@ -68,7 +68,7 @@ Vault is accepted asset memory, not a raw-file dumping area. It has 8 storage zo
 7. `vault/successes/`: accepted generation or rebuild success records.
 8. `vault/failures/`: failure records that preserve reproducibility limits and known bad cases.
 
-Keep live, non-folded assets in `vault/material/`. Keep folded assets out of primary UI manifests. Do not compensate for weak CSV abstraction by placing extra raw evidence in Vault.
+Keep unfolded assets in `vault/material/`. Keep folded assets in `vault/folded_assets/` and out of primary UI manifests. A case under `vault/material/` must not carry a folded/non-live status. Do not compensate for weak CSV abstraction by placing extra raw evidence in Vault.
 
 ## Project-Local Agent Skills
 

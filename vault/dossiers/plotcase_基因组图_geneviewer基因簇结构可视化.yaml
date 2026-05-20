@@ -1,0 +1,315 @@
+id: plotcase_基因组图_geneviewer基因簇结构可视化
+title: geneviewer基因簇结构可视化
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
+origin:
+  case_dir: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化
+  source:
+    root: raw/plotcase_export
+    original_path: 基因组图\geneviewer基因簇结构可视化
+scientific_intent:
+- render reusable genome visual grammar
+- 'case-specific title: geneviewer基因簇结构可视化'
+- 'subtype: genome_structure'
+- 'keyword evidence: 基因组'
+- 'keyword evidence: 基因簇'
+- 'keyword evidence: geneviewer'
+intent:
+- render reusable genome visual grammar
+- 'case-specific title: geneviewer基因簇结构可视化'
+- 'subtype: genome_structure'
+- 'keyword evidence: 基因组'
+- 'keyword evidence: 基因簇'
+- 'keyword evidence: geneviewer'
+visual_grammar:
+  geometry: genome
+  subtype: genome_structure
+  keyword_evidence:
+  - 基因组
+  - 基因簇
+  - geneviewer
+  - genome
+visual_genes:
+  layout:
+  - genome_body
+  marks:
+  - primary_mark
+  - label
+  - legend
+  encodings:
+  - x
+  - y
+  - value
+  - group
+  narrative:
+  - genome_specific_comparison
+  emphasis:
+  - focus_layer
+  - clear_legend
+  subtype:
+  - genome_structure
+data_roles:
+  required:
+    segment_id:
+      kind: categorical
+      semantic: segment_id
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - S1
+        - S2
+        - S0
+    feature_id:
+      kind: categorical
+      semantic: feature_id
+      source: data_main.csv
+      profile: &id002
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+        examples:
+        - g1
+        - g2
+        - g3
+        - g4
+        - g5
+    start:
+      kind: quantitative
+      semantic: start
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+        examples:
+        - '220'
+        - '440'
+        - '660'
+        - '880'
+        - '1100'
+        min_sample: 220.0
+        max_sample: 2860.0
+    end:
+      kind: quantitative
+      semantic: end
+      source: data_main.csv
+      profile: &id004
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+        examples:
+        - '370'
+        - '590'
+        - '810'
+        - '1030'
+        - '1250'
+        min_sample: 370.0
+        max_sample: 3010.0
+    strand:
+      kind: categorical
+      semantic: strand
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - +
+        - '-'
+    feature_class:
+      kind: categorical
+      semantic: feature_class
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+        examples:
+        - F1
+        - F2
+        - F3
+        - F0
+  optional:
+    cluster:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - C1
+        - C0
+    label:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+        examples:
+        - g1
+        - g2
+        - g3
+        - g4
+        - g5
+    link_id:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    similarity:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    track:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+        examples:
+        - main
+    color_class:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id012
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+required_data:
+- segment_id
+- feature_id
+- start
+- end
+- strand
+- feature_class
+optional_data:
+- cluster
+- label
+- link_id
+- similarity
+- track
+- color_class
+data_profile:
+  main_csv:
+    columns:
+    - segment_id
+    - feature_id
+    - start
+    - end
+    - strand
+    - feature_class
+    - cluster
+    - label
+    - link_id
+    - similarity
+    - track
+    - color_class
+    row_count_sampled: 13
+    profiles:
+      segment_id: *id001
+      feature_id: *id002
+      start: *id003
+      end: *id004
+      strand: *id005
+      feature_class: *id006
+      cluster: *id007
+      label: *id008
+      link_id: *id009
+      similarity: *id010
+      track: *id011
+      color_class: *id012
+  optional_csv: null
+optional_modules:
+  annotation_track:
+    requires:
+    - group
+    - value
+    can_query_environment: true
+    available_from_main_csv: false
+    fallback_if_missing: use_plain_axis
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: true
+  composition: true
+  detail_panel: false
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: high
+defamiliarization:
+  level: U2
+best_for:
+- geneviewer基因簇结构可视化
+- 'genome/genome_structure grammar with roles: segment_id, feature_id, start, end,
+  strand, feature_class'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+failure_cases:
+- Missing output image
+- Blank image
+- Wrong geometry selected by title/metadata conflict
+- Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/outputs/rebuilt.png
+  exists: true
+  width: 1476
+  height: 848
+  mean_luma: 242.9317
+  stddev_luma: 45.4868
+minimal_reproducible_example:
+  data: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/data_main.csv
+  entry: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/plot.py
+  preview: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: true
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null

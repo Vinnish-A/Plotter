@@ -1,68 +1,223 @@
 id: plotmaster_054分面森林图
 title: 054分面森林图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotmaster_054分面森林图
   source:
     root: raw/PlotMaster
     original_path: 054分面森林图
-scientific_intent: &id001
-- scatter visual grammar
-- general_figure
-- scatter
-- ggplot2
-intent: *id001
+scientific_intent:
+- compare effect sizes and uncertainty intervals
+- 'case-specific title: 054分面森林图'
+- 'subtype: interval_forest'
+- 'keyword evidence: 森林'
+intent:
+- compare effect sizes and uncertainty intervals
+- 'case-specific title: 054分面森林图'
+- 'subtype: interval_forest'
+- 'keyword evidence: 森林'
+visual_grammar:
+  geometry: forest
+  subtype: interval_forest
+  keyword_evidence:
+  - 森林
 visual_genes:
   layout:
-  - cartesian
+  - label_rail
+  - interval_axis
   marks:
-  - point
+  - point_estimate
+  - confidence_interval
+  - reference_line
+  - row_label
   encodings:
-  - x
-  - y
-  - color
-  - size
+  - estimate
+  - lower
+  - upper
+  - group
+  - p_value
   narrative:
-  - global_comparison
+  - effect_size_comparison
+  - uncertainty_reading
   emphasis:
-  - focus_halo
-  - callout
-  - reserved_label_space
+  - reference_line
+  - row_alignment
+  subtype:
+  - interval_forest
 data_roles:
   required:
     x:
-      kind: inferred
+      kind: quantitative
       semantic: x
+      source: data_main.csv
+      profile: &id001
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 100
+        examples:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        min_sample: 1.0
+        max_sample: 100.0
     y:
-      kind: inferred
+      kind: quantitative
       semantic: y
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 96
+        examples:
+        - '2.26'
+        - '2.96'
+        - '-0.9'
+        - '3.33'
+        - '4.19'
+        min_sample: -1.94
+        max_sample: 7.96
     value:
-      kind: inferred
+      kind: quantitative
       semantic: value
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 95
+        examples:
+        - '-0.6'
+        - '0.04'
+        - '-3.69'
+        - '1.14'
+        - '2.43'
+        min_sample: -4.27
+        max_sample: 6.13
   optional:
     group:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 25
+        examples:
+        - sample1
+        - sample2
+        - sample3
+        - sample4
+        - sample5
     label:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 25
+        examples:
+        - sample1
+        - sample2
+        - sample3
+        - sample4
+        - sample5
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - Blood OPEs
+        - Urine OPEs
     source:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 100
+        examples:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        min_sample: 1.0
+        max_sample: 100.0
     target:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 96
+        examples:
+        - '2.26'
+        - '2.96'
+        - '-0.9'
+        - '3.33'
+        - '4.19'
+        min_sample: -1.94
+        max_sample: 7.96
     weight:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 95
+        examples:
+        - '-0.6'
+        - '0.04'
+        - '-3.69'
+        - '1.14'
+        - '2.43'
+        min_sample: -4.27
+        max_sample: 6.13
     lower:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 95
+        examples:
+        - '-1.1488888504069017'
+        - '-0.5088888504069017'
+        - '-4.2388888504069016'
+        - '0.5911111495930982'
+        - '1.8811111495930986'
+        min_sample: -4.818888850406902
+        max_sample: 5.581111149593098
     upper:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 95
+        examples:
+        - '-0.05111114959309826'
+        - '0.5888888504069018'
+        - '-3.1411111495930983'
+        - '1.6888888504069017'
+        - '2.9788888504069018'
+        min_sample: -3.721111149593098
+        max_sample: 6.678888850406902
 required_data:
 - x
 - y
@@ -76,20 +231,35 @@ optional_data:
 - weight
 - lower
 - upper
-optional_modules:
-  detail_panel:
-    requires:
-    - group
-    - sample_x
-    - sample_y
-    can_query_environment: true
-    fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
-    - group
+data_profile:
+  main_csv:
+    columns:
+    - x
+    - y
     - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    row_count_sampled: 100
+    profiles:
+      x: *id001
+      y: *id002
+      value: *id003
+      group: *id004
+      label: *id005
+      facet: *id006
+      source: *id007
+      target: *id008
+      weight: *id009
+      lower: *id010
+      upper: *id011
+  optional_csv: null
+optional_modules:
   uncertainty_interval:
     requires_any:
     - - lower
@@ -98,19 +268,22 @@ optional_modules:
     - - ci_low
       - ci_high
     can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: do_not_show_uncertainty
-  subgroup_color:
-    requires:
-    - subgroup
-    can_query_environment: true
-    fallback_if_missing: use_primary_group_only
-  network_weight:
+  weighted_relationship:
     requires:
     - source
     - target
     - weight
-    enabled_by_default: true
+    can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: draw_unweighted_edges
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
 function_signature:
   name: plot
   arguments:
@@ -123,8 +296,8 @@ function_signature:
   entry: plot.py
 supports:
   highlight: true
-  composition: true
-  detail_panel: true
+  composition: false
+  detail_panel: false
   batch_output: true
 style_compatibility:
 - default_scientific
@@ -132,17 +305,26 @@ style_compatibility:
 complexity:
   level: medium
 defamiliarization:
-  level: U1
+  level: U2
 best_for:
-- 'Reusable scatter cases with roles: x, y, value'
+- 054分面森林图
+- 'forest/interval_forest grammar with roles: x, y, value'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotmaster_054分面森林图/outputs/rebuilt.png
+  exists: true
+  width: 1008
+  height: 720
+  mean_luma: 237.8912
+  stddev_luma: 48.7387
 minimal_reproducible_example:
   data: vault/material/plotmaster_054分面森林图/data_main.csv
   entry: vault/material/plotmaster_054分面森林图/plot.py

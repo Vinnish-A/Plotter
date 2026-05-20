@@ -3,6 +3,26 @@ from __future__ import annotations
 from typing import Any
 
 
+def material_live_status(reason: str = "material asset is an accepted unfolded Vault case") -> dict[str, Any]:
+    return {
+        "live": True,
+        "folded": False,
+        "restored_from_fold": False,
+        "canonical_case": None,
+        "reason": reason,
+    }
+
+
+def folded_asset_status(reason: str = "asset stored outside material as folded Vault memory") -> dict[str, Any]:
+    return {
+        "live": False,
+        "folded": True,
+        "restored_from_fold": False,
+        "canonical_case": None,
+        "reason": reason,
+    }
+
+
 def normalize_vault_status(metadata: dict[str, Any]) -> dict[str, Any]:
     folded = metadata.get("folded") if isinstance(metadata.get("folded"), dict) else {}
     folding = metadata.get("folding") if isinstance(metadata.get("folding"), dict) else {}
@@ -17,6 +37,29 @@ def normalize_vault_status(metadata: dict[str, Any]) -> dict[str, Any]:
         "reason": folding.get("reason") if restored else folded.get("reason"),
     }
     metadata["vault_status"] = status
+    return status
+
+
+def force_material_live(metadata: dict[str, Any]) -> dict[str, Any]:
+    status = material_live_status()
+    metadata["vault_status"] = status
+    metadata.pop("folded", None)
+    metadata.pop("folding", None)
+    build = metadata.get("build") if isinstance(metadata.get("build"), dict) else {}
+    if build.get("status") == "rejected":
+        build["status"] = "standardized"
+    return status
+
+
+def force_folded_asset(metadata: dict[str, Any]) -> dict[str, Any]:
+    status = folded_asset_status()
+    metadata["vault_status"] = status
+    metadata["folded"] = {
+        "status": "folded_external_memory",
+        "reason": status["reason"],
+        "canonical_case": metadata.get("folded", {}).get("canonical_case") if isinstance(metadata.get("folded"), dict) else None,
+    }
+    metadata.pop("folding", None)
     return status
 
 

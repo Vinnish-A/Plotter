@@ -1,0 +1,270 @@
+id: plotcase_point_散点图叠加多坐标轴
+title: 散点图叠加多坐标轴
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
+origin:
+  case_dir: vault/material/plotcase_point_散点图叠加多坐标轴
+  source:
+    root: raw/plotcase_export
+    original_path: point\散点图叠加多坐标轴
+scientific_intent:
+- render reusable bubble visual grammar
+- 'case-specific title: 散点图叠加多坐标轴'
+- 'subtype: bubble'
+- 'keyword evidence: bubble'
+intent:
+- render reusable bubble visual grammar
+- 'case-specific title: 散点图叠加多坐标轴'
+- 'subtype: bubble'
+- 'keyword evidence: bubble'
+visual_grammar:
+  geometry: bubble
+  subtype: bubble
+  keyword_evidence:
+  - bubble
+visual_genes:
+  layout:
+  - bubble_body
+  marks:
+  - primary_mark
+  - label
+  - legend
+  encodings:
+  - x
+  - y
+  - value
+  - group
+  narrative:
+  - bubble_specific_comparison
+  emphasis:
+  - focus_layer
+  - clear_legend
+  subtype:
+  - bubble
+data_roles:
+  required:
+    x:
+      kind: quantitative
+      semantic: x
+      source: data_main.csv
+      profile: &id001
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 29
+        examples:
+        - '0.315'
+        - '0.524'
+        - '0.54'
+        - '0.314'
+        - '-0.16'
+        min_sample: -9.385
+        max_sample: 6.325
+    y:
+      kind: quantitative
+      semantic: y
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 28
+        examples:
+        - '0.062'
+        - '0.24'
+        - '0.511'
+        - '0.841'
+        - '1.186'
+        min_sample: -4.795
+        max_sample: 5.967
+  optional:
+    group:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id003
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+        examples:
+        - G1
+        - G2
+        - G3
+        - G0
+    value:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 29
+        examples:
+        - '0.841'
+        - '0.909'
+        - '0.141'
+        - '-0.757'
+        - '-0.959'
+        min_sample: -1.0
+        max_sample: 0.991
+    size_value:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 29
+        examples:
+        - '11'
+        - '12'
+        - '13'
+        - '14'
+        - '15'
+        min_sample: 11.0
+        max_sample: 39.0
+    label:
+      kind: text
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 29
+        examples:
+        - P1
+        - P2
+        - P3
+        - P4
+        - P5
+    threshold:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+        examples:
+        - '0.5'
+        min_sample: 0.5
+        max_sample: 0.5
+    facet:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    highlight:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - 'False'
+        - 'True'
+required_data:
+- x
+- y
+optional_data:
+- group
+- value
+- size_value
+- label
+- threshold
+- facet
+- highlight
+data_profile:
+  main_csv:
+    columns:
+    - x
+    - y
+    - group
+    - value
+    - size_value
+    - label
+    - threshold
+    - facet
+    - highlight
+    row_count_sampled: 29
+    profiles:
+      x: *id001
+      y: *id002
+      group: *id003
+      value: *id004
+      size_value: *id005
+      label: *id006
+      threshold: *id007
+      facet: *id008
+      highlight: *id009
+  optional_csv: null
+optional_modules:
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: true
+  composition: false
+  detail_panel: false
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: high
+defamiliarization:
+  level: U2
+best_for:
+- 散点图叠加多坐标轴
+- 'bubble/bubble grammar with roles: x, y'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+failure_cases:
+- Missing output image
+- Blank image
+- Wrong geometry selected by title/metadata conflict
+- Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_point_散点图叠加多坐标轴/outputs/rebuilt.png
+  exists: true
+  width: 1184
+  height: 811
+  mean_luma: 242.8503
+  stddev_luma: 39.5703
+minimal_reproducible_example:
+  data: vault/material/plotcase_point_散点图叠加多坐标轴/data_main.csv
+  entry: vault/material/plotcase_point_散点图叠加多坐标轴/plot.py
+  preview: vault/material/plotcase_point_散点图叠加多坐标轴/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: false
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null

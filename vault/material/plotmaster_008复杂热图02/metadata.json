@@ -81,16 +81,6 @@
     "row_count": 36,
     "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
   },
-  "folded": {
-    "status": "folded_visual_redundancy",
-    "canonical_case": "plotmaster_028分面双向柱状图+热图注释",
-    "reason": "visual_redundancy:heatmap:heatmap",
-    "folded_at": "2026-05-17T12:54:06.042070+00:00"
-  },
-  "folding": {
-    "status": "live_restored",
-    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
-  },
   "complexity_review": {
     "status": "reviewed_after_visual_folding",
     "reason": "mode adjusted by final visual complexity and target live ratio high/medium/low = 0.2/0.3/0.5",
@@ -138,9 +128,9 @@
   "vault_status": {
     "live": true,
     "folded": false,
-    "restored_from_fold": true,
+    "restored_from_fold": false,
     "canonical_case": null,
-    "reason": "retained after visual folding review; complex or distinctive non-map visual grammar"
+    "reason": "material asset is an accepted unfolded Vault case"
   },
   "rebuild_class": {
     "source_code_rebuild": true,

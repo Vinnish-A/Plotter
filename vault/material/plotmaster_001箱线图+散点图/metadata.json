@@ -57,7 +57,7 @@
     "requires_optional_data": false,
     "linux_ready": true,
     "complexity_mode": "medium",
-    "last_built_at": "2026-05-17T12:30:12.985031+00:00"
+    "last_built_at": "2026-05-20T15:22:53.434809+00:00"
   },
   "dependencies": {
     "core": [
@@ -112,7 +112,7 @@
     "folded": false,
     "restored_from_fold": false,
     "canonical_case": null,
-    "reason": null
+    "reason": "material asset is an accepted unfolded Vault case"
   },
   "rebuild_class": {
     "source_code_rebuild": true,

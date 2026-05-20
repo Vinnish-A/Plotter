@@ -1,70 +1,184 @@
 id: plotcase_雷达图_雷达图批量绘制
 title: 雷达图批量绘制
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotcase_雷达图_雷达图批量绘制
   source:
     root: raw/plotcase_export
     original_path: 雷达图\雷达图批量绘制
-scientific_intent: &id001
-- network_graph visual grammar
-- network
-- network_graph
-- node_link
-- layout
-- community
-intent: *id001
+scientific_intent:
+- show relationships among entities
+- highlight modules or weighted links
+- 'case-specific title: 雷达图批量绘制'
+- 'subtype: node_link_network'
+- 'keyword evidence: network'
+intent:
+- show relationships among entities
+- highlight modules or weighted links
+- 'case-specific title: 雷达图批量绘制'
+- 'subtype: node_link_network'
+- 'keyword evidence: network'
+visual_grammar:
+  geometry: network
+  subtype: node_link_network
+  keyword_evidence:
+  - network
 visual_genes:
   layout:
-  - cartesian
+  - node_link
+  - radial_or_force_directed
   marks:
-  - point
+  - node
+  - edge
+  - label
+  - module_boundary
   encodings:
-  - x
-  - y
-  - color
-  - size
+  - node_color
+  - node_size
+  - edge_weight
+  - group
   narrative:
-  - global_comparison
+  - relationship_structure
+  - module_or_pathway_context
   emphasis:
-  - focus_halo
-  - callout
-  - reserved_label_space
+  - edge_deemphasis
+  - module_highlight
+  - label_budget
+  subtype:
+  - node_link_network
 data_roles:
   required:
     source:
-      kind: inferred
+      kind: categorical
       semantic: source
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+        examples:
+        - N1
+        - N2
+        - N3
+        - N4
+        - N5
     target:
-      kind: inferred
+      kind: categorical
       semantic: target
+      source: data_main.csv
+      profile: &id002
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+        examples:
+        - N2
+        - N3
+        - N4
+        - N5
+        - N6
     weight:
-      kind: inferred
+      kind: quantitative
       semantic: weight
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+        examples:
+        - '0.36'
+        - '0.47'
+        - '0.58'
+        - '0.69'
+        - '0.8'
+        min_sample: 0.36
+        max_sample: 1.02
   optional:
     node_id:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+        examples:
+        - N1
+        - N2
+        - N3
+        - N4
+        - N5
     node_label:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+        examples:
+        - Node 1
+        - Node 2
+        - Node 3
+        - Node 4
+        - Node 5
     node_group:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     node_size:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     edge_group:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     edge_direction:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     layout_x:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     layout_y:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
 required_data:
 - source
 - target
@@ -78,40 +192,60 @@ optional_data:
 - edge_direction
 - layout_x
 - layout_y
+data_profile:
+  main_csv:
+    columns:
+    - source
+    - target
+    - weight
+    - node_id
+    - node_label
+    - node_group
+    - node_size
+    - edge_group
+    - edge_direction
+    - layout_x
+    - layout_y
+    - source_group
+    - target_group
+    row_count_sampled: 7
+    profiles:
+      source: *id001
+      target: *id002
+      weight: *id003
+      node_id: *id004
+      node_label: *id005
+      node_group: *id006
+      node_size: *id007
+      edge_group: *id008
+      edge_direction: *id009
+      layout_x: *id010
+      layout_y: *id011
+      source_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - G1
+        - G2
+        - G0
+      target_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - G2
+        - G0
+        - G1
+  optional_csv: null
 optional_modules:
-  detail_panel:
-    requires:
-    - group
-    - sample_x
-    - sample_y
-    can_query_environment: true
-    fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
-    - group
-    - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
-  uncertainty_interval:
-    requires_any:
-    - - lower
-      - upper
-    - - se
-    - - ci_low
-      - ci_high
-    can_query_environment: true
-    fallback_if_missing: do_not_show_uncertainty
-  subgroup_color:
-    requires:
-    - subgroup
-    can_query_environment: true
-    fallback_if_missing: use_primary_group_only
-  network_weight:
+  weighted_relationship:
     requires:
     - source
     - target
     - weight
-    enabled_by_default: true
+    can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: draw_unweighted_edges
 function_signature:
   name: plot
@@ -125,8 +259,8 @@ function_signature:
   entry: plot.py
 supports:
   highlight: false
-  composition: false
-  detail_panel: false
+  composition: true
+  detail_panel: true
   batch_output: true
 style_compatibility:
 - default_scientific
@@ -136,15 +270,24 @@ complexity:
 defamiliarization:
   level: U2
 best_for:
-- 'Reusable network_graph cases with roles: source, target, weight'
+- 雷达图批量绘制
+- 'network/node_link_network grammar with roles: source, target, weight'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_雷达图_雷达图批量绘制/outputs/rebuilt.png
+  exists: true
+  width: 2426
+  height: 1537
+  mean_luma: 246.4803
+  stddev_luma: 37.329
 minimal_reproducible_example:
   data: vault/material/plotcase_雷达图_雷达图批量绘制/data_main.csv
   entry: vault/material/plotcase_雷达图_雷达图批量绘制/plot.py

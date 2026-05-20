@@ -1,69 +1,215 @@
 id: plotmaster_009甘特图
 title: 009甘特图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotmaster_009甘特图
   source:
     root: raw/PlotMaster
     original_path: 009甘特图
-scientific_intent: &id001
-- network visual grammar
-- general_figure
-- network
-- ggplot2
-intent: *id001
+scientific_intent:
+- show relationships among entities
+- highlight modules or weighted links
+- 'case-specific title: 009甘特图'
+- 'subtype: node_link_network'
+- 'keyword evidence: network'
+intent:
+- show relationships among entities
+- highlight modules or weighted links
+- 'case-specific title: 009甘特图'
+- 'subtype: node_link_network'
+- 'keyword evidence: network'
+visual_grammar:
+  geometry: network
+  subtype: node_link_network
+  keyword_evidence:
+  - network
 visual_genes:
   layout:
   - node_link
-  - radial_or_layered
+  - radial_or_force_directed
   marks:
   - node
   - edge
   - label
+  - module_boundary
   encodings:
-  - color
-  - weight
+  - node_color
+  - node_size
+  - edge_weight
   - group
   narrative:
   - relationship_structure
+  - module_or_pathway_context
   emphasis:
-  - module_highlight
   - edge_deemphasis
+  - module_highlight
+  - label_budget
+  subtype:
+  - node_link_network
 data_roles:
   required:
     x:
-      kind: inferred
+      kind: quantitative
       semantic: x
+      source: data_main.csv
+      profile: &id001
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        min_sample: 1.0
+        max_sample: 300.0
     y:
-      kind: inferred
+      kind: quantitative
       semantic: y
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.850046663614921'
+        - '0.846858019137289'
+        - '0.815118731907569'
+        - '0.881329055328388'
+        - '0.827032303111628'
+        min_sample: 0.465884299995378
+        max_sample: 0.949518812121823
     value:
-      kind: inferred
+      kind: quantitative
       semantic: value
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.850046663614921'
+        - '0.846858019137289'
+        - '0.815118731907569'
+        - '0.881329055328388'
+        - '0.827032303111628'
+        min_sample: 0.465884299995378
+        max_sample: 0.949518812121823
   optional:
     group:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+        examples:
+        - Prostate
     label:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+        examples:
+        - Prostate
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     source:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        min_sample: 1.0
+        max_sample: 300.0
     target:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.850046663614921'
+        - '0.846858019137289'
+        - '0.815118731907569'
+        - '0.881329055328388'
+        - '0.827032303111628'
+        min_sample: 0.465884299995378
+        max_sample: 0.949518812121823
     weight:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.850046663614921'
+        - '0.846858019137289'
+        - '0.815118731907569'
+        - '0.881329055328388'
+        - '0.827032303111628'
+        min_sample: 0.465884299995378
+        max_sample: 0.949518812121823
     lower:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.823055827257935'
+        - '0.819867182780303'
+        - '0.788127895550583'
+        - '0.854338218971402'
+        - '0.800041466754642'
+        min_sample: 0.438893463638392
+        max_sample: 0.922527975764837
     upper:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.8770374999719069'
+        - '0.8738488554942749'
+        - '0.842109568264555'
+        - '0.908319891685374'
+        - '0.854023139468614'
+        min_sample: 0.492875136352364
+        max_sample: 0.976509648478809
 required_data:
 - x
 - y
@@ -77,41 +223,49 @@ optional_data:
 - weight
 - lower
 - upper
-optional_modules:
-  detail_panel:
-    requires:
-    - group
-    - sample_x
-    - sample_y
-    can_query_environment: true
-    fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
-    - group
+data_profile:
+  main_csv:
+    columns:
+    - x
+    - y
     - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
-  uncertainty_interval:
-    requires_any:
-    - - lower
-      - upper
-    - - se
-    - - ci_low
-      - ci_high
-    can_query_environment: true
-    fallback_if_missing: do_not_show_uncertainty
-  subgroup_color:
-    requires:
-    - subgroup
-    can_query_environment: true
-    fallback_if_missing: use_primary_group_only
-  network_weight:
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    row_count_sampled: 300
+    profiles:
+      x: *id001
+      y: *id002
+      value: *id003
+      group: *id004
+      label: *id005
+      facet: *id006
+      source: *id007
+      target: *id008
+      weight: *id009
+      lower: *id010
+      upper: *id011
+  optional_csv: null
+optional_modules:
+  weighted_relationship:
     requires:
     - source
     - target
     - weight
-    enabled_by_default: true
+    can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: draw_unweighted_edges
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
 function_signature:
   name: plot
   arguments:
@@ -135,15 +289,24 @@ complexity:
 defamiliarization:
   level: U2
 best_for:
-- 'Reusable network cases with roles: x, y, value'
+- 009甘特图
+- 'network/node_link_network grammar with roles: x, y, value'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotmaster_009甘特图/outputs/rebuilt.png
+  exists: true
+  width: 1440
+  height: 1008
+  mean_luma: 234.0612
+  stddev_luma: 25.8819
 minimal_reproducible_example:
   data: vault/material/plotmaster_009甘特图/data_main.csv
   entry: vault/material/plotmaster_009甘特图/plot.py

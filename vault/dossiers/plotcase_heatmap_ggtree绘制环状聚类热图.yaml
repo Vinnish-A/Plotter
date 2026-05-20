@@ -1,0 +1,279 @@
+id: plotcase_heatmap_ggtree绘制环状聚类热图
+title: ggtree绘制环状聚类热图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
+origin:
+  case_dir: vault/material/plotcase_heatmap_ggtree绘制环状聚类热图
+  source:
+    root: raw/plotcase_export
+    original_path: heatmap\ggtree绘制环状聚类热图
+scientific_intent:
+- show hierarchy or phylogenetic structure with attached annotations
+- 'case-specific title: ggtree绘制环状聚类热图'
+- 'subtype: phylogenetic_tree'
+- 'keyword evidence: ggtree'
+- 'keyword evidence: tree'
+intent:
+- show hierarchy or phylogenetic structure with attached annotations
+- 'case-specific title: ggtree绘制环状聚类热图'
+- 'subtype: phylogenetic_tree'
+- 'keyword evidence: ggtree'
+- 'keyword evidence: tree'
+visual_grammar:
+  geometry: tree
+  subtype: phylogenetic_tree
+  keyword_evidence:
+  - ggtree
+  - tree
+visual_genes:
+  layout:
+  - tree_backbone
+  - attached_data_tracks
+  marks:
+  - branch
+  - tip
+  - label
+  - annotation_tile
+  encodings:
+  - branch_length
+  - clade
+  - tip_annotation
+  narrative:
+  - hierarchical_relationship
+  - clade_context
+  emphasis:
+  - clade_highlight
+  - track_alignment
+  subtype:
+  - phylogenetic_tree
+data_roles:
+  required:
+    node_id:
+      kind: categorical
+      semantic: node_id
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - N1
+        - N2
+        - N3
+        - N4
+        - N5
+    parent_id:
+      kind: categorical
+      semantic: parent_id
+      source: data_main.csv
+      profile: &id002
+        kind: categorical
+        missing_rate_sample: 0.1111
+        cardinality_sample: 4
+        examples:
+        - N1
+        - N2
+        - N3
+        - N4
+    label:
+      kind: categorical
+      semantic: label
+      source: data_main.csv
+      profile: &id003
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - Tip 1
+        - Tip 2
+        - Tip 3
+        - Tip 4
+        - Tip 5
+  optional:
+    branch_length:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - '0.13'
+        - '0.16'
+        - '0.19'
+        - '0.22'
+        - '0.25'
+        min_sample: 0.13
+        max_sample: 0.37
+    tip_group:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - G1
+        - G2
+        - G0
+    track:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+        examples:
+        - ann
+    track_value:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - '0.841'
+        - '0.909'
+        - '0.141'
+        - '-0.757'
+        - '-0.959'
+        min_sample: -0.959
+        max_sample: 0.989
+    track_class:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    heatmap_value:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+        examples:
+        - '0.54'
+        - '-0.416'
+        - '-0.99'
+        - '-0.654'
+        - '0.284'
+        min_sample: -0.99
+        max_sample: 0.96
+required_data:
+- node_id
+- parent_id
+- label
+optional_data:
+- branch_length
+- tip_group
+- track
+- track_value
+- track_class
+- heatmap_value
+data_profile:
+  main_csv:
+    columns:
+    - node_id
+    - parent_id
+    - label
+    - branch_length
+    - tip_group
+    - track
+    - track_value
+    - track_class
+    - heatmap_value
+    row_count_sampled: 9
+    profiles:
+      node_id: *id001
+      parent_id: *id002
+      label: *id003
+      branch_length: *id004
+      tip_group: *id005
+      track: *id006
+      track_value: *id007
+      track_class: *id008
+      heatmap_value: *id009
+  optional_csv: null
+optional_modules:
+  annotation_track:
+    requires:
+    - group
+    - value
+    can_query_environment: true
+    available_from_main_csv: false
+    fallback_if_missing: use_plain_axis
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: true
+  composition: true
+  detail_panel: false
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: high
+defamiliarization:
+  level: U2
+best_for:
+- ggtree绘制环状聚类热图
+- 'tree/phylogenetic_tree grammar with roles: node_id, parent_id, label'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+failure_cases:
+- Missing output image
+- Blank image
+- Wrong geometry selected by title/metadata conflict
+- Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/outputs/rebuilt.png
+  exists: true
+  width: 1708
+  height: 1420
+  mean_luma: 239.2227
+  stddev_luma: 43.7363
+minimal_reproducible_example:
+  data: vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/data_main.csv
+  entry: vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/plot.py
+  preview: vault/material/plotcase_heatmap_ggtree绘制环状聚类热图/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: false
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null

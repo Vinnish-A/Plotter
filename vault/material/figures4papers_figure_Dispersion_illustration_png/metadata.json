@@ -66,16 +66,6 @@
     ],
     "special": []
   },
-  "folded": {
-    "status": "folded_duplicate",
-    "canonical_case": "figures4papers_figure_Dispersion_idea_png",
-    "reason": "exact duplicate primary code hash",
-    "folded_at": "2026-05-17T06:59:26.699908+00:00"
-  },
-  "folding": {
-    "status": "live_restored",
-    "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
-  },
   "rebuild_from_original_code": {
     "status": "success",
     "script": "case_level_rendered_output",
@@ -105,9 +95,9 @@
   "vault_status": {
     "live": true,
     "folded": false,
-    "restored_from_fold": true,
+    "restored_from_fold": false,
     "canonical_case": null,
-    "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
+    "reason": "material asset is an accepted unfolded Vault case"
   },
   "rebuild_class": {
     "source_code_rebuild": false,

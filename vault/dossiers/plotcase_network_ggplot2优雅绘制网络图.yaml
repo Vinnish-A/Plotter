@@ -1,0 +1,308 @@
+id: plotcase_network_ggplot2优雅绘制网络图
+title: ggplot2优雅绘制网络图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
+origin:
+  case_dir: vault/material/plotcase_network_ggplot2优雅绘制网络图
+  source:
+    root: raw/plotcase_export
+    original_path: network\ggplot2优雅绘制网络图
+scientific_intent:
+- show relationships among entities
+- highlight modules or weighted links
+- 'case-specific title: ggplot2优雅绘制网络图'
+- 'subtype: node_link_network'
+- 'keyword evidence: 网络'
+- 'keyword evidence: network'
+intent:
+- show relationships among entities
+- highlight modules or weighted links
+- 'case-specific title: ggplot2优雅绘制网络图'
+- 'subtype: node_link_network'
+- 'keyword evidence: 网络'
+- 'keyword evidence: network'
+visual_grammar:
+  geometry: network
+  subtype: node_link_network
+  keyword_evidence:
+  - 网络
+  - network
+visual_genes:
+  layout:
+  - node_link
+  - radial_or_force_directed
+  marks:
+  - node
+  - edge
+  - label
+  - module_boundary
+  encodings:
+  - node_color
+  - node_size
+  - edge_weight
+  - group
+  narrative:
+  - relationship_structure
+  - module_or_pathway_context
+  emphasis:
+  - edge_deemphasis
+  - module_highlight
+  - label_budget
+  subtype:
+  - node_link_network
+data_roles:
+  required:
+    source:
+      kind: categorical
+      semantic: source
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+        examples:
+        - N1
+        - N2
+        - N3
+        - N4
+        - N5
+    target:
+      kind: categorical
+      semantic: target
+      source: data_main.csv
+      profile: &id002
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+        examples:
+        - N2
+        - N3
+        - N4
+        - N5
+        - N6
+    weight:
+      kind: quantitative
+      semantic: weight
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+        examples:
+        - '0.36'
+        - '0.47'
+        - '0.58'
+        - '0.69'
+        - '0.8'
+        min_sample: 0.36
+        max_sample: 1.02
+  optional:
+    node_id:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+        examples:
+        - N1
+        - N2
+        - N3
+        - N4
+        - N5
+    node_label:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+        examples:
+        - Node 1
+        - Node 2
+        - Node 3
+        - Node 4
+        - Node 5
+    node_group:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    node_size:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    edge_group:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    edge_direction:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    layout_x:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    layout_y:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+required_data:
+- source
+- target
+- weight
+optional_data:
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+data_profile:
+  main_csv:
+    columns:
+    - source
+    - target
+    - weight
+    - node_id
+    - node_label
+    - node_group
+    - node_size
+    - edge_group
+    - edge_direction
+    - layout_x
+    - layout_y
+    - source_group
+    - target_group
+    row_count_sampled: 7
+    profiles:
+      source: *id001
+      target: *id002
+      weight: *id003
+      node_id: *id004
+      node_label: *id005
+      node_group: *id006
+      node_size: *id007
+      edge_group: *id008
+      edge_direction: *id009
+      layout_x: *id010
+      layout_y: *id011
+      source_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - G1
+        - G2
+        - G0
+      target_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - G2
+        - G0
+        - G1
+  optional_csv: null
+optional_modules:
+  weighted_relationship:
+    requires:
+    - source
+    - target
+    - weight
+    can_query_environment: true
+    available_from_main_csv: true
+    fallback_if_missing: draw_unweighted_edges
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: false
+  composition: true
+  detail_panel: true
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: high
+defamiliarization:
+  level: U2
+best_for:
+- ggplot2优雅绘制网络图
+- 'network/node_link_network grammar with roles: source, target, weight'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+failure_cases:
+- Missing output image
+- Blank image
+- Wrong geometry selected by title/metadata conflict
+- Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_network_ggplot2优雅绘制网络图/outputs/rebuilt.png
+  exists: true
+  width: 1008
+  height: 1008
+  mean_luma: 245.6959
+  stddev_luma: 30.3758
+minimal_reproducible_example:
+  data: vault/material/plotcase_network_ggplot2优雅绘制网络图/data_main.csv
+  entry: vault/material/plotcase_network_ggplot2优雅绘制网络图/plot.py
+  preview: vault/material/plotcase_network_ggplot2优雅绘制网络图/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null

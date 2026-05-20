@@ -70,12 +70,6 @@
       "tidyverse"
     ]
   },
-  "folded": {
-    "status": "folded_duplicate",
-    "canonical_case": "plotcase_heatmap_tidyheatmaps轻松绘制热图",
-    "reason": "exact duplicate primary code hash",
-    "folded_at": "2026-05-17T06:59:26.606632+00:00"
-  },
   "rebuild_from_original_code": {
     "status": "custom_required",
     "script": "case_level_rendered_output",
@@ -109,11 +103,11 @@
     "data_main_note": "data_main.csv columns match required visual grammar roles; raw case data remains in raw/ or data_raw/ for evidence."
   },
   "vault_status": {
-    "live": false,
-    "folded": true,
+    "live": true,
+    "folded": false,
     "restored_from_fold": false,
-    "canonical_case": "plotcase_heatmap_tidyheatmaps轻松绘制热图",
-    "reason": "exact duplicate primary code hash"
+    "canonical_case": null,
+    "reason": "material asset is an accepted unfolded Vault case"
   },
   "rebuild_class": {
     "source_code_rebuild": false,

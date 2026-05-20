@@ -1,0 +1,299 @@
+id: plotcase_heatmap_Mantel检验热图
+title: Mantel检验热图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
+origin:
+  case_dir: vault/material/plotcase_heatmap_Mantel检验热图
+  source:
+    root: raw/plotcase_export
+    original_path: heatmap\Mantel检验热图
+scientific_intent:
+- compare matrix-like values
+- show clustered or grouped patterns
+- 'case-specific title: Mantel检验热图'
+- 'subtype: annotated_heatmap'
+- 'keyword evidence: 热图'
+- 'keyword evidence: heatmap'
+intent:
+- compare matrix-like values
+- show clustered or grouped patterns
+- 'case-specific title: Mantel检验热图'
+- 'subtype: annotated_heatmap'
+- 'keyword evidence: 热图'
+- 'keyword evidence: heatmap'
+visual_grammar:
+  geometry: heatmap
+  subtype: annotated_heatmap
+  keyword_evidence:
+  - 热图
+  - heatmap
+visual_genes:
+  layout:
+  - matrix_body
+  - annotation_tracks
+  - optional_row_or_column_summaries
+  marks:
+  - tile
+  - text
+  - strip
+  - dendrogram_or_separator
+  encodings:
+  - row
+  - column
+  - fill
+  - annotation_color
+  narrative:
+  - pattern_detection
+  - cluster_or_group_context
+  emphasis:
+  - body_first
+  - calm_annotation_tracks
+  - aligned_label_rails
+  subtype:
+  - annotated_heatmap
+data_roles:
+  required:
+    row_id:
+      kind: categorical
+      semantic: row_id
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+        examples:
+        - R1
+        - R2
+        - R3
+        - R4
+        - R5
+    column_id:
+      kind: categorical
+      semantic: column_id
+      source: data_main.csv
+      profile: &id002
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 5
+        examples:
+        - C1
+        - C2
+        - C3
+        - C4
+        - C5
+    value:
+      kind: quantitative
+      semantic: value
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 30
+        examples:
+        - '1.357'
+        - '1.02'
+        - '0.55'
+        - '0.063'
+        - '-0.322'
+        min_sample: -0.66
+        max_sample: 1.875
+  optional:
+    row_group:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - RG1
+        - RG2
+        - RG0
+    column_group:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - CG1
+        - CG0
+    annotation_track:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+        examples:
+        - class
+    annotation_value:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+        examples:
+        - A2
+        - A3
+        - A0
+        - A1
+    label:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+    size_value:
+      kind: quantitative
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+        examples:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        min_sample: 1.0
+        max_sample: 6.0
+    facet:
+      kind: categorical
+      use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
+required_data:
+- row_id
+- column_id
+- value
+optional_data:
+- row_group
+- column_group
+- annotation_track
+- annotation_value
+- label
+- size_value
+- facet
+data_profile:
+  main_csv:
+    columns:
+    - row_id
+    - column_id
+    - value
+    - row_group
+    - column_group
+    - annotation_track
+    - annotation_value
+    - label
+    - size_value
+    - facet
+    row_count_sampled: 30
+    profiles:
+      row_id: *id001
+      column_id: *id002
+      value: *id003
+      row_group: *id004
+      column_group: *id005
+      annotation_track: *id006
+      annotation_value: *id007
+      label: *id008
+      size_value: *id009
+      facet: *id010
+  optional_csv: null
+optional_modules:
+  detail_panel:
+    requires:
+    - group
+    - sample_x
+    - sample_y
+    can_query_environment: true
+    available_from_main_csv: false
+    fallback_if_missing: disable_detail_panel
+  annotation_track:
+    requires:
+    - group
+    - value
+    can_query_environment: true
+    available_from_main_csv: false
+    fallback_if_missing: use_plain_axis
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
+function_signature:
+  name: plot
+  arguments:
+  - data
+  - mapping
+  - focus
+  - layout
+  - style
+  - output
+  entry: plot.py
+supports:
+  highlight: true
+  composition: true
+  detail_panel: true
+  batch_output: true
+style_compatibility:
+- default_scientific
+- blue_white_red_dense
+complexity:
+  level: medium
+defamiliarization:
+  level: U2
+best_for:
+- Mantel检验热图
+- 'heatmap/annotated_heatmap grammar with roles: row_id, column_id, value'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+failure_cases:
+- Missing output image
+- Blank image
+- Wrong geometry selected by title/metadata conflict
+- Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotcase_heatmap_Mantel检验热图/outputs/rebuilt.png
+  exists: true
+  width: 1501
+  height: 971
+  mean_luma: 232.557
+  stddev_luma: 51.5732
+minimal_reproducible_example:
+  data: vault/material/plotcase_heatmap_Mantel检验热图/data_main.csv
+  entry: vault/material/plotcase_heatmap_Mantel检验热图/plot.py
+  preview: vault/material/plotcase_heatmap_Mantel检验热图/outputs/rebuilt.png
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: true
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null

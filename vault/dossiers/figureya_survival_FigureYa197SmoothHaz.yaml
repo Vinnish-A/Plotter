@@ -1,70 +1,205 @@
 id: figureya_survival_FigureYa197SmoothHaz
 title: FigureYa197SmoothHaz
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/figureya_survival_FigureYa197SmoothHaz
   source:
     root: raw/FigureYa
     original_path: FigureYa197SmoothHaz
-scientific_intent: &id001
-- bar visual grammar
-- general_figure
-- bar
-- ggplot2
-intent: *id001
+scientific_intent:
+- render reusable map visual grammar
+- 'case-specific title: FigureYa197SmoothHaz'
+- 'subtype: map'
+- 'keyword evidence: map'
+intent:
+- render reusable map visual grammar
+- 'case-specific title: FigureYa197SmoothHaz'
+- 'subtype: map'
+- 'keyword evidence: map'
+visual_grammar:
+  geometry: map
+  subtype: map
+  keyword_evidence:
+  - map
 visual_genes:
   layout:
-  - cartesian
+  - map_body
   marks:
-  - summary_mark
-  - interval
-  - group
+  - primary_mark
+  - label
+  - legend
   encodings:
   - x
   - y
-  - color
-  - size
+  - value
+  - group
   narrative:
-  - group_comparison
+  - map_specific_comparison
   emphasis:
-  - focus_halo
-  - callout
-  - reserved_label_space
+  - focus_layer
+  - clear_legend
+  subtype:
+  - map
 data_roles:
   required:
     x:
-      kind: inferred
+      kind: quantitative
       semantic: x
+      source: data_main.csv
+      profile: &id001
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - '1'
+        - '0'
+        min_sample: 0.0
+        max_sample: 1.0
     y:
-      kind: inferred
+      kind: quantitative
       semantic: y
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 285
+        examples:
+        - '754'
+        - '53'
+        - '2703'
+        - '530'
+        - '414'
+        min_sample: 0.0
+        max_sample: 4967.0
     value:
-      kind: inferred
+      kind: quantitative
       semantic: value
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 285
+        examples:
+        - '754'
+        - '53'
+        - '2703'
+        - '530'
+        - '414'
+        min_sample: 0.0
+        max_sample: 4967.0
   optional:
     group:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - MALE
+        - FEMALE
     label:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - MALE
+        - FEMALE
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     source:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - '1'
+        - '0'
+        min_sample: 0.0
+        max_sample: 1.0
     target:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 285
+        examples:
+        - '754'
+        - '53'
+        - '2703'
+        - '530'
+        - '414'
+        min_sample: 0.0
+        max_sample: 4967.0
     weight:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 285
+        examples:
+        - '754'
+        - '53'
+        - '2703'
+        - '530'
+        - '414'
+        min_sample: 0.0
+        max_sample: 4967.0
     lower:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 285
+        examples:
+        - '512.0144229549832'
+        - '-188.98557704501684'
+        - '2461.0144229549833'
+        - '288.01442295498316'
+        - '172.01442295498316'
+        min_sample: -241.98557704501684
+        max_sample: 4725.014422954983
     upper:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 285
+        examples:
+        - '995.9855770450168'
+        - '294.98557704501684'
+        - '2944.9855770450167'
+        - '771.9855770450168'
+        - '655.9855770450168'
+        min_sample: 241.98557704501684
+        max_sample: 5208.985577045017
 required_data:
 - x
 - y
@@ -78,41 +213,49 @@ optional_data:
 - weight
 - lower
 - upper
-optional_modules:
-  detail_panel:
-    requires:
-    - group
-    - sample_x
-    - sample_y
-    can_query_environment: true
-    fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
-    - group
+data_profile:
+  main_csv:
+    columns:
+    - x
+    - y
     - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
-  uncertainty_interval:
-    requires_any:
-    - - lower
-      - upper
-    - - se
-    - - ci_low
-      - ci_high
-    can_query_environment: true
-    fallback_if_missing: do_not_show_uncertainty
-  subgroup_color:
-    requires:
-    - subgroup
-    can_query_environment: true
-    fallback_if_missing: use_primary_group_only
-  network_weight:
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    row_count_sampled: 300
+    profiles:
+      x: *id001
+      y: *id002
+      value: *id003
+      group: *id004
+      label: *id005
+      facet: *id006
+      source: *id007
+      target: *id008
+      weight: *id009
+      lower: *id010
+      upper: *id011
+  optional_csv: null
+optional_modules:
+  weighted_relationship:
     requires:
     - source
     - target
     - weight
-    enabled_by_default: true
+    can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: draw_unweighted_edges
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
 function_signature:
   name: plot
   arguments:
@@ -134,17 +277,26 @@ style_compatibility:
 complexity:
   level: low
 defamiliarization:
-  level: U1
+  level: U2
 best_for:
-- 'Reusable bar cases with roles: x, y, value'
+- FigureYa197SmoothHaz
+- 'map/map grammar with roles: x, y, value'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/figureya_survival_FigureYa197SmoothHaz/outputs/rebuilt.png
+  exists: true
+  width: 432
+  height: 576
+  mean_luma: 245.1677
+  stddev_luma: 41.5534
 minimal_reproducible_example:
   data: vault/material/figureya_survival_FigureYa197SmoothHaz/data_main.csv
   entry: vault/material/figureya_survival_FigureYa197SmoothHaz/plot.py

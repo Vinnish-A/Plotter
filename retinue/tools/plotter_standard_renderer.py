@@ -79,7 +79,7 @@ def _finish(fig, ax, title: str):
             ax.spines[spine].set_visible(False)
     fig.tight_layout()
     Path("outputs").mkdir(exist_ok=True)
-    fig.savefig("outputs/rebuilt.png", bbox_inches="tight")
+    fig.savefig("outputs/rebuilt.png")
     plt.close(fig)
 
 

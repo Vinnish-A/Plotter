@@ -1,68 +1,214 @@
 id: plotmaster_056复杂网络图
 title: 056复杂网络图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotmaster_056复杂网络图
   source:
     root: raw/PlotMaster
     original_path: 056复杂网络图
-scientific_intent: &id001
-- 3d_manifold visual grammar
-- general_figure
-- 3d_manifold
-- ggplot2
-intent: *id001
+scientific_intent:
+- compare two quantitative variables
+- identify focus points or quadrants
+- 'case-specific title: 056复杂网络图'
+- 'subtype: pca_or_manifold'
+- 'keyword evidence: manifold'
+- 'keyword evidence: 3d'
+intent:
+- compare two quantitative variables
+- identify focus points or quadrants
+- 'case-specific title: 056复杂网络图'
+- 'subtype: pca_or_manifold'
+- 'keyword evidence: manifold'
+- 'keyword evidence: 3d'
+visual_grammar:
+  geometry: scatter
+  subtype: pca_or_manifold
+  keyword_evidence:
+  - manifold
+  - 3d
 visual_genes:
   layout:
-  - cartesian
+  - cartesian_body
+  - optional_focus_layer
   marks:
   - point
+  - threshold_line
+  - label
+  - optional_density_or_marginal
   encodings:
   - x
   - y
   - color
   - size
+  - label
   narrative:
   - global_comparison
+  - outlier_or_focus_identification
   emphasis:
   - focus_halo
   - callout
   - reserved_label_space
+  subtype:
+  - pca_or_manifold
 data_roles:
   required:
     x:
-      kind: inferred
+      kind: text
       semantic: x
+      source: data_main.csv
+      profile: &id001
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - source_1
+        - source_2
+        - source_3
+        - source_4
+        - source_5
     y:
-      kind: inferred
+      kind: categorical
       semantic: y
+      source: data_main.csv
+      profile: &id002
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 12
+        examples:
+        - target_1
+        - target_2
+        - target_3
+        - target_4
+        - target_5
     value:
-      kind: inferred
+      kind: quantitative
       semantic: value
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 299
+        examples:
+        - '1.0'
+        - '2.0'
+        - '3.0'
+        - '4.0'
+        - '5.0'
+        min_sample: 1.0
+        max_sample: 299.0
   optional:
     group:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     label:
-      kind: inferred
+      kind: text
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - item_1
+        - item_2
+        - item_3
+        - item_4
+        - item_5
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     source:
-      kind: inferred
+      kind: text
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - source_1
+        - source_2
+        - source_3
+        - source_4
+        - source_5
     target:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 12
+        examples:
+        - target_1
+        - target_2
+        - target_3
+        - target_4
+        - target_5
     weight:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 299
+        examples:
+        - '1.0'
+        - '2.0'
+        - '3.0'
+        - '4.0'
+        - '5.0'
+        min_sample: 1.0
+        max_sample: 299.0
     lower:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 299
+        examples:
+        - '-19.46607224150131'
+        - '-18.46607224150131'
+        - '-17.46607224150131'
+        - '-16.46607224150131'
+        - '-15.466072241501308'
+        min_sample: -19.46607224150131
+        max_sample: 278.5339277584987
     upper:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 299
+        examples:
+        - '21.46607224150131'
+        - '22.46607224150131'
+        - '23.46607224150131'
+        - '24.46607224150131'
+        - '25.46607224150131'
+        min_sample: 21.46607224150131
+        max_sample: 319.4660722415013
 required_data:
 - x
 - y
@@ -76,6 +222,34 @@ optional_data:
 - weight
 - lower
 - upper
+data_profile:
+  main_csv:
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    row_count_sampled: 300
+    profiles:
+      x: *id001
+      y: *id002
+      value: *id003
+      group: *id004
+      label: *id005
+      facet: *id006
+      source: *id007
+      target: *id008
+      weight: *id009
+      lower: *id010
+      upper: *id011
+  optional_csv: null
 optional_modules:
   detail_panel:
     requires:
@@ -83,13 +257,8 @@ optional_modules:
     - sample_x
     - sample_y
     can_query_environment: true
+    available_from_main_csv: false
     fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
-    - group
-    - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
   uncertainty_interval:
     requires_any:
     - - lower
@@ -98,19 +267,28 @@ optional_modules:
     - - ci_low
       - ci_high
     can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: do_not_show_uncertainty
   subgroup_color:
     requires:
     - subgroup
     can_query_environment: true
+    available_from_main_csv: false
     fallback_if_missing: use_primary_group_only
-  network_weight:
+  weighted_relationship:
     requires:
     - source
     - target
     - weight
-    enabled_by_default: true
+    can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: draw_unweighted_edges
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
 function_signature:
   name: plot
   arguments:
@@ -123,8 +301,8 @@ function_signature:
   entry: plot.py
 supports:
   highlight: true
-  composition: false
-  detail_panel: false
+  composition: true
+  detail_panel: true
   batch_output: true
 style_compatibility:
 - default_scientific
@@ -132,17 +310,26 @@ style_compatibility:
 complexity:
   level: high
 defamiliarization:
-  level: U2
+  level: U1
 best_for:
-- 'Reusable 3d_manifold cases with roles: x, y, value'
+- 056复杂网络图
+- 'scatter/pca_or_manifold grammar with roles: x, y, value'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotmaster_056复杂网络图/outputs/rebuilt.png
+  exists: true
+  width: 1440
+  height: 720
+  mean_luma: 246.6663
+  stddev_luma: 26.4761
 minimal_reproducible_example:
   data: vault/material/plotmaster_056复杂网络图/data_main.csv
   entry: vault/material/plotmaster_056复杂网络图/plot.py

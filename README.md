@@ -77,11 +77,11 @@ Cabal tools also handle folding, visual grammar refresh, metadata refinement, an
 
 ### Vault
 
-`vault/` is the accepted asset memory. It stores live standardized cases and the review evidence that explains why those cases are accepted, folded, or excluded.
+`vault/` is the accepted asset memory. It stores unfolded standardized material cases and the review evidence that explains why older or redundant cases were folded or excluded.
 
-Vault has 8 storage zones plus 2 compatibility wrappers:
+Vault has 8 storage zones:
 
-1. `vault/material/`: live accepted cases; this is the main asset store.
+1. `vault/material/`: unfolded accepted cases; this is the main asset store and every case here must be live.
 2. `vault/review/`: visual audit manifests, contact sheets, similarity outputs, and Cabal review records.
 3. `vault/folded_assets/`: folded or quarantined assets that should not appear as primary UI assets.
 4. `vault/dossiers/`: reusable template or visual-grammar dossiers.
@@ -90,12 +90,7 @@ Vault has 8 storage zones plus 2 compatibility wrappers:
 7. `vault/successes/`: accepted generation or rebuild success records.
 8. `vault/failures/`: failure records that document reproducibility or grammar boundaries.
 
-Compatibility wrappers:
-
-- `vault/ui/`: wrapper for the top-level `ui/` implementation.
-- `vault/agent_tests/`: wrapper for generated figure tests now owned by `bastard/tests/`.
-
-Vault is not the place to dump raw evidence. Accepted live assets belong in `vault/material/`, and each live case should remain rebuildable through its declared metadata and standard script.
+Vault is not the place to dump raw evidence. Accepted unfolded assets belong in `vault/material/`, folded memory belongs in `vault/folded_assets/`, and each material case should remain rebuildable through its declared metadata and standard script.
 
 ### Bastard
 

@@ -73,16 +73,6 @@
     "row_count": 36,
     "note": "CSV-only abstract graph grammar interface; compact first-pass rebuild, not a pixel match."
   },
-  "folded": {
-    "status": "folded_visual_redundancy",
-    "canonical_case": "plotmaster_060复杂环形互作网络图",
-    "reason": "visual_redundancy:network:network",
-    "folded_at": "2026-05-17T12:54:06.042070+00:00"
-  },
-  "folding": {
-    "status": "live_restored",
-    "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
-  },
   "rebuild_from_original_code": {
     "status": "success",
     "script": "case_level_rendered_output",
@@ -122,9 +112,9 @@
   "vault_status": {
     "live": true,
     "folded": false,
-    "restored_from_fold": true,
+    "restored_from_fold": false,
     "canonical_case": null,
-    "reason": "restored as distinctive 3D/manifold visual grammar from figures4papers"
+    "reason": "material asset is an accepted unfolded Vault case"
   },
   "rebuild_class": {
     "source_code_rebuild": false,

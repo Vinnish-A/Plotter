@@ -1,0 +1,24 @@
+[build] command: /home/vinnish/miniconda3/bin/python plot.py
+[stdout]
+[stderr]
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 31665 (\N{CJK UNIFIED IDEOGRAPH-7BB1}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 32447 (\N{CJK UNIFIED IDEOGRAPH-7EBF}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 22270 (\N{CJK UNIFIED IDEOGRAPH-56FE}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 25955 (\N{CJK UNIFIED IDEOGRAPH-6563}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:80: UserWarning: Glyph 28857 (\N{CJK UNIFIED IDEOGRAPH-70B9}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 31665 (\N{CJK UNIFIED IDEOGRAPH-7BB1}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 32447 (\N{CJK UNIFIED IDEOGRAPH-7EBF}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 22270 (\N{CJK UNIFIED IDEOGRAPH-56FE}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 25955 (\N{CJK UNIFIED IDEOGRAPH-6563}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png")
+/mnt/f/Plotter/retinue/tools/plotter_standard_renderer.py:82: UserWarning: Glyph 28857 (\N{CJK UNIFIED IDEOGRAPH-70B9}) missing from font(s) DejaVu Sans.
+  fig.savefig("outputs/rebuilt.png")
+[result] {"case": "/mnt/f/Plotter/vault/material/plotmaster_001箱线图+散点图", "status": "build_success", "duration_seconds": 0.922, "returncode": 0, "visual_check": {"case": "/mnt/f/Plotter/vault/material/plotmaster_001箱线图+散点图", "output": "outputs/rebuilt.png", "ok": true, "checks": {"file_exists": true, "non_empty_image": true, "minimum_resolution": true, "not_blank": true, "width": 1280, "height": 800, "mean_stddev": 51.6801}}}

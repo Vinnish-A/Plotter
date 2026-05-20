@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Vault dossiers and the retrieval index for live material cases."""
+"""Build Vault dossiers and the retrieval index for material cases."""
 
 from __future__ import annotations
 

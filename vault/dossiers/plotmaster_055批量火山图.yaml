@@ -1,68 +1,222 @@
 id: plotmaster_055批量火山图
 title: 055批量火山图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotmaster_055批量火山图
   source:
     root: raw/PlotMaster
     original_path: 055批量火山图
-scientific_intent: &id001
-- scatter visual grammar
-- general_figure
-- scatter
-- ggplot2
-intent: *id001
+scientific_intent:
+- compare two quantitative variables
+- identify focus points or quadrants
+- 'case-specific title: 055批量火山图'
+- 'subtype: volcano'
+- 'keyword evidence: 火山'
+- 'keyword evidence: volcano'
+intent:
+- compare two quantitative variables
+- identify focus points or quadrants
+- 'case-specific title: 055批量火山图'
+- 'subtype: volcano'
+- 'keyword evidence: 火山'
+- 'keyword evidence: volcano'
+visual_grammar:
+  geometry: scatter
+  subtype: volcano
+  keyword_evidence:
+  - 火山
+  - volcano
 visual_genes:
   layout:
-  - cartesian
+  - cartesian_body
+  - optional_focus_layer
   marks:
   - point
+  - threshold_line
+  - label
+  - optional_density_or_marginal
   encodings:
   - x
   - y
   - color
   - size
+  - label
   narrative:
   - global_comparison
+  - outlier_or_focus_identification
   emphasis:
   - focus_halo
   - callout
   - reserved_label_space
+  subtype:
+  - volcano
 data_roles:
   required:
     x:
-      kind: inferred
+      kind: quantitative
       semantic: x
+      source: data_main.csv
+      profile: &id001
+        kind: quantitative
+        missing_rate_sample: 0.0033
+        cardinality_sample: 299
+        examples:
+        - '1.0'
+        - '2.0'
+        - '3.0'
+        - '4.0'
+        - '5.0'
+        min_sample: 1.0
+        max_sample: 299.0
     y:
-      kind: inferred
+      kind: quantitative
       semantic: y
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0133
+        cardinality_sample: 296
+        examples:
+        - '0.202931054'
+        - '0.225368853'
+        - '0.810335784'
+        - '1.153754022'
+        - '0.306293866'
+        min_sample: 0.000134262
+        max_sample: 28.16808193
     value:
-      kind: inferred
+      kind: quantitative
       semantic: value
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0133
+        cardinality_sample: 296
+        examples:
+        - '1.15843233'
+        - '2.71580132'
+        - '0.357103858'
+        - '1.708862089'
+        - '13.12687995'
+        min_sample: 0.003722273
+        max_sample: 24.54193537
   optional:
     group:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     label:
-      kind: inferred
+      kind: text
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - item_1
+        - item_2
+        - item_3
+        - item_4
+        - item_5
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     source:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - nan
+        - '1.0'
+        - '2.0'
+        - '3.0'
+        - '4.0'
+        min_sample: 1.0
+        max_sample: 299.0
     target:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 297
+        examples:
+        - nan
+        - '0.202931054'
+        - '0.225368853'
+        - '0.810335784'
+        - '1.153754022'
+        min_sample: 0.000134262
+        max_sample: 28.16808193
     weight:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 297
+        examples:
+        - '1.0'
+        - '1.15843233'
+        - '2.71580132'
+        - '0.357103858'
+        - '1.708862089'
+        min_sample: 0.003722273
+        max_sample: 24.54193537
     lower:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 297
+        examples:
+        - '-0.4753467051618347'
+        - '0.6830856248381652'
+        - '2.2404546148381654'
+        - '-0.1182428471618347'
+        - '1.2335153838381652'
+        min_sample: -0.4753467051618347
+        max_sample: 24.066588664838168
     upper:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 297
+        examples:
+        - '0.4753467051618347'
+        - '1.6337790351618346'
+        - '3.191148025161835'
+        - '0.8324505631618346'
+        - '2.1842087941618344'
+        min_sample: 0.4753467051618347
+        max_sample: 25.017282075161834
 required_data:
 - x
 - y
@@ -76,6 +230,34 @@ optional_data:
 - weight
 - lower
 - upper
+data_profile:
+  main_csv:
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    row_count_sampled: 300
+    profiles:
+      x: *id001
+      y: *id002
+      value: *id003
+      group: *id004
+      label: *id005
+      facet: *id006
+      source: *id007
+      target: *id008
+      weight: *id009
+      lower: *id010
+      upper: *id011
+  optional_csv: null
 optional_modules:
   detail_panel:
     requires:
@@ -83,13 +265,8 @@ optional_modules:
     - sample_x
     - sample_y
     can_query_environment: true
+    available_from_main_csv: false
     fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
-    - group
-    - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
   uncertainty_interval:
     requires_any:
     - - lower
@@ -98,19 +275,28 @@ optional_modules:
     - - ci_low
       - ci_high
     can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: do_not_show_uncertainty
   subgroup_color:
     requires:
     - subgroup
     can_query_environment: true
+    available_from_main_csv: false
     fallback_if_missing: use_primary_group_only
-  network_weight:
+  weighted_relationship:
     requires:
     - source
     - target
     - weight
-    enabled_by_default: true
+    can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: draw_unweighted_edges
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
 function_signature:
   name: plot
   arguments:
@@ -134,15 +320,24 @@ complexity:
 defamiliarization:
   level: U1
 best_for:
-- 'Reusable scatter cases with roles: x, y, value'
+- 055批量火山图
+- 'scatter/volcano grammar with roles: x, y, value'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotmaster_055批量火山图/outputs/rebuilt.png
+  exists: true
+  width: 720
+  height: 576
+  mean_luma: 238.4916
+  stddev_luma: 46.4281
 minimal_reproducible_example:
   data: vault/material/plotmaster_055批量火山图/data_main.csv
   entry: vault/material/plotmaster_055批量火山图/plot.py

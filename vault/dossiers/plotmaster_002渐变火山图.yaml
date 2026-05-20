@@ -1,68 +1,218 @@
 id: plotmaster_002渐变火山图
 title: 002渐变火山图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotmaster_002渐变火山图
   source:
     root: raw/PlotMaster
     original_path: 002渐变火山图
-scientific_intent: &id001
-- scatter visual grammar
-- general_figure
-- scatter
-- ggplot2
-intent: *id001
+scientific_intent:
+- compare two quantitative variables
+- identify focus points or quadrants
+- 'case-specific title: 002渐变火山图'
+- 'subtype: volcano'
+- 'keyword evidence: 火山'
+intent:
+- compare two quantitative variables
+- identify focus points or quadrants
+- 'case-specific title: 002渐变火山图'
+- 'subtype: volcano'
+- 'keyword evidence: 火山'
+visual_grammar:
+  geometry: scatter
+  subtype: volcano
+  keyword_evidence:
+  - 火山
 visual_genes:
   layout:
-  - cartesian
+  - cartesian_body
+  - optional_focus_layer
   marks:
   - point
+  - threshold_line
+  - label
+  - optional_density_or_marginal
   encodings:
   - x
   - y
   - color
   - size
+  - label
   narrative:
   - global_comparison
+  - outlier_or_focus_identification
   emphasis:
   - focus_halo
   - callout
   - reserved_label_space
+  subtype:
+  - volcano
 data_roles:
   required:
     x:
-      kind: inferred
+      kind: quantitative
       semantic: x
+      source: data_main.csv
+      profile: &id001
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '7201.57821561835'
+        - '1009.4171373789'
+        - '249.11733008828'
+        - '5237.50347892816'
+        - '10838.1037380565'
+        min_sample: 37.118739282141
+        max_sample: 270620.1516182
     y:
-      kind: inferred
+      kind: quantitative
       semantic: y
+      source: data_main.csv
+      profile: &id002
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '2.24406365142853'
+        - '-2.25745415444343'
+        - '3.82947416241995'
+        - '2.55040873229321'
+        - '2.21430006444672'
+        min_sample: -7.92934907165722
+        max_sample: 7.67619035985353
     value:
-      kind: inferred
+      kind: quantitative
       semantic: value
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.200495946519443'
+        - '0.209646854058983'
+        - '0.362326285244109'
+        - '0.256037907055118'
+        - '0.222906470988473'
+        min_sample: 0.153134294521996
+        max_sample: 1.64347230504051
   optional:
     group:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id004
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - Up
+        - Down
     label:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+        examples:
+        - Up
+        - Down
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+        examples: []
     source:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '7201.57821561835'
+        - '1009.4171373789'
+        - '249.11733008828'
+        - '5237.50347892816'
+        - '10838.1037380565'
+        min_sample: 37.118739282141
+        max_sample: 270620.1516182
     target:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id008
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '2.24406365142853'
+        - '-2.25745415444343'
+        - '3.82947416241995'
+        - '2.55040873229321'
+        - '2.21430006444672'
+        min_sample: -7.92934907165722
+        max_sample: 7.67619035985353
     weight:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id009
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.200495946519443'
+        - '0.209646854058983'
+        - '0.362326285244109'
+        - '0.256037907055118'
+        - '0.222906470988473'
+        min_sample: 0.153134294521996
+        max_sample: 1.64347230504051
     lower:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id010
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.15905667728062367'
+        - '0.16820758482016368'
+        - '0.3208870160052897'
+        - '0.21459863781629865'
+        - '0.18146720174965367'
+        min_sample: 0.11169502528317668
+        max_sample: 1.6020330358016908
     upper:
-      kind: inferred
+      kind: quantitative
       use: optional_visual_module
+      source: data_main.csv
+      profile: &id011
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 300
+        examples:
+        - '0.24193521575826232'
+        - '0.25108612329780233'
+        - '0.4037655544829283'
+        - '0.2974771762939373'
+        - '0.2643457402272923'
+        min_sample: 0.19457356376081533
+        max_sample: 1.6849115742793292
 required_data:
 - x
 - y
@@ -76,6 +226,34 @@ optional_data:
 - weight
 - lower
 - upper
+data_profile:
+  main_csv:
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    row_count_sampled: 300
+    profiles:
+      x: *id001
+      y: *id002
+      value: *id003
+      group: *id004
+      label: *id005
+      facet: *id006
+      source: *id007
+      target: *id008
+      weight: *id009
+      lower: *id010
+      upper: *id011
+  optional_csv: null
 optional_modules:
   detail_panel:
     requires:
@@ -83,13 +261,8 @@ optional_modules:
     - sample_x
     - sample_y
     can_query_environment: true
+    available_from_main_csv: false
     fallback_if_missing: disable_detail_panel
-  annotation_track:
-    requires:
-    - group
-    - value
-    can_query_environment: true
-    fallback_if_missing: use_plain_axis
   uncertainty_interval:
     requires_any:
     - - lower
@@ -98,19 +271,28 @@ optional_modules:
     - - ci_low
       - ci_high
     can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: do_not_show_uncertainty
   subgroup_color:
     requires:
     - subgroup
     can_query_environment: true
+    available_from_main_csv: false
     fallback_if_missing: use_primary_group_only
-  network_weight:
+  weighted_relationship:
     requires:
     - source
     - target
     - weight
-    enabled_by_default: true
+    can_query_environment: true
+    available_from_main_csv: true
     fallback_if_missing: draw_unweighted_edges
+  label_layer:
+    requires:
+    - label
+    can_query_environment: false
+    available_from_main_csv: true
+    fallback_if_missing: suppress_labels
 function_signature:
   name: plot
   arguments:
@@ -134,15 +316,24 @@ complexity:
 defamiliarization:
   level: U1
 best_for:
-- 'Reusable scatter cases with roles: x, y, value'
+- 002渐变火山图
+- 'scatter/volcano grammar with roles: x, y, value'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotmaster_002渐变火山图/outputs/rebuilt.png
+  exists: true
+  width: 1152
+  height: 1008
+  mean_luma: 247.2002
+  stddev_luma: 32.9504
 minimal_reproducible_example:
   data: vault/material/plotmaster_002渐变火山图/data_main.csv
   entry: vault/material/plotmaster_002渐变火山图/plot.py

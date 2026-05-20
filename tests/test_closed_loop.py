@@ -21,13 +21,28 @@ def test_vault_index_has_live_dossiers() -> None:
     run_cmd("cabal/tools/build_vault_index.py")
     index = REPO / "vault" / "index.jsonl"
     records = [json.loads(line) for line in index.read_text(encoding="utf-8").splitlines() if line.strip()]
+    material_cases = [path for path in (REPO / "vault" / "material").iterdir() if path.is_dir() and (path / "metadata.json").exists()]
     assert records
+    assert len(records) == len(material_cases)
     assert all(record["vault_status"]["live"] for record in records)
     first = records[0]
     dossier = yaml.safe_load((REPO / first["dossier"]).read_text(encoding="utf-8"))
     assert dossier["visual_genes"]
     assert dossier["data_roles"]["required"]
     assert "optional_modules" in dossier
+
+
+def test_material_is_all_unfolded_and_external_folded_assets_are_marked() -> None:
+    material_cases = [path for path in (REPO / "vault" / "material").iterdir() if path.is_dir() and (path / "metadata.json").exists()]
+    folded_cases = [path for path in (REPO / "vault" / "folded_assets").iterdir() if path.is_dir() and (path / "metadata.json").exists()]
+    assert material_cases
+    for case in material_cases:
+        metadata = json.loads((case / "metadata.json").read_text(encoding="utf-8-sig"))
+        assert metadata["vault_status"]["live"], case.name
+        assert not metadata["vault_status"]["folded"], case.name
+    for case in folded_cases:
+        metadata = json.loads((case / "metadata.json").read_text(encoding="utf-8-sig"))
+        assert metadata["vault_status"]["folded"], case.name
 
 
 def test_ui_manifest_filters_folded_assets(tmp_path: Path) -> None:

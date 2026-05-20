@@ -1,24 +1,48 @@
 id: plotmaster_003气泡图+相关性热图
 title: 003气泡图+相关性热图
+annotation_status:
+  level: deep_structural_pass_v1
+  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
+    evidence
+  human_review_required: false
 origin:
   case_dir: vault/material/plotmaster_003气泡图+相关性热图
   source:
     root: raw/PlotMaster
     original_path: 003气泡图+相关性热图
-scientific_intent: &id001
-- heatmap visual grammar
-- general_figure
-- heatmap
-- ggplot2
-intent: *id001
+scientific_intent:
+- compare matrix-like values
+- show clustered or grouped patterns
+- 'case-specific title: 003气泡图+相关性热图'
+- 'subtype: annotated_heatmap'
+- 'keyword evidence: 热图'
+- 'keyword evidence: heatmap'
+- 'keyword evidence: 相关性'
+intent:
+- compare matrix-like values
+- show clustered or grouped patterns
+- 'case-specific title: 003气泡图+相关性热图'
+- 'subtype: annotated_heatmap'
+- 'keyword evidence: 热图'
+- 'keyword evidence: heatmap'
+- 'keyword evidence: 相关性'
+visual_grammar:
+  geometry: heatmap
+  subtype: annotated_heatmap
+  keyword_evidence:
+  - 热图
+  - heatmap
+  - 相关性
 visual_genes:
   layout:
   - matrix_body
   - annotation_tracks
+  - optional_row_or_column_summaries
   marks:
   - tile
   - text
   - strip
+  - dendrogram_or_separator
   encodings:
   - row
   - column
@@ -28,41 +52,128 @@ visual_genes:
   - pattern_detection
   - cluster_or_group_context
   emphasis:
-  - calm_annotation_tracks
   - body_first
+  - calm_annotation_tracks
+  - aligned_label_rails
+  subtype:
+  - annotated_heatmap
 data_roles:
   required:
     group:
-      kind: inferred
+      kind: categorical
       semantic: group
+      source: data_main.csv
+      profile: &id001
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 10
+        examples:
+        - Group1
+        - Group2
+        - Group3
     gene:
-      kind: inferred
+      kind: categorical
       semantic: gene
+      source: data_main.csv
+      profile: &id002
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 19
+        examples:
+        - OPI10
+        - AGA2
+        - ERG26
+        - HMG1
+        - NOP6
     correlation:
-      kind: inferred
+      kind: quantitative
       semantic: correlation
+      source: data_main.csv
+      profile: &id003
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 190
+        examples:
+        - '-0.142134852846372'
+        - '0.30228313274812'
+        - '0.207239587121384'
+        - '-0.2523393318979'
+        - '0.0137386963382782'
+        min_sample: -0.789852931519478
+        max_sample: 0.730330082419334
     p_value:
-      kind: inferred
+      kind: quantitative
       semantic: p_value
+      source: data_main.csv
+      profile: &id004
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 182
+        examples:
+        - 2e-05
+        - 2e-04
+        - '0.0230062016099691'
+        - '0.0630644108355045'
+        - '0.032718153744936'
+        min_sample: 2.0e-05
+        max_sample: 0.0795415821298957
     direction:
-      kind: inferred
+      kind: categorical
       semantic: direction
+      source: data_main.csv
+      profile: &id005
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+        examples:
+        - negative
+        - positive
     p_value_bin:
-      kind: inferred
+      kind: categorical
       semantic: p_value_bin
+      source: data_main.csv
+      profile: &id006
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 5
+        examples:
+        - <0.0001
+        - <0.001
+        - <0.05
+        - '>0.05'
+        - <0.01
     abs_correlation:
-      kind: inferred
+      kind: quantitative
       semantic: abs_correlation
+      source: data_main.csv
+      profile: &id007
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 190
+        examples:
+        - '0.142134852846372'
+        - '0.30228313274812'
+        - '0.207239587121384'
+        - '0.2523393318979'
+        - '0.0137386963382782'
+        min_sample: 0.00111788574090791
+        max_sample: 0.789852931519478
   optional:
     label:
-      kind: inferred
+      kind: text
       use: optional_visual_module
+      source: data_main.csv
+      profile: {}
     facet:
-      kind: inferred
+      kind: categorical
       use: optional_visual_module
+      source: data_main.csv
+      profile: {}
     annotation:
       kind: inferred
       use: optional_visual_module
+      source: data_main.csv
+      profile: {}
 required_data:
 - group
 - gene
@@ -75,6 +186,26 @@ optional_data:
 - label
 - facet
 - annotation
+data_profile:
+  main_csv:
+    columns:
+    - group
+    - gene
+    - correlation
+    - p_value
+    - direction
+    - p_value_bin
+    - abs_correlation
+    row_count_sampled: 190
+    profiles:
+      group: *id001
+      gene: *id002
+      correlation: *id003
+      p_value: *id004
+      direction: *id005
+      p_value_bin: *id006
+      abs_correlation: *id007
+  optional_csv: null
 optional_modules:
   detail_panel:
     requires:
@@ -82,34 +213,15 @@ optional_modules:
     - sample_x
     - sample_y
     can_query_environment: true
+    available_from_main_csv: false
     fallback_if_missing: disable_detail_panel
   annotation_track:
     requires:
     - group
     - value
     can_query_environment: true
+    available_from_main_csv: false
     fallback_if_missing: use_plain_axis
-  uncertainty_interval:
-    requires_any:
-    - - lower
-      - upper
-    - - se
-    - - ci_low
-      - ci_high
-    can_query_environment: true
-    fallback_if_missing: do_not_show_uncertainty
-  subgroup_color:
-    requires:
-    - subgroup
-    can_query_environment: true
-    fallback_if_missing: use_primary_group_only
-  network_weight:
-    requires:
-    - source
-    - target
-    - weight
-    enabled_by_default: false
-    fallback_if_missing: draw_unweighted_edges
 function_signature:
   name: plot
   arguments:
@@ -133,16 +245,25 @@ complexity:
 defamiliarization:
   level: U2
 best_for:
-- 'Reusable heatmap cases with roles: group, gene, correlation, p_value, direction,
-  p_value_bin, abs_correlation'
+- 003气泡图+相关性热图
+- 'heatmap/annotated_heatmap grammar with roles: group, gene, correlation, p_value,
+  direction, p_value_bin, abs_correlation'
 bad_for:
 - Missing required roles
-- Undeclared raw resources
 - Unbounded labels without focus selection
+- Using optional modules without matching data
 failure_cases:
 - Missing output image
 - Blank image
+- Wrong geometry selected by title/metadata conflict
 - Required role not materialized
+visual_evidence:
+  rebuilt_png: vault/material/plotmaster_003气泡图+相关性热图/outputs/rebuilt.png
+  exists: true
+  width: 1728
+  height: 864
+  mean_luma: 249.221
+  stddev_luma: 26.6962
 minimal_reproducible_example:
   data: vault/material/plotmaster_003气泡图+相关性热图/data_main.csv
   entry: vault/material/plotmaster_003气泡图+相关性热图/plot.R
@@ -155,7 +276,6 @@ rebuild_class:
 vault_status:
   live: true
   folded: false
-  restored_from_fold: true
+  restored_from_fold: false
   canonical_case: null
-  reason: retained after visual folding review; complex or distinctive non-map visual
-    grammar
+  reason: null

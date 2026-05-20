@@ -140,7 +140,7 @@
     "folded": false,
     "restored_from_fold": false,
     "canonical_case": null,
-    "reason": null
+    "reason": "material asset is an accepted unfolded Vault case"
   },
   "rebuild_class": {
     "source_code_rebuild": true,
