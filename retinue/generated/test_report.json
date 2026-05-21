@@ -1,0 +1,668 @@
+{
+  "ok": true,
+  "case_count": 9,
+  "records": [
+    {
+      "case_id": "global_local_focus_expansion",
+      "ok": true,
+      "template_refs": [
+        "plotmaster_020多组学九象限散点图",
+        "plotmaster_021分组散点图+直方图注释"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_guided_global_local",
+        "axes": 3,
+        "focus": "Class_07",
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 3,
+          "tick_overlap_examples": [
+            [
+              "−4.5",
+              "−3.0",
+              659.8
+            ],
+            [
+              "−1.0",
+              "−3.0",
+              341.5
+            ],
+            [
+              "−3.0",
+              "0.0",
+              73.9
+            ]
+          ],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/global_local_focus_expansion/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/global_local_focus_expansion/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            12.0,
+            7.2
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2160,
+        "height": 1296,
+        "bytes": 179956
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 27238,
+        "page_size_inches": [
+          12.0,
+          7.2
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2160,
+          1296
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/global_local_focus_expansion/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/global_local_focus_expansion.png"
+    },
+    {
+      "case_id": "annotated_multitrack_heatmap",
+      "ok": true,
+      "template_refs": [
+        "plotcase_heatmap_多层嵌套分面热图",
+        "plotmaster_016复杂热图+渐变色连线",
+        "plotmaster_019堆积柱状图+折线+热图注释"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_guided_multitrack_heatmap",
+        "axes": 5,
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 0,
+          "tick_overlap_examples": [],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "architecture_audit": {
+          "checks": {
+            "title_above_top_track": true,
+            "top_track_above_body": true,
+            "top_track_body_gap_small": true,
+            "top_track_aligned_to_body_width": true,
+            "left_track_left_of_body": true,
+            "row_labels_outside_left_track": true,
+            "right_track_right_of_body": true,
+            "right_track_y_axis_silent": true,
+            "bottom_track_below_body": true,
+            "bottom_track_aligned_to_body_width": true,
+            "column_labels_below_bottom_track": true
+          },
+          "ok": true
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/annotated_multitrack_heatmap/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/annotated_multitrack_heatmap/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            12.0,
+            8.3
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2160,
+        "height": 1494,
+        "bytes": 104611
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 32225,
+        "page_size_inches": [
+          12.0,
+          8.3
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2160,
+          1494
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/annotated_multitrack_heatmap/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/annotated_multitrack_heatmap.png"
+    },
+    {
+      "case_id": "manifold_3d_projection",
+      "ok": true,
+      "template_refs": [
+        "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
+        "figures4papers_figure_RNAGenScape_manifold_png"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_guided_3d_manifold",
+        "axes": 4,
+        "points": 480,
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 9,
+          "tick_overlap_examples": [
+            [
+              "−2.0",
+              "−2.0",
+              1827.6
+            ],
+            [
+              "−0.5",
+              "−0.5",
+              1401.3
+            ],
+            [
+              "1.5",
+              "1.5",
+              1287.8
+            ],
+            [
+              "z",
+              "−2",
+              237.0
+            ],
+            [
+              "z",
+              "−2.0",
+              204.1
+            ]
+          ],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/manifold_3d_projection/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/manifold_3d_projection/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            12.0,
+            7.2
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2160,
+        "height": 1296,
+        "bytes": 447420
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 84216,
+        "page_size_inches": [
+          12.0,
+          7.2
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2160,
+          1296
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/manifold_3d_projection/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/manifold_3d_projection.png"
+    },
+    {
+      "case_id": "circular_chord_outer_tracks",
+      "ok": true,
+      "template_refs": [
+        "plotcase_circos_circlize优雅绘制多重注释弦图",
+        "plotcase_circos_circlize绘制和弦图进阶版",
+        "plotmaster_060复杂环形互作网络图"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_complex_circular_chord",
+        "axes": 1,
+        "nodes": 14,
+        "links": 28,
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 0,
+          "tick_overlap_examples": [],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/circular_chord_outer_tracks/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/circular_chord_outer_tracks/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            12.0,
+            8.0
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2160,
+        "height": 1440,
+        "bytes": 355373
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 25216,
+        "page_size_inches": [
+          12.0,
+          8.0
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2160,
+          1440
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/circular_chord_outer_tracks/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/circular_chord_outer_tracks.png"
+    },
+    {
+      "case_id": "multi_stage_sankey_alluvial",
+      "ok": true,
+      "template_refs": [
+        "plotcase_sankey_桑基流向图",
+        "plotcase_sankey_节点融合桑基图",
+        "plotmaster_48个性化桑基图"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_composition_alluvial_sankey",
+        "axes": 1,
+        "stages": 4,
+        "links": 19,
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 0,
+          "tick_overlap_examples": [],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/multi_stage_sankey_alluvial/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/multi_stage_sankey_alluvial/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            12.0,
+            7.2
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2160,
+        "height": 1296,
+        "bytes": 190121
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 19615,
+        "page_size_inches": [
+          12.0,
+          7.2
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2160,
+          1296
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/multi_stage_sankey_alluvial/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/multi_stage_sankey_alluvial.png"
+    },
+    {
+      "case_id": "comparative_genome_structure",
+      "ok": true,
+      "template_refs": [
+        "plotcase_基因组图_geneviewer基因簇结构可视化",
+        "plotcase_基因组图_比较基因组结构图"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_complex_comparative_genome",
+        "axes": 1,
+        "samples": 4,
+        "genes": 36,
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 0,
+          "tick_overlap_examples": [],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/comparative_genome_structure/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/comparative_genome_structure/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            12.0,
+            7.2
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2160,
+        "height": 1296,
+        "bytes": 146267
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 21308,
+        "page_size_inches": [
+          12.0,
+          7.2
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2160,
+          1296
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/comparative_genome_structure/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/comparative_genome_structure.png"
+    },
+    {
+      "case_id": "stacked_bar_line_heatstrip",
+      "ok": true,
+      "template_refs": [
+        "plotmaster_019堆积柱状图+折线+热图注释",
+        "plotcase_barplot_多元素组合分布条图"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_stacked_bar_line_heatstrip",
+        "axes": 3,
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 16,
+          "tick_overlap_examples": [
+            [
+              "C05",
+              "alpha",
+              167.3
+            ],
+            [
+              "C06",
+              "beta",
+              1038.9
+            ],
+            [
+              "C07",
+              "gamma",
+              149.1
+            ],
+            [
+              "C09",
+              "delta",
+              984.1
+            ],
+            [
+              "C01",
+              "C01",
+              1696.5
+            ]
+          ],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "architecture_audit": {
+          "checks": {
+            "title_above_top_track": true,
+            "top_track_above_body": true,
+            "top_track_body_gap_small": true,
+            "top_track_aligned_to_body_width": true,
+            "bottom_track_below_body": true,
+            "bottom_track_aligned_to_body_width": true,
+            "column_labels_below_bottom_track": true
+          },
+          "ok": true
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/stacked_bar_line_heatstrip/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/stacked_bar_line_heatstrip/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            12.0,
+            7.0
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2160,
+        "height": 1260,
+        "bytes": 121711
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 21545,
+        "page_size_inches": [
+          12.0,
+          7.0
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2160,
+          1260
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/stacked_bar_line_heatstrip/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/stacked_bar_line_heatstrip.png"
+    },
+    {
+      "case_id": "grouped_forest_interval_table",
+      "ok": true,
+      "template_refs": [
+        "plotcase_森林图_多因素Cox森林图",
+        "plotcase_森林图_森林图进阶图例映射版"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_forest_interval_table",
+        "axes": 3,
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 1,
+          "tick_overlap_examples": [
+            [
+              "1.0",
+              "−0.6",
+              1287.8
+            ]
+          ],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/grouped_forest_interval_table/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/grouped_forest_interval_table/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            11.5,
+            7.2
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2070,
+        "height": 1296,
+        "bytes": 106200
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 21119,
+        "page_size_inches": [
+          11.5,
+          7.2
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2070,
+          1296
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/grouped_forest_interval_table/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/grouped_forest_interval_table.png"
+    },
+    {
+      "case_id": "network_module_enrichment",
+      "ok": true,
+      "template_refs": [
+        "plotcase_network_ggraph构建疾病遗传调控网络图",
+        "plotcase_network_GO通路相似性网络图_基于基因重叠度"
+      ],
+      "missing_columns": [],
+      "render": {
+        "strategy": "template_network_module_enrichment",
+        "axes": 2,
+        "layout_audit": {
+          "text_overlap_count": 0,
+          "text_overlap_examples": [],
+          "tick_overlap_count": 0,
+          "tick_overlap_examples": [],
+          "font_size_range": [
+            12.0,
+            20.0
+          ]
+        },
+        "export": {
+          "png": "/mnt/f/plotter/retinue/generated/network_module_enrichment/outputs/rebuilt.png",
+          "pdf": "/mnt/f/plotter/retinue/generated/network_module_enrichment/outputs/rebuilt.pdf",
+          "figure_size_inches": [
+            12.0,
+            7.4
+          ],
+          "dpi": 180
+        }
+      },
+      "image": {
+        "ok": true,
+        "width": 2160,
+        "height": 1332,
+        "bytes": 170924
+      },
+      "pdf": {
+        "ok": true,
+        "bytes": 24618,
+        "page_size_inches": [
+          12.0,
+          7.4
+        ],
+        "size_ok": true
+      },
+      "checks": {
+        "axes_ok": true,
+        "layout_ok": true,
+        "architecture_ok": true,
+        "font_ok": true,
+        "image_size_ok": true,
+        "expected_pixels": [
+          2160,
+          1332
+        ],
+        "pdf_ok": true
+      },
+      "output": "retinue/generated/network_module_enrichment/outputs/rebuilt.png",
+      "output_png_gallery": "retinue/generated/output_pngs/network_module_enrichment.png"
+    }
+  ]
+}

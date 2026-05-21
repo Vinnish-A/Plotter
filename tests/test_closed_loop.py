@@ -18,7 +18,9 @@ def run_cmd(*args: str, cwd: Path = REPO) -> subprocess.CompletedProcess[str]:
 
 
 def test_vault_index_has_live_dossiers() -> None:
-    run_cmd("cabal/tools/build_vault_index.py")
+    run_cmd("cabal/tools/build_machine_evidence.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    run_cmd("cabal/tools/build_skinny_index.py")
     index = REPO / "vault" / "index.jsonl"
     records = [json.loads(line) for line in index.read_text(encoding="utf-8").splitlines() if line.strip()]
     material_cases = [path for path in (REPO / "vault" / "material").iterdir() if path.is_dir() and (path / "metadata.json").exists()]

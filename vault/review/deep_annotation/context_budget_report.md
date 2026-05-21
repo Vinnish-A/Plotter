@@ -31,8 +31,8 @@ by each worker.
 
 ## Size Budget
 
-- Index record size: min 709 chars, median 850 chars, max 964 chars
-- Asset card size: min 1707 chars, median 2075.5 chars, max 3060 chars
+- Index record size: min 693 chars, median 809 chars, max 964 chars
+- Asset card size: min 1675 chars, median 2044.5 chars, max 3029 chars
 - Enforced limits: index record <= 1600 chars; asset card <= 8000 chars
 
 ## Default Index Slimming
@@ -81,7 +81,8 @@ All 156 deep-reviewed material assets were slimmed through `apply_deep_annotatio
 - Cards with `roles_machine_inferred`: 0
 - Cards with conservative capabilities due to missing review: 0
 - Core seed candidates selected for manual/model review: 1
-- Existing legacy reviews were migrated into the new image/data/code understanding fields from already-recorded evidence, not from a new model pass.
+- Historical machine-backfill drafts have been removed from the default repository surface; durable
+  review records now live only under `vault/review/deep_annotation/reviews/`.
 - `support` remains a retrieval tier, not a guarantee that the asset is a default-safe exemplar.
 - Many assets are still generic-renderer, fallback, synthetic, or thin-abstraction cases; the deep
   reviews preserve those risks rather than promoting them to `core`.

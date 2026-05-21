@@ -101,8 +101,8 @@ It owns:
 - visual gene extraction from existing cases
 - grammar recombination and template composition
 - focus expansion, insets, callouts, and guided mutations
-- generated agent-test cases under `bastard/generated/`
-- the quick visual gallery under `bastard/generated/output_pngs/`
+- generated test plans that Retinue executes under `retinue/generated/`
+- quick visual review galleries emitted under `retinue/generated/output_pngs/`
 
 Generated figures must still follow the same visual architecture rules as Vault rebuilds: main data body first, annotation tracks around it, no overlapping semantic elements, and final export at readable scale.
 

@@ -246,25 +246,14 @@ def review_status(review: dict[str, Any]) -> dict[str, bool]:
             "image_read_by_model": False,
             "data_read_by_model": False,
             "code_read_by_model": False,
-            "migrated_legacy_review": False,
         }
     image = review.get("image_observation") if isinstance(review.get("image_observation"), dict) else {}
     data = review.get("data_understanding") if isinstance(review.get("data_understanding"), dict) else {}
     code = review.get("code_understanding") if isinstance(review.get("code_understanding"), dict) else {}
-    has_review = bool(review)
-    migrated = False
-    status = review.get("annotation_status") if isinstance(review.get("annotation_status"), dict) else {}
-    if has_review:
-        migrated = str(status.get("level") or "").startswith("model_assisted_deep_review_v1")
-        migrated = migrated or any(
-            str(image.get(key) or "").startswith("not_separately_recorded_in_legacy_review")
-            for key in ("axes", "legends", "text_density")
-        )
     return {
         "image_read_by_model": bool(image.get("image_read")),
         "data_read_by_model": bool(data.get("data_read")),
         "code_read_by_model": bool(code.get("code_read")),
-        "migrated_legacy_review": bool(migrated),
     }
 
 

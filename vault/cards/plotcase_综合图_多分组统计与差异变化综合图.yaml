@@ -49,7 +49,6 @@ review_status:
   image_read_by_model: true
   data_read_by_model: true
   code_read_by_model: true
-  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_综合图_多分组统计与差异变化综合图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_综合图_多分组统计与差异变化综合图.yaml

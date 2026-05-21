@@ -54,7 +54,6 @@ review_status:
   image_read_by_model: true
   data_read_by_model: true
   code_read_by_model: true
-  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_043分块热图+注释.yaml
   deep_review: vault/review/deep_annotation/reviews/plotmaster_043分块热图+注释.yaml

@@ -119,30 +119,21 @@ def test_core_seed_selection_report_does_not_promote_assets() -> None:
     assert all(record["retrieval_tier"] != "core" for record in records_before if record["id"] in {item["id"] for item in payload["candidates"]})
 
 
-def test_every_material_asset_has_review_record_after_backfill() -> None:
-    run_cmd("cabal/tools/build_machine_evidence.py")
-    run_cmd("cabal/tools/build_asset_cards.py")
-    run_cmd("cabal/tools/backfill_deep_annotation_reviews.py")
+def test_every_material_asset_has_complete_deep_review_record() -> None:
     material_ids = {
         json.loads((path / "metadata.json").read_text(encoding="utf-8-sig")).get("id") or path.name
         for path in (REPO / "vault" / "material").iterdir()
         if path.is_dir() and (path / "metadata.json").exists()
     }
-    review_ids = {path.stem for path in (REPO / "vault" / "review" / "deep_annotation" / "reviews").glob("*.yaml")}
+    review_root = REPO / "vault" / "review" / "deep_annotation" / "reviews"
+    review_ids = {path.stem for path in review_root.glob("*.yaml")}
     assert material_ids <= review_ids
-
-
-def test_backfill_does_not_overwrite_existing_complete_model_reviews() -> None:
-    run_cmd("cabal/tools/build_machine_evidence.py")
-    run_cmd("cabal/tools/build_asset_cards.py")
-    run_cmd("cabal/tools/backfill_deep_annotation_reviews.py")
-    run_cmd("cabal/tools/build_asset_cards.py")
-    card = yaml.safe_load((REPO / "vault" / "cards" / "figures4papers_figure_Dispersion_illustration_png.yaml").read_text(encoding="utf-8"))
-    assert card["read_next"]["deep_review"] == "vault/review/deep_annotation/reviews/figures4papers_figure_Dispersion_illustration_png.yaml"
-    assert card["review_status"]["image_read_by_model"]
-    assert card["review_status"]["data_read_by_model"]
-    assert card["review_status"]["code_read_by_model"]
-    assert "machine_backfill" not in str(card).lower()
+    for case_id in material_ids:
+        review = yaml.safe_load((review_root / f"{case_id}.yaml").read_text(encoding="utf-8"))
+        assert review["annotation_status"]["status"] != "incomplete"
+        assert review["image_observation"]["image_read"]
+        assert review["data_understanding"]["data_read"]
+        assert review["code_understanding"]["code_read"]
 
 
 def complete_review() -> dict:

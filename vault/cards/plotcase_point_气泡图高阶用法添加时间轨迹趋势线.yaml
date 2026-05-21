@@ -47,7 +47,6 @@ review_status:
   image_read_by_model: true
   data_read_by_model: true
   code_read_by_model: true
-  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml

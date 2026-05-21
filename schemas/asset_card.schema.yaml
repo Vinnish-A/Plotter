@@ -81,15 +81,12 @@ properties:
       - image_read_by_model
       - data_read_by_model
       - code_read_by_model
-      - migrated_legacy_review
     properties:
       image_read_by_model:
         type: boolean
       data_read_by_model:
         type: boolean
       code_read_by_model:
-        type: boolean
-      migrated_legacy_review:
         type: boolean
   risk_notes:
     type: array

@@ -57,7 +57,6 @@ review_status:
   image_read_by_model: true
   data_read_by_model: true
   code_read_by_model: true
-  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_network_微生物与代谢物共生网络图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_network_微生物与代谢物共生网络图.yaml

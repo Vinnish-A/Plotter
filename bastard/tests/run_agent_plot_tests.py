@@ -33,7 +33,8 @@ from plotter.style import load_palette_presets, load_style, resolve_palette
 
 TEST_ROOT = Path(__file__).resolve().parent
 BASTARD_ROOT = TEST_ROOT.parent
-GENERATED = BASTARD_ROOT / "generated"
+REPO_ROOT = BASTARD_ROOT.parent
+GENERATED = REPO_ROOT / "retinue" / "generated"
 OUTPUT_PNGS = GENERATED / "output_pngs"
 
 INK = "#24313f"
@@ -1314,8 +1315,8 @@ def run_case(case: AgentCase) -> dict[str, object]:
             "expected_pixels": expected_pixels,
             "pdf_ok": bool(pdf["ok"]),
         },
-        "output": str(output.relative_to(BASTARD_ROOT)),
-        "output_png_gallery": str(gallery_output.relative_to(BASTARD_ROOT)) if gallery_output else "",
+        "output": str(output.relative_to(REPO_ROOT)),
+        "output_png_gallery": str(gallery_output.relative_to(REPO_ROOT)) if gallery_output else "",
     }
 
 

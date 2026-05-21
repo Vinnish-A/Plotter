@@ -8,7 +8,8 @@ Run date: 2026-05-21
 - First-pass cohort selected: 30
 - High-value assets selected: 20
 - Problem assets selected: 10
-- Raw subagent reviews written: 30
+- Raw subagent drafts written: 30 during the initial run; removed after reconciliation because
+  `vault/review/deep_annotation/reviews/` is now the durable review archive.
 - Normalized review-layer files written: 30
 
 The cohort is recorded in `vault/review/deep_annotation/cohort_v1.json`.
@@ -38,8 +39,7 @@ Safe review fields were applied to 30 material metadata files and their matching
 - `retrieval_rationale`
 - `exclusion_risks`
 - `annotation_status`
-- `reviewed_visual_grammar`
-- `reviewed_visual_roles`
+- compact retrieval fields only; full reviewed grammar and roles now remain in review-layer files
 
 No `plot.py`, `plot.R`, `data_main.csv`, `data_optional.csv`, `raw/`, or `outputs/` files were changed.
 
@@ -49,10 +49,12 @@ Problem-cohort assets were kept at `inspiration` tier. Source-backed but contrac
 
 The critic pass found that reviewed grammar was not authoritative in retrieval, optional modules were still inferred from compatibility columns, and review writes needed path safety. Applied fixes:
 
-- `vault/index.jsonl` now uses reviewed visual grammar when present.
+- `vault/index.jsonl` is now rebuilt from compact asset cards and uses reviewed visual grammar only
+  through those cards.
 - Reviewed optional modules are filtered before indexing; unsupported, absent, compatibility-only, disabled, or not-observed modules are not exposed as active modules.
 - `apply_deep_annotation_reviews.py` rejects path-like `case_id` values and writes metadata/Dossier updates atomically.
-- `build_vault_index.py` now only writes `vault/index.jsonl` by default. Regenerating all Dossiers requires `--write-dossiers`, avoiding unreviewable churn.
+- The obsolete full-index compatibility wrapper was removed. The active retrieval build is
+  `build_machine_evidence.py -> build_asset_cards.py -> build_skinny_index.py`.
 - `recommend.py` no longer silently labels a risky fallback candidate as `safe` when no safe candidate exists.
 
 ## Validation
@@ -62,7 +64,9 @@ Commands run successfully:
 - `python cabal/tools/select_deep_annotation_cohort.py --limit-core 20 --limit-problem 10`
 - `python cabal/tools/apply_deep_annotation_reviews.py --dry-run`
 - `python cabal/tools/apply_deep_annotation_reviews.py --write`
-- `python cabal/tools/build_vault_index.py`
+- `python cabal/tools/build_machine_evidence.py`
+- `python cabal/tools/build_asset_cards.py`
+- `python cabal/tools/build_skinny_index.py --max-record-chars 1600`
 - `pytest tests/test_deep_annotation_pipeline.py -q`
 - `pytest tests/test_closed_loop.py -q`
 - `python ui/build_ui_manifest.py`
@@ -90,4 +94,3 @@ Recommended criterion:
 - 10 source-backed contract-mismatch survival/forest/model-diagnostic assets
 - 10 composition-heavy heatmap/bar/network assets with generic renderer involvement
 - 10 synthetic/fallback inspiration assets with high visual value but risky default retrieval semantics
-

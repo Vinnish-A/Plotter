@@ -139,12 +139,8 @@ def main() -> int:
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--repo-root", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--vault-root", type=Path, help="compatibility alias; pass the repository root or the vault directory")
     args = parser.parse_args()
     repo_root = args.repo_root
-    if args.vault_root:
-        vault_arg = args.vault_root.resolve()
-        repo_root = vault_arg.parent if vault_arg.name == "vault" else vault_arg
 
     handler = lambda *handler_args, **handler_kwargs: VaultUIHandler(
         *handler_args,

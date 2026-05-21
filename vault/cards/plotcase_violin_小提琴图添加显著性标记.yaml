@@ -44,7 +44,6 @@ review_status:
   image_read_by_model: true
   data_read_by_model: true
   code_read_by_model: true
-  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_violin_小提琴图添加显著性标记.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_violin_小提琴图添加显著性标记.yaml

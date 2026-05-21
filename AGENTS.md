@@ -181,10 +181,10 @@ Generated figures must follow the same visual architecture rules used for Vault 
 
 ## Agent Test Output Gallery
 
-When running `bastard/tests/run_agent_plot_tests.py`, every test case must copy its final `outputs/rebuilt.png` into:
+When running `bastard/tests/run_agent_plot_tests.py`, every test case must write generated case outputs under Retinue and copy its final `outputs/rebuilt.png` into:
 
 ```text
-bastard/generated/output_pngs/
+retinue/generated/output_pngs/
 ```
 
 Use `{case_id}.png` as the filename. The runner should clear stale PNGs from this folder at the start of each run, then repopulate it from the current test outputs. This folder is the quick visual review gallery for generated test figures; do not treat it as the source of truth for reproducibility.

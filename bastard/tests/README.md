@@ -38,6 +38,6 @@ Run from the repository root:
 python3 bastard/tests/run_agent_plot_tests.py
 ```
 
-Outputs are written to `bastard/generated/`.
+Outputs are written to `retinue/generated/`.
 
-After every run, final PNG outputs are also copied into `bastard/generated/output_pngs/` as `{case_id}.png` for quick visual review.
+After every run, final PNG outputs are also copied into `retinue/generated/output_pngs/` as `{case_id}.png` for quick visual review.

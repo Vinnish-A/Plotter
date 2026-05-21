@@ -123,23 +123,6 @@ def ensure_under(path: Path, root: Path) -> Path:
     return resolved
 
 
-def normalized_reviewed_visual_grammar(review: dict[str, Any]) -> dict[str, Any]:
-    grammar = dict(review.get("observed_visual_grammar") or review.get("inferred_visual_grammar") or {})
-    for patch_key in ("proposed_dossier_patch", "proposed_metadata_patch"):
-        patch = review.get(patch_key) if isinstance(review.get(patch_key), dict) else {}
-        visual = patch.get("visual_grammar") if isinstance(patch.get("visual_grammar"), dict) else {}
-        for key in ("geometry", "subtype", "grammar_id", "required_data_roles", "optional_data_roles"):
-            if key in visual and key not in grammar:
-                grammar[key] = visual[key]
-    if "grammar_id" not in grammar:
-        inferred = review.get("inferred_visual_grammar") if isinstance(review.get("inferred_visual_grammar"), dict) else {}
-        if inferred.get("grammar_id"):
-            grammar["grammar_id"] = inferred["grammar_id"]
-    grammar["optional_modules"] = review.get("optional_modules") or {}
-    grammar["false_positive_risks"] = review.get("false_positive_risks") or []
-    return grammar
-
-
 def compact_reviewed_summary(review: dict[str, Any], review_ref: str) -> dict[str, Any]:
     observed = review.get("observed_visual_grammar") if isinstance(review.get("observed_visual_grammar"), dict) else {}
     inferred = review.get("inferred_visual_grammar") if isinstance(review.get("inferred_visual_grammar"), dict) else {}
@@ -155,7 +138,7 @@ def compact_reviewed_summary(review: dict[str, Any], review_ref: str) -> dict[st
     }
 
 
-def safe_fields(review: dict[str, Any], review_ref: str, legacy_full_reviewed_fields: bool) -> tuple[dict[str, Any], dict[str, Any], list[str], list[str]]:
+def safe_fields(review: dict[str, Any], review_ref: str) -> tuple[dict[str, Any], dict[str, Any], list[str], list[str]]:
     tier = review["retrieval_tier_recommendation"]
     annotation_status = dict(review.get("annotation_status") or {})
     annotation_status.update(
@@ -180,19 +163,10 @@ def safe_fields(review: dict[str, Any], review_ref: str, legacy_full_reviewed_fi
     dossier_fields["machine_fields_are_not_authoritative"] = True
     remove_metadata = ["reviewed_visual_grammar", "reviewed_visual_roles"]
     remove_dossier = ["reviewed_visual_grammar", "reviewed_visual_roles"]
-    if legacy_full_reviewed_fields:
-        full = {
-            "reviewed_visual_grammar": normalized_reviewed_visual_grammar(review),
-            "reviewed_visual_roles": review.get("reviewed_visual_roles") or {},
-        }
-        metadata_fields.update(full)
-        dossier_fields.update(full)
-        remove_metadata = []
-        remove_dossier = []
     return metadata_fields, dossier_fields, remove_metadata, remove_dossier
 
 
-def apply_review(review_path: Path, root: Path, dossiers: Path, write: bool, legacy_full_reviewed_fields: bool) -> dict[str, Any]:
+def apply_review(review_path: Path, root: Path, dossiers: Path, write: bool) -> dict[str, Any]:
     review = load_yaml(review_path)
     errors = validate_review(review, review_path)
     case_id = str(review.get("case_id") or review_path.stem)
@@ -215,7 +189,7 @@ def apply_review(review_path: Path, root: Path, dossiers: Path, write: bool, leg
             review_ref = str(review_path.resolve().relative_to(repo_root(Path(__file__))))
         except Exception:
             review_ref = str(review_path)
-    fields, dossier_fields, remove_metadata, remove_dossier = safe_fields(review, review_ref, legacy_full_reviewed_fields)
+    fields, dossier_fields, remove_metadata, remove_dossier = safe_fields(review, review_ref)
     changes = []
     for key, value in fields.items():
         if metadata.get(key) != value:
@@ -247,14 +221,13 @@ def review_paths(review_dir: Path, case: str | None) -> list[Path]:
     return paths
 
 
-def run(review_dir: Path, root: Path, dossiers: Path, write: bool, case: str | None, manifest: Path, legacy_full_reviewed_fields: bool = False) -> dict[str, Any]:
-    results = [apply_review(path, root, dossiers, write, legacy_full_reviewed_fields) for path in review_paths(review_dir, case)]
+def run(review_dir: Path, root: Path, dossiers: Path, write: bool, case: str | None, manifest: Path) -> dict[str, Any]:
+    results = [apply_review(path, root, dossiers, write) for path in review_paths(review_dir, case)]
     payload = {
         "applied_at": datetime.now(timezone.utc).isoformat(),
         "mode": "write" if write else "dry_run",
         "review_dir": str(review_dir),
         "result_count": len(results),
-        "legacy_write_full_reviewed_fields": legacy_full_reviewed_fields,
         "results": results,
     }
     manifest.parent.mkdir(parents=True, exist_ok=True)
@@ -269,7 +242,6 @@ def main() -> int:
     parser.add_argument("--dossiers", type=Path, default=dossier_root(Path(__file__)))
     parser.add_argument("--manifest", type=Path, default=repo_root(Path(__file__)) / "vault" / "review" / "deep_annotation" / "apply_manifest.json")
     parser.add_argument("--case", default=None)
-    parser.add_argument("--legacy-write-full-reviewed-fields", action="store_true")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--dry-run", action="store_true")
     group.add_argument("--write", action="store_true")
@@ -281,7 +253,6 @@ def main() -> int:
         args.write,
         args.case,
         args.manifest.resolve(),
-        args.legacy_write_full_reviewed_fields,
     )
     print(json.dumps({"mode": payload["mode"], "result_count": payload["result_count"]}, indent=2, ensure_ascii=False))
     invalid = [item for item in payload["results"] if item["status"] in {"invalid", "missing_case"}]

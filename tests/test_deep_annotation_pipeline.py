@@ -182,7 +182,9 @@ def test_apply_write_only_safe_fields(tmp_path: Path) -> None:
 
 
 def test_index_has_retrieval_tiers_and_synthetic_generic_is_not_core() -> None:
-    run_cmd("cabal/tools/build_vault_index.py")
+    run_cmd("cabal/tools/build_machine_evidence.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    run_cmd("cabal/tools/build_skinny_index.py")
     records = [json.loads(line) for line in (REPO / "vault" / "index.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     assert records
     assert all(record.get("retrieval_tier") in {"core", "support", "inspiration", "archive"} for record in records)
@@ -198,7 +200,9 @@ def test_index_has_retrieval_tiers_and_synthetic_generic_is_not_core() -> None:
 
 
 def test_index_uses_reviewed_grammar_and_filters_false_optional_modules() -> None:
-    run_cmd("cabal/tools/build_vault_index.py")
+    run_cmd("cabal/tools/build_machine_evidence.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    run_cmd("cabal/tools/build_skinny_index.py")
     records = {
         record["id"]: record
         for record in (json.loads(line) for line in (REPO / "vault" / "index.jsonl").read_text(encoding="utf-8").splitlines() if line.strip())

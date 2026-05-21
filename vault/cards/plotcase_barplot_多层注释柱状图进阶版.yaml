@@ -55,7 +55,6 @@ review_status:
   image_read_by_model: true
   data_read_by_model: true
   code_read_by_model: true
-  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_barplot_多层注释柱状图进阶版.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图进阶版.yaml
