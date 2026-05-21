@@ -1,125 +1,196 @@
-case_id: "plotcase_barplot_多层注释柱状图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_barplot_多层注释柱状图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_corrections_recommended"
-  note: "Observed figure is a 100% stacked vertical bar plot with two-level nested x-axis annotation boxes; current line-grammar dossier and generic demo CSV are misleading."
-annotator_model: "gpt-5 codex"
-reviewed_at: "2026-05-21T00:00:00+08:00"
+  status: reviewed_with_corrections_recommended
+  note: Observed figure is a 100% stacked vertical bar plot with two-level nested x-axis annotation boxes;
+    current line-grammar dossier and generic demo CSV are misleading.
+annotator_model: gpt-5 codex
+reviewed_at: '2026-05-21T00:00:00+08:00'
 evidence:
   files_read:
-    - "vault/material/plotcase_barplot_多层注释柱状图/metadata.json"
-    - "vault/material/plotcase_barplot_多层注释柱状图/agent_guide.md"
-    - "vault/material/plotcase_barplot_多层注释柱状图/plot.py"
-    - "vault/material/plotcase_barplot_多层注释柱状图/data_main.csv"
-    - "vault/material/plotcase_barplot_多层注释柱状图/scripts/code.R"
-    - "vault/material/plotcase_barplot_多层注释柱状图/raw/code.R"
-    - "vault/material/plotcase_barplot_多层注释柱状图/raw/data.tsv"
-    - "vault/material/plotcase_barplot_多层注释柱状图/outputs/rebuilt.png"
-    - "vault/material/plotcase_barplot_多层注释柱状图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_barplot_多层注释柱状图.yaml"
+  - vault/material/plotcase_barplot_多层注释柱状图/metadata.json
+  - vault/material/plotcase_barplot_多层注释柱状图/agent_guide.md
+  - vault/material/plotcase_barplot_多层注释柱状图/plot.py
+  - vault/material/plotcase_barplot_多层注释柱状图/data_main.csv
+  - vault/material/plotcase_barplot_多层注释柱状图/scripts/code.R
+  - vault/material/plotcase_barplot_多层注释柱状图/raw/code.R
+  - vault/material/plotcase_barplot_多层注释柱状图/raw/data.tsv
+  - vault/material/plotcase_barplot_多层注释柱状图/outputs/rebuilt.png
+  - vault/material/plotcase_barplot_多层注释柱状图/outputs/visual_check.json
+  - vault/dossiers/plotcase_barplot_多层注释柱状图.yaml
   data_main_profile:
     rows: 9
-    columns: ["category", "value", "group", "stack", "error_low", "error_high", "line_value", "annotation_value", "label"]
-    assessment: "generic abstract demo columns; not sufficient for observed nested stacked-bar rebuild"
+    columns:
+    - category
+    - value
+    - group
+    - stack
+    - error_low
+    - error_high
+    - line_value
+    - annotation_value
+    - label
+    assessment: generic abstract demo columns; not sufficient for observed nested stacked-bar rebuild
   raw_data:
     rows: 72
-    columns: ["Sample_id", "EarlyTumor", "MidlateTumor", "LateTumor", "Subtype.x", "Subtype.y"]
-  output_check:
-    rebuilt_png_size: [1285, 838]
+    columns:
+    - Sample_id
+    - EarlyTumor
+    - MidlateTumor
+    - LateTumor
+    - Subtype.x
+    - Subtype.y
+  output_check: &id007
+    rebuilt_png_size:
+    - 1285
+    - 838
     visual_check_ok: true
-    original_reference: "raw/cover.png"
+    original_reference: raw/cover.png
 observed_visual_grammar:
-  figure_type: "vertical_100pct_stacked_bar_with_nested_axis_annotations"
-  geometry: "bar"
-  layout:
-    - "single main bar panel"
-    - "right-side fill legend"
-    - "two bottom nested x-axis annotation bands"
-  marks:
-    - "stacked vertical bar segments"
-    - "nested annotation boxes"
-    - "legend swatches"
-  encodings:
-    sample_id: "x position; sample text suppressed"
-    component: "stack segment fill and legend item"
-    proportion: "stack segment height on percent y-axis"
-    subtype_x: "outer/upper nested x-axis group band"
-    subtype_y: "inner/lower nested x-axis group band"
+  figure_type: vertical_100pct_stacked_bar_with_nested_axis_annotations
+  geometry: bar
+  layout: &id001
+  - single main bar panel
+  - right-side fill legend
+  - two bottom nested x-axis annotation bands
+  marks: &id002
+  - stacked vertical bar segments
+  - nested annotation boxes
+  - legend swatches
+  encodings: &id003
+    sample_id: x position; sample text suppressed
+    component: stack segment fill and legend item
+    proportion: stack segment height on percent y-axis
+    subtype_x: outer/upper nested x-axis group band
+    subtype_y: inner/lower nested x-axis group band
 inferred_visual_grammar:
-  grammar_id: "stacked_percent_bars_with_two_level_nested_axis"
-  reusable_pattern: "Show per-sample compositional proportions while grouping samples by two categorical annotation tiers along the x axis."
-  not_supported: ["line chart", "uncertainty interval bar chart", "simple unstacked bar"]
-reviewed_visual_roles:
-  sample_id: "bar identity and ordering key"
-  component: "wide raw proportion columns pivoted to stacked fill categories"
-  proportion: "numeric value plotted as relative percent"
-  subtype_x: "coarser nested x annotation category"
-  subtype_y: "finer nested x annotation category"
-  error_low: "generic demo column only; not observed"
-  error_high: "generic demo column only; not observed"
-  line_value: "generic demo column only; not observed"
+  grammar_id: stacked_percent_bars_with_two_level_nested_axis
+  reusable_pattern: Show per-sample compositional proportions while grouping samples by two categorical
+    annotation tiers along the x axis.
+  not_supported:
+  - line chart
+  - uncertainty interval bar chart
+  - simple unstacked bar
+reviewed_visual_roles: &id005
+  sample_id: bar identity and ordering key
+  component: wide raw proportion columns pivoted to stacked fill categories
+  proportion: numeric value plotted as relative percent
+  subtype_x: coarser nested x annotation category
+  subtype_y: finer nested x annotation category
+  error_low: generic demo column only; not observed
+  error_high: generic demo column only; not observed
+  line_value: generic demo column only; not observed
 canonical_columns:
-  - "sample_id: one bar per sample/entity"
-  - "component: stack category after pivoting wide component columns"
-  - "proportion: numeric segment height for 100% bars"
-  - "subtype_x: nested x-axis grouping level"
-  - "subtype_y: nested x-axis subgrouping level"
-  - "sample_order: optional explicit x ordering"
+- 'sample_id: one bar per sample/entity'
+- 'component: stack category after pivoting wide component columns'
+- 'proportion: numeric segment height for 100% bars'
+- 'subtype_x: nested x-axis grouping level'
+- 'subtype_y: nested x-axis subgrouping level'
+- 'sample_order: optional explicit x ordering'
 required_data_semantics:
-  sample_id: "one bar per sample/entity"
-  component: "stack category after pivoting wide component columns"
-  proportion: "numeric segment height; rows per sample should sum to approximately 1 for 100% bars"
-  subtype_x: "nested x-axis grouping level"
-  subtype_y: "nested x-axis subgrouping level"
+  sample_id: one bar per sample/entity
+  component: stack category after pivoting wide component columns
+  proportion: numeric segment height; rows per sample should sum to approximately 1 for 100% bars
+  subtype_x: nested x-axis grouping level
+  subtype_y: nested x-axis subgrouping level
 optional_data_semantics:
-  sample_order: "explicit x ordering if source order should be preserved"
-  palette: "fixed component and annotation-band colors"
-  component_order: "legend and stack order"
+  sample_order: explicit x ordering if source order should be preserved
+  palette: fixed component and annotation-band colors
+  component_order: legend and stack order
 optional_modules:
   nested_axis_annotation:
-    status: "core_observed_feature"
-    required_fields: ["sample_id", "subtype_x", "subtype_y"]
+    status: core_observed_feature
+    required_fields:
+    - sample_id
+    - subtype_x
+    - subtype_y
   percent_stack:
-    status: "core_observed_feature"
-    required_fields: ["sample_id", "component", "proportion"]
+    status: core_observed_feature
+    required_fields:
+    - sample_id
+    - component
+    - proportion
   label_layer:
-    status: "not_observed"
+    status: not_observed
   uncertainty_interval:
-    status: "not_observed"
-false_positive_risks:
-  - "Do not classify as line grammar; no line marks are present."
-  - "Do not treat data_main.csv error_low/error_high/line_value as supported visual roles for this asset."
-  - "Do not classify raw meta tag '环状' as observed geometry; rebuilt image is rectangular stacked bars."
-  - "plot.py calls a generic renderer and does not encode the observed nested-axis grammar."
+    status: not_observed
+false_positive_risks: &id004
+- Do not classify as line grammar; no line marks are present.
+- Do not treat data_main.csv error_low/error_high/line_value as supported visual roles for this asset.
+- Do not classify raw meta tag '环状' as observed geometry; rebuilt image is rectangular stacked bars.
+- plot.py calls a generic renderer and does not encode the observed nested-axis grammar.
 best_for:
-  - "100% stacked per-sample composition bars."
-  - "Bar plots requiring two-level categorical annotation bands under the x axis."
-  - "Examples of nested-axis grouping."
+- 100% stacked per-sample composition bars.
+- Bar plots requiring two-level categorical annotation bands under the x axis.
+- Examples of nested-axis grouping.
 bad_for:
-  - "Line charts."
-  - "Simple single-series bar charts without stacked composition."
-  - "Figures needing visible per-sample x tick labels."
-  - "Error-bar or interval bar charts."
-style_notes:
-  - "White background, percent y-axis from 0 to 100%, no x tick labels."
-  - "Three fill categories use lavender, light blue, and green."
-  - "Nested annotation bands are colored boxes with group text centered below the bars."
+- Line charts.
+- Simple single-series bar charts without stacked composition.
+- Figures needing visible per-sample x tick labels.
+- Error-bar or interval bar charts.
+style_notes: &id006
+- White background, percent y-axis from 0 to 100%, no x tick labels.
+- Three fill categories use lavender, light blue, and green.
+- Nested annotation bands are colored boxes with group text centered below the bars.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Distinct reusable nested-axis stacked-bar grammar, but current standard data interface and dossier need correction before core retrieval."
+  tier: support
+  rationale: Distinct reusable nested-axis stacked-bar grammar, but current standard data interface and
+    dossier need correction before core retrieval.
   exclusion_risks:
-    - "generic renderer entry does not reproduce the observed grammar from data_main.csv"
+  - generic renderer entry does not reproduce the observed grammar from data_main.csv
 confidence:
   overall: 0.91
   visual_grammar: 0.96
   current_contract_fit: 0.28
 proposed_metadata_patch:
-  retrieval_tier: "support"
+  retrieval_tier: support
   visual_grammar:
-    grammar_id: "stacked_percent_bars_with_two_level_nested_axis"
-    backend: "R/ggplot2 + legendry"
-    required_data_roles: ["sample_id", "component", "proportion", "subtype_x", "subtype_y"]
+    grammar_id: stacked_percent_bars_with_two_level_nested_axis
+    backend: R/ggplot2 + legendry
+    required_data_roles:
+    - sample_id
+    - component
+    - proportion
+    - subtype_x
+    - subtype_y
 proposed_dossier_patch:
   visual_grammar:
-    geometry: "bar"
-    subtype: "100pct_stacked_bar_nested_axis_annotation"
+    geometry: bar
+    subtype: 100pct_stacked_bar_nested_axis_annotation
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - category
+  - value
+  - group
+  - stack
+  - error_low
+  - error_high
+  - line_value
+  - annotation_value
+  - label
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns:
+  - error_low
+  - error_high
+  - line_value
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior: *id007
+  unsupported_features: *id004

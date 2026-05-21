@@ -1,0 +1,153 @@
+case_id: plotmaster_001箱线图+散点图
+paths:
+  case: vault/material/plotmaster_001箱线图+散点图
+  metadata: vault/material/plotmaster_001箱线图+散点图/metadata.json
+  agent_guide: vault/material/plotmaster_001箱线图+散点图/agent_guide.md
+  entry: vault/material/plotmaster_001箱线图+散点图/plot.py
+  rebuilt_png: vault/material/plotmaster_001箱线图+散点图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_001箱线图+散点图/metadata.json
+    exists: true
+    size_bytes: 2748
+  agent_guide:
+    path: vault/material/plotmaster_001箱线图+散点图/agent_guide.md
+    exists: true
+    size_bytes: 1717
+  data_main:
+    path: vault/material/plotmaster_001箱线图+散点图/data_main.csv
+    exists: true
+    size_bytes: 6879
+  data_optional:
+    path: vault/material/plotmaster_001箱线图+散点图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_001箱线图+散点图/plot.py
+    exists: true
+    size_bytes: 229
+  rebuilt_png:
+    path: vault/material/plotmaster_001箱线图+散点图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 39777
+image:
+  exists: true
+  size_bytes: 39777
+  width: 1280
+  height: 800
+  mean_luma: 239.1968
+  stddev_luma: 51.8506
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 46
+    column_summary:
+      x:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 46
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 46
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 23
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      target:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 46
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 46
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 46
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 46
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_001箱线图+散点图/plot.py
+  - vault/material/plotmaster_001箱线图+散点图/scripts/box_scatter_plot.R
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 001箱线图
+  - 散点图
+  metadata_geometry: scatter
+  geometry_keyword_hits:
+    scatter:
+    - scatter
+    - 散点
+    box:
+    - 箱线
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

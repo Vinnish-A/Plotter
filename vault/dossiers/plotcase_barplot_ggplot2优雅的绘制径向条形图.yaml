@@ -276,60 +276,24 @@ exclusion_risks:
 - generic renderer mismatch
 - synthetic canonical CSV
 - misleading compatibility columns
-reviewed_visual_grammar:
-  figure_type: concentric_radial_bar_chart
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml
   geometry: polar_bar
-  layout:
-  - white void theme
-  - concentric annular bars
-  - left/center inline label stack
-  - no axes
-  - no legend
-  marks:
-  - annular bar arcs
-  - country-percent text labels
-  encodings:
-    category: country/ring identity and label text
-    value: aggregated participant total mapped to polar bar arc length
-    percent: derived share shown in label
-    order: descending total, displayed as ordered rings
-    color: alternating teal/navy styling; no legend semantics
-  subtype: concentric_radial_bar
-  grammar_id: top_n_concentric_polar_bar_with_inline_percent_labels
-  required_data_roles:
+  subtype: top_n_concentric_polar_bar_with_inline_percent_labels
+  required_roles:
   - category
   - value
-  optional_data_roles:
+  optional_roles:
   - percent
   - label
   - order
   - color
   - ymax
   - top_n
-  optional_modules:
-    percent_label_layer:
-      status: supported_by_original_R
-    polar_coordinate_bar:
-      status: required_for_observed_grammar
-    top_n_filter:
-      status: supported_by_original_R
-    generic_bar_renderer:
-      status: compatibility_only_not_observed_grammar
-  false_positive_risks:
-  - Current dossier line grammar is wrong.
-  - Do not treat group, stack, error_low, error_high, or line_value as evidenced visual
-    roles.
-  - plot.py calls a generic bar renderer and does not encode the observed radial grammar.
-  - Do not classify as stacked/grouped bar despite metadata keywords.
-reviewed_visual_roles:
-  category: displayed country/category identity
-  value: aggregated numeric magnitude driving arc length
-  percent: derived share label
-  label: category plus rounded percent text
-  order: ranked display order
-  color: fixed alternating decorative palette
-  group: compatibility/demo role only
-  stack: compatibility/demo role only
-  error_low: not visually supported
-  error_high: not visually supported
-  line_value: not visually supported
+  tier: support
+  confidence:
+    overall: 0.9
+    visual_identification: 0.97
+    source_code_assessment: 0.92
+    current_contract_fit: 0.3

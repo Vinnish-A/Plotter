@@ -1,0 +1,138 @@
+case_id: plotcase_tree_多层级系统发育树图
+paths:
+  case: vault/material/plotcase_tree_多层级系统发育树图
+  metadata: vault/material/plotcase_tree_多层级系统发育树图/metadata.json
+  agent_guide: vault/material/plotcase_tree_多层级系统发育树图/agent_guide.md
+  entry: vault/material/plotcase_tree_多层级系统发育树图/plot.py
+  rebuilt_png: vault/material/plotcase_tree_多层级系统发育树图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: R
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotcase_tree_多层级系统发育树图/metadata.json
+    exists: true
+    size_bytes: 4996
+  agent_guide:
+    path: vault/material/plotcase_tree_多层级系统发育树图/agent_guide.md
+    exists: true
+    size_bytes: 1732
+  data_main:
+    path: vault/material/plotcase_tree_多层级系统发育树图/data_main.csv
+    exists: true
+    size_bytes: 438
+  data_optional:
+    path: vault/material/plotcase_tree_多层级系统发育树图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_tree_多层级系统发育树图/plot.py
+    exists: true
+    size_bytes: 238
+  rebuilt_png:
+    path: vault/material/plotcase_tree_多层级系统发育树图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 632112
+image:
+  exists: true
+  size_bytes: 632112
+  width: 1839
+  height: 1537
+  mean_luma: 242.5343
+  stddev_luma: 39.741
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - node_id
+    - parent_id
+    - label
+    - branch_length
+    - tip_group
+    - track
+    - track_value
+    - track_class
+    - heatmap_value
+    sampled_rows: 9
+    column_summary:
+      node_id:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      parent_id:
+        kind: categorical
+        missing_rate_sample: 0.1111
+        cardinality_sample: 4
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      branch_length:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      tip_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      track:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      track_value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      track_class:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      heatmap_value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: R
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_tree_多层级系统发育树图/plot.py
+  - vault/material/plotcase_tree_多层级系统发育树图/scripts/code.R
+  backend_hints:
+  - ggtree
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 多层级系统发育树图
+  metadata_geometry: null
+  geometry_keyword_hits:
+    network:
+    - network
+    tree:
+    - ggtree
+    - tree
+    - 系统发育
+    heatmap:
+    - heatmap
+  optional_module_hint_columns:
+  - label

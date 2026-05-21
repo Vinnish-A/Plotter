@@ -1,111 +1,177 @@
-case_id: "plotcase_network_STRING_BioNet网络模块解析代码实战"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_network_STRING_BioNet网络模块解析代码实战
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_data_contract_caution"
-  note: "Observed visual is a STRING/BioNet node-link network; node attributes are stronger evidence than generic edge weight."
-annotator_model: "gpt-5.5 high reasoning subagent"
-reviewed_at: "2026-05-21T01:12:07+08:00"
+  status: reviewed_with_data_contract_caution
+  note: Observed visual is a STRING/BioNet node-link network; node attributes are stronger evidence than
+    generic edge weight.
+annotator_model: gpt-5.5 high reasoning subagent
+reviewed_at: '2026-05-21T01:12:07+08:00'
 evidence:
   truncated_source_summary: true
   files_read:
-    - "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/metadata.json"
-    - "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/agent_guide.md"
-    - "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/plot.py"
-    - "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/data_main.csv"
-    - "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/raw/code.R"
-    - "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/raw/stringdb_NK_background.tsv"
-    - "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/outputs/rebuilt.png"
-    - "vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml"
-  data_main_header: ["source", "target", "weight", "node_id", "node_label", "node_group", "node_size", "edge_group", "edge_direction", "layout_x", "layout_y", "source_group", "target_group"]
+  - vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/metadata.json
+  - vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/agent_guide.md
+  - vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/plot.py
+  - vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/data_main.csv
+  - vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/raw/code.R
+  - vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/raw/stringdb_NK_background.tsv
+  - vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/outputs/rebuilt.png
+  - vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/outputs/visual_check.json
+  - vault/dossiers/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml
+  data_main_header:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  - source_group
+  - target_group
 observed_visual_grammar:
-  figure_type: "labeled_node_link_network"
-  layout: ["force or graph layout", "labeled nodes", "biological interaction context"]
-  marks: ["nodes", "edges", "text labels"]
-  encodings:
-    edge: "source-target interaction"
-    node_size: "node importance, score, or degree-like quantity"
-    node_color: "node group or logFC-like score when supported by source"
+  figure_type: labeled_node_link_network
+  layout: &id001
+  - force or graph layout
+  - labeled nodes
+  - biological interaction context
+  marks: &id002
+  - nodes
+  - edges
+  - text labels
+  encodings: &id003
+    edge: source-target interaction
+    node_size: node importance, score, or degree-like quantity
+    node_color: node group or logFC-like score when supported by source
 inferred_visual_grammar:
-  grammar_id: "string_bionet_labeled_node_link"
-  reusable_pattern: "Interaction network with node-level attributes and readable node labels."
-  not_supported: ["Sankey flow", "tree topology", "edge weight as mandatory visual encoding without source evidence"]
-reviewed_visual_roles:
-  source: "interaction edge source"
-  target: "interaction edge target"
-  weight: "possible edge confidence; weak visual evidence in current abstraction"
-  node_id: "node join key"
-  node_label: "display label"
-  node_group: "node category or biological class"
-  node_size: "node score, centrality, or size encoding"
-  edge_group: "optional edge category"
-  edge_direction: "optional direction flag, not always visualized"
-  layout_x: "optional manual x position"
-  layout_y: "optional manual y position"
-  source_group: "compatibility helper, not primary visual role unless source proves it"
-  target_group: "compatibility helper, not primary visual role unless source proves it"
+  grammar_id: string_bionet_labeled_node_link
+  reusable_pattern: Interaction network with node-level attributes and readable node labels.
+  not_supported:
+  - Sankey flow
+  - tree topology
+  - edge weight as mandatory visual encoding without source evidence
+reviewed_visual_roles: &id005
+  source: interaction edge source
+  target: interaction edge target
+  weight: possible edge confidence; weak visual evidence in current abstraction
+  node_id: node join key
+  node_label: display label
+  node_group: node category or biological class
+  node_size: node score, centrality, or size encoding
+  edge_group: optional edge category
+  edge_direction: optional direction flag, not always visualized
+  layout_x: optional manual x position
+  layout_y: optional manual y position
+  source_group: compatibility helper, not primary visual role unless source proves it
+  target_group: compatibility helper, not primary visual role unless source proves it
 canonical_columns:
-  - "source: observed edge source"
-  - "target: observed edge target"
-  - "weight: uncertain edge attribute, not automatically required"
-  - "node_id: node key"
-  - "node_label: node display label"
-  - "node_group: optional node category"
-  - "node_size: optional node score/importance"
-  - "edge_group: optional edge category"
-  - "edge_direction: optional edge direction"
-  - "layout_x: optional manual x coordinate"
-  - "layout_y: optional manual y coordinate"
-  - "source_group: compatibility helper"
-  - "target_group: compatibility helper"
+- 'source: observed edge source'
+- 'target: observed edge target'
+- 'weight: uncertain edge attribute, not automatically required'
+- 'node_id: node key'
+- 'node_label: node display label'
+- 'node_group: optional node category'
+- 'node_size: optional node score/importance'
+- 'edge_group: optional edge category'
+- 'edge_direction: optional edge direction'
+- 'layout_x: optional manual x coordinate'
+- 'layout_y: optional manual y coordinate'
+- 'source_group: compatibility helper'
+- 'target_group: compatibility helper'
 required_data_semantics:
-  edge_source: "node id for one side of each interaction"
-  edge_target: "node id for the other side of each interaction"
-  node_identity: "node ids that can join edge endpoints to labels and attributes"
+  edge_source: node id for one side of each interaction
+  edge_target: node id for the other side of each interaction
+  node_identity: node ids that can join edge endpoints to labels and attributes
 optional_data_semantics:
-  node_label: "display gene/protein label"
-  node_score: "value mapped to size or color"
-  edge_confidence: "may be mapped to alpha/width if source semantics are clear"
-  layout_coordinates: "manual graph layout if reproducibility requires it"
+  node_label: display gene/protein label
+  node_score: value mapped to size or color
+  edge_confidence: may be mapped to alpha/width if source semantics are clear
+  layout_coordinates: manual graph layout if reproducibility requires it
 optional_modules:
   node_labels:
-    status: "supported"
+    status: supported
   node_attribute_encoding:
-    status: "supported"
+    status: supported
   weighted_edges:
-    status: "supported_only_if_weight_semantics_are_verified"
+    status: supported_only_if_weight_semantics_are_verified
   enrichment_side_panel:
-    status: "not_supported_by_this_case_review"
-false_positive_risks:
-  - "Do not infer meaningful edge weight solely from a compatibility weight column."
-  - "Do not retrieve as flow/Sankey; source/target here are graph endpoints, not stages."
-  - "Dense labels can make this unsafe as a default recommendation without node filtering."
+    status: not_supported_by_this_case_review
+false_positive_risks: &id004
+- Do not infer meaningful edge weight solely from a compatibility weight column.
+- Do not retrieve as flow/Sankey; source/target here are graph endpoints, not stages.
+- Dense labels can make this unsafe as a default recommendation without node filtering.
 best_for:
-  - "Gene or protein interaction networks with node-level attributes."
-  - "Labeled STRING/BioNet-style network exemplars."
+- Gene or protein interaction networks with node-level attributes.
+- Labeled STRING/BioNet-style network exemplars.
 bad_for:
-  - "Staged flow or alluvial plots."
-  - "Tree heatmaps."
-  - "Networks requiring guaranteed weighted-edge semantics before review."
-style_notes:
-  - "Node labels need reserved space or filtering."
-  - "Edge styling should stay secondary to node identity and node attributes."
+- Staged flow or alluvial plots.
+- Tree heatmaps.
+- Networks requiring guaranteed weighted-edge semantics before review.
+style_notes: &id006
+- Node labels need reserved space or filtering.
+- Edge styling should stay secondary to node identity and node attributes.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Useful real node-link network grammar, but not a core default until weight semantics and standardized data fidelity are verified."
+  tier: support
+  rationale: Useful real node-link network grammar, but not a core default until weight semantics and
+    standardized data fidelity are verified.
   exclusion_risks:
-    - "overstated edge-weight semantics"
-    - "label crowding"
+  - overstated edge-weight semantics
+  - label crowding
 confidence:
-  overall: 0.80
+  overall: 0.8
   visual_grammar: 0.88
   data_roles: 0.74
   retrieval_tier: 0.82
 proposed_metadata_patch:
-  retrieval_tier: "support"
-  retrieval_rationale: "STRING/BioNet node-link support asset; node attributes are clear, edge-weight semantics need verification."
+  retrieval_tier: support
+  retrieval_rationale: STRING/BioNet node-link support asset; node attributes are clear, edge-weight semantics
+    need verification.
 proposed_dossier_patch:
   optional_modules:
     weighted_edges:
-      status: "verify_before_recommendation"
-
+      status: verify_before_recommendation
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  - source_group
+  - target_group
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns:
+  - source_group
+  - target_group
+  missing_optional_data:
+  - enrichment_side_panel
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id004

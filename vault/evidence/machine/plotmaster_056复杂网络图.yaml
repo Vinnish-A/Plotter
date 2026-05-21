@@ -1,0 +1,150 @@
+case_id: plotmaster_056复杂网络图
+paths:
+  case: vault/material/plotmaster_056复杂网络图
+  metadata: vault/material/plotmaster_056复杂网络图/metadata.json
+  agent_guide: vault/material/plotmaster_056复杂网络图/agent_guide.md
+  entry: vault/material/plotmaster_056复杂网络图/plot.py
+  rebuilt_png: vault/material/plotmaster_056复杂网络图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_056复杂网络图/metadata.json
+    exists: true
+    size_bytes: 4793
+  agent_guide:
+    path: vault/material/plotmaster_056复杂网络图/agent_guide.md
+    exists: true
+    size_bytes: 1709
+  data_main:
+    path: vault/material/plotmaster_056复杂网络图/data_main.csv
+    exists: true
+    size_bytes: 34834
+  data_optional:
+    path: vault/material/plotmaster_056复杂网络图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_056复杂网络图/plot.py
+    exists: true
+    size_bytes: 229
+  rebuilt_png:
+    path: vault/material/plotmaster_056复杂网络图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 520577
+image:
+  exists: true
+  size_bytes: 520577
+  width: 1440
+  height: 720
+  mean_luma: 246.6663
+  stddev_luma: 26.4761
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 200
+    column_summary:
+      x:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      y:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 12
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 199
+      group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      target:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 12
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 199
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 199
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 199
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_056复杂网络图/plot.py
+  - vault/material/plotmaster_056复杂网络图/scripts/codes.R
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 056复杂网络图
+  metadata_geometry: 3d_manifold
+  geometry_keyword_hits:
+    network:
+    - network
+    - 网络
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

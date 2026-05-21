@@ -1,115 +1,174 @@
-case_id: "figureya_survival_FigureYa183condSurv"
-annotation_version: "deep_annotation_v1"
+case_id: figureya_survival_FigureYa183condSurv
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_standard_script_mismatch"
-  note: "Observed rebuilt image matches the conditional-survival composite, but plot.py is generic and data_main.csv is a weak abstraction."
-annotator_model: "gpt-5 codex"
-reviewed_at: "2026-05-21T00:00:00+08:00"
+  status: reviewed_with_standard_script_mismatch
+  note: Observed rebuilt image matches the conditional-survival composite, but plot.py is generic and
+    data_main.csv is a weak abstraction.
+annotator_model: gpt-5 codex
+reviewed_at: '2026-05-21T00:00:00+08:00'
 evidence:
-  source: "third-batch asset_deep_annotator output in thread"
+  source: third-batch asset_deep_annotator output in thread
   files_read:
-    - "vault/material/figureya_survival_FigureYa183condSurv/metadata.json"
-    - "vault/material/figureya_survival_FigureYa183condSurv/agent_guide.md"
-    - "vault/material/figureya_survival_FigureYa183condSurv/plot.py"
-    - "vault/material/figureya_survival_FigureYa183condSurv/data_main.csv"
-    - "vault/material/figureya_survival_FigureYa183condSurv/raw/FigureYa183condSurv.Rmd"
-    - "vault/material/figureya_survival_FigureYa183condSurv/raw/easy_input.csv"
-    - "vault/material/figureya_survival_FigureYa183condSurv/raw/conditional_survival_matrix.csv"
-    - "vault/material/figureya_survival_FigureYa183condSurv/raw/number_at_risk.csv"
-    - "vault/material/figureya_survival_FigureYa183condSurv/outputs/rebuilt.png"
-    - "vault/material/figureya_survival_FigureYa183condSurv/outputs/visual_check.json"
-    - "vault/dossiers/figureya_survival_FigureYa183condSurv.yaml"
-  output_check:
-    rebuilt_png_size: [1152, 1728]
+  - vault/material/figureya_survival_FigureYa183condSurv/metadata.json
+  - vault/material/figureya_survival_FigureYa183condSurv/agent_guide.md
+  - vault/material/figureya_survival_FigureYa183condSurv/plot.py
+  - vault/material/figureya_survival_FigureYa183condSurv/data_main.csv
+  - vault/material/figureya_survival_FigureYa183condSurv/raw/FigureYa183condSurv.Rmd
+  - vault/material/figureya_survival_FigureYa183condSurv/raw/easy_input.csv
+  - vault/material/figureya_survival_FigureYa183condSurv/raw/conditional_survival_matrix.csv
+  - vault/material/figureya_survival_FigureYa183condSurv/raw/number_at_risk.csv
+  - vault/material/figureya_survival_FigureYa183condSurv/outputs/rebuilt.png
+  - vault/material/figureya_survival_FigureYa183condSurv/outputs/visual_check.json
+  - vault/dossiers/figureya_survival_FigureYa183condSurv.yaml
+  output_check: &id007
+    rebuilt_png_size:
+    - 1152
+    - 1728
     visual_check_ok: true
-    original_reference: "raw/conditional_survival_curve.png"
-  data_main_issue: "source/target/weight duplicate x/y/value and are not relationship roles"
+    original_reference: raw/conditional_survival_curve.png
+  data_main_issue: source/target/weight duplicate x/y/value and are not relationship roles
 observed_visual_grammar:
-  figure_type: "conditional_survival_composite"
-  family: "survival"
-  layout: ["top conditional survival step-curve panel", "middle triangular probability text matrix", "bottom aligned number-at-risk row"]
-  marks: ["colored survival step lines", "condition-year legend", "colored percent text labels", "risk-count text labels"]
-  encodings:
-    color: "given conditional survival year"
-    step_y: "conditional survival probability"
-    matrix_text: "conditional survival probability percentages"
-    risk_text: "number at risk by year"
+  figure_type: conditional_survival_composite
+  family: survival
+  layout: &id001
+  - top conditional survival step-curve panel
+  - middle triangular probability text matrix
+  - bottom aligned number-at-risk row
+  marks: &id002
+  - colored survival step lines
+  - condition-year legend
+  - colored percent text labels
+  - risk-count text labels
+  encodings: &id003
+    color: given conditional survival year
+    step_y: conditional survival probability
+    matrix_text: conditional survival probability percentages
+    risk_text: number at risk by year
 inferred_visual_grammar:
-  grammar_id: "conditional_survival_curve_with_probability_matrix_and_risk_table"
-  statistical_transform: ["time conversion", "Kaplan-Meier fit", "conditional survival curve derivation", "probability matrix derivation", "risk-row derivation"]
-  reusable_pattern: "Single-cohort conditional survival visualization combining curves, derived probability table, and aligned risk counts."
-  not_supported: ["heatmap from metadata keywords", "network or flow semantics", "confidence interval display"]
-reviewed_visual_roles:
-  time: "required time-to-event duration"
-  event: "required event/censor status"
-  condition_year: "curve color/legend group and matrix row"
-  reach_year: "matrix target year"
-  survival_probability: "curve y value and matrix text"
-  risk_count: "bottom risk-table text"
-  source: "compatibility duplicate; not a relationship role"
-  target: "compatibility duplicate; not a relationship role"
-  weight: "compatibility duplicate; not an edge weight"
-  lower: "compatibility-only; no confidence interval evidenced"
-  upper: "compatibility-only; no confidence interval evidenced"
+  grammar_id: conditional_survival_curve_with_probability_matrix_and_risk_table
+  statistical_transform:
+  - time conversion
+  - Kaplan-Meier fit
+  - conditional survival curve derivation
+  - probability matrix derivation
+  - risk-row derivation
+  reusable_pattern: Single-cohort conditional survival visualization combining curves, derived probability
+    table, and aligned risk counts.
+  not_supported:
+  - heatmap from metadata keywords
+  - network or flow semantics
+  - confidence interval display
+reviewed_visual_roles: &id005
+  time: required time-to-event duration
+  event: required event/censor status
+  condition_year: curve color/legend group and matrix row
+  reach_year: matrix target year
+  survival_probability: curve y value and matrix text
+  risk_count: bottom risk-table text
+  source: compatibility duplicate; not a relationship role
+  target: compatibility duplicate; not a relationship role
+  weight: compatibility duplicate; not an edge weight
+  lower: compatibility-only; no confidence interval evidenced
+  upper: compatibility-only; no confidence interval evidenced
 canonical_columns:
-  - "time: required time-to-event duration"
-  - "event: required event/censor status"
-  - "condition_year: derived or declared conditional survival start year"
-  - "reach_year: derived or declared target year for probability matrix"
-  - "survival_probability: derived curve/table probability"
-  - "risk_count: optional derived or precomputed risk-table count"
+- 'time: required time-to-event duration'
+- 'event: required event/censor status'
+- 'condition_year: derived or declared conditional survival start year'
+- 'reach_year: derived or declared target year for probability matrix'
+- 'survival_probability: derived curve/table probability'
+- 'risk_count: optional derived or precomputed risk-table count'
 required_data_semantics:
-  time: "time-to-event duration per observation"
-  event: "event/censor indicator per observation"
+  time: time-to-event duration per observation
+  event: event/censor indicator per observation
 optional_data_semantics:
-  condition_years: "conditional survival start years"
-  reach_years: "year breaks for matrix and risk table"
-  palette: "colors for condition-year curves and text"
-  risk_count: "precomputed risk row only when raw event records are unavailable"
+  condition_years: conditional survival start years
+  reach_years: year breaks for matrix and risk table
+  palette: colors for condition-year curves and text
+  risk_count: precomputed risk row only when raw event records are unavailable
 optional_modules:
   probability_matrix:
-    status: "present_and_required_for_visual_match"
+    status: present_and_required_for_visual_match
   risk_table:
-    status: "present_and_required_for_visual_match"
+    status: present_and_required_for_visual_match
   confidence_interval:
-    status: "not_present"
+    status: not_present
   network_relationships:
-    status: "not_supported"
-false_positive_risks:
-  - "Do not classify this as a heatmap from metadata keywords alone."
-  - "Do not infer network or flow roles from source/target/weight columns."
-  - "Do not treat lower/upper as confidence intervals."
-  - "Do not treat plot.py generic line rendering as sufficient to reproduce the observed composite."
+    status: not_supported
+false_positive_risks: &id004
+- Do not classify this as a heatmap from metadata keywords alone.
+- Do not infer network or flow roles from source/target/weight columns.
+- Do not treat lower/upper as confidence intervals.
+- Do not treat plot.py generic line rendering as sufficient to reproduce the observed composite.
 best_for:
-  - "Single-cohort conditional survival displays with probability matrix and risk counts."
-  - "Survival figures where derived conditional probabilities are central."
+- Single-cohort conditional survival displays with probability matrix and risk counts.
+- Survival figures where derived conditional probabilities are central.
 bad_for:
-  - "Grouped Kaplan-Meier comparisons between strata."
-  - "Network, flow, or edge-weight visualizations."
-  - "Survival figures requiring visible confidence bands or p-value annotations."
-style_notes:
-  - "Use step geometry for survival curves."
-  - "Keep probability matrix and risk table aligned to the same year scale."
-  - "Legend sits above the top panel and maps colors to given survival years."
+- Grouped Kaplan-Meier comparisons between strata.
+- Network, flow, or edge-weight visualizations.
+- Survival figures requiring visible confidence bands or p-value annotations.
+style_notes: &id006
+- Use step geometry for survival curves.
+- Keep probability matrix and risk table aligned to the same year scale.
+- Legend sits above the top panel and maps colors to given survival years.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Source-backed visual match exists, but current standard CSV roles and plot.py entry are not faithful enough for core retrieval."
+  tier: support
+  rationale: Source-backed visual match exists, but current standard CSV roles and plot.py entry are not
+    faithful enough for core retrieval.
   exclusion_risks:
-    - "generic renderer entry"
-    - "weak data_main abstraction"
-    - "misleading compatibility columns"
+  - generic renderer entry
+  - weak data_main abstraction
+  - misleading compatibility columns
 confidence:
   overall: 0.9
   visual_identification: 0.98
   data_contract_assessment: 0.9
   rebuild_path_assessment: 0.74
 proposed_metadata_patch:
-  retrieval_tier: "support"
+  retrieval_tier: support
   visual_grammar:
-    grammar_id: "conditional_survival_curve_with_probability_matrix_and_risk_table"
-    required_data_roles: ["time", "event"]
+    grammar_id: conditional_survival_curve_with_probability_matrix_and_risk_table
+    required_data_roles:
+    - time
+    - event
 proposed_dossier_patch:
   visual_grammar:
-    geometry: "survival"
-    subtype: "conditional_survival_composite"
-
+    geometry: survival
+    subtype: conditional_survival_composite
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - time
+  - event
+  - condition_year
+  - reach_year
+  - survival_probability
+  - risk_count
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  missing_optional_data:
+  - confidence_interval
+  - network_relationships
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior: *id007
+  unsupported_features: *id004

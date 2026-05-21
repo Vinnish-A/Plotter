@@ -1,0 +1,151 @@
+case_id: plotmaster_058分面折线图+置信区间+误差棒
+paths:
+  case: vault/material/plotmaster_058分面折线图+置信区间+误差棒
+  metadata: vault/material/plotmaster_058分面折线图+置信区间+误差棒/metadata.json
+  agent_guide: vault/material/plotmaster_058分面折线图+置信区间+误差棒/agent_guide.md
+  entry: vault/material/plotmaster_058分面折线图+置信区间+误差棒/plot.py
+  rebuilt_png: vault/material/plotmaster_058分面折线图+置信区间+误差棒/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: low
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_058分面折线图+置信区间+误差棒/metadata.json
+    exists: true
+    size_bytes: 2943
+  agent_guide:
+    path: vault/material/plotmaster_058分面折线图+置信区间+误差棒/agent_guide.md
+    exists: true
+    size_bytes: 1718
+  data_main:
+    path: vault/material/plotmaster_058分面折线图+置信区间+误差棒/data_main.csv
+    exists: true
+    size_bytes: 1355
+  data_optional:
+    path: vault/material/plotmaster_058分面折线图+置信区间+误差棒/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_058分面折线图+置信区间+误差棒/plot.py
+    exists: true
+    size_bytes: 249
+  rebuilt_png:
+    path: vault/material/plotmaster_058分面折线图+置信区间+误差棒/outputs/rebuilt.png
+    exists: true
+    size_bytes: 46764
+image:
+  exists: true
+  size_bytes: 46764
+  width: 1152
+  height: 330
+  mean_luma: 234.9558
+  stddev_luma: 47.1264
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 16
+    column_summary:
+      x:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 16
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 16
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      target:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 16
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 16
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 16
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 16
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_058分面折线图+置信区间+误差棒/plot.py
+  - vault/material/plotmaster_058分面折线图+置信区间+误差棒/scripts/codes.R
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 058分面折线图
+  - 置信区间
+  - 误差棒
+  metadata_geometry: bar
+  geometry_keyword_hits:
+    bar:
+    - bar
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

@@ -321,50 +321,22 @@ exclusion_risks:
 - case_level_fallback
 - generic_renderer_rebuild
 - empty_compatibility_columns
-reviewed_visual_grammar:
-  figure_type: two_panel_diffusion_manifold
-  layout:
-  - transition_matrix_heatmap
-  - swiss_roll_point_cloud_network
-  marks:
-  - red matrix cells
-  - gray local edges
-  - colored translucent points
-  encodings:
-    matrix_intensity: transition probability
-    point_position: 2D manifold embedding
-    point_color: roll parameter
-    edge_alpha: transition probability
-  not_observed:
-  - 3d axes
-  - labels
-  - threshold lines
-  - focus callouts
-  - marginal density
-  geometry: diffusion_manifold_composite
-  subtype: transition_matrix_plus_swiss_roll_network
-  grammar_id: diffusion_matrix_plus_swiss_roll_neighborhood
-  optional_modules:
-    matrix_panel:
-      status: observed_but_not_encoded_by_current_csv
-    manifold_edge_layer:
-      status: observed_but_not_encoded_by_current_csv
-    label_layer:
-      status: not_supported
-    trajectory_layer:
-      status: not_supported
-  false_positive_risks:
-  - Do not retrieve as clean PCA, 3D manifold, label, trajectory, or focus-callout
-    template.
-  - Compatibility columns are not evidence of supported optional modules.
-  - Rendered image fallback should not be treated as data-driven Retinue rebuild.
-reviewed_visual_roles:
-  matrix_row: transition matrix row index
-  matrix_column: transition matrix column index
-  transition_probability: matrix cell intensity and edge strength
-  node_id: manifold point identity
-  x: manifold x coordinate in true grammar; synthetic grid coordinate in current CSV
-  y: manifold y coordinate in true grammar; synthetic grid coordinate in current CSV
-  roll_parameter: point color parameter
-  label: empty compatibility column; not an active label layer
-  trajectory: empty compatibility column; not an active trajectory layer
+annotation_review_ref: vault/review/deep_annotation/reviews/figures4papers_figure_Cflows_diffusion_swiss_roll_png.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figures4papers_figure_Cflows_diffusion_swiss_roll_png.yaml
+  geometry: two_panel_diffusion_manifold
+  subtype: diffusion_matrix_plus_swiss_roll_neighborhood
+  required_roles:
+  - matrix_panel
+  - manifold_panel
+  - edge_layer
+  optional_roles:
+  - label
+  - trajectory
+  - color_override
+  tier: inspiration
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: high
+    source_rebuild_assessment: medium

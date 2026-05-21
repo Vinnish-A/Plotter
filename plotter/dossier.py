@@ -427,7 +427,7 @@ def effective_optional_modules(dossier: dict[str, Any]) -> dict[str, Any]:
             for name, value in reviewed["optional_modules"].items()
             if reviewed_module_supported(value)
         }
-    return dossier.get("optional_modules", {})
+    return {}
 
 
 def scientific_intent_for(title: str, geometry: str, subtype: str, keywords: list[str]) -> list[str]:
@@ -508,10 +508,12 @@ def dossier_from_case(case_dir: Path, repo_root: Path) -> dict[str, Any]:
         "id": case_id,
         "title": title,
         "annotation_status": {
-            "level": "deep_structural_pass_v1",
+            "level": "machine_generated_dossier_v1",
             "method": "metadata + agent guide + canonical CSV profile + plot entry + rebuilt image evidence",
-            "human_review_required": False,
+            "machine_generated": True,
+            "human_review_required": True,
         },
+        "machine_generated": True,
         "origin": {
             "case_dir": f"vault/material/{case_dir.name}",
             "source": metadata.get("source", {}),
@@ -523,7 +525,7 @@ def dossier_from_case(case_dir: Path, repo_root: Path) -> dict[str, Any]:
             "subtype": subtype,
             "keyword_evidence": keyword_hits,
         },
-        "visual_genes": visual_genes_for(geometry, subtype),
+        "visual_genes": {**visual_genes_for(geometry, subtype), "provenance": ["machine_keyword_inference"]},
         "data_roles": data_roles,
         "required_data": required,
         "optional_data": optional,
@@ -569,28 +571,20 @@ def index_record(dossier: dict[str, Any], repo_root: Path) -> dict[str, Any]:
     return {
         "id": case_id,
         "title": dossier["title"],
-        "intent": dossier.get("scientific_intent", []),
         "geometry": [grammar.get("geometry", "")],
         "subtype": grammar.get("subtype", "") or grammar.get("grammar_id", ""),
-        "visual_genes": dossier.get("visual_genes", {}),
         "required_roles": dossier.get("required_data", []),
         "optional_roles": dossier.get("optional_data", []),
-        "optional_modules": effective_optional_modules(dossier),
-        "supports": dossier.get("supports", {}),
+        "capabilities": dossier.get("supports", {}),
         "complexity": dossier.get("complexity", {}).get("level", ""),
-        "defamiliarization": dossier.get("defamiliarization", {}).get("level", ""),
-        "style_tags": dossier.get("style_compatibility", []),
-        "dependencies": [],
         "entry": f"{case_dir}/{dossier.get('function_signature', {}).get('entry', '')}",
-        "dossier": f"vault/dossiers/{case_id}.yaml",
+        "card": f"vault/cards/{case_id}.yaml",
         "preview": f"{case_dir}/outputs/rebuilt.png",
         "vault_status": dossier.get("vault_status", {}),
         "rebuild_class": dossier.get("rebuild_class", {}),
         "retrieval_tier": dossier.get("retrieval_tier", "support"),
         "retrieval_rationale": dossier.get("retrieval_rationale", ""),
         "exclusion_risks": dossier.get("exclusion_risks", []),
-        "reviewed_visual_roles": dossier.get("reviewed_visual_roles", {}),
-        "reviewed_visual_grammar": dossier.get("reviewed_visual_grammar", {}),
     }
 
 

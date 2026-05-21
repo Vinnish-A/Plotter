@@ -1,0 +1,150 @@
+case_id: plotcase_circos_细胞通讯弦图_基础入门
+paths:
+  case: vault/material/plotcase_circos_细胞通讯弦图_基础入门
+  metadata: vault/material/plotcase_circos_细胞通讯弦图_基础入门/metadata.json
+  agent_guide: vault/material/plotcase_circos_细胞通讯弦图_基础入门/agent_guide.md
+  entry: vault/material/plotcase_circos_细胞通讯弦图_基础入门/plot.py
+  rebuilt_png: vault/material/plotcase_circos_细胞通讯弦图_基础入门/outputs/rebuilt.png
+build:
+  status: custom_required
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: true
+files:
+  metadata:
+    path: vault/material/plotcase_circos_细胞通讯弦图_基础入门/metadata.json
+    exists: true
+    size_bytes: 4833
+  agent_guide:
+    path: vault/material/plotcase_circos_细胞通讯弦图_基础入门/agent_guide.md
+    exists: true
+    size_bytes: 1742
+  data_main:
+    path: vault/material/plotcase_circos_细胞通讯弦图_基础入门/data_main.csv
+    exists: true
+    size_bytes: 332
+  data_optional:
+    path: vault/material/plotcase_circos_细胞通讯弦图_基础入门/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_circos_细胞通讯弦图_基础入门/plot.py
+    exists: true
+    size_bytes: 242
+  rebuilt_png:
+    path: vault/material/plotcase_circos_细胞通讯弦图_基础入门/outputs/rebuilt.png
+    exists: true
+    size_bytes: 424097
+image:
+  exists: true
+  size_bytes: 424097
+  width: 1625
+  height: 1537
+  mean_luma: 236.3278
+  stddev_luma: 56.1309
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - source
+    - target
+    - weight
+    - source_group
+    - target_group
+    - direction
+    - sector_order
+    - sector_color
+    - label
+    - node_id
+    - node_label
+    sampled_rows: 7
+    column_summary:
+      source:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      target:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      source_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      target_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      direction:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      sector_order:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      sector_color:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      node_id:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      node_label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_circos_细胞通讯弦图_基础入门/plot.py
+  - vault/material/plotcase_circos_细胞通讯弦图_基础入门/scripts/code.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: true
+weak_hints:
+  title_terms:
+  - 细胞通讯弦图_基础入门
+  metadata_geometry: null
+  geometry_keyword_hits:
+    network:
+    - network
+    heatmap:
+    - matrix
+    circos:
+    - chord
+    - circos
+    - 弦图
+  optional_module_hint_columns:
+  - label
+  - source
+  - target
+  - weight

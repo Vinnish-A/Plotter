@@ -1,0 +1,33 @@
+type: object
+required:
+  - case_id
+  - paths
+  - build
+  - vault_status
+  - rebuild_class
+  - files
+  - image
+  - data
+  - code
+  - weak_hints
+properties:
+  case_id:
+    type: string
+  paths:
+    type: object
+  build:
+    type: object
+  vault_status:
+    type: object
+  rebuild_class:
+    type: object
+  files:
+    type: object
+  image:
+    type: object
+  data:
+    type: object
+  code:
+    type: object
+  weak_hints:
+    type: object

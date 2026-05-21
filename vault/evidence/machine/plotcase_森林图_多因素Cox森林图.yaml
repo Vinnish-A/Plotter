@@ -1,0 +1,136 @@
+case_id: plotcase_森林图_多因素Cox森林图
+paths:
+  case: vault/material/plotcase_森林图_多因素Cox森林图
+  metadata: vault/material/plotcase_森林图_多因素Cox森林图/metadata.json
+  agent_guide: vault/material/plotcase_森林图_多因素Cox森林图/agent_guide.md
+  entry: vault/material/plotcase_森林图_多因素Cox森林图/plot.py
+  rebuilt_png: vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png
+build:
+  status: custom_required
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotcase_森林图_多因素Cox森林图/metadata.json
+    exists: true
+    size_bytes: 4030
+  agent_guide:
+    path: vault/material/plotcase_森林图_多因素Cox森林图/agent_guide.md
+    exists: true
+    size_bytes: 1719
+  data_main:
+    path: vault/material/plotcase_森林图_多因素Cox森林图/data_main.csv
+    exists: true
+    size_bytes: 359
+  data_optional:
+    path: vault/material/plotcase_森林图_多因素Cox森林图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_森林图_多因素Cox森林图/plot.py
+    exists: true
+    size_bytes: 229
+  rebuilt_png:
+    path: vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 216136
+image:
+  exists: true
+  size_bytes: 216136
+  width: 1358
+  height: 1537
+  mean_luma: 229.3928
+  stddev_luma: 41.5517
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - term
+    - estimate
+    - lower
+    - upper
+    - p_value
+    - group
+    - reference
+    - label
+    - row_order
+    sampled_rows: 8
+    column_summary:
+      term:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+      estimate:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+      p_value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      reference:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      row_order:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_森林图_多因素Cox森林图/plot.py
+  - vault/material/plotcase_森林图_多因素Cox森林图/scripts/code.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 多因素Cox森林图
+  metadata_geometry: null
+  geometry_keyword_hits:
+    forest:
+    - cox
+    - forest
+    - 森林
+  optional_module_hint_columns:
+  - label
+  - group
+  - lower
+  - upper

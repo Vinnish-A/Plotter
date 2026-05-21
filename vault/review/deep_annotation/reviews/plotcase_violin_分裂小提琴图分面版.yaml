@@ -1,98 +1,148 @@
-case_id: "plotcase_violin_分裂小提琴图分面版"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_violin_分裂小提琴图分面版
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_compact_abstraction_caution"
-  note: "Observed visual is a faceted split violin distribution; current standard data is useful but compact."
-annotator_model: "gpt-5.5 high reasoning subagent"
-reviewed_at: "2026-05-21T01:12:07+08:00"
+  status: reviewed_with_compact_abstraction_caution
+  note: Observed visual is a faceted split violin distribution; current standard data is useful but compact.
+annotator_model: gpt-5.5 high reasoning subagent
+reviewed_at: '2026-05-21T01:12:07+08:00'
 evidence:
   truncated_source_summary: true
   files_read:
-    - "vault/material/plotcase_violin_分裂小提琴图分面版/metadata.json"
-    - "vault/material/plotcase_violin_分裂小提琴图分面版/agent_guide.md"
-    - "vault/material/plotcase_violin_分裂小提琴图分面版/plot.py"
-    - "vault/material/plotcase_violin_分裂小提琴图分面版/data_main.csv"
-    - "vault/material/plotcase_violin_分裂小提琴图分面版/raw/code.R"
-    - "vault/material/plotcase_violin_分裂小提琴图分面版/raw/violin_data.csv"
-    - "vault/material/plotcase_violin_分裂小提琴图分面版/outputs/rebuilt.png"
-    - "vault/material/plotcase_violin_分裂小提琴图分面版/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_violin_分裂小提琴图分面版.yaml"
-  data_main_header: ["group", "value", "subgroup", "paired_id", "p_value", "facet", "label"]
+  - vault/material/plotcase_violin_分裂小提琴图分面版/metadata.json
+  - vault/material/plotcase_violin_分裂小提琴图分面版/agent_guide.md
+  - vault/material/plotcase_violin_分裂小提琴图分面版/plot.py
+  - vault/material/plotcase_violin_分裂小提琴图分面版/data_main.csv
+  - vault/material/plotcase_violin_分裂小提琴图分面版/raw/code.R
+  - vault/material/plotcase_violin_分裂小提琴图分面版/raw/violin_data.csv
+  - vault/material/plotcase_violin_分裂小提琴图分面版/outputs/rebuilt.png
+  - vault/material/plotcase_violin_分裂小提琴图分面版/outputs/visual_check.json
+  - vault/dossiers/plotcase_violin_分裂小提琴图分面版.yaml
+  data_main_header:
+  - group
+  - value
+  - subgroup
+  - paired_id
+  - p_value
+  - facet
+  - label
 observed_visual_grammar:
-  figure_type: "faceted_split_violin"
-  layout: ["facet grid or wrapped facets", "x-axis groups within each facet", "split subgroup halves"]
-  marks: ["violin density halves", "optional box/jitter overlays", "optional significance labels"]
-  encodings:
-    x: "group"
-    y: "value"
-    fill_or_side: "subgroup"
-    panel: "facet"
+  figure_type: faceted_split_violin
+  layout: &id001
+  - facet grid or wrapped facets
+  - x-axis groups within each facet
+  - split subgroup halves
+  marks: &id002
+  - violin density halves
+  - optional box/jitter overlays
+  - optional significance labels
+  encodings: &id003
+    x: group
+    y: value
+    fill_or_side: subgroup
+    panel: facet
 inferred_visual_grammar:
-  grammar_id: "faceted_split_violin_distribution"
-  reusable_pattern: "Observation-level distribution comparison split by subgroup and repeated across facets."
-  not_supported: ["summary-only aggregate plots", "network or flow diagrams"]
-reviewed_visual_roles:
-  group: "primary categorical x-axis group"
-  value: "observation-level quantitative measurement"
-  subgroup: "split side or fill group"
-  paired_id: "optional paired observation id, not required for split violin"
-  p_value: "optional significance value or annotation trigger"
-  facet: "panel grouping variable"
-  label: "optional display label"
+  grammar_id: faceted_split_violin_distribution
+  reusable_pattern: Observation-level distribution comparison split by subgroup and repeated across facets.
+  not_supported:
+  - summary-only aggregate plots
+  - network or flow diagrams
+reviewed_visual_roles: &id005
+  group: primary categorical x-axis group
+  value: observation-level quantitative measurement
+  subgroup: split side or fill group
+  paired_id: optional paired observation id, not required for split violin
+  p_value: optional significance value or annotation trigger
+  facet: panel grouping variable
+  label: optional display label
 canonical_columns:
-  - "group: observed x category"
-  - "value: observed quantitative distribution value"
-  - "subgroup: split/fill group"
-  - "paired_id: optional pairing id"
-  - "p_value: optional statistical annotation"
-  - "facet: optional panel grouping"
-  - "label: optional display label"
+- 'group: observed x category'
+- 'value: observed quantitative distribution value'
+- 'subgroup: split/fill group'
+- 'paired_id: optional pairing id'
+- 'p_value: optional statistical annotation'
+- 'facet: optional panel grouping'
+- 'label: optional display label'
 required_data_semantics:
-  value: "observation-level numeric measurements"
-  group: "primary categorical grouping"
+  value: observation-level numeric measurements
+  group: primary categorical grouping
 optional_data_semantics:
-  subgroup: "splits each violin into halves or fill categories"
-  facet: "separates repeated panels"
-  paired_id: "connects paired samples only if the renderer uses it"
-  p_value: "drives significance labels if present"
+  subgroup: splits each violin into halves or fill categories
+  facet: separates repeated panels
+  paired_id: connects paired samples only if the renderer uses it
+  p_value: drives significance labels if present
 optional_modules:
   split_violin_halves:
-    status: "supported_if_subgroup_available"
+    status: supported_if_subgroup_available
   facets:
-    status: "supported_if_facet_available"
+    status: supported_if_facet_available
   significance_labels:
-    status: "supported_if_p_value_available"
+    status: supported_if_p_value_available
   paired_connectors:
-    status: "not_supported_without_explicit_renderer_evidence"
-false_positive_risks:
-  - "Do not infer paired-line semantics from paired_id alone."
-  - "Do not recommend for summary-only data; violin density needs observation-level values."
-  - "Compact data_main may not fully preserve raw type/group/name distinctions."
+    status: not_supported_without_explicit_renderer_evidence
+false_positive_risks: &id004
+- Do not infer paired-line semantics from paired_id alone.
+- Do not recommend for summary-only data; violin density needs observation-level values.
+- Compact data_main may not fully preserve raw type/group/name distinctions.
 best_for:
-  - "Distribution comparisons with subgroups on split violin halves."
-  - "Faceted repeated comparisons sharing value scale."
+- Distribution comparisons with subgroups on split violin halves.
+- Faceted repeated comparisons sharing value scale.
 bad_for:
-  - "Aggregate-only bar charts."
-  - "Single-point summary plots without distributions."
-style_notes:
-  - "Keep subgroup colors clearly separable but calmer than statistical highlights."
-  - "Facet spacing and y-axis consistency are important for comparison."
+- Aggregate-only bar charts.
+- Single-point summary plots without distributions.
+style_notes: &id006
+- Keep subgroup colors clearly separable but calmer than statistical highlights.
+- Facet spacing and y-axis consistency are important for comparison.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Strong reusable distribution grammar, but support-tier until raw role mapping is reviewed against the compact abstraction."
+  tier: support
+  rationale: Strong reusable distribution grammar, but support-tier until raw role mapping is reviewed
+    against the compact abstraction.
   exclusion_risks:
-    - "paired_id overinterpretation"
-    - "aggregate data misuse"
+  - paired_id overinterpretation
+  - aggregate data misuse
 confidence:
   overall: 0.84
-  visual_grammar: 0.90
+  visual_grammar: 0.9
   data_roles: 0.82
   retrieval_tier: 0.84
 proposed_metadata_patch:
-  retrieval_tier: "support"
-  retrieval_rationale: "Faceted split violin support asset; requires observation-level values and careful subgroup/facet mapping."
+  retrieval_tier: support
+  retrieval_rationale: Faceted split violin support asset; requires observation-level values and careful
+    subgroup/facet mapping.
 proposed_dossier_patch:
   visual_grammar:
-    geometry: "violin"
-    subtype: "faceted_split_violin"
-
+    geometry: violin
+    subtype: faceted_split_violin
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - group
+  - value
+  - subgroup
+  - paired_id
+  - p_value
+  - facet
+  - label
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data:
+  - paired_connectors
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id004

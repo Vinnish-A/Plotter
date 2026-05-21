@@ -1,0 +1,53 @@
+id: figureya_survival_FigureYa305PMAPscore
+title: FigureYa305PMAPscore
+retrieval_tier: inspiration
+one_line: heatmap asset for FigureYa305PMAPscore
+geometry: heatmap
+subtype: annotated_heatmap
+required_roles:
+- x
+- y
+- value
+optional_roles:
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+capabilities:
+  highlight: true
+  detail_panel: true
+  annotation_track: false
+  uncertainty: true
+  composition: true
+  batch: true
+best_for:
+- FigureYa305PMAPscore
+- 'heatmap/annotated_heatmap grammar with roles: x, y, value'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 47878; width: 720; height: 720'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 1'
+code_summary: 'entry: plot.py; backend_hints: [''complexheatmap'']'
+risk_flags:
+- case_level_fallback
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/figureya_survival_FigureYa305PMAPscore.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/figureya_survival_FigureYa305PMAPscore.yaml
+  evidence_pack: vault/material/figureya_survival_FigureYa305PMAPscore
+  preview: vault/material/figureya_survival_FigureYa305PMAPscore/outputs/rebuilt.png
+  entry: vault/material/figureya_survival_FigureYa305PMAPscore/plot.py

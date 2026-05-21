@@ -1,0 +1,54 @@
+id: plotcase_barplot_多层注释柱状图
+title: 多层注释柱状图
+retrieval_tier: support
+one_line: 100% stacked per-sample composition bars.
+geometry: bar
+subtype: vertical_100pct_stacked_bar_with_nested_axis_annotations
+required_roles:
+- sample_id
+- component
+- proportion
+- subtype_x
+- subtype_y
+optional_roles:
+- sample_order
+- palette
+- component_order
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- 100% stacked per-sample composition bars.
+- Bar plots requiring two-level categorical annotation bands under the x axis.
+- Examples of nested-axis grouping.
+bad_for:
+- Line charts.
+- Simple single-series bar charts without stacked composition.
+- Figures needing visible per-sample x tick labels.
+image_summary: 'figure_type: vertical_100pct_stacked_bar_with_nested_axis_annotations; geometry: bar;
+  layout: [''single main bar panel'', ''right-side fill legend'', ''two bottom nested x-axis annotation
+  bands'']; marks: [''stacked vertical b…'
+data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
+  ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- Do not classify as line grammar; no line marks are present.
+- Do not treat data_main.csv error_low/error_high/line_value as supported visual …
+- Do not classify raw meta tag '环状' as observed geometry; rebuilt image is rectan…
+- generic renderer entry does not reproduce the observed grammar from data_main.c…
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_barplot_多层注释柱状图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_barplot_多层注释柱状图.yaml
+  evidence_pack: vault/material/plotcase_barplot_多层注释柱状图
+  preview: vault/material/plotcase_barplot_多层注释柱状图/outputs/rebuilt.png
+  entry: vault/material/plotcase_barplot_多层注释柱状图/plot.py

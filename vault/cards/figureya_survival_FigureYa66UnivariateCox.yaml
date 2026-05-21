@@ -1,0 +1,55 @@
+id: figureya_survival_FigureYa66UnivariateCox
+title: FigureYa66UnivariateCox
+retrieval_tier: support
+one_line: Reusable univariate Cox forest plot with gene labels, hazard ratios, confidence intervals, and
+  p-value color scale.
+geometry: forest_interval
+subtype: horizontal_cox_forest_plot
+required_roles:
+- gene
+- hazard_ratio
+- ci_lower
+- ci_upper
+- p_value
+optional_roles:
+- z
+- splice_type
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: true
+  composition: false
+  batch: true
+best_for:
+- Reusable univariate Cox forest plot with gene labels, hazard ratios, confidence intervals, and p-value
+  color scale.
+- Examples needing a dashed null reference line at HR=1 and log-scaled hazard-ratio axis.
+bad_for:
+- 3D manifold, PCA, scatter, network, line, or survival-curve retrieval.
+- Cases where only x/y/value compatibility columns are available.
+image_summary: 'figure_type: horizontal_cox_forest_plot; geometry: forest_interval; layout: single_panel_cartesian;
+  marks: [''horizontal confidence interval segments'', ''diamond point estimates'', ''dashed HR=1 reference
+  line'', ''gene label…'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
+code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- Current dossier incorrectly labels the asset as scatter/pca_or_manifold.
+- Metadata visual_keywords include 3d_manifold, which is not visible in rebuilt.p…
+- Do not treat x/y/value/source/target/weight compatibility columns as visual evi…
+- misleading manifold/scatter metadata
+- generic renderer entry mismatch
+- noncanonical current data_main interface
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/figureya_survival_FigureYa66UnivariateCox.yaml
+  deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa66UnivariateCox.yaml
+  machine_evidence: vault/evidence/machine/figureya_survival_FigureYa66UnivariateCox.yaml
+  evidence_pack: vault/material/figureya_survival_FigureYa66UnivariateCox
+  preview: vault/material/figureya_survival_FigureYa66UnivariateCox/outputs/rebuilt.png
+  entry: vault/material/figureya_survival_FigureYa66UnivariateCox/plot.py

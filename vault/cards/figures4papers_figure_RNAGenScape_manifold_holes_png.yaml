@@ -1,0 +1,54 @@
+id: figures4papers_figure_RNAGenScape_manifold_holes_png
+title: figure_RNAGenScape_manifold_holes
+retrieval_tier: inspiration
+one_line: Visual inspiration for side-by-side 3D surface perturbation comparisons.
+geometry: 3d_surface_comparison
+subtype: smooth_vs_masked_manifold_surface
+required_roles:
+- x
+- y
+- z
+optional_roles:
+- patch_mask
+- panel_variant
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Visual inspiration for side-by-side 3D surface perturbation comparisons.
+bad_for:
+- Data-backed scientific rebuilds.
+- Point-cloud manifold embeddings.
+- Requests requiring labels, legends, trajectories, or categorical color mapping.
+image_summary: 'figure_type: two_panel_3d_surface_comparison; layout: [''side-by-side 3D panels'', ''large
+  whitespace'', ''panel titles only'', ''axes hidden'', ''no legend'']; marks: [''meshed 3D surface'',
+  ''semi-transparent gray surface patches''…'
+data_summary: 'main_columns: [''x'', ''y'', ''z'', ''value'', ''panel'', ''group'', ''label'', ''surface'',
+  ''trajectory'', ''color'']; sampled_rows: 64'
+code_summary: 'entry: plot.py; backend_hints: [''matplotlib'']'
+risk_flags:
+- synthetic_data
+- case_level_fallback
+- generic_renderer_rebuild
+- Do not retrieve as ordinary scatter, PCA, UMAP, or point-manifold grammar.
+- Blank label, trajectory, and color columns are not supported optional modules.
+- Constant group and surface columns are not meaningful categories.
+- case-level fallback
+- synthetic data abstraction
+- generic renderer/copy rebuild
+- compatibility columns overstate supported grammar
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml
+  deep_review: vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml
+  machine_evidence: vault/evidence/machine/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml
+  evidence_pack: vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png
+  preview: vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/outputs/rebuilt.png
+  entry: vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/plot.py

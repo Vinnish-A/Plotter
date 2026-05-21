@@ -1,116 +1,188 @@
-case_id: "figures4papers_figure_Dispersion_idea_png"
-annotation_version: "deep_annotation_v1"
+case_id: figures4papers_figure_Dispersion_idea_png
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "fallback_synthetic_inspiration_only"
-  note: "Observed rebuilt figure is a copied rendered PNG of a three-panel shaded hemisphere dispersion diagram; current dossier overstates reusable 3D/manifold roles."
+  status: fallback_synthetic_inspiration_only
+  note: Observed rebuilt figure is a copied rendered PNG of a three-panel shaded hemisphere dispersion
+    diagram; current dossier overstates reusable 3D/manifold roles.
   human_review_required: true
-annotator_model: "GPT-5 Codex"
-reviewed_at: "2026-05-21"
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
 evidence:
   files_read:
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/metadata.json"
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/agent_guide.md"
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/plot.py"
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/data_main.csv"
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/raw/plot_idea.py"
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/scripts/plot_idea.py"
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/raw/plot_illustration.py"
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/outputs/rebuilt.png"
-    - "vault/material/figures4papers_figure_Dispersion_idea_png/outputs/visual_check.json"
-    - "vault/dossiers/figures4papers_figure_Dispersion_idea_png.yaml"
+  - vault/material/figures4papers_figure_Dispersion_idea_png/metadata.json
+  - vault/material/figures4papers_figure_Dispersion_idea_png/agent_guide.md
+  - vault/material/figures4papers_figure_Dispersion_idea_png/plot.py
+  - vault/material/figures4papers_figure_Dispersion_idea_png/data_main.csv
+  - vault/material/figures4papers_figure_Dispersion_idea_png/raw/plot_idea.py
+  - vault/material/figures4papers_figure_Dispersion_idea_png/scripts/plot_idea.py
+  - vault/material/figures4papers_figure_Dispersion_idea_png/raw/plot_illustration.py
+  - vault/material/figures4papers_figure_Dispersion_idea_png/outputs/rebuilt.png
+  - vault/material/figures4papers_figure_Dispersion_idea_png/outputs/visual_check.json
+  - vault/dossiers/figures4papers_figure_Dispersion_idea_png.yaml
   data_main_profile:
     rows: 64
-    columns: ["x", "y", "z", "value", "panel", "group", "label", "surface", "trajectory", "color"]
-    assessment: "synthetic radial grid, not plotted random point coordinates"
-  plot_entry: "copies outputs/figure.png to outputs/rebuilt.png"
-  rebuilt_png_size: [5400, 1800]
+    columns:
+    - x
+    - y
+    - z
+    - value
+    - panel
+    - group
+    - label
+    - surface
+    - trajectory
+    - color
+    assessment: synthetic radial grid, not plotted random point coordinates
+  plot_entry: copies outputs/figure.png to outputs/rebuilt.png
+  rebuilt_png_size:
+  - 5400
+  - 1800
   visual_check_ok: true
 observed_visual_grammar:
-  figure_type: "three_panel_hemisphere_dispersion_diagram"
-  geometry: "projected shaded disk with radial point spokes"
-  layout: "one row of three axis-free panels"
-  marks: ["gray shaded circular hemisphere backgrounds", "blue circular points with black outlines", "black dashed radial spokes"]
-  encodings:
-    panel: "three point-dispersion patterns"
-    point_position: "2D projected location"
-    spoke: "connection from point to central reference"
+  figure_type: three_panel_hemisphere_dispersion_diagram
+  geometry: projected shaded disk with radial point spokes
+  layout: one row of three axis-free panels
+  marks: &id001
+  - gray shaded circular hemisphere backgrounds
+  - blue circular points with black outlines
+  - black dashed radial spokes
+  encodings: &id002
+    panel: three point-dispersion patterns
+    point_position: 2D projected location
+    spoke: connection from point to central reference
 inferred_visual_grammar:
-  grammar_id: "abstract_dispersion_on_projected_hemisphere"
-  statistical_unit: "synthetic sampled points in unit disk or hemisphere projection"
-  source_basis: "raw/plot_idea.py random seed and sampling code"
-  not_supported: ["empirical PCA", "true 3D manifold plot", "surface heatmap", "trajectory plot", "labeled scatter"]
-reviewed_visual_roles:
-  panel_id: "panel assignment for three dispersion examples"
-  point_x: "projected point coordinate in raw script; absent from data_main"
-  point_y: "projected point coordinate in raw script; absent from data_main"
-  connector_origin: "hardcoded shared radial reference"
-  hemisphere_background: "computed shaded background; not CSV-driven"
-  x: "synthetic grid column; false positive if treated as plotted point x"
-  y: "synthetic grid column; false positive if treated as plotted point y"
-  z: "synthetic radial value; not visible as 3D axis"
-  label: "blank; no label layer"
-  trajectory: "blank; no trajectory layer"
-  color: "blank; point colors hardcoded"
+  grammar_id: abstract_dispersion_on_projected_hemisphere
+  statistical_unit: synthetic sampled points in unit disk or hemisphere projection
+  source_basis: raw/plot_idea.py random seed and sampling code
+  not_supported:
+  - empirical PCA
+  - true 3D manifold plot
+  - surface heatmap
+  - trajectory plot
+  - labeled scatter
+reviewed_visual_roles: &id004
+  panel_id: panel assignment for three dispersion examples
+  point_x: projected point coordinate in raw script; absent from data_main
+  point_y: projected point coordinate in raw script; absent from data_main
+  connector_origin: hardcoded shared radial reference
+  hemisphere_background: computed shaded background; not CSV-driven
+  x: synthetic grid column; false positive if treated as plotted point x
+  y: synthetic grid column; false positive if treated as plotted point y
+  z: synthetic radial value; not visible as 3D axis
+  label: blank; no label layer
+  trajectory: blank; no trajectory layer
+  color: blank; point colors hardcoded
 canonical_columns:
-  - "panel_id: panel identity for dispersion examples"
-  - "point_x: projected point x coordinate"
-  - "point_y: projected point y coordinate"
-  - "connector_x0 and connector_y0: shared connector origin"
-  - "point_style: panel-specific fill color"
+- 'panel_id: panel identity for dispersion examples'
+- 'point_x: projected point x coordinate'
+- 'point_y: projected point y coordinate'
+- 'connector_x0 and connector_y0: shared connector origin'
+- 'point_style: panel-specific fill color'
 required_data_semantics:
-  panel_id: "categorical panel assignment"
-  point_x: "projected point x coordinate"
-  point_y: "projected point y coordinate"
-  connector_origin: "constant or optional shared radial reference"
+  panel_id: categorical panel assignment
+  point_x: projected point x coordinate
+  point_y: projected point y coordinate
+  connector_origin: constant or optional shared radial reference
 optional_data_semantics:
-  hemisphere_shading: "computed decorative spatial context"
-  point_style: "panel or group style"
-  label: "not observed"
+  hemisphere_shading: computed decorative spatial context
+  point_style: panel or group style
+  label: not observed
 optional_modules:
   labels:
-    status: "not_supported_by_observed_output"
+    status: not_supported_by_observed_output
   trajectories:
-    status: "not_supported_by_observed_output"
+    status: not_supported_by_observed_output
   true_3d_surface:
-    status: "not_supported_by_standard_entry"
+    status: not_supported_by_standard_entry
   direct_png_fallback:
-    status: "active"
-    source: "outputs/figure.png"
-false_positive_risks:
-  - "Do not treat data_main x/y/z/value as plotted random point data."
-  - "Do not retrieve this as empirical PCA, manifold learning, or true 3D scatter."
-  - "Blank label, trajectory, and color columns are not available optional modules."
-  - "Visual check only proves nonblank image properties, not semantic rebuild fidelity."
+    status: active
+    source: outputs/figure.png
+false_positive_risks: &id003
+- Do not treat data_main x/y/z/value as plotted random point data.
+- Do not retrieve this as empirical PCA, manifold learning, or true 3D scatter.
+- Blank label, trajectory, and color columns are not available optional modules.
+- Visual check only proves nonblank image properties, not semantic rebuild fidelity.
 best_for:
-  - "Inspiration for abstract dispersion or concentration diagrams on projected hemispheres."
+- Inspiration for abstract dispersion or concentration diagrams on projected hemispheres.
 bad_for:
-  - "Data-driven PCA/manifold retrieval."
-  - "Workflows needing reproducible plotted coordinates from data_main.csv."
-  - "Labeled, colored, trajectory, or uncertainty-enabled scatter workflows."
-style_notes:
-  - "Minimal white canvas with hidden axes, three shaded circular panels, blue outlined points, and black dashed radial connectors."
+- Data-driven PCA/manifold retrieval.
+- Workflows needing reproducible plotted coordinates from data_main.csv.
+- Labeled, colored, trajectory, or uncertainty-enabled scatter workflows.
+style_notes: &id005
+- Minimal white canvas with hidden axes, three shaded circular panels, blue outlined points, and black
+  dashed radial connectors.
 retrieval_tier_recommendation:
-  tier: "inspiration"
-  rationale: "Useful visual idea, but synthetic, image-first, and rebuilt by direct PNG copy rather than the standard CSV interface."
-  exclusion_risks: ["case-level fallback", "synthetic data abstraction", "generic/direct-copy renderer", "misleading 3d_manifold metadata"]
+  tier: inspiration
+  rationale: Useful visual idea, but synthetic, image-first, and rebuilt by direct PNG copy rather than
+    the standard CSV interface.
+  exclusion_risks:
+  - case-level fallback
+  - synthetic data abstraction
+  - generic/direct-copy renderer
+  - misleading 3d_manifold metadata
 confidence:
-  observed_visual_grammar: "high"
-  raw_script_semantics: "medium"
-  current_data_contract: "low"
-  retrieval_tier: "high"
+  observed_visual_grammar: high
+  raw_script_semantics: medium
+  current_data_contract: low
+  retrieval_tier: high
 proposed_metadata_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    geometry: "projected_hemisphere_dispersion_diagram"
-    subtype: "abstract_scientific_illustration"
+    geometry: projected_hemisphere_dispersion_diagram
+    subtype: abstract_scientific_illustration
   rebuild_class:
     source_code_rebuild: false
     generic_renderer_rebuild: true
     case_level_fallback: true
     synthetic_data: true
 proposed_dossier_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    geometry: "projected_hemisphere_dispersion_diagram"
-    subtype: "abstract_dispersion_spoke_diagram"
-
+    geometry: projected_hemisphere_dispersion_diagram
+    subtype: abstract_dispersion_spoke_diagram
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: one row of three axis-free panels
+  marks: *id001
+  encodings: *id002
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id003
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - z
+  - value
+  - panel
+  - group
+  - label
+  - surface
+  - trajectory
+  - color
+  role_mapping: *id004
+  derived_columns: []
+  false_positive_columns:
+  - point_x
+  - point_y
+  - x
+  - y
+  - label
+  - trajectory
+  - color
+  missing_optional_data:
+  - labels
+  - trajectories
+  - true_3d_surface
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: copies outputs/figure.png to outputs/rebuilt.png
+  hardcoded_aesthetics: *id005
+  output_behavior:
+    visual_check_ok: true
+  unsupported_features: *id003

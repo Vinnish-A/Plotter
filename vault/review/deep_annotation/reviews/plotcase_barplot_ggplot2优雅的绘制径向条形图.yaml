@@ -1,129 +1,190 @@
-case_id: "plotcase_barplot_ggplot2优雅的绘制径向条形图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_barplot_ggplot2优雅的绘制径向条形图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_corrections_recommended"
-  note: "Observed figure is a concentric polar/radial bar chart; current dossier line grammar and compatibility columns are misleading."
-annotator_model: "gpt-5 codex"
-reviewed_at: "2026-05-21T00:00:00+08:00"
+  status: reviewed_with_corrections_recommended
+  note: Observed figure is a concentric polar/radial bar chart; current dossier line grammar and compatibility
+    columns are misleading.
+annotator_model: gpt-5 codex
+reviewed_at: '2026-05-21T00:00:00+08:00'
 evidence:
   files_read:
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/metadata.json"
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/agent_guide.md"
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/plot.py"
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/scripts/code.R"
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/raw/code.R"
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/data_main.csv"
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/raw/data.tsv"
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/outputs/rebuilt.png"
-    - "vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml"
-  output_check:
-    rebuilt_png_size: [1682, 1457]
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/metadata.json
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/agent_guide.md
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/plot.py
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/scripts/code.R
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/raw/code.R
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/data_main.csv
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/raw/data.tsv
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/outputs/rebuilt.png
+  - vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/outputs/visual_check.json
+  - vault/dossiers/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml
+  output_check: &id007
+    rebuilt_png_size:
+    - 1682
+    - 1457
     visual_check_ok: true
-    original_reference: "raw/cover.png"
+    original_reference: raw/cover.png
   data_profile:
     data_main_rows: 9
-    data_main_columns: ["category", "value", "group", "stack", "error_low", "error_high", "line_value", "annotation_value", "label"]
+    data_main_columns:
+    - category
+    - value
+    - group
+    - stack
+    - error_low
+    - error_high
+    - line_value
+    - annotation_value
+    - label
     raw_rows: 668
-    raw_columns: ["receiving_country_code", "participants", "country_name"]
+    raw_columns:
+    - receiving_country_code
+    - participants
+    - country_name
 observed_visual_grammar:
-  figure_type: "concentric_radial_bar_chart"
-  geometry: "polar_bar"
-  layout:
-    - "white void theme"
-    - "concentric annular bars"
-    - "left/center inline label stack"
-    - "no axes"
-    - "no legend"
-  marks:
-    - "annular bar arcs"
-    - "country-percent text labels"
-  encodings:
-    category: "country/ring identity and label text"
-    value: "aggregated participant total mapped to polar bar arc length"
-    percent: "derived share shown in label"
-    order: "descending total, displayed as ordered rings"
-    color: "alternating teal/navy styling; no legend semantics"
+  figure_type: concentric_radial_bar_chart
+  geometry: polar_bar
+  layout: &id001
+  - white void theme
+  - concentric annular bars
+  - left/center inline label stack
+  - no axes
+  - no legend
+  marks: &id002
+  - annular bar arcs
+  - country-percent text labels
+  encodings: &id003
+    category: country/ring identity and label text
+    value: aggregated participant total mapped to polar bar arc length
+    percent: derived share shown in label
+    order: descending total, displayed as ordered rings
+    color: alternating teal/navy styling; no legend semantics
 inferred_visual_grammar:
-  grammar_id: "top_n_concentric_polar_bar_with_inline_percent_labels"
-  reusable_pattern: "Aggregate a categorical count table, rank top categories, and show proportional magnitudes as concentric polar bars with inline percentage labels."
-  not_supported: ["line chart", "stacked/grouped bar", "uncertainty interval plot", "network or flow"]
-reviewed_visual_roles:
-  category: "displayed country/category identity"
-  value: "aggregated numeric magnitude driving arc length"
-  percent: "derived share label"
-  label: "category plus rounded percent text"
-  order: "ranked display order"
-  color: "fixed alternating decorative palette"
-  group: "compatibility/demo role only"
-  stack: "compatibility/demo role only"
-  error_low: "not visually supported"
-  error_high: "not visually supported"
-  line_value: "not visually supported"
+  grammar_id: top_n_concentric_polar_bar_with_inline_percent_labels
+  reusable_pattern: Aggregate a categorical count table, rank top categories, and show proportional magnitudes
+    as concentric polar bars with inline percentage labels.
+  not_supported:
+  - line chart
+  - stacked/grouped bar
+  - uncertainty interval plot
+  - network or flow
+reviewed_visual_roles: &id005
+  category: displayed country/category identity
+  value: aggregated numeric magnitude driving arc length
+  percent: derived share label
+  label: category plus rounded percent text
+  order: ranked display order
+  color: fixed alternating decorative palette
+  group: compatibility/demo role only
+  stack: compatibility/demo role only
+  error_low: not visually supported
+  error_high: not visually supported
+  line_value: not visually supported
 canonical_columns:
-  - "category: categorical entity rendered as a polar ring and label"
-  - "value: numeric aggregate rendered as bar arc length"
-  - "percent: optional precomputed share, otherwise derivable from value"
-  - "order: optional fixed category/ring ordering"
-  - "label: optional display label"
-  - "color: optional manual alternating or categorical color assignment"
+- 'category: categorical entity rendered as a polar ring and label'
+- 'value: numeric aggregate rendered as bar arc length'
+- 'percent: optional precomputed share, otherwise derivable from value'
+- 'order: optional fixed category/ring ordering'
+- 'label: optional display label'
+- 'color: optional manual alternating or categorical color assignment'
 required_data_semantics:
-  category: "categorical entity rendered as a polar ring and label"
-  value: "numeric aggregate rendered as bar arc length"
+  category: categorical entity rendered as a polar ring and label
+  value: numeric aggregate rendered as bar arc length
 optional_data_semantics:
-  percent: "precomputed share; otherwise derivable from value"
-  label: "display label if not generated from category and percent"
-  order: "fixed category/ring ordering"
-  color: "manual alternating or categorical color assignment"
-  ymax: "polar scale limit used to preserve open-circle composition"
-  top_n: "category filter for ranked display"
+  percent: precomputed share; otherwise derivable from value
+  label: display label if not generated from category and percent
+  order: fixed category/ring ordering
+  color: manual alternating or categorical color assignment
+  ymax: polar scale limit used to preserve open-circle composition
+  top_n: category filter for ranked display
 optional_modules:
   percent_label_layer:
-    status: "supported_by_original_R"
+    status: supported_by_original_R
   polar_coordinate_bar:
-    status: "required_for_observed_grammar"
+    status: required_for_observed_grammar
   top_n_filter:
-    status: "supported_by_original_R"
+    status: supported_by_original_R
   generic_bar_renderer:
-    status: "compatibility_only_not_observed_grammar"
-false_positive_risks:
-  - "Current dossier line grammar is wrong."
-  - "Do not treat group, stack, error_low, error_high, or line_value as evidenced visual roles."
-  - "plot.py calls a generic bar renderer and does not encode the observed radial grammar."
-  - "Do not classify as stacked/grouped bar despite metadata keywords."
+    status: compatibility_only_not_observed_grammar
+false_positive_risks: &id004
+- Current dossier line grammar is wrong.
+- Do not treat group, stack, error_low, error_high, or line_value as evidenced visual roles.
+- plot.py calls a generic bar renderer and does not encode the observed radial grammar.
+- Do not classify as stacked/grouped bar despite metadata keywords.
 best_for:
-  - "Top-N categorical magnitude/share summaries."
-  - "Radial bar examples where labels are embedded as the main reading aid."
-  - "Minimal axis-free polar compositions with strong category ranking."
+- Top-N categorical magnitude/share summaries.
+- Radial bar examples where labels are embedded as the main reading aid.
+- Minimal axis-free polar compositions with strong category ranking.
 bad_for:
-  - "Time series or line comparisons."
-  - "Grouped or stacked bar comparisons."
-  - "Dense category sets with long labels."
-  - "Figures requiring exact axes or uncertainty intervals."
-style_notes:
-  - "Large white canvas, theme_void style."
-  - "Alternating dark navy and teal arcs and matching label colors."
-  - "Inline labels replace axes and legend."
+- Time series or line comparisons.
+- Grouped or stacked bar comparisons.
+- Dense category sets with long labels.
+- Figures requiring exact axes or uncertainty intervals.
+style_notes: &id006
+- Large white canvas, theme_void style.
+- Alternating dark navy and teal arcs and matching label colors.
+- Inline labels replace axes and legend.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Visually useful and source-backed, but current data_main.csv, plot.py, and dossier do not faithfully represent the observed radial bar contract."
+  tier: support
+  rationale: Visually useful and source-backed, but current data_main.csv, plot.py, and dossier do not
+    faithfully represent the observed radial bar contract.
   exclusion_risks:
-    - "generic renderer mismatch"
-    - "synthetic canonical CSV"
-    - "misleading compatibility columns"
+  - generic renderer mismatch
+  - synthetic canonical CSV
+  - misleading compatibility columns
 confidence:
   overall: 0.9
   visual_identification: 0.97
   source_code_assessment: 0.92
   current_contract_fit: 0.3
 proposed_metadata_patch:
-  retrieval_tier: "support"
+  retrieval_tier: support
   visual_grammar:
-    grammar_id: "top_n_concentric_polar_bar_with_inline_percent_labels"
-    required_data_roles: ["category", "value"]
-    optional_data_roles: ["percent", "label", "order", "color", "ymax", "top_n"]
+    grammar_id: top_n_concentric_polar_bar_with_inline_percent_labels
+    required_data_roles:
+    - category
+    - value
+    optional_data_roles:
+    - percent
+    - label
+    - order
+    - color
+    - ymax
+    - top_n
 proposed_dossier_patch:
   visual_grammar:
-    geometry: "polar_bar"
-    subtype: "concentric_radial_bar"
-
+    geometry: polar_bar
+    subtype: concentric_radial_bar
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - category
+  - value
+  - percent
+  - order
+  - label
+  - color
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns:
+  - group
+  - stack
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior: *id007
+  unsupported_features: *id004

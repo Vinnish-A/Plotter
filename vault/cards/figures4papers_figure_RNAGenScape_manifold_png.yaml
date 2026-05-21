@@ -1,0 +1,52 @@
+id: figures4papers_figure_RNAGenScape_manifold_png
+title: figure_RNAGenScape_manifold
+retrieval_tier: inspiration
+one_line: scatter asset for figure_RNAGenScape_manifold
+geometry: scatter
+subtype: pca_or_manifold
+required_roles:
+- x
+- y
+- z
+- value
+- panel
+optional_roles:
+- group
+- label
+- surface
+- trajectory
+- color
+- annotation
+capabilities:
+  highlight: true
+  detail_panel: true
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- figure_RNAGenScape_manifold
+- 'scatter/pca_or_manifold grammar with roles: x, y, z, value, panel'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 108276; width: 1000; height: 700'
+data_summary: 'main_columns: [''x'', ''y'', ''z'', ''value'', ''panel'', ''group'', ''label'', ''surface'',
+  ''trajectory'', ''color'']; sampled_rows: 64'
+code_summary: 'entry: plot.py; backend_hints: [''matplotlib'']'
+risk_flags:
+- case_level_fallback
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  evidence_pack: vault/material/figures4papers_figure_RNAGenScape_manifold_png
+  preview: vault/material/figures4papers_figure_RNAGenScape_manifold_png/outputs/rebuilt.png
+  entry: vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py

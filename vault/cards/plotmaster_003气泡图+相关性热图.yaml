@@ -1,0 +1,52 @@
+id: plotmaster_003气泡图+相关性热图
+title: 003气泡图+相关性热图
+retrieval_tier: support
+one_line: Group-by-feature correlation bubble matrices.
+geometry: bubble_matrix
+subtype: correlation_bubble_heatmap
+required_roles:
+- group
+- gene
+- correlation
+- p_value
+- direction
+- p_value_bin
+- abs_correlation
+optional_roles:
+- p_value
+- axis_order
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Group-by-feature correlation bubble matrices.
+- Association summaries with magnitude, sign, and significance tiers.
+bad_for:
+- Continuous tile heatmaps.
+- Clustered or annotated heatmaps.
+- Network or source-target-weight diagrams.
+image_summary: 'figure_type: correlation_bubble_matrix; layout: [''single rectangular group-by-gene matrix'',
+  ''rotated gene labels'', ''right-side legends'']; marks: [''sized circles'', ''positive-direction overlay
+  circles'']; encodings: {''x'': …'
+data_summary: 'main_columns: [''group'', ''gene'', ''correlation'', ''p_value'', ''direction'', ''p_value_bin'',
+  ''abs_correlation'']; sampled_rows: 190'
+code_summary: 'entry: plot.R; backend_hints: [''ggplot2'']'
+risk_flags:
+- Do not retrieve as clustered heatmap, annotated heatmap, dendrogram, or tile-on…
+- Do not infer source/target/weight network semantics; those columns are absent.
+- Legend text around p/FDR needs review before statistical claims.
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotmaster_003气泡图+相关性热图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_003气泡图+相关性热图.yaml
+  machine_evidence: vault/evidence/machine/plotmaster_003气泡图+相关性热图.yaml
+  evidence_pack: vault/material/plotmaster_003气泡图+相关性热图
+  preview: vault/material/plotmaster_003气泡图+相关性热图/outputs/rebuilt.png
+  entry: vault/material/plotmaster_003气泡图+相关性热图/plot.R

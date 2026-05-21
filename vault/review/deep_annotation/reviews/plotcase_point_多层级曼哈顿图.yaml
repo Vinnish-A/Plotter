@@ -1,107 +1,168 @@
-case_id: "plotcase_point_多层级曼哈顿图"
-annotation_version: "deep_dossier_review_v1"
+case_id: plotcase_point_多层级曼哈顿图
+annotation_version: deep_dossier_review_v1
 annotation_status:
-  status: "metadata_and_dossier_need_correction"
-  note: "Observed figure is a circular two-ring CMplot Manhattan plot; current plot.py is a generic scatter renderer and data_main is a synthetic placeholder."
+  status: metadata_and_dossier_need_correction
+  note: Observed figure is a circular two-ring CMplot Manhattan plot; current plot.py is a generic scatter
+    renderer and data_main is a synthetic placeholder.
   human_review_required: true
-annotator_model: "GPT-5 Codex"
-reviewed_at: "2026-05-21"
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
 evidence:
   files_read:
-    - "metadata.json"
-    - "agent_guide.md"
-    - "plot.py"
-    - "data_main.csv"
-    - "scripts/code.R"
-    - "raw/code.R"
-    - "outputs/rebuilt.png"
-    - "outputs/visual_check.json"
-    - "vault/dossiers/plotcase_point_多层级曼哈顿图.yaml"
+  - metadata.json
+  - agent_guide.md
+  - plot.py
+  - data_main.csv
+  - scripts/code.R
+  - raw/code.R
+  - outputs/rebuilt.png
+  - outputs/visual_check.json
+  - vault/dossiers/plotcase_point_多层级曼哈顿图.yaml
   data_main_profile:
     rows: 16
-    columns: ["chromosome", "position", "score", "feature_id", "trait", "threshold", "highlight", "label", "ring"]
-    assessment: "synthetic compact demo; not enough for observed 20-sector two-ring circular Manhattan"
-  optional_csv: "absent"
-  output_check:
-    rebuilt_png_size: [1458, 1256]
+    columns:
+    - chromosome
+    - position
+    - score
+    - feature_id
+    - trait
+    - threshold
+    - highlight
+    - label
+    - ring
+    assessment: synthetic compact demo; not enough for observed 20-sector two-ring circular Manhattan
+  optional_csv: absent
+  output_check: &id006
+    rebuilt_png_size:
+    - 1458
+    - 1256
     visual_check_ok: true
-    fallback_source: "outputs/figure_001_cover.png"
+    fallback_source: outputs/figure_001_cover.png
 observed_visual_grammar:
-  figure_type: "circular_multi_trait_manhattan_plot"
-  geometry: "radial_genomic_scatter"
-  layout: "outer chromosome ideogram plus two concentric Manhattan point tracks"
-  marks: ["chromosome sector band", "rotated chromosome labels", "genomic scatter points", "two radial rings", "radial grid circles"]
-  encodings:
-    angle: "chromosome plus genomic position"
-    radius: "Manhattan score"
-    color: "chromosome category"
-    ring: "trait layer"
+  figure_type: circular_multi_trait_manhattan_plot
+  geometry: radial_genomic_scatter
+  layout: outer chromosome ideogram plus two concentric Manhattan point tracks
+  marks: &id001
+  - chromosome sector band
+  - rotated chromosome labels
+  - genomic scatter points
+  - two radial rings
+  - radial grid circles
+  encodings: &id002
+    angle: chromosome plus genomic position
+    radius: Manhattan score
+    color: chromosome category
+    ring: trait layer
 inferred_visual_grammar:
-  grammar_id: "cmplot_circular_multilevel_manhattan"
-  statistical_unit: "SNP/genomic marker by chromosome, position, and multiple trait scores"
-  data_source_best_match: "CMplot built-in pig60K"
-  not_supported: ["ordinary Cartesian scatter", "quadrant plot", "network", "generic threshold scatter"]
-reviewed_visual_roles:
-  marker_id: "genomic marker identifier; current feature_id placeholders are not source-derived"
-  chromosome: "angular sector; current values are synthetic placeholders"
-  position: "within-chromosome angular coordinate; current values are synthetic"
-  trait: "concentric ring identity; current CSV has only one trait"
-  score: "radial point distance"
-  ring: "required for two-ring long-form grammar; empty in current CSV"
-  threshold: "not visibly drawn"
-  highlight: "not visibly drawn"
+  grammar_id: cmplot_circular_multilevel_manhattan
+  statistical_unit: SNP/genomic marker by chromosome, position, and multiple trait scores
+  data_source_best_match: CMplot built-in pig60K
+  not_supported:
+  - ordinary Cartesian scatter
+  - quadrant plot
+  - network
+  - generic threshold scatter
+reviewed_visual_roles: &id004
+  marker_id: genomic marker identifier; current feature_id placeholders are not source-derived
+  chromosome: angular sector; current values are synthetic placeholders
+  position: within-chromosome angular coordinate; current values are synthetic
+  trait: concentric ring identity; current CSV has only one trait
+  score: radial point distance
+  ring: required for two-ring long-form grammar; empty in current CSV
+  threshold: not visibly drawn
+  highlight: not visibly drawn
 canonical_columns:
-  - "marker_id"
-  - "chromosome"
-  - "position"
-  - "trait"
-  - "score"
-  - "ring"
+- marker_id
+- chromosome
+- position
+- trait
+- score
+- ring
 required_data_semantics:
-  marker_id: "genomic marker identifier"
-  chromosome: "ordered chromosome sector"
-  position: "within-chromosome position"
-  trait: "concentric track identity"
-  score: "radial Manhattan value"
+  marker_id: genomic marker identifier
+  chromosome: ordered chromosome sector
+  position: within-chromosome position
+  trait: concentric track identity
+  score: radial Manhattan value
 optional_data_semantics:
-  chromosome_label: "outer rotated label"
-  chromosome_color: "sector point color palette"
-  chromosome_length: "sector width calibration"
-  radial_ticks: "circular grid and tick labels"
+  chromosome_label: outer rotated label
+  chromosome_color: sector point color palette
+  chromosome_length: sector width calibration
+  radial_ticks: circular grid and tick labels
 optional_modules:
   circular_ideogram_band:
-    status: "present_in_observed_output_not_current_data_main"
+    status: present_in_observed_output_not_current_data_main
   concentric_trait_tracks:
-    status: "present_in_observed_output_not_current_data_main"
+    status: present_in_observed_output_not_current_data_main
   generic_scatter_renderer:
-    status: "not_supported_for_observed_asset"
-false_positive_risks:
-  - "Generic scatter plot.py is not evidence of the observed radial genomic grammar."
-  - "Current chromosome/position/score fields are synthetic placeholders."
-  - "Empty ring column hides the missing two-track structure."
-  - "Rebuilt image is a fallback cover."
+    status: not_supported_for_observed_asset
+false_positive_risks: &id003
+- Generic scatter plot.py is not evidence of the observed radial genomic grammar.
+- Current chromosome/position/score fields are synthetic placeholders.
+- Empty ring column hides the missing two-track structure.
+- Rebuilt image is a fallback cover.
 best_for:
-  - "Visual inspiration for CMplot-style circular multi-trait Manhattan figures."
+- Visual inspiration for CMplot-style circular multi-trait Manhattan figures.
 bad_for:
-  - "Direct reusable template use, Cartesian scatter, or single-threshold scatter retrieval."
-style_notes:
-  - "Dense centered circular body, bold outer chromosome band, high-chroma chromosome point palette, no legend/title."
+- Direct reusable template use, Cartesian scatter, or single-threshold scatter retrieval.
+style_notes: &id005
+- Dense centered circular body, bold outer chromosome band, high-chroma chromosome point palette, no legend/title.
 retrieval_tier_recommendation:
-  tier: "inspiration"
-  rationale: "Strong visual grammar, but fallback cover plus synthetic data_main and generic scatter entry make it unsuitable for default retrieval."
-  exclusion_risks: ["case_level_fallback", "synthetic_data_main", "generic_renderer_entry", "missing_real_multitrait_marker_table"]
+  tier: inspiration
+  rationale: Strong visual grammar, but fallback cover plus synthetic data_main and generic scatter entry
+    make it unsuitable for default retrieval.
+  exclusion_risks:
+  - case_level_fallback
+  - synthetic_data_main
+  - generic_renderer_entry
+  - missing_real_multitrait_marker_table
 confidence:
-  observed_visual_grammar: "high"
-  raw_script_semantics: "high"
-  current_data_contract: "low"
-  retrieval_tier: "high"
+  observed_visual_grammar: high
+  raw_script_semantics: high
+  current_data_contract: low
+  retrieval_tier: high
 proposed_metadata_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    geometry: "radial_genomic_scatter"
-    subtype: "circular_multi_trait_manhattan"
+    geometry: radial_genomic_scatter
+    subtype: circular_multi_trait_manhattan
 proposed_dossier_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    geometry: "radial_genomic_scatter"
-    subtype: "circular_multi_trait_manhattan"
+    geometry: radial_genomic_scatter
+    subtype: circular_multi_trait_manhattan
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: outer chromosome ideogram plus two concentric Manhattan point tracks
+  marks: *id001
+  encodings: *id002
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id003
+data_understanding:
+  data_read: true
+  observed_columns:
+  - chromosome
+  - position
+  - score
+  - feature_id
+  - trait
+  - threshold
+  - highlight
+  - label
+  - ring
+  role_mapping: *id004
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data:
+  - generic_scatter_renderer
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id005
+  output_behavior: *id006
+  unsupported_features: *id003

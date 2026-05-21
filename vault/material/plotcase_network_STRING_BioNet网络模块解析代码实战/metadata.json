@@ -205,57 +205,5 @@
     "annotator_model": "gpt-5.5 high reasoning subagent",
     "review_version": "deep_annotation_v1"
   },
-  "reviewed_visual_grammar": {
-    "figure_type": "labeled_node_link_network",
-    "layout": [
-      "force or graph layout",
-      "labeled nodes",
-      "biological interaction context"
-    ],
-    "marks": [
-      "nodes",
-      "edges",
-      "text labels"
-    ],
-    "encodings": {
-      "edge": "source-target interaction",
-      "node_size": "node importance, score, or degree-like quantity",
-      "node_color": "node group or logFC-like score when supported by source"
-    },
-    "grammar_id": "string_bionet_labeled_node_link",
-    "optional_modules": {
-      "node_labels": {
-        "status": "supported"
-      },
-      "node_attribute_encoding": {
-        "status": "supported"
-      },
-      "weighted_edges": {
-        "status": "supported_only_if_weight_semantics_are_verified"
-      },
-      "enrichment_side_panel": {
-        "status": "not_supported_by_this_case_review"
-      }
-    },
-    "false_positive_risks": [
-      "Do not infer meaningful edge weight solely from a compatibility weight column.",
-      "Do not retrieve as flow/Sankey; source/target here are graph endpoints, not stages.",
-      "Dense labels can make this unsafe as a default recommendation without node filtering."
-    ]
-  },
-  "reviewed_visual_roles": {
-    "source": "interaction edge source",
-    "target": "interaction edge target",
-    "weight": "possible edge confidence; weak visual evidence in current abstraction",
-    "node_id": "node join key",
-    "node_label": "display label",
-    "node_group": "node category or biological class",
-    "node_size": "node score, centrality, or size encoding",
-    "edge_group": "optional edge category",
-    "edge_direction": "optional direction flag, not always visualized",
-    "layout_x": "optional manual x position",
-    "layout_y": "optional manual y position",
-    "source_group": "compatibility helper, not primary visual role unless source proves it",
-    "target_group": "compatibility helper, not primary visual role unless source proves it"
-  }
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml"
 }

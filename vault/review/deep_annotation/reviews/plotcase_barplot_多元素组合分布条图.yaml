@@ -1,108 +1,176 @@
-case_id: "plotcase_barplot_多元素组合分布条图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_barplot_多元素组合分布条图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_corrections_recommended"
-  note: "Primary grammar is mirrored horizontal stacked bars with point overlays and an inset pie, not a standalone pie/donut."
-annotator_model: "gpt-5.5 high reasoning subagent"
-reviewed_at: "2026-05-21T01:02:08+08:00"
+  status: reviewed_with_corrections_recommended
+  note: Primary grammar is mirrored horizontal stacked bars with point overlays and an inset pie, not
+    a standalone pie/donut.
+annotator_model: gpt-5.5 high reasoning subagent
+reviewed_at: '2026-05-21T01:02:08+08:00'
 evidence:
   files_read:
-    - "vault/material/plotcase_barplot_多元素组合分布条图/metadata.json"
-    - "vault/material/plotcase_barplot_多元素组合分布条图/agent_guide.md"
-    - "vault/material/plotcase_barplot_多元素组合分布条图/plot.py"
-    - "vault/material/plotcase_barplot_多元素组合分布条图/scripts/code.R"
-    - "vault/material/plotcase_barplot_多元素组合分布条图/data_main.csv"
-    - "vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png"
-    - "vault/material/plotcase_barplot_多元素组合分布条图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_barplot_多元素组合分布条图.yaml"
+  - vault/material/plotcase_barplot_多元素组合分布条图/metadata.json
+  - vault/material/plotcase_barplot_多元素组合分布条图/agent_guide.md
+  - vault/material/plotcase_barplot_多元素组合分布条图/plot.py
+  - vault/material/plotcase_barplot_多元素组合分布条图/scripts/code.R
+  - vault/material/plotcase_barplot_多元素组合分布条图/data_main.csv
+  - vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png
+  - vault/material/plotcase_barplot_多元素组合分布条图/outputs/visual_check.json
+  - vault/dossiers/plotcase_barplot_多元素组合分布条图.yaml
   raw_data:
     production_rows: 102
     consumption_rows: 102
     pie_rows: 6
   visual_evidence:
-    rebuilt_png_size: [1234, 712]
+    rebuilt_png_size:
+    - 1234
+    - 712
     visual_check_ok: true
 observed_visual_grammar:
-  primary_family: "horizontal_stacked_bar_composite"
-  layout: ["left mirrored production panel", "right consumption panel", "central region label rail", "upper-right legend", "lower-right pie inset"]
-  marks: ["stacked horizontal bar segments", "circular net markers", "pie wedges", "numeric wedge labels", "legend swatches"]
-  encodings:
-    region: "shared y identity"
-    panel: "production versus consumption side"
-    stack_category: "bar fill and legend category"
-    value: "horizontal bar segment length"
-    net_value: "circular point position"
-    summary_value: "inset pie wedge size"
+  primary_family: horizontal_stacked_bar_composite
+  layout: &id001
+  - left mirrored production panel
+  - right consumption panel
+  - central region label rail
+  - upper-right legend
+  - lower-right pie inset
+  marks: &id002
+  - stacked horizontal bar segments
+  - circular net markers
+  - pie wedges
+  - numeric wedge labels
+  - legend swatches
+  encodings: &id003
+    region: shared y identity
+    panel: production versus consumption side
+    stack_category: bar fill and legend category
+    value: horizontal bar segment length
+    net_value: circular point position
+    summary_value: inset pie wedge size
 inferred_visual_grammar:
-  grammar_id: "mirrored_stacked_bar_with_net_points_and_pie_inset"
-  reusable_pattern: "Compare two matched quantitative compositions across shared ordered entities with derived net markers and global composition inset."
-reviewed_visual_roles:
-  region: "shared row category"
-  stack_category: "fill category for stacked segments and legend"
-  production_value: "left-panel bar segment length"
-  consumption_value: "right-panel bar segment length"
-  net_value: "derived circular overlay marker"
-  global_emission_value: "inset pie wedge size"
+  grammar_id: mirrored_stacked_bar_with_net_points_and_pie_inset
+  reusable_pattern: Compare two matched quantitative compositions across shared ordered entities with
+    derived net markers and global composition inset.
+reviewed_visual_roles: &id005
+  region: shared row category
+  stack_category: fill category for stacked segments and legend
+  production_value: left-panel bar segment length
+  consumption_value: right-panel bar segment length
+  net_value: derived circular overlay marker
+  global_emission_value: inset pie wedge size
 canonical_columns:
-  - "category/value/group/stack/error_low/error_high/line_value/annotation_value/label: current generic demo schema"
-  - "source/target/weight: absent; relationship role not supported"
-  - "recommended main roles: region, panel, stack_category, value"
-  - "recommended optional roles: net_value, summary_value, label, color, order, inset"
+- 'category/value/group/stack/error_low/error_high/line_value/annotation_value/label: current generic
+  demo schema'
+- 'source/target/weight: absent; relationship role not supported'
+- 'recommended main roles: region, panel, stack_category, value'
+- 'recommended optional roles: net_value, summary_value, label, color, order, inset'
 required_data_semantics:
-  region: "shared row entities"
-  panel: "matched measure side, such as production or consumption"
-  stack_category: "component category vocabulary shared across panels"
-  value: "numeric segment magnitude"
+  region: shared row entities
+  panel: matched measure side, such as production or consumption
+  stack_category: component category vocabulary shared across panels
+  value: numeric segment magnitude
 optional_data_semantics:
-  net_value: "derived per-row point overlay"
-  summary_value: "global inset pie value"
-  order: "fixed region/category order"
-  color: "fixed palette mapping"
-  inset: "manual inset placement or summary module flag"
+  net_value: derived per-row point overlay
+  summary_value: global inset pie value
+  order: fixed region/category order
+  color: fixed palette mapping
+  inset: manual inset placement or summary module flag
 optional_modules:
   net_marker_overlay:
-    status: "supported"
-    required_fields: ["region", "net_value"]
+    status: supported
+    required_fields:
+    - region
+    - net_value
   pie_inset:
-    status: "supported"
-    required_fields: ["stack_category", "summary_value"]
+    status: supported
+    required_fields:
+    - stack_category
+    - summary_value
   fixed_palette_legend:
-    status: "supported"
+    status: supported
   row_ordering:
-    status: "supported"
-false_positive_risks:
-  - "Do not classify as standalone pie/donut; pie is an inset summary."
-  - "Do not reduce to simple grouped bar; mirrored axes, stacked segments, net markers, and inset are essential."
-  - "Current data_main.csv is not sufficient to reconstruct the observed figure."
-  - "Do not infer network or flow semantics."
+    status: supported
+false_positive_risks: &id004
+- Do not classify as standalone pie/donut; pie is an inset summary.
+- Do not reduce to simple grouped bar; mirrored axes, stacked segments, net markers, and inset are essential.
+- Current data_main.csv is not sufficient to reconstruct the observed figure.
+- Do not infer network or flow semantics.
 best_for:
-  - "Matched two-condition or two-measure comparisons across shared ordered entities."
-  - "Mirrored horizontal stacked bar compositions with derived per-row overlays."
-  - "Composites with compact legend plus inset category summary."
+- Matched two-condition or two-measure comparisons across shared ordered entities.
+- Mirrored horizontal stacked bar compositions with derived per-row overlays.
+- Composites with compact legend plus inset category summary.
 bad_for:
-  - "Simple one-series bars."
-  - "Standalone pie or donut charts."
-  - "Source-target relationship or flow diagrams."
-style_notes:
-  - "White background with classic axes and minimal grid."
-  - "Muted category palette shared by stacked bars and pie inset."
-  - "Central row label rail is a core layout element."
+- Simple one-series bars.
+- Standalone pie or donut charts.
+- Source-target relationship or flow diagrams.
+style_notes: &id006
+- White background with classic axes and minimal grid.
+- Muted category palette shared by stacked bars and pie inset.
+- Central row label rail is a core layout element.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Visually valuable high-composition bar asset, but current canonical CSV and dossier need correction before core retrieval."
+  tier: support
+  rationale: Visually valuable high-composition bar asset, but current canonical CSV and dossier need
+    correction before core retrieval.
 confidence:
   overall: 0.88
   visual_grammar: 0.95
   current_contract_fit: 0.35
 proposed_metadata_patch:
   visual_grammar:
-    geometry: "mirrored_horizontal_stacked_bar_composite"
-    subtype: "stacked_bar_with_point_overlay_and_pie_inset"
+    geometry: mirrored_horizontal_stacked_bar_composite
+    subtype: stacked_bar_with_point_overlay_and_pie_inset
   data_contract:
-    required_mappings: ["region", "panel", "stack_category", "value"]
-    optional_mappings: ["net_value", "summary_value", "label", "color", "order", "inset"]
+    required_mappings:
+    - region
+    - panel
+    - stack_category
+    - value
+    optional_mappings:
+    - net_value
+    - summary_value
+    - label
+    - color
+    - order
+    - inset
 proposed_dossier_patch:
   visual_genes:
-    layout: ["left_right_mirrored_panels", "central_row_label_rail", "upper_right_legend", "lower_right_inset_summary"]
-    marks: ["stacked_bar_segments", "circular_overlay_points", "pie_wedges", "numeric_wedge_labels"]
-  retrieval_tier: "support"
+    layout:
+    - left_right_mirrored_panels
+    - central_row_label_rail
+    - upper_right_legend
+    - lower_right_inset_summary
+    marks:
+    - stacked_bar_segments
+    - circular_overlay_points
+    - pie_wedges
+    - numeric_wedge_labels
+  retrieval_tier: support
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - category/value/group/stack/error_low/error_high/line_value/annotation_value/label
+  - source/target/weight
+  - recommended main roles
+  - recommended optional roles
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id004

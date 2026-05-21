@@ -245,43 +245,22 @@ retrieval_rationale: Strong reusable distribution grammar, but support-tier unti
 exclusion_risks:
 - paired_id overinterpretation
 - aggregate data misuse
-reviewed_visual_grammar:
-  figure_type: faceted_split_violin
-  layout:
-  - facet grid or wrapped facets
-  - x-axis groups within each facet
-  - split subgroup halves
-  marks:
-  - violin density halves
-  - optional box/jitter overlays
-  - optional significance labels
-  encodings:
-    x: group
-    y: value
-    fill_or_side: subgroup
-    panel: facet
-  geometry: violin
-  subtype: faceted_split_violin
-  grammar_id: faceted_split_violin_distribution
-  optional_modules:
-    split_violin_halves:
-      status: supported_if_subgroup_available
-    facets:
-      status: supported_if_facet_available
-    significance_labels:
-      status: supported_if_p_value_available
-    paired_connectors:
-      status: not_supported_without_explicit_renderer_evidence
-  false_positive_risks:
-  - Do not infer paired-line semantics from paired_id alone.
-  - Do not recommend for summary-only data; violin density needs observation-level
-    values.
-  - Compact data_main may not fully preserve raw type/group/name distinctions.
-reviewed_visual_roles:
-  group: primary categorical x-axis group
-  value: observation-level quantitative measurement
-  subgroup: split side or fill group
-  paired_id: optional paired observation id, not required for split violin
-  p_value: optional significance value or annotation trigger
-  facet: panel grouping variable
-  label: optional display label
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_violin_分裂小提琴图分面版.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_violin_分裂小提琴图分面版.yaml
+  geometry: faceted_split_violin
+  subtype: faceted_split_violin_distribution
+  required_roles:
+  - value
+  - group
+  optional_roles:
+  - subgroup
+  - facet
+  - paired_id
+  - p_value
+  tier: support
+  confidence:
+    overall: 0.84
+    visual_grammar: 0.9
+    data_roles: 0.82
+    retrieval_tier: 0.84

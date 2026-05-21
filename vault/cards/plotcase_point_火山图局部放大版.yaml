@@ -1,0 +1,50 @@
+id: plotcase_point_火山图局部放大版
+title: 火山图局部放大版
+retrieval_tier: support
+one_line: scatter asset for 火山图局部放大版
+geometry: scatter
+subtype: volcano
+required_roles:
+- x
+- y
+optional_roles:
+- group
+- value
+- size_value
+- label
+- threshold
+- facet
+- highlight
+capabilities:
+  highlight: true
+  detail_panel: true
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- 火山图局部放大版
+- 'scatter/volcano grammar with roles: x, y'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 135785; width: 1085; height: 1011'
+data_summary: 'main_columns: [''x'', ''y'', ''group'', ''value'', ''size_value'', ''label'', ''threshold'',
+  ''facet'', ''highlight'']; sampled_rows: 29'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotcase_point_火山图局部放大版.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotcase_point_火山图局部放大版.yaml
+  evidence_pack: vault/material/plotcase_point_火山图局部放大版
+  preview: vault/material/plotcase_point_火山图局部放大版/outputs/rebuilt.png
+  entry: vault/material/plotcase_point_火山图局部放大版/plot.py

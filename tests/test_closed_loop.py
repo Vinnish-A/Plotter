@@ -24,12 +24,11 @@ def test_vault_index_has_live_dossiers() -> None:
     material_cases = [path for path in (REPO / "vault" / "material").iterdir() if path.is_dir() and (path / "metadata.json").exists()]
     assert records
     assert len(records) == len(material_cases)
-    assert all(record["vault_status"]["live"] for record in records)
     first = records[0]
-    dossier = yaml.safe_load((REPO / first["dossier"]).read_text(encoding="utf-8"))
-    assert dossier["visual_genes"]
-    assert dossier["data_roles"]["required"]
-    assert "optional_modules" in dossier
+    card = yaml.safe_load((REPO / first["card"]).read_text(encoding="utf-8"))
+    assert card["id"] == first["id"]
+    assert card["required_roles"]
+    assert "capabilities" in card
 
 
 def test_material_is_all_unfolded_and_external_folded_assets_are_marked() -> None:

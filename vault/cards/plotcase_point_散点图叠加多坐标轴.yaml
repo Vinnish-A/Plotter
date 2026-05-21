@@ -1,0 +1,51 @@
+id: plotcase_point_散点图叠加多坐标轴
+title: 散点图叠加多坐标轴
+retrieval_tier: inspiration
+one_line: bubble asset for 散点图叠加多坐标轴
+geometry: bubble
+subtype: bubble
+required_roles:
+- x
+- y
+optional_roles:
+- group
+- value
+- size_value
+- label
+- threshold
+- facet
+- highlight
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- 散点图叠加多坐标轴
+- 'bubble/bubble grammar with roles: x, y'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 194210; width: 1184; height: 811'
+data_summary: 'main_columns: [''x'', ''y'', ''group'', ''value'', ''size_value'', ''label'', ''threshold'',
+  ''facet'', ''highlight'']; sampled_rows: 29'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- case_level_fallback
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotcase_point_散点图叠加多坐标轴.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotcase_point_散点图叠加多坐标轴.yaml
+  evidence_pack: vault/material/plotcase_point_散点图叠加多坐标轴
+  preview: vault/material/plotcase_point_散点图叠加多坐标轴/outputs/rebuilt.png
+  entry: vault/material/plotcase_point_散点图叠加多坐标轴/plot.py

@@ -1,0 +1,78 @@
+type: object
+required:
+  - id
+  - title
+  - retrieval_tier
+  - one_line
+  - geometry
+  - subtype
+  - required_roles
+  - optional_roles
+  - capabilities
+  - best_for
+  - bad_for
+  - image_summary
+  - data_summary
+  - code_summary
+  - risk_flags
+  - confidence
+  - read_next
+properties:
+  id:
+    type: string
+  title:
+    type: string
+  retrieval_tier:
+    enum: [core, support, inspiration, archive]
+  one_line:
+    type: string
+  geometry:
+    type: string
+  subtype:
+    type: string
+  required_roles:
+    type: array
+    items:
+      type: string
+  optional_roles:
+    type: array
+    items:
+      type: string
+  capabilities:
+    type: object
+    required: [highlight, detail_panel, annotation_track, uncertainty, composition, batch]
+    properties:
+      highlight:
+        type: boolean
+      detail_panel:
+        type: boolean
+      annotation_track:
+        type: boolean
+      uncertainty:
+        type: boolean
+      composition:
+        type: boolean
+      batch:
+        type: boolean
+  best_for:
+    type: array
+    items:
+      type: string
+  bad_for:
+    type: array
+    items:
+      type: string
+  image_summary:
+    type: string
+  data_summary:
+    type: string
+  code_summary:
+    type: string
+  risk_flags:
+    type: array
+    items:
+      type: string
+  confidence:
+    type: object
+  read_next:
+    type: object

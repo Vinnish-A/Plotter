@@ -276,63 +276,23 @@ exclusion_risks:
 - generic_renderer_involved
 - stale_line_dossier
 - canonical_demo_csv_not_semantic
-reviewed_visual_grammar:
-  figure_type: nested_faceted_normalized_stacked_bar
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_barplot_ggplot2绘制菌群分布图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_barplot_ggplot2绘制菌群分布图.yaml
   geometry: compositional_bar
-  panel_structure: nested rows by Soiltype and Site, columns by Compartments
-  marks:
-  - 100 percent stacked vertical bars
-  - facet strip labels
-  - bottom fill legend
-  encodings:
-    x: TreatmentID
-    y: Relative abundance (%) normalized to percent scale
-    fill: Phylum
-    column_facet: Compartments
-    row_facet: Soiltype
-    row_facet_secondary: Site
   subtype: nested_faceted_normalized_stacked_bar
-  grammar_id: nested_faceted_normalized_stacked_bar
-  required_data_roles:
+  required_roles:
   - x
   - value
   - stack_category
   - column_facet
   - row_facet
-  optional_data_roles:
+  optional_roles:
   - row_facet_secondary
   - color
   - order
-  optional_modules:
-    normalized_stacked_bar:
-      status: observed_and_core
-      required_fields:
-      - x
-      - value
-      - stack_category
-    nested_faceting:
-      status: observed_and_core
-      required_fields:
-      - row_facet
-      - column_facet
-    fixed_palette_legend:
-      status: observed
-    error_interval:
-      status: not_observed
-    line_overlay:
-      status: not_observed
-  false_positive_risks:
-  - Do not retrieve as a line chart despite current dossier subtype.
-  - Do not treat data_main.csv compatibility columns as faithful observed semantics.
-  - Do not infer uncertainty intervals from error_low/error_high.
-  - Do not infer labels or annotation layers from empty annotation_value/label columns.
-reviewed_visual_roles:
-  x: treatment or sample-position category used for vertical bars
-  value: relative abundance contribution before normalized stacked display
-  stack_category: component category mapped to fill and legend
-  column_facet: compartment partition
-  row_facet: primary row partition
-  row_facet_secondary: nested row partition
-  line_value: compatibility/demo column only; not line grammar evidence
-  error_low: not visually supported
-  error_high: not visually supported
+  tier: support
+  confidence:
+    overall: 0.9
+    visual_grammar: 0.97
+    current_contract_fit: 0.3

@@ -1,112 +1,194 @@
-case_id: "plotcase_circos_GO富集分析通路图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_circos_GO富集分析通路图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_warnings"
-  note: "Observed visual is a GOplot GOChord-style gene-to-GO-term enrichment chord, not a generic source-target-weight network."
-annotator_model: "gpt-5.5 high reasoning subagent"
-reviewed_at: "2026-05-21T01:02:40+08:00"
+  status: reviewed_with_warnings
+  note: Observed visual is a GOplot GOChord-style gene-to-GO-term enrichment chord, not a generic source-target-weight
+    network.
+annotator_model: gpt-5.5 high reasoning subagent
+reviewed_at: '2026-05-21T01:02:40+08:00'
 evidence:
   files_read:
-    - "vault/material/plotcase_circos_GO富集分析通路图/metadata.json"
-    - "vault/material/plotcase_circos_GO富集分析通路图/agent_guide.md"
-    - "vault/material/plotcase_circos_GO富集分析通路图/plot.py"
-    - "vault/material/plotcase_circos_GO富集分析通路图/data_main.csv"
-    - "vault/material/plotcase_circos_GO富集分析通路图/raw/code.R"
-    - "vault/material/plotcase_circos_GO富集分析通路图/scripts/code.R"
-    - "vault/material/plotcase_circos_GO富集分析通路图/outputs/rebuilt.png"
-    - "vault/material/plotcase_circos_GO富集分析通路图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_circos_GO富集分析通路图.yaml"
+  - vault/material/plotcase_circos_GO富集分析通路图/metadata.json
+  - vault/material/plotcase_circos_GO富集分析通路图/agent_guide.md
+  - vault/material/plotcase_circos_GO富集分析通路图/plot.py
+  - vault/material/plotcase_circos_GO富集分析通路图/data_main.csv
+  - vault/material/plotcase_circos_GO富集分析通路图/raw/code.R
+  - vault/material/plotcase_circos_GO富集分析通路图/scripts/code.R
+  - vault/material/plotcase_circos_GO富集分析通路图/outputs/rebuilt.png
+  - vault/material/plotcase_circos_GO富集分析通路图/outputs/visual_check.json
+  - vault/dossiers/plotcase_circos_GO富集分析通路图.yaml
   source_evidence:
-    package_family: "GOplot"
-    plotting_function: "GOChord"
-    transform_functions: ["circle_dat", "chord_dat"]
+    package_family: GOplot
+    plotting_function: GOChord
+    transform_functions:
+    - circle_dat
+    - chord_dat
   visual_evidence:
-    rebuilt_png_size: [1008, 1008]
-    original_cover_size: [1794, 1195]
+    rebuilt_png_size:
+    - 1008
+    - 1008
+    original_cover_size:
+    - 1794
+    - 1195
     visual_check_ok: true
 observed_visual_grammar:
-  plot_family: "go_enrichment_chord_diagram"
-  layout: ["circular body", "outer gene label ring", "outer gene value tiles", "GO term sector arcs", "inner ribbons", "right-side legends"]
-  marks: ["curved ribbons", "arc sectors", "small gene tiles", "radial gene labels", "legend swatches", "vertical colorbar"]
-  encodings:
-    go_term: "sector color, ribbon color, and legend entry"
-    gene: "radial labels and membership endpoints"
-    membership: "ribbon/chord links between genes and terms"
-    gene_logFC: "diverging color on outer gene tiles"
+  plot_family: go_enrichment_chord_diagram
+  layout: &id001
+  - circular body
+  - outer gene label ring
+  - outer gene value tiles
+  - GO term sector arcs
+  - inner ribbons
+  - right-side legends
+  marks: &id002
+  - curved ribbons
+  - arc sectors
+  - small gene tiles
+  - radial gene labels
+  - legend swatches
+  - vertical colorbar
+  encodings: &id003
+    go_term: sector color, ribbon color, and legend entry
+    gene: radial labels and membership endpoints
+    membership: ribbon/chord links between genes and terms
+    gene_logFC: diverging color on outer gene tiles
 inferred_visual_grammar:
-  grammar_id: "go_enrichment_gene_term_chord"
-  backend: "R_GOplot_GOChord"
-  data_unit: "long gene-term membership table plus per-gene quantitative value and per-term metadata"
-  not_supported: ["generic source-target-weight network", "edge-weight chord flow", "genomic circos coordinate tracks"]
-reviewed_visual_roles:
-  go_term: "categorical sector and legend entry"
-  gene: "categorical label and membership endpoint"
-  gene_term_membership: "binary membership relationship"
-  gene_logFC: "quantitative value for gene tile color"
-  p_adjust: "term ranking/filtering, not a direct visual mark"
-  link_weight: "not observed"
+  grammar_id: go_enrichment_gene_term_chord
+  backend: R_GOplot_GOChord
+  data_unit: long gene-term membership table plus per-gene quantitative value and per-term metadata
+  not_supported:
+  - generic source-target-weight network
+  - edge-weight chord flow
+  - genomic circos coordinate tracks
+reviewed_visual_roles: &id005
+  go_term: categorical sector and legend entry
+  gene: categorical label and membership endpoint
+  gene_term_membership: binary membership relationship
+  gene_logFC: quantitative value for gene tile color
+  p_adjust: term ranking/filtering, not a direct visual mark
+  link_weight: not observed
 canonical_columns:
-  - "source/target/weight: demo compatibility columns only; not observed GO semantics"
-  - "source_group/target_group/node_id/node_label: demo node fields"
-  - "direction/sector_order/sector_color/label: empty optional compatibility columns"
-  - "recommended roles: term, gene, membership, logFC"
+- 'source/target/weight: demo compatibility columns only; not observed GO semantics'
+- 'source_group/target_group/node_id/node_label: demo node fields'
+- 'direction/sector_order/sector_color/label: empty optional compatibility columns'
+- 'recommended roles: term, gene, membership, logFC'
 required_data_semantics:
-  term: "GO term/category sector and legend entry"
-  gene: "gene label and membership endpoint"
-  membership: "gene belongs to selected GO term"
-  logFC: "gene-level quantitative color value"
+  term: GO term/category sector and legend entry
+  gene: gene label and membership endpoint
+  membership: gene belongs to selected GO term
+  logFC: gene-level quantitative color value
 optional_data_semantics:
-  p_adjust: "term ranking/filtering"
-  term_color: "sector and ribbon color"
-  term_order: "sector order"
-  gene_order: "label and tile order"
-  gene_label: "display label"
+  p_adjust: term ranking/filtering
+  term_color: sector and ribbon color
+  term_order: sector order
+  gene_order: label and tile order
+  gene_label: display label
 optional_modules:
   term_legend:
-    status: "observed"
+    status: observed
   logFC_colorbar:
-    status: "observed"
+    status: observed
   gene_label_ring:
-    status: "observed"
+    status: observed
   top_term_selection:
-    status: "supported by raw code"
+    status: supported by raw code
   go_plot_transform:
-    status: "supported by raw code"
-false_positive_risks:
-  - "Do not retrieve as generic chord network because metadata lists source/target/weight."
-  - "Do not assume edge weights, flow volume, or directed links."
-  - "Do not use for genomic circos tracks with coordinates."
-  - "Current data_main.csv is demo-like and not evidence for GO enrichment semantics."
-  - "Current plot.py is a generic network renderer entry."
+    status: supported by raw code
+false_positive_risks: &id004
+- Do not retrieve as generic chord network because metadata lists source/target/weight.
+- Do not assume edge weights, flow volume, or directed links.
+- Do not use for genomic circos tracks with coordinates.
+- Current data_main.csv is demo-like and not evidence for GO enrichment semantics.
+- Current plot.py is a generic network renderer entry.
 best_for:
-  - "GO enrichment chord diagrams showing selected terms and associated genes."
-  - "Gene-term membership visualizations with per-gene logFC overlay."
+- GO enrichment chord diagrams showing selected terms and associated genes.
+- Gene-term membership visualizations with per-gene logFC overlay.
 bad_for:
-  - "Arbitrary source-target-weight networks."
-  - "Weighted flow or chord diagrams."
-  - "Genomic circos plots with chromosomes or coordinates."
-style_notes:
-  - "High-chroma categorical term colors plus diverging logFC colorbar."
-  - "Circular body at left with right-side legends on white background."
-  - "Current square rebuilt export appears to clip some left gene labels."
+- Arbitrary source-target-weight networks.
+- Weighted flow or chord diagrams.
+- Genomic circos plots with chromosomes or coordinates.
+style_notes: &id006
+- High-chroma categorical term colors plus diverging logFC colorbar.
+- Circular body at left with right-side legends on white background.
+- Current square rebuilt export appears to clip some left gene labels.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Strong GOChord support exemplar, but standard CSV and plot entry do not faithfully encode the observed semantics."
-  exclusion_risks: ["generic_renderer_involved", "canonical_source_target_weight_false_positive", "current_data_main_not_semantic", "label_clipping"]
+  tier: support
+  rationale: Strong GOChord support exemplar, but standard CSV and plot entry do not faithfully encode
+    the observed semantics.
+  exclusion_risks:
+  - generic_renderer_involved
+  - canonical_source_target_weight_false_positive
+  - current_data_main_not_semantic
+  - label_clipping
 confidence:
   overall: 0.82
   visual_grammar: 0.91
   reproducibility_contract: 0.58
 proposed_metadata_patch:
   visual_grammar:
-    geometry: "circos"
-    subtype: "go_enrichment_chord"
+    geometry: circos
+    subtype: go_enrichment_chord
   data_contract:
-    required_mappings: ["term", "gene", "membership", "logFC"]
-    optional_mappings: ["term_id", "ontology", "p_adjust", "term_color", "term_order", "gene_order", "gene_label"]
+    required_mappings:
+    - term
+    - gene
+    - membership
+    - logFC
+    optional_mappings:
+    - term_id
+    - ontology
+    - p_adjust
+    - term_color
+    - term_order
+    - gene_order
+    - gene_label
 proposed_dossier_patch:
   visual_genes:
-    layout: ["circular_body", "gene_label_ring", "term_sector_arc_ring", "right_side_legends"]
-    marks: ["chord", "arc_sector", "gene_value_tile", "radial_label", "colorbar"]
-    encodings: ["term_color", "gene_term_membership", "gene_logFC", "term_order"]
-  retrieval_tier: "support"
+    layout:
+    - circular_body
+    - gene_label_ring
+    - term_sector_arc_ring
+    - right_side_legends
+    marks:
+    - chord
+    - arc_sector
+    - gene_value_tile
+    - radial_label
+    - colorbar
+    encodings:
+    - term_color
+    - gene_term_membership
+    - gene_logFC
+    - term_order
+  retrieval_tier: support
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - source/target/weight
+  - source_group/target_group/node_id/node_label
+  - direction/sector_order/sector_color/label
+  - recommended roles
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns:
+  - link_weight
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id004

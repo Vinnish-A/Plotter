@@ -44,6 +44,34 @@ def sample_review(case_id: str = "sample_case") -> dict:
             "exclusion_risks": ["not promoted to core"],
         },
         "confidence": {"overall": 0.72, "geometry": 0.8, "roles": 0.7},
+        "image_observation": {
+            "image_read": True,
+            "panel_count": 1,
+            "layout": ["single cartesian panel"],
+            "marks": ["point"],
+            "encodings": {"x": "x", "y": "y"},
+            "axes": ["x", "y"],
+            "legends": [],
+            "annotations": [],
+            "text_density": "low",
+            "visual_risks": [],
+        },
+        "data_understanding": {
+            "data_read": True,
+            "observed_columns": ["x", "y", "source", "target", "weight"],
+            "role_mapping": {"x": "x axis", "y": "y axis"},
+            "derived_columns": [],
+            "false_positive_columns": ["source", "target", "weight"],
+            "missing_optional_data": [],
+        },
+        "code_understanding": {
+            "code_read": True,
+            "backend": "matplotlib",
+            "entry_behavior": "reads data_main.csv and writes outputs/rebuilt.png",
+            "hardcoded_aesthetics": [],
+            "output_behavior": "standard output",
+            "unsupported_features": [],
+        },
         "proposed_metadata_patch": {},
         "proposed_dossier_patch": {},
     }
@@ -136,9 +164,12 @@ def test_apply_write_only_safe_fields(tmp_path: Path) -> None:
     )
     metadata = json.loads((case / "metadata.json").read_text(encoding="utf-8"))
     dossier = yaml.safe_load((dossiers / "sample_case.yaml").read_text(encoding="utf-8"))
-    allowed = {"retrieval_tier", "retrieval_rationale", "exclusion_risks", "annotation_status", "reviewed_visual_grammar", "reviewed_visual_roles"}
+    allowed = {"retrieval_tier", "retrieval_rationale", "exclusion_risks", "annotation_status", "annotation_review_ref"}
     assert metadata["retrieval_tier"] == "support"
     assert dossier["retrieval_tier"] == "support"
+    assert "reviewed_summary" in dossier
+    assert "reviewed_visual_grammar" not in metadata
+    assert "reviewed_visual_roles" not in metadata
     assert set(metadata) - {
         "id",
         "title",
@@ -158,8 +189,9 @@ def test_index_has_retrieval_tiers_and_synthetic_generic_is_not_core() -> None:
     risky = [
         record
         for record in records
-        if record.get("rebuild_class", {}).get("synthetic_data")
-        or record.get("rebuild_class", {}).get("case_level_fallback")
+        if record.get("rebuild_class", {}).get("synthetic")
+        or record.get("rebuild_class", {}).get("fallback")
+        or record.get("rebuild_class", {}).get("generic")
     ]
     assert risky
     assert all(record["retrieval_tier"] != "core" for record in risky)
@@ -172,10 +204,10 @@ def test_index_uses_reviewed_grammar_and_filters_false_optional_modules() -> Non
         for record in (json.loads(line) for line in (REPO / "vault" / "index.jsonl").read_text(encoding="utf-8").splitlines() if line.strip())
     }
     nomogram = records["figureya_survival_FigureYa30nomogram_update"]
-    assert nomogram["geometry"] == ["nomogram"]
+    assert nomogram["geometry"] == "nomogram"
     assert nomogram["subtype"] == "cox_regression_risk_nomogram"
-    assert "detail_panel" not in nomogram["optional_modules"]
+    assert "optional_modules" not in nomogram
 
     dispersion = records["figures4papers_figure_Dispersion_idea_png"]
     assert dispersion["retrieval_tier"] == "inspiration"
-    assert dispersion["optional_modules"] == {}
+    assert "optional_modules" not in dispersion

@@ -1,0 +1,51 @@
+id: plotcase_heatmap_配对连线热图
+title: 配对连线热图
+retrieval_tier: support
+one_line: heatmap asset for 配对连线热图
+geometry: heatmap
+subtype: annotated_heatmap
+required_roles:
+- row_id
+- column_id
+- value
+optional_roles:
+- row_group
+- column_group
+- annotation_track
+- annotation_value
+- label
+- size_value
+- facet
+capabilities:
+  highlight: true
+  detail_panel: true
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- 配对连线热图
+- 'heatmap/annotated_heatmap grammar with roles: row_id, column_id, value'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 178256; width: 1008; height: 1008'
+data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
+  ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotcase_heatmap_配对连线热图.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_配对连线热图.yaml
+  evidence_pack: vault/material/plotcase_heatmap_配对连线热图
+  preview: vault/material/plotcase_heatmap_配对连线热图/outputs/rebuilt.png
+  entry: vault/material/plotcase_heatmap_配对连线热图/plot.py

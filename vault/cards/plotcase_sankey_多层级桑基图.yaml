@@ -1,0 +1,52 @@
+id: plotcase_sankey_多层级桑基图
+title: 多层级桑基图
+retrieval_tier: support
+one_line: Multi-stage categorical flows.
+geometry: sankey
+subtype: multi_stage_alluvial
+required_roles:
+- current_stage
+- current_node
+- next_stage
+- next_node
+- flow_value
+optional_roles:
+- flow_id
+- group
+- node_color
+- order
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Multi-stage categorical flows.
+- Alluvial/Sankey diagrams where ordered stages are part of the claim.
+bad_for:
+- Unordered relationship networks.
+- Tree or phylogeny diagrams.
+image_summary: 'figure_type: multi_stage_sankey_alluvial; layout: [''ordered stages'', ''nodes within
+  each stage'', ''ribbons between adjacent stages'']; marks: [''weighted ribbons'', ''node/stratum blocks'',
+  ''labels'']; encodings: {''stage'': ''x o…'
+data_summary: 'main_columns: [''stage'', ''node'', ''next_stage'', ''next_node'', ''value'', ''flow_id'',
+  ''group'', ''node_color'', ''label'', ''order'']; sampled_rows: 9'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- Do not collapse stage/node/next_stage/next_node into generic source/target unle…
+- Do not retrieve as a free-form network graph.
+- stage semantics lost by generic network retrieval
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_sankey_多层级桑基图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_sankey_多层级桑基图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_sankey_多层级桑基图.yaml
+  evidence_pack: vault/material/plotcase_sankey_多层级桑基图
+  preview: vault/material/plotcase_sankey_多层级桑基图/outputs/rebuilt.png
+  entry: vault/material/plotcase_sankey_多层级桑基图/plot.py

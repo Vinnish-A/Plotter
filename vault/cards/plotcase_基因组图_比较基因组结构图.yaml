@@ -1,0 +1,55 @@
+id: plotcase_基因组图_比较基因组结构图
+title: 比较基因组结构图
+retrieval_tier: inspiration
+one_line: genome asset for 比较基因组结构图
+geometry: genome
+subtype: genome_structure
+required_roles:
+- segment_id
+- feature_id
+- start
+- end
+- strand
+- feature_class
+optional_roles:
+- cluster
+- label
+- link_id
+- similarity
+- track
+- color_class
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- 比较基因组结构图
+- 'genome/genome_structure grammar with roles: segment_id, feature_id, start, end, strand, feature_class'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 369106; width: 1843; height: 1137'
+data_summary: 'main_columns: [''segment_id'', ''feature_id'', ''start'', ''end'', ''strand'', ''feature_class'',
+  ''cluster'', ''label'', ''link_id'', ''similarity'', ''track'', ''color_class'']; sampled_rows: 13'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- synthetic_data
+- case_level_fallback
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotcase_基因组图_比较基因组结构图.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotcase_基因组图_比较基因组结构图.yaml
+  evidence_pack: vault/material/plotcase_基因组图_比较基因组结构图
+  preview: vault/material/plotcase_基因组图_比较基因组结构图/outputs/rebuilt.png
+  entry: vault/material/plotcase_基因组图_比较基因组结构图/plot.py

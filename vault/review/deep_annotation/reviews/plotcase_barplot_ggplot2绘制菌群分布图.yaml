@@ -1,126 +1,184 @@
-case_id: "plotcase_barplot_ggplot2绘制菌群分布图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_barplot_ggplot2绘制菌群分布图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_corrections_recommended"
-  note: "Observed figure is a nested faceted normalized stacked bar chart; current line-grammar dossier and generic demo CSV are misleading."
-annotator_model: "codex_gpt5"
-reviewed_at: "2026-05-21T01:30:25+08:00"
+  status: reviewed_with_corrections_recommended
+  note: Observed figure is a nested faceted normalized stacked bar chart; current line-grammar dossier
+    and generic demo CSV are misleading.
+annotator_model: codex_gpt5
+reviewed_at: '2026-05-21T01:30:25+08:00'
 evidence:
   files_read:
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/metadata.json"
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/agent_guide.md"
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/plot.py"
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/scripts/code.R"
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/data_main.csv"
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/raw/code.R"
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/raw/data.txt"
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/outputs/rebuilt.png"
-    - "vault/material/plotcase_barplot_ggplot2绘制菌群分布图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_barplot_ggplot2绘制菌群分布图.yaml"
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/metadata.json
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/agent_guide.md
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/plot.py
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/scripts/code.R
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/data_main.csv
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/raw/code.R
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/raw/data.txt
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/outputs/rebuilt.png
+  - vault/material/plotcase_barplot_ggplot2绘制菌群分布图/outputs/visual_check.json
+  - vault/dossiers/plotcase_barplot_ggplot2绘制菌群分布图.yaml
   data_profile:
     data_main_rows: 9
     raw_rows: 13846
     optional_csv_present: false
-  output_check:
-    rebuilt_png_size: [2048, 1537]
+  output_check: &id006
+    rebuilt_png_size:
+    - 2048
+    - 1537
     visual_check_ok: true
 observed_visual_grammar:
-  figure_type: "nested_faceted_normalized_stacked_bar"
-  geometry: "compositional_bar"
-  panel_structure: "nested rows by Soiltype and Site, columns by Compartments"
-  marks:
-    - "100 percent stacked vertical bars"
-    - "facet strip labels"
-    - "bottom fill legend"
-  encodings:
-    x: "TreatmentID"
-    y: "Relative abundance (%) normalized to percent scale"
-    fill: "Phylum"
-    column_facet: "Compartments"
-    row_facet: "Soiltype"
-    row_facet_secondary: "Site"
+  figure_type: nested_faceted_normalized_stacked_bar
+  geometry: compositional_bar
+  panel_structure: nested rows by Soiltype and Site, columns by Compartments
+  marks: &id001
+  - 100 percent stacked vertical bars
+  - facet strip labels
+  - bottom fill legend
+  encodings: &id002
+    x: TreatmentID
+    y: Relative abundance (%) normalized to percent scale
+    fill: Phylum
+    column_facet: Compartments
+    row_facet: Soiltype
+    row_facet_secondary: Site
 inferred_visual_grammar:
-  grammar_id: "nested_faceted_normalized_stacked_bar"
-  reusable_pattern: "Compare categorical composition proportions across many treatment bars within nested row and column facets."
-  minimum_contract: ["x", "value", "stack_category", "column_facet", "row_facet"]
-  useful_extensions: ["row_facet_secondary", "color", "order"]
-reviewed_visual_roles:
-  x: "treatment or sample-position category used for vertical bars"
-  value: "relative abundance contribution before normalized stacked display"
-  stack_category: "component category mapped to fill and legend"
-  column_facet: "compartment partition"
-  row_facet: "primary row partition"
-  row_facet_secondary: "nested row partition"
-  line_value: "compatibility/demo column only; not line grammar evidence"
-  error_low: "not visually supported"
-  error_high: "not visually supported"
+  grammar_id: nested_faceted_normalized_stacked_bar
+  reusable_pattern: Compare categorical composition proportions across many treatment bars within nested
+    row and column facets.
+  minimum_contract:
+  - x
+  - value
+  - stack_category
+  - column_facet
+  - row_facet
+  useful_extensions:
+  - row_facet_secondary
+  - color
+  - order
+reviewed_visual_roles: &id004
+  x: treatment or sample-position category used for vertical bars
+  value: relative abundance contribution before normalized stacked display
+  stack_category: component category mapped to fill and legend
+  column_facet: compartment partition
+  row_facet: primary row partition
+  row_facet_secondary: nested row partition
+  line_value: compatibility/demo column only; not line grammar evidence
+  error_low: not visually supported
+  error_high: not visually supported
 canonical_columns:
-  - "x: bar category, observed as TreatmentID"
-  - "value: numeric relative abundance contribution"
-  - "stack_category: composition component, observed as Phylum"
-  - "column_facet: column facet, observed as Compartments"
-  - "row_facet: row facet, observed as Soiltype"
-  - "row_facet_secondary: optional nested row facet, observed as Site"
-  - "color: optional manual fill palette"
+- 'x: bar category, observed as TreatmentID'
+- 'value: numeric relative abundance contribution'
+- 'stack_category: composition component, observed as Phylum'
+- 'column_facet: column facet, observed as Compartments'
+- 'row_facet: row facet, observed as Soiltype'
+- 'row_facet_secondary: optional nested row facet, observed as Site'
+- 'color: optional manual fill palette'
 required_data_semantics:
-  x: "bar category, observed as TreatmentID"
-  value: "numeric relative abundance contribution"
-  stack_category: "composition component, observed as Phylum"
-  column_facet: "column facet, observed as Compartments"
-  row_facet: "row facet, observed as Soiltype"
+  x: bar category, observed as TreatmentID
+  value: numeric relative abundance contribution
+  stack_category: composition component, observed as Phylum
+  column_facet: column facet, observed as Compartments
+  row_facet: row facet, observed as Soiltype
 optional_data_semantics:
-  row_facet_secondary: "nested row facet, observed as Site"
-  color: "manual fill palette for stack categories"
-  order: "factor order for compartments and phylum categories"
+  row_facet_secondary: nested row facet, observed as Site
+  color: manual fill palette for stack categories
+  order: factor order for compartments and phylum categories
 optional_modules:
   normalized_stacked_bar:
-    status: "observed_and_core"
-    required_fields: ["x", "value", "stack_category"]
+    status: observed_and_core
+    required_fields:
+    - x
+    - value
+    - stack_category
   nested_faceting:
-    status: "observed_and_core"
-    required_fields: ["row_facet", "column_facet"]
+    status: observed_and_core
+    required_fields:
+    - row_facet
+    - column_facet
   fixed_palette_legend:
-    status: "observed"
+    status: observed
   error_interval:
-    status: "not_observed"
+    status: not_observed
   line_overlay:
-    status: "not_observed"
-false_positive_risks:
-  - "Do not retrieve as a line chart despite current dossier subtype."
-  - "Do not treat data_main.csv compatibility columns as faithful observed semantics."
-  - "Do not infer uncertainty intervals from error_low/error_high."
-  - "Do not infer labels or annotation layers from empty annotation_value/label columns."
+    status: not_observed
+false_positive_risks: &id003
+- Do not retrieve as a line chart despite current dossier subtype.
+- Do not treat data_main.csv compatibility columns as faithful observed semantics.
+- Do not infer uncertainty intervals from error_low/error_high.
+- Do not infer labels or annotation layers from empty annotation_value/label columns.
 best_for:
-  - "Dense microbiome-style or categorical composition stacked bars."
-  - "Normalized stacked bar comparisons across nested facets."
-  - "Many component categories with a bottom legend and fixed palette."
+- Dense microbiome-style or categorical composition stacked bars.
+- Normalized stacked bar comparisons across nested facets.
+- Many component categories with a bottom legend and fixed palette.
 bad_for:
-  - "Line trends or time-series line charts."
-  - "Simple single-panel bars without composition."
-  - "Uncertainty interval or label-heavy bar charts."
-style_notes:
-  - "White ggplot theme with light gridlines and grey facet strips."
-  - "X tick labels are hidden; treatment identity is structural rather than text-heavy."
-  - "Legend is large and bottom-centered with many phylum fill categories."
+- Line trends or time-series line charts.
+- Simple single-panel bars without composition.
+- Uncertainty interval or label-heavy bar charts.
+style_notes: &id005
+- White ggplot theme with light gridlines and grey facet strips.
+- X tick labels are hidden; treatment identity is structural rather than text-heavy.
+- Legend is large and bottom-centered with many phylum fill categories.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Strong source-code visual exemplar, but current standard plot entry and data_main.csv are generic and current dossier geometry is wrong."
+  tier: support
+  rationale: Strong source-code visual exemplar, but current standard plot entry and data_main.csv are
+    generic and current dossier geometry is wrong.
   exclusion_risks:
-    - "generic_renderer_involved"
-    - "stale_line_dossier"
-    - "canonical_demo_csv_not_semantic"
+  - generic_renderer_involved
+  - stale_line_dossier
+  - canonical_demo_csv_not_semantic
 confidence:
   overall: 0.9
   visual_grammar: 0.97
   current_contract_fit: 0.3
 proposed_metadata_patch:
-  retrieval_tier: "support"
+  retrieval_tier: support
   visual_grammar:
-    grammar_id: "nested_faceted_normalized_stacked_bar"
-    required_data_roles: ["x", "value", "stack_category", "column_facet", "row_facet"]
-    optional_data_roles: ["row_facet_secondary", "color", "order"]
+    grammar_id: nested_faceted_normalized_stacked_bar
+    required_data_roles:
+    - x
+    - value
+    - stack_category
+    - column_facet
+    - row_facet
+    optional_data_roles:
+    - row_facet_secondary
+    - color
+    - order
 proposed_dossier_patch:
   visual_grammar:
-    geometry: "compositional_bar"
-    subtype: "nested_faceted_normalized_stacked_bar"
-
+    geometry: compositional_bar
+    subtype: nested_faceted_normalized_stacked_bar
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: nested_faceted_normalized_stacked_bar
+  marks: *id001
+  encodings: *id002
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id003
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - value
+  - stack_category
+  - column_facet
+  - row_facet
+  - row_facet_secondary
+  - color
+  role_mapping: *id004
+  derived_columns: []
+  false_positive_columns:
+  - line_value
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id005
+  output_behavior: *id006
+  unsupported_features: *id003

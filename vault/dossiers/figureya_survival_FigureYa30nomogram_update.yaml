@@ -347,44 +347,25 @@ retrieval_tier: support
 retrieval_rationale: Strong nomogram example, but keep out of core until metadata,
   CSV contract, and standard entry are reconciled.
 exclusion_risks: []
-reviewed_visual_grammar:
-  figure_family: nomogram
+annotation_review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa30nomogram_update.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa30nomogram_update.yaml
+  geometry: null
   subtype: cox_regression_risk_nomogram
-  layout:
-  - stacked horizontal scoring axes
-  - left variable label rail
-  - top Points scale
-  - bottom probability axes
-  marks:
-  - horizontal rule axes
-  - dense subticks
-  - red selected-observation points
-  - red arrows
-  - blue density curves
-  - categorical boxes
-  encodings:
-    predictor_value: position on predictor axis
-    point_score: position on points axis
-    total_points: position on total-points axis
-    predicted_probability: position on probability axes
-  geometry: nomogram
-  optional_modules:
-    predictor_distribution_tracks:
-      status: observed
-    selected_observation_overlay:
-      status: observed
-    confidence_interval_overlay:
-      status: observed
-    calibration_curves:
-      status: raw evidence present but not part of rebuilt.png
-  false_positive_risks:
-  - Do not retrieve as PCA, 3D manifold, scatter, or generic line chart.
-  - Do not interpret source/target/weight as graph edges.
-  - Do not assume data_main.csv alone can regenerate the observed nomogram.
-reviewed_visual_roles:
-  model_predictor_axis: predictor rows with value or score scales
-  point_score_axis: top Points scale
-  total_points_axis: summed score scale
-  prediction_axis: fixed time-threshold probability axes
-  selected_observation: red scoring markers and arrows
-  predictor_distribution: optional density or box summaries
+  required_roles:
+  - time
+  - event
+  - predictors
+  - selected_observation
+  - prediction_time
+  - model_mapping
+  optional_roles:
+  - display_names
+  - significance
+  - intervals
+  - axis_ticks
+  tier: support
+  confidence:
+    overall: 0.82
+    visual_grammar: 0.95
+    data_contract: 0.55

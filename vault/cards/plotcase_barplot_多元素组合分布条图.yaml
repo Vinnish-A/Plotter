@@ -1,0 +1,54 @@
+id: plotcase_barplot_多元素组合分布条图
+title: 多元素组合分布条图
+retrieval_tier: support
+one_line: Matched two-condition or two-measure comparisons across shared ordered entities.
+geometry: mirrored_horizontal_stacked_bar_composite
+subtype: stacked_bar_with_point_overlay_and_pie_inset
+required_roles:
+- region
+- panel
+- stack_category
+- value
+optional_roles:
+- net_value
+- summary_value
+- order
+- color
+- inset
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- Matched two-condition or two-measure comparisons across shared ordered entities.
+- Mirrored horizontal stacked bar compositions with derived per-row overlays.
+- Composites with compact legend plus inset category summary.
+bad_for:
+- Simple one-series bars.
+- Standalone pie or donut charts.
+- Source-target relationship or flow diagrams.
+image_summary: 'primary_family: horizontal_stacked_bar_composite; layout: [''left mirrored production
+  panel'', ''right consumption panel'', ''central region label rail'', ''upper-right legend'', ''lower-right
+  pie inset'']; marks: [''stacked horiz…'
+data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
+  ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- Do not classify as standalone pie/donut; pie is an inset summary.
+- Do not reduce to simple grouped bar; mirrored axes, stacked segments, net marke…
+- Current data_main.csv is not sufficient to reconstruct the observed figure.
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_barplot_多元素组合分布条图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_多元素组合分布条图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_barplot_多元素组合分布条图.yaml
+  evidence_pack: vault/material/plotcase_barplot_多元素组合分布条图
+  preview: vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png
+  entry: vault/material/plotcase_barplot_多元素组合分布条图/plot.py

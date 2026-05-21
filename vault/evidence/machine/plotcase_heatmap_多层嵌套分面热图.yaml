@@ -1,0 +1,140 @@
+case_id: plotcase_heatmap_多层嵌套分面热图
+paths:
+  case: vault/material/plotcase_heatmap_多层嵌套分面热图
+  metadata: vault/material/plotcase_heatmap_多层嵌套分面热图/metadata.json
+  agent_guide: vault/material/plotcase_heatmap_多层嵌套分面热图/agent_guide.md
+  entry: vault/material/plotcase_heatmap_多层嵌套分面热图/plot.py
+  rebuilt_png: vault/material/plotcase_heatmap_多层嵌套分面热图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: R
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotcase_heatmap_多层嵌套分面热图/metadata.json
+    exists: true
+    size_bytes: 5508
+  agent_guide:
+    path: vault/material/plotcase_heatmap_多层嵌套分面热图/agent_guide.md
+    exists: true
+    size_bytes: 1729
+  data_main:
+    path: vault/material/plotcase_heatmap_多层嵌套分面热图/data_main.csv
+    exists: true
+    size_bytes: 1122
+  data_optional:
+    path: vault/material/plotcase_heatmap_多层嵌套分面热图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_heatmap_多层嵌套分面热图/plot.py
+    exists: true
+    size_bytes: 235
+  rebuilt_png:
+    path: vault/material/plotcase_heatmap_多层嵌套分面热图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 240162
+image:
+  exists: true
+  size_bytes: 240162
+  width: 1225
+  height: 1709
+  mean_luma: 224.6173
+  stddev_luma: 54.3186
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - row_id
+    - column_id
+    - value
+    - row_group
+    - column_group
+    - annotation_track
+    - annotation_value
+    - label
+    - size_value
+    - facet
+    sampled_rows: 30
+    column_summary:
+      row_id:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+      column_id:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 5
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 30
+      row_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      column_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      annotation_track:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      annotation_value:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      label:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      size_value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: R
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_heatmap_多层嵌套分面热图/plot.py
+  - vault/material/plotcase_heatmap_多层嵌套分面热图/scripts/code.R
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 多层嵌套分面热图
+  metadata_geometry: null
+  geometry_keyword_hits:
+    heatmap:
+    - heatmap
+    - matrix
+    - 热图
+  optional_module_hint_columns:
+  - label
+  - facet

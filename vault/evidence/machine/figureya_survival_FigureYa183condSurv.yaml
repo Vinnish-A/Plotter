@@ -1,0 +1,152 @@
+case_id: figureya_survival_FigureYa183condSurv
+paths:
+  case: vault/material/figureya_survival_FigureYa183condSurv
+  metadata: vault/material/figureya_survival_FigureYa183condSurv/metadata.json
+  agent_guide: vault/material/figureya_survival_FigureYa183condSurv/agent_guide.md
+  entry: vault/material/figureya_survival_FigureYa183condSurv/plot.py
+  rebuilt_png: vault/material/figureya_survival_FigureYa183condSurv/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/figureya_survival_FigureYa183condSurv/metadata.json
+    exists: true
+    size_bytes: 4429
+  agent_guide:
+    path: vault/material/figureya_survival_FigureYa183condSurv/agent_guide.md
+    exists: true
+    size_bytes: 1705
+  data_main:
+    path: vault/material/figureya_survival_FigureYa183condSurv/data_main.csv
+    exists: true
+    size_bytes: 33522
+  data_optional:
+    path: vault/material/figureya_survival_FigureYa183condSurv/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/figureya_survival_FigureYa183condSurv/plot.py
+    exists: true
+    size_bytes: 227
+  rebuilt_png:
+    path: vault/material/figureya_survival_FigureYa183condSurv/outputs/rebuilt.png
+    exists: true
+    size_bytes: 134139
+image:
+  exists: true
+  size_bytes: 134139
+  width: 1152
+  height: 1728
+  mean_luma: 249.3018
+  stddev_luma: 31.6128
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 200
+    column_summary:
+      x:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 179
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 179
+      target:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/figureya_survival_FigureYa183condSurv/plot.py
+  - vault/material/figureya_survival_FigureYa183condSurv/scripts/install_dependencies.R
+  - vault/material/figureya_survival_FigureYa183condSurv/scripts/FigureYa183condSurv.Rmd
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: true
+weak_hints:
+  title_terms:
+  - FigureYa183condSurv
+  metadata_geometry: heatmap
+  geometry_keyword_hits:
+    survival:
+    - survival
+    heatmap:
+    - heatmap
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

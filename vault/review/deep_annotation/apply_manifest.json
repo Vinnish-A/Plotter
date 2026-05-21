@@ -1,188 +1,429 @@
 {
-  "applied_at": "2026-05-20T17:59:23.823245+00:00",
+  "applied_at": "2026-05-21T04:47:39.152995+00:00",
   "mode": "write",
   "review_dir": "/mnt/f/Plotter/vault/review/deep_annotation/reviews",
   "result_count": 30,
+  "legacy_write_full_reviewed_fields": false,
   "results": [
     {
       "case_id": "figures4papers_figure_Cflows_diffusion_swiss_roll_png",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figures4papers_figure_Cflows_diffusion_swiss_roll_png.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figures4papers_figure_Dispersion_idea_png",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figures4papers_figure_Dispersion_idea_png.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figures4papers_figure_RNAGenScape_manifold_holes_png",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figureya_survival_FigureYa182RFSurvV2",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figureya_survival_FigureYa182RFSurvV2.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figureya_survival_FigureYa183condSurv",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figureya_survival_FigureYa183condSurv.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figureya_survival_FigureYa197SmoothHaz",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figureya_survival_FigureYa197SmoothHaz.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figureya_survival_FigureYa251NPHSurv",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figureya_survival_FigureYa251NPHSurv.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figureya_survival_FigureYa299pancanSurv",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figureya_survival_FigureYa299pancanSurv.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figureya_survival_FigureYa30nomogram_update",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figureya_survival_FigureYa30nomogram_update.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "figureya_survival_FigureYa66UnivariateCox",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/figureya_survival_FigureYa66UnivariateCox.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_barplot_ggplot2优雅的绘制径向条形图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_barplot_ggplot2绘制菌群分布图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_barplot_ggplot2绘制菌群分布图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_barplot_多元素组合分布条图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_barplot_多元素组合分布条图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_barplot_多层注释柱状图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_boxplot_多分组分面小提琴箱线图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_boxplot_多分组分面小提琴箱线图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_circos_GO富集分析通路图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_circos_GO富集分析通路图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_circos_多类别关联网络弦图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_circos_多类别关联网络弦图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_circos_细胞通讯弦图_基础入门",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_circos_细胞通讯弦图_基础入门.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_heatmap_Mantel检验热图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_heatmap_Mantel检验热图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_heatmap_ggtree绘制离散型系统发育树热图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_heatmap_ggtree绘制离散型系统发育树热图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_network_STRING_BioNet网络模块解析代码实战",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_network_微生物与代谢物共生网络图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_network_微生物与代谢物共生网络图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_point_多层级曼哈顿图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_point_多层级曼哈顿图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_point_多组火山图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_point_多组火山图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_sankey_多层级桑基图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_sankey_多层级桑基图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_violin_分裂小提琴图分面版",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_violin_分裂小提琴图分面版.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_基因组图_geneviewer基因簇结构可视化",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_基因组图_geneviewer基因簇结构可视化.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotcase_曲线图_Kaplan_Meier生存曲线",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotcase_曲线图_Kaplan_Meier生存曲线.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     },
     {
       "case_id": "plotmaster_003气泡图+相关性热图",
       "review": "/mnt/f/Plotter/vault/review/deep_annotation/reviews/plotmaster_003气泡图+相关性热图.yaml",
       "status": "applied",
-      "changes": []
+      "changes": [
+        "metadata.annotation_review_ref",
+        "metadata.reviewed_visual_grammar:removed",
+        "metadata.reviewed_visual_roles:removed",
+        "dossier.annotation_review_ref",
+        "dossier.reviewed_summary",
+        "dossier.reviewed_visual_grammar:removed",
+        "dossier.reviewed_visual_roles:removed"
+      ]
     }
   ]
 }

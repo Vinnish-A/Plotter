@@ -308,48 +308,22 @@ exclusion_risks:
 - synthetic data_main
 - generic renderer rebuild
 - case-level cover fallback
-reviewed_visual_grammar:
-  figure_type: mantel_coupled_correlation_heatmap
-  layout:
-  - lower-triangle correlation matrix
-  - diagonal variable nodes
-  - right-side Mantel target nodes
-  - curved coupling links
-  - separate legends
-  marks:
-  - correlation tiles
-  - cell text
-  - significance stars
-  - curved links
-  - nodes
-  - diverging colorbar
-  encodings:
-    tile_fill: pearson correlation
-    link_color: Mantel p bin
-    link_width: Mantel r bin
-  geometry: hybrid_correlation_heatmap_network
-  subtype: mantel_coupled_lower_triangle_correlation_heatmap
-  grammar_id: mantel_coupled_correlation_heatmap
-  optional_modules:
-    correlation_cell_labels:
-      status: observed_required
-    mantel_coupling_links:
-      status: observed_required
-    annotation_tracks:
-      status: not_observed
-    clustering_or_dendrogram:
-      status: not_observed
-  false_positive_risks:
-  - Compatibility columns must not be treated as observed annotation-track semantics.
-  - This is not a plain heatmap; Mantel coupling links are required for the true grammar.
-  - Current standardized case is synthetic/generic/fallback-backed.
-reviewed_visual_roles:
-  env_var_x: matrix variable on x-axis
-  env_var_y: matrix variable on y-axis
-  pearson_r: tile fill and numeric label
-  pearson_sig_label: significance stars
-  species_group: external right-side node
-  mantel_r_bin: curved-link width
-  mantel_p_bin: curved-link color
-  current_row_group_column_group_annotation_track: compatibility columns, not observed
-    annotation tracks
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_Mantel检验热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_Mantel检验热图.yaml
+  geometry: mantel_coupled_correlation_heatmap
+  subtype: correlation_heatmap_with_mantel_coupling_network
+  required_roles:
+  - correlation_matrix
+  - mantel_edges
+  - mantel_statistics
+  optional_roles:
+  - pearson_p_values
+  - node_positions
+  - palette_bins
+  tier: inspiration
+  confidence:
+    overall: 0.84
+    visual_grammar: 0.92
+    data_roles: 0.7
+    rebuild_path: 0.55

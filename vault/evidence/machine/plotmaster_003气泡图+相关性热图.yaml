@@ -1,0 +1,126 @@
+case_id: plotmaster_003气泡图+相关性热图
+paths:
+  case: vault/material/plotmaster_003气泡图+相关性热图
+  metadata: vault/material/plotmaster_003气泡图+相关性热图/metadata.json
+  agent_guide: vault/material/plotmaster_003气泡图+相关性热图/agent_guide.md
+  entry: vault/material/plotmaster_003气泡图+相关性热图/plot.R
+  rebuilt_png: vault/material/plotmaster_003气泡图+相关性热图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: R
+  entry: plot.R
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: false
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_003气泡图+相关性热图/metadata.json
+    exists: true
+    size_bytes: 3538
+  agent_guide:
+    path: vault/material/plotmaster_003气泡图+相关性热图/agent_guide.md
+    exists: true
+    size_bytes: 1729
+  data_main:
+    path: vault/material/plotmaster_003气泡图+相关性热图/data_main.csv
+    exists: true
+    size_bytes: 17387
+  data_optional:
+    path: vault/material/plotmaster_003气泡图+相关性热图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_003气泡图+相关性热图/plot.R
+    exists: true
+    size_bytes: 1208
+  rebuilt_png:
+    path: vault/material/plotmaster_003气泡图+相关性热图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 173519
+image:
+  exists: true
+  size_bytes: 173519
+  width: 1728
+  height: 864
+  mean_luma: 249.221
+  stddev_luma: 26.6962
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - group
+    - gene
+    - correlation
+    - p_value
+    - direction
+    - p_value_bin
+    - abs_correlation
+    sampled_rows: 190
+    column_summary:
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 10
+      gene:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 19
+      correlation:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 190
+      p_value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 182
+      direction:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      p_value_bin:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 5
+      abs_correlation:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 190
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: R
+  entry: plot.R
+  script_paths:
+  - vault/material/plotmaster_003气泡图+相关性热图/plot.R
+  - vault/material/plotmaster_003气泡图+相关性热图/scripts/buble_plot.R
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 003气泡图
+  - 相关性热图
+  metadata_geometry: heatmap
+  geometry_keyword_hits:
+    heatmap:
+    - heatmap
+    - 热图
+    bubble:
+    - 气泡
+  optional_module_hint_columns:
+  - group

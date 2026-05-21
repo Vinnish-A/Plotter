@@ -25,16 +25,25 @@ def score_record(record: dict, scene: dict) -> tuple[float, list[str]]:
     optional = {str(x).lower() for x in scene.get("optional", [])}
     intent = " ".join(str(x).lower() for x in scene.get("scientific_intent", []))
     required = {str(x).lower() for x in record.get("required_roles", [])}
+    geometry = record.get("geometry", "")
+    if isinstance(geometry, list):
+        geometry_text = " ".join(str(x).lower() for x in geometry)
+    else:
+        geometry_text = str(geometry).lower()
+    capabilities = record.get("capabilities") if isinstance(record.get("capabilities"), dict) else {}
+    capability_text = " ".join(name for name, enabled in capabilities.items() if enabled)
     candidate_text = " ".join([
         str(record.get("title", "")).lower(),
-        " ".join(str(x).lower() for x in record.get("intent", [])),
+        geometry_text,
+        str(record.get("subtype", "")).lower(),
         " ".join(str(x).lower() for x in record.get("required_roles", [])),
         " ".join(str(x).lower() for x in record.get("optional_roles", [])),
+        capability_text.lower(),
     ])
     hard_match = len(must & (required | {str(x).lower() for x in record.get("optional_roles", [])}))
     intent_match = sum(1 for token in intent.split() if len(token) > 2 and token in candidate_text)
     optional_match = len(optional & {str(x).lower() for x in record.get("optional_roles", [])})
-    support_bonus = 0.5 if record.get("supports", {}).get("detail_panel") and "focus" in optional else 0
+    support_bonus = 0.5 if capabilities.get("detail_panel") and "focus" in optional else 0
     missing = sorted(must - (required | {str(x).lower() for x in record.get("optional_roles", [])}))
     score = hard_match * 3 + optional_match + intent_match * 0.25 + support_bonus - len(missing) * 2
     return score, missing
@@ -51,8 +60,7 @@ def retrieve(scene: dict, index_path: Path, limit: int, include_tiers: set[str] 
     records = [
         r
         for r in load_index(index_path)
-        if r.get("vault_status", {}).get("live", True)
-        and str(r.get("retrieval_tier") or "support") in tiers
+        if str(r.get("retrieval_tier") or "support") in tiers
     ]
     scored = []
     for record in records:

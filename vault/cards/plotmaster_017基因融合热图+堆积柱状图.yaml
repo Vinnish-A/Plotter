@@ -1,0 +1,52 @@
+id: plotmaster_017基因融合热图+堆积柱状图
+title: 017基因融合热图+堆积柱状图
+retrieval_tier: support
+one_line: heatmap asset for 017基因融合热图+堆积柱状图
+geometry: heatmap
+subtype: annotated_heatmap
+required_roles:
+- x
+- y
+- value
+optional_roles:
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+capabilities:
+  highlight: true
+  detail_panel: true
+  annotation_track: false
+  uncertainty: true
+  composition: true
+  batch: true
+best_for:
+- 017基因融合热图+堆积柱状图
+- 'heatmap/annotated_heatmap grammar with roles: x, y, value'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 183528; width: 1728; height: 1728'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
+code_summary: 'entry: plot.py; backend_hints: [''circlize'', ''complexheatmap'', ''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotmaster_017基因融合热图+堆积柱状图.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotmaster_017基因融合热图+堆积柱状图.yaml
+  evidence_pack: vault/material/plotmaster_017基因融合热图+堆积柱状图
+  preview: vault/material/plotmaster_017基因融合热图+堆积柱状图/outputs/rebuilt.png
+  entry: vault/material/plotmaster_017基因融合热图+堆积柱状图/plot.py

@@ -1,0 +1,155 @@
+case_id: plotcase_综合图_多分组统计与差异变化综合图
+paths:
+  case: vault/material/plotcase_综合图_多分组统计与差异变化综合图
+  metadata: vault/material/plotcase_综合图_多分组统计与差异变化综合图/metadata.json
+  agent_guide: vault/material/plotcase_综合图_多分组统计与差异变化综合图/agent_guide.md
+  entry: vault/material/plotcase_综合图_多分组统计与差异变化综合图/plot.py
+  rebuilt_png: vault/material/plotcase_综合图_多分组统计与差异变化综合图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: R
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: low
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotcase_综合图_多分组统计与差异变化综合图/metadata.json
+    exists: true
+    size_bytes: 4935
+  agent_guide:
+    path: vault/material/plotcase_综合图_多分组统计与差异变化综合图/agent_guide.md
+    exists: true
+    size_bytes: 1761
+  data_main:
+    path: vault/material/plotcase_综合图_多分组统计与差异变化综合图/data_main.csv
+    exists: true
+    size_bytes: 369
+  data_optional:
+    path: vault/material/plotcase_综合图_多分组统计与差异变化综合图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_综合图_多分组统计与差异变化综合图/plot.py
+    exists: true
+    size_bytes: 250
+  rebuilt_png:
+    path: vault/material/plotcase_综合图_多分组统计与差异变化综合图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 196068
+image:
+  exists: true
+  size_bytes: 196068
+  width: 1981
+  height: 1537
+  mean_luma: 232.4923
+  stddev_luma: 54.244
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - source
+    - target
+    - weight
+    - node_id
+    - node_label
+    - node_group
+    - node_size
+    - edge_group
+    - edge_direction
+    - layout_x
+    - layout_y
+    - source_group
+    - target_group
+    sampled_rows: 7
+    column_summary:
+      source:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      target:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      node_id:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      node_label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      node_group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      node_size:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      edge_group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      edge_direction:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      layout_x:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      layout_y:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      target_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: R
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_综合图_多分组统计与差异变化综合图/plot.py
+  - vault/material/plotcase_综合图_多分组统计与差异变化综合图/scripts/code.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 多分组统计与差异变化综合图
+  metadata_geometry: null
+  geometry_keyword_hits:
+    network:
+    - network
+    scatter:
+    - scatter
+  optional_module_hint_columns:
+  - source
+  - target
+  - weight

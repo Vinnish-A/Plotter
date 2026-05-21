@@ -1,99 +1,174 @@
-case_id: "plotcase_heatmap_Mantel检验热图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_heatmap_Mantel检验热图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_problem_cohort"
-  note: "Observed figure is a Mantel-coupled lower-triangle correlation heatmap; current standardized interface is synthetic/generic and should not be treated as source-backed grammar."
-annotator_model: "gpt-5 codex"
-reviewed_at: "2026-05-21T00:00:00+08:00"
+  status: reviewed_problem_cohort
+  note: Observed figure is a Mantel-coupled lower-triangle correlation heatmap; current standardized interface
+    is synthetic/generic and should not be treated as source-backed grammar.
+annotator_model: gpt-5 codex
+reviewed_at: '2026-05-21T00:00:00+08:00'
 evidence:
   files_read:
-    - "metadata.json"
-    - "agent_guide.md"
-    - "plot.py"
-    - "data_main.csv"
-    - "raw/code.R"
-    - "outputs/rebuilt.png"
-    - "outputs/visual_check.json"
-    - "vault/dossiers/plotcase_heatmap_Mantel检验热图.yaml"
+  - metadata.json
+  - agent_guide.md
+  - plot.py
+  - data_main.csv
+  - raw/code.R
+  - outputs/rebuilt.png
+  - outputs/visual_check.json
+  - vault/dossiers/plotcase_heatmap_Mantel检验热图.yaml
   data_profile:
     rows: 30
-    columns: ["row_id", "column_id", "value", "row_group", "column_group", "annotation_track", "annotation_value", "label", "size_value", "facet"]
-    synthetic_placeholders: ["R1-R6", "C1-C5", "RG*", "CG*", "A*"]
-  optional_csv: "absent"
-  rebuilt_png_size: [1501, 971]
+    columns:
+    - row_id
+    - column_id
+    - value
+    - row_group
+    - column_group
+    - annotation_track
+    - annotation_value
+    - label
+    - size_value
+    - facet
+    synthetic_placeholders:
+    - R1-R6
+    - C1-C5
+    - RG*
+    - CG*
+    - A*
+  optional_csv: absent
+  rebuilt_png_size:
+  - 1501
+  - 971
   visual_check_ok: true
 observed_visual_grammar:
-  figure_type: "mantel_coupled_correlation_heatmap"
-  layout: ["lower-triangle correlation matrix", "diagonal variable nodes", "right-side Mantel target nodes", "curved coupling links", "separate legends"]
-  marks: ["correlation tiles", "cell text", "significance stars", "curved links", "nodes", "diverging colorbar"]
-  encodings:
-    tile_fill: "pearson correlation"
-    link_color: "Mantel p bin"
-    link_width: "Mantel r bin"
+  figure_type: mantel_coupled_correlation_heatmap
+  layout: &id001
+  - lower-triangle correlation matrix
+  - diagonal variable nodes
+  - right-side Mantel target nodes
+  - curved coupling links
+  - separate legends
+  marks: &id002
+  - correlation tiles
+  - cell text
+  - significance stars
+  - curved links
+  - nodes
+  - diverging colorbar
+  encodings: &id003
+    tile_fill: pearson correlation
+    link_color: Mantel p bin
+    link_width: Mantel r bin
 inferred_visual_grammar:
-  grammar_id: "correlation_heatmap_with_mantel_coupling_network"
-  reusable_pattern: "Lower-triangle environmental correlation matrix linked to external groups by Mantel-test statistics."
-  not_supported: ["generic annotated heatmap", "clustered heatmap", "source-target-weight network alone"]
-reviewed_visual_roles:
-  env_var_x: "matrix variable on x-axis"
-  env_var_y: "matrix variable on y-axis"
-  pearson_r: "tile fill and numeric label"
-  pearson_sig_label: "significance stars"
-  species_group: "external right-side node"
-  mantel_r_bin: "curved-link width"
-  mantel_p_bin: "curved-link color"
-  current_row_group_column_group_annotation_track: "compatibility columns, not observed annotation tracks"
+  grammar_id: correlation_heatmap_with_mantel_coupling_network
+  reusable_pattern: Lower-triangle environmental correlation matrix linked to external groups by Mantel-test
+    statistics.
+  not_supported:
+  - generic annotated heatmap
+  - clustered heatmap
+  - source-target-weight network alone
+reviewed_visual_roles: &id005
+  env_var_x: matrix variable on x-axis
+  env_var_y: matrix variable on y-axis
+  pearson_r: tile fill and numeric label
+  pearson_sig_label: significance stars
+  species_group: external right-side node
+  mantel_r_bin: curved-link width
+  mantel_p_bin: curved-link color
+  current_row_group_column_group_annotation_track: compatibility columns, not observed annotation tracks
 canonical_columns:
-  - "env_var_x"
-  - "env_var_y"
-  - "pearson_r"
-  - "pearson_sig_label"
-  - "species_group"
-  - "mantel_env_var"
-  - "mantel_r_bin"
-  - "mantel_p_bin"
+- env_var_x
+- env_var_y
+- pearson_r
+- pearson_sig_label
+- species_group
+- mantel_env_var
+- mantel_r_bin
+- mantel_p_bin
 required_data_semantics:
-  correlation_matrix: "pairwise Pearson correlations among environmental variables"
-  mantel_edges: "links from species/specimen groups to environmental variables"
-  mantel_statistics: "Mantel r and p bins for link size/color"
+  correlation_matrix: pairwise Pearson correlations among environmental variables
+  mantel_edges: links from species/specimen groups to environmental variables
+  mantel_statistics: Mantel r and p bins for link size/color
 optional_data_semantics:
-  pearson_p_values: "needed to recompute significance stars"
-  node_positions: "manual or deterministic positions for external nodes"
-  palette_bins: "ordered legend bins for p and r classes"
+  pearson_p_values: needed to recompute significance stars
+  node_positions: manual or deterministic positions for external nodes
+  palette_bins: ordered legend bins for p and r classes
 optional_modules:
   correlation_cell_labels:
-    status: "observed_required"
+    status: observed_required
   mantel_coupling_links:
-    status: "observed_required"
+    status: observed_required
   annotation_tracks:
-    status: "not_observed"
+    status: not_observed
   clustering_or_dendrogram:
-    status: "not_observed"
-false_positive_risks:
-  - "Compatibility columns must not be treated as observed annotation-track semantics."
-  - "This is not a plain heatmap; Mantel coupling links are required for the true grammar."
-  - "Current standardized case is synthetic/generic/fallback-backed."
+    status: not_observed
+false_positive_risks: &id004
+- Compatibility columns must not be treated as observed annotation-track semantics.
+- This is not a plain heatmap; Mantel coupling links are required for the true grammar.
+- Current standardized case is synthetic/generic/fallback-backed.
 best_for:
-  - "Mantel-test summaries combining correlation matrices with group-to-variable association links."
+- Mantel-test summaries combining correlation matrices with group-to-variable association links.
 bad_for:
-  - "Plain heatmaps, clustered heatmaps, or source-backed reusable heatmap cases."
-style_notes:
-  - "Separate pearson r, Mantel p, and Mantel r legends; reserve a wide right margin for external nodes and curved links."
+- Plain heatmaps, clustered heatmaps, or source-backed reusable heatmap cases.
+style_notes: &id006
+- Separate pearson r, Mantel p, and Mantel r legends; reserve a wide right margin for external nodes and
+  curved links.
 retrieval_tier_recommendation:
-  tier: "inspiration"
-  rationale: "Visually useful but currently synthetic/generic/fallback-backed; suitable as inspiration for grammar, not core retrieval."
-  exclusion_risks: ["synthetic data_main", "generic renderer rebuild", "case-level cover fallback"]
+  tier: inspiration
+  rationale: Visually useful but currently synthetic/generic/fallback-backed; suitable as inspiration
+    for grammar, not core retrieval.
+  exclusion_risks:
+  - synthetic data_main
+  - generic renderer rebuild
+  - case-level cover fallback
 confidence:
   overall: 0.84
   visual_grammar: 0.92
-  data_roles: 0.70
+  data_roles: 0.7
   rebuild_path: 0.55
 proposed_metadata_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    grammar_id: "mantel_coupled_correlation_heatmap"
+    grammar_id: mantel_coupled_correlation_heatmap
 proposed_dossier_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    geometry: "hybrid_correlation_heatmap_network"
-    subtype: "mantel_coupled_lower_triangle_correlation_heatmap"
+    geometry: hybrid_correlation_heatmap_network
+    subtype: mantel_coupled_lower_triangle_correlation_heatmap
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - row_id
+  - column_id
+  - value
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - label
+  - size_value
+  - facet
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns:
+  - current_row_group_column_group_annotation_track
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: true
+  unsupported_features: *id004

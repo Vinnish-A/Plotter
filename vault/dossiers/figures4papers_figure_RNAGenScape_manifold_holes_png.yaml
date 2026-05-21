@@ -321,47 +321,22 @@ exclusion_risks:
 - synthetic data abstraction
 - generic renderer/copy rebuild
 - compatibility columns overstate supported grammar
-reviewed_visual_grammar:
-  figure_type: two_panel_3d_surface_comparison
-  layout:
-  - side-by-side 3D panels
-  - large whitespace
-  - panel titles only
-  - axes hidden
-  - no legend
-  marks:
-  - meshed 3D surface
-  - semi-transparent gray surface patches
-  encodings:
-    x_y: hidden surface coordinates
-    z: surface height
-    fill: soft green height shading
-    gray_patches: masked or perturbed surface regions in right panel
-  geometry: 3d_surface_comparison
+annotation_review_ref: vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml
+  geometry: two_panel_3d_surface_comparison
   subtype: smooth_vs_masked_manifold_surface
-  grammar_id: smooth_vs_masked_manifold_surface
-  optional_modules:
-    label_layer:
-      status: not_supported_observed
-    trajectory:
-      status: not_supported_observed
-    subgroup_color:
-      status: not_supported_observed
-    patch_mask:
-      status: required_for_true_grammar_but_missing_from_csv
-  false_positive_risks:
-  - Do not retrieve as ordinary scatter, PCA, UMAP, or point-manifold grammar.
-  - Blank label, trajectory, and color columns are not supported optional modules.
-  - Constant group and surface columns are not meaningful categories.
-  - Standard plot.py only copies outputs/figure.png to rebuilt.png.
-reviewed_visual_roles:
-  x: synthetic grid coordinate; not visibly labeled
-  y: synthetic grid coordinate; not visibly labeled
-  z: surface height
-  value: duplicates z
-  panel: compatibility column; rendered two-panel comparison is hardcoded
-  group: constant compatibility column
-  label: blank; not an active label layer
-  surface: constant compatibility column
-  trajectory: blank; not observed
-  color: blank; color is hardcoded in script
+  required_roles:
+  - x
+  - y
+  - z
+  optional_roles:
+  - patch_mask
+  - panel_variant
+  tier: inspiration
+  confidence:
+    overall: 0.9
+    visual_grammar: 0.96
+    data_roles: 0.84
+    caveats:
+    - Raw plotting code can generate the image, but standard entry does not use it.

@@ -38,6 +38,9 @@ REQUIRED_FIELDS = {
     "style_notes",
     "retrieval_tier_recommendation",
     "confidence",
+    "image_observation",
+    "data_understanding",
+    "code_understanding",
 }
 TIERS = {"core", "support", "inspiration", "archive"}
 
@@ -78,6 +81,18 @@ def validate_review(review: dict[str, Any], path: Path) -> list[str]:
         errors.append("reviewed_visual_roles must be an object")
     if not isinstance(review.get("observed_visual_grammar"), dict):
         errors.append("observed_visual_grammar must be an object")
+    status = review.get("annotation_status") if isinstance(review.get("annotation_status"), dict) else {}
+    incomplete = str(status.get("status") or status.get("level") or "").lower() == "incomplete"
+    image = review.get("image_observation") if isinstance(review.get("image_observation"), dict) else {}
+    data = review.get("data_understanding") if isinstance(review.get("data_understanding"), dict) else {}
+    code = review.get("code_understanding") if isinstance(review.get("code_understanding"), dict) else {}
+    for label, payload, flag in (
+        ("image_observation", image, "image_read"),
+        ("data_understanding", data, "data_read"),
+        ("code_understanding", code, "code_read"),
+    ):
+        if label in review and not incomplete and payload.get(flag) is not True:
+            errors.append(f"{label}.{flag} must be true unless annotation_status.status is incomplete")
     if errors:
         return [f"{path}: {error}" for error in errors]
     return []
@@ -125,7 +140,22 @@ def normalized_reviewed_visual_grammar(review: dict[str, Any]) -> dict[str, Any]
     return grammar
 
 
-def safe_fields(review: dict[str, Any]) -> dict[str, Any]:
+def compact_reviewed_summary(review: dict[str, Any], review_ref: str) -> dict[str, Any]:
+    observed = review.get("observed_visual_grammar") if isinstance(review.get("observed_visual_grammar"), dict) else {}
+    inferred = review.get("inferred_visual_grammar") if isinstance(review.get("inferred_visual_grammar"), dict) else {}
+    tier = review["retrieval_tier_recommendation"]
+    return {
+        "review_ref": review_ref,
+        "geometry": observed.get("geometry") or observed.get("figure_type") or inferred.get("geometry"),
+        "subtype": observed.get("subtype") or inferred.get("grammar_id") or inferred.get("subtype"),
+        "required_roles": list((review.get("required_data_semantics") or {}).keys())[:12] if isinstance(review.get("required_data_semantics"), dict) else [],
+        "optional_roles": list((review.get("optional_data_semantics") or {}).keys())[:12] if isinstance(review.get("optional_data_semantics"), dict) else [],
+        "tier": tier["tier"],
+        "confidence": review.get("confidence", {}),
+    }
+
+
+def safe_fields(review: dict[str, Any], review_ref: str, legacy_full_reviewed_fields: bool) -> tuple[dict[str, Any], dict[str, Any], list[str], list[str]]:
     tier = review["retrieval_tier_recommendation"]
     annotation_status = dict(review.get("annotation_status") or {})
     annotation_status.update(
@@ -136,17 +166,30 @@ def safe_fields(review: dict[str, Any]) -> dict[str, Any]:
             "review_version": review.get("annotation_version"),
         }
     )
-    return {
+    metadata_fields = {
         "retrieval_tier": tier["tier"],
         "retrieval_rationale": tier.get("rationale", ""),
         "exclusion_risks": tier.get("exclusion_risks", []),
         "annotation_status": annotation_status,
-        "reviewed_visual_grammar": normalized_reviewed_visual_grammar(review),
-        "reviewed_visual_roles": review.get("reviewed_visual_roles") or {},
+        "annotation_review_ref": review_ref,
     }
+    dossier_fields = dict(metadata_fields)
+    dossier_fields["reviewed_summary"] = compact_reviewed_summary(review, review_ref)
+    remove_metadata = ["reviewed_visual_grammar", "reviewed_visual_roles"]
+    remove_dossier = ["reviewed_visual_grammar", "reviewed_visual_roles"]
+    if legacy_full_reviewed_fields:
+        full = {
+            "reviewed_visual_grammar": normalized_reviewed_visual_grammar(review),
+            "reviewed_visual_roles": review.get("reviewed_visual_roles") or {},
+        }
+        metadata_fields.update(full)
+        dossier_fields.update(full)
+        remove_metadata = []
+        remove_dossier = []
+    return metadata_fields, dossier_fields, remove_metadata, remove_dossier
 
 
-def apply_review(review_path: Path, root: Path, dossiers: Path, write: bool) -> dict[str, Any]:
+def apply_review(review_path: Path, root: Path, dossiers: Path, write: bool, legacy_full_reviewed_fields: bool) -> dict[str, Any]:
     review = load_yaml(review_path)
     errors = validate_review(review, review_path)
     case_id = str(review.get("case_id") or review_path.stem)
@@ -162,15 +205,31 @@ def apply_review(review_path: Path, root: Path, dossiers: Path, write: bool) -> 
         return {"case_id": case_id, "review": str(review_path), "status": "invalid", "errors": [str(exc)]}
     metadata = load_json(metadata_path)
     dossier = load_yaml(dossier_path)
-    fields = safe_fields(review)
+    try:
+        review_ref = str(review_path.resolve().relative_to(repo_root(root)))
+    except Exception:
+        try:
+            review_ref = str(review_path.resolve().relative_to(repo_root(Path(__file__))))
+        except Exception:
+            review_ref = str(review_path)
+    fields, dossier_fields, remove_metadata, remove_dossier = safe_fields(review, review_ref, legacy_full_reviewed_fields)
     changes = []
     for key, value in fields.items():
         if metadata.get(key) != value:
             metadata[key] = value
             changes.append(f"metadata.{key}")
+    for key in remove_metadata:
+        if key in metadata:
+            metadata.pop(key, None)
+            changes.append(f"metadata.{key}:removed")
+    for key, value in dossier_fields.items():
         if dossier.get(key) != value:
             dossier[key] = value
             changes.append(f"dossier.{key}")
+    for key in remove_dossier:
+        if key in dossier:
+            dossier.pop(key, None)
+            changes.append(f"dossier.{key}:removed")
     if write:
         write_json(metadata_path, metadata)
         if dossier:
@@ -185,13 +244,14 @@ def review_paths(review_dir: Path, case: str | None) -> list[Path]:
     return paths
 
 
-def run(review_dir: Path, root: Path, dossiers: Path, write: bool, case: str | None, manifest: Path) -> dict[str, Any]:
-    results = [apply_review(path, root, dossiers, write) for path in review_paths(review_dir, case)]
+def run(review_dir: Path, root: Path, dossiers: Path, write: bool, case: str | None, manifest: Path, legacy_full_reviewed_fields: bool = False) -> dict[str, Any]:
+    results = [apply_review(path, root, dossiers, write, legacy_full_reviewed_fields) for path in review_paths(review_dir, case)]
     payload = {
         "applied_at": datetime.now(timezone.utc).isoformat(),
         "mode": "write" if write else "dry_run",
         "review_dir": str(review_dir),
         "result_count": len(results),
+        "legacy_write_full_reviewed_fields": legacy_full_reviewed_fields,
         "results": results,
     }
     manifest.parent.mkdir(parents=True, exist_ok=True)
@@ -206,11 +266,20 @@ def main() -> int:
     parser.add_argument("--dossiers", type=Path, default=dossier_root(Path(__file__)))
     parser.add_argument("--manifest", type=Path, default=repo_root(Path(__file__)) / "vault" / "review" / "deep_annotation" / "apply_manifest.json")
     parser.add_argument("--case", default=None)
+    parser.add_argument("--legacy-write-full-reviewed-fields", action="store_true")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--dry-run", action="store_true")
     group.add_argument("--write", action="store_true")
     args = parser.parse_args()
-    payload = run(args.review_dir.resolve(), args.root.resolve(), args.dossiers.resolve(), args.write, args.case, args.manifest.resolve())
+    payload = run(
+        args.review_dir.resolve(),
+        args.root.resolve(),
+        args.dossiers.resolve(),
+        args.write,
+        args.case,
+        args.manifest.resolve(),
+        args.legacy_write_full_reviewed_fields,
+    )
     print(json.dumps({"mode": payload["mode"], "result_count": payload["result_count"]}, indent=2, ensure_ascii=False))
     invalid = [item for item in payload["results"] if item["status"] in {"invalid", "missing_case"}]
     return 1 if invalid else 0

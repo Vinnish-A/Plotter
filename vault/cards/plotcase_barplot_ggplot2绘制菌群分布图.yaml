@@ -1,0 +1,56 @@
+id: plotcase_barplot_ggplot2绘制菌群分布图
+title: ggplot2绘制菌群分布图
+retrieval_tier: support
+one_line: Dense microbiome-style or categorical composition stacked bars.
+geometry: compositional_bar
+subtype: nested_faceted_normalized_stacked_bar
+required_roles:
+- x
+- value
+- stack_category
+- column_facet
+- row_facet
+optional_roles:
+- row_facet_secondary
+- color
+- order
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Dense microbiome-style or categorical composition stacked bars.
+- Normalized stacked bar comparisons across nested facets.
+- Many component categories with a bottom legend and fixed palette.
+bad_for:
+- Line trends or time-series line charts.
+- Simple single-panel bars without composition.
+- Uncertainty interval or label-heavy bar charts.
+image_summary: 'figure_type: nested_faceted_normalized_stacked_bar; geometry: compositional_bar; panel_structure:
+  nested rows by Soiltype and Site, columns by Compartments; marks: [''100 percent stacked vertical bars'',
+  ''facet strip labe…'
+data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
+  ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
+code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- Do not retrieve as a line chart despite current dossier subtype.
+- Do not treat data_main.csv compatibility columns as faithful observed semantics.
+- Do not infer uncertainty intervals from error_low/error_high.
+- generic_renderer_involved
+- stale_line_dossier
+- canonical_demo_csv_not_semantic
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_barplot_ggplot2绘制菌群分布图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_ggplot2绘制菌群分布图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_barplot_ggplot2绘制菌群分布图.yaml
+  evidence_pack: vault/material/plotcase_barplot_ggplot2绘制菌群分布图
+  preview: vault/material/plotcase_barplot_ggplot2绘制菌群分布图/outputs/rebuilt.png
+  entry: vault/material/plotcase_barplot_ggplot2绘制菌群分布图/plot.py

@@ -162,57 +162,5 @@
     "annotator_model": "gpt-5-codex",
     "review_version": "deep_annotation_v1"
   },
-  "reviewed_visual_grammar": {
-    "family": "chord_circos",
-    "structure": "single circular chord diagram with sector arcs, translucent ribbons, numeric sector labels, and external legend",
-    "marks": [
-      "sector_arc",
-      "ribbon_chord",
-      "numeric_sector_label",
-      "legend_swatch"
-    ],
-    "encodings": [
-      "sector_identity",
-      "association",
-      "association_weight",
-      "sector_color"
-    ],
-    "optional_modules": {
-      "custom_legend": {
-        "present_in_source": true,
-        "present_in_standard_data": false
-      },
-      "sector_palette": {
-        "present_in_source": true,
-        "present_in_standard_data": false
-      },
-      "directional_chords": {
-        "present_in_source": true,
-        "present_in_standard_data": false
-      },
-      "generic_network_renderer": {
-        "present_in_plot_entry": true,
-        "suitable_for_case": false
-      }
-    },
-    "false_positive_risks": [
-      "May be retrieved as reusable chord even though data_main is synthetic.",
-      "May be treated as source-code rebuild because rebuilt.png visually matches a cover.",
-      "source/target/weight names may hide lack of raw-to-standard lineage.",
-      "Generic network renderer would produce node-link geometry, not observed chord/circos."
-    ]
-  },
-  "reviewed_visual_roles": {
-    "source": "compatibility column; values N1-N7 are synthetic and not raw Type categories",
-    "target": "compatibility column; values N1-N6 are synthetic and not raw taxa",
-    "weight": "compatibility numeric value; range does not match raw count matrix",
-    "source_group": "synthetic optional helper",
-    "target_group": "synthetic optional helper",
-    "direction": "empty optional column",
-    "sector_order": "empty optional column",
-    "sector_color": "empty optional column",
-    "label": "empty optional column",
-    "node_id": "generic renderer support field",
-    "node_label": "generic renderer support field"
-  }
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_circos_多类别关联网络弦图.yaml"
 }

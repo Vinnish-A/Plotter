@@ -189,56 +189,5 @@
     "annotator_model": "gpt-5-codex",
     "review_version": "deep_dossier_review_v1"
   },
-  "reviewed_visual_grammar": {
-    "geometry": "multi_panel_node_link_network",
-    "panels": {
-      "count": 3,
-      "labels": [
-        "Bog",
-        "Fen",
-        "Palsa"
-      ]
-    },
-    "marks": [
-      "metabolite nodes",
-      "microbial square nodes",
-      "positive/negative edges",
-      "hub-size emphasis",
-      "bottom color legend"
-    ],
-    "encodings": {
-      "node_shape": "metabolite versus microbe",
-      "node_color": "metabolite elemental composition or microbial phylum",
-      "node_size": "hub/connector status",
-      "edge_color": "association sign"
-    },
-    "grammar_id": "microbiome_metabolite_signed_association_network_panels",
-    "optional_modules": {
-      "habitat_faceting": {
-        "status": "required_for_original_but_missing_from_standard_csv"
-      },
-      "signed_edges": {
-        "status": "required_for_original_but_missing_from_standard_csv"
-      },
-      "node_annotations": {
-        "status": "required_for_original_but_missing_from_standard_csv"
-      },
-      "manual_layout": {
-        "status": "not_declared"
-      }
-    },
-    "false_positive_risks": [
-      "Current source/target/weight are synthetic compatibility fields, not proof of source-derived network roles.",
-      "Generic renderer cannot reproduce three habitat panels, shape encodings, hub sizing, or categorical legend.",
-      "Rebuilt preview is a fallback cover."
-    ]
-  },
-  "reviewed_visual_roles": {
-    "source": "compatibility column in data_main; true source endpoints exist only in raw SIF files",
-    "target": "compatibility column in data_main; true target endpoints exist only in raw SIF files",
-    "weight": "synthetic renderer weight; original visual uses association sign rather than numeric edge weight",
-    "habitat": "required panel role missing from standard CSV",
-    "node_shape_class": "required node annotation missing from standard CSV",
-    "node_color_class": "required node annotation missing from standard CSV"
-  }
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_network_微生物与代谢物共生网络图.yaml"
 }

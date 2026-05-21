@@ -1,0 +1,136 @@
+case_id: plotcase_point_多组火山图
+paths:
+  case: vault/material/plotcase_point_多组火山图
+  metadata: vault/material/plotcase_point_多组火山图/metadata.json
+  agent_guide: vault/material/plotcase_point_多组火山图/agent_guide.md
+  entry: vault/material/plotcase_point_多组火山图/plot.py
+  rebuilt_png: vault/material/plotcase_point_多组火山图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: R
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: low
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotcase_point_多组火山图/metadata.json
+    exists: true
+    size_bytes: 4553
+  agent_guide:
+    path: vault/material/plotcase_point_多组火山图/agent_guide.md
+    exists: true
+    size_bytes: 1709
+  data_main:
+    path: vault/material/plotcase_point_多组火山图/data_main.csv
+    exists: true
+    size_bytes: 1237
+  data_optional:
+    path: vault/material/plotcase_point_多组火山图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_point_多组火山图/plot.py
+    exists: true
+    size_bytes: 226
+  rebuilt_png:
+    path: vault/material/plotcase_point_多组火山图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 161456
+image:
+  exists: true
+  size_bytes: 161456
+  width: 2028
+  height: 808
+  mean_luma: 227.3291
+  stddev_luma: 55.0261
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - group
+    - value
+    - size_value
+    - label
+    - threshold
+    - facet
+    - highlight
+    sampled_rows: 29
+    column_summary:
+      x:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 29
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 28
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 29
+      size_value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 29
+      label:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 29
+      threshold:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      highlight:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: R
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_point_多组火山图/plot.py
+  - vault/material/plotcase_point_多组火山图/scripts/code.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 多组火山图
+  metadata_geometry: null
+  geometry_keyword_hits:
+    bubble:
+    - bubble
+    scatter:
+    - scatter
+    - 火山
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet

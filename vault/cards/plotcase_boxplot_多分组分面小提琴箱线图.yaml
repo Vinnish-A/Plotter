@@ -1,0 +1,53 @@
+id: plotcase_boxplot_多分组分面小提琴箱线图
+title: 多分组分面小提琴箱线图
+retrieval_tier: support
+one_line: Two-group distribution comparisons repeated across many facets.
+geometry: faceted_violin_box_jitter
+subtype: ''
+required_roles:
+- facet
+- group
+- value
+optional_roles:
+- strip_class
+- p_value
+- p_label
+- panel_order
+- sample_count
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Two-group distribution comparisons repeated across many facets.
+- Violin plus raw point plus box summary layouts.
+- Small-multiple distribution layouts with optional significance labels.
+bad_for:
+- Single-panel boxplots with no facet structure.
+- Paired before/after designs requiring connecting lines.
+- Network, flow, or source-target-weight diagrams.
+image_summary: 'plot_family: distribution_comparison; geometry: faceted_violin_box_jitter; panel_structure:
+  22 small-multiple panels; marks: [''violin densities'', ''semi-transparent jitter points'', ''boxplots'',
+  ''significance text'', ''color…'
+data_summary: 'main_columns: [''group'', ''value'', ''subgroup'', ''paired_id'', ''p_value'', ''facet'',
+  ''label'']; sampled_rows: 24'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- Do not retrieve as a plain boxplot.
+- Do not treat paired_id as evidence for paired-line plots.
+- Do not treat canonical data_main.csv as the full source data for the 22-panel i…
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_boxplot_多分组分面小提琴箱线图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_boxplot_多分组分面小提琴箱线图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_boxplot_多分组分面小提琴箱线图.yaml
+  evidence_pack: vault/material/plotcase_boxplot_多分组分面小提琴箱线图
+  preview: vault/material/plotcase_boxplot_多分组分面小提琴箱线图/outputs/rebuilt.png
+  entry: vault/material/plotcase_boxplot_多分组分面小提琴箱线图/plot.py

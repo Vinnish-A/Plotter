@@ -1,0 +1,53 @@
+id: plotcase_面积图_ggplot2绘制极坐标面积图
+title: ggplot2绘制极坐标面积图
+retrieval_tier: support
+one_line: network asset for ggplot2绘制极坐标面积图
+geometry: network
+subtype: node_link_network
+required_roles:
+- source
+- target
+- weight
+optional_roles:
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- ggplot2绘制极坐标面积图
+- 'network/node_link_network grammar with roles: source, target, weight'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 239596; width: 1659; height: 1297'
+data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
+  ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
+  7'
+code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotcase_面积图_ggplot2绘制极坐标面积图.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotcase_面积图_ggplot2绘制极坐标面积图.yaml
+  evidence_pack: vault/material/plotcase_面积图_ggplot2绘制极坐标面积图
+  preview: vault/material/plotcase_面积图_ggplot2绘制极坐标面积图/outputs/rebuilt.png
+  entry: vault/material/plotcase_面积图_ggplot2绘制极坐标面积图/plot.py

@@ -1,0 +1,155 @@
+case_id: plotmaster_019堆积柱状图+折线+热图注释
+paths:
+  case: vault/material/plotmaster_019堆积柱状图+折线+热图注释
+  metadata: vault/material/plotmaster_019堆积柱状图+折线+热图注释/metadata.json
+  agent_guide: vault/material/plotmaster_019堆积柱状图+折线+热图注释/agent_guide.md
+  entry: vault/material/plotmaster_019堆积柱状图+折线+热图注释/plot.py
+  rebuilt_png: vault/material/plotmaster_019堆积柱状图+折线+热图注释/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: true
+files:
+  metadata:
+    path: vault/material/plotmaster_019堆积柱状图+折线+热图注释/metadata.json
+    exists: true
+    size_bytes: 3126
+  agent_guide:
+    path: vault/material/plotmaster_019堆积柱状图+折线+热图注释/agent_guide.md
+    exists: true
+    size_bytes: 1748
+  data_main:
+    path: vault/material/plotmaster_019堆积柱状图+折线+热图注释/data_main.csv
+    exists: true
+    size_bytes: 2690
+  data_optional:
+    path: vault/material/plotmaster_019堆积柱状图+折线+热图注释/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_019堆积柱状图+折线+热图注释/plot.py
+    exists: true
+    size_bytes: 249
+  rebuilt_png:
+    path: vault/material/plotmaster_019堆积柱状图+折线+热图注释/outputs/rebuilt.png
+    exists: true
+    size_bytes: 96953
+image:
+  exists: true
+  size_bytes: 96953
+  width: 1296
+  height: 864
+  mean_luma: 232.1502
+  stddev_luma: 43.649
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 36
+    column_summary:
+      x:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+      y:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+      group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+      target:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 36
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_019堆积柱状图+折线+热图注释/plot.py
+  - vault/material/plotmaster_019堆积柱状图+折线+热图注释/scripts/codes.R
+  backend_hints:
+  - complexheatmap
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 019堆积柱状图
+  - 折线
+  - 热图注释
+  metadata_geometry: heatmap
+  geometry_keyword_hits:
+    heatmap:
+    - heatmap
+    - 热图
+    bar:
+    - 柱状
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

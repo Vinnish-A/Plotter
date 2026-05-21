@@ -33,15 +33,22 @@ def score(candidate: dict, fit: dict) -> dict:
     data_fidelity = 1.0 if missing == 0 else max(0.0, 0.45 - 0.15 * missing)
     claim_fit = min(1.0, max(0.0, retrieval / 8.0))
     insight_gain = min(1.0, 0.35 + 0.12 * enabled)
-    readability = 0.82 if candidate.get("complexity") in {"low", "medium"} else 0.66
+    risk_flags = [str(x) for x in candidate.get("risk_flags", [])]
+    readability = 0.78 if len(risk_flags) <= 2 else 0.66
     plot_worthiness = round((data_fidelity * 0.35 + claim_fit * 0.25 + insight_gain * 0.25 + readability * 0.15), 3)
     risks = []
     if missing:
         risks.append("missing required roles")
-    if candidate.get("rebuild_class", {}).get("generic_renderer_rebuild"):
+    rebuild = candidate.get("rebuild_class") if isinstance(candidate.get("rebuild_class"), dict) else {}
+    if rebuild.get("generic") or rebuild.get("generic_renderer_rebuild"):
         risks.append("first-pass generic renderer")
+    if rebuild.get("fallback") or rebuild.get("case_level_fallback"):
+        risks.append("case-level fallback")
+    if rebuild.get("synthetic") or rebuild.get("synthetic_data"):
+        risks.append("synthetic data")
     if candidate.get("retrieval_tier") in {"inspiration", "archive"}:
         risks.append(f"retrieval tier: {candidate.get('retrieval_tier')}")
+    risks.extend(flag for flag in risk_flags[:4] if flag not in risks)
     return {
         "candidate_id": candidate["id"],
         "title": candidate.get("title", candidate["id"]),
@@ -57,10 +64,9 @@ def score(candidate: dict, fit: dict) -> dict:
         "enabled_optional_modules": fit.get("enabled_optional_modules", []),
         "missing_data": fit.get("missing_required", []),
         "entry": candidate.get("entry", ""),
-        "dossier": candidate.get("dossier", ""),
+        "card": candidate.get("card", ""),
         "preview": candidate.get("preview", ""),
         "retrieval_tier": candidate.get("retrieval_tier", "support"),
-        "retrieval_rationale": candidate.get("retrieval_rationale", ""),
     }
 
 

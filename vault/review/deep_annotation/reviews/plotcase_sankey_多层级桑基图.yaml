@@ -1,105 +1,161 @@
-case_id: "plotcase_sankey_多层级桑基图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_sankey_多层级桑基图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed"
-  note: "Observed visual is a multi-stage Sankey/alluvial flow with explicit stage semantics."
-annotator_model: "gpt-5.5 high reasoning subagent"
-reviewed_at: "2026-05-21T01:12:07+08:00"
+  status: reviewed
+  note: Observed visual is a multi-stage Sankey/alluvial flow with explicit stage semantics.
+annotator_model: gpt-5.5 high reasoning subagent
+reviewed_at: '2026-05-21T01:12:07+08:00'
 evidence:
   truncated_source_summary: true
   files_read:
-    - "vault/material/plotcase_sankey_多层级桑基图/metadata.json"
-    - "vault/material/plotcase_sankey_多层级桑基图/agent_guide.md"
-    - "vault/material/plotcase_sankey_多层级桑基图/plot.py"
-    - "vault/material/plotcase_sankey_多层级桑基图/data_main.csv"
-    - "vault/material/plotcase_sankey_多层级桑基图/raw/code.R"
-    - "vault/material/plotcase_sankey_多层级桑基图/raw/sankey_data.csv"
-    - "vault/material/plotcase_sankey_多层级桑基图/outputs/rebuilt.png"
-    - "vault/material/plotcase_sankey_多层级桑基图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_sankey_多层级桑基图.yaml"
-  data_main_header: ["stage", "node", "next_stage", "next_node", "value", "flow_id", "group", "node_color", "label", "order"]
+  - vault/material/plotcase_sankey_多层级桑基图/metadata.json
+  - vault/material/plotcase_sankey_多层级桑基图/agent_guide.md
+  - vault/material/plotcase_sankey_多层级桑基图/plot.py
+  - vault/material/plotcase_sankey_多层级桑基图/data_main.csv
+  - vault/material/plotcase_sankey_多层级桑基图/raw/code.R
+  - vault/material/plotcase_sankey_多层级桑基图/raw/sankey_data.csv
+  - vault/material/plotcase_sankey_多层级桑基图/outputs/rebuilt.png
+  - vault/material/plotcase_sankey_多层级桑基图/outputs/visual_check.json
+  - vault/dossiers/plotcase_sankey_多层级桑基图.yaml
+  data_main_header:
+  - stage
+  - node
+  - next_stage
+  - next_node
+  - value
+  - flow_id
+  - group
+  - node_color
+  - label
+  - order
 observed_visual_grammar:
-  figure_type: "multi_stage_sankey_alluvial"
-  layout: ["ordered stages", "nodes within each stage", "ribbons between adjacent stages"]
-  marks: ["weighted ribbons", "node/stratum blocks", "labels"]
-  encodings:
-    stage: "x or ordered stage position"
-    node: "stratum/category within a stage"
-    value: "ribbon thickness"
-    group: "optional color grouping"
+  figure_type: multi_stage_sankey_alluvial
+  layout: &id001
+  - ordered stages
+  - nodes within each stage
+  - ribbons between adjacent stages
+  marks: &id002
+  - weighted ribbons
+  - node/stratum blocks
+  - labels
+  encodings: &id003
+    stage: x or ordered stage position
+    node: stratum/category within a stage
+    value: ribbon thickness
+    group: optional color grouping
 inferred_visual_grammar:
-  grammar_id: "multi_level_sankey"
-  reusable_pattern: "Categorical transitions across ordered stages with weighted ribbons."
-  not_supported: ["free graph layout", "network centrality", "tree topology"]
-reviewed_visual_roles:
-  stage: "current ordered stage"
-  node: "current stage category"
-  next_stage: "target ordered stage"
-  next_node: "target stage category"
-  value: "flow magnitude mapped to ribbon width"
-  flow_id: "optional path identifier for continuity"
-  group: "optional flow group/color"
-  node_color: "optional explicit node color"
-  label: "optional display label"
-  order: "optional stage or node ordering"
+  grammar_id: multi_level_sankey
+  reusable_pattern: Categorical transitions across ordered stages with weighted ribbons.
+  not_supported:
+  - free graph layout
+  - network centrality
+  - tree topology
+reviewed_visual_roles: &id005
+  stage: current ordered stage
+  node: current stage category
+  next_stage: target ordered stage
+  next_node: target stage category
+  value: flow magnitude mapped to ribbon width
+  flow_id: optional path identifier for continuity
+  group: optional flow group/color
+  node_color: optional explicit node color
+  label: optional display label
+  order: optional stage or node ordering
 canonical_columns:
-  - "stage: current ordered stage"
-  - "node: current stage category"
-  - "next_stage: target ordered stage"
-  - "next_node: target stage category"
-  - "value: ribbon magnitude"
-  - "flow_id: optional path id"
-  - "group: optional flow class"
-  - "node_color: optional explicit color"
-  - "label: optional display label"
-  - "order: optional order control"
+- 'stage: current ordered stage'
+- 'node: current stage category'
+- 'next_stage: target ordered stage'
+- 'next_node: target stage category'
+- 'value: ribbon magnitude'
+- 'flow_id: optional path id'
+- 'group: optional flow class'
+- 'node_color: optional explicit color'
+- 'label: optional display label'
+- 'order: optional order control'
 required_data_semantics:
-  current_stage: "ordered stage for each transition"
-  current_node: "category at the current stage"
-  next_stage: "ordered target stage"
-  next_node: "category at target stage"
-  flow_value: "nonnegative transition magnitude"
+  current_stage: ordered stage for each transition
+  current_node: category at the current stage
+  next_stage: ordered target stage
+  next_node: category at target stage
+  flow_value: nonnegative transition magnitude
 optional_data_semantics:
-  flow_id: "links segments belonging to one path"
-  group: "colors or groups flows"
-  node_color: "explicit node palette control"
-  order: "stable ordering for stage nodes"
+  flow_id: links segments belonging to one path
+  group: colors or groups flows
+  node_color: explicit node palette control
+  order: stable ordering for stage nodes
 optional_modules:
   group_coloring:
-    status: "supported"
+    status: supported
   manual_ordering:
-    status: "supported"
+    status: supported
   node_label_overrides:
-    status: "supported"
+    status: supported
   network_weighted_edges:
-    status: "not_supported_as_network_semantics"
-false_positive_risks:
-  - "Do not collapse stage/node/next_stage/next_node into generic source/target unless preserving stage semantics."
-  - "Do not retrieve as a free-form network graph."
+    status: not_supported_as_network_semantics
+false_positive_risks: &id004
+- Do not collapse stage/node/next_stage/next_node into generic source/target unless preserving stage semantics.
+- Do not retrieve as a free-form network graph.
 best_for:
-  - "Multi-stage categorical flows."
-  - "Alluvial/Sankey diagrams where ordered stages are part of the claim."
+- Multi-stage categorical flows.
+- Alluvial/Sankey diagrams where ordered stages are part of the claim.
 bad_for:
-  - "Unordered relationship networks."
-  - "Tree or phylogeny diagrams."
-style_notes:
-  - "Stage alignment and label spacing are primary readability constraints."
-  - "Use color to support groups but keep ribbon width as the main quantitative encoding."
+- Unordered relationship networks.
+- Tree or phylogeny diagrams.
+style_notes: &id006
+- Stage alignment and label spacing are primary readability constraints.
+- Use color to support groups but keep ribbon width as the main quantitative encoding.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Good reusable staged-flow grammar; recommended as support rather than core until visual audit confirms exact output fidelity."
+  tier: support
+  rationale: Good reusable staged-flow grammar; recommended as support rather than core until visual audit
+    confirms exact output fidelity.
   exclusion_risks:
-    - "stage semantics lost by generic network retrieval"
+  - stage semantics lost by generic network retrieval
 confidence:
   overall: 0.87
-  visual_grammar: 0.90
+  visual_grammar: 0.9
   data_roles: 0.88
   retrieval_tier: 0.85
 proposed_metadata_patch:
-  retrieval_tier: "support"
-  retrieval_rationale: "Stage-wise Sankey/alluvial support asset with explicit flow roles."
+  retrieval_tier: support
+  retrieval_rationale: Stage-wise Sankey/alluvial support asset with explicit flow roles.
 proposed_dossier_patch:
   visual_grammar:
-    geometry: "sankey"
-    subtype: "multi_stage_alluvial"
-
+    geometry: sankey
+    subtype: multi_stage_alluvial
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - stage
+  - node
+  - next_stage
+  - next_node
+  - value
+  - flow_id
+  - group
+  - node_color
+  - label
+  - order
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data:
+  - network_weighted_edges
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id004

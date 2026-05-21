@@ -1,0 +1,50 @@
+id: plotcase_heatmap_ggtree绘制组合热图
+title: ggtree绘制组合热图
+retrieval_tier: support
+one_line: tree asset for ggtree绘制组合热图
+geometry: tree
+subtype: phylogenetic_tree
+required_roles:
+- node_id
+- parent_id
+- label
+optional_roles:
+- branch_length
+- tip_group
+- track
+- track_value
+- track_class
+- heatmap_value
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- ggtree绘制组合热图
+- 'tree/phylogenetic_tree grammar with roles: node_id, parent_id, label'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 99704; width: 809; height: 1463'
+data_summary: 'main_columns: [''node_id'', ''parent_id'', ''label'', ''branch_length'', ''tip_group'',
+  ''track'', ''track_value'', ''track_class'', ''heatmap_value'']; sampled_rows: 9'
+code_summary: 'entry: plot.py; backend_hints: [''ggtree'']'
+risk_flags:
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotcase_heatmap_ggtree绘制组合热图.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_ggtree绘制组合热图.yaml
+  evidence_pack: vault/material/plotcase_heatmap_ggtree绘制组合热图
+  preview: vault/material/plotcase_heatmap_ggtree绘制组合热图/outputs/rebuilt.png
+  entry: vault/material/plotcase_heatmap_ggtree绘制组合热图/plot.py

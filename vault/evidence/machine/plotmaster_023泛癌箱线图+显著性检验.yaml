@@ -1,0 +1,152 @@
+case_id: plotmaster_023泛癌箱线图+显著性检验
+paths:
+  case: vault/material/plotmaster_023泛癌箱线图+显著性检验
+  metadata: vault/material/plotmaster_023泛癌箱线图+显著性检验/metadata.json
+  agent_guide: vault/material/plotmaster_023泛癌箱线图+显著性检验/agent_guide.md
+  entry: vault/material/plotmaster_023泛癌箱线图+显著性检验/plot.py
+  rebuilt_png: vault/material/plotmaster_023泛癌箱线图+显著性检验/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_023泛癌箱线图+显著性检验/metadata.json
+    exists: true
+    size_bytes: 3255
+  agent_guide:
+    path: vault/material/plotmaster_023泛癌箱线图+显著性检验/agent_guide.md
+    exists: true
+    size_bytes: 1704
+  data_main:
+    path: vault/material/plotmaster_023泛癌箱线图+显著性检验/data_main.csv
+    exists: true
+    size_bytes: 98977
+  data_optional:
+    path: vault/material/plotmaster_023泛癌箱线图+显著性检验/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_023泛癌箱线图+显著性检验/plot.py
+    exists: true
+    size_bytes: 241
+  rebuilt_png:
+    path: vault/material/plotmaster_023泛癌箱线图+显著性检验/outputs/rebuilt.png
+    exists: true
+    size_bytes: 133624
+image:
+  exists: true
+  size_bytes: 133624
+  width: 1440
+  height: 864
+  mean_luma: 235.2987
+  stddev_luma: 52.276
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 200
+    column_summary:
+      x:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 195
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 195
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      facet:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      source:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      target:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 195
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 195
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 195
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 195
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_023泛癌箱线图+显著性检验/plot.py
+  - vault/material/plotmaster_023泛癌箱线图+显著性检验/scripts/codes.R
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 023泛癌箱线图
+  - 显著性检验
+  metadata_geometry: box_violin
+  geometry_keyword_hits:
+    box:
+    - 箱线
+    violin:
+    - violin
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

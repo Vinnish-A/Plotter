@@ -1,103 +1,163 @@
-case_id: "figures4papers_figure_Cflows_diffusion_swiss_roll_png"
-annotation_version: "deep_annotation_v1"
+case_id: figures4papers_figure_Cflows_diffusion_swiss_roll_png
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "fallback_synthetic_inspiration_only"
-  note: "Observed figure is a copied two-panel diffusion matrix plus swiss-roll neighborhood image; standard CSV and plot entry do not reproduce it."
+  status: fallback_synthetic_inspiration_only
+  note: Observed figure is a copied two-panel diffusion matrix plus swiss-roll neighborhood image; standard
+    CSV and plot entry do not reproduce it.
   human_review_required: true
-annotator_model: "codex"
-reviewed_at: "2026-05-21"
+annotator_model: codex
+reviewed_at: '2026-05-21'
 evidence:
   files_read:
-    - "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/metadata.json"
-    - "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/agent_guide.md"
-    - "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/plot.py"
-    - "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/data_main.csv"
-    - "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/raw/"
-    - "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/scripts/"
-    - "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/outputs/rebuilt.png"
-    - "vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/outputs/visual_check.json"
-    - "vault/dossiers/figures4papers_figure_Cflows_diffusion_swiss_roll_png.yaml"
+  - vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/metadata.json
+  - vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/agent_guide.md
+  - vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/plot.py
+  - vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/data_main.csv
+  - vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/raw/
+  - vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/scripts/
+  - vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/outputs/rebuilt.png
+  - vault/material/figures4papers_figure_Cflows_diffusion_swiss_roll_png/outputs/visual_check.json
+  - vault/dossiers/figures4papers_figure_Cflows_diffusion_swiss_roll_png.yaml
   rebuilt_png:
     width: 5313
     height: 3000
     visual_check_ok: true
     identical_to_raw_reference: true
-  plot_entry: "copies outputs/figure.png to outputs/rebuilt.png"
-  data_main_assessment: "synthetic 8x8 surface grid; not observed transition matrix or manifold network data"
+  plot_entry: copies outputs/figure.png to outputs/rebuilt.png
+  data_main_assessment: synthetic 8x8 surface grid; not observed transition matrix or manifold network
+    data
   optional_csv_present: false
 observed_visual_grammar:
-  figure_type: "two_panel_diffusion_manifold"
-  layout: ["transition_matrix_heatmap", "swiss_roll_point_cloud_network"]
-  marks: ["red matrix cells", "gray local edges", "colored translucent points"]
-  encodings:
-    matrix_intensity: "transition probability"
-    point_position: "2D manifold embedding"
-    point_color: "roll parameter"
-    edge_alpha: "transition probability"
-  not_observed: ["3d axes", "labels", "threshold lines", "focus callouts", "marginal density"]
+  figure_type: two_panel_diffusion_manifold
+  layout: &id001
+  - transition_matrix_heatmap
+  - swiss_roll_point_cloud_network
+  marks: &id002
+  - red matrix cells
+  - gray local edges
+  - colored translucent points
+  encodings: &id003
+    matrix_intensity: transition probability
+    point_position: 2D manifold embedding
+    point_color: roll parameter
+    edge_alpha: transition probability
+  not_observed:
+  - 3d axes
+  - labels
+  - threshold lines
+  - focus callouts
+  - marginal density
 inferred_visual_grammar:
-  grammar_id: "diffusion_matrix_plus_swiss_roll_neighborhood"
-  true_source_logic: "stochastic swiss-roll generation plus diffusion kernel"
-  current_standard_rebuild: "case-level rendered-output copy"
-  reproducibility_gap: "standard entry does not recompute the matrix, points, edges, or layout"
-reviewed_visual_roles:
-  matrix_row: "transition matrix row index"
-  matrix_column: "transition matrix column index"
-  transition_probability: "matrix cell intensity and edge strength"
-  node_id: "manifold point identity"
-  x: "manifold x coordinate in true grammar; synthetic grid coordinate in current CSV"
-  y: "manifold y coordinate in true grammar; synthetic grid coordinate in current CSV"
-  roll_parameter: "point color parameter"
-  label: "empty compatibility column; not an active label layer"
-  trajectory: "empty compatibility column; not an active trajectory layer"
+  grammar_id: diffusion_matrix_plus_swiss_roll_neighborhood
+  true_source_logic: stochastic swiss-roll generation plus diffusion kernel
+  current_standard_rebuild: case-level rendered-output copy
+  reproducibility_gap: standard entry does not recompute the matrix, points, edges, or layout
+reviewed_visual_roles: &id005
+  matrix_row: transition matrix row index
+  matrix_column: transition matrix column index
+  transition_probability: matrix cell intensity and edge strength
+  node_id: manifold point identity
+  x: manifold x coordinate in true grammar; synthetic grid coordinate in current CSV
+  y: manifold y coordinate in true grammar; synthetic grid coordinate in current CSV
+  roll_parameter: point color parameter
+  label: empty compatibility column; not an active label layer
+  trajectory: empty compatibility column; not an active trajectory layer
 canonical_columns:
-  - "current x/y/z/value/panel/group/label/surface/trajectory/color are synthetic compatibility columns"
-  - "true matrix panel requires row_index, column_index, transition_probability"
-  - "true manifold panel requires node_id, x, y, roll_parameter"
-  - "true edge layer requires source, target, transition_probability"
+- current x/y/z/value/panel/group/label/surface/trajectory/color are synthetic compatibility columns
+- true matrix panel requires row_index, column_index, transition_probability
+- true manifold panel requires node_id, x, y, roll_parameter
+- true edge layer requires source, target, transition_probability
 required_data_semantics:
-  matrix_panel: ["row_index", "column_index", "transition_probability"]
-  manifold_panel: ["node_id", "x", "y", "roll_parameter"]
-  edge_layer: ["source", "target", "transition_probability"]
+  matrix_panel:
+  - row_index
+  - column_index
+  - transition_probability
+  manifold_panel:
+  - node_id
+  - x
+  - y
+  - roll_parameter
+  edge_layer:
+  - source
+  - target
+  - transition_probability
 optional_data_semantics:
-  label: "not observed; current column is empty"
-  trajectory: "not observed; current column is empty"
-  color_override: "not observed; current column is empty"
+  label: not observed; current column is empty
+  trajectory: not observed; current column is empty
+  color_override: not observed; current column is empty
 optional_modules:
   matrix_panel:
-    status: "observed_but_not_encoded_by_current_csv"
+    status: observed_but_not_encoded_by_current_csv
   manifold_edge_layer:
-    status: "observed_but_not_encoded_by_current_csv"
+    status: observed_but_not_encoded_by_current_csv
   label_layer:
-    status: "not_supported"
+    status: not_supported
   trajectory_layer:
-    status: "not_supported"
-false_positive_risks:
-  - "Do not retrieve as clean PCA, 3D manifold, label, trajectory, or focus-callout template."
-  - "Compatibility columns are not evidence of supported optional modules."
-  - "Rendered image fallback should not be treated as data-driven Retinue rebuild."
+    status: not_supported
+false_positive_risks: &id004
+- Do not retrieve as clean PCA, 3D manifold, label, trajectory, or focus-callout template.
+- Compatibility columns are not evidence of supported optional modules.
+- Rendered image fallback should not be treated as data-driven Retinue rebuild.
 best_for:
-  - "Visual inspiration for paired diffusion matrix plus manifold-neighborhood figures."
+- Visual inspiration for paired diffusion matrix plus manifold-neighborhood figures.
 bad_for:
-  - "Data-backed reusable manifold plotting."
-  - "Cases requiring clean recomputation from canonical CSV."
-style_notes:
-  - "White-background two-panel composition with red transition matrix and gray-edged swiss-roll point cloud."
+- Data-backed reusable manifold plotting.
+- Cases requiring clean recomputation from canonical CSV.
+style_notes: &id006
+- White-background two-panel composition with red transition matrix and gray-edged swiss-roll point cloud.
 retrieval_tier_recommendation:
-  tier: "inspiration"
-  rationale: "Strong visual idea, but current asset is synthetic-data and case-level fallback, not a true CSV-driven rebuild."
-  exclusion_risks: ["synthetic_data", "case_level_fallback", "generic_renderer_rebuild", "empty_compatibility_columns"]
+  tier: inspiration
+  rationale: Strong visual idea, but current asset is synthetic-data and case-level fallback, not a true
+    CSV-driven rebuild.
+  exclusion_risks:
+  - synthetic_data
+  - case_level_fallback
+  - generic_renderer_rebuild
+  - empty_compatibility_columns
 confidence:
-  overall: "high"
-  visual_observation: "high"
-  data_contract_assessment: "high"
-  source_rebuild_assessment: "medium"
+  overall: high
+  visual_observation: high
+  data_contract_assessment: high
+  source_rebuild_assessment: medium
 proposed_metadata_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    geometry: "diffusion_manifold_composite"
-    subtype: "transition_matrix_plus_swiss_roll_network"
+    geometry: diffusion_manifold_composite
+    subtype: transition_matrix_plus_swiss_roll_network
 proposed_dossier_patch:
-  retrieval_tier: "inspiration"
-  note: "Keep as inspiration until data_main is regenerated from true transition matrix and manifold tables."
-
+  retrieval_tier: inspiration
+  note: Keep as inspiration until data_main is regenerated from true transition matrix and manifold tables.
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - current x/y/z/value/panel/group/label/surface/trajectory/color are synthetic compatibility columns
+  - true matrix panel requires row_index, column_index, transition_probability
+  - true manifold panel requires node_id, x, y, roll_parameter
+  - true edge layer requires source, target, transition_probability
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns:
+  - label
+  - trajectory
+  missing_optional_data:
+  - label_layer
+  - trajectory_layer
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: copies outputs/figure.png to outputs/rebuilt.png
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id004

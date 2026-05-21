@@ -1,110 +1,188 @@
-case_id: "figures4papers_figure_RNAGenScape_manifold_holes_png"
-annotation_version: "deep_annotation_v1"
+case_id: figures4papers_figure_RNAGenScape_manifold_holes_png
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "fallback_synthetic_inspiration_only"
-  note: "Image-first fallback asset; observed grammar is a two-panel 3D surface comparison, not generic scatter/PCA manifold."
+  status: fallback_synthetic_inspiration_only
+  note: Image-first fallback asset; observed grammar is a two-panel 3D surface comparison, not generic
+    scatter/PCA manifold.
   human_review_required: true
-annotator_model: "gpt-5 codex"
-reviewed_at: "2026-05-21T00:00:00+08:00"
+annotator_model: gpt-5 codex
+reviewed_at: '2026-05-21T00:00:00+08:00'
 evidence:
   files_read:
-    - "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/metadata.json"
-    - "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/agent_guide.md"
-    - "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/plot.py"
-    - "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/data_main.csv"
-    - "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/scripts/plot_hole_manifold.py"
-    - "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/raw/plot_hole_manifold.py"
-    - "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/outputs/visual_check.json"
-    - "vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/outputs/rebuilt.png"
-    - "vault/dossiers/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml"
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/metadata.json
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/agent_guide.md
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/plot.py
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/data_main.csv
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/scripts/plot_hole_manifold.py
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/raw/plot_hole_manifold.py
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/outputs/visual_check.json
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_holes_png/outputs/rebuilt.png
+  - vault/dossiers/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml
   data_profile:
     rows: 64
-    columns: ["x", "y", "z", "value", "panel", "group", "label", "surface", "trajectory", "color"]
-    optional_csv: "absent"
-  rebuilt_png_size: [4200, 1800]
+    columns:
+    - x
+    - y
+    - z
+    - value
+    - panel
+    - group
+    - label
+    - surface
+    - trajectory
+    - color
+    optional_csv: absent
+  rebuilt_png_size:
+  - 4200
+  - 1800
   visual_check_ok: true
 observed_visual_grammar:
-  figure_type: "two_panel_3d_surface_comparison"
-  layout: ["side-by-side 3D panels", "large whitespace", "panel titles only", "axes hidden", "no legend"]
-  marks: ["meshed 3D surface", "semi-transparent gray surface patches"]
-  encodings:
-    x_y: "hidden surface coordinates"
-    z: "surface height"
-    fill: "soft green height shading"
-    gray_patches: "masked or perturbed surface regions in right panel"
+  figure_type: two_panel_3d_surface_comparison
+  layout: &id001
+  - side-by-side 3D panels
+  - large whitespace
+  - panel titles only
+  - axes hidden
+  - no legend
+  marks: &id002
+  - meshed 3D surface
+  - semi-transparent gray surface patches
+  encodings: &id003
+    x_y: hidden surface coordinates
+    z: surface height
+    fill: soft green height shading
+    gray_patches: masked or perturbed surface regions in right panel
 inferred_visual_grammar:
-  grammar_id: "smooth_vs_masked_manifold_surface"
-  reusable_pattern: "Compare a smooth 3D manifold surface against the same surface with masked or gray patch regions."
-  not_supported: ["2D scatter", "PCA point cloud", "trajectory manifold", "labels/callouts", "threshold lines", "statistical uncertainty"]
-reviewed_visual_roles:
-  x: "synthetic grid coordinate; not visibly labeled"
-  y: "synthetic grid coordinate; not visibly labeled"
-  z: "surface height"
-  value: "duplicates z"
-  panel: "compatibility column; rendered two-panel comparison is hardcoded"
-  group: "constant compatibility column"
-  label: "blank; not an active label layer"
-  surface: "constant compatibility column"
-  trajectory: "blank; not observed"
-  color: "blank; color is hardcoded in script"
+  grammar_id: smooth_vs_masked_manifold_surface
+  reusable_pattern: Compare a smooth 3D manifold surface against the same surface with masked or gray
+    patch regions.
+  not_supported:
+  - 2D scatter
+  - PCA point cloud
+  - trajectory manifold
+  - labels/callouts
+  - threshold lines
+  - statistical uncertainty
+reviewed_visual_roles: &id005
+  x: synthetic grid coordinate; not visibly labeled
+  y: synthetic grid coordinate; not visibly labeled
+  z: surface height
+  value: duplicates z
+  panel: compatibility column; rendered two-panel comparison is hardcoded
+  group: constant compatibility column
+  label: blank; not an active label layer
+  surface: constant compatibility column
+  trajectory: blank; not observed
+  color: blank; color is hardcoded in script
 canonical_columns:
-  - "x: synthetic surface-grid coordinate"
-  - "y: synthetic surface-grid coordinate"
-  - "z: synthetic height value"
-  - "value: duplicate height value"
-  - "panel: compatibility column that does not encode the rendered two-panel comparison"
-  - "patch_mask: required for true grammar but missing from CSV"
-  - "panel_variant: required for true grammar but missing from CSV"
+- 'x: synthetic surface-grid coordinate'
+- 'y: synthetic surface-grid coordinate'
+- 'z: synthetic height value'
+- 'value: duplicate height value'
+- 'panel: compatibility column that does not encode the rendered two-panel comparison'
+- 'patch_mask: required for true grammar but missing from CSV'
+- 'panel_variant: required for true grammar but missing from CSV'
 required_data_semantics:
-  x: "numeric grid coordinate"
-  y: "numeric grid coordinate"
-  z: "numeric surface height"
+  x: numeric grid coordinate
+  y: numeric grid coordinate
+  z: numeric surface height
 optional_data_semantics:
-  patch_mask: "hardcoded gray patch mask, not in CSV"
-  panel_variant: "smooth versus gray-patch panel, hardcoded"
+  patch_mask: hardcoded gray patch mask, not in CSV
+  panel_variant: smooth versus gray-patch panel, hardcoded
 optional_modules:
   label_layer:
-    status: "not_supported_observed"
+    status: not_supported_observed
   trajectory:
-    status: "not_supported_observed"
+    status: not_supported_observed
   subgroup_color:
-    status: "not_supported_observed"
+    status: not_supported_observed
   patch_mask:
-    status: "required_for_true_grammar_but_missing_from_csv"
-false_positive_risks:
-  - "Do not retrieve as ordinary scatter, PCA, UMAP, or point-manifold grammar."
-  - "Blank label, trajectory, and color columns are not supported optional modules."
-  - "Constant group and surface columns are not meaningful categories."
-  - "Standard plot.py only copies outputs/figure.png to rebuilt.png."
+    status: required_for_true_grammar_but_missing_from_csv
+false_positive_risks: &id004
+- Do not retrieve as ordinary scatter, PCA, UMAP, or point-manifold grammar.
+- Blank label, trajectory, and color columns are not supported optional modules.
+- Constant group and surface columns are not meaningful categories.
+- Standard plot.py only copies outputs/figure.png to rebuilt.png.
 best_for:
-  - "Visual inspiration for side-by-side 3D surface perturbation comparisons."
+- Visual inspiration for side-by-side 3D surface perturbation comparisons.
 bad_for:
-  - "Data-backed scientific rebuilds."
-  - "Point-cloud manifold embeddings."
-  - "Requests requiring labels, legends, trajectories, or categorical color mapping."
-style_notes:
-  - "Soft green height-shaded surface with fine black mesh; right panel overlays semi-transparent gray patches."
+- Data-backed scientific rebuilds.
+- Point-cloud manifold embeddings.
+- Requests requiring labels, legends, trajectories, or categorical color mapping.
+style_notes: &id006
+- Soft green height-shaded surface with fine black mesh; right panel overlays semi-transparent gray patches.
 retrieval_tier_recommendation:
-  tier: "inspiration"
-  rationale: "Useful as a visual idea only; current case is a case-level rendered-output fallback with synthetic CSV and generic copy-based rebuild."
-  exclusion_risks: ["case-level fallback", "synthetic data abstraction", "generic renderer/copy rebuild", "compatibility columns overstate supported grammar"]
+  tier: inspiration
+  rationale: Useful as a visual idea only; current case is a case-level rendered-output fallback with
+    synthetic CSV and generic copy-based rebuild.
+  exclusion_risks:
+  - case-level fallback
+  - synthetic data abstraction
+  - generic renderer/copy rebuild
+  - compatibility columns overstate supported grammar
 confidence:
-  overall: 0.90
+  overall: 0.9
   visual_grammar: 0.96
   data_roles: 0.84
-  caveats: ["Raw plotting code can generate the image, but standard entry does not use it."]
+  caveats:
+  - Raw plotting code can generate the image, but standard entry does not use it.
 proposed_metadata_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    geometry: "3d_surface_comparison"
-    subtype: "smooth_vs_masked_manifold_surface"
+    geometry: 3d_surface_comparison
+    subtype: smooth_vs_masked_manifold_surface
   rebuild_class:
     source_code_rebuild: false
     case_level_fallback: true
     synthetic_data: true
 proposed_dossier_patch:
-  retrieval_tier: "inspiration"
+  retrieval_tier: inspiration
   visual_grammar:
-    geometry: "3d_surface_comparison"
-    subtype: "smooth_vs_masked_manifold_surface"
-
+    geometry: 3d_surface_comparison
+    subtype: smooth_vs_masked_manifold_surface
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - z
+  - value
+  - panel
+  - group
+  - label
+  - surface
+  - trajectory
+  - color
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns:
+  - panel
+  - group
+  - label
+  - surface
+  - trajectory
+  - color
+  missing_optional_data:
+  - label_layer
+  - trajectory
+  - subgroup_color
+  - patch_mask
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: true
+  unsupported_features: *id004

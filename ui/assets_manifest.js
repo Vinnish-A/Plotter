@@ -1,5 +1,5 @@
 window.PLOTTER_ASSETS = {
-  "generated_at": "2026-05-20T18:00:13.509588+00:00",
+  "generated_at": "2026-05-21T04:59:35.282053+00:00",
   "material_root": "/mnt/f/Plotter/vault/material",
   "asset_count": 156,
   "rebuilt_count": 156,

@@ -168,50 +168,5 @@
     "annotator_model": "gpt-5.5 high reasoning subagent",
     "review_version": "deep_annotation_v1"
   },
-  "reviewed_visual_grammar": {
-    "figure_type": "circular_tree_heatmap",
-    "layout": [
-      "circular phylogenetic tree",
-      "tip-attached discrete annotation tracks"
-    ],
-    "marks": [
-      "tree branch segments",
-      "tip labels or tip points",
-      "outer annotation tiles/rings"
-    ],
-    "encodings": {
-      "topology": "node-parent tree or Newick tree",
-      "annotation": "tip-aligned track and class/value"
-    },
-    "geometry": "tree_heatmap",
-    "subtype": "circular_phylogeny_discrete_tracks",
-    "grammar_id": "circular_phylogeny_discrete_annotation_tracks",
-    "optional_modules": {
-      "discrete_annotation_rings": {
-        "status": "supported"
-      },
-      "clade_or_tip_coloring": {
-        "status": "supported_if_tip_group_available"
-      },
-      "network_relationships": {
-        "status": "not_supported"
-      }
-    },
-    "false_positive_risks": [
-      "Do not classify as network only because the standardized table has parent_id.",
-      "Do not infer source/target/weight semantics; they are absent and not visually supported.",
-      "Do not treat heatmap_value as evidence for a reusable rectangular heatmap body."
-    ]
-  },
-  "reviewed_visual_roles": {
-    "node_id": "tree node or tip identifier",
-    "parent_id": "tree parent identifier, only tree topology",
-    "label": "tip or node display label",
-    "branch_length": "optional tree branch length",
-    "tip_group": "tip class or clade annotation",
-    "track": "annotation ring identifier",
-    "track_value": "annotation value aligned to a tip",
-    "track_class": "discrete annotation category",
-    "heatmap_value": "optional annotation value, not proof of a full matrix heatmap"
-  }
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_heatmap_ggtree绘制离散型系统发育树热图.yaml"
 }

@@ -1,0 +1,56 @@
+id: plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图
+title: scDotPlot绘制单细胞层次聚类气泡热图
+retrieval_tier: inspiration
+one_line: Inspiration for clustered single-cell dot heatmaps with color and size matrix encodings.
+geometry: unknown
+subtype: single_cell_clustered_dot_heatmap
+required_roles:
+- feature_id
+- cell_group
+- expression_value
+- percent_cells
+optional_roles:
+- feature_annotation
+- cell_group_annotation
+- dendrogram_or_order
+- palette
+- labels
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- Inspiration for clustered single-cell dot heatmaps with color and size matrix encodings.
+bad_for:
+- Clean source-code reproducibility examples or source-derived single-cell expression reconstruction.
+image_summary: 'plot_family: single-cell clustered dot heatmap; structure: [''dot matrix body'', ''row
+  and column dendrograms'', ''row and column annotation strips'', ''gene labels'', ''cell-subtype labels'',
+  ''color and size legends'']; marks: [''…'
+data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
+  ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- synthetic_data
+- case_level_fallback
+- generic_renderer_rebuild
+- Current data_main.csv is synthetic and must not be read as source-derived expre…
+- Empty label/facet fields do not prove optional label or facet support.
+- Case is fallback/generic, not a clean scDotPlot rebuild.
+- case-level fallback
+- synthetic data_main.csv
+- generic renderer
+- missing source-derived optional modules
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图.yaml
+  evidence_pack: vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图
+  preview: vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/outputs/rebuilt.png
+  entry: vault/material/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图/plot.py

@@ -1,0 +1,132 @@
+case_id: plotcase_barplot_多元素组合分布条图
+paths:
+  case: vault/material/plotcase_barplot_多元素组合分布条图
+  metadata: vault/material/plotcase_barplot_多元素组合分布条图/metadata.json
+  agent_guide: vault/material/plotcase_barplot_多元素组合分布条图/agent_guide.md
+  entry: vault/material/plotcase_barplot_多元素组合分布条图/plot.py
+  rebuilt_png: vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: R
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotcase_barplot_多元素组合分布条图/metadata.json
+    exists: true
+    size_bytes: 4579
+  agent_guide:
+    path: vault/material/plotcase_barplot_多元素组合分布条图/agent_guide.md
+    exists: true
+    size_bytes: 1735
+  data_main:
+    path: vault/material/plotcase_barplot_多元素组合分布条图/data_main.csv
+    exists: true
+    size_bytes: 372
+  data_optional:
+    path: vault/material/plotcase_barplot_多元素组合分布条图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_barplot_多元素组合分布条图/plot.py
+    exists: true
+    size_bytes: 234
+  rebuilt_png:
+    path: vault/material/plotcase_barplot_多元素组合分布条图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 80425
+image:
+  exists: true
+  size_bytes: 80425
+  width: 1234
+  height: 712
+  mean_luma: 232.052
+  stddev_luma: 44.856
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - category
+    - value
+    - group
+    - stack
+    - error_low
+    - error_high
+    - line_value
+    - annotation_value
+    - label
+    sampled_rows: 9
+    column_summary:
+      category:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      stack:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      error_low:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      error_high:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      line_value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      annotation_value:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: R
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_barplot_多元素组合分布条图/plot.py
+  - vault/material/plotcase_barplot_多元素组合分布条图/scripts/code.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 多元素组合分布条图
+  metadata_geometry: null
+  geometry_keyword_hits:
+    bar:
+    - bar
+  optional_module_hint_columns:
+  - label
+  - group

@@ -1,0 +1,139 @@
+case_id: figures4papers_figure_RNAGenScape_manifold_png
+paths:
+  case: vault/material/figures4papers_figure_RNAGenScape_manifold_png
+  metadata: vault/material/figures4papers_figure_RNAGenScape_manifold_png/metadata.json
+  agent_guide: vault/material/figures4papers_figure_RNAGenScape_manifold_png/agent_guide.md
+  entry: vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py
+  rebuilt_png: vault/material/figures4papers_figure_RNAGenScape_manifold_png/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: false
+  case_level_fallback: true
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/figures4papers_figure_RNAGenScape_manifold_png/metadata.json
+    exists: true
+    size_bytes: 2635
+  agent_guide:
+    path: vault/material/figures4papers_figure_RNAGenScape_manifold_png/agent_guide.md
+    exists: true
+    size_bytes: 1718
+  data_main:
+    path: vault/material/figures4papers_figure_RNAGenScape_manifold_png/data_main.csv
+    exists: true
+    size_bytes: 3040
+  data_optional:
+    path: vault/material/figures4papers_figure_RNAGenScape_manifold_png/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py
+    exists: true
+    size_bytes: 398
+  rebuilt_png:
+    path: vault/material/figures4papers_figure_RNAGenScape_manifold_png/outputs/rebuilt.png
+    exists: true
+    size_bytes: 108276
+image:
+  exists: true
+  size_bytes: 108276
+  width: 1000
+  height: 700
+  mean_luma: 247.5982
+  stddev_luma: 23.8716
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - z
+    - value
+    - panel
+    - group
+    - label
+    - surface
+    - trajectory
+    - color
+    sampled_rows: 64
+    column_summary:
+      x:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+      z:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 9
+      panel:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      label:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      surface:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      trajectory:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      color:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/scripts/plot_comparison.py
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/scripts/plot_hole_manifold.py
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/scripts/plot_manifold.py
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/scripts/plot_sweep.py
+  backend_hints:
+  - matplotlib
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - figure_RNAGenScape_manifold
+  metadata_geometry: 3d_manifold
+  geometry_keyword_hits: {}
+  optional_module_hint_columns:
+  - label
+  - group

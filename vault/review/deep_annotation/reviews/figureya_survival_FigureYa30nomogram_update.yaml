@@ -1,109 +1,179 @@
-case_id: "figureya_survival_FigureYa30nomogram_update"
-annotation_version: "deep_annotation_v1"
+case_id: figureya_survival_FigureYa30nomogram_update
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_contract_cautions"
-  note: "Observed image is a Cox/regplot-style nomogram, while current dossier/entry can imply scatter/manifold or generic line grammar."
-annotator_model: "gpt-5.5 high reasoning subagent"
-reviewed_at: "2026-05-21T01:01:37+08:00"
+  status: reviewed_with_contract_cautions
+  note: Observed image is a Cox/regplot-style nomogram, while current dossier/entry can imply scatter/manifold
+    or generic line grammar.
+annotator_model: gpt-5.5 high reasoning subagent
+reviewed_at: '2026-05-21T01:01:37+08:00'
 evidence:
   files_read:
-    - "vault/material/figureya_survival_FigureYa30nomogram_update/metadata.json"
-    - "vault/material/figureya_survival_FigureYa30nomogram_update/agent_guide.md"
-    - "vault/material/figureya_survival_FigureYa30nomogram_update/plot.py"
-    - "vault/material/figureya_survival_FigureYa30nomogram_update/data_main.csv"
-    - "vault/material/figureya_survival_FigureYa30nomogram_update/data_raw/easy_input.csv"
-    - "vault/material/figureya_survival_FigureYa30nomogram_update/outputs/rebuilt.png"
-    - "vault/material/figureya_survival_FigureYa30nomogram_update/outputs/visual_check.json"
-    - "vault/dossiers/figureya_survival_FigureYa30nomogram_update.yaml"
+  - vault/material/figureya_survival_FigureYa30nomogram_update/metadata.json
+  - vault/material/figureya_survival_FigureYa30nomogram_update/agent_guide.md
+  - vault/material/figureya_survival_FigureYa30nomogram_update/plot.py
+  - vault/material/figureya_survival_FigureYa30nomogram_update/data_main.csv
+  - vault/material/figureya_survival_FigureYa30nomogram_update/data_raw/easy_input.csv
+  - vault/material/figureya_survival_FigureYa30nomogram_update/outputs/rebuilt.png
+  - vault/material/figureya_survival_FigureYa30nomogram_update/outputs/visual_check.json
+  - vault/dossiers/figureya_survival_FigureYa30nomogram_update.yaml
   source_evidence:
-    scripts: ["FigureYa30nomogram_update.Rmd", "regplot_modified.R", "regplot_functions_modified.R"]
-    raw_outputs: ["nomogram_regplot_cox.png", "nomogram_regplot_glm.png", "nomogram_classical.png"]
+    scripts:
+    - FigureYa30nomogram_update.Rmd
+    - regplot_modified.R
+    - regplot_functions_modified.R
+    raw_outputs:
+    - nomogram_regplot_cox.png
+    - nomogram_regplot_glm.png
+    - nomogram_classical.png
   visual_evidence:
-    rebuilt_png_size: [2160, 1440]
+    rebuilt_png_size:
+    - 2160
+    - 1440
     visual_check_ok: true
     mean_stddev: 29.9609
 observed_visual_grammar:
-  figure_family: "nomogram"
-  subtype: "cox_regression_risk_nomogram"
-  layout: ["stacked horizontal scoring axes", "left variable label rail", "top Points scale", "bottom probability axes"]
-  marks: ["horizontal rule axes", "dense subticks", "red selected-observation points", "red arrows", "blue density curves", "categorical boxes"]
-  encodings:
-    predictor_value: "position on predictor axis"
-    point_score: "position on points axis"
-    total_points: "position on total-points axis"
-    predicted_probability: "position on probability axes"
+  figure_family: nomogram
+  subtype: cox_regression_risk_nomogram
+  layout: &id001
+  - stacked horizontal scoring axes
+  - left variable label rail
+  - top Points scale
+  - bottom probability axes
+  marks: &id002
+  - horizontal rule axes
+  - dense subticks
+  - red selected-observation points
+  - red arrows
+  - blue density curves
+  - categorical boxes
+  encodings: &id003
+    predictor_value: position on predictor axis
+    point_score: position on points axis
+    total_points: position on total-points axis
+    predicted_probability: position on probability axes
 inferred_visual_grammar:
-  reusable_pattern: "A fitted regression model is converted into predictor point scales and fixed-time probability readouts."
-  not_supported: ["3d manifold", "PCA scatter", "network relationships from source/target/weight"]
-reviewed_visual_roles:
-  model_predictor_axis: "predictor rows with value or score scales"
-  point_score_axis: "top Points scale"
-  total_points_axis: "summed score scale"
-  prediction_axis: "fixed time-threshold probability axes"
-  selected_observation: "red scoring markers and arrows"
-  predictor_distribution: "optional density or box summaries"
+  reusable_pattern: A fitted regression model is converted into predictor point scales and fixed-time
+    probability readouts.
+  not_supported:
+  - 3d manifold
+  - PCA scatter
+  - network relationships from source/target/weight
+reviewed_visual_roles: &id005
+  model_predictor_axis: predictor rows with value or score scales
+  point_score_axis: top Points scale
+  total_points_axis: summed score scale
+  prediction_axis: fixed time-threshold probability axes
+  selected_observation: red scoring markers and arrows
+  predictor_distribution: optional density or box summaries
 canonical_columns:
-  - "x: likely source time proxy; not sufficient as nomogram x role"
-  - "y/value/weight: status-like compatibility fields; not visual score semantics"
-  - "group/label: sex proxy; not full label layer"
-  - "source/target: compatibility columns only; no graph role supported"
-  - "lower/upper: interval-like compatibility fields; CI semantics not proven by CSV alone"
+- 'x: likely source time proxy; not sufficient as nomogram x role'
+- 'y/value/weight: status-like compatibility fields; not visual score semantics'
+- 'group/label: sex proxy; not full label layer'
+- 'source/target: compatibility columns only; no graph role supported'
+- 'lower/upper: interval-like compatibility fields; CI semantics not proven by CSV alone'
 required_data_semantics:
-  time: "survival or event time"
-  event: "event/status indicator"
-  predictors: "variables used by the fitted model"
-  selected_observation: "row highlighted on nomogram"
-  prediction_time: "fixed horizon for probability axes"
-  model_mapping: "model-to-points transformation or fitted model code"
+  time: survival or event time
+  event: event/status indicator
+  predictors: variables used by the fitted model
+  selected_observation: row highlighted on nomogram
+  prediction_time: fixed horizon for probability axes
+  model_mapping: model-to-points transformation or fitted model code
 optional_data_semantics:
-  display_names: "manual predictor labels"
-  significance: "stars or p-value labels"
-  intervals: "prediction lower/upper bounds"
-  axis_ticks: "point, total-point, and probability tick specifications"
+  display_names: manual predictor labels
+  significance: stars or p-value labels
+  intervals: prediction lower/upper bounds
+  axis_ticks: point, total-point, and probability tick specifications
 optional_modules:
   predictor_distribution_tracks:
-    status: "observed"
+    status: observed
   selected_observation_overlay:
-    status: "observed"
+    status: observed
   confidence_interval_overlay:
-    status: "observed"
+    status: observed
   calibration_curves:
-    status: "raw evidence present but not part of rebuilt.png"
-false_positive_risks:
-  - "Do not retrieve as PCA, 3D manifold, scatter, or generic line chart."
-  - "Do not interpret source/target/weight as graph edges."
-  - "Do not assume data_main.csv alone can regenerate the observed nomogram."
+    status: raw evidence present but not part of rebuilt.png
+false_positive_risks: &id004
+- Do not retrieve as PCA, 3D manifold, scatter, or generic line chart.
+- Do not interpret source/target/weight as graph edges.
+- Do not assume data_main.csv alone can regenerate the observed nomogram.
 best_for:
-  - "Regression or Cox survival nomogram layouts."
-  - "Selected-observation scoring overlays."
-  - "Risk score to probability readout figures."
+- Regression or Cox survival nomogram layouts.
+- Selected-observation scoring overlays.
+- Risk score to probability readout figures.
 bad_for:
-  - "Scatter/manifold plots."
-  - "Network or source-target-weight diagrams."
-  - "CSV-only rebuilds without model-to-score mappings."
-style_notes:
-  - "Sparse white background with black axes and a large left label rail."
-  - "Red highlights encode selected observation and prediction readout."
-  - "Blue support marks encode predictor distributions or categorical boxes."
+- Scatter/manifold plots.
+- Network or source-target-weight diagrams.
+- CSV-only rebuilds without model-to-score mappings.
+style_notes: &id006
+- Sparse white background with black axes and a large left label rail.
+- Red highlights encode selected observation and prediction readout.
+- Blue support marks encode predictor distributions or categorical boxes.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Strong nomogram example, but keep out of core until metadata, CSV contract, and standard entry are reconciled."
+  tier: support
+  rationale: Strong nomogram example, but keep out of core until metadata, CSV contract, and standard
+    entry are reconciled.
 confidence:
   overall: 0.82
   visual_grammar: 0.95
   data_contract: 0.55
 proposed_metadata_patch:
   visual_grammar:
-    geometry: "nomogram"
-    subtype: "cox_survival_regplot_nomogram"
+    geometry: nomogram
+    subtype: cox_survival_regplot_nomogram
   data_contract:
-    required_mappings: ["time", "event", "predictor", "predictor_value", "points", "total_points", "prediction_time", "predicted_probability"]
-    optional_mappings: ["predictor_label", "predictor_type", "selected_observation", "lower", "upper", "p_value", "display_order"]
+    required_mappings:
+    - time
+    - event
+    - predictor
+    - predictor_value
+    - points
+    - total_points
+    - prediction_time
+    - predicted_probability
+    optional_mappings:
+    - predictor_label
+    - predictor_type
+    - selected_observation
+    - lower
+    - upper
+    - p_value
+    - display_order
 proposed_dossier_patch:
   scientific_intent:
-    - "visualize fitted regression model as a nomogram"
-    - "map predictor values to point contributions and total points to survival/event probability"
+  - visualize fitted regression model as a nomogram
+  - map predictor values to point contributions and total points to survival/event probability
   visual_grammar:
-    geometry: "nomogram"
-    subtype: "cox_survival_regplot_nomogram"
-  retrieval_tier: "support"
+    geometry: nomogram
+    subtype: cox_survival_regplot_nomogram
+  retrieval_tier: support
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y/value/weight
+  - group/label
+  - source/target
+  - lower/upper
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id004

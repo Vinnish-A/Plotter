@@ -1,0 +1,151 @@
+case_id: plotmaster_022复杂环形热图
+paths:
+  case: vault/material/plotmaster_022复杂环形热图
+  metadata: vault/material/plotmaster_022复杂环形热图/metadata.json
+  agent_guide: vault/material/plotmaster_022复杂环形热图/agent_guide.md
+  entry: vault/material/plotmaster_022复杂环形热图/plot.py
+  rebuilt_png: vault/material/plotmaster_022复杂环形热图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_022复杂环形热图/metadata.json
+    exists: true
+    size_bytes: 5646
+  agent_guide:
+    path: vault/material/plotmaster_022复杂环形热图/agent_guide.md
+    exists: true
+    size_bytes: 1678
+  data_main:
+    path: vault/material/plotmaster_022复杂环形热图/data_main.csv
+    exists: true
+    size_bytes: 124913
+  data_optional:
+    path: vault/material/plotmaster_022复杂环形热图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_022复杂环形热图/plot.py
+    exists: true
+    size_bytes: 232
+  rebuilt_png:
+    path: vault/material/plotmaster_022复杂环形热图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 865263
+image:
+  exists: true
+  size_bytes: 865263
+  width: 1728
+  height: 1728
+  mean_luma: 243.3432
+  stddev_luma: 37.8954
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 200
+    column_summary:
+      x:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      y:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      facet:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 76
+      source:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      target:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_022复杂环形热图/plot.py
+  - vault/material/plotmaster_022复杂环形热图/scripts/codes.R
+  backend_hints:
+  - circlize
+  - complexheatmap
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 022复杂环形热图
+  metadata_geometry: 3d_manifold
+  geometry_keyword_hits:
+    heatmap:
+    - heatmap
+    - 热图
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

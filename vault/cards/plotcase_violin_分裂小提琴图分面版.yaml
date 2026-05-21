@@ -1,0 +1,51 @@
+id: plotcase_violin_分裂小提琴图分面版
+title: 分裂小提琴图分面版
+retrieval_tier: support
+one_line: Distribution comparisons with subgroups on split violin halves.
+geometry: violin
+subtype: faceted_split_violin
+required_roles:
+- value
+- group
+optional_roles:
+- subgroup
+- facet
+- paired_id
+- p_value
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Distribution comparisons with subgroups on split violin halves.
+- Faceted repeated comparisons sharing value scale.
+bad_for:
+- Aggregate-only bar charts.
+- Single-point summary plots without distributions.
+image_summary: 'figure_type: faceted_split_violin; layout: [''facet grid or wrapped facets'', ''x-axis
+  groups within each facet'', ''split subgroup halves'']; marks: [''violin density halves'', ''optional
+  box/jitter overlays'', ''optional signifi…'
+data_summary: 'main_columns: [''group'', ''value'', ''subgroup'', ''paired_id'', ''p_value'', ''facet'',
+  ''label'']; sampled_rows: 24'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- Do not infer paired-line semantics from paired_id alone.
+- Do not recommend for summary-only data; violin density needs observation-level …
+- Compact data_main may not fully preserve raw type/group/name distinctions.
+- paired_id overinterpretation
+- aggregate data misuse
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_violin_分裂小提琴图分面版.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_violin_分裂小提琴图分面版.yaml
+  machine_evidence: vault/evidence/machine/plotcase_violin_分裂小提琴图分面版.yaml
+  evidence_pack: vault/material/plotcase_violin_分裂小提琴图分面版
+  preview: vault/material/plotcase_violin_分裂小提琴图分面版/outputs/rebuilt.png
+  entry: vault/material/plotcase_violin_分裂小提琴图分面版/plot.py

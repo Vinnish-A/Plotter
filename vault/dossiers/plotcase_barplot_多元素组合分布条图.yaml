@@ -273,55 +273,24 @@ retrieval_tier: support
 retrieval_rationale: Visually valuable high-composition bar asset, but current canonical
   CSV and dossier need correction before core retrieval.
 exclusion_risks: []
-reviewed_visual_grammar:
-  primary_family: horizontal_stacked_bar_composite
-  layout:
-  - left mirrored production panel
-  - right consumption panel
-  - central region label rail
-  - upper-right legend
-  - lower-right pie inset
-  marks:
-  - stacked horizontal bar segments
-  - circular net markers
-  - pie wedges
-  - numeric wedge labels
-  - legend swatches
-  encodings:
-    region: shared y identity
-    panel: production versus consumption side
-    stack_category: bar fill and legend category
-    value: horizontal bar segment length
-    net_value: circular point position
-    summary_value: inset pie wedge size
-  geometry: mirrored_horizontal_stacked_bar_composite
-  subtype: stacked_bar_with_point_overlay_and_pie_inset
-  grammar_id: mirrored_stacked_bar_with_net_points_and_pie_inset
-  optional_modules:
-    net_marker_overlay:
-      status: supported
-      required_fields:
-      - region
-      - net_value
-    pie_inset:
-      status: supported
-      required_fields:
-      - stack_category
-      - summary_value
-    fixed_palette_legend:
-      status: supported
-    row_ordering:
-      status: supported
-  false_positive_risks:
-  - Do not classify as standalone pie/donut; pie is an inset summary.
-  - Do not reduce to simple grouped bar; mirrored axes, stacked segments, net markers,
-    and inset are essential.
-  - Current data_main.csv is not sufficient to reconstruct the observed figure.
-  - Do not infer network or flow semantics.
-reviewed_visual_roles:
-  region: shared row category
-  stack_category: fill category for stacked segments and legend
-  production_value: left-panel bar segment length
-  consumption_value: right-panel bar segment length
-  net_value: derived circular overlay marker
-  global_emission_value: inset pie wedge size
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_barplot_多元素组合分布条图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_barplot_多元素组合分布条图.yaml
+  geometry: null
+  subtype: mirrored_stacked_bar_with_net_points_and_pie_inset
+  required_roles:
+  - region
+  - panel
+  - stack_category
+  - value
+  optional_roles:
+  - net_value
+  - summary_value
+  - order
+  - color
+  - inset
+  tier: support
+  confidence:
+    overall: 0.88
+    visual_grammar: 0.95
+    current_contract_fit: 0.35

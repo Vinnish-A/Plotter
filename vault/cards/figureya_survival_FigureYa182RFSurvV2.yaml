@@ -1,0 +1,53 @@
+id: figureya_survival_FigureYa182RFSurvV2
+title: FigureYa182RFSurvV2
+retrieval_tier: support
+one_line: Random survival forest diagnostics combining error trajectory and variable importance.
+geometry: model_diagnostic_composite
+subtype: random_survival_forest_error_importance
+required_roles:
+- error_trajectory
+- variable_label
+- variable_importance
+optional_roles:
+- importance_cutoff
+- rank_order
+- palette
+- model_metadata
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- Random survival forest diagnostics combining error trajectory and variable importance.
+- Model-screening figures for predictor prioritization.
+bad_for:
+- Kaplan-Meier curves.
+- Heatmaps.
+- Network or source-target-weight diagrams.
+image_summary: 'figure_type: random_survival_forest_diagnostic; subtype: error_rate_and_variable_importance;
+  layout: [''left error-rate line panel'', ''right variable-importance horizontal bar/segment panel''];
+  marks: [''black error-rate li…'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- Do not treat metadata heatmap keywords as observed grammar.
+- Do not treat dossier subtype survival_curve as visually supported.
+- Do not infer source/target/weight graph semantics from compatibility columns.
+- generic line renderer mismatch
+- compatibility columns may imply false network or interval roles
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/figureya_survival_FigureYa182RFSurvV2.yaml
+  deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa182RFSurvV2.yaml
+  machine_evidence: vault/evidence/machine/figureya_survival_FigureYa182RFSurvV2.yaml
+  evidence_pack: vault/material/figureya_survival_FigureYa182RFSurvV2
+  preview: vault/material/figureya_survival_FigureYa182RFSurvV2/outputs/rebuilt.png
+  entry: vault/material/figureya_survival_FigureYa182RFSurvV2/plot.py

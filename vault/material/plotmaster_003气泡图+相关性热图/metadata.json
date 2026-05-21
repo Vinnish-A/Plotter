@@ -128,50 +128,5 @@
     "annotator_model": "gpt-5.5 high reasoning subagent",
     "review_version": "deep_annotation_v1"
   },
-  "reviewed_visual_grammar": {
-    "figure_type": "correlation_bubble_matrix",
-    "layout": [
-      "single rectangular group-by-gene matrix",
-      "rotated gene labels",
-      "right-side legends"
-    ],
-    "marks": [
-      "sized circles",
-      "positive-direction overlay circles"
-    ],
-    "encodings": {
-      "x": "gene",
-      "y": "group",
-      "size": "abs_correlation",
-      "sign": "direction",
-      "color_or_fill": "p_value_bin"
-    },
-    "geometry": "bubble_matrix",
-    "subtype": "correlation_bubble_heatmap",
-    "optional_modules": {
-      "significance_binning": {
-        "status": "supported if p_value is available"
-      },
-      "annotation_tracks": {
-        "status": "not supported by observed figure"
-      },
-      "facet_or_detail_panel": {
-        "status": "not supported by observed figure"
-      }
-    },
-    "false_positive_risks": [
-      "Do not retrieve as clustered heatmap, annotated heatmap, dendrogram, or tile-only heatmap.",
-      "Do not infer source/target/weight network semantics; those columns are absent.",
-      "Legend text around p/FDR needs review before statistical claims."
-    ]
-  },
-  "reviewed_visual_roles": {
-    "group": "row category mapped to y-axis",
-    "gene": "column feature mapped to x-axis",
-    "correlation": "signed association metric, parent of direction and abs_correlation",
-    "p_value": "significance value used or preserved for binning",
-    "direction": "association sign",
-    "p_value_bin": "ordered significance legend bin",
-    "abs_correlation": "bubble-size magnitude"
-  }
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_003气泡图+相关性热图.yaml"
 }

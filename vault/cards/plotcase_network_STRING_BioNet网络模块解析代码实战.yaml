@@ -1,0 +1,54 @@
+id: plotcase_network_STRING_BioNet网络模块解析代码实战
+title: STRING_BioNet网络模块解析代码实战
+retrieval_tier: support
+one_line: Gene or protein interaction networks with node-level attributes.
+geometry: labeled_node_link_network
+subtype: labeled_node_link_network
+required_roles:
+- edge_source
+- edge_target
+- node_identity
+optional_roles:
+- node_label
+- node_score
+- edge_confidence
+- layout_coordinates
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- Gene or protein interaction networks with node-level attributes.
+- Labeled STRING/BioNet-style network exemplars.
+bad_for:
+- Staged flow or alluvial plots.
+- Tree heatmaps.
+- Networks requiring guaranteed weighted-edge semantics before review.
+image_summary: 'figure_type: labeled_node_link_network; layout: [''force or graph layout'', ''labeled
+  nodes'', ''biological interaction context'']; marks: [''nodes'', ''edges'', ''text labels'']; encodings:
+  {''edge'': ''source-target interaction'', ''n…'
+data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
+  ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
+  7'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- Do not infer meaningful edge weight solely from a compatibility weight column.
+- Do not retrieve as flow/Sankey; source/target here are graph endpoints, not sta…
+- Dense labels can make this unsafe as a default recommendation without node filt…
+- overstated edge-weight semantics
+- label crowding
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml
+  machine_evidence: vault/evidence/machine/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml
+  evidence_pack: vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战
+  preview: vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/outputs/rebuilt.png
+  entry: vault/material/plotcase_network_STRING_BioNet网络模块解析代码实战/plot.py

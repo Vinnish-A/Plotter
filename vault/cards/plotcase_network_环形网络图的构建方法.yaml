@@ -1,0 +1,53 @@
+id: plotcase_network_环形网络图的构建方法
+title: 环形网络图的构建方法
+retrieval_tier: support
+one_line: network asset for 环形网络图的构建方法
+geometry: network
+subtype: node_link_network
+required_roles:
+- source
+- target
+- weight
+optional_roles:
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- 环形网络图的构建方法
+- 'network/node_link_network grammar with roles: source, target, weight'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 315718; width: 1223; height: 1186'
+data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
+  ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
+  7'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotcase_network_环形网络图的构建方法.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotcase_network_环形网络图的构建方法.yaml
+  evidence_pack: vault/material/plotcase_network_环形网络图的构建方法
+  preview: vault/material/plotcase_network_环形网络图的构建方法/outputs/rebuilt.png
+  entry: vault/material/plotcase_network_环形网络图的构建方法/plot.py

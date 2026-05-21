@@ -1,109 +1,178 @@
-case_id: "plotcase_point_多组火山图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_point_多组火山图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_corrections_recommended"
-  note: "Observed asset is a grouped differential-expression volcano-style strip plot; generic CSV roles should not be treated as complete visual evidence."
-annotator_model: "gpt-5 codex"
-reviewed_at: "2026-05-21T01:22:18+08:00"
+  status: reviewed_with_corrections_recommended
+  note: Observed asset is a grouped differential-expression volcano-style strip plot; generic CSV roles
+    should not be treated as complete visual evidence.
+annotator_model: gpt-5 codex
+reviewed_at: '2026-05-21T01:22:18+08:00'
 evidence:
-  source: "third-batch asset_deep_annotator output in thread"
+  source: third-batch asset_deep_annotator output in thread
   files_read:
-    - "vault/material/plotcase_point_多组火山图/metadata.json"
-    - "vault/material/plotcase_point_多组火山图/agent_guide.md"
-    - "vault/material/plotcase_point_多组火山图/plot.py"
-    - "vault/material/plotcase_point_多组火山图/scripts/code.R"
-    - "vault/material/plotcase_point_多组火山图/raw/code.R"
-    - "vault/material/plotcase_point_多组火山图/data_main.csv"
-    - "vault/material/plotcase_point_多组火山图/raw/data.csv"
-    - "vault/material/plotcase_point_多组火山图/outputs/rebuilt.png"
-    - "vault/material/plotcase_point_多组火山图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_point_多组火山图.yaml"
-  output_check:
-    rebuilt_png_size: [2028, 808]
+  - vault/material/plotcase_point_多组火山图/metadata.json
+  - vault/material/plotcase_point_多组火山图/agent_guide.md
+  - vault/material/plotcase_point_多组火山图/plot.py
+  - vault/material/plotcase_point_多组火山图/scripts/code.R
+  - vault/material/plotcase_point_多组火山图/raw/code.R
+  - vault/material/plotcase_point_多组火山图/data_main.csv
+  - vault/material/plotcase_point_多组火山图/raw/data.csv
+  - vault/material/plotcase_point_多组火山图/outputs/rebuilt.png
+  - vault/material/plotcase_point_多组火山图/outputs/visual_check.json
+  - vault/dossiers/plotcase_point_多组火山图.yaml
+  output_check: &id007
+    rebuilt_png_size:
+    - 2028
+    - 808
     visual_check_ok: true
-    original_reference: "raw/cover.png"
+    original_reference: raw/cover.png
   data_profile:
-    data_main_columns: ["x", "y", "group", "value", "size_value", "label", "threshold", "facet", "highlight"]
-    raw_columns: ["p_val", "avg_log2FC", "pct.1", "pct.2", "p_val_adj", "cluster", "gene"]
+    data_main_columns:
+    - x
+    - y
+    - group
+    - value
+    - size_value
+    - label
+    - threshold
+    - facet
+    - highlight
+    raw_columns:
+    - p_val
+    - avg_log2FC
+    - pct.1
+    - pct.2
+    - p_val_adj
+    - cluster
+    - gene
 observed_visual_grammar:
-  figure_type: "grouped_differential_expression_volcano_strip"
-  family: "grouped_scatter_strip"
-  layout: ["wide cartesian panel", "vertical cluster bands", "colored center label strip", "two-class legend"]
-  marks: ["jittered points", "background rectangles", "cluster strip labels", "repelled gene labels", "connector segments"]
-  encodings:
-    x: "cluster category"
-    y: "avg_log2FC"
-    color: "derived up/down class"
-    label: "selected genes"
+  figure_type: grouped_differential_expression_volcano_strip
+  family: grouped_scatter_strip
+  layout: &id001
+  - wide cartesian panel
+  - vertical cluster bands
+  - colored center label strip
+  - two-class legend
+  marks: &id002
+  - jittered points
+  - background rectangles
+  - cluster strip labels
+  - repelled gene labels
+  - connector segments
+  encodings: &id003
+    x: cluster category
+    y: avg_log2FC
+    color: derived up/down class
+    label: selected genes
 inferred_visual_grammar:
-  grammar_id: "grouped_differential_expression_volcano_strip"
-  reusable_pattern: "Multi-group signed effect-size scatter across categorical clusters with selected gene labels."
-  not_supported: ["classic x=logFC y=-log10(p) volcano", "bubble chart", "generic continuous x-y scatter"]
-reviewed_visual_roles:
-  cluster: "required x/category and strip label role"
-  avg_log2FC: "required signed y/effect-size role"
-  type: "derived up/down color class"
-  gene: "optional selected point label"
-  p_val_adj: "optional label-selection filter"
-  p_val: "raw statistical field, not visibly encoded"
-  pct_1: "raw field, not visibly encoded"
-  pct_2: "raw field, not visibly encoded"
+  grammar_id: grouped_differential_expression_volcano_strip
+  reusable_pattern: Multi-group signed effect-size scatter across categorical clusters with selected gene
+    labels.
+  not_supported:
+  - classic x=logFC y=-log10(p) volcano
+  - bubble chart
+  - generic continuous x-y scatter
+reviewed_visual_roles: &id005
+  cluster: required x/category and strip label role
+  avg_log2FC: required signed y/effect-size role
+  type: derived up/down color class
+  gene: optional selected point label
+  p_val_adj: optional label-selection filter
+  p_val: raw statistical field, not visibly encoded
+  pct_1: raw field, not visibly encoded
+  pct_2: raw field, not visibly encoded
 canonical_columns:
-  - "cluster: required categorical x group"
-  - "avg_log2FC: required signed y value"
-  - "gene: optional label text"
-  - "p_val_adj: optional label-selection statistic"
-  - "type: optional derived up/down color class"
+- 'cluster: required categorical x group'
+- 'avg_log2FC: required signed y value'
+- 'gene: optional label text'
+- 'p_val_adj: optional label-selection statistic'
+- 'type: optional derived up/down color class'
 required_data_semantics:
-  cluster: "categorical group for each point"
-  avg_log2FC: "signed effect-size value plotted on y-axis"
+  cluster: categorical group for each point
+  avg_log2FC: signed effect-size value plotted on y-axis
 optional_data_semantics:
-  gene: "label text for selected points"
-  p_val_adj: "significance value used to select labels"
-  cluster_order: "fixed display order"
-  cluster_color: "manual palette for center label strip"
+  gene: label text for selected points
+  p_val_adj: significance value used to select labels
+  cluster_order: fixed display order
+  cluster_color: manual palette for center label strip
 optional_modules:
   label_selection:
-    status: "supported_by_original_R"
+    status: supported_by_original_R
   center_group_strip:
-    status: "supported_by_original_R"
+    status: supported_by_original_R
   generic_scatter_renderer:
-    status: "compatibility_only_not_observed_grammar"
-false_positive_risks:
-  - "Do not treat current generic x/y/value/size_value/threshold/facet/highlight fields as complete evidence for the observed grammar."
-  - "Do not retrieve as a classic volcano plot unless categorical multi-group x layout is acceptable."
-  - "Current plot.py calls a generic scatter renderer and does not express the observed R grammar."
+    status: compatibility_only_not_observed_grammar
+false_positive_risks: &id004
+- Do not treat current generic x/y/value/size_value/threshold/facet/highlight fields as complete evidence
+  for the observed grammar.
+- Do not retrieve as a classic volcano plot unless categorical multi-group x layout is acceptable.
+- Current plot.py calls a generic scatter renderer and does not express the observed R grammar.
 best_for:
-  - "Multi-cluster differential-expression effect-size displays."
-  - "Comparing upregulated and downregulated genes across categorical groups."
-  - "Wide strip-style plots with per-group bands and selected labels."
+- Multi-cluster differential-expression effect-size displays.
+- Comparing upregulated and downregulated genes across categorical groups.
+- Wide strip-style plots with per-group bands and selected labels.
 bad_for:
-  - "Classic two-axis volcano plots using -log10 p-value."
-  - "Bubble charts or size-encoded scatterplots."
-  - "Generic continuous x-y scatter without categorical group bands."
-style_notes:
-  - "Use red/blue points for up/down sign classes."
-  - "Muted vertical bands and saturated center strips define cluster structure."
-  - "Keep selected gene labels sparse and repel them from marks."
+- Classic two-axis volcano plots using -log10 p-value.
+- Bubble charts or size-encoded scatterplots.
+- Generic continuous x-y scatter without categorical group bands.
+style_notes: &id006
+- Use red/blue points for up/down sign classes.
+- Muted vertical bands and saturated center strips define cluster structure.
+- Keep selected gene labels sparse and repel them from marks.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Source-backed and visually useful, but current canonical CSV/plot.py contract is not faithful enough for default core recommendation."
+  tier: support
+  rationale: Source-backed and visually useful, but current canonical CSV/plot.py contract is not faithful
+    enough for default core recommendation.
   exclusion_risks:
-    - "generic scatter renderer mismatch"
-    - "canonical CSV mismatch"
+  - generic scatter renderer mismatch
+  - canonical CSV mismatch
 confidence:
   overall: 0.88
   visual_identification: 0.95
   data_contract_assessment: 0.86
   rebuild_path_assessment: 0.3
 proposed_metadata_patch:
-  retrieval_tier: "support"
+  retrieval_tier: support
   visual_grammar:
-    grammar_id: "grouped_differential_expression_volcano_strip"
-    required_data_roles: ["cluster", "avg_log2FC"]
-    optional_data_roles: ["gene", "p_val_adj", "cluster_order", "cluster_color"]
+    grammar_id: grouped_differential_expression_volcano_strip
+    required_data_roles:
+    - cluster
+    - avg_log2FC
+    optional_data_roles:
+    - gene
+    - p_val_adj
+    - cluster_order
+    - cluster_color
 proposed_dossier_patch:
   visual_grammar:
-    geometry: "grouped_scatter_strip"
-    subtype: "multi_group_differential_expression_volcano"
-
+    geometry: grouped_scatter_strip
+    subtype: multi_group_differential_expression_volcano
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - cluster
+  - avg_log2FC
+  - gene
+  - p_val_adj
+  - type
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior: *id007
+  unsupported_features: *id004

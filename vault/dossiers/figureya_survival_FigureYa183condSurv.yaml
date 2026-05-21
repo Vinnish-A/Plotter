@@ -333,53 +333,22 @@ exclusion_risks:
 - generic renderer entry
 - weak data_main abstraction
 - misleading compatibility columns
-reviewed_visual_grammar:
-  figure_type: conditional_survival_composite
-  family: survival
-  layout:
-  - top conditional survival step-curve panel
-  - middle triangular probability text matrix
-  - bottom aligned number-at-risk row
-  marks:
-  - colored survival step lines
-  - condition-year legend
-  - colored percent text labels
-  - risk-count text labels
-  encodings:
-    color: given conditional survival year
-    step_y: conditional survival probability
-    matrix_text: conditional survival probability percentages
-    risk_text: number at risk by year
-  geometry: survival
-  subtype: conditional_survival_composite
-  grammar_id: conditional_survival_curve_with_probability_matrix_and_risk_table
-  required_data_roles:
+annotation_review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa183condSurv.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa183condSurv.yaml
+  geometry: conditional_survival_composite
+  subtype: conditional_survival_curve_with_probability_matrix_and_risk_table
+  required_roles:
   - time
   - event
-  optional_modules:
-    probability_matrix:
-      status: present_and_required_for_visual_match
-    risk_table:
-      status: present_and_required_for_visual_match
-    confidence_interval:
-      status: not_present
-    network_relationships:
-      status: not_supported
-  false_positive_risks:
-  - Do not classify this as a heatmap from metadata keywords alone.
-  - Do not infer network or flow roles from source/target/weight columns.
-  - Do not treat lower/upper as confidence intervals.
-  - Do not treat plot.py generic line rendering as sufficient to reproduce the observed
-    composite.
-reviewed_visual_roles:
-  time: required time-to-event duration
-  event: required event/censor status
-  condition_year: curve color/legend group and matrix row
-  reach_year: matrix target year
-  survival_probability: curve y value and matrix text
-  risk_count: bottom risk-table text
-  source: compatibility duplicate; not a relationship role
-  target: compatibility duplicate; not a relationship role
-  weight: compatibility duplicate; not an edge weight
-  lower: compatibility-only; no confidence interval evidenced
-  upper: compatibility-only; no confidence interval evidenced
+  optional_roles:
+  - condition_years
+  - reach_years
+  - palette
+  - risk_count
+  tier: support
+  confidence:
+    overall: 0.9
+    visual_identification: 0.98
+    data_contract_assessment: 0.9
+    rebuild_path_assessment: 0.74

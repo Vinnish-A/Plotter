@@ -1,0 +1,55 @@
+id: figures4papers_figure_Dispersion_idea_png
+title: figure_Dispersion_idea
+retrieval_tier: inspiration
+one_line: Inspiration for abstract dispersion or concentration diagrams on projected hemispheres.
+geometry: projected shaded disk with radial point spokes
+subtype: three_panel_hemisphere_dispersion_diagram
+required_roles:
+- panel_id
+- point_x
+- point_y
+- connector_origin
+optional_roles:
+- hemisphere_shading
+- point_style
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Inspiration for abstract dispersion or concentration diagrams on projected hemispheres.
+bad_for:
+- Data-driven PCA/manifold retrieval.
+- Workflows needing reproducible plotted coordinates from data_main.csv.
+- Labeled, colored, trajectory, or uncertainty-enabled scatter workflows.
+image_summary: 'figure_type: three_panel_hemisphere_dispersion_diagram; geometry: projected shaded disk
+  with radial point spokes; layout: one row of three axis-free panels; marks: [''gray shaded circular
+  hemisphere backgrounds'', ''blue c…'
+data_summary: 'main_columns: [''x'', ''y'', ''z'', ''value'', ''panel'', ''group'', ''label'', ''surface'',
+  ''trajectory'', ''color'']; sampled_rows: 64'
+code_summary: 'entry: plot.py; backend_hints: [''matplotlib'']'
+risk_flags:
+- synthetic_data
+- case_level_fallback
+- generic_renderer_rebuild
+- Do not treat data_main x/y/z/value as plotted random point data.
+- Do not retrieve this as empirical PCA, manifold learning, or true 3D scatter.
+- Blank label, trajectory, and color columns are not available optional modules.
+- case-level fallback
+- synthetic data abstraction
+- generic/direct-copy renderer
+- misleading 3d_manifold metadata
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/figures4papers_figure_Dispersion_idea_png.yaml
+  deep_review: vault/review/deep_annotation/reviews/figures4papers_figure_Dispersion_idea_png.yaml
+  machine_evidence: vault/evidence/machine/figures4papers_figure_Dispersion_idea_png.yaml
+  evidence_pack: vault/material/figures4papers_figure_Dispersion_idea_png
+  preview: vault/material/figures4papers_figure_Dispersion_idea_png/outputs/rebuilt.png
+  entry: vault/material/figures4papers_figure_Dispersion_idea_png/plot.py

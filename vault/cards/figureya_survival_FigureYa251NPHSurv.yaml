@@ -1,0 +1,55 @@
+id: figureya_survival_FigureYa251NPHSurv
+title: FigureYa251NPHSurv
+retrieval_tier: support
+one_line: Kaplan-Meier survival comparisons across categorical strata.
+geometry: survival
+subtype: kaplan_meier_survival_curve
+required_roles:
+- time
+- event
+- strata
+optional_roles:
+- delay_time
+- x_limit
+- x_breaks
+- palette
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Kaplan-Meier survival comparisons across categorical strata.
+- Survival curves with censor ticks and a delayed-effect or cutoff marker.
+bad_for:
+- Heatmaps.
+- Network or source-target-weight diagrams.
+- Risk-table survival layouts unless a risk-table module is added.
+image_summary: 'figure_type: kaplan_meier_survival_curve; family: survival; layout: [''single survival
+  panel'', ''top legend'', ''vertical delayed-effect marker'']; marks: [''right-continuous survival steps'',
+  ''censor tick marks'', ''dashed vert…'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
+code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- Do not classify this as heatmap despite metadata visual_keywords.
+- Do not treat source/target/weight/lower/upper as real visual roles.
+- Do not treat current plot.py as evidence of reproducible Kaplan-Meier rendering.
+- generic renderer mismatch
+- missing strata in data_main.csv
+- metadata heatmap keyword conflict
+- compatibility columns may be mistaken for true roles
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/figureya_survival_FigureYa251NPHSurv.yaml
+  deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa251NPHSurv.yaml
+  machine_evidence: vault/evidence/machine/figureya_survival_FigureYa251NPHSurv.yaml
+  evidence_pack: vault/material/figureya_survival_FigureYa251NPHSurv
+  preview: vault/material/figureya_survival_FigureYa251NPHSurv/outputs/rebuilt.png
+  entry: vault/material/figureya_survival_FigureYa251NPHSurv/plot.py

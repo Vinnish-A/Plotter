@@ -1,0 +1,51 @@
+id: plotcase_heatmap_ggtree绘制离散型系统发育树热图
+title: ggtree绘制离散型系统发育树热图
+retrieval_tier: support
+one_line: Circular phylogenetic trees with tip metadata tracks.
+geometry: tree_heatmap
+subtype: circular_phylogeny_discrete_tracks
+required_roles:
+- tree_topology
+- tip_id
+- annotation_track
+optional_roles:
+- branch_length
+- tip_group
+- multiple_tracks
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: true
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- Circular phylogenetic trees with tip metadata tracks.
+- Discrete annotation ring examples for ggtree-style figures.
+bad_for:
+- General node-link networks.
+- Standalone heatmaps without tree topology.
+image_summary: 'figure_type: circular_tree_heatmap; layout: [''circular phylogenetic tree'', ''tip-attached
+  discrete annotation tracks'']; marks: [''tree branch segments'', ''tip labels or tip points'', ''outer
+  annotation tiles/rings'']; encodin…'
+data_summary: 'main_columns: [''node_id'', ''parent_id'', ''label'', ''branch_length'', ''tip_group'',
+  ''track'', ''track_value'', ''track_class'', ''heatmap_value'']; sampled_rows: 9'
+code_summary: 'entry: plot.py; backend_hints: [''ggtree'']'
+risk_flags:
+- generic_renderer_rebuild
+- Do not classify as network only because the standardized table has parent_id.
+- Do not infer source/target/weight semantics; they are absent and not visually s…
+- Do not treat heatmap_value as evidence for a reusable rectangular heatmap body.
+- tree/network confusion
+- heatmap overgeneralization
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_heatmap_ggtree绘制离散型系统发育树热图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_ggtree绘制离散型系统发育树热图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_ggtree绘制离散型系统发育树热图.yaml
+  evidence_pack: vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图
+  preview: vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/outputs/rebuilt.png
+  entry: vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/plot.py

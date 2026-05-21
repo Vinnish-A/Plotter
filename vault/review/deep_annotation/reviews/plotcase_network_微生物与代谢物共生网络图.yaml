@@ -1,91 +1,145 @@
-case_id: "plotcase_network_微生物与代谢物共生网络图"
-annotation_version: "deep_dossier_review_v1"
+case_id: plotcase_network_微生物与代谢物共生网络图
+annotation_version: deep_dossier_review_v1
 annotation_status:
-  level: "problem_cohort_deep_review"
-  status: "reviewed_no_edits"
+  level: problem_cohort_deep_review
+  status: reviewed_no_edits
   human_review_required: true
-  reason: "standardized CSV is synthetic/compatibility data while rebuilt.png is a case-level cover fallback"
-annotator_model: "gpt-5-codex"
-reviewed_at: "2026-05-21"
+  reason: standardized CSV is synthetic/compatibility data while rebuilt.png is a case-level cover fallback
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21'
 evidence:
-  metadata: "reviewed"
-  plot_entry: "plot.py calls generic retinue network renderer"
-  data_main_profile: "7 rows, 13 columns, synthetic N1-N7 node-link demo"
-  optional_csv: "absent"
-  raw_scripts_docs: "original R/igraph code, SIF edge files, node annotation TSVs, docs reviewed"
-  output_rebuilt_png: "identical to raw cover and outputs/figure_001_cover.png, 1819x881, nonblank"
-  visual_check: "ok true"
+  metadata: reviewed
+  plot_entry: plot.py calls generic retinue network renderer
+  data_main_profile: 7 rows, 13 columns, synthetic N1-N7 node-link demo
+  optional_csv: absent
+  raw_scripts_docs: original R/igraph code, SIF edge files, node annotation TSVs, docs reviewed
+  output_rebuilt_png: identical to raw cover and outputs/figure_001_cover.png, 1819x881, nonblank
+  visual_check: ok true
 observed_visual_grammar:
-  geometry: "multi_panel_node_link_network"
+  geometry: multi_panel_node_link_network
   panels:
     count: 3
-    labels: ["Bog", "Fen", "Palsa"]
-  marks: ["metabolite nodes", "microbial square nodes", "positive/negative edges", "hub-size emphasis", "bottom color legend"]
-  encodings:
-    node_shape: "metabolite versus microbe"
-    node_color: "metabolite elemental composition or microbial phylum"
-    node_size: "hub/connector status"
-    edge_color: "association sign"
+    labels:
+    - Bog
+    - Fen
+    - Palsa
+  marks: &id001
+  - metabolite nodes
+  - microbial square nodes
+  - positive/negative edges
+  - hub-size emphasis
+  - bottom color legend
+  encodings: &id002
+    node_shape: metabolite versus microbe
+    node_color: metabolite elemental composition or microbial phylum
+    node_size: hub/connector status
+    edge_color: association sign
 inferred_visual_grammar:
-  grammar_id: "microbiome_metabolite_signed_association_network_panels"
-  source_case_semantics: "microbiome-metabolite association networks across thaw-gradient habitats"
-  rebuild_class: "case_level_fallback_cover"
-  reusable_abstraction_quality: "weak"
-reviewed_visual_roles:
-  source: "compatibility column in data_main; true source endpoints exist only in raw SIF files"
-  target: "compatibility column in data_main; true target endpoints exist only in raw SIF files"
-  weight: "synthetic renderer weight; original visual uses association sign rather than numeric edge weight"
-  habitat: "required panel role missing from standard CSV"
-  node_shape_class: "required node annotation missing from standard CSV"
-  node_color_class: "required node annotation missing from standard CSV"
+  grammar_id: microbiome_metabolite_signed_association_network_panels
+  source_case_semantics: microbiome-metabolite association networks across thaw-gradient habitats
+  rebuild_class: case_level_fallback_cover
+  reusable_abstraction_quality: weak
+reviewed_visual_roles: &id004
+  source: compatibility column in data_main; true source endpoints exist only in raw SIF files
+  target: compatibility column in data_main; true target endpoints exist only in raw SIF files
+  weight: synthetic renderer weight; original visual uses association sign rather than numeric edge weight
+  habitat: required panel role missing from standard CSV
+  node_shape_class: required node annotation missing from standard CSV
+  node_color_class: required node annotation missing from standard CSV
 canonical_columns:
-  - "habitat"
-  - "edge_from"
-  - "edge_to"
-  - "association_sign"
-  - "node_name"
-  - "node_type"
-  - "node_shape_class"
-  - "node_color_class"
-  - "node_hub_status"
+- habitat
+- edge_from
+- edge_to
+- association_sign
+- node_name
+- node_type
+- node_shape_class
+- node_color_class
+- node_hub_status
 required_data_semantics:
-  habitat: "network panel identity"
-  edge_from: "network endpoint from raw SIF"
-  edge_to: "network endpoint from raw SIF"
-  association_sign: "positive/negative edge class"
-  node_name: "node identifier"
-  node_type: "metabolite or microbe"
-  node_shape_class: "shape encoding"
-  node_color_class: "categorical node color"
+  habitat: network panel identity
+  edge_from: network endpoint from raw SIF
+  edge_to: network endpoint from raw SIF
+  association_sign: positive/negative edge class
+  node_name: node identifier
+  node_type: metabolite or microbe
+  node_shape_class: shape encoding
+  node_color_class: categorical node color
 optional_data_semantics:
-  node_hub_status: "size emphasis role"
-  layout_coordinates: "manual or frozen layout if deterministic reproduction is required"
-  legend_labels: "category display labels"
+  node_hub_status: size emphasis role
+  layout_coordinates: manual or frozen layout if deterministic reproduction is required
+  legend_labels: category display labels
 optional_modules:
   habitat_faceting:
-    status: "required_for_original_but_missing_from_standard_csv"
+    status: required_for_original_but_missing_from_standard_csv
   signed_edges:
-    status: "required_for_original_but_missing_from_standard_csv"
+    status: required_for_original_but_missing_from_standard_csv
   node_annotations:
-    status: "required_for_original_but_missing_from_standard_csv"
+    status: required_for_original_but_missing_from_standard_csv
   manual_layout:
-    status: "not_declared"
-false_positive_risks:
-  - "Current source/target/weight are synthetic compatibility fields, not proof of source-derived network roles."
-  - "Generic renderer cannot reproduce three habitat panels, shape encodings, hub sizing, or categorical legend."
-  - "Rebuilt preview is a fallback cover."
+    status: not_declared
+false_positive_risks: &id003
+- Current source/target/weight are synthetic compatibility fields, not proof of source-derived network
+  roles.
+- Generic renderer cannot reproduce three habitat panels, shape encodings, hub sizing, or categorical
+  legend.
+- Rebuilt preview is a fallback cover.
 best_for:
-  - "Inspiration for microbiome-metabolite multi-panel signed association network styling."
+- Inspiration for microbiome-metabolite multi-panel signed association network styling.
 bad_for:
-  - "Ordinary weighted source-target graph templates or clean CSV-only network rebuilds."
-style_notes:
-  - "Black background, high-contrast node colors, white microbial squares, and three horizontal habitat panels."
+- Ordinary weighted source-target graph templates or clean CSV-only network rebuilds.
+style_notes: &id005
+- Black background, high-contrast node colors, white microbial squares, and three horizontal habitat panels.
 retrieval_tier_recommendation:
-  tier: "inspiration"
-  rationale: "Visually valuable but synthetic/fallback-backed; standard CSV should not be treated as a core reusable network contract."
-  exclusion_risks: ["synthetic data abstraction", "case-level fallback", "source/target/weight compatibility semantics only"]
+  tier: inspiration
+  rationale: Visually valuable but synthetic/fallback-backed; standard CSV should not be treated as a
+    core reusable network contract.
+  exclusion_risks:
+  - synthetic data abstraction
+  - case-level fallback
+  - source/target/weight compatibility semantics only
 confidence:
-  overall: "high"
-  visual_grammar: "high"
-  data_semantics: "high"
-  reproducibility_contract: "high"
+  overall: high
+  visual_grammar: high
+  data_semantics: high
+  reproducibility_contract: high
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: ''
+  marks: *id001
+  encodings: *id002
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id003
+data_understanding:
+  data_read: true
+  observed_columns:
+  - habitat
+  - edge_from
+  - edge_to
+  - association_sign
+  - node_name
+  - node_type
+  - node_shape_class
+  - node_color_class
+  - node_hub_status
+  role_mapping: *id004
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  missing_optional_data:
+  - habitat_faceting
+  - signed_edges
+  - node_annotations
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: plot.py calls generic retinue network renderer
+  hardcoded_aesthetics: *id005
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id003

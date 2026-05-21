@@ -1,0 +1,53 @@
+id: figureya_survival_FigureYa183condSurv
+title: FigureYa183condSurv
+retrieval_tier: support
+one_line: Single-cohort conditional survival displays with probability matrix and risk counts.
+geometry: survival
+subtype: conditional_survival_composite
+required_roles:
+- time
+- event
+optional_roles:
+- condition_years
+- reach_years
+- palette
+- risk_count
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Single-cohort conditional survival displays with probability matrix and risk counts.
+- Survival figures where derived conditional probabilities are central.
+bad_for:
+- Grouped Kaplan-Meier comparisons between strata.
+- Network, flow, or edge-weight visualizations.
+- Survival figures requiring visible confidence bands or p-value annotations.
+image_summary: 'figure_type: conditional_survival_composite; family: survival; layout: [''top conditional
+  survival step-curve panel'', ''middle triangular probability text matrix'', ''bottom aligned number-at-risk
+  row'']; marks: [''colored su…'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
+code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- Do not classify this as a heatmap from metadata keywords alone.
+- Do not infer network or flow roles from source/target/weight columns.
+- Do not treat lower/upper as confidence intervals.
+- generic renderer entry
+- weak data_main abstraction
+- misleading compatibility columns
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/figureya_survival_FigureYa183condSurv.yaml
+  deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa183condSurv.yaml
+  machine_evidence: vault/evidence/machine/figureya_survival_FigureYa183condSurv.yaml
+  evidence_pack: vault/material/figureya_survival_FigureYa183condSurv
+  preview: vault/material/figureya_survival_FigureYa183condSurv/outputs/rebuilt.png
+  entry: vault/material/figureya_survival_FigureYa183condSurv/plot.py

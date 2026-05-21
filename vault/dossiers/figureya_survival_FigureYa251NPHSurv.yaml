@@ -335,55 +335,23 @@ exclusion_risks:
 - missing strata in data_main.csv
 - metadata heatmap keyword conflict
 - compatibility columns may be mistaken for true roles
-reviewed_visual_grammar:
-  figure_type: kaplan_meier_survival_curve
-  family: survival
-  layout:
-  - single survival panel
-  - top legend
-  - vertical delayed-effect marker
-  marks:
-  - right-continuous survival steps
-  - censor tick marks
-  - dashed vertical reference line
-  encodings:
-    x: time in months
-    y: overall survival probability
-    color: survival strata CS1-CS4
-    censor_marks: censored observations
-  geometry: survival
+annotation_review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa251NPHSurv.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa251NPHSurv.yaml
+  geometry: kaplan_meier_survival_curve
   subtype: kaplan_meier_survival_curve_with_delay_marker
-  required_data_roles:
+  required_roles:
   - time
   - event
   - strata
-  grammar_id: kaplan_meier_survival_curve_with_delay_marker
-  optional_modules:
-    censor_ticks:
-      status: present
-    delay_marker:
-      status: present
-    risk_table:
-      status: not_present
-    confidence_interval:
-      status: not_present
-    network_relationships:
-      status: not_supported
-  false_positive_risks:
-  - Do not classify this as heatmap despite metadata visual_keywords.
-  - Do not treat source/target/weight/lower/upper as real visual roles.
-  - Do not treat current plot.py as evidence of reproducible Kaplan-Meier rendering.
-  - Do not claim data_main.csv alone can regenerate the grouped curves because strata
-    are missing.
-reviewed_visual_roles:
-  time: required follow-up duration from data_main x / raw os
-  event: required event/censor indicator from data_main y / raw censOS
-  strata: required group role from raw CMOIC; missing from data_main
-  survival_probability: computed by survfit
-  censor_marks: computed from event records
-  delay_time: optional vertical marker
-  source: compatibility column, not true role
-  target: compatibility column, not true role
-  weight: compatibility column, not true role
-  lower: compatibility column, not true role
-  upper: compatibility column, not true role
+  optional_roles:
+  - delay_time
+  - x_limit
+  - x_breaks
+  - palette
+  tier: support
+  confidence:
+    overall: 0.9
+    visual_identification: 0.98
+    data_contract_assessment: 0.96
+    rebuild_path_assessment: 0.74

@@ -342,52 +342,23 @@ retrieval_rationale: Strong source and visual evidence exist, but the standard C
 exclusion_risks:
 - generic line renderer mismatch
 - compatibility columns may imply false network or interval roles
-reviewed_visual_grammar:
-  figure_type: random_survival_forest_diagnostic
+annotation_review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa182RFSurvV2.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa182RFSurvV2.yaml
+  geometry: random_survival_forest_diagnostic
   subtype: error_rate_and_variable_importance
-  layout:
-  - left error-rate line panel
-  - right variable-importance horizontal bar/segment panel
-  marks:
-  - black error-rate line
-  - signed horizontal importance bars
-  - dashed zero reference line
-  - dense gene label rail
-  encodings:
-    left_x: number of trees
-    left_y: error rate
-    right_x: signed variable importance
-    right_y: gene/predictor labels
-  geometry: model_diagnostic_composite
-  required_data_roles:
-  - tree_index
-  - error_rate
+  required_roles:
+  - error_trajectory
   - variable_label
   - variable_importance
-  grammar_id: random_survival_forest_error_importance_composite
-  optional_modules:
-    error_rate_panel:
-      status: present
-    variable_importance_panel:
-      status: present
-    survival_curve:
-      status: not_present
-    network_relationships:
-      status: not_supported
-  false_positive_risks:
-  - Do not treat metadata heatmap keywords as observed grammar.
-  - Do not treat dossier subtype survival_curve as visually supported.
-  - Do not infer source/target/weight graph semantics from compatibility columns.
-  - Do not treat lower/upper as confidence interval roles.
-  - Do not rely on plot.py generic line renderer as faithful rebuild evidence.
-reviewed_visual_roles:
-  tree_index: generated x-axis for error-rate trajectory
-  error_rate: model error per tree count
-  variable_label: gene/predictor label
-  variable_importance: signed model importance value
-  sign: optional derived positive/negative importance class
-  source: compatibility column only; not a graph role
-  target: compatibility column only; not a graph role
-  weight: compatibility column only; not a graph role
-  lower: compatibility column only; not a confidence interval role
-  upper: compatibility column only; not a confidence interval role
+  optional_roles:
+  - importance_cutoff
+  - rank_order
+  - palette
+  - model_metadata
+  tier: support
+  confidence:
+    overall: 0.86
+    visual_identification: 0.95
+    data_contract_assessment: 0.9
+    rebuild_path_assessment: 0.72

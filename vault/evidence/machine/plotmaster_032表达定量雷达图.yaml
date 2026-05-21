@@ -1,0 +1,149 @@
+case_id: plotmaster_032表达定量雷达图
+paths:
+  case: vault/material/plotmaster_032表达定量雷达图
+  metadata: vault/material/plotmaster_032表达定量雷达图/metadata.json
+  agent_guide: vault/material/plotmaster_032表达定量雷达图/agent_guide.md
+  entry: vault/material/plotmaster_032表达定量雷达图/plot.py
+  rebuilt_png: vault/material/plotmaster_032表达定量雷达图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_032表达定量雷达图/metadata.json
+    exists: true
+    size_bytes: 3820
+  agent_guide:
+    path: vault/material/plotmaster_032表达定量雷达图/agent_guide.md
+    exists: true
+    size_bytes: 1721
+  data_main:
+    path: vault/material/plotmaster_032表达定量雷达图/data_main.csv
+    exists: true
+    size_bytes: 2251
+  data_optional:
+    path: vault/material/plotmaster_032表达定量雷达图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_032表达定量雷达图/plot.py
+    exists: true
+    size_bytes: 233
+  rebuilt_png:
+    path: vault/material/plotmaster_032表达定量雷达图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 78570
+image:
+  exists: true
+  size_bytes: 78570
+  width: 720
+  height: 720
+  mean_luma: 251.0467
+  stddev_luma: 15.0128
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 19
+    column_summary:
+      x:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 19
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 14
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 14
+      group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 19
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 19
+      target:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 14
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 14
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 14
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 14
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_032表达定量雷达图/plot.py
+  - vault/material/plotmaster_032表达定量雷达图/scripts/codes.R
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 032表达定量雷达图
+  metadata_geometry: scatter
+  geometry_keyword_hits:
+    scatter:
+    - scatter
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

@@ -1,0 +1,57 @@
+id: figureya_survival_FigureYa299pancanSurv
+title: FigureYa299pancanSurv
+retrieval_tier: support
+one_line: Tabular forest plot of hazard ratios across named categories.
+geometry: forest_plot
+subtype: tabular_hazard_ratio_forest_plot
+required_roles:
+- cancer
+- hazard_ratio
+- ci_lower
+- ci_upper
+- p_value
+optional_roles:
+- endpoint
+- method
+- prognostic_role
+- row_order
+- display_label
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Tabular forest plot of hazard ratios across named categories.
+- Pan-cancer OS Cox summary visualization.
+- Compact risk estimate plus confidence interval reporting.
+bad_for:
+- Kaplan-Meier survival curves.
+- Source-target or weighted network diagrams.
+- Generic x-y line plots.
+image_summary: 'figure_type: tabular_hazard_ratio_forest_plot; geometry: forest_plot; panel_structure:
+  single panel with left aligned table and right CI plot; marks: [''row text labels for cancer types'',
+  ''p-value text column'', ''formatte…'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
+code_summary: 'entry: plot.py; backend_hints: [''circlize'', ''complexheatmap'', ''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- Do not describe rebuilt.png as a Kaplan-Meier survival curve.
+- Do not retrieve as heatmap unless the source heatmap output is explicitly selec…
+- Do not treat source/target/weight as network roles.
+- case-level rendered output appears to be the effective visual source
+- canonical data contract needs correction before core retrieval
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/figureya_survival_FigureYa299pancanSurv.yaml
+  deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa299pancanSurv.yaml
+  machine_evidence: vault/evidence/machine/figureya_survival_FigureYa299pancanSurv.yaml
+  evidence_pack: vault/material/figureya_survival_FigureYa299pancanSurv
+  preview: vault/material/figureya_survival_FigureYa299pancanSurv/outputs/rebuilt.png
+  entry: vault/material/figureya_survival_FigureYa299pancanSurv/plot.py

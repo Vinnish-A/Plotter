@@ -1,98 +1,152 @@
-case_id: "plotcase_heatmap_ggtree绘制离散型系统发育树热图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_heatmap_ggtree绘制离散型系统发育树热图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_rebuild_caution"
-  note: "Observed grammar is circular phylogeny plus discrete annotation tracks; not a generic network and not an ordinary rectangular heatmap."
-annotator_model: "gpt-5.5 high reasoning subagent"
-reviewed_at: "2026-05-21T01:12:07+08:00"
+  status: reviewed_with_rebuild_caution
+  note: Observed grammar is circular phylogeny plus discrete annotation tracks; not a generic network
+    and not an ordinary rectangular heatmap.
+annotator_model: gpt-5.5 high reasoning subagent
+reviewed_at: '2026-05-21T01:12:07+08:00'
 evidence:
   truncated_source_summary: true
   files_read:
-    - "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/metadata.json"
-    - "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/agent_guide.md"
-    - "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/plot.py"
-    - "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/data_main.csv"
-    - "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/code.R"
-    - "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/RAxML_bipartitions.allUK_1000.nwk"
-    - "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/outputs/rebuilt.png"
-    - "vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_heatmap_ggtree绘制离散型系统发育树热图.yaml"
-  data_main_header: ["node_id", "parent_id", "label", "branch_length", "tip_group", "track", "track_value", "track_class", "heatmap_value"]
+  - vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/metadata.json
+  - vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/agent_guide.md
+  - vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/plot.py
+  - vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/data_main.csv
+  - vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/code.R
+  - vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/raw/RAxML_bipartitions.allUK_1000.nwk
+  - vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/outputs/rebuilt.png
+  - vault/material/plotcase_heatmap_ggtree绘制离散型系统发育树热图/outputs/visual_check.json
+  - vault/dossiers/plotcase_heatmap_ggtree绘制离散型系统发育树热图.yaml
+  data_main_header:
+  - node_id
+  - parent_id
+  - label
+  - branch_length
+  - tip_group
+  - track
+  - track_value
+  - track_class
+  - heatmap_value
 observed_visual_grammar:
-  figure_type: "circular_tree_heatmap"
-  layout: ["circular phylogenetic tree", "tip-attached discrete annotation tracks"]
-  marks: ["tree branch segments", "tip labels or tip points", "outer annotation tiles/rings"]
-  encodings:
-    topology: "node-parent tree or Newick tree"
-    annotation: "tip-aligned track and class/value"
+  figure_type: circular_tree_heatmap
+  layout: &id001
+  - circular phylogenetic tree
+  - tip-attached discrete annotation tracks
+  marks: &id002
+  - tree branch segments
+  - tip labels or tip points
+  - outer annotation tiles/rings
+  encodings: &id003
+    topology: node-parent tree or Newick tree
+    annotation: tip-aligned track and class/value
 inferred_visual_grammar:
-  grammar_id: "circular_phylogeny_discrete_annotation_tracks"
-  reusable_pattern: "Tree body with tip-level metadata rings around the outside."
-  not_supported: ["source-target-weight network graph", "standalone rectangular heatmap"]
-reviewed_visual_roles:
-  node_id: "tree node or tip identifier"
-  parent_id: "tree parent identifier, only tree topology"
-  label: "tip or node display label"
-  branch_length: "optional tree branch length"
-  tip_group: "tip class or clade annotation"
-  track: "annotation ring identifier"
-  track_value: "annotation value aligned to a tip"
-  track_class: "discrete annotation category"
-  heatmap_value: "optional annotation value, not proof of a full matrix heatmap"
+  grammar_id: circular_phylogeny_discrete_annotation_tracks
+  reusable_pattern: Tree body with tip-level metadata rings around the outside.
+  not_supported:
+  - source-target-weight network graph
+  - standalone rectangular heatmap
+reviewed_visual_roles: &id005
+  node_id: tree node or tip identifier
+  parent_id: tree parent identifier, only tree topology
+  label: tip or node display label
+  branch_length: optional tree branch length
+  tip_group: tip class or clade annotation
+  track: annotation ring identifier
+  track_value: annotation value aligned to a tip
+  track_class: discrete annotation category
+  heatmap_value: optional annotation value, not proof of a full matrix heatmap
 canonical_columns:
-  - "node_id: observed tree identifier"
-  - "parent_id: observed tree topology parent, not network target"
-  - "label: observed tip or node label"
-  - "branch_length: optional branch length"
-  - "tip_group: optional tip class"
-  - "track: annotation track id"
-  - "track_value: tip-level annotation value"
-  - "track_class: discrete annotation category"
-  - "heatmap_value: optional ring value"
+- 'node_id: observed tree identifier'
+- 'parent_id: observed tree topology parent, not network target'
+- 'label: observed tip or node label'
+- 'branch_length: optional branch length'
+- 'tip_group: optional tip class'
+- 'track: annotation track id'
+- 'track_value: tip-level annotation value'
+- 'track_class: discrete annotation category'
+- 'heatmap_value: optional ring value'
 required_data_semantics:
-  tree_topology: "Newick tree or node-parent table"
-  tip_id: "stable identifier joining tree tips to annotations"
-  annotation_track: "at least one tip-level discrete annotation"
+  tree_topology: Newick tree or node-parent table
+  tip_id: stable identifier joining tree tips to annotations
+  annotation_track: at least one tip-level discrete annotation
 optional_data_semantics:
-  branch_length: "controls radial branch scaling if present"
-  tip_group: "colors labels, tips, or clades"
-  multiple_tracks: "adds outer annotation rings"
+  branch_length: controls radial branch scaling if present
+  tip_group: colors labels, tips, or clades
+  multiple_tracks: adds outer annotation rings
 optional_modules:
   discrete_annotation_rings:
-    status: "supported"
+    status: supported
   clade_or_tip_coloring:
-    status: "supported_if_tip_group_available"
+    status: supported_if_tip_group_available
   network_relationships:
-    status: "not_supported"
-false_positive_risks:
-  - "Do not classify as network only because the standardized table has parent_id."
-  - "Do not infer source/target/weight semantics; they are absent and not visually supported."
-  - "Do not treat heatmap_value as evidence for a reusable rectangular heatmap body."
+    status: not_supported
+false_positive_risks: &id004
+- Do not classify as network only because the standardized table has parent_id.
+- Do not infer source/target/weight semantics; they are absent and not visually supported.
+- Do not treat heatmap_value as evidence for a reusable rectangular heatmap body.
 best_for:
-  - "Circular phylogenetic trees with tip metadata tracks."
-  - "Discrete annotation ring examples for ggtree-style figures."
+- Circular phylogenetic trees with tip metadata tracks.
+- Discrete annotation ring examples for ggtree-style figures.
 bad_for:
-  - "General node-link networks."
-  - "Standalone heatmaps without tree topology."
-style_notes:
-  - "Main tree body must define the coordinate system."
-  - "Annotation rings should stay close to tips and use calm categorical palettes."
+- General node-link networks.
+- Standalone heatmaps without tree topology.
+style_notes: &id006
+- Main tree body must define the coordinate system.
+- Annotation rings should stay close to tips and use calm categorical palettes.
 retrieval_tier_recommendation:
-  tier: "support"
-  rationale: "Visually distinctive and useful, but retained as support until rebuild and source-code fidelity are reviewed more deeply."
+  tier: support
+  rationale: Visually distinctive and useful, but retained as support until rebuild and source-code fidelity
+    are reviewed more deeply.
   exclusion_risks:
-    - "tree/network confusion"
-    - "heatmap overgeneralization"
+  - tree/network confusion
+  - heatmap overgeneralization
 confidence:
   overall: 0.78
   visual_grammar: 0.84
   data_roles: 0.78
   rebuild_path: 0.68
 proposed_metadata_patch:
-  retrieval_tier: "support"
-  retrieval_rationale: "Circular tree with discrete tip tracks; useful support grammar but not a default network or heatmap candidate."
+  retrieval_tier: support
+  retrieval_rationale: Circular tree with discrete tip tracks; useful support grammar but not a default
+    network or heatmap candidate.
 proposed_dossier_patch:
   visual_grammar:
-    geometry: "tree_heatmap"
-    subtype: "circular_phylogeny_discrete_tracks"
-
+    geometry: tree_heatmap
+    subtype: circular_phylogeny_discrete_tracks
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: *id001
+  marks: *id002
+  encodings: *id003
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id004
+data_understanding:
+  data_read: true
+  observed_columns:
+  - node_id
+  - parent_id
+  - label
+  - branch_length
+  - tip_group
+  - track
+  - track_value
+  - track_class
+  - heatmap_value
+  role_mapping: *id005
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data:
+  - network_relationships
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: not_separately_recorded_in_legacy_review
+  hardcoded_aesthetics: *id006
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id004

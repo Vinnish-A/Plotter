@@ -1,0 +1,51 @@
+id: plotcase_circos_circlize绘制和弦图进阶版
+title: circlize绘制和弦图进阶版
+retrieval_tier: support
+one_line: circos asset for circlize绘制和弦图进阶版
+geometry: circos
+subtype: chord_or_circular
+required_roles:
+- source
+- target
+- weight
+optional_roles:
+- source_group
+- target_group
+- direction
+- sector_order
+- sector_color
+- label
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- circlize绘制和弦图进阶版
+- 'circos/chord_or_circular grammar with roles: source, target, weight'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 272570; width: 1008; height: 1008'
+data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''source_group'', ''target_group'',
+  ''direction'', ''sector_order'', ''sector_color'', ''label'', ''node_id'', ''node_label'']; sampled_rows:
+  7'
+code_summary: 'entry: plot.py; backend_hints: [''circlize'', ''complexheatmap'']'
+risk_flags:
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotcase_circos_circlize绘制和弦图进阶版.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotcase_circos_circlize绘制和弦图进阶版.yaml
+  evidence_pack: vault/material/plotcase_circos_circlize绘制和弦图进阶版
+  preview: vault/material/plotcase_circos_circlize绘制和弦图进阶版/outputs/rebuilt.png
+  entry: vault/material/plotcase_circos_circlize绘制和弦图进阶版/plot.py

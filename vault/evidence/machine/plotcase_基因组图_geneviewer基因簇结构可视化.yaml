@@ -1,0 +1,150 @@
+case_id: plotcase_基因组图_geneviewer基因簇结构可视化
+paths:
+  case: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化
+  metadata: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/metadata.json
+  agent_guide: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/agent_guide.md
+  entry: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/plot.py
+  rebuilt_png: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/outputs/rebuilt.png
+build:
+  status: custom_required
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: true
+files:
+  metadata:
+    path: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/metadata.json
+    exists: true
+    size_bytes: 4257
+  agent_guide:
+    path: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/agent_guide.md
+    exists: true
+    size_bytes: 1754
+  data_main:
+    path: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/data_main.csv
+    exists: true
+    size_bytes: 574
+  data_optional:
+    path: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/plot.py
+    exists: true
+    size_bytes: 245
+  rebuilt_png:
+    path: vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/outputs/rebuilt.png
+    exists: true
+    size_bytes: 72140
+image:
+  exists: true
+  size_bytes: 72140
+  width: 1476
+  height: 848
+  mean_luma: 242.9317
+  stddev_luma: 45.4868
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - segment_id
+    - feature_id
+    - start
+    - end
+    - strand
+    - feature_class
+    - cluster
+    - label
+    - link_id
+    - similarity
+    - track
+    - color_class
+    sampled_rows: 13
+    column_summary:
+      segment_id:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      feature_id:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+      start:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+      end:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+      strand:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      feature_class:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 4
+      cluster:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 2
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 13
+      link_id:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      similarity:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      track:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      color_class:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/plot.py
+  - vault/material/plotcase_基因组图_geneviewer基因簇结构可视化/scripts/code.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: true
+weak_hints:
+  title_terms:
+  - geneviewer基因簇结构可视化
+  metadata_geometry: null
+  geometry_keyword_hits:
+    scatter:
+    - scatter
+    genome:
+    - geneviewer
+    - genome
+    - 基因簇
+  optional_module_hint_columns:
+  - label

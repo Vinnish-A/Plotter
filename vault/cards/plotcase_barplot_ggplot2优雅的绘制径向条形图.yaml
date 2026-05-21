@@ -1,0 +1,56 @@
+id: plotcase_barplot_ggplot2优雅的绘制径向条形图
+title: ggplot2优雅的绘制径向条形图
+retrieval_tier: support
+one_line: Top-N categorical magnitude/share summaries.
+geometry: polar_bar
+subtype: concentric_radial_bar_chart
+required_roles:
+- category
+- value
+optional_roles:
+- percent
+- label
+- order
+- color
+- ymax
+- top_n
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Top-N categorical magnitude/share summaries.
+- Radial bar examples where labels are embedded as the main reading aid.
+- Minimal axis-free polar compositions with strong category ranking.
+bad_for:
+- Time series or line comparisons.
+- Grouped or stacked bar comparisons.
+- Dense category sets with long labels.
+image_summary: 'figure_type: concentric_radial_bar_chart; geometry: polar_bar; layout: [''white void theme'',
+  ''concentric annular bars'', ''left/center inline label stack'', ''no axes'', ''no legend'']; marks:
+  [''annular bar arcs'', ''country-perc…'
+data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
+  ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
+code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- Current dossier line grammar is wrong.
+- Do not treat group, stack, error_low, error_high, or line_value as evidenced vi…
+- plot.py calls a generic bar renderer and does not encode the observed radial gr…
+- generic renderer mismatch
+- synthetic canonical CSV
+- misleading compatibility columns
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml
+  evidence_pack: vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图
+  preview: vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/outputs/rebuilt.png
+  entry: vault/material/plotcase_barplot_ggplot2优雅的绘制径向条形图/plot.py

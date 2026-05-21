@@ -1,0 +1,149 @@
+case_id: plotmaster_004提琴图
+paths:
+  case: vault/material/plotmaster_004提琴图
+  metadata: vault/material/plotmaster_004提琴图/metadata.json
+  agent_guide: vault/material/plotmaster_004提琴图/agent_guide.md
+  entry: vault/material/plotmaster_004提琴图/plot.py
+  rebuilt_png: vault/material/plotmaster_004提琴图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: low
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_004提琴图/metadata.json
+    exists: true
+    size_bytes: 3299
+  agent_guide:
+    path: vault/material/plotmaster_004提琴图/agent_guide.md
+    exists: true
+    size_bytes: 1697
+  data_main:
+    path: vault/material/plotmaster_004提琴图/data_main.csv
+    exists: true
+    size_bytes: 95464
+  data_optional:
+    path: vault/material/plotmaster_004提琴图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_004提琴图/plot.py
+    exists: true
+    size_bytes: 223
+  rebuilt_png:
+    path: vault/material/plotmaster_004提琴图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 88586
+image:
+  exists: true
+  size_bytes: 88586
+  width: 1584
+  height: 864
+  mean_luma: 248.327
+  stddev_luma: 27.1074
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 200
+    column_summary:
+      x:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 1
+      facet:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      target:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_004提琴图/plot.py
+  - vault/material/plotmaster_004提琴图/scripts/violin_plot.R
+  backend_hints:
+  - ggplot2
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 004提琴图
+  metadata_geometry: 3d_manifold
+  geometry_keyword_hits:
+    scatter:
+    - scatter
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

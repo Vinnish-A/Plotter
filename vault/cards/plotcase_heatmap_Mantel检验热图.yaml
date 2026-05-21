@@ -1,0 +1,52 @@
+id: plotcase_heatmap_Mantel检验热图
+title: Mantel检验热图
+retrieval_tier: inspiration
+one_line: Mantel-test summaries combining correlation matrices with group-to-variable association links.
+geometry: hybrid_correlation_heatmap_network
+subtype: mantel_coupled_lower_triangle_correlation_heatmap
+required_roles:
+- correlation_matrix
+- mantel_edges
+- mantel_statistics
+optional_roles:
+- pearson_p_values
+- node_positions
+- palette_bins
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: true
+  batch: true
+best_for:
+- Mantel-test summaries combining correlation matrices with group-to-variable association links.
+bad_for:
+- Plain heatmaps, clustered heatmaps, or source-backed reusable heatmap cases.
+image_summary: 'figure_type: mantel_coupled_correlation_heatmap; layout: [''lower-triangle correlation
+  matrix'', ''diagonal variable nodes'', ''right-side Mantel target nodes'', ''curved coupling links'',
+  ''separate legends'']; marks: [''correlat…'
+data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
+  ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- synthetic_data
+- case_level_fallback
+- generic_renderer_rebuild
+- Compatibility columns must not be treated as observed annotation-track semantic…
+- This is not a plain heatmap; Mantel coupling links are required for the true gr…
+- Current standardized case is synthetic/generic/fallback-backed.
+- synthetic data_main
+- generic renderer rebuild
+- case-level cover fallback
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_heatmap_Mantel检验热图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_Mantel检验热图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_Mantel检验热图.yaml
+  evidence_pack: vault/material/plotcase_heatmap_Mantel检验热图
+  preview: vault/material/plotcase_heatmap_Mantel检验热图/outputs/rebuilt.png
+  entry: vault/material/plotcase_heatmap_Mantel检验热图/plot.py

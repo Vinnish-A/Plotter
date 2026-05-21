@@ -31,7 +31,20 @@ def fit_candidate(candidate: dict[str, Any], profile: dict[str, Any]) -> dict[st
     required = [str(x).lower() for x in candidate.get("required_roles", [])]
     missing_required = [role for role in required if role not in cols]
     modules = {}
-    for name, spec in candidate.get("optional_modules", {}).items():
+    optional_modules = candidate.get("optional_modules")
+    if not isinstance(optional_modules, dict) or not optional_modules:
+        caps = candidate.get("capabilities") if isinstance(candidate.get("capabilities"), dict) else {}
+        inferred: dict[str, Any] = {}
+        if caps.get("detail_panel"):
+            inferred["detail_panel"] = {"requires": ["group", "sample_x", "sample_y"], "fallback_if_missing": "disable_detail_panel"}
+        if caps.get("uncertainty"):
+            inferred["uncertainty_interval"] = {"requires_any": [["lower", "upper"], ["se"], ["ci_low", "ci_high"]], "fallback_if_missing": "do_not_show_uncertainty"}
+        if caps.get("annotation_track"):
+            inferred["annotation_track"] = {"requires": ["group", "value"], "fallback_if_missing": "use_plain_axis"}
+        if caps.get("highlight"):
+            inferred["highlight"] = {"requires_any": [["label"], ["group"], ["subgroup"]], "fallback_if_missing": "disable_highlight"}
+        optional_modules = inferred
+    for name, spec in optional_modules.items():
         requires = [str(x).lower() for x in spec.get("requires", [])]
         requires_any = [[str(x).lower() for x in group] for group in spec.get("requires_any", [])]
         available = has_all(cols, requires) if requires else False

@@ -1,0 +1,154 @@
+case_id: plotcase_network_细胞通讯网络图
+paths:
+  case: vault/material/plotcase_network_细胞通讯网络图
+  metadata: vault/material/plotcase_network_细胞通讯网络图/metadata.json
+  agent_guide: vault/material/plotcase_network_细胞通讯网络图/agent_guide.md
+  entry: vault/material/plotcase_network_细胞通讯网络图/plot.py
+  rebuilt_png: vault/material/plotcase_network_细胞通讯网络图/outputs/rebuilt.png
+build:
+  status: custom_required
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: false
+  generic_renderer_rebuild: true
+  case_level_fallback: true
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotcase_network_细胞通讯网络图/metadata.json
+    exists: true
+    size_bytes: 4384
+  agent_guide:
+    path: vault/material/plotcase_network_细胞通讯网络图/agent_guide.md
+    exists: true
+    size_bytes: 1723
+  data_main:
+    path: vault/material/plotcase_network_细胞通讯网络图/data_main.csv
+    exists: true
+    size_bytes: 369
+  data_optional:
+    path: vault/material/plotcase_network_细胞通讯网络图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotcase_network_细胞通讯网络图/plot.py
+    exists: true
+    size_bytes: 232
+  rebuilt_png:
+    path: vault/material/plotcase_network_细胞通讯网络图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 145484
+image:
+  exists: true
+  size_bytes: 145484
+  width: 1294
+  height: 1393
+  mean_luma: 248.5719
+  stddev_luma: 28.713
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - source
+    - target
+    - weight
+    - node_id
+    - node_label
+    - node_group
+    - node_size
+    - edge_group
+    - edge_direction
+    - layout_x
+    - layout_y
+    - source_group
+    - target_group
+    sampled_rows: 7
+    column_summary:
+      source:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      target:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 6
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      node_id:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      node_label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 7
+      node_group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      node_size:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      edge_group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      edge_direction:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      layout_x:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      layout_y:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      source_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+      target_group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 3
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotcase_network_细胞通讯网络图/plot.py
+  - vault/material/plotcase_network_细胞通讯网络图/scripts/code.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 细胞通讯网络图
+  metadata_geometry: null
+  geometry_keyword_hits:
+    network:
+    - network
+    - 网络
+  optional_module_hint_columns:
+  - source
+  - target
+  - weight

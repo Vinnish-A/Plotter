@@ -1,0 +1,53 @@
+id: plotmaster_020多组学九象限散点图
+title: 020多组学九象限散点图
+retrieval_tier: inspiration
+one_line: scatter asset for 020多组学九象限散点图
+geometry: scatter
+subtype: quadrant_scatter
+required_roles:
+- x
+- y
+- value
+optional_roles:
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+capabilities:
+  highlight: true
+  detail_panel: true
+  annotation_track: false
+  uncertainty: true
+  composition: false
+  batch: true
+best_for:
+- 020多组学九象限散点图
+- 'scatter/quadrant_scatter grammar with roles: x, y, value'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 43972; width: 1263; height: 784'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
+code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
+risk_flags:
+- synthetic_data
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotmaster_020多组学九象限散点图.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotmaster_020多组学九象限散点图.yaml
+  evidence_pack: vault/material/plotmaster_020多组学九象限散点图
+  preview: vault/material/plotmaster_020多组学九象限散点图/outputs/rebuilt.png
+  entry: vault/material/plotmaster_020多组学九象限散点图/plot.py

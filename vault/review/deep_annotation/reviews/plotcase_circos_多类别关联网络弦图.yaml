@@ -1,74 +1,103 @@
-case_id: "plotcase_circos_多类别关联网络弦图"
-annotation_version: "deep_annotation_v1"
+case_id: plotcase_circos_多类别关联网络弦图
+annotation_version: deep_annotation_v1
 annotation_status:
-  status: "reviewed_with_contract_mismatch"
-  note: "Observed asset is a circos/chord finished-figure fallback; source/target/weight names match a chord schema but current values are synthetic placeholders."
+  status: reviewed_with_contract_mismatch
+  note: Observed asset is a circos/chord finished-figure fallback; source/target/weight names match a
+    chord schema but current values are synthetic placeholders.
   human_review_required: true
-annotator_model: "gpt-5-codex"
-reviewed_at: "2026-05-21"
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21'
 evidence:
   files_read:
-    - "vault/material/plotcase_circos_多类别关联网络弦图/metadata.json"
-    - "vault/material/plotcase_circos_多类别关联网络弦图/agent_guide.md"
-    - "vault/material/plotcase_circos_多类别关联网络弦图/plot.py"
-    - "vault/material/plotcase_circos_多类别关联网络弦图/data_main.csv"
-    - "vault/material/plotcase_circos_多类别关联网络弦图/scripts/code.R"
-    - "vault/material/plotcase_circos_多类别关联网络弦图/raw/code.R"
-    - "vault/material/plotcase_circos_多类别关联网络弦图/outputs/rebuilt.png"
-    - "vault/material/plotcase_circos_多类别关联网络弦图/outputs/visual_check.json"
-    - "vault/dossiers/plotcase_circos_多类别关联网络弦图.yaml"
-  plot_entry: "calls generic render('network'), not the R circlize chord script"
+  - vault/material/plotcase_circos_多类别关联网络弦图/metadata.json
+  - vault/material/plotcase_circos_多类别关联网络弦图/agent_guide.md
+  - vault/material/plotcase_circos_多类别关联网络弦图/plot.py
+  - vault/material/plotcase_circos_多类别关联网络弦图/data_main.csv
+  - vault/material/plotcase_circos_多类别关联网络弦图/scripts/code.R
+  - vault/material/plotcase_circos_多类别关联网络弦图/raw/code.R
+  - vault/material/plotcase_circos_多类别关联网络弦图/outputs/rebuilt.png
+  - vault/material/plotcase_circos_多类别关联网络弦图/outputs/visual_check.json
+  - vault/dossiers/plotcase_circos_多类别关联网络弦图.yaml
+  plot_entry: calls generic render('network'), not the R circlize chord script
   data_main_profile:
     rows: 7
-    columns: ["source", "target", "weight", "source_group", "target_group", "direction", "sector_order", "sector_color", "label", "node_id", "node_label"]
-    finding: "synthetic N1-N7 edge list; not derived from raw circle.CSV"
+    columns:
+    - source
+    - target
+    - weight
+    - source_group
+    - target_group
+    - direction
+    - sector_order
+    - sector_color
+    - label
+    - node_id
+    - node_label
+    finding: synthetic N1-N7 edge list; not derived from raw circle.CSV
   source_evidence:
-    raw_matrix: "circle.CSV is a Type-by-taxon numeric association matrix"
-    source_transform: "R code melts matrix into from/to/value for circlize::chordDiagram"
+    raw_matrix: circle.CSV is a Type-by-taxon numeric association matrix
+    source_transform: R code melts matrix into from/to/value for circlize::chordDiagram
   rebuild_class:
     source_code_rebuild: false
     generic_renderer_rebuild: true
     case_level_fallback: true
     synthetic_data: true
 observed_visual_grammar:
-  family: "chord_circos"
-  structure: "single circular chord diagram with sector arcs, translucent ribbons, numeric sector labels, and external legend"
-  marks: ["sector_arc", "ribbon_chord", "numeric_sector_label", "legend_swatch"]
-  encodings: ["sector_identity", "association", "association_weight", "sector_color"]
+  family: chord_circos
+  structure: single circular chord diagram with sector arcs, translucent ribbons, numeric sector labels,
+    and external legend
+  marks: &id001
+  - sector_arc
+  - ribbon_chord
+  - numeric_sector_label
+  - legend_swatch
+  encodings: &id002
+  - sector_identity
+  - association
+  - association_weight
+  - sector_color
 inferred_visual_grammar:
-  true_source_grammar: "adjacency matrix melted to from/to/value for circlize chordDiagram"
+  true_source_grammar: adjacency matrix melted to from/to/value for circlize chordDiagram
   true_source_required_roles:
-    source: "row Type category"
-    target: "taxon column category"
-    weight: "numeric count or association magnitude"
-  current_standard_grammar: "generic network compatibility edge list"
-  mismatch: "required roles are valid for raw chord concept, but current data_main values are placeholders"
-reviewed_visual_roles:
-  source: "compatibility column; values N1-N7 are synthetic and not raw Type categories"
-  target: "compatibility column; values N1-N6 are synthetic and not raw taxa"
-  weight: "compatibility numeric value; range does not match raw count matrix"
-  source_group: "synthetic optional helper"
-  target_group: "synthetic optional helper"
-  direction: "empty optional column"
-  sector_order: "empty optional column"
-  sector_color: "empty optional column"
-  label: "empty optional column"
-  node_id: "generic renderer support field"
-  node_label: "generic renderer support field"
+    source: row Type category
+    target: taxon column category
+    weight: numeric count or association magnitude
+  current_standard_grammar: generic network compatibility edge list
+  mismatch: required roles are valid for raw chord concept, but current data_main values are placeholders
+reviewed_visual_roles: &id004
+  source: compatibility column; values N1-N7 are synthetic and not raw Type categories
+  target: compatibility column; values N1-N6 are synthetic and not raw taxa
+  weight: compatibility numeric value; range does not match raw count matrix
+  source_group: synthetic optional helper
+  target_group: synthetic optional helper
+  direction: empty optional column
+  sector_order: empty optional column
+  sector_color: empty optional column
+  label: empty optional column
+  node_id: generic renderer support field
+  node_label: generic renderer support field
 canonical_columns:
-  - "source: schema-compatible only until regenerated from raw circle.CSV"
-  - "target: schema-compatible only until regenerated from raw circle.CSV"
-  - "weight: schema-compatible only until regenerated from raw circle.CSV"
-  - "source_group and target_group: synthetic optional helpers"
-  - "direction, sector_order, sector_color, label: empty optional columns"
-  - "node_id and node_label: generic renderer support fields"
+- 'source: schema-compatible only until regenerated from raw circle.CSV'
+- 'target: schema-compatible only until regenerated from raw circle.CSV'
+- 'weight: schema-compatible only until regenerated from raw circle.CSV'
+- 'source_group and target_group: synthetic optional helpers'
+- 'direction, sector_order, sector_color, label: empty optional columns'
+- 'node_id and node_label: generic renderer support fields'
 required_data_semantics:
-  status: "partially_valid_as_schema_only"
-  source_target_weight_assessment: "true chord semantics exist in raw R concept; current data_main values are synthetic"
-  needed_for_real_rebuild: "melt raw circle.CSV into source=Type, target=taxon column, weight=count or association value"
+  status: partially_valid_as_schema_only
+  source_target_weight_assessment: true chord semantics exist in raw R concept; current data_main values
+    are synthetic
+  needed_for_real_rebuild: melt raw circle.CSV into source=Type, target=taxon column, weight=count or
+    association value
 optional_data_semantics:
-  status: "absent_or_unmaterialized"
-  missing_real_optional_roles: ["sector_order", "sector_color", "numeric_legend_mapping", "directionality", "transparency", "legend_layout"]
+  status: absent_or_unmaterialized
+  missing_real_optional_roles:
+  - sector_order
+  - sector_color
+  - numeric_legend_mapping
+  - directionality
+  - transparency
+  - legend_layout
 optional_modules:
   custom_legend:
     present_in_source: true
@@ -82,34 +111,82 @@ optional_modules:
   generic_network_renderer:
     present_in_plot_entry: true
     suitable_for_case: false
-false_positive_risks:
-  - "May be retrieved as reusable chord even though data_main is synthetic."
-  - "May be treated as source-code rebuild because rebuilt.png visually matches a cover."
-  - "source/target/weight names may hide lack of raw-to-standard lineage."
-  - "Generic network renderer would produce node-link geometry, not observed chord/circos."
+false_positive_risks: &id003
+- May be retrieved as reusable chord even though data_main is synthetic.
+- May be treated as source-code rebuild because rebuilt.png visually matches a cover.
+- source/target/weight names may hide lack of raw-to-standard lineage.
+- Generic network renderer would produce node-link geometry, not observed chord/circos.
 best_for:
-  - "Inspiration for circos chord layout with numbered sectors and external legend."
-  - "Design reference for transforming a matrix into from/to/value chord data."
+- Inspiration for circos chord layout with numbered sectors and external legend.
+- Design reference for transforming a matrix into from/to/value chord data.
 bad_for:
-  - "Direct reusable standardized chord template."
-  - "Testing source-derived source/target/weight semantics."
-  - "Clean Retinue rebuild from data_main alone."
-style_notes:
-  - "Pale high-transparency ribbons, strong sector palette, and right-side numbered legend are central to the observed visual grammar."
+- Direct reusable standardized chord template.
+- Testing source-derived source/target/weight semantics.
+- Clean Retinue rebuild from data_main alone.
+style_notes: &id005
+- Pale high-transparency ribbons, strong sector palette, and right-side numbered legend are central to
+  the observed visual grammar.
 retrieval_tier_recommendation:
-  tier: "inspiration"
-  rationale: "Strong visual example, but current standard interface is synthetic and plot.py is generic network compatibility rather than true chord rebuild."
-  exclusion_risks: ["case_level_fallback", "synthetic_data_main", "generic_renderer_entry", "source_target_weight_not_currently_source_derived"]
+  tier: inspiration
+  rationale: Strong visual example, but current standard interface is synthetic and plot.py is generic
+    network compatibility rather than true chord rebuild.
+  exclusion_risks:
+  - case_level_fallback
+  - synthetic_data_main
+  - generic_renderer_entry
+  - source_target_weight_not_currently_source_derived
 confidence:
-  overall: "high"
-  source_target_weight_verdict: "high"
-  visual_review: "high"
-  limitation: "Rplots.pdf page not deeply audited in annotator output; metadata already records fallback due poor original-code match"
+  overall: high
+  source_target_weight_verdict: high
+  visual_review: high
+  limitation: Rplots.pdf page not deeply audited in annotator output; metadata already records fallback
+    due poor original-code match
 proposed_metadata_patch:
-  retrieval_tier: "inspiration"
-  data_main_status: "synthetic_compatibility_edge_list"
-  source_target_weight_note: "Raw source supports true chord semantics after melting circle.CSV, but current data_main source/target/weight are compatibility placeholders."
+  retrieval_tier: inspiration
+  data_main_status: synthetic_compatibility_edge_list
+  source_target_weight_note: Raw source supports true chord semantics after melting circle.CSV, but current
+    data_main source/target/weight are compatibility placeholders.
 proposed_dossier_patch:
-  retrieval_tier: "inspiration"
-  data_roles_required_note: "Treat source/target/weight as schema-compatible only until data_main is regenerated from raw circle.CSV."
-
+  retrieval_tier: inspiration
+  data_roles_required_note: Treat source/target/weight as schema-compatible only until data_main is regenerated
+    from raw circle.CSV.
+image_observation:
+  image_read: true
+  panel_count: from_existing_review_not_recounted
+  layout: ''
+  marks: *id001
+  encodings: *id002
+  axes: not_separately_recorded_in_legacy_review
+  legends: not_separately_recorded_in_legacy_review
+  annotations: []
+  text_density: not_separately_recorded_in_legacy_review
+  visual_risks: *id003
+data_understanding:
+  data_read: true
+  observed_columns:
+  - source
+  - target
+  - weight
+  - source_group
+  - target_group
+  - direction
+  - sector_order
+  - sector_color
+  - label
+  - node_id
+  - node_label
+  role_mapping: *id004
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: recorded_in_evidence_or_source_script
+  entry_behavior: calls generic render('network'), not the R circlize chord script
+  hardcoded_aesthetics: *id005
+  output_behavior:
+    visual_check_ok: null
+  unsupported_features: *id003

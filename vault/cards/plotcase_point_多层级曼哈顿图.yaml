@@ -1,0 +1,55 @@
+id: plotcase_point_多层级曼哈顿图
+title: 多层级曼哈顿图
+retrieval_tier: inspiration
+one_line: Visual inspiration for CMplot-style circular multi-trait Manhattan figures.
+geometry: radial_genomic_scatter
+subtype: circular_multi_trait_manhattan_plot
+required_roles:
+- marker_id
+- chromosome
+- position
+- trait
+- score
+optional_roles:
+- chromosome_label
+- chromosome_color
+- chromosome_length
+- radial_ticks
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: true
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Visual inspiration for CMplot-style circular multi-trait Manhattan figures.
+bad_for:
+- Direct reusable template use, Cartesian scatter, or single-threshold scatter retrieval.
+image_summary: 'figure_type: circular_multi_trait_manhattan_plot; geometry: radial_genomic_scatter; layout:
+  outer chromosome ideogram plus two concentric Manhattan point tracks; marks: [''chromosome sector band'',
+  ''rotated chromosome lab…'
+data_summary: 'main_columns: [''chromosome'', ''position'', ''score'', ''feature_id'', ''trait'', ''threshold'',
+  ''highlight'', ''label'', ''ring'']; sampled_rows: 16'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- synthetic_data
+- case_level_fallback
+- generic_renderer_rebuild
+- Generic scatter plot.py is not evidence of the observed radial genomic grammar.
+- Current chromosome/position/score fields are synthetic placeholders.
+- Empty ring column hides the missing two-track structure.
+- synthetic_data_main
+- generic_renderer_entry
+- missing_real_multitrait_marker_table
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/plotcase_point_多层级曼哈顿图.yaml
+  deep_review: vault/review/deep_annotation/reviews/plotcase_point_多层级曼哈顿图.yaml
+  machine_evidence: vault/evidence/machine/plotcase_point_多层级曼哈顿图.yaml
+  evidence_pack: vault/material/plotcase_point_多层级曼哈顿图
+  preview: vault/material/plotcase_point_多层级曼哈顿图/outputs/rebuilt.png
+  entry: vault/material/plotcase_point_多层级曼哈顿图/plot.py

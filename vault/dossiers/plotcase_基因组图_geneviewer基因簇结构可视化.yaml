@@ -325,48 +325,30 @@ exclusion_risks:
 - synthetic_data_main
 - generic_renderer_entry
 - missing_source_data_lineage
-reviewed_visual_grammar:
-  family: genome_cluster_structure
-  structure: two horizontal gene-cluster tracks with baselines, directional arrow
-    genes, top legend, species/locus footers, right-side scale bars, and hidden axes
-  marks:
-  - gene_arrow
-  - baseline
-  - gene_label
-  - legend_swatch
-  - cluster_footer
-  - scale_bar
-  encodings:
-  - genomic_position
-  - gene_span
-  - strand_direction
-  - functional_class_color
-  - cluster_identity
-  - gene_name
-  grammar_id: two_track_gene_cluster_structure
-  optional_modules:
-    gene_labels:
-      status: present_in_source_placeholder_only_in_standard_data
-    cluster_footer:
-      status: present_in_source_missing_from_standard_data
-    class_legend_palette:
-      status: present_in_source_missing_from_standard_data
-    synteny_or_similarity_links:
-      status: not_observed
-    generic_scatter_renderer:
-      status: not_suitable
-  false_positive_risks:
-  - Genome columns are schema-compatible but synthetic.
-  - rebuilt.png matches only because it is a case-level cover fallback.
-  - plot.py would not regenerate the observed gene-arrow figure from data_main.csv.
-  - Empty link_id/similarity columns do not prove synteny or homology-link support.
-reviewed_visual_roles:
-  segment_id: cluster/segment role; current values are synthetic
-  feature_id: gene identifier; current values are placeholders
-  start: genomic start coordinate; current values are synthetic
-  end: genomic end coordinate; current values are synthetic
-  strand: arrow direction
-  feature_class: functional class color; current values do not preserve observed legend
-  label: gene label; current values are placeholders
-  link_id: empty optional field; no synteny/link marks observed
-  similarity: empty optional field; no similarity ribbons observed
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_基因组图_geneviewer基因簇结构可视化.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_基因组图_geneviewer基因簇结构可视化.yaml
+  geometry: null
+  subtype: two_track_gene_cluster_structure
+  required_roles:
+  - segment_id
+  - feature_id
+  - start
+  - end
+  - strand
+  - feature_class
+  - label
+  optional_roles:
+  - species_footer
+  - locus_subtitle
+  - legend_class_labels
+  - class_palette
+  - scale_bar_position
+  - cluster_reverse_flag
+  tier: inspiration
+  confidence:
+    overall: high
+    visual_review: high
+    source_lineage: high
+    limitation: Original geneviewer widget cannot be statically rebuilt from declared
+      standard data.

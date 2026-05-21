@@ -1,0 +1,149 @@
+case_id: plotmaster_047散点饼图
+paths:
+  case: vault/material/plotmaster_047散点饼图
+  metadata: vault/material/plotmaster_047散点饼图/metadata.json
+  agent_guide: vault/material/plotmaster_047散点饼图/agent_guide.md
+  entry: vault/material/plotmaster_047散点饼图/plot.py
+  rebuilt_png: vault/material/plotmaster_047散点饼图/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: medium
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_047散点饼图/metadata.json
+    exists: true
+    size_bytes: 5843
+  agent_guide:
+    path: vault/material/plotmaster_047散点饼图/agent_guide.md
+    exists: true
+    size_bytes: 1703
+  data_main:
+    path: vault/material/plotmaster_047散点饼图/data_main.csv
+    exists: true
+    size_bytes: 67675
+  data_optional:
+    path: vault/material/plotmaster_047散点饼图/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_047散点饼图/plot.py
+    exists: true
+    size_bytes: 226
+  rebuilt_png:
+    path: vault/material/plotmaster_047散点饼图/outputs/rebuilt.png
+    exists: true
+    size_bytes: 60790
+image:
+  exists: true
+  size_bytes: 60790
+  width: 1008
+  height: 720
+  mean_luma: 248.7629
+  stddev_luma: 30.0603
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 200
+    column_summary:
+      x:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 186
+      y:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      group:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 11
+      label:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 11
+      facet:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 8
+      source:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 186
+      target:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 200
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_047散点饼图/plot.py
+  - vault/material/plotmaster_047散点饼图/scripts/codes.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - 047散点饼图
+  metadata_geometry: scatter
+  geometry_keyword_hits:
+    scatter:
+    - scatter
+    - 散点
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

@@ -1,0 +1,57 @@
+id: figureya_survival_FigureYa30nomogram_update
+title: FigureYa30nomogram_update
+retrieval_tier: support
+one_line: Regression or Cox survival nomogram layouts.
+geometry: nomogram
+subtype: cox_regression_risk_nomogram
+required_roles:
+- time
+- event
+- predictor
+- predictor_value
+- points
+- total_points
+- prediction_time
+- predicted_probability
+optional_roles:
+- display_names
+- significance
+- intervals
+- axis_ticks
+capabilities:
+  highlight: false
+  detail_panel: false
+  annotation_track: false
+  uncertainty: false
+  composition: false
+  batch: true
+best_for:
+- Regression or Cox survival nomogram layouts.
+- Selected-observation scoring overlays.
+- Risk score to probability readout figures.
+bad_for:
+- Scatter/manifold plots.
+- Network or source-target-weight diagrams.
+- CSV-only rebuilds without model-to-score mappings.
+image_summary: 'figure_family: nomogram; subtype: cox_regression_risk_nomogram; layout: [''stacked horizontal
+  scoring axes'', ''left variable label rail'', ''top Points scale'', ''bottom probability axes'']; marks:
+  [''horizontal rule axes'', ''de…'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
+code_summary: 'entry: plot.py; backend_hints: []'
+risk_flags:
+- generic_renderer_rebuild
+- Do not retrieve as PCA, 3D manifold, scatter, or generic line chart.
+- Do not interpret source/target/weight as graph edges.
+- Do not assume data_main.csv alone can regenerate the observed nomogram.
+confidence:
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+read_next:
+  card: vault/cards/figureya_survival_FigureYa30nomogram_update.yaml
+  deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa30nomogram_update.yaml
+  machine_evidence: vault/evidence/machine/figureya_survival_FigureYa30nomogram_update.yaml
+  evidence_pack: vault/material/figureya_survival_FigureYa30nomogram_update
+  preview: vault/material/figureya_survival_FigureYa30nomogram_update/outputs/rebuilt.png
+  entry: vault/material/figureya_survival_FigureYa30nomogram_update/plot.py

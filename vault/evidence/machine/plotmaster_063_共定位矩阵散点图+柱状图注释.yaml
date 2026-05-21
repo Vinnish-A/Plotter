@@ -1,0 +1,155 @@
+case_id: plotmaster_063_共定位矩阵散点图+柱状图注释
+paths:
+  case: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释
+  metadata: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/metadata.json
+  agent_guide: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/agent_guide.md
+  entry: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/plot.py
+  rebuilt_png: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/outputs/rebuilt.png
+build:
+  status: build_success
+  language: Python
+  entry: plot.py
+  output: outputs/rebuilt.png
+  complexity_mode: high
+vault_status:
+  live: true
+  folded: false
+  restored_from_fold: false
+  canonical_case: null
+  reason: null
+rebuild_class:
+  source_code_rebuild: true
+  generic_renderer_rebuild: true
+  case_level_fallback: false
+  synthetic_data: false
+files:
+  metadata:
+    path: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/metadata.json
+    exists: true
+    size_bytes: 3553
+  agent_guide:
+    path: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/agent_guide.md
+    exists: true
+    size_bytes: 1760
+  data_main:
+    path: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/data_main.csv
+    exists: true
+    size_bytes: 4459
+  data_optional:
+    path: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/data_optional.csv
+    exists: false
+    size_bytes: 0
+  entry:
+    path: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/plot.py
+    exists: true
+    size_bytes: 255
+  rebuilt_png:
+    path: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/outputs/rebuilt.png
+    exists: true
+    size_bytes: 232931
+image:
+  exists: true
+  size_bytes: 232931
+  width: 1872
+  height: 864
+  mean_luma: 237.1096
+  stddev_luma: 39.5248
+  blank_like: false
+data:
+  main:
+    exists: true
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sampled_rows: 43
+    column_summary:
+      x:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+      y:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+      value:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+      group:
+        kind: empty
+        missing_rate_sample: 1.0
+        cardinality_sample: 0
+      label:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+      facet:
+        kind: categorical
+        missing_rate_sample: 0.0
+        cardinality_sample: 5
+      source:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+      target:
+        kind: text
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+      weight:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+      lower:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+      upper:
+        kind: quantitative
+        missing_rate_sample: 0.0
+        cardinality_sample: 43
+  optional:
+    exists: false
+    columns: []
+    sampled_rows: 0
+    column_summary: {}
+code:
+  language: Python
+  entry: plot.py
+  script_paths:
+  - vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/plot.py
+  - vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/scripts/codes.R
+  backend_hints: []
+  has_absolute_path_hint: false
+  has_install_hint: false
+weak_hints:
+  title_terms:
+  - '063'
+  - 共定位矩阵散点图
+  - 柱状图注释
+  metadata_geometry: heatmap
+  geometry_keyword_hits:
+    heatmap:
+    - heatmap
+    - 矩阵
+    scatter:
+    - 散点
+    bar:
+    - 柱状
+  optional_module_hint_columns:
+  - label
+  - group
+  - facet
+  - lower
+  - upper
+  - source
+  - target
+  - weight

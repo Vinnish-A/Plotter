@@ -307,47 +307,25 @@ exclusion_risks:
 - synthetic data_main.csv
 - generic renderer
 - missing source-derived optional modules
-reviewed_visual_grammar:
-  plot_family: single-cell clustered dot heatmap
-  structure:
-  - dot matrix body
-  - row and column dendrograms
-  - row and column annotation strips
-  - gene labels
-  - cell-subtype labels
-  - color and size legends
-  marks:
-  - matrix circles
-  - categorical annotation tiles
-  - dendrogram branches
-  - legend swatches
-  encodings:
-    color: continuous log-count expression
-    size: percent of cells
-    rows: marker genes
-    columns: cell groups
-  grammar_id: single_cell_clustered_dot_heatmap
-  optional_modules:
-    dendrograms:
-      observed: true
-      available_from_main_csv: false
-    annotation_tracks:
-      observed: true
-      available_from_main_csv: only synthetic placeholders
-    label_layer:
-      observed: true
-      available_from_main_csv: false
-  false_positive_risks:
-  - Current data_main.csv is synthetic and must not be read as source-derived expression
-    data.
-  - Empty label/facet fields do not prove optional label or facet support.
-  - Case is fallback/generic, not a clean scDotPlot rebuild.
-reviewed_visual_roles:
-  feature_id: marker gene row identity
-  cell_group: cell subtype/cluster column identity
-  expression_value: continuous expression value encoded by color
-  percent_cells: prevalence encoded by dot size
-  feature_annotation: row annotation class
-  cell_group_annotation: column annotation class
-  current_row_id_column_id: synthetic placeholders only
-  current_label_facet: empty compatibility fields
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图.yaml
+  geometry: null
+  subtype: single_cell_clustered_dot_heatmap
+  required_roles:
+  - feature_id
+  - cell_group
+  - expression_value
+  - percent_cells
+  optional_roles:
+  - feature_annotation
+  - cell_group_annotation
+  - dendrogram_or_order
+  - palette
+  - labels
+  tier: inspiration
+  confidence:
+    overall: high
+    visual_observation: high
+    source_rebuild_assessment: high
+    data_semantics: medium

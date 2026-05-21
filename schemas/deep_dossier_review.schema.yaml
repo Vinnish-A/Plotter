@@ -19,6 +19,9 @@ required:
   - style_notes
   - retrieval_tier_recommendation
   - confidence
+  - image_observation
+  - data_understanding
+  - code_understanding
 properties:
   case_id:
     type: string
@@ -80,6 +83,65 @@ properties:
           type: string
   confidence:
     type: object
+  image_observation:
+    type: object
+    required:
+      - image_read
+      - panel_count
+      - layout
+      - marks
+      - encodings
+      - axes
+      - legends
+      - annotations
+      - text_density
+      - visual_risks
+    properties:
+      image_read:
+        type: boolean
+      panel_count: {}
+      layout: {}
+      marks: {}
+      encodings: {}
+      axes: {}
+      legends: {}
+      annotations: {}
+      text_density: {}
+      visual_risks: {}
+  data_understanding:
+    type: object
+    required:
+      - data_read
+      - observed_columns
+      - role_mapping
+      - derived_columns
+      - false_positive_columns
+      - missing_optional_data
+    properties:
+      data_read:
+        type: boolean
+      observed_columns: {}
+      role_mapping: {}
+      derived_columns: {}
+      false_positive_columns: {}
+      missing_optional_data: {}
+  code_understanding:
+    type: object
+    required:
+      - code_read
+      - backend
+      - entry_behavior
+      - hardcoded_aesthetics
+      - output_behavior
+      - unsupported_features
+    properties:
+      code_read:
+        type: boolean
+      backend: {}
+      entry_behavior: {}
+      hardcoded_aesthetics: {}
+      output_behavior: {}
+      unsupported_features: {}
   proposed_metadata_patch:
     type: object
   proposed_dossier_patch:

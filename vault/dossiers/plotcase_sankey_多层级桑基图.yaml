@@ -299,45 +299,25 @@ retrieval_rationale: Good reusable staged-flow grammar; recommended as support r
   than core until visual audit confirms exact output fidelity.
 exclusion_risks:
 - stage semantics lost by generic network retrieval
-reviewed_visual_grammar:
-  figure_type: multi_stage_sankey_alluvial
-  layout:
-  - ordered stages
-  - nodes within each stage
-  - ribbons between adjacent stages
-  marks:
-  - weighted ribbons
-  - node/stratum blocks
-  - labels
-  encodings:
-    stage: x or ordered stage position
-    node: stratum/category within a stage
-    value: ribbon thickness
-    group: optional color grouping
-  geometry: sankey
-  subtype: multi_stage_alluvial
-  grammar_id: multi_level_sankey
-  optional_modules:
-    group_coloring:
-      status: supported
-    manual_ordering:
-      status: supported
-    node_label_overrides:
-      status: supported
-    network_weighted_edges:
-      status: not_supported_as_network_semantics
-  false_positive_risks:
-  - Do not collapse stage/node/next_stage/next_node into generic source/target unless
-    preserving stage semantics.
-  - Do not retrieve as a free-form network graph.
-reviewed_visual_roles:
-  stage: current ordered stage
-  node: current stage category
-  next_stage: target ordered stage
-  next_node: target stage category
-  value: flow magnitude mapped to ribbon width
-  flow_id: optional path identifier for continuity
-  group: optional flow group/color
-  node_color: optional explicit node color
-  label: optional display label
-  order: optional stage or node ordering
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_sankey_多层级桑基图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_sankey_多层级桑基图.yaml
+  geometry: multi_stage_sankey_alluvial
+  subtype: multi_level_sankey
+  required_roles:
+  - current_stage
+  - current_node
+  - next_stage
+  - next_node
+  - flow_value
+  optional_roles:
+  - flow_id
+  - group
+  - node_color
+  - order
+  tier: support
+  confidence:
+    overall: 0.87
+    visual_grammar: 0.9
+    data_roles: 0.88
+    retrieval_tier: 0.85

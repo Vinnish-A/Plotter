@@ -1,0 +1,52 @@
+id: plotmaster_009甘特图
+title: 009甘特图
+retrieval_tier: support
+one_line: network asset for 009甘特图
+geometry: network
+subtype: node_link_network
+required_roles:
+- x
+- y
+- value
+optional_roles:
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+capabilities:
+  highlight: true
+  detail_panel: false
+  annotation_track: false
+  uncertainty: true
+  composition: true
+  batch: true
+best_for:
+- 009甘特图
+- 'network/node_link_network grammar with roles: x, y, value'
+bad_for:
+- Missing required roles
+- Unbounded labels without focus selection
+- Using optional modules without matching data
+image_summary: 'exists: True; size_bytes: 36274; width: 1440; height: 1008'
+data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
+  ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
+code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
+risk_flags:
+- generic_renderer_rebuild
+- image_not_model_reviewed
+- roles_machine_inferred
+confidence:
+  image_understanding: low
+  data_roles: low
+  code_understanding: low
+read_next:
+  card: vault/cards/plotmaster_009甘特图.yaml
+  deep_review: null
+  machine_evidence: vault/evidence/machine/plotmaster_009甘特图.yaml
+  evidence_pack: vault/material/plotmaster_009甘特图
+  preview: vault/material/plotmaster_009甘特图/outputs/rebuilt.png
+  entry: vault/material/plotmaster_009甘特图/plot.py
