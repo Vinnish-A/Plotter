@@ -1,0 +1,23 @@
+{
+  "case": "/mnt/f/plotter/retinue/generated/agent_scenarios/global_local_focus",
+  "output": "outputs/rebuilt.png",
+  "ok": true,
+  "checks": {
+    "file_exists": true,
+    "non_empty_image": true,
+    "minimum_resolution": true,
+    "not_blank": true,
+    "width": 2052,
+    "height": 1188,
+    "mean_stddev": 34.2592
+  },
+  "agent_self_review_present": true,
+  "agent_self_review_ok": true,
+  "aesthetic_checks": {
+    "requires_agent_self_review": true,
+    "panel_hierarchy": true,
+    "panel_balance": true,
+    "information_density": true,
+    "errors": []
+  }
+}

@@ -1,0 +1,67 @@
+type: object
+required:
+  - image_opened
+  - overall_pass
+  - aesthetic_pass
+  - hierarchy_pass
+  - panel_balance_pass
+  - information_density_pass
+  - main_visual_claim
+  - primary_panel
+  - support_panels
+  - issues_found
+  - fixes_applied
+  - remaining_risks
+properties:
+  image_opened:
+    type: boolean
+  overall_pass:
+    type: boolean
+  aesthetic_pass:
+    type: boolean
+  hierarchy_pass:
+    type: boolean
+  panel_balance_pass:
+    type: boolean
+  information_density_pass:
+    type: boolean
+  main_visual_claim:
+    type: string
+  primary_panel:
+    type: object
+    required: [id, role, information_density, relative_area, justification]
+    properties:
+      id:
+        type: string
+      role:
+        type: string
+      information_density:
+        type: string
+      relative_area:
+        type: number
+      justification:
+        type: string
+  support_panels:
+    type: array
+    items:
+      type: object
+      required: [id, role, information_density, relative_area, area_justified, justification]
+      properties:
+        id:
+          type: string
+        role:
+          type: string
+        information_density:
+          type: string
+        relative_area:
+          type: number
+        area_justified:
+          type: boolean
+        justification:
+          type: string
+  issues_found:
+    type: array
+  fixes_applied:
+    type: array
+  remaining_risks:
+    type: array

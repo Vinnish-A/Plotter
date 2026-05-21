@@ -1,0 +1,37 @@
+{
+  "image_opened": true,
+  "overall_pass": true,
+  "aesthetic_pass": true,
+  "hierarchy_pass": true,
+  "panel_balance_pass": true,
+  "information_density_pass": true,
+  "main_visual_claim": "Class_07 occupies the high signed-effect and high-correlation region globally, and its sample-level values show a coherent positive internal trend that supports the highlighted global point.",
+  "primary_panel": {
+    "id": "global_class_relationship",
+    "role": "Primary global class-level scatter showing signed effect against correlation with Class_07 highlighted.",
+    "information_density": "medium",
+    "relative_area": 0.62,
+    "justification": "The global panel carries the main comparison across all classes, the focus location, sample-size encoding, and supporting FDR outline."
+  },
+  "support_panels": [
+    {
+      "id": "class_07_sample_support",
+      "role": "Subordinate detail panel expanding the highlighted class into sample-level effect and response values by subgroup.",
+      "information_density": "medium",
+      "relative_area": 0.34,
+      "area_justified": true,
+      "justification": "The support panel has eighteen sample marks, subgroup coding, a fitted trend, and the class-level point, so its smaller right-side area is justified."
+    }
+  ],
+  "issues_found": [
+    "First render used an overlong headline that clipped at the right edge and crowded the panel titles.",
+    "A low-value Class_11 text label competed with the legend in the lower-right region of the global panel."
+  ],
+  "fixes_applied": [
+    "Shortened the headline and increased vertical separation between the header strip and panel titles.",
+    "Removed the crowded Class_11 text label while retaining the global point and group legend."
+  ],
+  "remaining_risks": [
+    "FDR is intentionally limited to a supporting outline and label, so viewers should not interpret it as the primary encoding."
+  ]
+}

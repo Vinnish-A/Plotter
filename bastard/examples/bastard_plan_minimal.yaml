@@ -1,0 +1,30 @@
+bastard_plan:
+  goal: show global class relationship and expand one focused class with local sample evidence
+  borrowed_genes:
+    - focus_halo
+    - overview_detail_composition
+    - restrained_connector
+  required_data:
+    - entity
+    - x
+    - y
+    - focus_entity
+  optional_data:
+    - sample_x
+    - sample_y
+    - subgroup
+  composition:
+    primary_panel: global_overview
+    support_panels:
+      - id: focus_detail
+        role: sample_level_evidence
+        relative_area: smaller_than_primary
+  aesthetic_constraints:
+    - strongest_chroma_on_focus_data
+    - detail_panel_subordinate_unless_dense
+    - annotation_tracks_do_not_own_axes
+  retinue_request:
+    output_dir: retinue/generated/agent_scenarios/<scenario_id>
+    required_outputs:
+      - outputs/rebuilt.png
+      - outputs/agent_self_review.json

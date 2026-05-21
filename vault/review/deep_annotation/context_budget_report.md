@@ -75,6 +75,21 @@ All 156 deep-reviewed material assets were slimmed through `apply_deep_annotatio
 - `deep_review`: `vault/review/deep_annotation/reviews/<case_id>.yaml`
 - `evidence_pack`: `vault/material/<case_id>/` files read only on demand
 
+## Agent Scenario Protocol
+
+- Agent scenario protocol added under `tests/agent_scenarios/`.
+- Real figure tests must run inside a subagent that receives only the request, data paths, and output
+  directory.
+- Deterministic pytest coverage remains a tool regression layer, not proof of real Agent plotting
+  ability.
+- Retinue self-review validation added through `schemas/agent_self_review.schema.yaml`,
+  `retinue/tools/validate_agent_self_review.py`, and
+  `retinue/tools/visual_check.py --require-agent-self-review`.
+- Bastard is repositioned as a compact visual grammar and mutation skill pack under
+  `bastard/SKILL.md` and `bastard/grammar/`; Retinue continues to own generated outputs.
+- Actual subagent run status: executed for `global_local_focus`; output recorded in
+  `vault/review/agent_runs/global_local_focus_run.md`.
+
 ## Remaining Risks
 
 - Cards with `image_not_model_reviewed`: 0

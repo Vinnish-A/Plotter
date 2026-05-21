@@ -75,6 +75,8 @@ def test_ui_manifest_filters_folded_assets(tmp_path: Path) -> None:
 
 
 def test_scene_probe_recommend_materialize_build_visual_check_loop() -> None:
+    # Deterministic closed-loop tool regression only. Real plotting capability is tested by
+    # subagent scenario runs under tests/agent_scenarios/.
     work = REPO / "tmp" / "closed_loop_test"
     if work.exists():
         shutil.rmtree(work)

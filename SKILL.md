@@ -7,7 +7,7 @@ Always route figure work through the five modules:
 1. `Cabal` parses intent, creates a Scene Card, scores candidates, and decides whether a figure is worth drawing.
 2. `Vault` stores accepted visual bloodlines as dossiers, previews, examples, successes, and failures.
 3. `Graft` converts foreign plotting code into reproducible, normalized dossiers.
-4. `Bastard` recombines visual genes into focused, composite, or mutated figure variants.
+4. `Bastard` plans visual-gene recombination, focus expansion, composition, and mutation variants.
 5. `Retinue` executes the selected plot, checks outputs, exports files, and records reproducibility metadata.
 
 For material cases, obey the Linux build contract:
@@ -34,3 +34,13 @@ For figure generation and rebuilt images, obey these visual architecture constra
 - In annotated heatmap-like figures, title sits above annotation strips; top column annotation strips should sit close to the body with a small rhythmic gap; row labels sit outside left annotation strips; when bottom tracks encode body columns, column labels sit below those bottom tracks while staying aligned to the body.
 - Annotation tracks are auxiliary. They attach to body rows or columns but do not own the primary coordinate system.
 - Silence duplicate axes. Pure annotation strips should usually have no local ticks or axis text. Summary panels keep only their own measurement axis and remove repeated row or column identity ticks.
+
+For real Agent plotting scenarios:
+
+- Run the scenario inside a subagent.
+- Give the subagent only the request, data paths, and output directory.
+- Do not provide a preselected template, mapping request, or plot script.
+- Require the subagent to create code, render `outputs/rebuilt.png`, open the image, self-check visual hierarchy and information density, revise if needed, and write `outputs/agent_self_review.json`.
+- Validate with `retinue/tools/visual_check.py --require-agent-self-review`.
+
+Deterministic unit tests are tool regressions, not proof of real Agent plotting ability.

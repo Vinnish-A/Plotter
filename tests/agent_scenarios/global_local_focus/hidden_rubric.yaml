@@ -1,0 +1,15 @@
+must_have:
+  - main_panel_global_relationship
+  - class_07_prominent
+  - subordinate_sample_detail
+  - agent_self_review_json
+fail_if:
+  - detail_panel_larger_than_main_without_high_information_density
+  - decorative_panel_dominates_data
+  - no_image_opened_self_check
+  - default_color_cycle_only
+  - p_value_used_as_primary_claim
+preferred:
+  - connector_or_callout_between_global_focus_and_detail
+  - calm_support_panels
+  - clear title_above_all_panels

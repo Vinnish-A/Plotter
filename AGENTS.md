@@ -19,7 +19,7 @@ This repository has 5 core architecture modules. Treat these names as ownership 
 2. `retinue/`: rebuild and reproducibility. Retinue validates case contracts, runs standard scripts, renders `outputs/rebuilt.png`, records build status, and keeps batch rebuilds moving after case-level failures.
 3. `cabal/`: decision and review. Cabal parses intent, builds Scene Cards, routes work, scores candidates, checks fairness, rejects unsuitable figures, records manual review, and folds visually redundant assets.
 4. `vault/`: accepted asset memory. Vault stores live standardized cases, review evidence, folded assets, dossiers, examples, preview caches, success records, and failure records.
-5. `bastard/`: figure-generation and mutation. Bastard extracts visual genes, recombines compatible grammars, creates guided mutations, runs agent figure tests, and sends acceptable variants back through Cabal and Retinue before Vault admission.
+5. `bastard/`: visual grammar and mutation planning. Bastard extracts visual genes, recombines compatible grammars, plans focus expansion and guided mutations, and identifies aesthetic risks. It does not execute plot scripts or own generated outputs.
 
 `ui/` is a preview and manual review surface. It is not a sixth core cognitive module.
 
@@ -32,7 +32,7 @@ Graft intake -> Retinue rebuild -> Cabal review -> Vault admission -> UI preview
 Generated variants use:
 
 ```text
-Vault source -> Bastard generation -> Cabal review -> Retinue rebuild -> Vault admission -> UI preview
+Vault source -> Bastard planning -> Cabal review -> Retinue rebuild -> Vault admission -> UI preview
 ```
 
 The target closed loop is:
@@ -118,6 +118,8 @@ graft/tools/      intake, CSV conversion, and case standardization
 retinue/tools/    rebuild, validation, rendering, export, and reproducibility checks
 cabal/tools/      grouping, visual grammar review, scoring, folding, and manual review records
 bastard/tests/    Agent figure-generation tests and guided mutation checks
+bastard/grammar/  compact visual grammar and mutation planning rules
+retinue/generated/ generated outputs owned by Retinue
 ui/               Web UI, manifest builder, and review server
 vault/material/   accepted asset storage only
 ```
@@ -190,6 +192,24 @@ retinue/generated/output_pngs/
 Use `{case_id}.png` as the filename. The runner should clear stale PNGs from this folder at the start of each run, then repopulate it from the current test outputs. This folder is the quick visual review gallery for generated test figures; do not treat it as the source of truth for reproducibility.
 
 The current test suite should cover template use, template composition, and guided mutation across heatmap annotations, global-local focus expansion, 3D manifold projections, circular chord diagrams, staged alluvial flows, comparative genome structures, stacked bar-line-heatstrip compositions, grouped forest intervals, and network-plus-enrichment layouts.
+
+## Agent Scenario Tests
+
+Real plotting capability must be tested through subagents, not only deterministic scripts.
+
+For an Agent scenario:
+
+1. Spawn a subagent.
+2. Give it only the request file, data paths, and output directory.
+3. Do not give it a preselected template, mapping request, or `plot.py`.
+4. Let it inspect `vault/index.jsonl`, `vault/cards/`, `bastard/SKILL.md`, `bastard/grammar/`, and Retinue tools if it chooses.
+5. Require it to create its own plotting code and render `outputs/rebuilt.png`.
+6. Require it to open the generated image, perform model-based visual self-check, revise up to two times if needed, and write `outputs/agent_self_review.json`.
+7. Validate the run with `retinue/tools/visual_check.py <case_dir> --require-agent-self-review --json`.
+
+Unit tests and deterministic generated galleries are tool regressions. They are useful, but they are not proof that Plotter can satisfy a user request as an Agent-facing auxiliary framework.
+
+Bastard participates in Agent scenarios by supplying compact visual grammar, focus expansion, composition, panel-balance, and mutation-planning rules. Retinue remains responsible for execution, generated outputs, visual checks, exports, and manifests.
 
 ## Output Selection
 

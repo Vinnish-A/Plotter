@@ -11,6 +11,8 @@ from typing import Any
 
 from PIL import Image, ImageStat
 
+from validate_agent_self_review import validate_path
+
 
 def check_image(path: Path, min_width: int, min_height: int) -> dict[str, Any]:
     checks: dict[str, Any] = {
@@ -36,12 +38,38 @@ def check_image(path: Path, min_width: int, min_height: int) -> dict[str, Any]:
     return checks
 
 
-def run_visual_check(case_dir: Path, output: str = "outputs/rebuilt.png", min_width: int = 400, min_height: int = 300) -> dict[str, Any]:
+def run_visual_check(
+    case_dir: Path,
+    output: str = "outputs/rebuilt.png",
+    min_width: int = 400,
+    min_height: int = 300,
+    require_agent_self_review: bool = False,
+) -> dict[str, Any]:
     output_path = case_dir / output
     checks = check_image(output_path, min_width, min_height)
     required = ["file_exists", "non_empty_image", "minimum_resolution", "not_blank"]
-    ok = all(bool(checks.get(name)) for name in required)
-    result = {"case": str(case_dir), "output": output, "ok": ok, "checks": checks}
+    image_ok = all(bool(checks.get(name)) for name in required)
+    self_review_path = case_dir / "outputs" / "agent_self_review.json"
+    self_review = validate_path(self_review_path) if require_agent_self_review or self_review_path.exists() else {"ok": None, "errors": []}
+    agent_self_review_present = self_review_path.exists()
+    agent_self_review_ok = bool(self_review.get("ok")) if require_agent_self_review or agent_self_review_present else None
+    aesthetic_checks = {
+        "requires_agent_self_review": require_agent_self_review,
+        "panel_hierarchy": agent_self_review_ok if require_agent_self_review or agent_self_review_present else None,
+        "panel_balance": agent_self_review_ok if require_agent_self_review or agent_self_review_present else None,
+        "information_density": agent_self_review_ok if require_agent_self_review or agent_self_review_present else None,
+        "errors": self_review.get("errors", []),
+    }
+    ok = image_ok and (agent_self_review_ok is True if require_agent_self_review else True)
+    result = {
+        "case": str(case_dir),
+        "output": output,
+        "ok": ok,
+        "checks": checks,
+        "agent_self_review_present": agent_self_review_present,
+        "agent_self_review_ok": agent_self_review_ok,
+        "aesthetic_checks": aesthetic_checks,
+    }
     (case_dir / "outputs").mkdir(exist_ok=True)
     (case_dir / "outputs" / "visual_check.json").write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return result
@@ -53,9 +81,16 @@ def main() -> int:
     parser.add_argument("--output", default="outputs/rebuilt.png")
     parser.add_argument("--min-width", type=int, default=400)
     parser.add_argument("--min-height", type=int, default=300)
+    parser.add_argument("--require-agent-self-review", action="store_true")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
-    result = run_visual_check(args.case_dir.resolve(), args.output, args.min_width, args.min_height)
+    result = run_visual_check(
+        args.case_dir.resolve(),
+        args.output,
+        args.min_width,
+        args.min_height,
+        args.require_agent_self_review,
+    )
     print(json.dumps(result, indent=2, ensure_ascii=False) if args.json else ("OK" if result["ok"] else "FAILED"))
     return 0 if result["ok"] else 1
 

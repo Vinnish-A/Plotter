@@ -16,12 +16,14 @@ modules:
     intake_root: graft/intake
     tools: graft/tools
   bastard:
-    role: visual_gene_recombination
+    role: compact_visual_grammar_recombination_and_mutation_planning
+    skill: bastard/SKILL.md
+    grammar: bastard/grammar
     tests: bastard/tests
-    generated: bastard/generated
   retinue:
     role: execution_rendering_export
     tools: retinue/tools
+    generated: retinue/generated
 
 surfaces:
   ui:
