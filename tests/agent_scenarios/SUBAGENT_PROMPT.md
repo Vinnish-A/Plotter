@@ -7,12 +7,13 @@ Inputs:
 - Read the provided request file.
 - Read only the provided data files.
 - Write all outputs under the provided output directory.
+- Before planning or plotting, read `styles/supervisor_image_generation_preferences.md`.
 
 Rules:
 
 - Decide whether to use Template Mode or Bastard Mode.
 - You may inspect `vault/index.jsonl`, `vault/cards/`, `bastard/SKILL.md`, `bastard/grammar/`,
-  and Retinue tools.
+  `styles/supervisor_image_generation_preferences.md`, and Retinue tools.
 - Do not assume a preselected template, mapping request, or existing `plot.py`.
 - Create your own plotting code and render `outputs/rebuilt.png`.
 - Open `outputs/rebuilt.png` yourself and judge aesthetics, readability, role hierarchy, panel

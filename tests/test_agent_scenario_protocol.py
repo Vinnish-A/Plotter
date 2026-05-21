@@ -66,6 +66,10 @@ def write_nonblank_png(path: Path) -> None:
 def test_agent_scenario_protocol_files_exist() -> None:
     assert (REPO / "tests" / "agent_scenarios" / "README.md").exists()
     assert (REPO / "tests" / "agent_scenarios" / "SUBAGENT_PROMPT.md").exists()
+    preferences = REPO / "styles" / "supervisor_image_generation_preferences.md"
+    assert preferences.exists()
+    prompt = (REPO / "tests" / "agent_scenarios" / "SUBAGENT_PROMPT.md").read_text(encoding="utf-8")
+    assert str(preferences.relative_to(REPO)) in prompt
     scenario = REPO / "tests" / "agent_scenarios" / "global_local_focus"
     assert (scenario / "request.md").exists()
     assert (scenario / "data" / "summary.csv").exists()
@@ -73,6 +77,7 @@ def test_agent_scenario_protocol_files_exist() -> None:
     assert (scenario / "hidden_rubric.yaml").exists()
     agents = (REPO / "AGENTS.md").read_text(encoding="utf-8")
     assert "Real plotting capability must be tested through subagents" in agents
+    assert str(preferences.relative_to(REPO)) in agents
 
 
 def test_validate_agent_self_review_accepts_passing_example(tmp_path: Path) -> None:

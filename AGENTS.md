@@ -166,6 +166,9 @@ Image similarity scores are useful for finding problems, but they do not replace
 
 Generated figures must follow the same visual architecture rules used for Vault rebuilds and Agent tests.
 
+- Before generating any new figure, read `styles/supervisor_image_generation_preferences.md`. It is
+  the default supervisor policy for toolchain choice, concise text, one-title figures, axis naming,
+  line width, point size, text size, color emphasis, panel hierarchy, and Agent self-check.
 - Treat each output as one independent figure unit. Internal composition is allowed, but the figure should not require A/B/C/D subplot labels to be understandable.
 - Define the main data body first, then place annotation tracks, summaries, legends, labels, callouts, and focus regions around it.
 - Meaningful elements must not overlap or occlude each other. This includes data marks, labels, tick text, legends, colorbars, annotation labels, connectors, and structural borders.

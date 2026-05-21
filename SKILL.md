@@ -2,6 +2,9 @@
 
 Use this repository as a scientific figure standardization and generation system.
 
+Before generating any new figure, read and follow
+`styles/supervisor_image_generation_preferences.md`.
+
 Always route figure work through the five modules:
 
 1. `Cabal` parses intent, creates a Scene Card, scores candidates, and decides whether a figure is worth drawing.
@@ -24,6 +27,9 @@ Build status values are `pending`, `standardized`, `build_success`, `build_faile
 
 For figure generation and rebuilt images, obey these visual architecture constraints:
 
+- The supervisor preferences in `styles/supervisor_image_generation_preferences.md` are the default
+  generation policy for toolchain choice, text brevity, title use, line width, point size, text size,
+  color emphasis, and panel hierarchy.
 - Treat each image as one independent figure unit, even when it contains internal composition.
 - Define the main data body first. Place annotation tracks, summaries, labels, legends, and callouts relative to that body.
 - Do not overlap or occlude meaningful elements. Text may be embedded only in genuine empty space.

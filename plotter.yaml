@@ -3,6 +3,7 @@ project:
   purpose: external_visual_cognition_system
   machine_entry: metadata.json
   agent_entry: agent_guide.md
+  generation_preferences: styles/supervisor_image_generation_preferences.md
 
 modules:
   cabal:

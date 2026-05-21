@@ -2,6 +2,9 @@
 
 Bastard is Plotter's compact visual grammar and mutation skill pack.
 
+Before planning a generated figure, read
+`styles/supervisor_image_generation_preferences.md`.
+
 It helps an Agent plan how to recombine figure bloodlines, but it does not execute plot scripts and
 does not own generated outputs. Retinue renders, checks, exports, and stores generated test outputs.
 
