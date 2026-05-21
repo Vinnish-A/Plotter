@@ -1,0 +1,156 @@
+case_id: plotmaster_025三维PCA散点图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_025三维PCA散点图/metadata.json
+  - vault/material/plotmaster_025三维PCA散点图/agent_guide.md
+  - vault/material/plotmaster_025三维PCA散点图/plot.py
+  - vault/material/plotmaster_025三维PCA散点图/data_main.csv
+  - vault/material/plotmaster_025三维PCA散点图/outputs/rebuilt.png
+  - vault/material/plotmaster_025三维PCA散点图/outputs/visual_check.json
+  - vault/evidence/machine/plotmaster_025三维PCA散点图.yaml
+  - vault/cards/plotmaster_025三维PCA散点图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_025三维PCA散点图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotmaster_025三维PCA散点图.yaml
+  asset_card: vault/cards/plotmaster_025三维PCA散点图.yaml
+  image: vault/material/plotmaster_025三维PCA散点图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1440
+    height: 1440
+    mean_stddev: 30.9897
+  build:
+    status: build_success
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: medium
+    last_built_at: '2026-05-17T12:30:13.162562+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: 3d_pca_scatter
+  subtype: perspective_3d_grouped_point_cloud
+  description: Perspective 3D scatter with DC_1, DC_2, DC_3 axes, colored sample groups, and many points forming
+    curved clusters.
+inferred_visual_grammar:
+  grammar_id: 3d_pca_scatter
+  summary: 3D manifold/PCA scatter requiring three numeric coordinates and group/color labels.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  x: DC_1 coordinate
+  y: DC_2 coordinate
+  value: DC_3 coordinate in current abstraction
+  group: point color group
+canonical_columns: &id001
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: first component coordinate
+  y: second component coordinate
+  z: third component coordinate
+optional_data_semantics:
+  group: sample class/color
+  label: sample label
+optional_modules:
+  3d_axes:
+    supported: true
+  group_coloring:
+    supported: true
+false_positive_risks:
+- original rebuild log reports missing gg3D, so reproducibility depends on fallback/pre-existing rendered output
+- source/target/weight are coordinate duplicates, not network roles
+best_for:
+- 3D PCA/PCoA point-cloud examples
+- grouped manifold scatter visuals
+bad_for:
+- 2D scatter retrieval
+- network source-target use
+style_notes:
+- minimal 3D axes with arrowheads and high-contrast group colors
+retrieval_tier_recommendation:
+  tier: support
+  rationale: The visual grammar is clear and the CSV contains coordinate/group-like values, but dependency failure
+    prevents treating it as core.
+  exclusion_risks:
+  - clean rebuild may fail without gg3D or compatible 3D backend
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single perspective 3D scatter occupying square canvas
+  marks:
+  - colored points
+  - 3D axis lines
+  - axis labels/ticks
+  encodings:
+    x: DC_1
+    y: DC_2
+    z: DC_3
+    color: group
+  axes: three perspective axes labeled DC_1/DC_2/DC_3
+  legends: none visible; color groups unlabeled
+  annotations: axis labels and ticks
+  text_density: low
+  visual_risks:
+  - no legend for color groups
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    x: first coordinate
+    y: second coordinate
+    value: third coordinate proxy
+    group: color group
+    label: group/sample label proxy
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

@@ -114,5 +114,22 @@
     "generic_renderer_rebuild": false,
     "case_level_fallback": true,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Strong visual pattern but explicit dependency fallback and incomplete current data contract.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "missing_ClusterGVis",
+    "incomplete_data_contract"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Finished image was inspected, but the case is an explicit fallback because ClusterGVis is unavailable and there is no standard plot.py.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_heatmap_时间序列基因表达热图.yaml"
 }

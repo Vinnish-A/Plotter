@@ -1,0 +1,214 @@
+case_id: plotmaster_033个性化森林图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_033个性化森林图/metadata.json
+  - vault/material/plotmaster_033个性化森林图/agent_guide.md
+  - vault/material/plotmaster_033个性化森林图/plot.py
+  - vault/material/plotmaster_033个性化森林图/data_main.csv
+  - vault/material/plotmaster_033个性化森林图/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_033个性化森林图.yaml
+  - vault/cards/plotmaster_033个性化森林图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_033个性化森林图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotmaster_033个性化森林图.yaml
+  asset_card: vault/cards/plotmaster_033个性化森林图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_033个性化森林图.yaml
+  image_inspected: vault/material/plotmaster_033个性化森林图/outputs/rebuilt.png
+  code_entry: vault/material/plotmaster_033个性化森林图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: forest_interval
+  subtype: effect-size forest plot with grouped background bands and significance legend
+  panel_count: 1
+  layout: single interval plot with shaded horizontal taxonomic/functional bands and right legend
+  marks:
+  - points
+  - horizontal intervals
+  - vertical zero line
+  - significance stars
+  - background bands
+  encodings:
+    x: warming effect size
+    y: taxon/group label
+    color: effect direction/significance class
+    stars: p-value level
+  axes: x effect size axis; categorical y labels
+  legends: right legend for negative/positive and significance status
+  annotations:
+  - star labels beside points
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    backend: R/ggplot2
+    geometry: scatter
+    keywords:
+    - scatter
+    - ggplot2
+    visual_dependencies:
+    - ggplot2
+    runtime_dependencies:
+    - matplotlib
+    - numpy
+    - pandas
+    - python
+reviewed_visual_roles:
+  label: visible row label
+  group: row label/group text
+  x/value: effect-size coordinate candidate
+  lower: lower interval bound
+  upper: upper interval bound
+  source/target/weight: compatibility duplicates, not network roles
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  label: row label
+  value: effect-size estimate or point coordinate
+  lower: lower interval bound
+  upper: upper interval bound
+optional_data_semantics:
+  group: row group/label text
+  x: numeric coordinate duplicate
+  y: row order coordinate
+  facet: empty
+  source: not a source role
+  target: not a target role
+  weight: not a weight role
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - group
+  - x
+  - y
+  - facet
+  - source
+  - target
+  - weight
+  requires_custom_layout_for_full_rebuild: false
+false_positive_risks:
+- source/target/weight numeric columns are compatibility duplicates, not edge roles
+- false_positive_column:source
+- false_positive_column:target
+- false_positive_column:weight
+- false_positive_column:facet
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Customized forest/effect plots with significance categories
+bad_for:
+- Flow/network retrieval from compatibility columns
+- Exact p-value semantics without explicit p-value column
+style_notes:
+- Background bands separate major label groups
+- Orange/blue direction palette is clear
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - source/target/weight numeric columns are compatibility duplicates, not edge roles
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single interval plot with shaded horizontal taxonomic/functional bands and right legend
+  marks:
+  - points
+  - horizontal intervals
+  - vertical zero line
+  - significance stars
+  - background bands
+  encodings:
+    x: warming effect size
+    y: taxon/group label
+    color: effect direction/significance class
+    stars: p-value level
+  axes: x effect size axis; categorical y labels
+  legends: right legend for negative/positive and significance status
+  annotations:
+  - star labels beside points
+  text_density: high but readable
+  visual_risks:
+  - source/target/weight numeric columns are compatibility duplicates, not edge roles
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_mapping:
+    label: visible row label
+    group: row label/group text
+    x/value: effect-size coordinate candidate
+    lower: lower interval bound
+    upper: upper interval bound
+    source/target/weight: compatibility duplicates, not network roles
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - facet
+  missing_optional_data:
+  - data_optional.csv absent
+  - facet
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('scatter', '033个性化森林图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - source/target/weight numeric columns are compatibility duplicates, not edge roles
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

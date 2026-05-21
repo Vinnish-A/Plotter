@@ -1,10 +1,14 @@
 id: plotcase_barplot_多层注释柱状图进阶版
 title: 多层注释柱状图进阶版
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review
   human_review_required: false
+  reason: Image, metadata, guide, data, code, machine evidence, asset card, and prior
+    review were inspected for a real archival review.
+  reviewed_at: '2026-05-21T09:04:15Z'
+  annotator_model: gpt-5
+  review_version: deep_annotation_model_review_v1
 origin:
   case_dir: vault/material/plotcase_barplot_多层注释柱状图进阶版
   source:
@@ -266,3 +270,35 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_barplot_多层注释柱状图进阶版.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Useful as a support exemplar for nested-axis annotated grouped
+  bars, but not core because the standard CSV does not fully capture the visible grammar.
+exclusion_risks:
+- generic_renderer_interface_does_not_match_visible_source_rebuild
+- machine_card_geometry_was_wrong
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图进阶版.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图进阶版.yaml
+  geometry: grouped bar summary with replicate overlay
+  subtype: nested-axis annotated bar plot
+  required_roles:
+  - category
+  - value
+  optional_roles:
+  - group
+  - stack
+  - error_low
+  - error_high
+  - line_value
+  - annotation_value
+  - label
+  tier: support
+  confidence:
+    overall: medium
+    visual_grammar: high
+    data_roles: medium
+    code_understanding: medium
+    reproducibility_interface: low

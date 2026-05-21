@@ -1,20 +1,16 @@
 id: plotmaster_061散点图+双向误差棒
 title: 061散点图+双向误差棒
 retrieval_tier: inspiration
-one_line: map asset for 061散点图+双向误差棒
-geometry: map
-subtype: map
+one_line: paired measurement comparison with uncertainty in both axes
+geometry: scatter with two-dimensional error bars
+subtype: comparison scatter with diagonal reference
 required_roles:
 - x
 - y
 - value
 optional_roles:
 - group
-- label
 - facet
-- source
-- target
-- weight
 - lower
 - upper
 capabilities:
@@ -25,28 +21,35 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 061散点图+双向误差棒
-- 'map/map grammar with roles: x, y, value'
+- paired measurement comparison with uncertainty in both axes
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 39056; width: 604; height: 576'
+- core use requiring named group semantics or network roles
+image_summary: 'geometry: scatter with two-dimensional error bars; subtype: comparison scatter with diagonal
+  reference; layout: single Cartesian panel; primary_marks: [''points'', ''horizontal error bars'', ''vertical
+  error bars'', ''diagonal…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
 - synthetic_data
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- synthetic_data
+- false_positive_columns:source,target,weight
+- generic_plotmaster_source_target_weight_columns_are_not_visual_roles
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotmaster_061散点图+双向误差棒.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_061散点图+双向误差棒.yaml
   machine_evidence: vault/evidence/machine/plotmaster_061散点图+双向误差棒.yaml
   evidence_pack: vault/material/plotmaster_061散点图+双向误差棒
   preview: vault/material/plotmaster_061散点图+双向误差棒/outputs/rebuilt.png

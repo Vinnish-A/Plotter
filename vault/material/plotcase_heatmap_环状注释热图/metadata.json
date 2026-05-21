@@ -141,5 +141,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Source-backed circular heatmap grammar is clear, but current standard entry and CSV are incomplete for core rebuilds.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "circular_layout_not_in_csv"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Reviewed image, metadata, guide, source R, plot.py, data_main, visual_check, card, and previous backfill.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_heatmap_环状注释热图.yaml"
 }

@@ -1,10 +1,14 @@
 id: plotcase_heatmap_多层嵌套分面热图
 title: 多层嵌套分面热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: reviewed
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Image, abstract CSV, source R, generic plot.py, machine evidence, card,
+    and prior review were inspected.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_heatmap_多层嵌套分面热图
   source:
@@ -297,3 +301,33 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_heatmap_多层嵌套分面热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Visually valuable and source-backed, but the current standard
+  interface is too generic for core retrieval.
+exclusion_risks:
+- generic_renderer_entry
+- multi_scale_contract_missing
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_多层嵌套分面热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_多层嵌套分面热图.yaml
+  geometry: multi_block_nested_faceted_heatmap
+  subtype: nested_faceted_multi_scale_heatmap
+  required_roles:
+  - panel
+  - row_id
+  - column_id
+  - value
+  optional_roles:
+  - row_group
+  - column_group
+  - significance_label
+  - scale_id
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

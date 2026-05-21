@@ -70,6 +70,16 @@ Vault is accepted asset memory, not a raw-file dumping area. It has 8 storage zo
 
 Keep unfolded assets in `vault/material/`. Keep folded assets in `vault/folded_assets/` and out of primary UI manifests. A case under `vault/material/` must not carry a folded/non-live status. Do not compensate for weak CSV abstraction by placing extra raw evidence in Vault.
 
+Default Agent reading order for Vault retrieval:
+
+1. `vault/index.jsonl`
+2. `vault/cards/<case_id>.yaml`
+3. `vault/review/deep_annotation/reviews/<case_id>.yaml` only when deeper verification is needed
+4. `vault/dossiers/<case_id>.yaml` only for maintenance or archive inspection
+5. `vault/material/<case_id>/` only for execution or evidence inspection
+
+Canonical Dossiers are archival full records, not default Agent prompt context.
+
 ## Project-Local Agent Skills
 
 The repository should not track a `.codex/` directory. If `.codex/` exists locally, treat it as untracked local tool state and do not rely on it for repository behavior. `AGENTS.md` is the authoritative instruction file for this project.

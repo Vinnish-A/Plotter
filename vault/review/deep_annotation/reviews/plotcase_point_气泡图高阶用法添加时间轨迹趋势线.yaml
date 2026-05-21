@@ -1,0 +1,89 @@
+case_id: plotcase_point_气泡图高阶用法添加时间轨迹趋势线
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Observed image has specialized trajectory curves, but machine evidence records visual-audit fallback and the standard entry is generic scatter."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/metadata.json, vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/agent_guide.md, vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/plot.py, vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/scripts/code.R, vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/data_main.csv, vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/outputs/rebuilt.png, vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/outputs/visual_check.json, vault/cards/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml, vault/review/deep_annotation/reviews/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml]
+  data_main_profile:
+    rows: 29
+    columns: [x, y, group, value, size_value, label, threshold, facet, highlight]
+  rebuilt_png: {width: 1439, height: 995, visual_check_ok: true}
+  original_rebuild_log: "Visual audit fallback: original-code output did not preserve finished figure structure well enough."
+observed_visual_grammar:
+  figure_type: bubble_scatter_with_time_trajectory_curves
+  layout: "Single NMDS scatter panel with many colored bubble groups, curved arrow trajectories, and right-side species legend."
+  marks: [bubbles, curved arrows, legend points]
+  encodings:
+    x_y: NMDS coordinates
+    color: species/group
+    size_alpha: time or abundance gradient
+    curve_arrow: start-to-end temporal trajectory
+inferred_visual_grammar:
+  grammar_id: nmds_bubble_trajectory_scatter
+  source_logic: "Original R computes group/time summaries and adds manual geom_curve layers with curvature map."
+  current_standard_rebuild: "plot.py calls generic scatter and does not support curved trajectory layers."
+reviewed_visual_roles:
+  x: "Scatter x coordinate."
+  y: "Scatter y coordinate."
+  group: "Species/group color."
+  value: "Generic continuous value; not clearly the observed trajectory semantic."
+  size_value: "Potential bubble size."
+  label: "Point/group label in abstract CSV."
+canonical_columns: [x, y, group, timepoint, size_value, alpha_value, trajectory_id]
+required_data_semantics:
+  x: "Embedding/scatter x coordinate."
+  y: "Embedding/scatter y coordinate."
+  group: "Color group."
+optional_data_semantics:
+  timepoint: "Ordering for trajectory and alpha/size gradients."
+  size_value: "Bubble size."
+  trajectory_id: "Group-wise curve start/end."
+optional_modules:
+  trajectory_curves: {status: observed_but_not_currently_supported}
+  bubble_size_alpha: {status: observed}
+false_positive_risks:
+  - "Do not treat threshold/facet/highlight as active visible modules."
+  - "Do not promote to core because this is a visual-audit fallback."
+best_for:
+  - "Inspiration for ordination scatterplots with curved temporal trajectories."
+bad_for:
+  - "Plain scatterplots or clean rebuilds without explicit trajectory metadata."
+style_notes:
+  - "Pastel bubbles, larger opaque endpoint points, colored curved arrows, large legend on the right."
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: "Good visual target, but fallback status and missing trajectory contract prevent support/core use."
+  exclusion_risks: [case_level_fallback, generic_renderer_entry, trajectory_metadata_missing]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Scatter panel with legend column."
+  marks: [points, bubbles, curved arrows]
+  encodings: "Position by NMDS coordinates, group by color, trajectory by curved arrow."
+  axes: "NMDS1 and NMDS2 axes."
+  legends: "Species/group legend."
+  annotations: "No in-panel text labels."
+  text_density: moderate
+  visual_risks: "Curves can cross points and obscure clusters."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, group, value, size_value, label, threshold, facet, highlight]
+  role_mapping: {x: x_coordinate, y: y_coordinate, group: color_group, size_value: bubble_size}
+  derived_columns: []
+  false_positive_columns: [threshold, facet, highlight]
+  missing_optional_data: [timepoint, trajectory_id, alpha_value]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/tidyverse/ggforce/ggnewscale source."
+  entry_behavior: "plot.py calls render('scatter'); R source builds manual trajectory curves."
+  hardcoded_aesthetics: "Day-to-size/alpha mapping, curvature map, species renaming, and palette are hardcoded."
+  output_behavior: "Existing rebuilt.png is visually inspected fallback."
+  unsupported_features: [trajectory_curves_in_generic_renderer, clean_source_equivalence]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

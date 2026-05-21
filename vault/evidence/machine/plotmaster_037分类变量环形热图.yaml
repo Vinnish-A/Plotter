@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_037分类变量环形热图/metadata.json
     exists: true
-    size_bytes: 5039
+    size_bytes: 5827
   agent_guide:
     path: vault/material/plotmaster_037分类变量环形热图/agent_guide.md
     exists: true

@@ -1,0 +1,116 @@
+case_id: plotcase_heatmap_时间序列基因表达热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Finished image was inspected, but the case is an explicit fallback because ClusterGVis is unavailable and there is no standard plot.py."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read:
+    - AGENTS.md
+    - schemas/deep_dossier_review.schema.yaml
+    - vault/material/plotcase_heatmap_时间序列基因表达热图/metadata.json
+    - vault/material/plotcase_heatmap_时间序列基因表达热图/agent_guide.md
+    - vault/material/plotcase_heatmap_时间序列基因表达热图/scripts/code.R
+    - vault/material/plotcase_heatmap_时间序列基因表达热图/data_main.csv
+    - vault/material/plotcase_heatmap_时间序列基因表达热图/outputs/rebuilt.png
+    - vault/material/plotcase_heatmap_时间序列基因表达热图/outputs/visual_check.json
+    - vault/cards/plotcase_heatmap_时间序列基因表达热图.yaml
+    - vault/review/deep_annotation/reviews/plotcase_heatmap_时间序列基因表达热图.yaml
+  data_main_profile:
+    rows: 30
+    columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  rebuilt_png:
+    width: 2184
+    height: 2027
+    visual_check_ok: true
+  original_rebuild_log: "ClusterGVis 0.99.9 unavailable; finished figure is used as fallback."
+observed_visual_grammar:
+  figure_type: clustered_time_series_expression_heatmap_with_side_summaries
+  layout: "Large left dendrogram and cluster labels, stacked central expression heatmap across developmental stages, mini trend plots on the left, gene labels and GO term callout boxes on the right."
+  marks: [dendrogram, heatmap strips, mini line charts, color bars, connector callouts, text labels]
+  encodings:
+    heatmap_color: expression z-score
+    columns: time or developmental stage
+    row_blocks: gene clusters
+    side_lines: cluster-level trajectory summaries
+    right_annotations: selected genes and enrichment terms
+inferred_visual_grammar:
+  grammar_id: clusterGVis_time_series_heatmap
+  source_logic: "Original R uses ClusterGVis::clusterData and visCluster with marked genes and annotation terms."
+  current_standard_rebuild: "No plot.py; source cannot run without a compatible ClusterGVis environment."
+reviewed_visual_roles:
+  row_id: "Gene or cluster row in abstract CSV."
+  column_id: "Time/stage column."
+  value: "Expression-like heatmap value."
+  row_group: "Could represent cluster id."
+  annotation_value: "Not enough to represent right-side GO/callout annotations."
+canonical_columns: [gene_id, timepoint, expression_z, cluster_id, stage_group, marked_gene, annotation_term]
+required_data_semantics:
+  gene_id: "Heatmap row/gene identity."
+  timepoint: "Ordered sample/stage column."
+  expression_z: "Heatmap value."
+  cluster_id: "Row cluster/block membership."
+optional_data_semantics:
+  marked_gene: "Right-side highlighted gene labels."
+  annotation_term: "Cluster-level GO or process callout text."
+  stage_group: "Top sample color strip."
+optional_modules:
+  cluster_side_trends:
+    status: observed_but_not_encoded_by_current_csv
+  gene_callouts:
+    status: observed
+  enrichment_callout_boxes:
+    status: observed
+false_positive_risks:
+  - "Do not treat as a clean rebuildable heatmap until ClusterGVis or an equivalent renderer is pinned."
+  - "Current data_main is a small generic heatmap sketch, not the full gene-by-time matrix."
+  - "Keep out of core retrieval because this is a case-level fallback."
+best_for:
+  - "Visual inspiration for clustered time-series expression heatmaps with side trend summaries and enrichment callouts."
+bad_for:
+  - "Data-backed generation from arbitrary gene expression matrices in the current environment."
+style_notes:
+  - "Tall dense heatmap, blue-white-red z-score palette, left cluster mini-lines, colored vertical cluster bars, and large right callout boxes."
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: "Strong visual pattern but explicit dependency fallback and incomplete current data contract."
+  exclusion_risks: [case_level_fallback, missing_ClusterGVis, incomplete_data_contract]
+confidence:
+  overall: high
+  visual_observation: high
+  data_contract_assessment: high
+  source_rebuild_assessment: high
+image_observation:
+  image_read: true
+  panel_count: "composite"
+  layout: "Dendrogram, central heatmap, left trend insets, right labels/callouts, legends."
+  marks: [heatmap cells, dendrogram branches, line insets, labels, callout boxes]
+  encodings: "Expression z-score by fill, stage by columns and top colors, clusters by row blocks and side bars."
+  axes: "Stage labels across top; cluster labels on left."
+  legends: "Sample legend and z-score colorbar on right."
+  annotations: "Gene labels and GO term callout boxes."
+  text_density: high
+  visual_risks: "Extremely dense labels and callouts require large output size."
+data_understanding:
+  data_read: true
+  observed_columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  role_mapping:
+    row_id: gene_or_cluster_row
+    column_id: timepoint_or_stage
+    value: expression_value
+    row_group: cluster_group
+  derived_columns: []
+  false_positive_columns: [column_group, annotation_track, annotation_value, label, size_value, facet]
+  missing_optional_data: [full_expression_matrix, marked_gene_table, enrichment_terms]
+code_understanding:
+  code_read: true
+  backend: "Original R/ClusterGVis source only; no standard plot.py present."
+  entry_behavior: "scripts/code.R loads ClusterGVis, computes mfuzz clusters, and calls visCluster."
+  hardcoded_aesthetics: "Cluster count, marked-gene sampling, and annotation terms are coded in R."
+  output_behavior: "Existing rebuilt.png is a finished fallback image; clean rebuild is blocked by unavailable ClusterGVis."
+  unsupported_features: [clean_retinue_rebuild, current_environment_dependency_resolution, full_csv_driven_clusterGVis]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

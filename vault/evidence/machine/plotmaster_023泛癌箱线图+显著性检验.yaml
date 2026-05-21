@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_023泛癌箱线图+显著性检验/metadata.json
     exists: true
-    size_bytes: 3255
+    size_bytes: 3953
   agent_guide:
     path: vault/material/plotmaster_023泛癌箱线图+显著性检验/agent_guide.md
     exists: true

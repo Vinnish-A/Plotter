@@ -1,0 +1,260 @@
+case_id: figureya_survival_FigureYa305PMAPscore
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review
+  human_review_required: false
+  reason: Replaced machine backfill after inspecting metadata, guide, entry script, data profile, machine evidence, card, current review, and rebuilt image.
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21T17:03:36+08:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/figureya_survival_FigureYa305PMAPscore/metadata.json
+  - vault/material/figureya_survival_FigureYa305PMAPscore/agent_guide.md
+  - vault/material/figureya_survival_FigureYa305PMAPscore/plot.py
+  - vault/material/figureya_survival_FigureYa305PMAPscore/data_main.csv
+  - vault/material/figureya_survival_FigureYa305PMAPscore/outputs/rebuilt.png
+  - vault/material/figureya_survival_FigureYa305PMAPscore/outputs/visual_check.json
+  - vault/evidence/machine/figureya_survival_FigureYa305PMAPscore.yaml
+  - vault/cards/figureya_survival_FigureYa305PMAPscore.yaml
+  - vault/review/deep_annotation/reviews/figureya_survival_FigureYa305PMAPscore.yaml
+  - retinue/tools/plotter_standard_renderer.py
+  data_optional_present: false
+  data_main_profile:
+    rows: 1
+    columns:
+    - x
+    - y
+    - value
+    - group
+    - label
+    - facet
+    - source
+    - target
+    - weight
+    - lower
+    - upper
+    sample_row:
+      x: 218
+      y: 218
+      value: 218
+      group: path.info
+      label: path.info
+      facet: null
+      source: 218
+      target: 218
+      weight: 218
+      lower: 218.0
+      upper: 218.0
+  rebuilt_png:
+    width: 720
+    height: 720
+    visual_check_ok: true
+  fallback_record:
+    script: case_level_rendered_output
+    generated_source: raw/km_curve.pdf
+    fallback_reason: Full PMAPscore workflow exceeds batch timeout; provided case-level rendered KM output selected.
+observed_visual_grammar:
+  figure_type: kaplan_meier_survival_curve_with_risk_table
+  geometry: survival_step_curve
+  panel_structure: one main survival plot above one aligned number-at-risk table
+  marks:
+  - two colored step curves
+  - censor tick marks on each curve
+  - colored risk-table row labels
+  - numeric risk counts aligned to time ticks
+  - inline p-value annotation
+  encodings:
+    x_axis: time
+    y_axis: survival probability
+    color: strata, shown as multiple_score high versus low
+    step_height: estimated survival probability
+    tick_marks: censored observations or censoring events
+    risk_table_values: number at risk by stratum at selected time points
+  not_observed:
+  - heatmap body
+  - ComplexHeatmap annotation tracks
+  - network edges
+  - uncertainty bands
+  - ROC curve
+  - oncoplot
+inferred_visual_grammar:
+  grammar_id: km_survival_curve_two_strata_with_risk_table
+  source_basis: Rebuilt image and Rmd references to get_km_survival_curve with risk.table=TRUE.
+  weak_source_metadata:
+  - Metadata and asset card say heatmap/ComplexHeatmap, but rebuilt.png is a KM survival curve.
+  - Domain meaning of PMAPscore and the high/low split is not recoverable from current CSV alone.
+  reproducibility_gap: Current standard CSV is a one-row placeholder and the Python entry is a generic line renderer, so the observed KM figure is a case-level fallback rather than a recomputed survival analysis.
+reviewed_visual_roles:
+  time: x coordinate in the observed survival plot and risk table.
+  survival_probability: y coordinate of the step curves.
+  stratum: two displayed groups, multiple_score=high and multiple_score=low.
+  censor_time: short tick marks on curves; exact event table is absent from data_main.csv.
+  risk_count: numbers in the lower risk table at displayed time ticks.
+  p_value: inline significance annotation shown as p < 0.0001.
+  x: compatibility column only; current value 218 does not encode plotted time points.
+  y: compatibility column only; current value 218 does not encode survival probability.
+  value: compatibility column only; current value 218 does not encode survival probability or risk counts.
+  group: placeholder value path.info; not the observed high/low stratum field.
+  label: placeholder value path.info; not an active label layer in the rebuilt image.
+  source: compatibility column; no network role is supported by image, data, or code.
+  target: compatibility column; no network role is supported by image, data, or code.
+  weight: compatibility column; no network or weighted-edge role is supported.
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  time: Numeric time coordinate for survival steps and risk-table columns.
+  survival_probability: Survival estimate at each step for each stratum.
+  stratum: Grouping variable for the two colored curves and risk-table rows.
+optional_data_semantics:
+  censor_time: Optional positions for censor tick marks on each curve.
+  risk_count: Optional number-at-risk table values by time and stratum.
+  p_value: Optional inline test annotation; displayed as p < 0.0001 here.
+  lower: Compatibility column only in current CSV; no confidence band is visible.
+  upper: Compatibility column only in current CSV; no confidence band is visible.
+  facet: Empty compatibility column; no faceting is visible.
+optional_modules:
+  risk_table:
+    observed: true
+    data_available: false
+    note: Requires time-by-stratum risk counts, not present in data_main.csv.
+  censor_marks:
+    observed: true
+    data_available: false
+    note: Requires censor positions per stratum.
+  p_value_annotation:
+    observed: true
+    data_available: false
+    note: Current p-value is embedded in the fallback image, not encoded in CSV.
+false_positive_risks:
+- Do not retrieve this as a heatmap despite metadata/card heatmap hints.
+- Do not treat source, target, or weight as network fields; they are compatibility placeholders.
+- Do not assume the one-row CSV can regenerate the observed KM curve or risk table.
+- Do not infer PMAPscore biology beyond the visible multiple_score high/low labels and Rmd naming.
+- The top legend is clipped at the right edge in rebuilt.png, so legend text should be checked before reuse.
+best_for:
+- Inspiration for a two-stratum Kaplan-Meier survival figure with censor ticks and a number-at-risk table.
+- Cases needing survival probability over time with a compact statistical annotation.
+- Visual reference for aligning risk-table columns under the main time axis.
+bad_for:
+- Heatmaps, ComplexHeatmap compositions, oncoplots, ROC plots, or network diagrams.
+- Clean-session recomputation from the current CSV interface.
+- Assets requiring encoded confidence intervals or patient-level survival data.
+style_notes:
+- White background with black axes, large axis titles, and minimal grid-free survival plotting.
+- Red and cyan strata are used consistently for curves, censor ticks, legend keys, and risk-table labels.
+- Main plot and risk table share time ticks from 0 to about 50.
+- The legend placement appears too wide for the canvas and is clipped on the right.
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: The observed visual grammar is useful as a KM survival layout reference, but current data/code do not faithfully rebuild it and the asset relies on a case-level rendered-output fallback.
+  exclusion_risks:
+  - case_level_fallback
+  - generic_renderer_entry
+  - data_interface_placeholder
+  - metadata_heatmap_false_positive
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: low
+  code_understanding: medium
+  reproducibility: low
+image_observation:
+  image_read: true
+  panel_count: 2 visual regions, one survival panel and one risk-table panel
+  layout: Square figure with main KM curve occupying the upper area and number-at-risk table aligned below.
+  marks:
+  - step curves
+  - censor ticks
+  - legend keys
+  - p-value text
+  - risk table numerals
+  encodings:
+    color: multiple_score strata
+    x_position: time
+    y_position: survival probability in main panel
+    table_column_position: risk-table time
+  axes:
+    main_x: Time
+    main_y: Survival probability
+    risk_table_x: Time
+    risk_table_y: Strata row labels
+  legends: Top legend titled Strata; right side of low-stratum label is clipped.
+  annotations:
+  - p < 0.0001 inside the main panel
+  - Number at risk title above the lower table
+  text_density: moderate, with large axis labels and compact risk-table labels/numbers
+  visual_risks:
+  - legend clipping
+  - source metadata says heatmap although image is survival curve
+  - no visible confidence intervals
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_mapping:
+    x: placeholder numeric value, not sufficient for observed time axis
+    y: placeholder numeric value, not sufficient for observed survival probability
+    value: placeholder numeric value, not sufficient for observed survival probability or risk counts
+    group: placeholder path.info, not the visible high/low strata
+    label: placeholder path.info, not active plotted labels
+    facet: empty, no visible facet
+    source: compatibility placeholder, no network semantics
+    target: compatibility placeholder, no network semantics
+    weight: compatibility placeholder, no weighted-edge semantics
+    lower: compatibility placeholder, no visible confidence interval
+    upper: compatibility placeholder, no visible confidence interval
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  - group
+  - label
+  missing_optional_data:
+  - survival step coordinates by time and stratum
+  - censor positions
+  - risk-table counts
+  - p-value annotation value
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue generic matplotlib renderer
+  - original Rmd references PMAPscore and survival plotting functions
+  entry_behavior: plot.py imports retinue/tools/plotter_standard_renderer.py and calls render('line', 'FigureYa305PMAPscore').
+  hardcoded_aesthetics:
+  - Generic renderer uses repository palettes and line markers if executed from data_main.csv.
+  - Fallback KM image contains red/cyan strata, censor ticks, risk table, and p-value from the provided rendered PDF.
+  output_behavior: Standard entry would write outputs/rebuilt.png from data_main.csv, but metadata records the accepted rebuilt image as a fallback from raw/km_curve.pdf because the full PMAPscore workflow exceeded timeout.
+  unsupported_features:
+  - Current CSV and generic line renderer do not encode Kaplan-Meier survival steps.
+  - Current CSV and generic line renderer do not encode censor marks.
+  - Current CSV and generic line renderer do not encode the number-at-risk table.
+  - Current CSV and generic line renderer do not encode p-value annotation.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

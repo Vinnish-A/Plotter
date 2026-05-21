@@ -1,51 +1,54 @@
 id: plotmaster_025三维PCA散点图
 title: 025三维PCA散点图
 retrieval_tier: support
-one_line: scatter asset for 025三维PCA散点图
-geometry: scatter
-subtype: pca_or_manifold
+one_line: 3D PCA/PCoA point-cloud examples
+geometry: 3d_pca_scatter
+subtype: perspective_3d_grouped_point_cloud
 required_roles:
 - x
 - y
-- value
+- z
 optional_roles:
 - group
 - label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: false
   batch: true
 best_for:
-- 025三维PCA散点图
-- 'scatter/pca_or_manifold grammar with roles: x, y, value'
+- 3D PCA/PCoA point-cloud examples
+- grouped manifold scatter visuals
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 191519; width: 1440; height: 1440'
+- 2D scatter retrieval
+- network source-target use
+image_summary: 'geometry: 3d_pca_scatter; subtype: perspective_3d_grouped_point_cloud; description: Perspective
+  3D scatter with DC_1, DC_2, DC_3 axes, colored sample groups, and many points forming curved clusters.'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- missing_optional_data
+risk_notes:
+- original rebuild log reports missing gg3D, so reproducibility depends on fallback/pre-existing rendered
+  output
+- source/target/weight are coordinate duplicates, not network roles
+- clean rebuild may fail without gg3D or compatible 3D backend
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_025三维PCA散点图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_025三维PCA散点图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_025三维PCA散点图.yaml
   evidence_pack: vault/material/plotmaster_025三维PCA散点图
   preview: vault/material/plotmaster_025三维PCA散点图/outputs/rebuilt.png

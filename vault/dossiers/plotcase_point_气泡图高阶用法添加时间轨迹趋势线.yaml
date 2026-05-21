@@ -1,10 +1,14 @@
 id: plotcase_point_气泡图高阶用法添加时间轨迹趋势线
 title: 气泡图高阶用法添加时间轨迹趋势线
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: Observed image has specialized trajectory curves, but machine evidence records
+    visual-audit fallback and the standard entry is generic scatter.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线
   source:
@@ -271,3 +275,32 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: Good visual target, but fallback status and missing trajectory
+  contract prevent support/core use.
+exclusion_risks:
+- case_level_fallback
+- generic_renderer_entry
+- trajectory_metadata_missing
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml
+  geometry: bubble_scatter_with_time_trajectory_curves
+  subtype: nmds_bubble_trajectory_scatter
+  required_roles:
+  - x
+  - y
+  - group
+  optional_roles:
+  - timepoint
+  - size_value
+  - trajectory_id
+  tier: inspiration
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

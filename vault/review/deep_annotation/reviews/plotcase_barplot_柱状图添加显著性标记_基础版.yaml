@@ -1,0 +1,119 @@
+case_id: plotcase_barplot_柱状图添加显著性标记_基础版
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Visual output is strong, but the standard plot.py is a generic bar renderer and the original R rebuild log ended with an error."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read:
+    - schemas/deep_dossier_review.schema.yaml
+    - AGENTS.md
+    - vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/metadata.json
+    - vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/agent_guide.md
+    - vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/plot.py
+    - vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/scripts/code.R
+    - vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/data_main.csv
+    - vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/outputs/rebuilt.png
+    - vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/outputs/visual_check.json
+    - vault/cards/plotcase_barplot_柱状图添加显著性标记_基础版.yaml
+    - vault/review/deep_annotation/reviews/plotcase_barplot_柱状图添加显著性标记_基础版.yaml
+  data_main_profile:
+    rows: 9
+    columns: [category, value, group, stack, error_low, error_high, line_value, annotation_value, label]
+  rebuilt_png:
+    width: 1366
+    height: 565
+    visual_check_ok: true
+  original_rebuild_log: "R source reached ggplot/rstatix work but ended with Execution halted."
+observed_visual_grammar:
+  figure_type: grouped_bar_with_jitter_and_significance_brackets
+  layout: "Single horizontal panel with five cell-type categories, four treatment bars per category, overlaid points, error bars, and upper p-value brackets."
+  marks: [grouped bars, jittered points, vertical error bars, significance brackets, legend swatches]
+  encodings:
+    x: cell type category
+    y: absolute tumour cell count
+    fill_color: treatment group
+    point_position: replicate measurements
+    bracket_text: pairwise p-value annotation
+inferred_visual_grammar:
+  grammar_id: grouped_bar_replicates_significance
+  source_logic: "Original R reads data.tsv, computes t-tests by cell type, and draws ggplot bars, jitter, error bars, and selected p-value brackets."
+  current_standard_rebuild: "plot.py calls shared generic render('bar'), which does not encode significance brackets or replicate jitter semantics."
+reviewed_visual_roles:
+  category: "Primary x category; maps to cell type in observed figure."
+  value: "Numeric response height."
+  group: "Treatment/fill grouping."
+  error_low: "Lower interval role in abstract CSV; not enough alone to reproduce original summary statistics."
+  error_high: "Upper interval role in abstract CSV; not enough alone to reproduce original summary statistics."
+  annotation_value: "Potential p-value/bracket label role, but current CSV leaves it empty."
+  label: "Unused in current abstract CSV."
+canonical_columns: [category, value, group, error_low, error_high, p_value, replicate_id, comparison_group_1, comparison_group_2]
+required_data_semantics:
+  category: "Discrete x category."
+  value: "Observed or summarized numeric measurement."
+  group: "Bar/fill treatment group."
+optional_data_semantics:
+  p_value: "Pairwise significance text and bracket layer."
+  replicate_id: "Needed to distinguish raw points from summaries."
+  error_low_error_high: "Interval caps if summaries are precomputed."
+optional_modules:
+  significance_brackets:
+    status: observed_but_not_encoded_in_current_csv
+  replicate_points:
+    status: observed_in_image
+  stacked_bar:
+    status: not_observed
+false_positive_risks:
+  - "Do not treat stack, line_value, or empty annotation_value as observed active layers."
+  - "Do not retrieve as a clean generic bar chart; the visual value is grouped bars plus replicates plus brackets."
+  - "Current plot.py would not reproduce the inspected image from a clean generic-renderer run."
+best_for:
+  - "Grouped experimental bar charts with raw replicate points and pairwise significance labels."
+bad_for:
+  - "Stacked bars, line-over-bar composites, or charts without replicate-level data."
+style_notes:
+  - "Wide white canvas, heavy left/bottom axes, pastel treatment fills, black p-value brackets above each category."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Reusable visual grammar is clear, but current standard entry and abstract CSV are weaker than the inspected source-style figure."
+  exclusion_risks: [generic_renderer_entry, original_rebuild_error, incomplete_annotation_csv]
+confidence:
+  overall: high
+  visual_observation: high
+  data_contract_assessment: medium
+  source_rebuild_assessment: medium
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "One grouped bar panel with legend at upper right."
+  marks: [bars, jittered points, error bars, significance brackets]
+  encodings: "Cell type on x, count on y, treatment by fill color, p-values as bracket annotations."
+  axes: "Labeled y-axis; bold discrete x labels."
+  legends: "Treatment legend with four colored swatches."
+  annotations: "Multiple P-value brackets per category."
+  text_density: moderate
+  visual_risks: "Dense brackets require explicit comparison metadata."
+data_understanding:
+  data_read: true
+  observed_columns: [category, value, group, stack, error_low, error_high, line_value, annotation_value, label]
+  role_mapping:
+    category: x_category
+    value: y_measure
+    group: treatment_group
+    error_low: interval_lower
+    error_high: interval_upper
+  derived_columns: []
+  false_positive_columns: [stack, line_value, annotation_value, label]
+  missing_optional_data: [replicate_id, comparison_pairs, p_value]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus original R/ggplot2 source script."
+  entry_behavior: "plot.py calls retinue/tools/plotter_standard_renderer.py render('bar')."
+  hardcoded_aesthetics: "Original R hardcodes treatment order, selected comparisons, y positions, colors, and bracket labels."
+  output_behavior: "outputs/rebuilt.png is a rich source-style figure; generic plot.py does not encode all visible layers."
+  unsupported_features: [automatic_t_test_brackets_from_data_main, replicate_summary_linkage, stack_or_line_layers]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

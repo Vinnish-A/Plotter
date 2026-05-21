@@ -1,10 +1,14 @@
 id: plotcase_heatmap_circlize绘制环状聚类热图
 title: circlize绘制环状聚类热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review
   human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence,
+    card, schema, and prior review were inspected for this batch review.
+  reviewed_at: '2026-05-21T00:00:00+08:00'
+  annotator_model: gpt-5-codex_model_assisted_review
+  review_version: deep_annotation_model_review_v1
 origin:
   case_dir: vault/material/plotcase_heatmap_circlize绘制环状聚类热图
   source:
@@ -297,3 +301,35 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_heatmap_circlize绘制环状聚类热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Recommended below core because review found generic-renderer/fallback/synthetic
+  or incomplete semantic-support risks; still useful for visual pattern retrieval
+  at the stated tier.
+exclusion_risks:
+- generic_renderer_rebuild
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_circlize绘制环状聚类热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_circlize绘制环状聚类热图.yaml
+  geometry: circular clustered heatmap
+  subtype: annular heatmap with dendrogram
+  required_roles:
+  - row_id
+  - column_id
+  - value
+  optional_roles:
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - label
+  - size_value
+  - facet
+  tier: support
+  confidence:
+    overall: medium
+    visual_grammar: high
+    data_roles: medium
+    code_understanding: medium

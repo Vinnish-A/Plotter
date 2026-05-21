@@ -1,9 +1,9 @@
 id: plotcase_network_ggplot2优雅绘制网络图
 title: ggplot2优雅绘制网络图
 retrieval_tier: support
-one_line: network asset for ggplot2优雅绘制网络图
-geometry: network
-subtype: node_link_network
+one_line: Visual inspiration for circular node-link network
+geometry: circular node-link network
+subtype: ''
 required_roles:
 - source
 - target
@@ -25,28 +25,39 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- ggplot2优雅绘制网络图
-- 'network/node_link_network grammar with roles: source, target, weight'
+- Visual inspiration for circular node-link network
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 371040; width: 1008; height: 1008'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: circular node-link network; panel_count: 1; layout: nodes placed around a circle
+  with labels outside and many faint internal links; primary_marks: [''colored nodes'', ''thin edges'',
+  ''rotated labels'']'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_network_ggplot2优雅绘制网络图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_network_ggplot2优雅绘制网络图.yaml
   machine_evidence: vault/evidence/machine/plotcase_network_ggplot2优雅绘制网络图.yaml
   evidence_pack: vault/material/plotcase_network_ggplot2优雅绘制网络图
   preview: vault/material/plotcase_network_ggplot2优雅绘制网络图/outputs/rebuilt.png

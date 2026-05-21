@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_018单细胞分组火山图/metadata.json
     exists: true
-    size_bytes: 3112
+    size_bytes: 3842
   agent_guide:
     path: vault/material/plotmaster_018单细胞分组火山图/agent_guide.md
     exists: true

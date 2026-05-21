@@ -1,0 +1,207 @@
+case_id: plotcase_heatmap_ggtree绘制组合热图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_heatmap_ggtree绘制组合热图/metadata.json
+  - vault/material/plotcase_heatmap_ggtree绘制组合热图/agent_guide.md
+  - vault/material/plotcase_heatmap_ggtree绘制组合热图/plot.py
+  - vault/material/plotcase_heatmap_ggtree绘制组合热图/data_main.csv
+  - vault/material/plotcase_heatmap_ggtree绘制组合热图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_heatmap_ggtree绘制组合热图.yaml
+  - vault/cards/plotcase_heatmap_ggtree绘制组合热图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_heatmap_ggtree绘制组合热图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_ggtree绘制组合热图.yaml
+  asset_card: vault/cards/plotcase_heatmap_ggtree绘制组合热图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_heatmap_ggtree绘制组合热图.yaml
+  image_inspected: vault/material/plotcase_heatmap_ggtree绘制组合热图/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_heatmap_ggtree绘制组合热图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: tree_heatmap
+  subtype: rectangular dendrogram plus binary heatmap and tip-shape annotation
+  panel_count: 1
+  layout: left tree with aligned heatmap columns and legends on the right
+  marks:
+  - dendrogram branches
+  - tip symbols
+  - rectangular heatmap cells
+  encodings:
+    tree: hierarchical relationships
+    cell fill: presence/absence
+    tip symbol color/shape: dog/human/ref classes
+  axes: no numeric axes; rotated column labels under heatmap
+  legends: right legends for tip class and presence/absence
+  annotations:
+  - tip class markers alongside tree
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: tree_heatmap
+    backend: R/ggtree
+    unit: tree edges plus tip-level annotation table
+    required_data_roles:
+    - node_id
+    - parent_id
+    - label
+    optional_data_roles:
+    - branch_length
+    - tip_group
+    - track
+    - track_value
+    - track_class
+    - heatmap_value
+reviewed_visual_roles:
+  node_id: tree node identifier
+  parent_id: tree parent link
+  label: tip/node labels
+  branch_length: branch length candidate
+  tip_group: tip annotation class
+  heatmap_value: cell fill value candidate
+  track_value: annotation value candidate
+  track: annotation track name
+  track_class: empty
+canonical_columns:
+- node_id
+- parent_id
+- label
+- branch_length
+- tip_group
+- track
+- track_value
+- track_class
+- heatmap_value
+required_data_semantics:
+  node_id: tree node identity
+  parent_id: tree topology parent
+  label: node/tip label
+optional_data_semantics:
+  branch_length: tree branch scale candidate
+  tip_group: tip symbol grouping
+  track: annotation track label
+  track_value: numeric annotation value
+  track_class: empty
+  heatmap_value: aligned heatmap value
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - branch_length
+  - tip_group
+  - track
+  - track_value
+  - track_class
+  - heatmap_value
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- data_main has only nine node rows, much smaller than displayed tree, so roles are grammar-level not full data
+  recovery
+- false_positive_column:track_class
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Tree plus aligned discrete/binary heatmap compositions
+bad_for:
+- Large tree reconstruction from the compact CSV alone
+- Continuous heatmap-only retrieval
+style_notes:
+- Tree and matrix are tightly aligned
+- Legends are clear but consume right margin
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - data_main has only nine node rows, much smaller than displayed tree, so roles are grammar-level not full data
+    recovery
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: left tree with aligned heatmap columns and legends on the right
+  marks:
+  - dendrogram branches
+  - tip symbols
+  - rectangular heatmap cells
+  encodings:
+    tree: hierarchical relationships
+    cell fill: presence/absence
+    tip symbol color/shape: dog/human/ref classes
+  axes: no numeric axes; rotated column labels under heatmap
+  legends: right legends for tip class and presence/absence
+  annotations:
+  - tip class markers alongside tree
+  text_density: moderate
+  visual_risks:
+  - data_main has only nine node rows, much smaller than displayed tree, so roles are grammar-level not full data
+    recovery
+data_understanding:
+  data_read: true
+  observed_columns:
+  - node_id
+  - parent_id
+  - label
+  - branch_length
+  - tip_group
+  - track
+  - track_value
+  - track_class
+  - heatmap_value
+  role_mapping:
+    node_id: tree node identifier
+    parent_id: tree parent link
+    label: tip/node labels
+    branch_length: branch length candidate
+    tip_group: tip annotation class
+    heatmap_value: cell fill value candidate
+    track_value: annotation value candidate
+    track: annotation track name
+    track_class: empty
+  derived_columns: []
+  false_positive_columns:
+  - track_class
+  missing_optional_data:
+  - data_optional.csv absent
+  - track_class
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('heatmap', 'ggtree绘制组合热图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - data_main has only nine node rows, much smaller than displayed tree, so roles are grammar-level not full data
+    recovery
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

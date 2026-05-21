@@ -1,0 +1,161 @@
+case_id: plotcase_雷达图_雷达图批量绘制
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_雷达图_雷达图批量绘制/metadata.json
+  - vault/material/plotcase_雷达图_雷达图批量绘制/agent_guide.md
+  - vault/material/plotcase_雷达图_雷达图批量绘制/plot.py
+  - vault/material/plotcase_雷达图_雷达图批量绘制/data_main.csv
+  - vault/material/plotcase_雷达图_雷达图批量绘制/outputs/rebuilt.png
+  - vault/material/plotcase_雷达图_雷达图批量绘制/outputs/visual_check.json
+  - vault/evidence/machine/plotcase_雷达图_雷达图批量绘制.yaml
+  - vault/cards/plotcase_雷达图_雷达图批量绘制.yaml
+  - vault/review/deep_annotation/reviews/plotcase_雷达图_雷达图批量绘制.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotcase_雷达图_雷达图批量绘制.yaml
+  asset_card: vault/cards/plotcase_雷达图_雷达图批量绘制.yaml
+  image: vault/material/plotcase_雷达图_雷达图批量绘制/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 2426
+    height: 1537
+    mean_stddev: 37.805
+  build:
+    status: build_success
+    language: R
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: low
+    last_built_at: '2026-05-17T12:30:12.952360+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: radar_small_multiples
+  subtype: faceted_spider_chart_grid
+  description: Grid of radar/spider plots, each titled by prophageARG environment, sharing radial percent rings
+    and category spokes.
+inferred_visual_grammar:
+  grammar_id: radar_small_multiples
+  summary: Small-multiple radar grammar requiring facet, radial axis category, and normalized value.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  facet: one radar panel per environment
+  axis_label: radial spoke category
+  value: normalized radial distance
+  group: line/color if multiple series
+canonical_columns: &id001
+- source
+- target
+- weight
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+- source_group
+- target_group
+required_data_semantics:
+  facet: radar panel identity
+  axis_label: spoke/category
+  value: radial magnitude
+optional_data_semantics:
+  group: series color/group
+  label: display title or spoke label
+optional_modules:
+  small_multiples:
+    supported: true
+  percent_reference_rings:
+    supported: true
+false_positive_risks:
+- data_main is network-shaped; source/target/weight are not radar roles
+- current CSV lacks explicit spoke columns despite original log showing wide radar input
+best_for:
+- batch comparison of profiles across repeated categories
+- radar small-multiple layout examples
+bad_for:
+- precise quantitative ranking
+- network recommendation
+style_notes:
+- consistent dashed 50/100 percent rings across panels; panel titles carry facet identity
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Observed radar-batch grammar is clear, but standardized data_main does not express facet/spoke/value
+    directly.
+  exclusion_risks:
+  - must remap original wide table before reuse
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 11
+  layout: 3-row small-multiple grid of radar charts
+  marks:
+  - radial polylines
+  - points
+  - dashed reference rings
+  - spokes
+  - panel titles
+  encodings:
+    radius: percent value
+    angle: category
+    panel: environment
+  axes: polar percent rings and category spokes
+  legends: none; color is per panel
+  annotations: panel titles and spoke labels
+  text_density: medium-high
+  visual_risks:
+  - small panels reduce label readability
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    source: false positive
+    target: false positive
+    weight: false positive
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  - source_group
+  - target_group
+  - layout_x
+  - layout_y
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

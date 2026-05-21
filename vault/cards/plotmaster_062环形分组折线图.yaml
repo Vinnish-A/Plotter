@@ -1,52 +1,55 @@
 id: plotmaster_062环形分组折线图
 title: 062环形分组折线图
 retrieval_tier: inspiration
-one_line: network asset for 062环形分组折线图
-geometry: network
-subtype: node_link_network
+one_line: radial grouped line-chart inspiration
+geometry: circular_grouped_line_tracks
+subtype: radial_faceted_line_segments
 required_roles:
-- x
-- y
+- group
+- item
 - value
 optional_roles:
-- group
+- series
 - label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
 capabilities:
   highlight: true
   detail_panel: false
   annotation_track: false
-  uncertainty: true
-  composition: true
+  uncertainty: false
+  composition: false
   batch: true
 best_for:
-- 062环形分组折线图
-- 'network/node_link_network grammar with roles: x, y, value'
+- radial grouped line-chart inspiration
+- circular small-track compositions
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 167063; width: 1008; height: 1008'
+- ordinary Cartesian line retrieval
+- core source-backed asset selection
+image_summary: 'geometry: circular_grouped_line_tracks; subtype: radial_faceted_line_segments; description:
+  Circular grouped line plot with multiple colored line tracks arranged by inner group sectors, gray radial
+  guide rings, and many…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- synthetic_data true
+- current data_main x/y/value can support generic line data but not the circular sector grammar directly
+- source/target/weight are duplicates, not network roles
+- semantic group/series/order roles require remapping
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_062环形分组折线图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_062环形分组折线图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_062环形分组折线图.yaml
   evidence_pack: vault/material/plotmaster_062环形分组折线图
   preview: vault/material/plotmaster_062环形分组折线图/outputs/rebuilt.png

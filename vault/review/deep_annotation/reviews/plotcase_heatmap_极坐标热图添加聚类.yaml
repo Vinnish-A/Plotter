@@ -1,0 +1,164 @@
+case_id: plotcase_heatmap_极坐标热图添加聚类
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review
+  human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence, card, schema, and prior review were inspected
+    for this batch review.
+annotator_model: gpt-5-codex_model_assisted_review
+reviewed_at: '2026-05-21T00:00:00+08:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_heatmap_极坐标热图添加聚类/metadata.json
+  - vault/material/plotcase_heatmap_极坐标热图添加聚类/agent_guide.md
+  - vault/material/plotcase_heatmap_极坐标热图添加聚类/plot.py
+  - vault/material/plotcase_heatmap_极坐标热图添加聚类/data_main.csv
+  - vault/material/plotcase_heatmap_极坐标热图添加聚类/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_heatmap_极坐标热图添加聚类.yaml
+  - vault/cards/plotcase_heatmap_极坐标热图添加聚类.yaml
+  - vault/review/deep_annotation/reviews/plotcase_heatmap_极坐标热图添加聚类.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_极坐标热图添加聚类.yaml
+  asset_card: vault/cards/plotcase_heatmap_极坐标热图添加聚类.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_heatmap_极坐标热图添加聚类.yaml
+  image_size:
+    exists: true
+    size_bytes: 522316
+    width: 1801
+    height: 1388
+    mean_luma: 239.7976
+    stddev_luma: 35.4332
+    blank_like: false
+  data_rows_inspected: 30
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: true
+observed_visual_grammar:
+  geometry: radial clustered heatmap
+  subtype: circular multi-ring heatmap with dendrogram
+  layout: single radial cluster panel
+  primary_marks: &id001
+  - concentric heatmap rings
+  - radial dendrogram
+  - outside labels
+  - colorbar
+  visible_encodings: ring tile color encodes value; angular position encodes item order after clustering
+inferred_visual_grammar:
+  declared_geometry: heatmap
+  declared_subtype: annotated_heatmap
+  metadata_keywords:
+  - heatmap
+  - matrix_body
+  - annotation_tracks
+  reusable_pattern: radial multi-track heatmap inspiration
+  domain_semantics: Only visual roles were reviewed; biological or clinical meanings are not treated as authoritative unless
+    visible in labels/axes.
+  core_exclusion_note: Generic renderer, fallback, and synthetic-data flags prevent promotion to core retrieval.
+reviewed_visual_roles:
+  marks: *id001
+  encodings: ring tile color encodes value; angular position encodes item order after clustering
+  axes: polar item labels and ring tracks
+  legends: vertical continuous colorbar
+  annotations: outer item labels and central dendrogram
+canonical_columns: &id002
+- row_id
+- column_id
+- value
+- row_group
+- column_group
+- annotation_track
+- annotation_value
+- label
+- size_value
+- facet
+required_data_semantics:
+  row_id: matrix row identifier in standardized long table
+  column_id: matrix column identifier in standardized long table
+  value: cell color value
+optional_data_semantics:
+  row_group: row grouping field in CSV
+  column_group: column grouping field in CSV
+  annotation_track: annotation track name
+  annotation_value: annotation category value
+  label: empty label field
+  size_value: available auxiliary size value; only relevant for bubble heatmaps
+  facet: empty facet field
+optional_modules:
+  data_optional_csv: absent
+  visible_optional_layers: outer item labels and central dendrogram
+  needed_for_full_reuse: Provide explicit optional tables for labels, ordering, legends, manual positions, annotations, and
+    secondary tracks when those are visible.
+false_positive_risks:
+- generic_renderer_rebuild
+- synthetic_data
+- synthetic data flag; circular labels and branches are hard to reuse without ordering metadata
+- CSV does not encode the visible car-model labels
+best_for:
+- radial multi-track heatmap inspiration
+bad_for:
+- core retrieval requiring real source labels/order
+style_notes:
+- high text/mark density
+- Use the observed layout and scale cues, but do not infer undeclared domain semantics from placeholder CSV labels.
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Recommended below core because review found generic-renderer/fallback/synthetic or incomplete semantic-support
+    risks; still useful for visual pattern retrieval at the stated tier.
+  exclusion_risks:
+  - generic_renderer_rebuild
+  - synthetic_data
+confidence:
+  overall: low
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: single radial cluster panel
+  layout: single radial cluster panel
+  marks: *id001
+  encodings: ring tile color encodes value; angular position encodes item order after clustering
+  axes: polar item labels and ring tracks
+  legends: vertical continuous colorbar
+  annotations: outer item labels and central dendrogram
+  text_density: high
+  visual_risks:
+  - synthetic data flag; circular labels and branches are hard to reuse without ordering metadata
+  - CSV does not encode the visible car-model labels
+data_understanding:
+  data_read: true
+  observed_columns: *id002
+  role_mapping:
+    row_id: matrix row identifier in standardized long table
+    column_id: matrix column identifier in standardized long table
+    value: cell color value
+    row_group: row grouping field in CSV
+    column_group: column grouping field in CSV
+    annotation_track: annotation track name
+    annotation_value: annotation category value
+    label: empty label field
+    size_value: available auxiliary size value; only relevant for bubble heatmaps
+    facet: empty facet field
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data: No data_optional.csv is present; visible annotations, manual layout, labels, legends, and secondary
+    tracks may not be reproducible from data_main alone.
+code_understanding:
+  code_read: true
+  backend: Python wrapper around retinue plotter_standard_renderer; metadata may name original R backend but plot.py does
+    not call original plotting code directly
+  entry_behavior: plot.py inserts retinue/tools on sys.path, imports plotter_standard_renderer.render, and calls render('heatmap',
+    '极坐标热图添加聚类').
+  hardcoded_aesthetics: Case title and renderer mode are hardcoded in plot.py; detailed palette/layout behavior is delegated
+    to the generic renderer or preserved fallback image.
+  output_behavior: Standard script is expected to write outputs/rebuilt.png; machine evidence reports the rebuilt PNG exists
+    and is not blank-like.
+  unsupported_features: Original plotting code behavior, full manual layout resources, and any undeclared annotation tables
+    are not represented by plot.py itself.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

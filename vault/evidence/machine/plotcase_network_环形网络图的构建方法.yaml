@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_network_环形网络图的构建方法/metadata.json
     exists: true
-    size_bytes: 4174
+    size_bytes: 5080
   agent_guide:
     path: vault/material/plotcase_network_环形网络图的构建方法/agent_guide.md
     exists: true

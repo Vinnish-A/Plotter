@@ -1,10 +1,14 @@
 id: plotmaster_024矩阵饼图+分组注释
 title: 024矩阵饼图+分组注释
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review
   human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence,
+    card, schema, and prior review were inspected for this batch review.
+  reviewed_at: '2026-05-21T00:00:00+08:00'
+  annotator_model: gpt-5-codex_model_assisted_review
+  review_version: deep_annotation_model_review_v1
 origin:
   case_dir: vault/material/plotmaster_024矩阵饼图+分组注释
   source:
@@ -331,3 +335,35 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_024矩阵饼图+分组注释.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Recommended below core because review found generic-renderer/fallback/synthetic
+  or incomplete semantic-support risks; still useful for visual pattern retrieval
+  at the stated tier.
+exclusion_risks:
+- generic_renderer_rebuild
+- false_positive_columns:source,target,weight
+- generic_plotmaster_source_target_weight_columns_are_not_visual_roles
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_024矩阵饼图+分组注释.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_024矩阵饼图+分组注释.yaml
+  geometry: matrix pie/dot annotation plot
+  subtype: large mutation co-occurrence matrix
+  required_roles:
+  - x
+  - y
+  - value
+  optional_roles:
+  - group
+  - label
+  - facet
+  - lower
+  - upper
+  tier: support
+  confidence:
+    overall: medium
+    visual_grammar: high
+    data_roles: medium
+    code_understanding: medium

@@ -1,9 +1,9 @@
 id: plotcase_森林图_森林图进阶图例映射版
 title: 森林图进阶图例映射版
 retrieval_tier: inspiration
-one_line: forest asset for 森林图进阶图例映射版
-geometry: forest
-subtype: interval_forest
+one_line: Inspiration for publication forest plots with table columns and custom legend mapping.
+geometry: annotated_forest_plot_with_table_and_legend
+subtype: annotated_forest_plot_with_table_and_legend
 required_roles:
 - term
 - estimate
@@ -13,8 +13,6 @@ optional_roles:
 - p_value
 - group
 - reference
-- label
-- row_order
 capabilities:
   highlight: true
   detail_panel: false
@@ -23,28 +21,35 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 森林图进阶图例映射版
-- 'forest/interval_forest grammar with roles: term, estimate, lower, upper'
+- Inspiration for publication forest plots with table columns and custom legend mapping.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 143759; width: 1592; height: 917'
+- Clean CSV-driven forest generation in current standard entry.
+image_summary: 'figure_type: annotated_forest_plot_with_table_and_legend; layout: Table-like left labels
+  and estimates, central forest intervals around a dashed reference line, right p-value column, and numbered
+  color legend.; marks: […'
 data_summary: 'main_columns: [''term'', ''estimate'', ''lower'', ''upper'', ''p_value'', ''group'', ''reference'',
   ''label'', ''row_order'']; sampled_rows: 8'
 code_summary: 'entry: plot.py; backend_hints: [''complexheatmap'']'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- Do not treat as a scatterplot.
+- Fallback status keeps it out of core/support despite suitable forest roles.
+- case_level_fallback
+- generic_renderer_entry
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_森林图_森林图进阶图例映射版.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_森林图_森林图进阶图例映射版.yaml
   machine_evidence: vault/evidence/machine/plotcase_森林图_森林图进阶图例映射版.yaml
   evidence_pack: vault/material/plotcase_森林图_森林图进阶图例映射版
   preview: vault/material/plotcase_森林图_森林图进阶图例映射版/outputs/rebuilt.png

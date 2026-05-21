@@ -129,5 +129,19 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": true
-  }
+  },
+  "retrieval_tier": "archive",
+  "retrieval_rationale": "Observed rebuilt image does not match the claimed advanced nine-quadrant grammar and data are synthetic/generic.",
+  "exclusion_risks": [
+    "false positive for nine-quadrant scatter retrieval"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review_v1",
+    "replaces": "deep_annotation_machine_backfill_v1",
+    "reviewed_at": "2026-05-21T09:20:01.032527+00:00",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_020多组学九象限散点图.yaml"
 }

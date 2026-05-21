@@ -341,3 +341,6 @@ reviewed_summary:
     raw_script_semantics: medium
     current_data_contract: low
     retrieval_tier: high
+agent_default_entry: vault/cards/figures4papers_figure_Dispersion_idea_png.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

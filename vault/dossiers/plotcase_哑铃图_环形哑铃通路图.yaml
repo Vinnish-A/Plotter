@@ -1,10 +1,12 @@
 id: plotcase_哑铃图_环形哑铃通路图
 title: 环形哑铃通路图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+  reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+  annotator_model: gpt-5-codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_哑铃图_环形哑铃通路图
   source:
@@ -303,3 +305,31 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_哑铃图_环形哑铃通路图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Observed radial paired comparison is useful, but the standardized
+  CSV does not encode its actual item/group/two-metric semantics.
+exclusion_risks:
+- source/target columns would mislead retrieval as network
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_哑铃图_环形哑铃通路图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_哑铃图_环形哑铃通路图.yaml
+  geometry: radial_dumbbell_pathway
+  subtype: circular_paired_metric_plot
+  required_roles:
+  - item
+  - group
+  - value_a
+  - value_b
+  optional_roles:
+  - p_value
+  - score_color
+  - label
+  tier: support
+  confidence:
+    overall: 0.74
+    image: 0.9
+    data: 0.62
+    code: 0.7

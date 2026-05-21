@@ -104,5 +104,22 @@
     "generic_renderer_rebuild": false,
     "case_level_fallback": true,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Strong visual idea for a conceptual manifold-operation explanation, but the accepted case is image-first and not data-complete through data_main.csv.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "csv_does_not_encode_visible_annotations",
+    "not_a_standard_scatter_or_network"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Replaced machine backfill after inspecting metadata, guide, data, code, evidence records, current review, and rebuilt image.",
+    "reviewed_at": "2026-05-21T09:03:02Z",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "deep_annotation_model_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/figures4papers_figure_Dispersion_illustration_png.yaml"
 }

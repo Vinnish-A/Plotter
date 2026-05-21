@@ -1,9 +1,9 @@
 id: plotcase_heatmap_多元素个性化气泡热图
 title: 多元素个性化气泡热图
 retrieval_tier: inspiration
-one_line: heatmap asset for 多元素个性化气泡热图
-geometry: heatmap
-subtype: bubble_heatmap
+one_line: Visual inspiration for bubble heatmap with annotations
+geometry: bubble heatmap with annotations
+subtype: ''
 required_roles:
 - row_id
 - column_id
@@ -18,34 +18,45 @@ optional_roles:
 - facet
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 多元素个性化气泡热图
-- 'heatmap/bubble_heatmap grammar with roles: row_id, column_id, value'
+- Visual inspiration for bubble heatmap with annotations
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 192200; width: 943; height: 1537'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: bubble heatmap with annotations; panel_count: 1; layout: single tall matrix split
+  into RPM/RPMA column groups with row-group brackets and bottom legends; primary_marks: [''circles in
+  matrix cells'', ''top colored d…'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
 - case_level_fallback
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- case_level_fallback_or_custom_required
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_heatmap_多元素个性化气泡热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_多元素个性化气泡热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_多元素个性化气泡热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_多元素个性化气泡热图
   preview: vault/material/plotcase_heatmap_多元素个性化气泡热图/outputs/rebuilt.png

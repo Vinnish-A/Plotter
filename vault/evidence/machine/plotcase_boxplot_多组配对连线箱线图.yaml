@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_boxplot_多组配对连线箱线图/metadata.json
     exists: true
-    size_bytes: 3925
+    size_bytes: 4886
   agent_guide:
     path: vault/material/plotcase_boxplot_多组配对连线箱线图/agent_guide.md
     exists: true

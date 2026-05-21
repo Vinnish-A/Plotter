@@ -35,10 +35,13 @@ code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
 - case_level_fallback
-- generic_renderer_rebuild
+- generic_renderer
+- missing_optional_data
+risk_notes:
 - Generic scatter plot.py is not evidence of the observed radial genomic grammar.
 - Current chromosome/position/score fields are synthetic placeholders.
 - Empty ring column hides the missing two-track structure.
+- case_level_fallback
 - synthetic_data_main
 - generic_renderer_entry
 - missing_real_multitrait_marker_table
@@ -46,6 +49,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_point_多层级曼哈顿图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_point_多层级曼哈顿图.yaml

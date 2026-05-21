@@ -156,5 +156,22 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": true,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Good visual target, but fallback status and missing trajectory contract prevent support/core use.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "generic_renderer_entry",
+    "trajectory_metadata_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Observed image has specialized trajectory curves, but machine evidence records visual-audit fallback and the standard entry is generic scatter.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml"
 }

@@ -264,3 +264,6 @@ reviewed_summary:
     overall: 0.88
     visual_grammar: 0.95
     current_contract_fit: 0.45
+agent_default_entry: vault/cards/plotcase_boxplot_多分组分面小提琴箱线图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

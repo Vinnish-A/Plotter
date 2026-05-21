@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_哑铃图_环形哑铃通路图/metadata.json
     exists: true
-    size_bytes: 3581
+    size_bytes: 4271
   agent_guide:
     path: vault/material/plotcase_哑铃图_环形哑铃通路图/agent_guide.md
     exists: true

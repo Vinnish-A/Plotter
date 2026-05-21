@@ -1,50 +1,58 @@
 id: plotcase_heatmap_ARG丰度与环境因子相关性网络热图
 title: ARG丰度与环境因子相关性网络热图
 retrieval_tier: inspiration
-one_line: network asset for ARG丰度与环境因子相关性网络热图
-geometry: network
-subtype: node_link_network
+one_line: Inspiration for heatmap-plus-coupling-network figures with multiple legend channels.
+geometry: correlation_heatmap_with_arg_coupling_network
+subtype: correlation_heatmap_with_arg_coupling_network
 required_roles:
-- row_id
-- column_id
-- value
+- variable_i
+- variable_j
+- pearson_r
+- arg_env
+- arg_r
+- arg_p_value
 optional_roles:
-- row_group
-- column_group
-- annotation_track
-- annotation_value
-- label
-- size_value
-- facet
+- importance
+- link_class
 capabilities:
-  highlight: true
+  highlight: false
   detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- ARG丰度与环境因子相关性网络热图
-- 'network/node_link_network grammar with roles: row_id, column_id, value'
+- Inspiration for heatmap-plus-coupling-network figures with multiple legend channels.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 258342; width: 1660; height: 1362'
+- Clean CSV-only heatmap rebuilds or simple node-link graphs.
+image_summary: 'figure_type: correlation_heatmap_with_arg_coupling_network; layout: Upper-triangle correlation
+  matrix on the right, ARG abundance anchor at lower left, curved links to environmental variables, top
+  importance strip, and …'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- missing_optional_data
+risk_notes:
+- Do not treat this as an ordinary heatmap template.
+- Do not treat current row_id/column_id/value alone as sufficient for ARG network semantics.
+- Requires linkET or equivalent custom connector logic.
+- missing_dependency_linkET
+- generic_renderer_entry
+- incomplete_data_contract
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图
   preview: vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/outputs/rebuilt.png

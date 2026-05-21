@@ -1,9 +1,9 @@
 id: plotcase_基因组图_比较基因组结构图
 title: 比较基因组结构图
 retrieval_tier: inspiration
-one_line: genome asset for 比较基因组结构图
-geometry: genome
-subtype: genome_structure
+one_line: Visual inspiration for comparative genome synteny map
+geometry: comparative genome synteny map
+subtype: ''
 required_roles:
 - segment_id
 - feature_id
@@ -26,29 +26,40 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 比较基因组结构图
-- 'genome/genome_structure grammar with roles: segment_id, feature_id, start, end, strand, feature_class'
+- Visual inspiration for comparative genome synteny map
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 369106; width: 1843; height: 1137'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: comparative genome synteny map; panel_count: 1; layout: six horizontal genome
+  segments with gene arrows, labels, GC tracks, and synteny ribbons; primary_marks: [''directional gene
+  arrows'', ''translucent synteny po…'
 data_summary: 'main_columns: [''segment_id'', ''feature_id'', ''start'', ''end'', ''strand'', ''feature_class'',
   ''cluster'', ''label'', ''link_id'', ''similarity'', ''track'', ''color_class'']; sampled_rows: 13'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
 - case_level_fallback
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- case_level_fallback_or_custom_required
+- synthetic_data
+- visible_output_may_not_be_recomputed_by_standard_entry
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_基因组图_比较基因组结构图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_基因组图_比较基因组结构图.yaml
   machine_evidence: vault/evidence/machine/plotcase_基因组图_比较基因组结构图.yaml
   evidence_pack: vault/material/plotcase_基因组图_比较基因组结构图
   preview: vault/material/plotcase_基因组图_比较基因组结构图/outputs/rebuilt.png

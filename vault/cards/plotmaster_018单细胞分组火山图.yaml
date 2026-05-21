@@ -1,51 +1,53 @@
 id: plotmaster_018单细胞分组火山图
 title: 018单细胞分组火山图
 retrieval_tier: support
-one_line: scatter asset for 018单细胞分组火山图
-geometry: scatter
-subtype: volcano
+one_line: Grouped volcano-like differential plots split by cell subtype.
+geometry: grouped_single_cell_volcano_strip
+subtype: grouped_single_cell_volcano_strip
 required_roles:
-- x
-- y
-- value
+- cell_subtype
+- log2_fold_change
+- regulation
 optional_roles:
-- group
-- label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
+- gene_label
+- label_priority
 capabilities:
-  highlight: true
-  detail_panel: true
+  highlight: false
+  detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: false
   batch: true
 best_for:
-- 018单细胞分组火山图
-- 'scatter/volcano grammar with roles: x, y, value'
+- Grouped volcano-like differential plots split by cell subtype.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 342986; width: 1008; height: 1008'
+- Ordinary bivariate scatter or network workflows.
+image_summary: 'figure_type: grouped_single_cell_volcano_strip; layout: One scatter plot split into eight
+  cell-subtype x bands with central colored labels, up/down/not-significant points, top/bottom extreme
+  gene labels, and top regulat…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- compatibility_columns
+risk_notes:
+- Do not treat source/target/weight as graph roles.
+- Current x values alone do not describe the visible cell-subtype bands.
+- generic_renderer_entry
+- compatibility_columns
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_018单细胞分组火山图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_018单细胞分组火山图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_018单细胞分组火山图.yaml
   evidence_pack: vault/material/plotmaster_018单细胞分组火山图
   preview: vault/material/plotmaster_018单细胞分组火山图/outputs/rebuilt.png

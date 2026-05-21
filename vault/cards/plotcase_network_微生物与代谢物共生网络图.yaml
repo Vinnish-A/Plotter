@@ -38,9 +38,13 @@ code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
 - case_level_fallback
-- generic_renderer_rebuild
-- Current source/target/weight are synthetic compatibility fields, not proof of s…
-- Generic renderer cannot reproduce three habitat panels, shape encodings, hub si…
+- generic_renderer
+- compatibility_columns
+risk_notes:
+- Current source/target/weight are synthetic compatibility fields, not proof of source-derived network
+  roles.
+- Generic renderer cannot reproduce three habitat panels, shape encodings, hub sizing, or categorical
+  legend.
 - Rebuilt preview is a fallback cover.
 - synthetic data abstraction
 - case-level fallback
@@ -49,6 +53,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_network_微生物与代谢物共生网络图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_network_微生物与代谢物共生网络图.yaml

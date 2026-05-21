@@ -1,52 +1,64 @@
 id: figureya_survival_FigureYa305PMAPscore
 title: FigureYa305PMAPscore
 retrieval_tier: inspiration
-one_line: heatmap asset for FigureYa305PMAPscore
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: Inspiration for a two-stratum Kaplan-Meier survival figure with censor ticks and a number-at-risk
+  table.
+geometry: survival_step_curve
+subtype: kaplan_meier_survival_curve_with_risk_table
 required_roles:
-- x
-- y
-- value
+- time
+- survival_probability
+- stratum
 optional_roles:
-- group
-- label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
+- censor_time
+- risk_count
+- p_value
 capabilities:
-  highlight: true
-  detail_panel: true
+  highlight: false
+  detail_panel: false
   annotation_track: false
-  uncertainty: true
-  composition: true
+  uncertainty: false
+  composition: false
   batch: true
 best_for:
-- FigureYa305PMAPscore
-- 'heatmap/annotated_heatmap grammar with roles: x, y, value'
+- Inspiration for a two-stratum Kaplan-Meier survival figure with censor ticks and a number-at-risk table.
+- Cases needing survival probability over time with a compact statistical annotation.
+- Visual reference for aligning risk-table columns under the main time axis.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 47878; width: 720; height: 720'
+- Heatmaps, ComplexHeatmap compositions, oncoplots, ROC plots, or network diagrams.
+- Clean-session recomputation from the current CSV interface.
+- Assets requiring encoded confidence intervals or patient-level survival data.
+image_summary: 'figure_type: kaplan_meier_survival_curve_with_risk_table; geometry: survival_step_curve;
+  panel_structure: one main survival plot above one aligned number-at-risk table; marks: [''two colored
+  step curves'', ''censor tick ma…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 1'
 code_summary: 'entry: plot.py; backend_hints: [''complexheatmap'']'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- misleading_metadata
+- compatibility_columns
+risk_notes:
+- Do not retrieve this as a heatmap despite metadata/card heatmap hints.
+- Do not treat source, target, or weight as network fields; they are compatibility placeholders.
+- Do not assume the one-row CSV can regenerate the observed KM curve or risk table.
+- case_level_fallback
+- generic_renderer_entry
+- data_interface_placeholder
+- metadata_heatmap_false_positive
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/figureya_survival_FigureYa305PMAPscore.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa305PMAPscore.yaml
   machine_evidence: vault/evidence/machine/figureya_survival_FigureYa305PMAPscore.yaml
   evidence_pack: vault/material/figureya_survival_FigureYa305PMAPscore
   preview: vault/material/figureya_survival_FigureYa305PMAPscore/outputs/rebuilt.png

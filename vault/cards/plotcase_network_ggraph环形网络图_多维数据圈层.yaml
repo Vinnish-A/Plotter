@@ -1,22 +1,18 @@
 id: plotcase_network_ggraph环形网络图_多维数据圈层
 title: ggraph环形网络图_多维数据圈层
 retrieval_tier: support
-one_line: network asset for ggraph环形网络图_多维数据圈层
-geometry: network
-subtype: node_link_network
+one_line: Circular network figures with central hubs and multiple annotation rings.
+geometry: circular_ggraph_network_with_multiring_annotations
+subtype: circular_ggraph_network_with_multiring_annotations
 required_roles:
 - source
 - target
-- weight
-optional_roles:
 - node_id
-- node_label
-- node_group
-- node_size
-- edge_group
-- edge_direction
-- layout_x
-- layout_y
+optional_roles:
+- weight
+- annotation_track
+- annotation_value
+- ring_order
 capabilities:
   highlight: false
   detail_panel: false
@@ -25,28 +21,36 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- ggraph环形网络图_多维数据圈层
-- 'network/node_link_network grammar with roles: source, target, weight'
+- Circular network figures with central hubs and multiple annotation rings.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 523392; width: 1987; height: 1537'
+- Dense arbitrary graphs without radial annotation semantics.
+image_summary: 'figure_type: circular_ggraph_network_with_multiring_annotations; layout: Large C-shaped
+  circular dendrogram/network with central condition nodes, radial metabolite labels, inner dot/link structure,
+  multiple outer annota…'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- missing_optional_data
+risk_notes:
+- Do not retrieve as a simple circular node-link network.
+- Current source/target/weight sketch is far smaller than the observed multiring grammar.
+- generic_renderer_entry
+- annotation_tracks_missing
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_network_ggraph环形网络图_多维数据圈层.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_network_ggraph环形网络图_多维数据圈层.yaml
   machine_evidence: vault/evidence/machine/plotcase_network_ggraph环形网络图_多维数据圈层.yaml
   evidence_pack: vault/material/plotcase_network_ggraph环形网络图_多维数据圈层
   preview: vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/outputs/rebuilt.png

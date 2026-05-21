@@ -1,51 +1,54 @@
 id: plotmaster_015分半小提琴图
 title: 015分半小提琴图
 retrieval_tier: support
-one_line: violin asset for 015分半小提琴图
-geometry: violin
-subtype: violin
+one_line: two-group distribution comparison by category
+geometry: split_violin_comparison
+subtype: half_violin_group_comparison_with_summary_points
 required_roles:
 - x
-- y
 - value
-optional_roles:
 - group
-- label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
+optional_roles:
+- p_value
+- sample_id
 capabilities:
   highlight: true
   detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: false
   batch: true
 best_for:
-- 015分半小提琴图
-- 'violin/violin grammar with roles: x, y, value'
+- two-group distribution comparison by category
+- half-violin style examples
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 66744; width: 1440; height: 720'
+- network or flow retrieval
+- more than two groups without redesign
+image_summary: 'geometry: split_violin_comparison; subtype: half_violin_group_comparison_with_summary_points;
+  description: Single-panel split half-violin plot across genes, with Treated/Untreated halves, central
+  summary points/error ba…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 84'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- current data_main has unique x ids rather than direct gene categories, so group/category recovery depends
+  on original s…
+- source/target/weight are duplicates and not network roles
+- exact treated/untreated split may not rebuild from current data_main alone
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_015分半小提琴图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_015分半小提琴图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_015分半小提琴图.yaml
   evidence_pack: vault/material/plotmaster_015分半小提琴图
   preview: vault/material/plotmaster_015分半小提琴图/outputs/rebuilt.png

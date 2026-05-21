@@ -340,3 +340,6 @@ reviewed_summary:
     data_roles: 0.84
     caveats:
     - Raw plotting code can generate the image, but standard entry does not use it.
+agent_default_entry: vault/cards/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

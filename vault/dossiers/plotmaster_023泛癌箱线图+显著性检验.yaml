@@ -1,10 +1,13 @@
 id: plotmaster_023泛癌箱线图+显著性检验
 title: 023泛癌箱线图+显著性检验
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: reviewed
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Reviewed image, CSV, plot.py, R source, visual_check, card, and prior review.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_023泛癌箱线图+显著性检验
   source:
@@ -313,3 +316,30 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_023泛癌箱线图+显著性检验.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Good support asset for grouped boxplots, with compatibility-column
+  caveats.
+exclusion_risks:
+- generic_renderer_entry
+- significance_metadata_missing
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_023泛癌箱线图+显著性检验.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_023泛癌箱线图+显著性检验.yaml
+  geometry: pan_cancer_grouped_boxplot_with_significance
+  subtype: grouped_project_boxplot_significance
+  required_roles:
+  - project
+  - value
+  - group
+  optional_roles:
+  - p_value
+  - label
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: high
+    source_rebuild_assessment: high

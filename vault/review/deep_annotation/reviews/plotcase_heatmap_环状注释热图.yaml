@@ -1,0 +1,87 @@
+case_id: plotcase_heatmap_环状注释热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Reviewed image, metadata, guide, source R, plot.py, data_main, visual_check, card, and previous backfill."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotcase_heatmap_环状注释热图/metadata.json, vault/material/plotcase_heatmap_环状注释热图/agent_guide.md, vault/material/plotcase_heatmap_环状注释热图/plot.py, vault/material/plotcase_heatmap_环状注释热图/scripts/code.R, vault/material/plotcase_heatmap_环状注释热图/data_main.csv, vault/material/plotcase_heatmap_环状注释热图/outputs/rebuilt.png, vault/material/plotcase_heatmap_环状注释热图/outputs/visual_check.json, vault/cards/plotcase_heatmap_环状注释热图.yaml, vault/review/deep_annotation/reviews/plotcase_heatmap_环状注释热图.yaml]
+  data_main_profile:
+    rows: 30
+    columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  rebuilt_png: {width: 1008, height: 1008, visual_check_ok: true}
+  original_rebuild_log: "R ggtree/ggtreeExtra source completed with warnings."
+observed_visual_grammar:
+  figure_type: circular_phylogenetic_heatmap_with_outer_group_ring
+  layout: "Fan/circular heatmap with many labeled tips, inner value tiles, outer categorical group ring, and right-side legends."
+  marks: [circular heatmap tiles, outer annotation ring, tip labels, colorbar, group legend]
+  encodings:
+    radial_position: sample or feature identity
+    angular_tile: measured variable
+    fill_value: numeric abundance/value
+    outer_ring_color: group category
+inferred_visual_grammar:
+  grammar_id: ggtree_extra_circular_annotation_heatmap
+  source_logic: "R builds a star-like tree from sample labels and uses geom_fruit for heatmap and group rings."
+  current_standard_rebuild: "plot.py calls generic render('heatmap'), not ggtreeExtra circular layout."
+reviewed_visual_roles:
+  row_id: "Radial sample/feature identity."
+  column_id: "Heatmap variable around inner ring."
+  value: "Tile fill value."
+  row_group: "Potential group ring category."
+  column_group: "Not visibly a separate module in current image."
+canonical_columns: [sample_id, feature, value, group]
+required_data_semantics:
+  sample_id: "Tip/radial row identity."
+  feature: "Heatmap tile variable."
+  value: "Numeric tile fill."
+optional_data_semantics:
+  group: "Outer annotation ring."
+  tip_order: "Manual radial order if needed."
+optional_modules:
+  circular_group_ring: {status: observed}
+  phylogenetic_branch_lengths: {status: not_observed_branchless_star_tree}
+false_positive_risks:
+  - "Do not treat as an ordinary rectangular heatmap or true phylogeny."
+  - "Current generic plot.py cannot reproduce circular fan layout."
+best_for:
+  - "Circular heatmap templates with a simple outer categorical annotation ring."
+bad_for:
+  - "Trees requiring meaningful branch lengths or multiple independent radial tracks."
+style_notes:
+  - "Open fan angle, dense radial labels, blue-red numeric colorbar, three-color group legend."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Source-backed circular heatmap grammar is clear, but current standard entry and CSV are incomplete for core rebuilds."
+  exclusion_risks: [generic_renderer_entry, circular_layout_not_in_csv]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Single circular/fan heatmap."
+  marks: [tiles, labels, outer ring, legends]
+  encodings: "Tile fill for values, outer ring color for group."
+  axes: "Radial labels replace conventional axes."
+  legends: "Group legend and value colorbar."
+  annotations: "Tip labels around arc."
+  text_density: high
+  visual_risks: "Tip labels are dense and require large radius."
+data_understanding:
+  data_read: true
+  observed_columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  role_mapping: {row_id: sample_id, column_id: feature, value: tile_value, row_group: group}
+  derived_columns: []
+  false_positive_columns: [column_group, annotation_track, annotation_value, label, size_value, facet]
+  missing_optional_data: [tip_order]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/ggtree/ggtreeExtra source."
+  entry_behavior: "plot.py calls render('heatmap'); R script builds circular geom_fruit heatmap."
+  hardcoded_aesthetics: "Fan angle, offsets, pwidths, palette, and label sizes are hardcoded."
+  output_behavior: "Existing rebuilt.png is nonblank and matches circular source-style output."
+  unsupported_features: [circular_geom_fruit_in_generic_renderer]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

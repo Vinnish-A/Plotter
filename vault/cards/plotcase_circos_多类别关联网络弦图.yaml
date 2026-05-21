@@ -34,10 +34,12 @@ code_summary: 'entry: plot.py; backend_hints: [''circlize'', ''complexheatmap'']
 risk_flags:
 - synthetic_data
 - case_level_fallback
-- generic_renderer_rebuild
+- generic_renderer
+risk_notes:
 - May be retrieved as reusable chord even though data_main is synthetic.
-- May be treated as source-code rebuild because rebuilt.png visually matches a co…
+- May be treated as source-code rebuild because rebuilt.png visually matches a cover.
 - source/target/weight names may hide lack of raw-to-standard lineage.
+- case_level_fallback
 - synthetic_data_main
 - generic_renderer_entry
 - source_target_weight_not_currently_source_derived
@@ -45,6 +47,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_circos_多类别关联网络弦图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_circos_多类别关联网络弦图.yaml

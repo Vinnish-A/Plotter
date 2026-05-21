@@ -1,0 +1,92 @@
+case_id: plotcase_network_ggraph环形网络图_多维数据圈层
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Reviewed rich circular network image, data_main, source R, generic plot.py, machine evidence, card, and prior review."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/metadata.json, vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/agent_guide.md, vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/plot.py, vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/scripts/code.R, vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/data_main.csv, vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/outputs/rebuilt.png, vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/outputs/visual_check.json, vault/cards/plotcase_network_ggraph环形网络图_多维数据圈层.yaml, vault/review/deep_annotation/reviews/plotcase_network_ggraph环形网络图_多维数据圈层.yaml]
+  data_main_profile:
+    rows: 7
+    columns: [source, target, weight, node_id, node_label, node_group, node_size, edge_group, edge_direction, layout_x, layout_y, source_group, target_group]
+  rebuilt_png: {width: 1987, height: 1537, visual_check_ok: true}
+  original_rebuild_log: "R source completed with guide warnings."
+observed_visual_grammar:
+  figure_type: circular_ggraph_network_with_multiring_annotations
+  layout: "Large C-shaped circular dendrogram/network with central condition nodes, radial metabolite labels, inner dot/link structure, multiple outer annotation rings, bar ring, and left legends."
+  marks: [curved radial edges, nodes, annotation tiles, outer bars, radial labels, legends]
+  encodings:
+    central_nodes: condition/group hubs
+    radial_nodes: metabolites/features
+    edge: association from hub to feature
+    outer_tiles: class, correlation, and VIP annotations
+    outer_bars: fold-change or magnitude
+inferred_visual_grammar:
+  grammar_id: ggraph_radial_network_multiring_annotations
+  source_logic: "R builds tidygraph dendrogram layout and composes radial annotation rings using coord_radial/cowplot."
+  current_standard_rebuild: "plot.py calls generic network renderer, not the visible multiring ggraph composition."
+reviewed_visual_roles:
+  source: "Active edge source in abstract network table."
+  target: "Active edge target in abstract network table."
+  weight: "Potential edge weight; not the multichannel ring annotations."
+  node_id: "Potential node identity."
+  node_group: "Needed for node/branch color when populated."
+  node_size: "Potential node size but empty in current CSV."
+canonical_columns: [source, target, weight, node_id, node_group, node_size, annotation_track, annotation_value, ring_order, label]
+required_data_semantics:
+  source: "Network edge source."
+  target: "Network edge target."
+  node_id: "Node identity for radial layout."
+optional_data_semantics:
+  weight: "Edge width or association strength."
+  annotation_track: "Outer ring type."
+  annotation_value: "Outer ring value."
+  ring_order: "Track ordering."
+optional_modules:
+  radial_network: {status: observed}
+  multiring_annotations: {status: observed_but_not_encoded_by_current_csv}
+  outer_bar_ring: {status: observed}
+false_positive_risks:
+  - "Do not retrieve as a simple circular node-link network."
+  - "Current source/target/weight sketch is far smaller than the observed multiring grammar."
+best_for:
+  - "Circular network figures with central hubs and multiple annotation rings."
+bad_for:
+  - "Dense arbitrary graphs without radial annotation semantics."
+style_notes:
+  - "White canvas, large radial text labels, pale blue/orange annotation rings, compact legends on the left."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Strong source-backed grammar, but standard entry and current CSV do not encode the multiring annotation contract."
+  exclusion_risks: [generic_renderer_entry, annotation_tracks_missing]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "One radial network occupying right/center with legend column on left."
+  marks: [nodes, edges, radial tiles, outer bars, labels]
+  encodings: "Node/link structure plus annotation rings for VIP/correlation/class."
+  axes: "No Cartesian axes; radial ordering and labels define coordinate system."
+  legends: "VIP gradient, correlation coefficient gradient, HMDB class legend."
+  annotations: "Radial feature labels."
+  text_density: very_high
+  visual_risks: "Radial labels are crowded and require large output."
+data_understanding:
+  data_read: true
+  observed_columns: [source, target, weight, node_id, node_label, node_group, node_size, edge_group, edge_direction, layout_x, layout_y, source_group, target_group]
+  role_mapping: {source: edge_source, target: edge_target, weight: edge_weight, node_id: node_identity, node_label: node_label}
+  derived_columns: []
+  false_positive_columns: [edge_direction, layout_x, layout_y, source_group, target_group]
+  missing_optional_data: [annotation_track, annotation_value, ring_order]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/tidygraph/ggraph/cowplot source."
+  entry_behavior: "plot.py calls render('network'); R source creates radial multiring composition."
+  hardcoded_aesthetics: "Condition nodes, colors, ring ordering, blank spacer nodes, and legends are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank and matches source-style multiring network."
+  unsupported_features: [multiring_annotation_rebuild_from_current_csv, radial_label_collision_management]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

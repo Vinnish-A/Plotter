@@ -1,0 +1,172 @@
+case_id: plotmaster_024矩阵饼图+分组注释
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review
+  human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence, card, schema, and prior review were inspected
+    for this batch review.
+annotator_model: gpt-5-codex_model_assisted_review
+reviewed_at: '2026-05-21T00:00:00+08:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_024矩阵饼图+分组注释/metadata.json
+  - vault/material/plotmaster_024矩阵饼图+分组注释/agent_guide.md
+  - vault/material/plotmaster_024矩阵饼图+分组注释/plot.py
+  - vault/material/plotmaster_024矩阵饼图+分组注释/data_main.csv
+  - vault/material/plotmaster_024矩阵饼图+分组注释/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_024矩阵饼图+分组注释.yaml
+  - vault/cards/plotmaster_024矩阵饼图+分组注释.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_024矩阵饼图+分组注释.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotmaster_024矩阵饼图+分组注释.yaml
+  asset_card: vault/cards/plotmaster_024矩阵饼图+分组注释.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_024矩阵饼图+分组注释.yaml
+  image_size:
+    exists: true
+    size_bytes: 485006
+    width: 4500
+    height: 1800
+    mean_luma: 245.8699
+    stddev_luma: 26.9056
+    blank_like: false
+  data_rows_inspected: 800
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: matrix pie/dot annotation plot
+  subtype: large mutation co-occurrence matrix
+  layout: single wide matrix with column group headers
+  primary_marks: &id001
+  - small gray matrix circles
+  - red/blue pie-slice overlays
+  - row labels
+  - column group bands
+  visible_encodings: circle fill/slices encode categorical pair status or co-occurrence/exclusivity; grid position encodes
+    gene-pair matrix
+inferred_visual_grammar:
+  declared_geometry: heatmap
+  declared_subtype: annotated_heatmap
+  metadata_keywords:
+  - heatmap
+  reusable_pattern: high-density matrix annotation inspiration
+  domain_semantics: Only visual roles were reviewed; biological or clinical meanings are not treated as authoritative unless
+    visible in labels/axes.
+  core_exclusion_note: Generic renderer, fallback, and synthetic-data flags prevent promotion to core retrieval.
+reviewed_visual_roles:
+  marks: *id001
+  encodings: circle fill/slices encode categorical pair status or co-occurrence/exclusivity; grid position encodes gene-pair
+    matrix
+  axes: genes/variables along rows and columns
+  legends: not visible in reviewed image crop; semantics rely on colors/slices
+  annotations: top group labels c1-c6 and row group labels G1-G10
+canonical_columns: &id002
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: matrix column variable/gene
+  y: matrix row variable/gene
+  value: matrix/pie magnitude when populated
+optional_data_semantics:
+  group: empty group field
+  label: column label duplicate
+  facet: co-occurrence/exclusivity status candidate
+  lower: derived interval not a visible role
+  upper: derived interval not a visible role
+optional_modules:
+  data_optional_csv: absent
+  visible_optional_layers: top group labels c1-c6 and row group labels G1-G10
+  needed_for_full_reuse: Provide explicit optional tables for labels, ordering, legends, manual positions, annotations, and
+    secondary tracks when those are visible.
+false_positive_risks:
+- generic_renderer_rebuild
+- false_positive_columns:source,target,weight
+- generic_plotmaster_source_target_weight_columns_are_not_visual_roles
+- dense labels are hard to read
+- value/facet semantics in data_main only partially explain pie-slice encodings
+best_for:
+- high-density matrix annotation inspiration
+bad_for:
+- simple heatmap retrieval or use without explicit legend semantics
+style_notes:
+- very high text/mark density
+- Use the observed layout and scale cues, but do not infer undeclared domain semantics from placeholder CSV labels.
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Recommended below core because review found generic-renderer/fallback/synthetic or incomplete semantic-support
+    risks; still useful for visual pattern retrieval at the stated tier.
+  exclusion_risks:
+  - generic_renderer_rebuild
+  - false_positive_columns:source,target,weight
+  - generic_plotmaster_source_target_weight_columns_are_not_visual_roles
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: single wide matrix with column group headers
+  layout: single wide matrix with column group headers
+  marks: *id001
+  encodings: circle fill/slices encode categorical pair status or co-occurrence/exclusivity; grid position encodes gene-pair
+    matrix
+  axes: genes/variables along rows and columns
+  legends: not visible in reviewed image crop; semantics rely on colors/slices
+  annotations: top group labels c1-c6 and row group labels G1-G10
+  text_density: very high
+  visual_risks:
+  - dense labels are hard to read
+  - value/facet semantics in data_main only partially explain pie-slice encodings
+data_understanding:
+  data_read: true
+  observed_columns: *id002
+  role_mapping:
+    x: matrix column variable/gene
+    y: matrix row variable/gene
+    value: matrix/pie magnitude when populated
+    group: empty group field
+    label: column label duplicate
+    facet: co-occurrence/exclusivity status candidate
+    lower: derived interval not a visible role
+    upper: derived interval not a visible role
+  derived_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  missing_optional_data: No data_optional.csv is present; visible annotations, manual layout, labels, legends, and secondary
+    tracks may not be reproducible from data_main alone.
+code_understanding:
+  code_read: true
+  backend: Python wrapper around retinue plotter_standard_renderer; metadata may name original R backend but plot.py does
+    not call original plotting code directly
+  entry_behavior: plot.py inserts retinue/tools on sys.path, imports plotter_standard_renderer.render, and calls render('heatmap',
+    '024矩阵饼图+分组注释').
+  hardcoded_aesthetics: Case title and renderer mode are hardcoded in plot.py; detailed palette/layout behavior is delegated
+    to the generic renderer or preserved fallback image.
+  output_behavior: Standard script is expected to write outputs/rebuilt.png; machine evidence reports the rebuilt PNG exists
+    and is not blank-like.
+  unsupported_features: Original plotting code behavior, full manual layout resources, and any undeclared annotation tables
+    are not represented by plot.py itself.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

@@ -1,10 +1,14 @@
 id: plotcase_sankey_渐变色桑基图
 title: 渐变色桑基图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata,
+    guide, data, code, machine evidence, card, and prior review.
+  reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+  annotator_model: gpt-5-codex
+  review_version: model_assisted_deep_review_v1
 origin:
   case_dir: vault/material/plotcase_sankey_渐变色桑基图
   source:
@@ -291,3 +295,37 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_sankey_渐变色桑基图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: inspiration tier because the visual grammar is useful, but retrieval
+  should remain conservative around fallback/synthetic/generic-renderer limits.
+exclusion_risks:
+- fallback case; plot.py network renderer cannot reproduce gradient alluvial ribbons
+- case_level_fallback
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_sankey_渐变色桑基图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_sankey_渐变色桑基图.yaml
+  geometry: multistage_sankey
+  subtype: gradient alluvial flow across four labeled stages
+  required_roles:
+  - stage
+  - node
+  - next_stage
+  - next_node
+  - value
+  optional_roles:
+  - flow_id
+  - group
+  - node_color
+  - label
+  - order
+  tier: inspiration
+  confidence:
+    overall: medium
+    visual_grammar: high
+    data_roles: medium
+    code_understanding: medium
+    notes: Visual grammar is directly observed; data-role confidence is reduced where
+      data_main is compact, synthetic, fallback, or includes compatibility columns.

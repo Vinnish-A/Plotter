@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_043分块热图+注释/metadata.json
     exists: true
-    size_bytes: 3130
+    size_bytes: 4073
   agent_guide:
     path: vault/material/plotmaster_043分块热图+注释/agent_guide.md
     exists: true

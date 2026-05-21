@@ -1,53 +1,56 @@
 id: plotcase_pie_多层饼图
 title: 多层饼图
 retrieval_tier: inspiration
-one_line: network asset for 多层饼图
-geometry: network
-subtype: node_link_network
+one_line: multi-condition compositional donut summaries
+geometry: multi_donut_grid
+subtype: small_multiple_nested_donut
 required_roles:
-- source
-- target
-- weight
+- facet
+- category
+- value
 optional_roles:
-- node_id
-- node_label
-- node_group
-- node_size
-- edge_group
-- edge_direction
-- layout_x
-- layout_y
+- ring
+- label
+- color
 capabilities:
-  highlight: false
+  highlight: true
   detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 多层饼图
-- 'network/node_link_network grammar with roles: source, target, weight'
+- multi-condition compositional donut summaries
+- nested part-to-whole visual inspiration
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 291583; width: 1859; height: 1130'
+- network/chord retrieval despite source/target columns
+- precise comparison of many tiny slices
+image_summary: 'geometry: multi_donut_grid; subtype: small_multiple_nested_donut; description: Grid of
+  nested donut charts with central environment labels/counts and a long categorical legend at right.'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- misleading_metadata
+risk_notes:
+- metadata/data_main present a network edge list, not donut slice data
+- case_level_fallback true
+- cannot be rebuilt from data_main as observed
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_pie_多层饼图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_pie_多层饼图.yaml
   machine_evidence: vault/evidence/machine/plotcase_pie_多层饼图.yaml
   evidence_pack: vault/material/plotcase_pie_多层饼图
   preview: vault/material/plotcase_pie_多层饼图/outputs/rebuilt.png

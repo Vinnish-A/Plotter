@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_024矩阵饼图+分组注释/metadata.json
     exists: true
-    size_bytes: 3725
+    size_bytes: 4719
   agent_guide:
     path: vault/material/plotmaster_024矩阵饼图+分组注释/agent_guide.md
     exists: true

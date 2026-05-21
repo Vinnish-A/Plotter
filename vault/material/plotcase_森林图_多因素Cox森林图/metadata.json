@@ -137,5 +137,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": true,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "inspiration tier because the visual grammar is useful, but retrieval should remain conservative around fallback/synthetic/generic-renderer limits.",
+  "exclusion_risks": [
+    "fallback case; compact CSV has only eight terms, fewer than displayed table rows and reference rows",
+    "case_level_fallback"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "notes": "Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine evidence, card, and prior review.",
+    "reviewed_at": "2026-05-21T09:16:58.936503+00:00",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "model_assisted_deep_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_森林图_多因素Cox森林图.yaml"
 }

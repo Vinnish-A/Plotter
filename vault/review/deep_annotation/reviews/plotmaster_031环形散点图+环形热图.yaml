@@ -1,0 +1,165 @@
+case_id: plotmaster_031环形散点图+环形热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_031环形散点图+环形热图/metadata.json
+  - vault/material/plotmaster_031环形散点图+环形热图/agent_guide.md
+  - vault/material/plotmaster_031环形散点图+环形热图/plot.py
+  - vault/material/plotmaster_031环形散点图+环形热图/data_main.csv
+  - vault/material/plotmaster_031环形散点图+环形热图/outputs/rebuilt.png
+  - vault/material/plotmaster_031环形散点图+环形热图/outputs/visual_check.json
+  - vault/evidence/machine/plotmaster_031环形散点图+环形热图.yaml
+  - vault/cards/plotmaster_031环形散点图+环形热图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_031环形散点图+环形热图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotmaster_031环形散点图+环形热图.yaml
+  asset_card: vault/cards/plotmaster_031环形散点图+环形热图.yaml
+  image: vault/material/plotmaster_031环形散点图+环形热图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 864
+    height: 864
+    mean_stddev: 51.7762
+  build:
+    status: build_success
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: medium
+    last_built_at: '2026-05-17T12:30:13.210596+00:00'
+  rebuild_class:
+    source_code_rebuild: false
+    generic_renderer_rebuild: true
+    case_level_fallback: true
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: circular_scatter_heatmap_tracks
+  subtype: radial_points_with_concentric_annotation_rings
+  description: Circular composition with inner scatter track and multiple concentric colored heatmap/annotation
+    rings, grouped sectors, dense outer ID labels, and a small embedded legend.
+inferred_visual_grammar:
+  grammar_id: circular_scatter_heatmap_tracks
+  summary: Radial multi-track plot requiring ordered items, group sectors, point values, and several annotation-track
+    values.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  item: ordered circular item
+  group: sector/family
+  point_value: inner radial scatter value
+  track_value: concentric ring color values
+  label: outer item label
+canonical_columns: &id001
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  item: ordered circular unit
+  group: sector/facet
+  point_value: inner scatter measurement
+  track_value: annotation ring values
+optional_data_semantics:
+  track: ring name
+  label: outer label
+  legend: track color mapping
+optional_modules:
+  circular_layout:
+    supported: true
+  multi_ring_heatmap:
+    supported: true
+  inner_scatter_track:
+    supported: true
+false_positive_risks:
+- metadata marks case_level_fallback and original workbook sheet data is not recoverable
+- data_main has one summary/error row and cannot regenerate the figure
+best_for:
+- visual inspiration for circular multi-track omics plots
+bad_for:
+- core retrieval or exact rebuild
+- using current CSV for semantic roles
+style_notes:
+- many thin ring tracks with repeated categorical palettes; label density is extreme
+retrieval_tier_recommendation:
+  tier: archive
+  rationale: Strong visual but fallback-only with unrecoverable workbook data and no usable standard data body.
+  exclusion_risks:
+  - would be a severe false positive for rebuildable circular heatmap assets
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single radial multi-track figure
+  marks:
+  - points
+  - concentric rectangular ring segments
+  - sector borders
+  - outer labels
+  - small legend
+  encodings:
+    angle: item order
+    radius: track identity/value
+    color: track category/value
+    sector: group
+  axes: polar item labels; no numeric axes
+  legends: small embedded track legend
+  annotations: outer ID labels and sector labels
+  text_density: very high
+  visual_risks:
+  - dense labels and fallback-only data
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    x: workbook filename/error token only
+    y: summary marker only
+    value: zero placeholder
+    facet: parse error text, not visual facet
+  derived_columns: []
+  false_positive_columns:
+  - x
+  - y
+  - value
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  - facet
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

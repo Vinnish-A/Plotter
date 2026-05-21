@@ -33,7 +33,10 @@ data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''f
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
+- generic_renderer
+- misleading_metadata
+- compatibility_columns
+risk_notes:
 - Do not classify this as a heatmap from metadata keywords alone.
 - Do not infer network or flow roles from source/target/weight columns.
 - Do not treat lower/upper as confidence intervals.
@@ -44,6 +47,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/figureya_survival_FigureYa183condSurv.yaml
   deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa183condSurv.yaml

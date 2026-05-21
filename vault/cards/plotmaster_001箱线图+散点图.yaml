@@ -1,15 +1,14 @@
 id: plotmaster_001箱线图+散点图
 title: 001箱线图+散点图
 retrieval_tier: support
-one_line: box asset for 001箱线图+散点图
-geometry: box
-subtype: boxplot
+one_line: Many-category boxplot layouts
+geometry: boxplot
+subtype: many-category boxplot without visible jitter despite title
 required_roles:
-- x
-- y
+- group
 - value
 optional_roles:
-- group
+- x
 - label
 - facet
 - source
@@ -25,27 +24,33 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 001箱线图+散点图
-- 'box/boxplot grammar with roles: x, y, value'
+- Many-category boxplot layouts
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 39777; width: 1280; height: 800'
+- Network/flow retrieval from compatibility columns
+- Actual boxplot-plus-jitter examples
+image_summary: 'geometry: boxplot; subtype: many-category boxplot without visible jitter despite title;
+  panel_count: 1; layout: single Cartesian panel with many rotated sample categories'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 46'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- title says boxplot plus scatter, but rebuilt image shows only boxplots
+- false_positive_column:source
+- false_positive_column:target
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_001箱线图+散点图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_001箱线图+散点图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_001箱线图+散点图.yaml
   evidence_pack: vault/material/plotmaster_001箱线图+散点图
   preview: vault/material/plotmaster_001箱线图+散点图/outputs/rebuilt.png

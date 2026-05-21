@@ -173,5 +173,22 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Strong visual grammar and readable source, but random sampling and generic standard entry prevent core status.",
+  "exclusion_risks": [
+    "random_edge_sampling",
+    "generic_renderer_entry",
+    "dense_label_risk"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Reviewed image and source; source randomly samples a subset of edges and current CSV/plot entry do not encode the full circular network contract.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_060复杂环形互作网络图.yaml"
 }

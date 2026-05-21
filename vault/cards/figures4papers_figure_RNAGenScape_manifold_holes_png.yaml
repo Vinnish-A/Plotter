@@ -33,7 +33,9 @@ code_summary: 'entry: plot.py; backend_hints: [''matplotlib'']'
 risk_flags:
 - synthetic_data
 - case_level_fallback
-- generic_renderer_rebuild
+- generic_renderer
+- compatibility_columns
+risk_notes:
 - Do not retrieve as ordinary scatter, PCA, UMAP, or point-manifold grammar.
 - Blank label, trajectory, and color columns are not supported optional modules.
 - Constant group and surface columns are not meaningful categories.
@@ -45,6 +47,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml
   deep_review: vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_holes_png.yaml

@@ -1,10 +1,14 @@
 id: figureya_survival_FigureYa128Prognostic
 title: FigureYa128Prognostic
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Replaced machine backfill after direct review of image, metadata, data,
+    code, card, and machine evidence.
+  reviewed_at: '2026-05-21T09:03:39Z'
+  annotator_model: gpt-5-codex
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/figureya_survival_FigureYa128Prognostic
   source:
@@ -341,3 +345,39 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/figureya_survival_FigureYa128Prognostic.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: Visually useful survival-composite pattern, but current standardized
+  data/code are fallback/generic and not a trustworthy reusable contract.
+exclusion_risks:
+- case_level_fallback
+- generic_renderer_entry_does_not_match_reviewed_image
+- current_csv_missing_panel_specific_roles
+- stale_heatmap_metadata
+annotation_review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa128Prognostic.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa128Prognostic.yaml
+  geometry: composite_cartesian_line_survival
+  subtype: prognostic_auc_roc_kaplan_meier_triptych
+  required_roles:
+  - x
+  - y
+  - value
+  optional_roles:
+  - label
+  - group
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  tier: inspiration
+  confidence:
+    overall: medium
+    visual_grammar: high
+    data_roles: medium
+    code_understanding: high
+    reproducibility_contract: low

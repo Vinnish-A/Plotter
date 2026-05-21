@@ -1,0 +1,197 @@
+case_id: plotcase_heatmap_离散热图与条图组合
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: Image, metadata, guide, data profile, standard entry code, machine evidence,
+    card, and prior review were inspected; limitations are recorded as risks.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:15:01+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/review/deep_annotation/deep_review_batches/batch_5.json
+  - vault/material/plotcase_heatmap_离散热图与条图组合/metadata.json
+  - vault/material/plotcase_heatmap_离散热图与条图组合/agent_guide.md
+  - vault/material/plotcase_heatmap_离散热图与条图组合/data_main.csv
+  - vault/material/plotcase_heatmap_离散热图与条图组合/plot.py
+  - vault/material/plotcase_heatmap_离散热图与条图组合/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_heatmap_离散热图与条图组合.yaml
+  - vault/cards/plotcase_heatmap_离散热图与条图组合.yaml
+  - vault/review/deep_annotation/reviews/plotcase_heatmap_离散热图与条图组合.yaml
+  optional_data: data_optional.csv absent
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_离散热图与条图组合.yaml
+  asset_card: vault/cards/plotcase_heatmap_离散热图与条图组合.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_heatmap_离散热图与条图组合.yaml
+  rebuilt_png: vault/material/plotcase_heatmap_离散热图与条图组合/outputs/rebuilt.png
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  family: oncoprint-like heatmap plus waterfall bar chart
+  panel_count: 1
+  layout: top binary annotation tracks aligned to a lower bar chart with multi-part
+    legends at right
+  primary_marks: &id003
+  - discrete heatmap tiles
+  - X marker
+  - vertical bars
+  - threshold lines
+  - legend swatches
+  supporting_structure: top annotation tracks and dashed response thresholds
+inferred_visual_grammar:
+  geometry: heatmap
+  subtype: annotated_heatmap
+  reusable_pattern: oncoprint-like heatmap plus waterfall bar chart
+  constraints: &id001
+  - requires aligned annotation and bar data
+  - one X marker has special semantics not present in generic matrix data
+  not_core_reason: No fallback or synthetic flag, but the standard entry delegates
+    to a generic renderer, so use as support rather than core.
+reviewed_visual_roles:
+  visible_encodings: top tile color encodes categorical status, bar height encodes
+    pathological regression, bar fill encodes response
+  declared_required_roles:
+  - row_id
+  - column_id
+  - value
+  declared_optional_roles:
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - label
+  - size_value
+  - facet
+  role_cautions: Declared roles describe the standardized interface, not necessarily
+    the full original figure semantics.
+canonical_columns:
+- row_id
+- column_id
+- value
+- row_group
+- column_group
+- annotation_track
+- annotation_value
+- label
+- size_value
+- facet
+required_data_semantics:
+  row_id: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+  column_id: present in data_main and used as a declared core visual role; verify
+    against visible labels before treating as original-domain data
+  value: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+optional_data_semantics:
+  row_group: present in data_main as optional support role
+  column_group: present in data_main as optional support role
+  annotation_track: present in data_main as optional support role
+  annotation_value: present in data_main as optional support role
+  label: present in data_main as optional support role
+  size_value: present in data_main as optional support role
+  facet: present in data_main as optional support role
+optional_modules:
+  data_optional_csv: absent
+  manual_layout_or_annotations_needed: *id001
+false_positive_risks: &id002
+- generic_renderer_rebuild
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
+best_for:
+- Visual inspiration for oncoprint-like heatmap plus waterfall bar chart
+- Support retrieval when user data matches the observed grammar and missing annotations
+  can be supplied explicitly
+bad_for:
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+style_notes:
+- top binary annotation tracks aligned to a lower bar chart with multi-part legends
+  at right
+- top tile color encodes categorical status, bar height encodes pathological regression,
+  bar fill encodes response
+- Preserve spacing around labels, legends, and annotation tracks; most cases are sensitive
+  to overcrowding.
+retrieval_tier_recommendation:
+  tier: support
+  rationale: No fallback or synthetic flag, but the standard entry delegates to a
+    generic renderer, so use as support rather than core.
+  exclusion_risks: *id002
+confidence:
+  overall: medium
+  visual_grammar: medium-high
+  data_roles: medium-low
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: top binary annotation tracks aligned to a lower bar chart with multi-part
+    legends at right
+  marks: *id003
+  encodings: top tile color encodes categorical status, bar height encodes pathological
+    regression, bar fill encodes response
+  axes: sample IDs along bottom; y-axis is pathological regression percent
+  legends: stacked legends for stage, classification, biomarkers, and response
+  annotations: top annotation tracks and dashed response thresholds
+  text_density: high
+  visual_risks: *id001
+data_understanding:
+  data_read: true
+  observed_columns:
+  - row_id
+  - column_id
+  - value
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - label
+  - size_value
+  - facet
+  row_count: 30
+  role_mapping:
+    row_id: reviewed_candidate_role
+    column_id: reviewed_candidate_role
+    value: reviewed_candidate_role
+    row_group: reviewed_candidate_role
+    column_group: reviewed_candidate_role
+    annotation_track: reviewed_candidate_role
+    annotation_value: reviewed_candidate_role
+    label: false_positive_or_empty
+    size_value: reviewed_candidate_role
+    facet: false_positive_or_empty
+  derived_columns: []
+  false_positive_columns:
+  - facet
+  - label
+  missing_optional_data:
+  - data_optional.csv
+  data_profile_summary:
+    rows: 30
+    columns: 10
+    empty_columns:
+    - label
+    - facet
+    high_cardinality_columns:
+    - value
+code_understanding:
+  code_read: true
+  backend:
+  - python
+  - retinue.tools.plotter_standard_renderer
+  - heatmap
+  entry_behavior: render('heatmap', '离散热图与条图组合')
+  hardcoded_aesthetics:
+  - shared renderer palette/theme
+  - case title and geometry passed as constants
+  output_behavior: standard entry is expected to write outputs/rebuilt.png; observed
+    image may include fallback/original-specific complexity beyond the generic renderer
+  unsupported_features: *id002
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

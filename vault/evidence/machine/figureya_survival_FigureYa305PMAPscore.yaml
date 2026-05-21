@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/figureya_survival_FigureYa305PMAPscore/metadata.json
     exists: true
-    size_bytes: 3861
+    size_bytes: 4811
   agent_guide:
     path: vault/material/figureya_survival_FigureYa305PMAPscore/agent_guide.md
     exists: true

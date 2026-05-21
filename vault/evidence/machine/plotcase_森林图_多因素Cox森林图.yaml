@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_森林图_多因素Cox森林图/metadata.json
     exists: true
-    size_bytes: 4030
+    size_bytes: 4954
   agent_guide:
     path: vault/material/plotcase_森林图_多因素Cox森林图/agent_guide.md
     exists: true

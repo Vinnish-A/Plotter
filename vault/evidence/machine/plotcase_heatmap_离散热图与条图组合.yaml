@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_heatmap_离散热图与条图组合/metadata.json
     exists: true
-    size_bytes: 6074
+    size_bytes: 7035
   agent_guide:
     path: vault/material/plotcase_heatmap_离散热图与条图组合/agent_guide.md
     exists: true

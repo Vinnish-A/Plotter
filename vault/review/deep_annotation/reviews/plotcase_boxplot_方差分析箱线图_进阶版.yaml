@@ -1,0 +1,198 @@
+case_id: plotcase_boxplot_方差分析箱线图_进阶版
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_boxplot_方差分析箱线图_进阶版/metadata.json
+  - vault/material/plotcase_boxplot_方差分析箱线图_进阶版/agent_guide.md
+  - vault/material/plotcase_boxplot_方差分析箱线图_进阶版/plot.py
+  - vault/material/plotcase_boxplot_方差分析箱线图_进阶版/data_main.csv
+  - vault/material/plotcase_boxplot_方差分析箱线图_进阶版/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_boxplot_方差分析箱线图_进阶版.yaml
+  - vault/cards/plotcase_boxplot_方差分析箱线图_进阶版.yaml
+  - vault/review/deep_annotation/reviews/plotcase_boxplot_方差分析箱线图_进阶版.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_boxplot_方差分析箱线图_进阶版.yaml
+  asset_card: vault/cards/plotcase_boxplot_方差分析箱线图_进阶版.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_boxplot_方差分析箱线图_进阶版.yaml
+  image_inspected: vault/material/plotcase_boxplot_方差分析箱线图_进阶版/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_boxplot_方差分析箱线图_进阶版/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: grouped_boxplot
+  subtype: multi-group boxplot with ANOVA text and compact-letter annotations
+  panel_count: 1
+  layout: single Cartesian panel divided visually into low, middle, and high responder blocks
+  marks:
+  - boxplots
+  - whiskers
+  - group letters above boxes
+  - ANOVA F and P text
+  - block separator baselines
+  encodings:
+    x: time/age subgroup labels nested under response group blocks
+    y: percent inhibition
+    fill: Young vs Older legend
+    letters: post-hoc grouping
+  axes: categorical x axis with nested labels; y axis Per cent inhibition
+  legends: upper-left two-class age legend
+  annotations:
+  - F-statistic and P-value text per response block
+  - letters above boxes
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: distribution
+    backend: R/ggplot2
+    unit: observation-level group-value table
+    required_data_roles:
+    - group
+    - value
+    optional_data_roles:
+    - subgroup
+    - paired_id
+    - p_value
+    - facet
+    - label
+reviewed_visual_roles:
+  group: primary category in data, weaker than nested visual x labels
+  value: boxplot response values
+  subgroup: likely color/age split
+  paired_id: observation identifier, not visibly paired
+  p_value: available but too sparse for all visible tests
+  facet: candidate responder block
+  label: empty
+canonical_columns:
+- group
+- value
+- subgroup
+- paired_id
+- p_value
+- facet
+- label
+required_data_semantics:
+  group: category used for grouping observations
+  value: quantitative distribution value
+optional_data_semantics:
+  subgroup: secondary grouping/fill candidate
+  paired_id: observation id only; no visible pairing lines
+  p_value: statistical annotation source but insufficient as stored
+  facet: block/facet candidate
+  label: empty
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - subgroup
+  - paired_id
+  - p_value
+  - facet
+  - label
+  requires_custom_layout_for_full_rebuild: false
+false_positive_risks:
+- data_main has one constant p_value and too few rows to reconstruct all displayed box distributions/letters
+- false_positive_column:label
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Boxplot layouts with nested categorical structure and statistical text
+bad_for:
+- Recomputing exact ANOVA labels from this CSV alone
+- Paired-line plots
+style_notes:
+- Large top annotations require reserved whitespace
+- Legend is integrated without a frame
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - data_main has one constant p_value and too few rows to reconstruct all displayed box distributions/letters
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single Cartesian panel divided visually into low, middle, and high responder blocks
+  marks:
+  - boxplots
+  - whiskers
+  - group letters above boxes
+  - ANOVA F and P text
+  - block separator baselines
+  encodings:
+    x: time/age subgroup labels nested under response group blocks
+    y: percent inhibition
+    fill: Young vs Older legend
+    letters: post-hoc grouping
+  axes: categorical x axis with nested labels; y axis Per cent inhibition
+  legends: upper-left two-class age legend
+  annotations:
+  - F-statistic and P-value text per response block
+  - letters above boxes
+  text_density: high but readable
+  visual_risks:
+  - data_main has one constant p_value and too few rows to reconstruct all displayed box distributions/letters
+data_understanding:
+  data_read: true
+  observed_columns:
+  - group
+  - value
+  - subgroup
+  - paired_id
+  - p_value
+  - facet
+  - label
+  role_mapping:
+    group: primary category in data, weaker than nested visual x labels
+    value: boxplot response values
+    subgroup: likely color/age split
+    paired_id: observation identifier, not visibly paired
+    p_value: available but too sparse for all visible tests
+    facet: candidate responder block
+    label: empty
+  derived_columns: []
+  false_positive_columns:
+  - label
+  missing_optional_data:
+  - data_optional.csv absent
+  - label
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('box', '方差分析箱线图_进阶版')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - data_main has one constant p_value and too few rows to reconstruct all displayed box distributions/letters
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

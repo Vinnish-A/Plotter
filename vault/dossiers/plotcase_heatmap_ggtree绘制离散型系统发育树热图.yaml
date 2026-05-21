@@ -308,3 +308,6 @@ reviewed_summary:
     visual_grammar: 0.84
     data_roles: 0.78
     rebuild_path: 0.68
+agent_default_entry: vault/cards/plotcase_heatmap_ggtree绘制离散型系统发育树热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

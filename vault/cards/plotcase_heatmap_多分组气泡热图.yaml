@@ -1,9 +1,9 @@
 id: plotcase_heatmap_多分组气泡热图
 title: 多分组气泡热图
 retrieval_tier: support
-one_line: heatmap asset for 多分组气泡热图
-geometry: heatmap
-subtype: bubble_heatmap
+one_line: Dense grouped bubble heatmaps with size and color encodings
+geometry: bubble_heatmap
+subtype: faceted bubble matrix with row-group brackets and dual legends
 required_roles:
 - row_id
 - column_id
@@ -13,38 +13,45 @@ optional_roles:
 - column_group
 - annotation_track
 - annotation_value
-- label
 - size_value
+- label
 - facet
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 多分组气泡热图
-- 'heatmap/bubble_heatmap grammar with roles: row_id, column_id, value'
+- Dense grouped bubble heatmaps with size and color encodings
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 311247; width: 1704; height: 1358'
+- Sparse simple heatmaps
+- Exact count-fraction labels unless supplied
+image_summary: 'geometry: bubble_heatmap; subtype: faceted bubble matrix with row-group brackets and dual
+  legends; panel_count: 1; layout: matrix divided into column group blocks; row groups labeled along left
+  with separator brackets'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- compact data_main does not carry the visible fraction labels separately
+- false_positive_column:label
+- false_positive_column:facet
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_heatmap_多分组气泡热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_多分组气泡热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_多分组气泡热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_多分组气泡热图
   preview: vault/material/plotcase_heatmap_多分组气泡热图/outputs/rebuilt.png

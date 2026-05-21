@@ -1,0 +1,163 @@
+case_id: plotcase_circos_circlize绘制和弦图进阶版
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_circos_circlize绘制和弦图进阶版/metadata.json
+  - vault/material/plotcase_circos_circlize绘制和弦图进阶版/agent_guide.md
+  - vault/material/plotcase_circos_circlize绘制和弦图进阶版/plot.py
+  - vault/material/plotcase_circos_circlize绘制和弦图进阶版/data_main.csv
+  - vault/material/plotcase_circos_circlize绘制和弦图进阶版/outputs/rebuilt.png
+  - vault/material/plotcase_circos_circlize绘制和弦图进阶版/outputs/visual_check.json
+  - vault/evidence/machine/plotcase_circos_circlize绘制和弦图进阶版.yaml
+  - vault/cards/plotcase_circos_circlize绘制和弦图进阶版.yaml
+  - vault/review/deep_annotation/reviews/plotcase_circos_circlize绘制和弦图进阶版.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotcase_circos_circlize绘制和弦图进阶版.yaml
+  asset_card: vault/cards/plotcase_circos_circlize绘制和弦图进阶版.yaml
+  image: vault/material/plotcase_circos_circlize绘制和弦图进阶版/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1008
+    height: 1008
+    mean_stddev: 49.7046
+  build:
+    status: build_success
+    language: R
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: medium
+    last_built_at: '2026-05-17T12:30:11.830468+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: circular_chord_diagram
+  subtype: sector_ribbon_flow_with_legend
+  description: Circular chord plot with day sectors and bacterial/taxon sectors, proportional ribbons, outer sector
+    tick marks, and a categorical legend.
+inferred_visual_grammar:
+  grammar_id: circular_chord_diagram
+  summary: Weighted source-target relationship diagram where sector identity and ribbon width are the primary grammar.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  source: origin sector for ribbons
+  target: destination sector for ribbons
+  weight: ribbon width/amount
+  sector_group: sector color family
+  sector_label: outer circular label
+canonical_columns: &id001
+- source
+- target
+- weight
+- source_group
+- target_group
+- direction
+- sector_order
+- sector_color
+- label
+- node_id
+- node_label
+required_data_semantics:
+  source: ribbon origin sector
+  target: ribbon destination sector
+  weight: nonnegative ribbon magnitude
+optional_data_semantics:
+  source_group: source sector class
+  target_group: target sector class
+  sector_order: manual circular order
+  sector_color: explicit sector color
+  label: display label
+optional_modules:
+  direction:
+    supported: false
+  sector_ticks:
+    supported: true
+  legend:
+    supported: true
+false_positive_risks:
+- data_main is a small abstract edge list and does not contain observed Day/taxon labels
+- node_id/node_label are auxiliary only unless used to build sector labels
+best_for:
+- weighted flows or associations between two or more sector classes
+- moderate circular relationship summaries
+bad_for:
+- dense all-to-all networks with too many thin ribbons
+- causal direction claims without directional encoding
+style_notes:
+- wide translucent ribbons dominate; legend separates taxonomic classes
+- sector labels are readable only at large export size
+retrieval_tier_recommendation:
+  tier: support
+  rationale: The observed figure is a genuine chord grammar and source/target/weight are appropriate, but the standardized
+    data are abstract placeholders.
+  exclusion_risks:
+  - actual semantic labels are not recoverable from data_main alone
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single circular chord diagram with right-side legend
+  marks:
+  - sector arcs
+  - ribbons
+  - tick labels
+  - legend swatches
+  encodings:
+    sector_arc: category extent
+    ribbon_width: weight
+    color: sector/taxon class
+  axes: circular sector tick marks, no Cartesian axes
+  legends: categorical bacterial/taxon legend
+  annotations: outer sector names and tick labels
+  text_density: medium-high
+  visual_risks:
+  - thin ribbons and rotated labels can be hard to inspect
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    source: ribbon origin sector role supported
+    target: ribbon destination sector role supported
+    weight: ribbon magnitude role supported
+    source_group: group/color candidate
+    target_group: group/color candidate
+    node_id/node_label: sector label support only
+  derived_columns: []
+  false_positive_columns:
+  - direction
+  - sector_order
+  - sector_color
+  - label
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

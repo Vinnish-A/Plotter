@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_综合图_多分组统计与差异变化综合图/metadata.json
     exists: true
-    size_bytes: 4935
+    size_bytes: 5962
   agent_guide:
     path: vault/material/plotcase_综合图_多分组统计与差异变化综合图/agent_guide.md
     exists: true

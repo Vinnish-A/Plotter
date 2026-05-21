@@ -1,0 +1,221 @@
+case_id: plotmaster_026相关性气泡图+显著性热图
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: Image, metadata, guide, data profile, standard entry code, machine evidence,
+    card, and prior review were inspected; limitations are recorded as risks.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:15:01+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/review/deep_annotation/deep_review_batches/batch_5.json
+  - vault/material/plotmaster_026相关性气泡图+显著性热图/metadata.json
+  - vault/material/plotmaster_026相关性气泡图+显著性热图/agent_guide.md
+  - vault/material/plotmaster_026相关性气泡图+显著性热图/data_main.csv
+  - vault/material/plotmaster_026相关性气泡图+显著性热图/plot.py
+  - vault/material/plotmaster_026相关性气泡图+显著性热图/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_026相关性气泡图+显著性热图.yaml
+  - vault/cards/plotmaster_026相关性气泡图+显著性热图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_026相关性气泡图+显著性热图.yaml
+  optional_data: data_optional.csv absent
+  machine_evidence: vault/evidence/machine/plotmaster_026相关性气泡图+显著性热图.yaml
+  asset_card: vault/cards/plotmaster_026相关性气泡图+显著性热图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_026相关性气泡图+显著性热图.yaml
+  rebuilt_png: vault/material/plotmaster_026相关性气泡图+显著性热图/outputs/rebuilt.png
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: true
+observed_visual_grammar:
+  family: correlation bubble matrix with significance heatmap
+  panel_count: 1
+  layout: 'square matrix: lower triangle colored significance tiles and upper triangle
+    correlation bubbles with dual legends'
+  primary_marks: &id003
+  - colored tiles
+  - outlined bubbles
+  - asterisks
+  - grid lines
+  supporting_structure: asterisks in significant lower-triangle cells
+inferred_visual_grammar:
+  geometry: heatmap
+  subtype: annotated_heatmap
+  reusable_pattern: correlation bubble matrix with significance heatmap
+  constraints: &id001
+  - requires separate p-value and correlation fields, not just one value column
+  - synthetic data flag prevents authoritative role claims
+  not_core_reason: Synthetic-data flag means this can guide visual grammar only, not
+    serve as core evidence.
+reviewed_visual_roles:
+  visible_encodings: bubble color encodes correlation, bubble size likely encodes
+    magnitude, lower tile color encodes -log10(P value), stars encode significance
+  declared_required_roles:
+  - x
+  - y
+  - value
+  declared_optional_roles:
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_cautions: Declared roles describe the standardized interface, not necessarily
+    the full original figure semantics.
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+  y: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+  value: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+optional_data_semantics:
+  group: present in data_main as optional support role
+  label: present in data_main as optional support role
+  facet: present in data_main as optional support role
+  source: present in data_main as optional support role
+  target: present in data_main as optional support role
+  weight: present in data_main as optional support role
+  lower: present in data_main as optional support role
+  upper: present in data_main as optional support role
+optional_modules:
+  data_optional_csv: absent
+  manual_layout_or_annotations_needed: *id001
+false_positive_risks: &id002
+- generic_renderer_rebuild
+- synthetic_data
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
+best_for:
+- Visual inspiration for correlation bubble matrix with significance heatmap
+- Support retrieval when user data matches the observed grammar and missing annotations
+  can be supplied explicitly
+bad_for:
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+style_notes:
+- 'square matrix: lower triangle colored significance tiles and upper triangle correlation
+  bubbles with dual legends'
+- bubble color encodes correlation, bubble size likely encodes magnitude, lower tile
+  color encodes -log10(P value), stars encode significance
+- Preserve spacing around labels, legends, and annotation tracks; most cases are sensitive
+  to overcrowding.
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Synthetic-data flag means this can guide visual grammar only, not serve
+    as core evidence.
+  exclusion_risks: *id002
+confidence:
+  overall: medium-low
+  visual_grammar: medium-high
+  data_roles: low
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: 'square matrix: lower triangle colored significance tiles and upper triangle
+    correlation bubbles with dual legends'
+  marks: *id003
+  encodings: bubble color encodes correlation, bubble size likely encodes magnitude,
+    lower tile color encodes -log10(P value), stars encode significance
+  axes: step labels on both matrix axes
+  legends: top legends for -log10(P value) and correlation
+  annotations: asterisks in significant lower-triangle cells
+  text_density: high
+  visual_risks: *id001
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  row_count: 36
+  role_mapping:
+    x: reviewed_candidate_role
+    y: reviewed_candidate_role
+    value: reviewed_candidate_role
+    group: false_positive_or_empty
+    label: reviewed_candidate_role
+    facet: false_positive_or_empty
+    source: generic convenience duplicate; not treated as true graph/interval role
+      unless visible grammar supports it
+    target: generic convenience duplicate; not treated as true graph/interval role
+      unless visible grammar supports it
+    weight: generic convenience duplicate; not treated as true graph/interval role
+      unless visible grammar supports it
+    lower: false_positive_or_empty
+    upper: false_positive_or_empty
+  derived_columns:
+  - lower
+  - upper
+  - weight
+  - source
+  - target
+  false_positive_columns:
+  - facet
+  - group
+  - lower
+  - source
+  - target
+  - upper
+  - weight
+  missing_optional_data:
+  - data_optional.csv
+  data_profile_summary:
+    rows: 36
+    columns: 11
+    empty_columns:
+    - group
+    - facet
+    high_cardinality_columns:
+    - x
+    - value
+    - label
+    - source
+    - weight
+    - lower
+    - upper
+code_understanding:
+  code_read: true
+  backend:
+  - python
+  - retinue.tools.plotter_standard_renderer
+  - heatmap
+  entry_behavior: render('heatmap', '026相关性气泡图+显著性热图')
+  hardcoded_aesthetics:
+  - shared renderer palette/theme
+  - case title and geometry passed as constants
+  output_behavior: standard entry is expected to write outputs/rebuilt.png; observed
+    image may include fallback/original-specific complexity beyond the generic renderer
+  unsupported_features: *id002
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

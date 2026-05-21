@@ -1,10 +1,14 @@
 id: plotcase_heatmap_环状注释热图
 title: 环状注释热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: reviewed
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Reviewed image, metadata, guide, source R, plot.py, data_main, visual_check,
+    card, and previous backfill.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_heatmap_环状注释热图
   source:
@@ -284,3 +288,30 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_heatmap_环状注释热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Source-backed circular heatmap grammar is clear, but current
+  standard entry and CSV are incomplete for core rebuilds.
+exclusion_risks:
+- generic_renderer_entry
+- circular_layout_not_in_csv
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_环状注释热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_环状注释热图.yaml
+  geometry: circular_phylogenetic_heatmap_with_outer_group_ring
+  subtype: ggtree_extra_circular_annotation_heatmap
+  required_roles:
+  - sample_id
+  - feature
+  - value
+  optional_roles:
+  - group
+  - tip_order
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

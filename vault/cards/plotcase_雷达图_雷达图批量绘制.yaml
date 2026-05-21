@@ -1,52 +1,54 @@
 id: plotcase_雷达图_雷达图批量绘制
 title: 雷达图批量绘制
 retrieval_tier: support
-one_line: network asset for 雷达图批量绘制
-geometry: network
-subtype: node_link_network
+one_line: batch comparison of profiles across repeated categories
+geometry: radar_small_multiples
+subtype: faceted_spider_chart_grid
 required_roles:
-- source
-- target
-- weight
+- facet
+- axis_label
+- value
 optional_roles:
-- node_id
-- node_label
-- node_group
-- node_size
-- edge_group
-- edge_direction
-- layout_x
-- layout_y
+- group
+- label
 capabilities:
-  highlight: false
+  highlight: true
   detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 雷达图批量绘制
-- 'network/node_link_network grammar with roles: source, target, weight'
+- batch comparison of profiles across repeated categories
+- radar small-multiple layout examples
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 539456; width: 2426; height: 1537'
+- precise quantitative ranking
+- network recommendation
+image_summary: 'geometry: radar_small_multiples; subtype: faceted_spider_chart_grid; description: Grid
+  of radar/spider plots, each titled by prophageARG environment, sharing radial percent rings and category
+  spokes.'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- data_main is network-shaped; source/target/weight are not radar roles
+- current CSV lacks explicit spoke columns despite original log showing wide radar input
+- must remap original wide table before reuse
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_雷达图_雷达图批量绘制.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_雷达图_雷达图批量绘制.yaml
   machine_evidence: vault/evidence/machine/plotcase_雷达图_雷达图批量绘制.yaml
   evidence_pack: vault/material/plotcase_雷达图_雷达图批量绘制
   preview: vault/material/plotcase_雷达图_雷达图批量绘制/outputs/rebuilt.png

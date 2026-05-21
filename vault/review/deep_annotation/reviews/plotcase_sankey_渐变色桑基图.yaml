@@ -1,0 +1,214 @@
+case_id: plotcase_sankey_渐变色桑基图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_sankey_渐变色桑基图/metadata.json
+  - vault/material/plotcase_sankey_渐变色桑基图/agent_guide.md
+  - vault/material/plotcase_sankey_渐变色桑基图/plot.py
+  - vault/material/plotcase_sankey_渐变色桑基图/data_main.csv
+  - vault/material/plotcase_sankey_渐变色桑基图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_sankey_渐变色桑基图.yaml
+  - vault/cards/plotcase_sankey_渐变色桑基图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_sankey_渐变色桑基图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_sankey_渐变色桑基图.yaml
+  asset_card: vault/cards/plotcase_sankey_渐变色桑基图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_sankey_渐变色桑基图.yaml
+  image_inspected: vault/material/plotcase_sankey_渐变色桑基图/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_sankey_渐变色桑基图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: false
+    generic_renderer_rebuild: true
+    case_level_fallback: true
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: multistage_sankey
+  subtype: gradient alluvial flow across four labeled stages
+  panel_count: 1
+  layout: left-to-right alluvial diagram with bottom stage labels
+  marks:
+  - vertical node bars
+  - wide gradient ribbons
+  - node labels
+  encodings:
+    stage: x position
+    node: vertical blocks
+    value: ribbon width
+    group: color family candidate
+  axes: no numeric axes; stage titles along bottom
+  legends: none visible
+  annotations:
+  - node labels at each stage
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: alluvial_sankey
+    backend: R/ggplot2
+    unit: stage-wise flow table
+    required_data_roles:
+    - stage
+    - node
+    - next_stage
+    - next_node
+    - value
+    optional_data_roles:
+    - flow_id
+    - group
+    - node_color
+    - label
+    - order
+reviewed_visual_roles:
+  stage: source stage
+  node: source node
+  next_stage: target stage
+  next_node: target node
+  value: flow width
+  flow_id: flow identifier
+  group: flow color/group candidate
+  order: node/order control
+  node_color: empty
+  label: empty
+canonical_columns:
+- stage
+- node
+- next_stage
+- next_node
+- value
+- flow_id
+- group
+- node_color
+- label
+- order
+required_data_semantics:
+  stage: current flow stage
+  node: current node
+  next_stage: next flow stage
+  next_node: next node
+  value: flow width
+optional_data_semantics:
+  flow_id: flow identity
+  group: flow grouping/color candidate
+  node_color: empty
+  label: empty
+  order: ordering control
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - flow_id
+  - group
+  - node_color
+  - label
+  - order
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- fallback case; plot.py network renderer cannot reproduce gradient alluvial ribbons
+- false_positive_column:node_color
+- false_positive_column:label
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Alluvial/Sankey inspiration with smooth gradients and stage labels
+bad_for:
+- Core rebuild without alluvial renderer
+- Dense stage labels with many long names
+style_notes:
+- Pastel gradients make flow continuity visible
+- No legend; semantics rely on node/stage labels
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: inspiration tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - fallback case; plot.py network renderer cannot reproduce gradient alluvial ribbons
+  - case_level_fallback
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: left-to-right alluvial diagram with bottom stage labels
+  marks:
+  - vertical node bars
+  - wide gradient ribbons
+  - node labels
+  encodings:
+    stage: x position
+    node: vertical blocks
+    value: ribbon width
+    group: color family candidate
+  axes: no numeric axes; stage titles along bottom
+  legends: none visible
+  annotations:
+  - node labels at each stage
+  text_density: moderate; long pathogen labels approach right edge
+  visual_risks:
+  - fallback case; plot.py network renderer cannot reproduce gradient alluvial ribbons
+data_understanding:
+  data_read: true
+  observed_columns:
+  - stage
+  - node
+  - next_stage
+  - next_node
+  - value
+  - flow_id
+  - group
+  - node_color
+  - label
+  - order
+  role_mapping:
+    stage: source stage
+    node: source node
+    next_stage: target stage
+    next_node: target node
+    value: flow width
+    flow_id: flow identifier
+    group: flow color/group candidate
+    order: node/order control
+    node_color: empty
+    label: empty
+  derived_columns: []
+  false_positive_columns:
+  - node_color
+  - label
+  missing_optional_data:
+  - data_optional.csv absent
+  - node_color
+  - label
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('network', '渐变色桑基图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - fallback case; plot.py network renderer cannot reproduce gradient alluvial ribbons
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

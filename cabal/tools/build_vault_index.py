@@ -60,9 +60,21 @@ def build_legacy_index(root: Path, dossiers: Path, include_folded: bool = False,
 
 
 def build_index(root: Path, dossiers: Path, include_folded: bool = False, write_dossiers: bool = False, legacy_full_index: bool = False) -> dict:
-    if legacy_full_index or write_dossiers:
+    if legacy_full_index:
         return build_legacy_index(root, dossiers, include_folded, write_dossiers)
     repo = repo_root(root)
+    written_dossiers = 0
+    if write_dossiers:
+        dossiers.mkdir(parents=True, exist_ok=True)
+        for case_dir in sorted(root.iterdir()):
+            if not case_dir.is_dir() or not (case_dir / "metadata.json").exists():
+                continue
+            metadata = load_json(case_dir / "metadata.json")
+            if not include_folded and not is_live_metadata(metadata):
+                continue
+            dossier = dossier_from_case(case_dir, repo)
+            write_yaml(dossiers / f"{dossier['id']}.yaml", dossier)
+            written_dossiers += 1
     evidence_dir = repo / "vault" / "evidence" / "machine"
     card_dir = repo / "vault" / "cards"
     machine = build_machine_evidence(root, evidence_dir)
@@ -73,7 +85,7 @@ def build_index(root: Path, dossiers: Path, include_folded: bool = False, write_
         "skipped_folded": 0,
         "index": index["index"],
         "dossiers": str(dossiers),
-        "written_dossiers": 0,
+        "written_dossiers": written_dossiers,
         "mode": "skinny_index",
         "machine_evidence": machine["evidence_count"],
         "asset_cards": cards["card_count"],

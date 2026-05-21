@@ -1,0 +1,224 @@
+case_id: plotmaster_054分面森林图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_054分面森林图/metadata.json
+  - vault/material/plotmaster_054分面森林图/agent_guide.md
+  - vault/material/plotmaster_054分面森林图/plot.py
+  - vault/material/plotmaster_054分面森林图/data_main.csv
+  - vault/material/plotmaster_054分面森林图/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_054分面森林图.yaml
+  - vault/cards/plotmaster_054分面森林图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_054分面森林图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotmaster_054分面森林图.yaml
+  asset_card: vault/cards/plotmaster_054分面森林图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_054分面森林图.yaml
+  image_inspected: vault/material/plotmaster_054分面森林图/outputs/rebuilt.png
+  code_entry: vault/material/plotmaster_054分面森林图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: faceted_interval_dotplot
+  subtype: multi-facet percentage-change forest/dot plot with trend colors
+  panel_count: 8
+  layout: two column groups by sample type crossed with four horizontal row facets; right facet strip labels
+  marks:
+  - open points
+  - vertical error bars
+  - dashed zero lines
+  - facet strips
+  - significance stars
+  encodings:
+    x: sample/category
+    y: percentage change
+    color: trend class
+    facet column: Blood vs Urine OPEs
+    facet row: chemical group
+  axes: shared y Percentage change(%) and categorical x labels per facet
+  legends: top trend legend
+  annotations:
+  - stars above selected points
+  - colored facet strips
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    backend: R/ggplot2
+    geometry: scatter
+    keywords:
+    - scatter
+    - ggplot2
+    visual_dependencies:
+    - ggplot2
+    - gtable
+    - tidyverse
+    runtime_dependencies:
+    - matplotlib
+    - numpy
+    - pandas
+    - python
+reviewed_visual_roles:
+  x: x/sample order
+  y: point y coordinate
+  value: trend/effect value candidate
+  group: sample/category label
+  label: sample label
+  facet: facet column/group
+  lower: lower error bound
+  upper: upper error bound
+  source/target/weight: compatibility duplicates, not network roles
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: x/sample coordinate or order
+  y: percentage-change coordinate
+  facet: facet grouping
+optional_data_semantics:
+  value: effect/trend value
+  group: sample/category grouping
+  label: sample label
+  lower: lower error bound
+  upper: upper error bound
+  source: not a source role
+  target: not a target role
+  weight: not a weight role
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - value
+  - group
+  - label
+  - lower
+  - upper
+  - source
+  - target
+  - weight
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- source/target/weight are numeric compatibility duplicates, not graph roles
+- false_positive_column:source
+- false_positive_column:target
+- false_positive_column:weight
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Faceted interval/dot plots with trend classes and significance markers
+bad_for:
+- Network or flow retrieval from compatibility columns
+- Single-panel forest plots without facets
+style_notes:
+- Facet strips are strong orientation aids
+- Open markers separate trend color from fill
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - source/target/weight are numeric compatibility duplicates, not graph roles
+confidence:
+  overall: high
+  visual_grammar: high
+  data_roles: high
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 8
+  layout: two column groups by sample type crossed with four horizontal row facets; right facet strip labels
+  marks:
+  - open points
+  - vertical error bars
+  - dashed zero lines
+  - facet strips
+  - significance stars
+  encodings:
+    x: sample/category
+    y: percentage change
+    color: trend class
+    facet column: Blood vs Urine OPEs
+    facet row: chemical group
+  axes: shared y Percentage change(%) and categorical x labels per facet
+  legends: top trend legend
+  annotations:
+  - stars above selected points
+  - colored facet strips
+  text_density: moderate-high
+  visual_risks:
+  - source/target/weight are numeric compatibility duplicates, not graph roles
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_mapping:
+    x: x/sample order
+    y: point y coordinate
+    value: trend/effect value candidate
+    group: sample/category label
+    label: sample label
+    facet: facet column/group
+    lower: lower error bound
+    upper: upper error bound
+    source/target/weight: compatibility duplicates, not network roles
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  missing_optional_data:
+  - data_optional.csv absent
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('scatter', '054分面森林图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - source/target/weight are numeric compatibility duplicates, not graph roles
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

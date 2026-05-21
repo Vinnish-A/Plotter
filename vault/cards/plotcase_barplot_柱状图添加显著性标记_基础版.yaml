@@ -1,20 +1,17 @@
 id: plotcase_barplot_柱状图添加显著性标记_基础版
 title: 柱状图添加显著性标记_基础版
 retrieval_tier: support
-one_line: map asset for 柱状图添加显著性标记_基础版
-geometry: map
-subtype: map
+one_line: Grouped experimental bar charts with raw replicate points and pairwise significance labels.
+geometry: grouped_bar_with_jitter_and_significance_brackets
+subtype: grouped_bar_with_jitter_and_significance_brackets
 required_roles:
 - category
 - value
-optional_roles:
 - group
-- stack
-- error_low
-- error_high
-- line_value
-- annotation_value
-- label
+optional_roles:
+- p_value
+- replicate_id
+- error_low_error_high
 capabilities:
   highlight: true
   detail_panel: false
@@ -23,27 +20,37 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 柱状图添加显著性标记_基础版
-- 'map/map grammar with roles: category, value'
+- Grouped experimental bar charts with raw replicate points and pairwise significance labels.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 94598; width: 1366; height: 565'
+- Stacked bars, line-over-bar composites, or charts without replicate-level data.
+image_summary: 'figure_type: grouped_bar_with_jitter_and_significance_brackets; layout: Single horizontal
+  panel with five cell-type categories, four treatment bars per category, overlaid points, error bars,
+  and upper p-value brackets.;…'
 data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
   ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- Do not treat stack, line_value, or empty annotation_value as observed active layers.
+- Do not retrieve as a clean generic bar chart; the visual value is grouped bars plus replicates plus
+  brackets.
+- Current plot.py would not reproduce the inspected image from a clean generic-renderer run.
+- generic_renderer_entry
+- original_rebuild_error
+- incomplete_annotation_csv
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_barplot_柱状图添加显著性标记_基础版.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_柱状图添加显著性标记_基础版.yaml
   machine_evidence: vault/evidence/machine/plotcase_barplot_柱状图添加显著性标记_基础版.yaml
   evidence_pack: vault/material/plotcase_barplot_柱状图添加显著性标记_基础版
   preview: vault/material/plotcase_barplot_柱状图添加显著性标记_基础版/outputs/rebuilt.png

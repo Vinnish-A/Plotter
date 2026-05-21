@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_058分面折线图+置信区间+误差棒/metadata.json
     exists: true
-    size_bytes: 2943
+    size_bytes: 3912
   agent_guide:
     path: vault/material/plotmaster_058分面折线图+置信区间+误差棒/agent_guide.md
     exists: true

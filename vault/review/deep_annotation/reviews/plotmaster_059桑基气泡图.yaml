@@ -1,0 +1,222 @@
+case_id: plotmaster_059桑基气泡图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_059桑基气泡图/metadata.json
+  - vault/material/plotmaster_059桑基气泡图/agent_guide.md
+  - vault/material/plotmaster_059桑基气泡图/plot.py
+  - vault/material/plotmaster_059桑基气泡图/data_main.csv
+  - vault/material/plotmaster_059桑基气泡图/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_059桑基气泡图.yaml
+  - vault/cards/plotmaster_059桑基气泡图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_059桑基气泡图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotmaster_059桑基气泡图.yaml
+  asset_card: vault/cards/plotmaster_059桑基气泡图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_059桑基气泡图.yaml
+  image_inspected: vault/material/plotmaster_059桑基气泡图/outputs/rebuilt.png
+  code_entry: vault/material/plotmaster_059桑基气泡图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: sankey_plus_bubble_composite
+  subtype: composite of Sankey/alluvial links and enrichment-style bubble panel
+  panel_count: 3
+  layout: upper-left Sankey, upper-right bubble chart, and lower wide multistage alluvial section
+  marks:
+  - ribbons/links
+  - rectangular nodes
+  - bubble points
+  - colored alluvial curves
+  encodings:
+    source/target: flow endpoints in visible Sankey sections
+    weight/value: link width or bubble value candidate
+    bubble color: -log10(qvalue)
+    bubble size: enrichment magnitude candidate
+  axes: bubble subpanel has grid axes; alluvial sections have label columns
+  legends: right colorbar for -log10(qvalue)
+  annotations:
+  - gene and GO-like labels
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    backend: R/ggplot2
+    geometry: network
+    keywords:
+    - network
+    visual_dependencies:
+    - cols4all
+    - cowplot
+    - devtools
+    - ggsankey
+    - tidyverse
+    runtime_dependencies:
+    - matplotlib
+    - numpy
+    - pandas
+    - python
+reviewed_visual_roles:
+  source: flow/link source supported by image and title
+  target: flow/link target supported by image and title
+  weight: flow/link weight candidate
+  value: bubble or link metric
+  x: coarse source class duplicate
+  y: target label/category
+  facet: additional label/ratio text
+  label: source label duplicate
+  lower/upper: not visible intervals
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  source: flow/link source
+  target: flow/link target
+  weight: flow/link weight
+optional_data_semantics:
+  value: metric for bubble/link color or size
+  x: coarse source class
+  y: target label
+  label: source label duplicate
+  facet: additional annotation text
+  group: empty
+  lower: not visible
+  upper: not visible
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - value
+  - x
+  - y
+  - label
+  - facet
+  - group
+  - lower
+  - upper
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- composite is cropped/packed; source-target roles are supported visually but may describe only part of the composite
+- false_positive_column:lower
+- false_positive_column:upper
+- false_positive_column:group
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Composite Sankey plus enrichment bubble layouts
+bad_for:
+- Clean single-grammar retrieval
+- Cases needing unclipped labels without layout work
+style_notes:
+- Composite is information-rich but cramped
+- Colorbar belongs to bubble subpanel, not all flow links
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - composite is cropped/packed; source-target roles are supported visually but may describe only part of the composite
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 3
+  layout: upper-left Sankey, upper-right bubble chart, and lower wide multistage alluvial section
+  marks:
+  - ribbons/links
+  - rectangular nodes
+  - bubble points
+  - colored alluvial curves
+  encodings:
+    source/target: flow endpoints in visible Sankey sections
+    weight/value: link width or bubble value candidate
+    bubble color: -log10(qvalue)
+    bubble size: enrichment magnitude candidate
+  axes: bubble subpanel has grid axes; alluvial sections have label columns
+  legends: right colorbar for -log10(qvalue)
+  annotations:
+  - gene and GO-like labels
+  text_density: high; lower labels partially clipped at bottom/left
+  visual_risks:
+  - composite is cropped/packed; source-target roles are supported visually but may describe only part of the composite
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_mapping:
+    source: flow/link source supported by image and title
+    target: flow/link target supported by image and title
+    weight: flow/link weight candidate
+    value: bubble or link metric
+    x: coarse source class duplicate
+    y: target label/category
+    facet: additional label/ratio text
+    label: source label duplicate
+    lower/upper: not visible intervals
+  derived_columns: []
+  false_positive_columns:
+  - lower
+  - upper
+  - group
+  missing_optional_data:
+  - data_optional.csv absent
+  - group
+  - lower
+  - upper
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('network', '059桑基气泡图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - composite is cropped/packed; source-target roles are supported visually but may describe only part of the composite
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

@@ -1,10 +1,14 @@
 id: plotcase_network_细胞通讯网络图
 title: 细胞通讯网络图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: Observed network is useful, but machine evidence records visual-audit fallback
+    and current standard entry is generic.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_network_细胞通讯网络图
   source:
@@ -309,3 +313,31 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_network_细胞通讯网络图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: Useful visual target, but fallback status and generic standard
+  entry make it unsuitable as support/core.
+exclusion_risks:
+- case_level_fallback
+- CellChat_special_runtime
+- generic_renderer_entry
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_network_细胞通讯网络图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_network_细胞通讯网络图.yaml
+  geometry: cell_communication_star_network
+  subtype: focused_cellchat_sender_receiver_network
+  required_roles:
+  - source
+  - target
+  - weight
+  optional_roles:
+  - node_color
+  - focused_source
+  tier: inspiration
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

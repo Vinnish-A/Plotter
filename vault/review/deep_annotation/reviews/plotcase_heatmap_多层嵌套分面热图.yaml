@@ -1,0 +1,118 @@
+case_id: plotcase_heatmap_多层嵌套分面热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Image, abstract CSV, source R, generic plot.py, machine evidence, card, and prior review were inspected."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read:
+    - AGENTS.md
+    - schemas/deep_dossier_review.schema.yaml
+    - vault/material/plotcase_heatmap_多层嵌套分面热图/metadata.json
+    - vault/material/plotcase_heatmap_多层嵌套分面热图/agent_guide.md
+    - vault/material/plotcase_heatmap_多层嵌套分面热图/plot.py
+    - vault/material/plotcase_heatmap_多层嵌套分面热图/scripts/code.R
+    - vault/material/plotcase_heatmap_多层嵌套分面热图/data_main.csv
+    - vault/material/plotcase_heatmap_多层嵌套分面热图/outputs/rebuilt.png
+    - vault/material/plotcase_heatmap_多层嵌套分面热图/outputs/visual_check.json
+    - vault/cards/plotcase_heatmap_多层嵌套分面热图.yaml
+    - vault/review/deep_annotation/reviews/plotcase_heatmap_多层嵌套分面热图.yaml
+  data_main_profile:
+    rows: 30
+    columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  rebuilt_png:
+    width: 1225
+    height: 1709
+    visual_check_ok: true
+  original_rebuild_log: "R source completed with geom_text removal warnings."
+observed_visual_grammar:
+  figure_type: multi_block_nested_faceted_heatmap
+  layout: "Tall composite of four separated heatmap blocks with colored header strips, nested axes, significance stars, and bottom colorbars."
+  marks: [heatmap tiles, block borders, header strips, significance stars, colorbars]
+  encodings:
+    row: metabolite or feature name
+    column: model/genotype/variant category
+    tile_color: hazard ratio or beta/FDR transform depending on block
+    stars: significance
+    header_color: section grouping
+inferred_visual_grammar:
+  grammar_id: nested_faceted_multi_scale_heatmap
+  source_logic: "Original R reads Excel source sheets and uses ggh4x/legendry nested axis guides for grouped heatmap blocks."
+  current_standard_rebuild: "plot.py calls generic render('heatmap'), which cannot express nested panels or multiple scales."
+reviewed_visual_roles:
+  row_id: "Heatmap row feature."
+  column_id: "Heatmap column/category."
+  value: "Cell fill value."
+  row_group: "Potential row grouping; not enough for visible nested sections."
+  column_group: "Potential column grouping; not enough for header blocks."
+  annotation_value: "Potential significance label but current CSV only placeholder values."
+canonical_columns: [panel, row_id, column_id, value, row_group, column_group, significance_label, scale_id]
+required_data_semantics:
+  panel: "Block identity or heatmap section."
+  row_id: "Feature/metabolite row."
+  column_id: "Model or genotype column."
+  value: "Cell fill value."
+optional_data_semantics:
+  row_group: "Nested row banding."
+  column_group: "Header strip grouping."
+  significance_label: "Stars or text inside cells."
+  scale_id: "Which color scale/legend a block uses."
+optional_modules:
+  nested_axes:
+    status: observed
+  multiple_color_scales:
+    status: observed
+  significance_stars:
+    status: observed
+false_positive_risks:
+  - "Do not treat as a single-scale rectangular heatmap."
+  - "Current row_group/column_group placeholders do not capture the visible nested axes."
+  - "Requires explicit panel and scale metadata."
+best_for:
+  - "Complex grouped heatmap compositions with nested facets and mixed statistical scales."
+bad_for:
+  - "Small plain heatmaps or cases without panel/scale metadata."
+style_notes:
+  - "Separated black-bordered heatmap blocks, dark blue and green headers, rotated lower labels, compact bottom colorbars."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Visually valuable and source-backed, but the current standard interface is too generic for core retrieval."
+  exclusion_risks: [generic_renderer_entry, multi_scale_contract_missing]
+confidence:
+  overall: high
+  visual_observation: high
+  data_contract_assessment: medium
+  source_rebuild_assessment: high
+image_observation:
+  image_read: true
+  panel_count: 4
+  layout: "Four vertical heatmap blocks arranged across the page."
+  marks: [tiles, borders, strip headers, stars]
+  encodings: "Rows and columns define features and model categories; fill color encodes block-specific statistic; stars encode significance."
+  axes: "Rotated bottom column labels; dense left row labels."
+  legends: "Two bottom colorbars for hazard ratio and beta/FDR scale."
+  annotations: "Header strips and stars."
+  text_density: high
+  visual_risks: "Dense rotated labels and nested sections can collide if resized."
+data_understanding:
+  data_read: true
+  observed_columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  role_mapping:
+    row_id: row_feature
+    column_id: column_category
+    value: cell_value
+  derived_columns: []
+  false_positive_columns: [annotation_track, size_value, facet]
+  missing_optional_data: [panel, significance_label, scale_id]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus original R/tidyverse/readxl/ggh4x/legendry source."
+  entry_behavior: "plot.py calls render('heatmap'); scripts/code.R builds nested ggplot heatmap blocks."
+  hardcoded_aesthetics: "Headers, scales, nested guide settings, and label sizes are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank and source-style; generic plot.py cannot reproduce the block structure."
+  unsupported_features: [nested_facets_in_current_csv, multiple_color_scales_in_generic_renderer]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

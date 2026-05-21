@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_027箱线图+热图注释/metadata.json
     exists: true
-    size_bytes: 3134
+    size_bytes: 4048
   agent_guide:
     path: vault/material/plotmaster_027箱线图+热图注释/agent_guide.md
     exists: true

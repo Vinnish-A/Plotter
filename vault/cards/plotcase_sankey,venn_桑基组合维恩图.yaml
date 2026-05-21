@@ -1,19 +1,18 @@
 id: plotcase_sankey,venn_桑基组合维恩图
 title: 桑基组合维恩图
 retrieval_tier: inspiration
-one_line: flow asset for 桑基组合维恩图
-geometry: flow
-subtype: sankey_or_alluvial
+one_line: set-overlap to pathway-flow explanatory composites
+geometry: venn_to_sankey_composite
+subtype: overlap_callout_to_pathway_flow
 required_roles:
+- set_membership
 - stage
 - node
-- next_stage
 - next_node
 - value
 optional_roles:
 - flow_id
 - group
-- node_color
 - label
 - order
 capabilities:
@@ -24,28 +23,37 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 桑基组合维恩图
-- 'flow/sankey_or_alluvial grammar with roles: stage, node, next_stage, next_node, value'
+- set-overlap to pathway-flow explanatory composites
+- workflow figures that connect selection to enrichment categories
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 102195; width: 1403; height: 878'
+- pure alluvial retrieval when Venn overlap is required
+- core reusable asset without set-membership data
+image_summary: 'geometry: venn_to_sankey_composite; subtype: overlap_callout_to_pathway_flow; description:
+  Two-panel composite: left three-set Venn diagram with counts, arrow callout from overlap, and right
+  Sankey/alluvial flow from ta…'
 data_summary: 'main_columns: [''stage'', ''node'', ''next_stage'', ''next_node'', ''value'', ''flow_id'',
   ''group'', ''node_color'', ''label'', ''order'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- missing_optional_data
+risk_notes:
+- data_main only encodes stage-wise flow; Venn membership/count data are missing
+- metadata marks synthetic_data true
+- Venn panel cannot be regenerated from data_main
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_sankey,venn_桑基组合维恩图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_sankey,venn_桑基组合维恩图.yaml
   machine_evidence: vault/evidence/machine/plotcase_sankey,venn_桑基组合维恩图.yaml
   evidence_pack: vault/material/plotcase_sankey,venn_桑基组合维恩图
   preview: vault/material/plotcase_sankey,venn_桑基组合维恩图/outputs/rebuilt.png

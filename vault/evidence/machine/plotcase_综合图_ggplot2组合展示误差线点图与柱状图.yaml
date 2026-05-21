@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/metadata.json
     exists: true
-    size_bytes: 3985
+    size_bytes: 4885
   agent_guide:
     path: vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/agent_guide.md
     exists: true

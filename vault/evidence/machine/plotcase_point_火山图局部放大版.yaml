@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_point_火山图局部放大版/metadata.json
     exists: true
-    size_bytes: 3833
+    size_bytes: 4700
   agent_guide:
     path: vault/material/plotcase_point_火山图局部放大版/agent_guide.md
     exists: true

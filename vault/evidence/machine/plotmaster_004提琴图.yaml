@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_004提琴图/metadata.json
     exists: true
-    size_bytes: 3299
+    size_bytes: 4277
   agent_guide:
     path: vault/material/plotmaster_004提琴图/agent_guide.md
     exists: true

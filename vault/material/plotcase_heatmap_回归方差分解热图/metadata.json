@@ -151,5 +151,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Source grammar is reusable and evidence is readable, but standard CSV and Python entry still understate the visible composition.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "summary_track_not_encoded"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Image, data, code, machine evidence, card, and prior review were inspected.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_heatmap_回归方差分解热图.yaml"
 }

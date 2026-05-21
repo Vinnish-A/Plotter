@@ -1,10 +1,14 @@
 id: plotmaster_008复杂热图02
 title: 008复杂热图02
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: Image and code were inspected; this is visually useful but synthetic/demo-heavy
+    and not a clean data-backed core asset.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_008复杂热图02
   source:
@@ -332,3 +336,32 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_008复杂热图02.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: Useful layout idea but synthetic/demo-heavy and not encoded by
+  current CSV or generic entry.
+exclusion_risks:
+- synthetic_data
+- generic_renderer_entry
+- decorative_icon_dependency
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_008复杂热图02.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_008复杂热图02.yaml
+  geometry: repeated_small_heatmap_blocks_with_icons_and_direction_arrows
+  subtype: repeated_condition_heatmap_arrow_annotation
+  required_roles:
+  - row_label
+  - condition
+  - value
+  optional_roles:
+  - panel
+  - direction
+  - icon_group
+  tier: inspiration
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: high
+    source_rebuild_assessment: medium

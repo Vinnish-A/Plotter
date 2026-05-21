@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_network_Treemap矩形树状GO富集分析图/metadata.json
     exists: true
-    size_bytes: 4647
+    size_bytes: 5354
   agent_guide:
     path: vault/material/plotcase_network_Treemap矩形树状GO富集分析图/agent_guide.md
     exists: true

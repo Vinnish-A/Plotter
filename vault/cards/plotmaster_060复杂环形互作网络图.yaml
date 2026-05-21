@@ -1,51 +1,59 @@
 id: plotmaster_060复杂环形互作网络图
 title: 060复杂环形互作网络图
 retrieval_tier: support
-one_line: circos asset for 060复杂环形互作网络图
-geometry: circos
-subtype: chord_or_circular
+one_line: Support/inspiration for circular bipartite interaction networks with class-colored leaves and
+  effect-colored edges.
+geometry: circular_hub_and_leaf_interaction_network_with_effect_legend
+subtype: circular_hub_and_leaf_interaction_network_with_effect_legend
 required_roles:
-- x
-- y
-- value
-optional_roles:
-- group
-- label
-- facet
 - source
 - target
-- weight
-- lower
-- upper
+- effect
+optional_roles:
+- p_value
+- node_class
+- degree
+- label
 capabilities:
   highlight: true
   detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: true
   batch: true
 best_for:
-- 060复杂环形互作网络图
-- 'circos/chord_or_circular grammar with roles: x, y, value'
+- Support/inspiration for circular bipartite interaction networks with class-colored leaves and effect-colored
+  edges.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 2062908; width: 2448; height: 2160'
+- Exact full-network inference or dense graphs without label pruning.
+image_summary: 'figure_type: circular_hub_and_leaf_interaction_network_with_effect_legend; layout: Large
+  circular network with several central pollutant hub nodes, many radial metabolite leaves, colored edges,
+  leaf colors by class, nod…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- compatibility_columns
+risk_notes:
+- Do not use x/y as Cartesian coordinates; current CSV uses them as source/target compatibility values.
+- Random edge sampling and dense labels make this unsuitable for core.
+- Generic plot.py does not reproduce observed radial ggraph layout.
+- random_edge_sampling
+- generic_renderer_entry
+- dense_label_risk
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_060复杂环形互作网络图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_060复杂环形互作网络图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_060复杂环形互作网络图.yaml
   evidence_pack: vault/material/plotmaster_060复杂环形互作网络图
   preview: vault/material/plotmaster_060复杂环形互作网络图/outputs/rebuilt.png

@@ -1,20 +1,16 @@
 id: plotmaster_049多组哑铃图
 title: 049多组哑铃图
 retrieval_tier: support
-one_line: map asset for 049多组哑铃图
-geometry: map
-subtype: map
+one_line: multi-group effect-size comparison with significance size
+geometry: multi-group dumbbell/interval plot
+subtype: horizontal lipid fold-change comparison
 required_roles:
 - x
 - y
 - value
 optional_roles:
 - group
-- label
 - facet
-- source
-- target
-- weight
 - lower
 - upper
 capabilities:
@@ -22,30 +18,36 @@ capabilities:
   detail_panel: false
   annotation_track: false
   uncertainty: true
-  composition: false
+  composition: true
   batch: true
 best_for:
-- 049多组哑铃图
-- 'map/map grammar with roles: x, y, value'
+- multi-group effect-size comparison with significance size
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 77992; width: 720; height: 864'
+- simple scatter or network retrieval
+image_summary: 'geometry: multi-group dumbbell/interval plot; subtype: horizontal lipid fold-change comparison;
+  layout: single Cartesian panel; primary_marks: [''paired points'', ''horizontal connecting segments'',
+  ''size-varying circles'', …'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 60'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- false_positive_columns:source,target,weight
+- generic_plotmaster_source_target_weight_columns_are_not_visual_roles
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotmaster_049多组哑铃图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_049多组哑铃图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_049多组哑铃图.yaml
   evidence_pack: vault/material/plotmaster_049多组哑铃图
   preview: vault/material/plotmaster_049多组哑铃图/outputs/rebuilt.png

@@ -156,5 +156,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": true,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Good forest visual, but explicit fallback and generic standard entry prevent support/core use.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "generic_renderer_entry"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Observed image was inspected, but machine evidence records visual-audit fallback and standard plot.py is generic scatter.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_森林图_森林图进阶图例映射版.yaml"
 }

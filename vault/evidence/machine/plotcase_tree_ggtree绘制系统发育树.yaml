@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_tree_ggtree绘制系统发育树/metadata.json
     exists: true
-    size_bytes: 4466
+    size_bytes: 5469
   agent_guide:
     path: vault/material/plotcase_tree_ggtree绘制系统发育树/agent_guide.md
     exists: true

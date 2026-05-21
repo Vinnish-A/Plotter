@@ -32,9 +32,10 @@ data_summary: 'main_columns: [''group'', ''value'', ''subgroup'', ''paired_id'',
   ''label'']; sampled_rows: 24'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
+- generic_renderer
+risk_notes:
 - Do not infer paired-line semantics from paired_id alone.
-- Do not recommend for summary-only data; violin density needs observation-level …
+- Do not recommend for summary-only data; violin density needs observation-level values.
 - Compact data_main may not fully preserve raw type/group/name distinctions.
 - paired_id overinterpretation
 - aggregate data misuse
@@ -42,6 +43,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_violin_分裂小提琴图分面版.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_violin_分裂小提琴图分面版.yaml

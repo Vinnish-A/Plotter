@@ -1,0 +1,89 @@
+case_id: plotcase_network_细胞通讯网络图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Observed network is useful, but machine evidence records visual-audit fallback and current standard entry is generic."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotcase_network_细胞通讯网络图/metadata.json, vault/material/plotcase_network_细胞通讯网络图/agent_guide.md, vault/material/plotcase_network_细胞通讯网络图/plot.py, vault/material/plotcase_network_细胞通讯网络图/scripts/code.R, vault/material/plotcase_network_细胞通讯网络图/data_main.csv, vault/material/plotcase_network_细胞通讯网络图/outputs/rebuilt.png, vault/material/plotcase_network_细胞通讯网络图/outputs/visual_check.json, vault/cards/plotcase_network_细胞通讯网络图.yaml, vault/review/deep_annotation/reviews/plotcase_network_细胞通讯网络图.yaml]
+  data_main_profile:
+    rows: 7
+    columns: [source, target, weight, node_id, node_label, node_group, node_size, edge_group, edge_direction, layout_x, layout_y, source_group, target_group]
+  rebuilt_png: {width: 1294, height: 1393, visual_check_ok: true}
+  original_rebuild_log: "Visual audit fallback: original-code output did not preserve finished figure structure well enough."
+observed_visual_grammar:
+  figure_type: cell_communication_star_network
+  layout: "One source cell class at left with curved weighted edges to labeled target cell classes arranged around the right and lower perimeter."
+  marks: [colored nodes, thick curved edges, node labels]
+  encodings:
+    source_node: selected sender cell type
+    target_node: receiver cell type
+    edge_width: interaction count or strength
+    node_color: cell identity/category
+inferred_visual_grammar:
+  grammar_id: focused_cellchat_sender_receiver_network
+  source_logic: "Original R uses CellChat::netVisual_circle on a count matrix with sources.use fixed to one cell class."
+  current_standard_rebuild: "plot.py calls generic render('network'); fallback image is not a clean source-code rebuild."
+reviewed_visual_roles:
+  source: "Potential sender cell type."
+  target: "Potential receiver cell type."
+  weight: "Interaction weight."
+  node_id: "Cell type identity."
+  node_label: "Cell type label."
+canonical_columns: [source, target, weight, node_id, node_label, node_color]
+required_data_semantics:
+  source: "Sender/source cell type."
+  target: "Receiver/target cell type."
+  weight: "Interaction count or strength."
+optional_data_semantics:
+  node_color: "Explicit cell-type colors."
+  focused_source: "One sender selected for star layout."
+optional_modules:
+  focused_sender_star:
+    status: observed
+  full_cellchat_matrix:
+    status: required_for_true_rebuild_but_not_current_csv
+false_positive_risks:
+  - "Do not treat as a complete CellChat matrix workflow."
+  - "Do not promote to core because this is an explicit visual-audit fallback."
+best_for:
+  - "Inspiration for focused sender-to-receiver cell communication diagrams."
+bad_for:
+  - "Clean CellChat regeneration or multi-sender communication networks."
+style_notes:
+  - "Sparse white layout, large text labels, colored circular nodes, translucent purple curved links."
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: "Useful visual target, but fallback status and generic standard entry make it unsuitable as support/core."
+  exclusion_risks: [case_level_fallback, CellChat_special_runtime, generic_renderer_entry]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Focused star-like network."
+  marks: [nodes, curved edges, labels]
+  encodings: "Node labels/colors for cell types; edge width/opacity for interaction strength."
+  axes: "No axes."
+  legends: "No legend in observed image."
+  annotations: "Cell type text labels."
+  text_density: moderate
+  visual_risks: "Long labels can overlap nodes/edges in denser data."
+data_understanding:
+  data_read: true
+  observed_columns: [source, target, weight, node_id, node_label, node_group, node_size, edge_group, edge_direction, layout_x, layout_y, source_group, target_group]
+  role_mapping: {source: sender, target: receiver, weight: interaction_strength, node_id: cell_type, node_label: cell_label}
+  derived_columns: []
+  false_positive_columns: [layout_x, layout_y, edge_direction, source_group, target_group]
+  missing_optional_data: [full_interaction_matrix, node_color]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/CellChat source."
+  entry_behavior: "plot.py calls render('network'); R source calls netVisual_circle with one source cell class."
+  hardcoded_aesthetics: "Cell order, selected source, node colors, and edge parameters are hardcoded."
+  output_behavior: "Existing rebuilt.png is visually inspected fallback."
+  unsupported_features: [clean_CellChat_rebuild, full_matrix_contract, generic_network_equivalence]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

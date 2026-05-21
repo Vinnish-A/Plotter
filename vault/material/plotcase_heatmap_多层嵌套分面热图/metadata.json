@@ -166,5 +166,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Visually valuable and source-backed, but the current standard interface is too generic for core retrieval.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "multi_scale_contract_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Image, abstract CSV, source R, generic plot.py, machine evidence, card, and prior review were inspected.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_heatmap_多层嵌套分面热图.yaml"
 }

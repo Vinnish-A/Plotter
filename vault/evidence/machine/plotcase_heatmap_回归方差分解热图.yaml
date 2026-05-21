@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_heatmap_回归方差分解热图/metadata.json
     exists: true
-    size_bytes: 3958
+    size_bytes: 4699
   agent_guide:
     path: vault/material/plotcase_heatmap_回归方差分解热图/agent_guide.md
     exists: true

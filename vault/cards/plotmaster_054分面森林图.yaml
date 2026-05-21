@@ -1,22 +1,22 @@
 id: plotmaster_054分面森林图
 title: 054分面森林图
 retrieval_tier: support
-one_line: forest asset for 054分面森林图
-geometry: forest
-subtype: interval_forest
+one_line: Faceted interval/dot plots with trend classes and significance markers
+geometry: faceted_interval_dotplot
+subtype: multi-facet percentage-change forest/dot plot with trend colors
 required_roles:
 - x
 - y
-- value
+- facet
 optional_roles:
+- value
 - group
 - label
-- facet
+- lower
+- upper
 - source
 - target
 - weight
-- lower
-- upper
 capabilities:
   highlight: true
   detail_panel: false
@@ -25,27 +25,35 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 054分面森林图
-- 'forest/interval_forest grammar with roles: x, y, value'
+- Faceted interval/dot plots with trend classes and significance markers
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 78383; width: 1008; height: 720'
+- Network or flow retrieval from compatibility columns
+- Single-panel forest plots without facets
+image_summary: 'geometry: faceted_interval_dotplot; subtype: multi-facet percentage-change forest/dot
+  plot with trend colors; panel_count: 8; layout: two column groups by sample type crossed with four horizontal
+  row facets; right facet…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 100'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- compatibility_columns
+risk_notes:
+- source/target/weight are numeric compatibility duplicates, not graph roles
+- false_positive_column:source
+- false_positive_column:target
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_054分面森林图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_054分面森林图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_054分面森林图.yaml
   evidence_pack: vault/material/plotmaster_054分面森林图
   preview: vault/material/plotmaster_054分面森林图/outputs/rebuilt.png

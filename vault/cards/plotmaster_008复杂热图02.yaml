@@ -1,52 +1,55 @@
 id: plotmaster_008复杂热图02
 title: 008复杂热图02
 retrieval_tier: inspiration
-one_line: heatmap asset for 008复杂热图02
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: Inspiration for compact repeated heatmap panels with directional annotation columns.
+geometry: repeated_small_heatmap_blocks_with_icons_and_direction_arrows
+subtype: repeated_small_heatmap_blocks_with_icons_and_direction_arrows
 required_roles:
-- x
-- y
+- row_label
+- condition
 - value
 optional_roles:
-- group
-- label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
+- panel
+- direction
+- icon_group
 capabilities:
-  highlight: true
-  detail_panel: true
+  highlight: false
+  detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: true
   batch: true
 best_for:
-- 008复杂热图02
-- 'heatmap/annotated_heatmap grammar with roles: x, y, value'
+- Inspiration for compact repeated heatmap panels with directional annotation columns.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 95027; width: 1224; height: 1440'
+- Data-backed complex heatmaps requiring real biological row semantics.
+image_summary: 'figure_type: repeated_small_heatmap_blocks_with_icons_and_direction_arrows; layout: Three
+  side-by-side repeated heatmap blocks, each with PFC/Ctrl/CUMS headers, mouse icons, gene rows, heatmap
+  cells, and direction arrow…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
 - synthetic_data
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- Do not treat source/target/weight as network roles.
+- Synthetic/demo genes and icons should keep this out of core.
+- synthetic_data
+- generic_renderer_entry
+- decorative_icon_dependency
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_008复杂热图02.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_008复杂热图02.yaml
   machine_evidence: vault/evidence/machine/plotmaster_008复杂热图02.yaml
   evidence_pack: vault/material/plotmaster_008复杂热图02
   preview: vault/material/plotmaster_008复杂热图02/outputs/rebuilt.png

@@ -1,0 +1,153 @@
+case_id: plotmaster_020多组学九象限散点图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_020多组学九象限散点图/metadata.json
+  - vault/material/plotmaster_020多组学九象限散点图/agent_guide.md
+  - vault/material/plotmaster_020多组学九象限散点图/plot.py
+  - vault/material/plotmaster_020多组学九象限散点图/data_main.csv
+  - vault/material/plotmaster_020多组学九象限散点图/outputs/rebuilt.png
+  - vault/material/plotmaster_020多组学九象限散点图/outputs/visual_check.json
+  - vault/evidence/machine/plotmaster_020多组学九象限散点图.yaml
+  - vault/cards/plotmaster_020多组学九象限散点图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_020多组学九象限散点图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotmaster_020多组学九象限散点图.yaml
+  asset_card: vault/cards/plotmaster_020多组学九象限散点图.yaml
+  image: vault/material/plotmaster_020多组学九象限散点图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1263
+    height: 784
+    mean_stddev: 27.0599
+  build:
+    status: build_success
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: medium
+    last_built_at: '2026-05-20T15:07:20.682035+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: true
+observed_visual_grammar:
+  geometry: generic_scatter_render
+  subtype: plain_xy_bubble_scatter
+  description: Plain Cartesian scatter with x/y axes, colorbar for value, and variable point sizes; no nine-quadrant
+    threshold lines are visible.
+inferred_visual_grammar:
+  grammar_id: generic_scatter_render
+  summary: Observed rebuilt output is a generic scatter fallback/standard render rather than the titled nine-quadrant
+    multi-omics grammar.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  x: x coordinate
+  y: y coordinate
+  value: point color and size
+canonical_columns: &id001
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: numeric x coordinate
+  y: numeric y coordinate
+optional_data_semantics:
+  value: color/size scalar
+  group: point group/label if used
+optional_modules:
+  quadrant_thresholds:
+    supported: false
+  labels:
+    supported: false
+false_positive_risks:
+- metadata/title imply nine-quadrant scatter, but rebuilt image lacks quadrant grid/threshold semantics
+- synthetic_data true
+- source/target/weight are duplicate compatibility columns
+best_for:
+- simple placeholder scatter only
+bad_for:
+- retrieving nine-quadrant multi-omics plots
+- core asset selection
+style_notes:
+- default matplotlib-like grid; title CJK glyphs are missing as square boxes
+retrieval_tier_recommendation:
+  tier: archive
+  rationale: Observed rebuilt image does not match the claimed advanced nine-quadrant grammar and data are synthetic/generic.
+  exclusion_risks:
+  - false positive for nine-quadrant scatter retrieval
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single Cartesian scatter with right colorbar
+  marks:
+  - points
+  - grid lines
+  - colorbar
+  encodings:
+    x: x axis
+    y: y axis
+    point_color: value
+    point_size: value magnitude
+  axes: numeric x and y axes
+  legends: continuous colorbar labeled value
+  annotations: title only; CJK glyphs missing
+  text_density: low
+  visual_risks:
+  - claimed nine-quadrant structure absent
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    x: numeric x coordinate
+    y: numeric y coordinate
+    value: point color/size scalar
+    group: labels only; not visually grouped
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

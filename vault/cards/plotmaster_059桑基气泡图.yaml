@@ -1,20 +1,19 @@
 id: plotmaster_059桑基气泡图
 title: 059桑基气泡图
 retrieval_tier: support
-one_line: flow asset for 059桑基气泡图
-geometry: flow
-subtype: sankey_or_alluvial
+one_line: Composite Sankey plus enrichment bubble layouts
+geometry: sankey_plus_bubble_composite
+subtype: composite of Sankey/alluvial links and enrichment-style bubble panel
 required_roles:
-- x
-- y
-- value
-optional_roles:
-- group
-- label
-- facet
 - source
 - target
 - weight
+optional_roles:
+- value
+- x
+- y
+- facet
+- group
 - lower
 - upper
 capabilities:
@@ -25,27 +24,35 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 059桑基气泡图
-- 'flow/sankey_or_alluvial grammar with roles: x, y, value'
+- Composite Sankey plus enrichment bubble layouts
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 74038; width: 1008; height: 720'
+- Clean single-grammar retrieval
+- Cases needing unclipped labels without layout work
+image_summary: 'geometry: sankey_plus_bubble_composite; subtype: composite of Sankey/alluvial links and
+  enrichment-style bubble panel; panel_count: 3; layout: upper-left Sankey, upper-right bubble chart,
+  and lower wide multistage alluv…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- composite is cropped/packed; source-target roles are supported visually but may describe only part of
+  the composite
+- false_positive_column:lower
+- false_positive_column:upper
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_059桑基气泡图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_059桑基气泡图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_059桑基气泡图.yaml
   evidence_pack: vault/material/plotmaster_059桑基气泡图
   preview: vault/material/plotmaster_059桑基气泡图/outputs/rebuilt.png

@@ -1,9 +1,9 @@
 id: plotcase_sankey_桑基流向图
 title: 桑基流向图
 retrieval_tier: support
-one_line: flow asset for 桑基流向图
-geometry: flow
-subtype: sankey_or_alluvial
+one_line: Visual inspiration for three-stage Sankey/alluvial flow
+geometry: three-stage Sankey/alluvial flow
+subtype: ''
 required_roles:
 - stage
 - node
@@ -24,27 +24,38 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 桑基流向图
-- 'flow/sankey_or_alluvial grammar with roles: stage, node, next_stage, next_node, value'
+- Visual inspiration for three-stage Sankey/alluvial flow
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 412035; width: 1008; height: 1008'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: three-stage Sankey/alluvial flow; panel_count: 1; layout: three vertical strata
+  connected by many colored flows; primary_marks: [''stacked rectangular nodes'', ''curved ribbons'',
+  ''section headings'']'
 data_summary: 'main_columns: [''stage'', ''node'', ''next_stage'', ''next_node'', ''value'', ''flow_id'',
   ''group'', ''node_color'', ''label'', ''order'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_sankey_桑基流向图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_sankey_桑基流向图.yaml
   machine_evidence: vault/evidence/machine/plotcase_sankey_桑基流向图.yaml
   evidence_pack: vault/material/plotcase_sankey_桑基流向图
   preview: vault/material/plotcase_sankey_桑基流向图/outputs/rebuilt.png

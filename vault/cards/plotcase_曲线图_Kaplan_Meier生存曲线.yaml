@@ -35,16 +35,23 @@ data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', '
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- Do not infer network semantics from the current source/target/weight data_main.…
-- Do not use the generic plot.py line renderer as proof of Kaplan-Meier rebuild f…
-- Current canonical CSV should be reabstracted from raw patient_metadata.csv befo…
+- generic_renderer
+- misleading_metadata
+risk_notes:
+- Do not infer network semantics from the current source/target/weight data_main.csv.
+- Do not use the generic plot.py line renderer as proof of Kaplan-Meier rebuild fidelity.
+- Current canonical CSV should be reabstracted from raw patient_metadata.csv before core retrieval.
 - network placeholder data contract
 - generic line renderer mismatch
 confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_曲线图_Kaplan_Meier生存曲线.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_曲线图_Kaplan_Meier生存曲线.yaml

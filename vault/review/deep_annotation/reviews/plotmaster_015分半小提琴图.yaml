@@ -1,0 +1,159 @@
+case_id: plotmaster_015分半小提琴图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_015分半小提琴图/metadata.json
+  - vault/material/plotmaster_015分半小提琴图/agent_guide.md
+  - vault/material/plotmaster_015分半小提琴图/plot.py
+  - vault/material/plotmaster_015分半小提琴图/data_main.csv
+  - vault/material/plotmaster_015分半小提琴图/outputs/rebuilt.png
+  - vault/material/plotmaster_015分半小提琴图/outputs/visual_check.json
+  - vault/evidence/machine/plotmaster_015分半小提琴图.yaml
+  - vault/cards/plotmaster_015分半小提琴图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_015分半小提琴图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotmaster_015分半小提琴图.yaml
+  asset_card: vault/cards/plotmaster_015分半小提琴图.yaml
+  image: vault/material/plotmaster_015分半小提琴图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1440
+    height: 720
+    mean_stddev: 37.148
+  build:
+    status: build_success
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: low
+    last_built_at: '2026-05-17T12:30:13.082772+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: split_violin_comparison
+  subtype: half_violin_group_comparison_with_summary_points
+  description: Single-panel split half-violin plot across genes, with Treated/Untreated halves, central summary
+    points/error bars, and significance labels above.
+inferred_visual_grammar:
+  grammar_id: split_violin_comparison
+  summary: Grouped distribution comparison requiring category, value, treatment group, and optional significance.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  x: gene/category
+  value: distribution value
+  group: treated/untreated half
+  summary: point/error summary
+  significance: top symbols
+canonical_columns: &id001
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: category/gene
+  value: numeric measurement
+  group: split violin group
+optional_data_semantics:
+  p_value: significance label
+  sample_id: observation id
+optional_modules:
+  split_violin:
+    supported: true
+  summary_interval:
+    supported: true
+  significance_labels:
+    supported: true
+false_positive_risks:
+- current data_main has unique x ids rather than direct gene categories, so group/category recovery depends on original
+  source context
+- source/target/weight are duplicates and not network roles
+best_for:
+- two-group distribution comparison by category
+- half-violin style examples
+bad_for:
+- network or flow retrieval
+- more than two groups without redesign
+style_notes:
+- teal/yellow opposing halves with black summary overlays; generous vertical space for significance
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Observed split-violin grammar is clear and source-backed, but standardized data loses some category/group
+    structure.
+  exclusion_risks:
+  - exact treated/untreated split may not rebuild from current data_main alone
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single Cartesian distribution panel
+  marks:
+  - split half violins
+  - points
+  - vertical intervals
+  - significance text
+  encodings:
+    x: gene/category
+    y: log2(CPM)
+    fill: treatment group
+  axes: category x-axis and numeric y-axis
+  legends: top legend for treated/untreated group
+  annotations: significance markers above categories
+  text_density: medium
+  visual_risks:
+  - top significance labels sit near plot boundary
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    x: observation/category placeholder; not full gene role in current CSV
+    y: numeric measurement
+    value: numeric measurement duplicate
+    group: empty in current CSV despite visual group legend
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

@@ -20,6 +20,23 @@ from plotter.paths import dossier_root, material_root, repo_root
 from plotter.vault_status import rebuild_class
 
 
+RISK_CODE_MAP = {
+    "generic_renderer_rebuild": "generic_renderer",
+    "generic renderer": "generic_renderer",
+    "generic/direct-copy renderer": "generic_renderer",
+    "generic renderer/copy rebuild": "generic_renderer",
+    "case-level fallback": "case_level_fallback",
+    "case_level_fallback": "case_level_fallback",
+    "synthetic data abstraction": "synthetic_data",
+    "synthetic_data": "synthetic_data",
+    "compatibility": "compatibility_columns",
+    "data-driven": "not_data_driven",
+    "not data-driven": "not_data_driven",
+    "metadata": "misleading_metadata",
+    "missing": "missing_optional_data",
+    "p/fdr": "statistical_claim_needs_review",
+    "statistical": "statistical_claim_needs_review",
+}
 FALSE_ROLE_BITS = (
     "compatibility",
     "blank",
@@ -42,6 +59,19 @@ FALSE_MODULE_BITS = (
     "disable",
 )
 TIERS = ("core", "support", "inspiration", "archive")
+
+
+def is_model_review(review: dict[str, Any]) -> bool:
+    if not review:
+        return False
+    model = str(review.get("annotator_model") or "").lower()
+    status = review.get("annotation_status") if isinstance(review.get("annotation_status"), dict) else {}
+    status_text_value = " ".join(str(status.get(key, "")) for key in ("status", "level", "method")).lower()
+    if "machine_backfill" in model or "machine_backfill" in status_text_value:
+        return False
+    if status.get("status") == "incomplete":
+        return False
+    return True
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -96,6 +126,33 @@ def compact_text(value: Any, max_len: int = 180) -> str:
         value = "; ".join(str(x) for x in value[:4])
     text = re.sub(r"\s+", " ", str(value or "")).strip()
     return text[: max_len - 1] + "…" if len(text) > max_len else text
+
+
+def risk_code(text: Any) -> str | None:
+    value = str(text).strip()
+    lower = value.lower()
+    if not value:
+        return None
+    direct = re.sub(r"[^a-zA-Z0-9_]+", "_", lower).strip("_")
+    if direct in {
+        "synthetic_data",
+        "case_level_fallback",
+        "generic_renderer",
+        "image_not_model_reviewed",
+        "roles_machine_inferred",
+        "compatibility_columns",
+        "not_data_driven",
+        "misleading_metadata",
+        "missing_optional_data",
+        "statistical_claim_needs_review",
+        "capability_machine_inferred",
+        "blank_like_image",
+    }:
+        return direct
+    for needle, code in RISK_CODE_MAP.items():
+        if needle in lower:
+            return code
+    return None
 
 
 def status_text(value: Any) -> str:
@@ -183,13 +240,41 @@ def review_optional_roles(review: dict[str, Any], metadata: dict[str, Any], doss
     return as_list(dossier.get("optional_data", []), 8), True
 
 
-def capabilities_from(review: dict[str, Any], geometry: str, required: list[str], optional: list[str]) -> dict[str, bool]:
+def review_status(review: dict[str, Any]) -> dict[str, bool]:
+    if not is_model_review(review):
+        return {
+            "image_read_by_model": False,
+            "data_read_by_model": False,
+            "code_read_by_model": False,
+            "migrated_legacy_review": False,
+        }
+    image = review.get("image_observation") if isinstance(review.get("image_observation"), dict) else {}
+    data = review.get("data_understanding") if isinstance(review.get("data_understanding"), dict) else {}
+    code = review.get("code_understanding") if isinstance(review.get("code_understanding"), dict) else {}
+    has_review = bool(review)
+    migrated = False
+    status = review.get("annotation_status") if isinstance(review.get("annotation_status"), dict) else {}
+    if has_review:
+        migrated = str(status.get("level") or "").startswith("model_assisted_deep_review_v1")
+        migrated = migrated or any(
+            str(image.get(key) or "").startswith("not_separately_recorded_in_legacy_review")
+            for key in ("axes", "legends", "text_density")
+        )
+    return {
+        "image_read_by_model": bool(image.get("image_read")),
+        "data_read_by_model": bool(data.get("data_read")),
+        "code_read_by_model": bool(code.get("code_read")),
+        "migrated_legacy_review": bool(migrated),
+    }
+
+
+def capabilities_from(review: dict[str, Any], geometry: str, required: list[str], optional: list[str], conservative: bool) -> tuple[dict[str, bool], bool]:
     modules = review.get("optional_modules") if isinstance(review.get("optional_modules"), dict) else {}
     module_names = {name.lower(): value for name, value in modules.items() if supported_module(value)}
     role_set = {role.lower() for role in [*required, *optional]}
     geometry_text = geometry.lower()
     machine_detail_capable = not modules and any(token in geometry_text for token in ("scatter", "line", "heatmap"))
-    return {
+    caps = {
         "highlight": bool({"label", "focus", "group", "subgroup"} & role_set) or any("highlight" in name for name in module_names),
         "detail_panel": any("detail" in name for name in module_names) or machine_detail_capable,
         "annotation_track": any("annotation" in name or "track" in name for name in module_names),
@@ -197,28 +282,58 @@ def capabilities_from(review: dict[str, Any], geometry: str, required: list[str]
         "composition": any(token in geometry_text for token in ("composite", "multi", "heatmap", "circos", "network", "tree", "flow")),
         "batch": True,
     }
+    machine_inferred = not bool(review) and any(caps[key] for key in ("highlight", "detail_panel", "annotation_track", "uncertainty", "composition"))
+    if conservative:
+        explicit_review_composition = bool(review) and caps["composition"]
+        caps.update(
+            {
+                "highlight": False,
+                "detail_panel": False,
+                "annotation_track": False,
+                "uncertainty": False,
+                "composition": explicit_review_composition,
+                "batch": True,
+            }
+        )
+    return caps, machine_inferred
 
 
-def risk_flags(review: dict[str, Any], metadata: dict[str, Any], evidence: dict[str, Any], machine_roles: bool, image_reviewed: bool) -> list[str]:
+def risk_flags(
+    review: dict[str, Any],
+    metadata: dict[str, Any],
+    evidence: dict[str, Any],
+    machine_roles: bool,
+    image_reviewed: bool,
+    capability_machine_inferred: bool,
+) -> tuple[list[str], list[str]]:
     klass = metadata.get("rebuild_class") if isinstance(metadata.get("rebuild_class"), dict) else rebuild_class(metadata)
-    flags = []
+    codes = []
+    notes = []
     if klass.get("synthetic_data"):
-        flags.append("synthetic_data")
+        codes.append("synthetic_data")
     if klass.get("case_level_fallback"):
-        flags.append("case_level_fallback")
+        codes.append("case_level_fallback")
     if klass.get("generic_renderer_rebuild"):
-        flags.append("generic_renderer_rebuild")
+        codes.append("generic_renderer")
     if not image_reviewed:
-        flags.append("image_not_model_reviewed")
+        codes.append("image_not_model_reviewed")
     if machine_roles:
-        flags.append("roles_machine_inferred")
+        codes.append("roles_machine_inferred")
+    if capability_machine_inferred:
+        codes.append("capability_machine_inferred")
     for item in as_list(review.get("false_positive_risks"), 3):
-        flags.append(compact_text(item, 80))
+        notes.append(compact_text(item, 120))
+        code = risk_code(item)
+        if code:
+            codes.append(code)
     for item in as_list((review.get("retrieval_tier_recommendation") or {}).get("exclusion_risks"), 4):
-        flags.append(compact_text(item, 80))
+        notes.append(compact_text(item, 120))
+        code = risk_code(item)
+        if code:
+            codes.append(code)
     if evidence.get("image", {}).get("blank_like"):
-        flags.append("blank_like_image")
-    return list(dict.fromkeys(flags))[:10]
+        codes.append("blank_like_image")
+    return list(dict.fromkeys(codes))[:10], list(dict.fromkeys(notes))[:8]
 
 
 def tier_from(review: dict[str, Any], metadata: dict[str, Any], dossier: dict[str, Any]) -> str:
@@ -254,29 +369,34 @@ def build_card(case_dir: Path, repo: Path, evidence_dir: Path, review_dir: Path,
     title = str(metadata.get("title") or case_id)
     evidence = load_yaml(evidence_dir / f"{case_id}.yaml")
     review = load_yaml(review_dir / f"{case_id}.yaml")
+    model_review = is_model_review(review)
+    trusted_review = review if model_review else {}
     dossier = load_yaml(dossiers / f"{case_id}.yaml")
-    geometry, subtype = review_geometry(review, metadata, dossier)
-    required, required_machine = review_required_roles(review, metadata, dossier, evidence)
-    optional, optional_machine = review_optional_roles(review, metadata, dossier)
-    image_ok = image_reviewed(review)
+    geometry, subtype = review_geometry(trusted_review, metadata, dossier)
+    required, required_machine = review_required_roles(trusted_review, metadata, dossier, evidence)
+    optional, optional_machine = review_optional_roles(trusted_review, metadata, dossier)
+    status = review_status(review)
+    image_ok = status["image_read_by_model"]
     tier = tier_from(review, metadata, dossier)
-    risks = risk_flags(review, metadata, evidence, required_machine or optional_machine, image_ok)
+    conservative = (not status["image_read_by_model"]) or (required_machine or optional_machine)
+    caps, machine_capability = capabilities_from(trusted_review, geometry or subtype, required, optional, conservative)
+    risks, risk_notes = risk_flags(trusted_review, metadata, evidence, required_machine or optional_machine, image_ok, machine_capability)
     card = {
         "id": case_id,
         "title": title,
         "retrieval_tier": tier,
         "one_line": compact_text(
-            (review.get("best_for") or [f"{geometry or 'unknown'} asset for {title}"])[0],
+            (trusted_review.get("best_for") or [f"{geometry or 'unknown'} asset for {title}"])[0],
             150,
         ),
         "geometry": geometry or "unknown",
         "subtype": subtype or "",
         "required_roles": required,
         "optional_roles": optional,
-        "capabilities": capabilities_from(review, geometry or subtype, required, optional),
-        "best_for": as_list(review.get("best_for") or dossier.get("best_for"), 3),
-        "bad_for": as_list(review.get("bad_for") or dossier.get("bad_for"), 3),
-        "image_summary": compact_text(review.get("observed_visual_grammar") or evidence.get("image"), 220),
+        "capabilities": caps,
+        "best_for": as_list(trusted_review.get("best_for") or dossier.get("best_for"), 3),
+        "bad_for": as_list(trusted_review.get("bad_for") or dossier.get("bad_for"), 3),
+        "image_summary": compact_text(trusted_review.get("observed_visual_grammar") or evidence.get("image"), 220),
         "data_summary": compact_text(
             {
                 "main_columns": evidence.get("data", {}).get("main", {}).get("columns", [])[:12],
@@ -292,7 +412,9 @@ def build_card(case_dir: Path, repo: Path, evidence_dir: Path, review_dir: Path,
             180,
         ),
         "risk_flags": risks,
+        "risk_notes": risk_notes,
         "confidence": confidence(review, required_machine or optional_machine, image_ok),
+        "review_status": status,
         "read_next": {
             "card": f"vault/cards/{case_id}.yaml",
             "deep_review": f"vault/review/deep_annotation/reviews/{case_id}.yaml" if review else None,

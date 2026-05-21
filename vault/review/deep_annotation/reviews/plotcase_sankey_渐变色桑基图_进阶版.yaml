@@ -1,0 +1,92 @@
+case_id: plotcase_sankey_渐变色桑基图_进阶版
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Reviewed image, data, plot.py, R source, visual_check, card, and previous backfill."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotcase_sankey_渐变色桑基图_进阶版/metadata.json, vault/material/plotcase_sankey_渐变色桑基图_进阶版/agent_guide.md, vault/material/plotcase_sankey_渐变色桑基图_进阶版/plot.py, vault/material/plotcase_sankey_渐变色桑基图_进阶版/scripts/code.R, vault/material/plotcase_sankey_渐变色桑基图_进阶版/data_main.csv, vault/material/plotcase_sankey_渐变色桑基图_进阶版/outputs/rebuilt.png, vault/material/plotcase_sankey_渐变色桑基图_进阶版/outputs/visual_check.json, vault/cards/plotcase_sankey_渐变色桑基图_进阶版.yaml, vault/review/deep_annotation/reviews/plotcase_sankey_渐变色桑基图_进阶版.yaml]
+  data_main_profile:
+    rows: 9
+    columns: [stage, node, next_stage, next_node, value, flow_id, group, node_color, label, order]
+  rebuilt_png: {width: 1586, height: 1498, visual_check_ok: true}
+  original_rebuild_log: "R source completed."
+observed_visual_grammar:
+  figure_type: three_stage_gradient_sankey
+  layout: "Left management groups, middle phyla, and right function categories connected by wide semi-transparent alluvial bands."
+  marks: [vertical nodes, flow ribbons, node labels]
+  encodings:
+    stage: left/middle/right semantic layer
+    node: category label within stage
+    value: ribbon thickness
+    fill_color: source/group category with gradient-like transparency
+inferred_visual_grammar:
+  grammar_id: staged_alluvial_sankey_gradient_flows
+  source_logic: "Original R pivots functional abundance data and uses ggsankeyfier with fixed level orders."
+  current_standard_rebuild: "plot.py calls generic render('network'), not a true sankey/alluvial renderer."
+reviewed_visual_roles:
+  stage: "Current node stage."
+  node: "Current category/node."
+  next_stage: "Next node stage."
+  next_node: "Next category/node."
+  value: "Flow magnitude."
+  group: "Flow color/group."
+  order: "Manual ordering."
+canonical_columns: [stage, node, next_stage, next_node, value, group, order]
+required_data_semantics:
+  stage: "Source stage."
+  node: "Source node."
+  next_stage: "Target stage."
+  next_node: "Target node."
+  value: "Positive flow value."
+optional_data_semantics:
+  group: "Flow color source."
+  order: "Manual vertical ordering."
+  node_color: "Explicit node fill."
+optional_modules:
+  gradient_flow_fill: {status: observed}
+  multi_stage_ordering: {status: observed}
+false_positive_risks:
+  - "Do not use source/target/weight network roles here; the current CSV uses staged sankey roles."
+  - "Generic plot.py cannot reproduce flow ribbons."
+best_for:
+  - "Three-stage sankey/alluvial flows with grouped source colors."
+bad_for:
+  - "Cyclic networks or link diagrams without ordered stages."
+style_notes:
+  - "Large text labels, black-bordered vertical nodes, translucent broad ribbons, no axes."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "CSV roles are closer to the true visual grammar than most batch cases, but standard entry still uses a generic network renderer."
+  exclusion_risks: [generic_renderer_entry, sankey_renderer_missing]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: high, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Three vertical node columns connected by ribbons."
+  marks: [nodes, ribbons, labels]
+  encodings: "Flow width by value, node position by stage/order, color by group/source."
+  axes: "No axes."
+  legends: "No separate legend."
+  annotations: "Node labels."
+  text_density: moderate
+  visual_risks: "Thin flows and overlapping bands need ordering control."
+data_understanding:
+  data_read: true
+  observed_columns: [stage, node, next_stage, next_node, value, flow_id, group, node_color, label, order]
+  role_mapping: {stage: source_stage, node: source_node, next_stage: target_stage, next_node: target_node, value: flow_value, group: flow_group}
+  derived_columns: []
+  false_positive_columns: [label]
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/tidyverse/ggsankeyfier source."
+  entry_behavior: "plot.py calls render('network'); R source prepares long flow table and draws alluvial bands."
+  hardcoded_aesthetics: "Stage levels, phylum/function recodes, palettes, and ordering are hardcoded."
+  output_behavior: "Existing rebuilt.png is nonblank source-style sankey."
+  unsupported_features: [sankey_ribbons_in_generic_renderer]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

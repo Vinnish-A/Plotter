@@ -1,0 +1,167 @@
+case_id: plotcase_heatmap_多元素个性化对角线热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_heatmap_多元素个性化对角线热图/metadata.json
+  - vault/material/plotcase_heatmap_多元素个性化对角线热图/agent_guide.md
+  - vault/material/plotcase_heatmap_多元素个性化对角线热图/plot.py
+  - vault/material/plotcase_heatmap_多元素个性化对角线热图/data_main.csv
+  - vault/material/plotcase_heatmap_多元素个性化对角线热图/outputs/rebuilt.png
+  - vault/material/plotcase_heatmap_多元素个性化对角线热图/outputs/visual_check.json
+  - vault/evidence/machine/plotcase_heatmap_多元素个性化对角线热图.yaml
+  - vault/cards/plotcase_heatmap_多元素个性化对角线热图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_heatmap_多元素个性化对角线热图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_多元素个性化对角线热图.yaml
+  asset_card: vault/cards/plotcase_heatmap_多元素个性化对角线热图.yaml
+  image: vault/material/plotcase_heatmap_多元素个性化对角线热图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1380
+    height: 530
+    mean_stddev: 63.1043
+  build:
+    status: build_success
+    language: R
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: high
+    last_built_at: '2026-05-17T12:30:12.012602+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: annotated_heatmap
+  subtype: matrix_annotation_heatmap
+  description: Rectangular clinical annotation matrix with rows for stage, histology, mutation/status dots, treatment
+    strips, triangular CNV/SNV detection cells, and sample number labels.
+inferred_visual_grammar:
+  grammar_id: annotated_heatmap
+  summary: Reusable annotated heatmap grammar with core row/column/value body plus optional annotation tracks.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  row_id: row or feature identity
+  column_id: column or sample identity
+  value: primary heatmap/dot color value
+  row_group: row-side grouping when present
+  column_group: column/top grouping when present
+  annotation_track: annotation layer type
+  annotation_value: annotation category or value
+  size_value: dot size/secondary magnitude when visually present
+canonical_columns: &id001
+- row_id
+- column_id
+- value
+- row_group
+- column_group
+- annotation_track
+- annotation_value
+- label
+- size_value
+- facet
+required_data_semantics:
+  row_id: row/feature identity
+  column_id: column/sample identity
+  value: primary matrix value
+optional_data_semantics:
+  row_group: row-side group annotation
+  column_group: column/top group annotation
+  annotation_track: named auxiliary track
+  annotation_value: track value/category
+  size_value: secondary size encoding
+  label: display text when populated
+optional_modules:
+  annotation_tracks:
+    supported: true
+  dot_size:
+    supported: only for bubble/dot heatmap variants
+  significance_text:
+    supported: observed in specific cases but not encoded in generic data_main
+false_positive_risks:
+- row_id/column_id/value do not encode Stage/Histology/Detection rows directly
+- current plot.py is a generic heatmap wrapper and is not the observed specialized renderer
+best_for:
+- annotated matrix-style figures with explicit row/column/value data
+- examples of track placement around heatmap bodies
+bad_for:
+- claiming source/target graph semantics
+- rebuilding exact labels without original source tables
+style_notes:
+- gray base grid with strong categorical legend colors
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Distinct annotation-board grammar; however data_main is generic long heatmap data and omits the observed
+    clinical row semantics.
+  exclusion_risks:
+  - row_id/column_id/value do not encode Stage/Histology/Detection rows directly
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single matrix-like annotation board with legends on the right
+  marks:
+  - filled tiles
+  - black dots
+  - diagonal half-tiles
+  - bottom sample labels
+  - legend swatches
+  encodings:
+    tile_color: category
+    dot_presence: binary marker
+    diagonal_split: two detection states
+    column: sample
+  axes: row labels on left, sample numbers along bottom
+  legends: Detection, Treatment, and Histology legends
+  annotations: row labels and sample identifiers
+  text_density: medium
+  visual_risks:
+  - diagonal split-cell semantics require explicit optional data
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    row_id: row identity in standardized abstraction
+    column_id: column identity in standardized abstraction
+    value: primary matrix value
+    row_group: optional row grouping
+    column_group: optional column grouping
+    annotation_track: optional track name
+    annotation_value: optional track value
+    size_value: secondary magnitude if dot marks are used
+  derived_columns: []
+  false_positive_columns:
+  - label
+  - facet
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

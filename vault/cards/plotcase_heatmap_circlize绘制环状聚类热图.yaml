@@ -1,9 +1,9 @@
 id: plotcase_heatmap_circlize绘制环状聚类热图
 title: circlize绘制环状聚类热图
 retrieval_tier: support
-one_line: heatmap asset for circlize绘制环状聚类热图
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: circular heatmap grammar with clustering
+geometry: circular clustered heatmap
+subtype: annular heatmap with dendrogram
 required_roles:
 - row_id
 - column_id
@@ -18,33 +18,39 @@ optional_roles:
 - facet
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- circlize绘制环状聚类热图
-- 'heatmap/annotated_heatmap grammar with roles: row_id, column_id, value'
+- circular heatmap grammar with clustering
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 189612; width: 1008; height: 1008'
+- large readable matrices with long labels
+image_summary: 'geometry: circular clustered heatmap; subtype: annular heatmap with dendrogram; layout:
+  single circular heatmap; primary_marks: [''annular heatmap tiles'', ''inner dendrogram'', ''outer labels'',
+  ''central colorbar'']'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: [''circlize'', ''complexheatmap'']'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- small labels and dendrogram branches need large output
+- CSV has only 6 by 5 matrix while image is visually richer
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_heatmap_circlize绘制环状聚类热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_circlize绘制环状聚类热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_circlize绘制环状聚类热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_circlize绘制环状聚类热图
   preview: vault/material/plotcase_heatmap_circlize绘制环状聚类热图/outputs/rebuilt.png

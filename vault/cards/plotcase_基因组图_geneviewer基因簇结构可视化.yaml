@@ -41,10 +41,13 @@ code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
 - case_level_fallback
-- generic_renderer_rebuild
+- generic_renderer
+- missing_optional_data
+risk_notes:
 - Genome columns are schema-compatible but synthetic.
 - rebuilt.png matches only because it is a case-level cover fallback.
 - plot.py would not regenerate the observed gene-arrow figure from data_main.csv.
+- case_level_fallback
 - synthetic_data_main
 - generic_renderer_entry
 - missing_source_data_lineage
@@ -52,6 +55,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_基因组图_geneviewer基因簇结构可视化.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_基因组图_geneviewer基因簇结构可视化.yaml

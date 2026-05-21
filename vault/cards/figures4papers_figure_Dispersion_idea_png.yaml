@@ -34,7 +34,9 @@ code_summary: 'entry: plot.py; backend_hints: [''matplotlib'']'
 risk_flags:
 - synthetic_data
 - case_level_fallback
-- generic_renderer_rebuild
+- generic_renderer
+- misleading_metadata
+risk_notes:
 - Do not treat data_main x/y/z/value as plotted random point data.
 - Do not retrieve this as empirical PCA, manifold learning, or true 3D scatter.
 - Blank label, trajectory, and color columns are not available optional modules.
@@ -46,6 +48,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/figures4papers_figure_Dispersion_idea_png.yaml
   deep_review: vault/review/deep_annotation/reviews/figures4papers_figure_Dispersion_idea_png.yaml

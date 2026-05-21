@@ -1,17 +1,17 @@
 id: plotcase_barplot_柱状图添加显著性标记_(进阶版)
 title: 柱状图添加显著性标记_(进阶版)
 retrieval_tier: support
-one_line: map asset for 柱状图添加显著性标记_(进阶版)
-geometry: map
-subtype: map
+one_line: Grouped summary bar charts with error bars and compact significance callouts
+geometry: grouped_bar_with_significance
+subtype: grouped bar chart with error bars, point overlays, brackets, and star labels
 required_roles:
 - category
 - value
 optional_roles:
 - group
-- stack
 - error_low
 - error_high
+- stack
 - line_value
 - annotation_value
 - label
@@ -23,27 +23,34 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 柱状图添加显著性标记_(进阶版)
-- 'map/map grammar with roles: category, value'
+- Grouped summary bar charts with error bars and compact significance callouts
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 55869; width: 1502; height: 662'
+- Exact statistical annotation recovery without p-value/bracket data
+- Stacked or line-overlay charts despite compatible columns
+image_summary: 'geometry: grouped_bar_with_significance; subtype: grouped bar chart with error bars, point
+  overlays, brackets, and star labels; panel_count: 1; layout: single wide Cartesian panel with eight
+  x categories and four legend…'
 data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
   ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- significance values are rendered as stars but p-value source is not present in data_main.csv
+- false_positive_column:stack
+- false_positive_column:line_value
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
   machine_evidence: vault/evidence/machine/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
   evidence_pack: vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)
   preview: vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/outputs/rebuilt.png

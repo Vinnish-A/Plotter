@@ -323,3 +323,6 @@ reviewed_summary:
     raw_script_semantics: high
     current_data_contract: low
     retrieval_tier: high
+agent_default_entry: vault/cards/plotcase_point_多层级曼哈顿图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

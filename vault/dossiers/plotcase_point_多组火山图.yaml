@@ -327,3 +327,6 @@ reviewed_summary:
     visual_identification: 0.95
     data_contract_assessment: 0.86
     rebuild_path_assessment: 0.3
+agent_default_entry: vault/cards/plotcase_point_多组火山图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

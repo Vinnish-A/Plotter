@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_流程图_细胞网络通讯示意图/metadata.json
     exists: true
-    size_bytes: 3909
+    size_bytes: 4901
   agent_guide:
     path: vault/material/plotcase_流程图_细胞网络通讯示意图/agent_guide.md
     exists: true

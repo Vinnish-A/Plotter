@@ -1,0 +1,115 @@
+case_id: plotcase_heatmap_回归方差分解热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Image, data, code, machine evidence, card, and prior review were inspected."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read:
+    - AGENTS.md
+    - schemas/deep_dossier_review.schema.yaml
+    - vault/material/plotcase_heatmap_回归方差分解热图/metadata.json
+    - vault/material/plotcase_heatmap_回归方差分解热图/agent_guide.md
+    - vault/material/plotcase_heatmap_回归方差分解热图/plot.py
+    - vault/material/plotcase_heatmap_回归方差分解热图/scripts/code.R
+    - vault/material/plotcase_heatmap_回归方差分解热图/data_main.csv
+    - vault/material/plotcase_heatmap_回归方差分解热图/outputs/rebuilt.png
+    - vault/material/plotcase_heatmap_回归方差分解热图/outputs/visual_check.json
+    - vault/cards/plotcase_heatmap_回归方差分解热图.yaml
+    - vault/review/deep_annotation/reviews/plotcase_heatmap_回归方差分解热图.yaml
+  data_main_profile:
+    rows: 30
+    columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  rebuilt_png:
+    width: 1008
+    height: 1008
+    visual_check_ok: true
+  original_rebuild_log: "R source completed with warnings about scale picking."
+observed_visual_grammar:
+  figure_type: variance_decomposition_bar_plus_bubble_heatmap
+  layout: "Top explained-variation bar chart aligned above a rectangular heatmap whose cells combine diverging fill, bubble size, and significance stars."
+  marks: [top bars, heatmap tiles, hollow circles, star annotations, colorbar, size legend]
+  encodings:
+    top_bar_height: explained variation percent
+    tile_color: signed association
+    circle_size: importance percent
+    stars: significance class
+    rows_columns: predictors and taxa/categories
+inferred_visual_grammar:
+  grammar_id: regression_variance_decomposition_heatmap
+  source_logic: "Original R fits stepwise models, computes relative importance, reshapes matrices, and composes bar plus heatmap with aplot."
+  current_standard_rebuild: "plot.py calls generic render('heatmap') and cannot reproduce top bars or cell-size/star overlays."
+reviewed_visual_roles:
+  row_id: "Heatmap row category."
+  column_id: "Heatmap column category."
+  value: "Tile color value."
+  size_value: "Potential cell size role, but current data is placeholder-like."
+  annotation_value: "Potential significance or class text; not sufficient for visible stars."
+canonical_columns: [row_id, column_id, value, importance, p_value, explained_variation]
+required_data_semantics:
+  row_id: "Heatmap row variable."
+  column_id: "Heatmap column variable."
+  value: "Signed heatmap statistic."
+optional_data_semantics:
+  importance: "Circle size in heatmap cells."
+  p_value: "Star or circle annotation class."
+  explained_variation: "Top bar height."
+optional_modules:
+  top_bar_track:
+    status: observed
+  sized_cell_overlay:
+    status: observed
+  significance_stars:
+    status: observed
+false_positive_risks:
+  - "Do not retrieve as a plain heatmap; top bars and cell overlays are core."
+  - "Current generic plot.py cannot reproduce the inspected composition."
+best_for:
+  - "Model-summary heatmaps where a matrix is paired with a top variation/importance summary."
+bad_for:
+  - "Simple expression heatmaps or categorical-only annotation grids."
+style_notes:
+  - "Blue top bars, red-white-blue matrix fill, black-outlined variable-size circles, compact legends on right."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Source grammar is reusable and evidence is readable, but standard CSV and Python entry still understate the visible composition."
+  exclusion_risks: [generic_renderer_entry, summary_track_not_encoded]
+confidence:
+  overall: high
+  visual_observation: high
+  data_contract_assessment: medium
+  source_rebuild_assessment: high
+image_observation:
+  image_read: true
+  panel_count: 2
+  layout: "Top bar track plus main heatmap in a single aligned composite."
+  marks: [bars, tiles, bubbles, stars]
+  encodings: "Bar height for explained variation, tile color for signed value, circle size for importance, stars for significance."
+  axes: "Column labels rotated at bottom; row labels left; top y-axis for explained variation."
+  legends: "Colorbar and bubble-size legend."
+  annotations: "Stars inside cells."
+  text_density: moderate
+  visual_risks: "Small stars and bubbles require sufficient export size."
+data_understanding:
+  data_read: true
+  observed_columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  role_mapping:
+    row_id: heatmap_row
+    column_id: heatmap_column
+    value: tile_value
+    size_value: possible_importance
+  derived_columns: []
+  false_positive_columns: [row_group, column_group, annotation_track, annotation_value, label, facet]
+  missing_optional_data: [p_value, explained_variation]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus original R/tidyverse/MASS/relaimpo/psych/aplot source."
+  entry_behavior: "plot.py calls render('heatmap'); scripts/code.R computes model statistics and a composed ggplot."
+  hardcoded_aesthetics: "Palette, top bar layer, star labels, and legend breaks are controlled in R."
+  output_behavior: "Existing rebuilt.png is nonblank and structurally matches source-style composition."
+  unsupported_features: [top_summary_track_from_current_csv, cell_size_and_star_overlay_in_generic_renderer]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

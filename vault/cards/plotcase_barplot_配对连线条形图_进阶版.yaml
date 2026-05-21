@@ -1,49 +1,55 @@
 id: plotcase_barplot_配对连线条形图_进阶版
 title: 配对连线条形图_进阶版
 retrieval_tier: support
-one_line: map asset for 配对连线条形图_进阶版
-geometry: map
-subtype: map
+one_line: paired ranked terms with two metric columns
+geometry: paired_ranked_bar_connection
+subtype: two_sided_horizontal_bar_with_match_lines
 required_roles:
-- category
-- value
+- left_category
+- right_category
+- left_value
+- right_value
 optional_roles:
-- group
-- stack
-- error_low
-- error_high
-- line_value
-- annotation_value
-- label
+- pair_link
+- rank
+- bar_label
 capabilities:
-  highlight: true
+  highlight: false
   detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: false
   batch: true
 best_for:
-- 配对连线条形图_进阶版
-- 'map/map grammar with roles: category, value'
+- paired ranked terms with two metric columns
+- small multiples of left/right label agreement
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 157547; width: 1106; height: 1025'
+- ordinary grouped bars without explicit pair links
+- large label sets where connectors would cross heavily
+image_summary: 'geometry: paired_ranked_bar_connection; subtype: two_sided_horizontal_bar_with_match_lines;
+  description: Two ranked horizontal bar columns flank a central word-pair matching lane; bars encode
+  percentages and black conne…'
 data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
   ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- standard data_main has category/value/group placeholders and does not contain the observed word labels
+- current plot.py is a generic bar wrapper, not the paired-connector implementation
+- data_main cannot regenerate the observed word-pair figure
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_barplot_配对连线条形图_进阶版.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_配对连线条形图_进阶版.yaml
   machine_evidence: vault/evidence/machine/plotcase_barplot_配对连线条形图_进阶版.yaml
   evidence_pack: vault/material/plotcase_barplot_配对连线条形图_进阶版
   preview: vault/material/plotcase_barplot_配对连线条形图_进阶版/outputs/rebuilt.png

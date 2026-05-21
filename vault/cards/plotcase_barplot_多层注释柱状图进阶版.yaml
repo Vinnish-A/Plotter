@@ -1,9 +1,9 @@
 id: plotcase_barplot_多层注释柱状图进阶版
 title: 多层注释柱状图进阶版
 retrieval_tier: support
-one_line: map asset for 多层注释柱状图进阶版
-geometry: map
-subtype: map
+one_line: Grouped bar summaries with individual replicate points and error bars.
+geometry: grouped_summary_bar_chart
+subtype: ''
 required_roles:
 - category
 - value
@@ -23,27 +23,42 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 多层注释柱状图进阶版
-- 'map/map grammar with roles: category, value'
+- Grouped bar summaries with individual replicate points and error bars.
+- Figures where x-axis nesting carries multiple categorical annotations without a separate legend.
+- Teaching or reusing the visual pattern of colored supergroup bands plus subgroup brackets under a bar
+  chart.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 52357; width: 1168; height: 878'
+- Stacked bars, line overlays, or network-like relationship diagrams.
+- Cases where every visible category hierarchy must be recoverable from the current data_main.csv alone.
+- Dense category sets with long labels, because the nested axis annotation would crowd quickly.
+image_summary: 'family: grouped_summary_bar_chart; panel_structure: one panel with twelve bars arranged
+  into two colored supergroups and three middle-level groups per supergroup; primary_marks: mean bars
+  with black outlines; overlays: …'
 data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
   ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- Do not treat this as a map asset despite the machine card saying map/map; the inspected image is a grouped
+  bar chart.
+- Do not infer network roles; there are no source, target, or weight columns and no network marks.
+- Do not infer a stacked bar or line-combo figure from stack or line_value columns; those layers are not
+  visible.
+- generic_renderer_interface_does_not_match_visible_source_rebuild
+- machine_card_geometry_was_wrong
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_barplot_多层注释柱状图进阶版.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图进阶版.yaml
   machine_evidence: vault/evidence/machine/plotcase_barplot_多层注释柱状图进阶版.yaml
   evidence_pack: vault/material/plotcase_barplot_多层注释柱状图进阶版
   preview: vault/material/plotcase_barplot_多层注释柱状图进阶版/outputs/rebuilt.png

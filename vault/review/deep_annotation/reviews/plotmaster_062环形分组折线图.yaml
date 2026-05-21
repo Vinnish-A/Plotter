@@ -1,0 +1,161 @@
+case_id: plotmaster_062环形分组折线图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_062环形分组折线图/metadata.json
+  - vault/material/plotmaster_062环形分组折线图/agent_guide.md
+  - vault/material/plotmaster_062环形分组折线图/plot.py
+  - vault/material/plotmaster_062环形分组折线图/data_main.csv
+  - vault/material/plotmaster_062环形分组折线图/outputs/rebuilt.png
+  - vault/material/plotmaster_062环形分组折线图/outputs/visual_check.json
+  - vault/evidence/machine/plotmaster_062环形分组折线图.yaml
+  - vault/cards/plotmaster_062环形分组折线图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_062环形分组折线图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotmaster_062环形分组折线图.yaml
+  asset_card: vault/cards/plotmaster_062环形分组折线图.yaml
+  image: vault/material/plotmaster_062环形分组折线图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1008
+    height: 1008
+    mean_stddev: 29.686
+  build:
+    status: build_success
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: low
+    last_built_at: '2026-05-17T12:30:13.452394+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: true
+observed_visual_grammar:
+  geometry: circular_grouped_line_tracks
+  subtype: radial_faceted_line_segments
+  description: Circular grouped line plot with multiple colored line tracks arranged by inner group sectors, gray
+    radial guide rings, and many outer item labels.
+inferred_visual_grammar:
+  grammar_id: circular_grouped_line_tracks
+  summary: Radial line chart grammar requiring group/facet, ordered items, series identity/color, and radial values.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  group: inner sector/facet
+  item: ordered angular item
+  series: line color/track
+  value: radial value
+canonical_columns: &id001
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  group: sector/facet identity
+  item: ordered position
+  value: radial value
+optional_data_semantics:
+  series: colored line series
+  label: outer item label
+optional_modules:
+  radial_guides:
+    supported: true
+  group_sectors:
+    supported: true
+  multi_series_lines:
+    supported: true
+false_positive_risks:
+- synthetic_data true
+- current data_main x/y/value can support generic line data but not the circular sector grammar directly
+- source/target/weight are duplicates, not network roles
+best_for:
+- radial grouped line-chart inspiration
+- circular small-track compositions
+bad_for:
+- ordinary Cartesian line retrieval
+- core source-backed asset selection
+style_notes:
+- open center with group labels; colored line tracks sit between black sector arcs and gray guides
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Observed figure is a useful radial-line pattern but synthetic and only partially represented by current
+    CSV.
+  exclusion_risks:
+  - semantic group/series/order roles require remapping
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single circular line-track figure
+  marks:
+  - colored lines
+  - points
+  - radial guide arcs
+  - group arcs
+  - outer labels
+  encodings:
+    angle: ordered item
+    radius: value
+    line_color: series
+    inner_arc: group/facet
+  axes: polar/radial guide values; no Cartesian axes
+  legends: none visible
+  annotations: group labels and outer item labels
+  text_density: medium-high
+  visual_risks:
+  - outer labels are tiny and rotated
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    x: ordered position proxy
+    y: numeric value
+    value: numeric value duplicate
+    group: currently item-level labels, not visual sectors without remap
+    label: outer label proxy
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

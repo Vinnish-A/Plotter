@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_boxplot_方差分析箱线图_进阶版/metadata.json
     exists: true
-    size_bytes: 3861
+    size_bytes: 4765
   agent_guide:
     path: vault/material/plotcase_boxplot_方差分析箱线图_进阶版/agent_guide.md
     exists: true

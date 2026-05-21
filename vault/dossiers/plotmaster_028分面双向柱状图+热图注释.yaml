@@ -1,10 +1,14 @@
 id: plotmaster_028分面双向柱状图+热图注释
 title: 028分面双向柱状图+热图注释
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: Reviewed image and source; script uses simulated data and current data_main
+    does not encode the full bar-plus-heatstrip composition.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_028分面双向柱状图+热图注释
   source:
@@ -351,3 +355,32 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_028分面双向柱状图+热图注释.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Reusable composition pattern, but source uses simulated data
+  and current CSV lacks explicit panel semantics.
+exclusion_risks:
+- simulated_data
+- generic_renderer_entry
+- panel_contract_missing
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_028分面双向柱状图+热图注释.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_028分面双向柱状图+热图注释.yaml
+  geometry: stacked_bidirectional_bar_panels_with_bottom_heatstrip
+  subtype: bidirectional_bar_heatstrip_annotation
+  required_roles:
+  - feature
+  - panel
+  - value
+  optional_roles:
+  - group
+  - sign_class
+  - star_label
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

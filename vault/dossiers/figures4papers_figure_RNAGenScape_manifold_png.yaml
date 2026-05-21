@@ -1,10 +1,14 @@
 id: figures4papers_figure_RNAGenScape_manifold_png
 title: figure_RNAGenScape_manifold
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Replaced conservative machine backfill after direct inspection of image,
+    data, metadata, card, evidence, and entry code.
+  reviewed_at: '2026-05-21T09:03:31Z'
+  annotator_model: gpt-5-codex
+  review_version: deep_annotation_v1
 origin:
   case_dir: vault/material/figures4papers_figure_RNAGenScape_manifold_png
   source:
@@ -309,3 +313,37 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/figures4papers_figure_RNAGenScape_manifold_png.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: Visually useful 3D surface grammar, but the accepted rebuild
+  is an image-level fallback and not a data/code-recomputed scientific figure.
+exclusion_risks:
+- case_level_fallback
+- not_recomputed_from_data_main
+- no_domain_labels_or_axes
+annotation_review_ref: vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_png.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  geometry: 3d_surface
+  subtype: smooth_manifold_landscape
+  required_roles:
+  - x
+  - y
+  - z
+  - value
+  - panel
+  optional_roles:
+  - group
+  - label
+  - surface
+  - trajectory
+  - color
+  tier: inspiration
+  confidence:
+    overall: medium
+    visual_grammar: high
+    data_roles: medium
+    code_understanding: high
+    domain_semantics: low

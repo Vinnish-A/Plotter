@@ -1,9 +1,9 @@
 id: plotcase_heatmap_多类别分面注释热图
 title: 多类别分面注释热图
 retrieval_tier: support
-one_line: heatmap asset for 多类别分面注释热图
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: multi-category annotated heatmap compositions
+geometry: faceted annotated heatmap
+subtype: grouped condition-by-gene heatmap
 required_roles:
 - row_id
 - column_id
@@ -18,33 +18,39 @@ optional_roles:
 - facet
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 多类别分面注释热图
-- 'heatmap/annotated_heatmap grammar with roles: row_id, column_id, value'
+- multi-category annotated heatmap compositions
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 72996; width: 1308; height: 1061'
+- simple heatmaps without group metadata
+image_summary: 'geometry: faceted annotated heatmap; subtype: grouped condition-by-gene heatmap; layout:
+  single heatmap divided into row and column groups; primary_marks: [''rectangular heatmap cells'', ''group
+  separators'', ''row group lab…'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- multi-tier headers are not represented by current CSV beyond generic row/column groups
+- small text could crowd with larger matrices
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_heatmap_多类别分面注释热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_多类别分面注释热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_多类别分面注释热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_多类别分面注释热图
   preview: vault/material/plotcase_heatmap_多类别分面注释热图/outputs/rebuilt.png

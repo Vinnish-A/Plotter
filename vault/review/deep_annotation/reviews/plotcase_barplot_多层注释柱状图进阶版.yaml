@@ -1,0 +1,199 @@
+case_id: plotcase_barplot_多层注释柱状图进阶版
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review
+  human_review_required: false
+  reason: Image, metadata, guide, data, code, machine evidence, asset card, and prior review were inspected for a real archival review.
+annotator_model: gpt-5
+reviewed_at: '2026-05-21T09:04:15Z'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/metadata.json
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/agent_guide.md
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/plot.py
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/scripts/code.R
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/data_main.csv
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/raw/data.tsv
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/raw/case.json
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/outputs/rebuilt.png
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/outputs/figure_001_cover.png
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/outputs/visual_check.json
+  - vault/evidence/machine/plotcase_barplot_多层注释柱状图进阶版.yaml
+  - vault/cards/plotcase_barplot_多层注释柱状图进阶版.yaml
+  - vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图进阶版.yaml
+  image_paths_inspected:
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/outputs/rebuilt.png
+  - vault/material/plotcase_barplot_多层注释柱状图进阶版/outputs/figure_001_cover.png
+  machine_evidence: vault/evidence/machine/plotcase_barplot_多层注释柱状图进阶版.yaml
+  asset_card: vault/cards/plotcase_barplot_多层注释柱状图进阶版.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图进阶版.yaml
+observed_visual_grammar:
+  family: grouped_summary_bar_chart
+  panel_structure: one panel with twelve bars arranged into two colored supergroups and three middle-level groups per supergroup
+  primary_marks: mean bars with black outlines
+  overlays: jittered replicate points and vertical error bars
+  annotation_structure: nested x-axis labels and bracket rails replace a conventional legend
+  visible_measure: Lung metastasis burden (%)
+inferred_visual_grammar:
+  source: model_review_of_image_and_code
+  geometry: grouped bar summary with replicate overlay
+  subtype: nested-axis annotated bar plot
+  likely_data_flow: raw replicate rows are summarized to bar means and standard errors, then grouped by a composite x_id made from type, group1, and group2
+  weak_semantic_interpretations:
+  - The plus/minus x labels are probably treatment or condition states because the R code names them dox_levels, but the image itself only exposes '-' and '+'.
+  - EV, Atf4-1, Atf4-2, KP-O, and KP-Y are treated as displayed group labels, not interpreted biological mechanisms.
+reviewed_visual_roles:
+  x_position: composite categorical slot ordered by type within group1 within group2
+  y_value: quantitative burden percentage plotted as bar height and point height
+  bar_height: mean of replicate Counts within each composite category in the original R source
+  error_interval: mean_se error bars computed from replicate Counts by stat_summary
+  point_overlay: individual replicate Counts jittered horizontally inside each bar slot
+  fill_color: composite group2.group1 palette key in the original code; visually also separates KP-O/KP-Y and subgroup tones
+  point_shape: group2 in the original code, though no standalone legend is drawn
+  nested_axis_labels: type level, group1 level, and group2 colored band/bracket level
+canonical_columns:
+- category
+- value
+- group
+- stack
+- error_low
+- error_high
+- line_value
+- annotation_value
+- label
+required_data_semantics:
+  category: Abstract x/category role in data_main.csv; insufficient by itself to reconstruct the visible nested three-level axis.
+  value: Abstract numeric bar value in data_main.csv; the visible source-code figure instead summarizes raw Counts replicates.
+optional_data_semantics:
+  group: Generic grouping role in data_main.csv; the source-code figure uses separate type, group1, and group2 roles.
+  stack: Present in data_main.csv but no stacked bars are visible in the inspected PNG.
+  error_low: Present in data_main.csv, but source-code error bars are computed from raw replicate Counts rather than these bounds.
+  error_high: Present in data_main.csv, but source-code error bars are computed from raw replicate Counts rather than these bounds.
+  line_value: Present in data_main.csv but no line layer is visible in the inspected PNG.
+  annotation_value: Empty in sampled data_main.csv and not used by the visible chart.
+  label: Empty in sampled data_main.csv and not used by the visible chart.
+optional_modules:
+  nested_axis_annotation:
+    present: true
+    implementation: legendry guide_axis_nested in scripts/code.R
+    data_dependency: composite x_id derived from type, group1, and group2
+  replicate_overlay:
+    present: true
+    implementation: geom_point with horizontal jitter
+  uncertainty_bars:
+    present: true
+    implementation: stat_summary mean_se
+  conventional_legend:
+    present: false
+    note: Fill and shape guides are suppressed; grouping is explained by axis nesting and color bands.
+false_positive_risks:
+- Do not treat this as a map asset despite the machine card saying map/map; the inspected image is a grouped bar chart.
+- Do not infer network roles; there are no source, target, or weight columns and no network marks.
+- Do not infer a stacked bar or line-combo figure from stack or line_value columns; those layers are not visible.
+- The canonical data_main.csv is a compact abstract/demo interface and does not encode the full twelve-bar nested source figure.
+- The current plot.py calls a generic matplotlib renderer, while the inspected PNG matches the richer R/ggplot2 plus legendry source rebuild.
+best_for:
+- Grouped bar summaries with individual replicate points and error bars.
+- Figures where x-axis nesting carries multiple categorical annotations without a separate legend.
+- Teaching or reusing the visual pattern of colored supergroup bands plus subgroup brackets under a bar chart.
+bad_for:
+- Stacked bars, line overlays, or network-like relationship diagrams.
+- Cases where every visible category hierarchy must be recoverable from the current data_main.csv alone.
+- Dense category sets with long labels, because the nested axis annotation would crowd quickly.
+style_notes:
+- High-contrast warm and teal palette separates the two top-level groups, with darker/lighter tones for subgroups.
+- Large y-axis title and large nested x labels make the figure readable at preview size.
+- No top title is present in the rendered chart; the visual identity comes from the y label and nested x annotations.
+- The bottom KP-O/KP-Y color bands function as both annotation and legend substitute.
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Useful as a support exemplar for nested-axis annotated grouped bars, but not core because the standard CSV does not fully capture the visible grammar.
+  exclusion_risks:
+  - generic_renderer_interface_does_not_match_visible_source_rebuild
+  - machine_card_geometry_was_wrong
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  reproducibility_interface: low
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: Single Cartesian bar chart with twelve x slots, grouped into KP-O and KP-Y bottom bands, each with Atf4-1, Atf4-2, and EV bracket groups and +/- sublabels.
+  marks:
+  - filled bars with dark outlines
+  - vertical error bars
+  - jittered individual points
+  - nested axis brackets and colored bottom bands
+  encodings:
+    x: nested categorical group hierarchy
+    y: Lung metastasis burden (%) from 0 to about 60
+    fill: grouped categorical palette
+    shape: square/circle point shapes corresponding to top-level group in the source code
+  axes: Y axis has ticks at 0, 20, 40, and 60; x axis uses nested text and brackets instead of a single x title.
+  legends: No separate legend; nested labels and colored bottom bands provide grouping semantics.
+  annotations:
+  - black subgroup brackets beneath +/- labels
+  - colored KP-O and KP-Y bands beneath subgroup labels
+  text_density: Moderate; large y-axis title and large nested x labels, with no plot title or legend body.
+  visual_risks:
+  - Nested labels would become crowded with more groups.
+  - Suppressed legend means color and shape semantics depend on correct axis annotation.
+data_understanding:
+  data_read: true
+  observed_columns:
+  - category
+  - value
+  - group
+  - stack
+  - error_low
+  - error_high
+  - line_value
+  - annotation_value
+  - label
+  row_profile: data_main.csv has 9 rows; category C1-C9, numeric value/error/line fields, 3 group levels, 4 stack levels, and empty annotation_value/label fields.
+  role_mapping:
+    category: abstract simple category, not the visible nested x_id
+    value: abstract numeric bar value
+    group: generic grouping role for the standard renderer
+    raw_Counts: visible y measurements in the original R source
+    raw_type: visible +/- x sublabels
+    raw_group1: visible Atf4-1, Atf4-2, and EV labels
+    raw_group2: visible KP-O and KP-Y bands and point shape grouping
+  derived_columns:
+  - x_id = type.group1.group2
+  - fill_key = group2.group1
+  - bar means and mean_se error intervals derived by ggplot stat_summary
+  false_positive_columns:
+  - stack
+  - line_value
+  - annotation_value
+  - label
+  - error_low
+  - error_high
+  missing_optional_data:
+  - No data_optional.csv is present; palette, ordering, nested-axis layout, and y-axis label are hardcoded in the R source rather than expressed as optional grammar data.
+code_understanding:
+  code_read: true
+  backend:
+  - Python wrapper around retinue/tools/plotter_standard_renderer.py for the standard entry point
+  - Original R source using tidyverse, ggplot2, and legendry
+  entry_behavior: plot.py imports render from retinue/tools and calls render('bar', '多层注释柱状图进阶版'); scripts/code.R reads data.tsv, constructs x_id/fill_key, and draws the richer nested-axis bar chart.
+  hardcoded_aesthetics:
+  - bar palette for KP-Y/KP-O and EV/Atf4 subgroup combinations
+  - dox, group1, and group2 ordering
+  - y-axis breaks at 0, 20, 40, and 60
+  - y-axis label Lung metastasis burden (%)
+  - nested guide text sizes, bracket colors, and bracket widths
+  - point size, stroke, jitter width, and shapes
+  output_behavior: Standard contract output is outputs/rebuilt.png; inspected rebuilt.png is a nonblank 1168x878 PNG visually matching the cover/original rendered figure, while the generic plot.py path would not express all visible layers from data_main.csv.
+  unsupported_features:
+  - Full nested-axis hierarchy is not encoded in data_main.csv.
+  - The generic renderer does not support legendry nested guides, point overlays, or mean_se summaries from replicate rows.
+  - The current standard interface cannot regenerate the visible twelve-bar chart without raw/source-code roles.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

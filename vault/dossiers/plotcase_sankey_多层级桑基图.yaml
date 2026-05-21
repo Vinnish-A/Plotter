@@ -321,3 +321,6 @@ reviewed_summary:
     visual_grammar: 0.9
     data_roles: 0.88
     retrieval_tier: 0.85
+agent_default_entry: vault/cards/plotcase_sankey_多层级桑基图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

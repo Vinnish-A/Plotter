@@ -1,9 +1,9 @@
 id: plotcase_流程图_细胞网络通讯示意图
 title: 细胞网络通讯示意图
 retrieval_tier: inspiration
-one_line: network asset for 细胞网络通讯示意图
-geometry: network
-subtype: node_link_network
+one_line: inspiration for cell communication schematic layouts
+geometry: cell communication flowchart
+subtype: branched schematic network
 required_roles:
 - source
 - target
@@ -25,13 +25,12 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 细胞网络通讯示意图
-- 'network/node_link_network grammar with roles: source, target, weight'
+- inspiration for cell communication schematic layouts
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 94312; width: 1409; height: 766'
+- core graph rendering from generic edge lists
+image_summary: 'geometry: cell communication flowchart; subtype: branched schematic network; layout: single
+  diagram; primary_marks: [''labeled nodes'', ''solid and dashed connectors'', ''branch hub'', ''colored
+  endpoint circles'']'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
@@ -39,16 +38,24 @@ code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
 - case_level_fallback
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- case_level_fallback
+- synthetic_data
+- visible_image_requires_semantics_not_present_in_data_main
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_流程图_细胞网络通讯示意图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_流程图_细胞网络通讯示意图.yaml
   machine_evidence: vault/evidence/machine/plotcase_流程图_细胞网络通讯示意图.yaml
   evidence_pack: vault/material/plotcase_流程图_细胞网络通讯示意图
   preview: vault/material/plotcase_流程图_细胞网络通讯示意图/outputs/rebuilt.png

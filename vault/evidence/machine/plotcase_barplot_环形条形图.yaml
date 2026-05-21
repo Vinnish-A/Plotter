@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_barplot_环形条形图/metadata.json
     exists: true
-    size_bytes: 3811
+    size_bytes: 4671
   agent_guide:
     path: vault/material/plotcase_barplot_环形条形图/agent_guide.md
     exists: true

@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_057复杂进化树/metadata.json
     exists: true
-    size_bytes: 3041
+    size_bytes: 3688
   agent_guide:
     path: vault/material/plotmaster_057复杂进化树/agent_guide.md
     exists: true

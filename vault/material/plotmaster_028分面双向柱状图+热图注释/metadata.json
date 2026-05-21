@@ -173,5 +173,22 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Reusable composition pattern, but source uses simulated data and current CSV lacks explicit panel semantics.",
+  "exclusion_risks": [
+    "simulated_data",
+    "generic_renderer_entry",
+    "panel_contract_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Reviewed image and source; script uses simulated data and current data_main does not encode the full bar-plus-heatstrip composition.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_028分面双向柱状图+热图注释.yaml"
 }

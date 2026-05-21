@@ -103,5 +103,22 @@
     "generic_renderer_rebuild": false,
     "case_level_fallback": true,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Visually useful 3D surface grammar, but the accepted rebuild is an image-level fallback and not a data/code-recomputed scientific figure.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "not_recomputed_from_data_main",
+    "no_domain_labels_or_axes"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Replaced conservative machine backfill after direct inspection of image, data, metadata, card, evidence, and entry code.",
+    "reviewed_at": "2026-05-21T09:03:31Z",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "deep_annotation_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_png.yaml"
 }

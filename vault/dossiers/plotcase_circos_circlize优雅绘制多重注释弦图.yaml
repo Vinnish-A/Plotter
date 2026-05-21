@@ -1,10 +1,14 @@
 id: plotcase_circos_circlize优雅绘制多重注释弦图
 title: circlize优雅绘制多重注释弦图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: reviewed
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Image, data, R source, generic plot.py, machine evidence, card, and prior
+    backfill were inspected.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_circos_circlize优雅绘制多重注释弦图
   source:
@@ -292,3 +296,32 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_circos_circlize优雅绘制多重注释弦图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Strong reusable chord grammar and source script, but standard
+  entry is generic and the abstract CSV is a small link sketch rather than the full
+  matrix.
+exclusion_risks:
+- generic_renderer_entry
+- matrix_to_link_abstraction_gap
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_circos_circlize优雅绘制多重注释弦图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_circos_circlize优雅绘制多重注释弦图.yaml
+  geometry: circular_chord_diagram_with_outer_sector_groups
+  subtype: circlize_chord_diagram_grouped_sectors
+  required_roles:
+  - source
+  - target
+  - weight
+  optional_roles:
+  - source_group_target_group
+  - sector_order
+  - sector_color
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

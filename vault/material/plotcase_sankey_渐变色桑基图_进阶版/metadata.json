@@ -153,5 +153,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "CSV roles are closer to the true visual grammar than most batch cases, but standard entry still uses a generic network renderer.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "sankey_renderer_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Reviewed image, data, plot.py, R source, visual_check, card, and previous backfill.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_sankey_渐变色桑基图_进阶版.yaml"
 }

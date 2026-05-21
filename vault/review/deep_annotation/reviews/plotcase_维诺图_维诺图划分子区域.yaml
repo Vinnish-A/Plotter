@@ -1,0 +1,219 @@
+case_id: plotcase_维诺图_维诺图划分子区域
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: Image, metadata, guide, data profile, standard entry code, machine evidence,
+    card, and prior review were inspected; limitations are recorded as risks.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:15:01+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/review/deep_annotation/deep_review_batches/batch_5.json
+  - vault/material/plotcase_维诺图_维诺图划分子区域/metadata.json
+  - vault/material/plotcase_维诺图_维诺图划分子区域/agent_guide.md
+  - vault/material/plotcase_维诺图_维诺图划分子区域/data_main.csv
+  - vault/material/plotcase_维诺图_维诺图划分子区域/plot.py
+  - vault/material/plotcase_维诺图_维诺图划分子区域/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_维诺图_维诺图划分子区域.yaml
+  - vault/cards/plotcase_维诺图_维诺图划分子区域.yaml
+  - vault/review/deep_annotation/reviews/plotcase_维诺图_维诺图划分子区域.yaml
+  optional_data: data_optional.csv absent
+  machine_evidence: vault/evidence/machine/plotcase_维诺图_维诺图划分子区域.yaml
+  asset_card: vault/cards/plotcase_维诺图_维诺图划分子区域.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_维诺图_维诺图划分子区域.yaml
+  rebuilt_png: vault/material/plotcase_维诺图_维诺图划分子区域/outputs/rebuilt.png
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  family: circular Voronoi partition/treemap
+  panel_count: 1
+  layout: circle subdivided into colored polygonal regions with smaller tessellated
+    cells and right legend
+  primary_marks: &id003
+  - Voronoi polygons
+  - region boundaries
+  - legend swatches
+  supporting_structure: no in-cell labels
+inferred_visual_grammar:
+  geometry: network
+  subtype: node_link_network
+  reusable_pattern: circular Voronoi partition/treemap
+  constraints: &id001
+  - requires polygon coordinates or hierarchy not present in edge-list data
+  - source/target/weight are not visible roles
+  not_core_reason: No fallback or synthetic flag, but the standard entry delegates
+    to a generic renderer, so use as support rather than core.
+reviewed_visual_roles:
+  visible_encodings: region color encodes phylum; polygon area appears to encode abundance
+    or membership size
+  declared_required_roles:
+  - source
+  - target
+  - weight
+  declared_optional_roles:
+  - node_id
+  - node_label
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  role_cautions: Declared roles describe the standardized interface, not necessarily
+    the full original figure semantics.
+canonical_columns:
+- source
+- target
+- weight
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+- source_group
+- target_group
+required_data_semantics:
+  source: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+  target: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+  weight: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+optional_data_semantics:
+  node_id: present in data_main as optional support role
+  node_label: present in data_main as optional support role
+  node_group: present in data_main as optional support role
+  node_size: present in data_main as optional support role
+  edge_group: present in data_main as optional support role
+  edge_direction: present in data_main as optional support role
+  layout_x: present in data_main as optional support role
+  layout_y: present in data_main as optional support role
+optional_modules:
+  data_optional_csv: absent
+  manual_layout_or_annotations_needed: *id001
+false_positive_risks: &id002
+- generic_renderer_rebuild
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
+best_for:
+- Visual inspiration for circular Voronoi partition/treemap
+- Support retrieval when user data matches the observed grammar and missing annotations
+  can be supplied explicitly
+bad_for:
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+style_notes:
+- circle subdivided into colored polygonal regions with smaller tessellated cells
+  and right legend
+- region color encodes phylum; polygon area appears to encode abundance or membership
+  size
+- Preserve spacing around labels, legends, and annotation tracks; most cases are sensitive
+  to overcrowding.
+retrieval_tier_recommendation:
+  tier: support
+  rationale: No fallback or synthetic flag, but the standard entry delegates to a
+    generic renderer, so use as support rather than core.
+  exclusion_risks: *id002
+confidence:
+  overall: medium
+  visual_grammar: medium-high
+  data_roles: medium-low
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: circle subdivided into colored polygonal regions with smaller tessellated
+    cells and right legend
+  marks: *id003
+  encodings: region color encodes phylum; polygon area appears to encode abundance
+    or membership size
+  axes: no axes
+  legends: right phyla legend
+  annotations: no in-cell labels
+  text_density: medium
+  visual_risks: *id001
+data_understanding:
+  data_read: true
+  observed_columns:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  - source_group
+  - target_group
+  row_count: 7
+  role_mapping:
+    source: not a visible role for this rendered figure
+    target: not a visible role for this rendered figure
+    weight: not a visible role for this rendered figure
+    node_id: reviewed_candidate_role
+    node_label: reviewed_candidate_role
+    node_group: false_positive_or_empty
+    node_size: false_positive_or_empty
+    edge_group: false_positive_or_empty
+    edge_direction: false_positive_or_empty
+    layout_x: false_positive_or_empty
+    layout_y: false_positive_or_empty
+    source_group: reviewed_candidate_role
+    target_group: reviewed_candidate_role
+  derived_columns:
+  - weight
+  - source
+  - target
+  false_positive_columns:
+  - edge_direction
+  - edge_group
+  - layout_x
+  - layout_y
+  - node_group
+  - node_size
+  - source
+  - target
+  - weight
+  missing_optional_data:
+  - data_optional.csv
+  data_profile_summary:
+    rows: 7
+    columns: 13
+    empty_columns:
+    - node_group
+    - node_size
+    - edge_group
+    - edge_direction
+    - layout_x
+    - layout_y
+    high_cardinality_columns: []
+code_understanding:
+  code_read: true
+  backend:
+  - python
+  - retinue.tools.plotter_standard_renderer
+  - network
+  entry_behavior: render('scatter', '维诺图划分子区域')
+  hardcoded_aesthetics:
+  - shared renderer palette/theme
+  - case title and geometry passed as constants
+  output_behavior: standard entry is expected to write outputs/rebuilt.png; observed
+    image may include fallback/original-specific complexity beyond the generic renderer
+  unsupported_features: *id002
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

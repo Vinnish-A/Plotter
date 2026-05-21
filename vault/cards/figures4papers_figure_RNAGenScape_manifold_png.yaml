@@ -1,9 +1,9 @@
 id: figures4papers_figure_RNAGenScape_manifold_png
 title: figure_RNAGenScape_manifold
 retrieval_tier: inspiration
-one_line: scatter asset for figure_RNAGenScape_manifold
-geometry: scatter
-subtype: pca_or_manifold
+one_line: Inspiration for a clean unlabeled 3D manifold or landscape surface.
+geometry: 3d_surface
+subtype: smooth_manifold_landscape
 required_roles:
 - x
 - y
@@ -16,36 +16,49 @@ optional_roles:
 - surface
 - trajectory
 - color
-- annotation
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: false
   batch: true
 best_for:
-- figure_RNAGenScape_manifold
-- 'scatter/pca_or_manifold grammar with roles: x, y, z, value, panel'
+- Inspiration for a clean unlabeled 3D manifold or landscape surface.
+- Examples needing hidden axes, no legend, and a smooth height-colored 3D surface.
+- Generated variants where the user provides x/y/z or scalar field data and accepts a visual-grammar template
+  rather than exact source recomputation.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 108276; width: 1000; height: 700'
+- Network, flow, scatter, PCA/UMAP, or graph-based requests.
+- Figures requiring visible axes, quantitative tick labels, labels, trajectories, uncertainty, or annotations.
+- Domain-specific RNA/gene interpretation without additional user-supplied semantic data.
+image_summary: 'geometry: 3d_surface; subtype: smooth_manifold_landscape; panel_count: 1; layout: single
+  centered 3D perspective surface with large white margins and no surrounding panels'
 data_summary: 'main_columns: [''x'', ''y'', ''z'', ''value'', ''panel'', ''group'', ''label'', ''surface'',
   ''trajectory'', ''color'']; sampled_rows: 64'
 code_summary: 'entry: plot.py; backend_hints: [''matplotlib'']'
 risk_flags:
 - case_level_fallback
-- image_not_model_reviewed
-- roles_machine_inferred
+risk_notes:
+- Do not retrieve this as a scatter, PCA, UMAP, or point-cloud manifold; the reviewed image is a continuous
+  3D surface.
+- Do not infer RNA, gene, pathway, sample, or optimization semantics from the title alone.
+- Do not treat empty `label`, `trajectory`, or `color` columns as supported visual layers.
+- case_level_fallback
+- not_recomputed_from_data_main
+- no_domain_labels_or_axes
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/figures4papers_figure_RNAGenScape_manifold_png.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_png.yaml
   machine_evidence: vault/evidence/machine/figures4papers_figure_RNAGenScape_manifold_png.yaml
   evidence_pack: vault/material/figures4papers_figure_RNAGenScape_manifold_png
   preview: vault/material/figures4papers_figure_RNAGenScape_manifold_png/outputs/rebuilt.png

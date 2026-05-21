@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_综合图_lefse分析图/metadata.json
     exists: true
-    size_bytes: 3967
+    size_bytes: 4766
   agent_guide:
     path: vault/material/plotcase_综合图_lefse分析图/agent_guide.md
     exists: true

@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_007气泡火山图/metadata.json
     exists: true
-    size_bytes: 3089
+    size_bytes: 3942
   agent_guide:
     path: vault/material/plotmaster_007气泡火山图/agent_guide.md
     exists: true

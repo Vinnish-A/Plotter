@@ -1,10 +1,14 @@
 id: plotmaster_047散点饼图
 title: 047散点饼图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: reviewed
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Reviewed scatter-pie image, source R, generic plot.py, data_main, visual
+    evidence, card, and prior backfill.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_047散点饼图
   source:
@@ -332,3 +336,32 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_047散点饼图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Strong source-backed scatterpie grammar, but current standard
+  entry/data_main flatten the composition too aggressively.
+exclusion_risks:
+- generic_renderer_entry
+- pie_slice_contract_missing
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_047散点饼图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_047散点饼图.yaml
+  geometry: temporal_scatter_pie_plot
+  subtype: scatterpie_timepoint_composition
+  required_roles:
+  - timepoint
+  - x
+  - y
+  - pie_category
+  - pie_value
+  optional_roles:
+  - pie_radius
+  - group
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

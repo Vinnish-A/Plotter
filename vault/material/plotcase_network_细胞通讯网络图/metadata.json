@@ -160,5 +160,22 @@
         "deleted_original": false
       }
     ]
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Useful visual target, but fallback status and generic standard entry make it unsuitable as support/core.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "CellChat_special_runtime",
+    "generic_renderer_entry"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Observed network is useful, but machine evidence records visual-audit fallback and current standard entry is generic.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_network_细胞通讯网络图.yaml"
 }

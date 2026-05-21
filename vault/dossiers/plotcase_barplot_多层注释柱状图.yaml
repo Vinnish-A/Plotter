@@ -295,3 +295,6 @@ reviewed_summary:
     overall: 0.91
     visual_grammar: 0.96
     current_contract_fit: 0.28
+agent_default_entry: vault/cards/plotcase_barplot_多层注释柱状图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

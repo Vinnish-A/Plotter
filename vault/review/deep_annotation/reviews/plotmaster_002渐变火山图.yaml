@@ -1,0 +1,91 @@
+case_id: plotmaster_002渐变火山图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Reviewed source-style volcano image, CSV profile, plot.py, source evidence, visual_check, card, and prior review."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotmaster_002渐变火山图/metadata.json, vault/material/plotmaster_002渐变火山图/agent_guide.md, vault/material/plotmaster_002渐变火山图/plot.py, vault/material/plotmaster_002渐变火山图/data_main.csv, vault/material/plotmaster_002渐变火山图/outputs/rebuilt.png, vault/material/plotmaster_002渐变火山图/outputs/visual_check.json, vault/cards/plotmaster_002渐变火山图.yaml, vault/review/deep_annotation/reviews/plotmaster_002渐变火山图.yaml]
+  data_main_profile:
+    rows: 800
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  rebuilt_png: {width: 1152, height: 1008, visual_check_ok: true}
+observed_visual_grammar:
+  figure_type: gradient_volcano_plot_with_thresholds_and_labels
+  layout: "Single volcano scatter with vertical and horizontal dashed thresholds, colorbar legend, and selected gene labels near extreme points."
+  marks: [scatter points, dashed threshold lines, text labels, colorbar]
+  encodings:
+    x: Log2FC
+    y: negative log10 FDR q-value
+    color: negative log10 q-value gradient
+    labels: selected extreme genes
+inferred_visual_grammar:
+  grammar_id: volcano_gradient_labeled_threshold
+  source_logic: "Source-style image uses fold change and q-value thresholds plus selected labels."
+  current_standard_rebuild: "plot.py calls generic scatter, which captures points/color loosely but not volcano-specific thresholds/labels."
+reviewed_visual_roles:
+  x: "Log2FC-like horizontal statistic."
+  y: "Significance statistic on y axis."
+  value: "Continuous color value."
+  group: "Up/down class in CSV."
+  label: "Potential gene label."
+  source: "Duplicate x-like compatibility column, not network source."
+  target: "Duplicate y-like compatibility column, not network target."
+  weight: "Duplicate value-like compatibility column, not edge weight."
+canonical_columns: [x, y, value, group, label, threshold_x, threshold_y]
+required_data_semantics:
+  x: "Effect size/log fold-change."
+  y: "Significance score."
+optional_data_semantics:
+  value: "Color gradient value."
+  group: "Regulation class."
+  label: "Selected labels."
+  threshold_x: "Vertical cutoff."
+  threshold_y: "Horizontal cutoff."
+optional_modules:
+  threshold_lines: {status: observed}
+  selected_labels: {status: observed}
+false_positive_risks:
+  - "Do not treat source/target/weight as graph roles."
+  - "Generic scatter output lacks volcano threshold semantics unless thresholds are explicit."
+best_for:
+  - "Labeled volcano plots with continuous color scale and cutoff lines."
+bad_for:
+  - "Network, interval, or faceted volcano workflows without explicit facet metadata."
+style_notes:
+  - "Blue-to-red gradient colorbar, gray dashed cutoffs, sparse red/orange labels at extremes."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Volcano grammar and CSV roles are mostly clear, with caveats about duplicate compatibility columns and generic entry."
+  exclusion_risks: [generic_renderer_entry, compatibility_columns]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: high, source_rebuild_assessment: medium}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Single scatter panel."
+  marks: [points, threshold lines, labels]
+  encodings: "Log2FC on x, -log10(FDR q-value) on y, color by significance."
+  axes: "Labeled Log2FC and -Log10(FDR q-value)."
+  legends: "Continuous colorbar inside left side."
+  annotations: "Selected gene labels."
+  text_density: moderate
+  visual_risks: "Labels can overlap in dense significant tails."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  role_mapping: {x: effect_size, y: significance_score, value: color_value, group: regulation_class, label: label}
+  derived_columns: [lower, upper]
+  false_positive_columns: [source, target, weight, facet]
+  missing_optional_data: [threshold_x, threshold_y, label_priority]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus source-style R evidence."
+  entry_behavior: "plot.py calls render('scatter')."
+  hardcoded_aesthetics: "Thresholds, label selection, and color scale are not represented directly in current CSV."
+  output_behavior: "Existing rebuilt.png is nonblank volcano output."
+  unsupported_features: [volcano_threshold_contract_in_generic_renderer]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

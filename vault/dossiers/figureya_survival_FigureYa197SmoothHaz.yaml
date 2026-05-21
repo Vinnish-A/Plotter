@@ -342,3 +342,6 @@ reviewed_summary:
     visual_identification: 0.9
     data_contract_assessment: 0.88
     rebuild_path_assessment: 0.78
+agent_default_entry: vault/cards/figureya_survival_FigureYa197SmoothHaz.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

@@ -1,10 +1,14 @@
 id: plotcase_network_蛋白互作网络图
 title: 蛋白互作网络图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review
   human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence,
+    card, schema, and prior review were inspected for this batch review.
+  reviewed_at: '2026-05-21T00:00:00+08:00'
+  annotator_model: gpt-5-codex_model_assisted_review
+  review_version: deep_annotation_model_review_v1
 origin:
   case_dir: vault/material/plotcase_network_蛋白互作网络图
   source:
@@ -309,3 +313,40 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_network_蛋白互作网络图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: Recommended below core because review found generic-renderer/fallback/synthetic
+  or incomplete semantic-support risks; still useful for visual pattern retrieval
+  at the stated tier.
+exclusion_risks:
+- generic_renderer_rebuild
+- case_level_fallback
+- visible_image_requires_semantics_not_present_in_data_main
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_network_蛋白互作网络图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_network_蛋白互作网络图.yaml
+  geometry: radial interaction network
+  subtype: hub-and-spoke protein interaction diagram
+  required_roles:
+  - source
+  - target
+  - weight
+  optional_roles:
+  - node_id
+  - node_label
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  - source_group
+  - target_group
+  tier: inspiration
+  confidence:
+    overall: low
+    visual_grammar: high
+    data_roles: low
+    code_understanding: medium

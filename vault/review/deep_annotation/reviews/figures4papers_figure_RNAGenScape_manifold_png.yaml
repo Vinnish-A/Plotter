@@ -1,0 +1,215 @@
+case_id: figures4papers_figure_RNAGenScape_manifold_png
+annotation_version: deep_annotation_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: Replaced conservative machine backfill after direct inspection of image, data, metadata, card, evidence, and entry code.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:03:31Z'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/metadata.json
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/agent_guide.md
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/plot.py
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/data_main.csv
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/outputs/rebuilt.png
+  - vault/material/figures4papers_figure_RNAGenScape_manifold_png/outputs/visual_check.json
+  - vault/evidence/machine/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  - vault/cards/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  - vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  image_inspected: vault/material/figures4papers_figure_RNAGenScape_manifold_png/outputs/rebuilt.png
+  machine_evidence: vault/evidence/machine/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  asset_card: vault/cards/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  review_record: vault/review/deep_annotation/reviews/figures4papers_figure_RNAGenScape_manifold_png.yaml
+  optional_data_present: false
+observed_visual_grammar:
+  geometry: 3d_surface
+  subtype: smooth_manifold_landscape
+  panel_count: 1
+  layout: single centered 3D perspective surface with large white margins and no surrounding panels
+  primary_marks:
+  - continuous triangulated/meshed surface
+  - smooth shaded height field
+  encodings:
+    x_y: hidden 2D base coordinates of the surface
+    z: surface height
+    color: continuous coolwarm-like gradient coupled to height or surface value
+  composition:
+  - axes, panes, ticks, labels, title, and legend are suppressed
+  - oblique camera angle with compressed vertical aspect
+inferred_visual_grammar:
+  geometry: 3d_surface
+  grammar_id: unlabeled_smooth_manifold_surface
+  interpretation_limits:
+  - Title and source name suggest RNAGenScape, but the rendered image contains no biological labels, axes, or domain annotations.
+  - The CSV is an abstract coarse surface contract, while the standard entry script copies a rendered PNG rather than regenerating the observed surface from the CSV.
+  - Treat the asset as reusable visual grammar for a 3D landscape/manifold, not as authoritative RNA or optimization semantics.
+reviewed_visual_roles:
+  x:
+    role: base-plane coordinate
+    status: required_for_recomputable_surface
+  y:
+    role: base-plane coordinate
+    status: required_for_recomputable_surface
+  z:
+    role: surface height coordinate
+    status: required_for_recomputable_surface
+  value:
+    role: scalar field that may duplicate or color the height
+    status: useful_if_regenerating_color_mapping
+  panel:
+    role: single-panel selector
+    status: constant in this case
+  group:
+    role: constant layer label
+    status: not a meaningful grouping variable here
+  surface:
+    role: constant surface type label
+    status: descriptive only
+canonical_columns:
+- x
+- y
+- z
+- value
+- panel
+- group
+- label
+- surface
+- trajectory
+- color
+required_data_semantics:
+  x: Numeric base-plane coordinate for the manifold surface.
+  y: Numeric base-plane coordinate for the manifold surface.
+  z: Numeric surface height.
+  value: Numeric scalar value; duplicated from z in this CSV and plausibly usable for color.
+  panel: Panel identifier; constant `main` here.
+optional_data_semantics:
+  group: Constant `surface`; not evidence of multiple categories.
+  label: Empty placeholder for future labels.
+  surface: Constant `manifold`; descriptive layer marker only.
+  trajectory: Empty placeholder; no trajectory appears in the reviewed image.
+  color: Empty placeholder; rendered color is hardcoded or image-level, not data-driven in the standard entry.
+optional_modules:
+  labels:
+    supported: false
+    reason: No labels are present in the image and label data is empty.
+  trajectory_overlay:
+    supported: false
+    reason: No trajectory is present in the image and trajectory data is empty.
+  multi_panel_comparison:
+    supported: false
+    reason: The reviewed rebuilt image is a single panel, despite additional noncanonical output files in the case.
+  colorbar_or_legend:
+    supported: false
+    reason: The image has no legend or colorbar.
+false_positive_risks:
+- Do not retrieve this as a scatter, PCA, UMAP, or point-cloud manifold; the reviewed image is a continuous 3D surface.
+- Do not infer RNA, gene, pathway, sample, or optimization semantics from the title alone.
+- Do not treat empty `label`, `trajectory`, or `color` columns as supported visual layers.
+- Do not assume the CSV can regenerate the exact PNG; `plot.py` only checks the CSV and copies `outputs/figure.png`.
+- Do not treat the case as a true source-code rebuild; metadata marks it as a case-level fallback.
+best_for:
+- Inspiration for a clean unlabeled 3D manifold or landscape surface.
+- Examples needing hidden axes, no legend, and a smooth height-colored 3D surface.
+- Generated variants where the user provides x/y/z or scalar field data and accepts a visual-grammar template rather than exact source recomputation.
+bad_for:
+- Network, flow, scatter, PCA/UMAP, or graph-based requests.
+- Figures requiring visible axes, quantitative tick labels, labels, trajectories, uncertainty, or annotations.
+- Domain-specific RNA/gene interpretation without additional user-supplied semantic data.
+style_notes:
+- Minimal scientific presentation with all axes and text suppressed.
+- Cool-to-warm gradient reserves red for high peaks and blue for lower surface regions.
+- Large whitespace and a centered surface make the figure decorative/inspirational rather than information-dense.
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Visually useful 3D surface grammar, but the accepted rebuild is an image-level fallback and not a data/code-recomputed scientific figure.
+  exclusion_risks:
+  - case_level_fallback
+  - not_recomputed_from_data_main
+  - no_domain_labels_or_axes
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: high
+  domain_semantics: low
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: Single centered 3D surface viewed obliquely on a white background; no frame, title, or neighboring panels.
+  marks:
+  - continuous smooth 3D surface
+  - faint mesh/shading facets
+  encodings:
+    height: vertical z displacement
+    color: continuous blue-white-red/coolwarm gradient
+    position: x/y base-plane position hidden by axis suppression
+  axes: Axes, panes, ticks, and tick labels are hidden.
+  legends: No legend or colorbar is present.
+  annotations: No labels, callouts, arrows, or trajectories are visible.
+  text_density: none
+  visual_risks:
+  - Meaning is almost entirely implicit because axes and text are removed.
+  - The surface is visually polished but not quantitatively readable from the PNG alone.
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - z
+  - value
+  - panel
+  - group
+  - label
+  - surface
+  - trajectory
+  - color
+  compact_profile:
+    rows: 64
+    x_range: -3.5..3.5
+    y_range: -3.5..3.5
+    z_range: 0.707..4.95
+    value_range: 0.707..4.95
+    constants:
+      panel: main
+      group: surface
+      surface: manifold
+    empty_columns:
+    - label
+    - trajectory
+    - color
+  role_mapping:
+    x: base coordinate
+    y: base coordinate
+    z: height
+    value: scalar value duplicated from z
+    panel: single panel
+    group: constant layer marker
+    surface: constant grammar marker
+  derived_columns:
+  - value duplicates z in the sampled CSV.
+  false_positive_columns:
+  - group
+  - label
+  - trajectory
+  - color
+  missing_optional_data:
+  - data_optional.csv is absent.
+  - No label, trajectory, or explicit color values are supplied.
+code_understanding:
+  code_read: true
+  backend: Python standard library copy fallback; related raw/scripts use matplotlib and numpy.
+  entry_behavior: "`plot.py` opens `data_main.csv` only to confirm a readable CSV row, then copies `outputs/figure.png` to `outputs/rebuilt.png`."
+  hardcoded_aesthetics:
+  - The reviewed standard entry does not render aesthetics; it preserves a pre-rendered PNG.
+  - Related source script uses a 3D matplotlib surface, coolwarm colormap, hidden ticks/panes, box aspect [1, 1, 0.5], and view_init(elev=20, azim=50).
+  output_behavior: Writes `outputs/rebuilt.png`; current rebuilt PNG is byte-identical to `outputs/figure.png`.
+  unsupported_features:
+  - No recomputation from `data_main.csv`.
+  - No support for labels, trajectories, legends, axes, or alternate panels in the standard entry.
+  - Not a normal source-code rebuild despite build_success status.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

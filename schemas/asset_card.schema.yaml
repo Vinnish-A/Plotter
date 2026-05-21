@@ -16,6 +16,7 @@ required:
   - code_summary
   - risk_flags
   - confidence
+  - review_status
   - read_next
 properties:
   id:
@@ -74,5 +75,25 @@ properties:
       type: string
   confidence:
     type: object
+  review_status:
+    type: object
+    required:
+      - image_read_by_model
+      - data_read_by_model
+      - code_read_by_model
+      - migrated_legacy_review
+    properties:
+      image_read_by_model:
+        type: boolean
+      data_read_by_model:
+        type: boolean
+      code_read_by_model:
+        type: boolean
+      migrated_legacy_review:
+        type: boolean
+  risk_notes:
+    type: array
+    items:
+      type: string
   read_next:
     type: object

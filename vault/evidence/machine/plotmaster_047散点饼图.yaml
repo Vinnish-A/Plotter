@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_047散点饼图/metadata.json
     exists: true
-    size_bytes: 5843
+    size_bytes: 6594
   agent_guide:
     path: vault/material/plotmaster_047散点饼图/agent_guide.md
     exists: true

@@ -1,10 +1,12 @@
 id: plotmaster_005复杂热图
 title: 005复杂热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+  reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+  annotator_model: gpt-5-codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_005复杂热图
   source:
@@ -336,3 +338,30 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_005复杂热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Good source-backed complex heatmap pattern; current standardized
+  data partially captures x/y/value but omits dendrogram/significance inputs.
+exclusion_risks:
+- exact clustering and symbols require original resources
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_005复杂热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_005复杂热图.yaml
+  geometry: clustered_correlation_heatmap
+  subtype: dendrogram_heatmap_with_significance_marks
+  required_roles:
+  - x
+  - y
+  - value
+  optional_roles:
+  - group
+  - label
+  - p_value
+  tier: support
+  confidence:
+    overall: 0.74
+    image: 0.9
+    data: 0.62
+    code: 0.7

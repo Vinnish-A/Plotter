@@ -1,9 +1,9 @@
 id: plotcase_network_GO通路相似性网络图_基于基因重叠度
 title: GO通路相似性网络图_基于基因重叠度
 retrieval_tier: inspiration
-one_line: network asset for GO通路相似性网络图_基于基因重叠度
-geometry: network
-subtype: node_link_network
+one_line: inspiration for enrichment-term similarity networks
+geometry: circular GO similarity network
+subtype: node-link network with size/color/edge legends
 required_roles:
 - source
 - target
@@ -25,29 +25,35 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- GO通路相似性网络图_基于基因重叠度
-- 'network/node_link_network grammar with roles: source, target, weight'
+- inspiration for enrichment-term similarity networks
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 156936; width: 1243; height: 1142'
+- core GO network generation without node/edge attribute tables
+image_summary: 'geometry: circular GO similarity network; subtype: node-link network with size/color/edge
+  legends; layout: single circular network panel; primary_marks: [''nodes on circular layout'', ''curved/dashed
+  weighted edges'', ''node…'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - case_level_fallback
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- case_level_fallback
+- visible_image_requires_semantics_not_present_in_data_main
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_network_GO通路相似性网络图_基于基因重叠度.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_network_GO通路相似性网络图_基于基因重叠度.yaml
   machine_evidence: vault/evidence/machine/plotcase_network_GO通路相似性网络图_基于基因重叠度.yaml
   evidence_pack: vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度
   preview: vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/outputs/rebuilt.png

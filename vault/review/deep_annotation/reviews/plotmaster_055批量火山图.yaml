@@ -1,0 +1,90 @@
+case_id: plotmaster_055批量火山图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Reviewed image and source; R source explicitly replaces source values with ggVolcano demo data, so keep out of core."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotmaster_055批量火山图/metadata.json, vault/material/plotmaster_055批量火山图/agent_guide.md, vault/material/plotmaster_055批量火山图/plot.py, vault/material/plotmaster_055批量火山图/scripts/codes.R, vault/material/plotmaster_055批量火山图/data_main.csv, vault/material/plotmaster_055批量火山图/outputs/rebuilt.png, vault/material/plotmaster_055批量火山图/outputs/visual_check.json, vault/cards/plotmaster_055批量火山图.yaml, vault/review/deep_annotation/reviews/plotmaster_055批量火山图.yaml]
+  data_main_profile:
+    rows: 354
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  rebuilt_png: {width: 720, height: 576, visual_check_ok: true}
+  original_rebuild_log: "R source completed; code comments state logFC/FDR are replaced with ggVolcano demo values for aesthetics."
+observed_visual_grammar:
+  figure_type: single_pollutant_volcano_with_counts
+  layout: "Single volcano panel with teal top strip title, positive/negative count labels, threshold lines, and red/blue/gray points."
+  marks: [scatter points, dotted threshold lines, title strip, count annotations]
+  encodings:
+    x: percentage change
+    y: negative log10 FDR
+    point_color: positive, negative, or nonsignificant
+    text_counts: significant category counts
+inferred_visual_grammar:
+  grammar_id: volcano_count_annotated_panel
+  source_logic: "R builds pollutant-specific volcano panels but substitutes demo logFC/FDR values."
+  current_standard_rebuild: "plot.py calls generic scatter and cannot reproduce title strip or count annotations."
+reviewed_visual_roles:
+  x: "Effect/percentage change when populated."
+  y: "Significance axis."
+  value: "Auxiliary continuous value."
+  group: "Current group is sparse; true regulation class should be explicit."
+  label: "Point/feature label."
+  source: "Compatibility duplicate; not graph source."
+canonical_columns: [x, y, regulation, pollutant, label]
+required_data_semantics:
+  x: "Effect size or percentage change."
+  y: "Significance score."
+  regulation: "Positive/negative/nonsignificant class."
+optional_data_semantics:
+  pollutant: "Facet/title strip."
+  label: "Selected point label."
+  count_label: "Positive/negative counts."
+optional_modules:
+  title_strip: {status: observed}
+  count_annotations: {status: observed}
+  batch_faceting: {status: implied_by_source_not_observed_in_rebuilt_png}
+false_positive_risks:
+  - "Do not treat as data-faithful because source comments note demo-value substitution."
+  - "Do not treat source/target/weight as graph roles."
+best_for:
+  - "Visual inspiration for compact count-annotated volcano panels."
+bad_for:
+  - "Scientific inference from the current numeric values."
+style_notes:
+  - "Teal title strip, dotted threshold crosshair, blue negative and red positive point classes, simple count text."
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: "The design is reusable, but synthetic/demo substitution and generic standard entry prevent support/core use."
+  exclusion_risks: [synthetic_demo_values, generic_renderer_entry, batch_not_encoded]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: high, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Single volcano panel with top strip."
+  marks: [points, threshold lines, count labels]
+  encodings: "Effect by x, FDR by y, regulation by color."
+  axes: "Percentage change and -log10(FDR)."
+  legends: "No separate legend in observed panel."
+  annotations: "Positive and Negative count labels."
+  text_density: low
+  visual_risks: "Demo data may mislead if used as evidence."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  role_mapping: {x: effect_size, y: significance_score, value: auxiliary_value, label: point_label}
+  derived_columns: [lower, upper]
+  false_positive_columns: [source, target, weight, facet]
+  missing_optional_data: [regulation, pollutant, count_label]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/tidyverse/ggplot/cowplot source."
+  entry_behavior: "plot.py calls render('scatter'); R source builds pollutant volcano panels."
+  hardcoded_aesthetics: "Thresholds, title strip, colors, and demo substitution are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank volcano panel."
+  unsupported_features: [data_faithful_effect_values, batch_panel_contract_in_current_csv]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

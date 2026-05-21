@@ -1,0 +1,210 @@
+case_id: plotmaster_058分面折线图+置信区间+误差棒
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: Image, metadata, guide, data profile, standard entry code, machine evidence,
+    card, and prior review were inspected; limitations are recorded as risks.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:15:01+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/review/deep_annotation/deep_review_batches/batch_5.json
+  - vault/material/plotmaster_058分面折线图+置信区间+误差棒/metadata.json
+  - vault/material/plotmaster_058分面折线图+置信区间+误差棒/agent_guide.md
+  - vault/material/plotmaster_058分面折线图+置信区间+误差棒/data_main.csv
+  - vault/material/plotmaster_058分面折线图+置信区间+误差棒/plot.py
+  - vault/material/plotmaster_058分面折线图+置信区间+误差棒/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_058分面折线图+置信区间+误差棒.yaml
+  - vault/cards/plotmaster_058分面折线图+置信区间+误差棒.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_058分面折线图+置信区间+误差棒.yaml
+  optional_data: data_optional.csv absent
+  machine_evidence: vault/evidence/machine/plotmaster_058分面折线图+置信区间+误差棒.yaml
+  asset_card: vault/cards/plotmaster_058分面折线图+置信区间+误差棒.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_058分面折线图+置信区间+误差棒.yaml
+  rebuilt_png: vault/material/plotmaster_058分面折线图+置信区间+误差棒/outputs/rebuilt.png
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  family: faceted line chart with intervals
+  panel_count: 4
+  layout: four small panels in one row with colored strip headers
+  primary_marks: &id003
+  - lines
+  - points
+  - confidence ribbons
+  - error bars
+  supporting_structure: colored facet strip headers
+inferred_visual_grammar:
+  geometry: map
+  subtype: map
+  reusable_pattern: faceted line chart with intervals
+  constraints: &id001
+  - facet field is empty, so grouping must be inferred from group labels
+  - uncertainty semantics need lower/upper columns
+  not_core_reason: No fallback or synthetic flag, but the standard entry delegates
+    to a generic renderer, so use as support rather than core.
+reviewed_visual_roles:
+  visible_encodings: x encodes joint exposure quantile, y encodes response, facet/group
+    separates biomarkers, ribbons and bars encode uncertainty
+  declared_required_roles:
+  - x
+  - y
+  - value
+  declared_optional_roles:
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_cautions: Declared roles describe the standardized interface, not necessarily
+    the full original figure semantics.
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+  y: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+  value: present in data_main and used as a declared core visual role; verify against
+    visible labels before treating as original-domain data
+optional_data_semantics:
+  group: present in data_main as optional support role
+  label: present in data_main as optional support role
+  facet: present in data_main as optional support role
+  source: present in data_main as optional support role
+  target: present in data_main as optional support role
+  weight: present in data_main as optional support role
+  lower: present in data_main as optional support role
+  upper: present in data_main as optional support role
+optional_modules:
+  data_optional_csv: absent
+  manual_layout_or_annotations_needed: *id001
+false_positive_risks: &id002
+- generic_renderer_rebuild
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
+best_for:
+- Visual inspiration for faceted line chart with intervals
+- Support retrieval when user data matches the observed grammar and missing annotations
+  can be supplied explicitly
+bad_for:
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+style_notes:
+- four small panels in one row with colored strip headers
+- x encodes joint exposure quantile, y encodes response, facet/group separates biomarkers,
+  ribbons and bars encode uncertainty
+- Preserve spacing around labels, legends, and annotation tracks; most cases are sensitive
+  to overcrowding.
+retrieval_tier_recommendation:
+  tier: support
+  rationale: No fallback or synthetic flag, but the standard entry delegates to a
+    generic renderer, so use as support rather than core.
+  exclusion_risks: *id002
+confidence:
+  overall: medium
+  visual_grammar: medium-high
+  data_roles: medium-low
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: 4
+  layout: four small panels in one row with colored strip headers
+  marks: *id003
+  encodings: x encodes joint exposure quantile, y encodes response, facet/group separates
+    biomarkers, ribbons and bars encode uncertainty
+  axes: shared bottom x label; local y scales per panel
+  legends: no legend; facet strip names identify series
+  annotations: colored facet strip headers
+  text_density: low
+  visual_risks: *id001
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  row_count: 16
+  role_mapping:
+    x: reviewed_candidate_role
+    y: reviewed_candidate_role
+    value: reviewed_candidate_role
+    group: reviewed_candidate_role
+    label: reviewed_candidate_role
+    facet: false_positive_or_empty
+    source: generic convenience duplicate; not treated as true graph/interval role
+      unless visible grammar supports it
+    target: generic convenience duplicate; not treated as true graph/interval role
+      unless visible grammar supports it
+    weight: generic convenience duplicate; not treated as true graph/interval role
+      unless visible grammar supports it
+    lower: reviewed_candidate_role for interval/ribbon uncertainty
+    upper: reviewed_candidate_role for interval/ribbon uncertainty
+  derived_columns:
+  - weight
+  - source
+  - target
+  false_positive_columns:
+  - facet
+  - source
+  - target
+  - weight
+  missing_optional_data:
+  - data_optional.csv
+  data_profile_summary:
+    rows: 16
+    columns: 11
+    empty_columns:
+    - facet
+    high_cardinality_columns:
+    - y
+    - value
+    - target
+    - weight
+    - lower
+    - upper
+code_understanding:
+  code_read: true
+  backend:
+  - python
+  - retinue.tools.plotter_standard_renderer
+  - map
+  entry_behavior: render('line', '058分面折线图+置信区间+误差棒')
+  hardcoded_aesthetics:
+  - shared renderer palette/theme
+  - case title and geometry passed as constants
+  output_behavior: standard entry is expected to write outputs/rebuilt.png; observed
+    image may include fallback/original-specific complexity beyond the generic renderer
+  unsupported_features: *id002
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

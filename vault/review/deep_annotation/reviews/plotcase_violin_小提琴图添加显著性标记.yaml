@@ -1,0 +1,88 @@
+case_id: plotcase_violin_小提琴图添加显著性标记
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Reviewed image, metadata, guide, source R, plot.py, data_main, visual_check, card, and previous review."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotcase_violin_小提琴图添加显著性标记/metadata.json, vault/material/plotcase_violin_小提琴图添加显著性标记/agent_guide.md, vault/material/plotcase_violin_小提琴图添加显著性标记/plot.py, vault/material/plotcase_violin_小提琴图添加显著性标记/scripts/code.R, vault/material/plotcase_violin_小提琴图添加显著性标记/data_main.csv, vault/material/plotcase_violin_小提琴图添加显著性标记/outputs/rebuilt.png, vault/material/plotcase_violin_小提琴图添加显著性标记/outputs/visual_check.json, vault/cards/plotcase_violin_小提琴图添加显著性标记.yaml, vault/review/deep_annotation/reviews/plotcase_violin_小提琴图添加显著性标记.yaml]
+  data_main_profile:
+    rows: 24
+    columns: [group, value, subgroup, paired_id, p_value, facet, label]
+  rebuilt_png: {width: 1414, height: 932, visual_check_ok: true}
+observed_visual_grammar:
+  figure_type: faceted_violin_boxplot_with_mean_lines_and_significance
+  layout: "Three continent facets, each with three year violins, embedded boxplots, connected mean markers, and significance brackets."
+  marks: [violins, boxplots, mean diamonds, connecting line, significance brackets, facet strips]
+  encodings:
+    x: year/category
+    y: numeric distribution
+    fill_color: facet group/continent
+    bracket_text: significance class
+inferred_visual_grammar:
+  grammar_id: faceted_violin_box_significance
+  source_logic: "Original R uses ggplot, ggh4x facet strips, stat summaries, and stat_pvalue_manual."
+  current_standard_rebuild: "plot.py calls generic render('box'), not violin or significance layers."
+reviewed_visual_roles:
+  group: "Distribution group."
+  value: "Measured numeric value."
+  subgroup: "Potential split/fill group."
+  paired_id: "Potential pairing or repeated-measure link."
+  p_value: "Significance annotation source."
+  facet: "Panel/facet group."
+canonical_columns: [group, value, facet, p_value, paired_id]
+required_data_semantics:
+  group: "Discrete x/distribution category."
+  value: "Numeric observation."
+optional_data_semantics:
+  facet: "Facet strip grouping."
+  p_value: "Significance brackets."
+  paired_id: "Mean/paired connector support."
+optional_modules:
+  violin_density: {status: observed}
+  boxplot_overlay: {status: observed}
+  significance_brackets: {status: observed}
+false_positive_risks:
+  - "Do not treat generic box renderer as reproducing the inspected violin figure."
+  - "p_value must include comparison pairs and bracket positions for reliable reuse."
+best_for:
+  - "Grouped distribution figures with facet strips, box overlays, and significance brackets."
+bad_for:
+  - "Plain boxplots without distribution shape or p-value metadata."
+style_notes:
+  - "Colored facet strip across top, black outlines, white boxplots, mean diamonds and black trend lines."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Reusable distribution grammar; still not core because standard entry omits violin and p-value behavior."
+  exclusion_risks: [generic_renderer_entry, bracket_metadata_incomplete]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 3
+  layout: "Three faceted groups in one row."
+  marks: [violins, boxes, points, lines, brackets]
+  encodings: "Distribution by violin/box, group by facet/fill, significance by brackets."
+  axes: "Year-like x labels and numeric y axis."
+  legends: "No separate legend; facet strips identify groups."
+  annotations: "Star significance brackets."
+  text_density: moderate
+  visual_risks: "Brackets can collide with panel top."
+data_understanding:
+  data_read: true
+  observed_columns: [group, value, subgroup, paired_id, p_value, facet, label]
+  role_mapping: {group: x_group, value: y_value, facet: facet_group, p_value: significance}
+  derived_columns: []
+  false_positive_columns: [label]
+  missing_optional_data: [comparison_group_1, comparison_group_2, bracket_y]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/ggplot/ggh4x/rstatix source."
+  entry_behavior: "plot.py calls render('box'); R source draws violin, box, summary, line, and p-value layers."
+  hardcoded_aesthetics: "Facet strip colors, comparison handling, and p-value display are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank and source-style."
+  unsupported_features: [violin_density_in_generic_renderer, pvalue_bracket_contract]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

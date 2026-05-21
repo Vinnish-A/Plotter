@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_heatmap_ggtree绘制组合热图/metadata.json
     exists: true
-    size_bytes: 4105
+    size_bytes: 5014
   agent_guide:
     path: vault/material/plotcase_heatmap_ggtree绘制组合热图/agent_guide.md
     exists: true

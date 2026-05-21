@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/figures4papers_figure_RNAGenScape_manifold_png/metadata.json
     exists: true
-    size_bytes: 2635
+    size_bytes: 3478
   agent_guide:
     path: vault/material/figures4papers_figure_RNAGenScape_manifold_png/agent_guide.md
     exists: true

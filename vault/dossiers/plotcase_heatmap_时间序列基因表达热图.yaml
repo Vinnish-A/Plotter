@@ -1,10 +1,14 @@
 id: plotcase_heatmap_时间序列基因表达热图
 title: 时间序列基因表达热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: Finished image was inspected, but the case is an explicit fallback because
+    ClusterGVis is unavailable and there is no standard plot.py.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_heatmap_时间序列基因表达热图
   source:
@@ -297,3 +301,33 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_heatmap_时间序列基因表达热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: Strong visual pattern but explicit dependency fallback and incomplete
+  current data contract.
+exclusion_risks:
+- case_level_fallback
+- missing_ClusterGVis
+- incomplete_data_contract
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_时间序列基因表达热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_时间序列基因表达热图.yaml
+  geometry: clustered_time_series_expression_heatmap_with_side_summaries
+  subtype: clusterGVis_time_series_heatmap
+  required_roles:
+  - gene_id
+  - timepoint
+  - expression_z
+  - cluster_id
+  optional_roles:
+  - marked_gene
+  - annotation_term
+  - stage_group
+  tier: inspiration
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: high
+    source_rebuild_assessment: high

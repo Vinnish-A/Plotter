@@ -1,50 +1,56 @@
 id: plotcase_heatmap_配对连线热图
 title: 配对连线热图
 retrieval_tier: support
-one_line: heatmap asset for 配对连线热图
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: Composite figures linking categorical pairs and showing auxiliary heatmap/bubble summaries.
+geometry: paired_connector_plus_heatmap_and_bubble_panels
+subtype: paired_connector_plus_heatmap_and_bubble_panels
 required_roles:
+- left_node
+- right_node
+- link_group
 - row_id
 - column_id
 - value
 optional_roles:
-- row_group
-- column_group
-- annotation_track
-- annotation_value
-- label
-- size_value
-- facet
+- bubble_size
+- panel
 capabilities:
-  highlight: true
-  detail_panel: true
+  highlight: false
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 配对连线热图
-- 'heatmap/annotated_heatmap grammar with roles: row_id, column_id, value'
+- Composite figures linking categorical pairs and showing auxiliary heatmap/bubble summaries.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 178256; width: 1008; height: 1008'
+- Single-panel matrix heatmaps.
+image_summary: 'figure_type: paired_connector_plus_heatmap_and_bubble_panels; layout: Left small heatmap,
+  middle two-column paired connector diagram, right stack of mini bubble heatmaps, two vertical colorbars.;
+  marks: [''heatmap tiles''…'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- missing_optional_data
+risk_notes:
+- Do not treat row_id/column_id/value as sufficient for paired-link semantics.
+- Do not retrieve as a plain heatmap.
+- generic_renderer_entry
+- multi_table_contract_missing
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_heatmap_配对连线热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_配对连线热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_配对连线热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_配对连线热图
   preview: vault/material/plotcase_heatmap_配对连线热图/outputs/rebuilt.png

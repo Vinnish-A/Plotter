@@ -1,9 +1,9 @@
 id: plotcase_point_火山图局部放大版
 title: 火山图局部放大版
 retrieval_tier: support
-one_line: scatter asset for 火山图局部放大版
-geometry: scatter
-subtype: volcano
+one_line: volcano plots with local magnification
+geometry: volcano scatter plot
+subtype: main scatter with zoomed inset
 required_roles:
 - x
 - y
@@ -17,33 +17,39 @@ optional_roles:
 - highlight
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: false
   batch: true
 best_for:
-- 火山图局部放大版
-- 'scatter/volcano grammar with roles: x, y'
+- volcano plots with local magnification
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 135785; width: 1085; height: 1011'
+- unlabeled high-density volcano plots where automated labels would overlap
+image_summary: 'geometry: volcano scatter plot; subtype: main scatter with zoomed inset; layout: one main
+  panel plus one inset callout; primary_marks: [''points'', ''threshold line'', ''red zoom rectangle'',
+  ''dashed connectors'', ''text labels…'
 data_summary: 'main_columns: [''x'', ''y'', ''group'', ''value'', ''size_value'', ''label'', ''threshold'',
   ''facet'', ''highlight'']; sampled_rows: 29'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- inset selection and label placement are layout-specific
+- threshold is present but p-value semantics beyond labels are inferred from axis text
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_point_火山图局部放大版.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_point_火山图局部放大版.yaml
   machine_evidence: vault/evidence/machine/plotcase_point_火山图局部放大版.yaml
   evidence_pack: vault/material/plotcase_point_火山图局部放大版
   preview: vault/material/plotcase_point_火山图局部放大版/outputs/rebuilt.png

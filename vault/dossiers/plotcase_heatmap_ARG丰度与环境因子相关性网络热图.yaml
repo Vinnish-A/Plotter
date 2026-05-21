@@ -1,10 +1,14 @@
 id: plotcase_heatmap_ARG丰度与环境因子相关性网络热图
 title: ARG丰度与环境因子相关性网络热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: Observed image is specialized and useful, but source rebuild failed because
+    linkET is unavailable and data_main only encodes a generic heatmap grid.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图
   source:
@@ -286,3 +290,34 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: Distinct visual grammar, but dependency failure and weak current
+  CSV abstraction keep it out of support/core use.
+exclusion_risks:
+- missing_dependency_linkET
+- generic_renderer_entry
+- incomplete_data_contract
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml
+  geometry: correlation_heatmap_with_arg_coupling_network
+  subtype: mantel_link_heatmap_arg_environment_network
+  required_roles:
+  - variable_i
+  - variable_j
+  - pearson_r
+  - arg_env
+  - arg_r
+  - arg_p_value
+  optional_roles:
+  - importance
+  - link_class
+  tier: inspiration
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: high
+    source_rebuild_assessment: high

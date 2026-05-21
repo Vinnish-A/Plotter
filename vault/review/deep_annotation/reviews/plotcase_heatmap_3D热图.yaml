@@ -1,0 +1,222 @@
+case_id: plotcase_heatmap_3D热图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_heatmap_3D热图/metadata.json
+  - vault/material/plotcase_heatmap_3D热图/agent_guide.md
+  - vault/material/plotcase_heatmap_3D热图/plot.py
+  - vault/material/plotcase_heatmap_3D热图/data_main.csv
+  - vault/material/plotcase_heatmap_3D热图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_heatmap_3D热图.yaml
+  - vault/cards/plotcase_heatmap_3D热图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_heatmap_3D热图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_3D热图.yaml
+  asset_card: vault/cards/plotcase_heatmap_3D热图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_heatmap_3D热图.yaml
+  image_inspected: vault/material/plotcase_heatmap_3D热图/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_heatmap_3D热图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: false
+    generic_renderer_rebuild: true
+    case_level_fallback: true
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: pseudo_3d_heatmap
+  subtype: oblique tile heatmap with 3D block illusion and continuous colorbar
+  panel_count: 1
+  layout: single matrix body with rows at left, rotated column labels at bottom, colorbar at right
+  marks:
+  - extruded square tiles
+  - black tile outlines
+  - continuous colorbar
+  encodings:
+    row: ARG/family-like row labels
+    column: taxon-like column labels
+    fill: mat value
+  axes: matrix row/column labels; no numeric axes
+  legends: right continuous mat colorbar
+  annotations: []
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: annotated_heatmap
+    backend: R/ComplexHeatmap-circlize
+    unit: long matrix table with optional row/column annotations
+    required_data_roles:
+    - row_id
+    - column_id
+    - value
+    optional_data_roles:
+    - row_group
+    - column_group
+    - annotation_track
+    - annotation_value
+    - label
+    - size_value
+    - facet
+reviewed_visual_roles:
+  row_id: matrix row identity
+  column_id: matrix column identity
+  value: tile fill/intensity
+  row_group: not visible as separate track
+  column_group: not visible as separate track
+  annotation_track: not visible in rebuilt image
+  annotation_value: not visible in rebuilt image
+  size_value: not used by the displayed 3D tiles
+  label: empty
+  facet: empty
+canonical_columns:
+- row_id
+- column_id
+- value
+- row_group
+- column_group
+- annotation_track
+- annotation_value
+- label
+- size_value
+- facet
+required_data_semantics:
+  row_id: matrix row labels
+  column_id: matrix column labels
+  value: continuous tile value
+optional_data_semantics:
+  row_group: available but not separately observed
+  column_group: available but not separately observed
+  annotation_track: available but not observed
+  annotation_value: available but not observed
+  size_value: not mapped to size in the image
+  label: empty
+  facet: empty
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - size_value
+  - label
+  - facet
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- case is marked fallback; plot.py generic heatmap renderer cannot reproduce the pseudo-3D tile geometry
+- false_positive_column:row_group
+- false_positive_column:column_group
+- false_positive_column:annotation_track
+- false_positive_column:annotation_value
+- false_positive_column:size_value
+- false_positive_column:label
+- false_positive_column:facet
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Visual inspiration for pseudo-3D heatmap tile styling
+bad_for:
+- Core reusable heatmap rebuilds from clean code
+- Any task needing actual 3D coordinates
+style_notes:
+- Oblique depth faces make the matrix decorative but less exact
+- Purple-green colorbar has a narrow numeric range
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: inspiration tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - case is marked fallback; plot.py generic heatmap renderer cannot reproduce the pseudo-3D tile geometry
+  - case_level_fallback
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single matrix body with rows at left, rotated column labels at bottom, colorbar at right
+  marks:
+  - extruded square tiles
+  - black tile outlines
+  - continuous colorbar
+  encodings:
+    row: ARG/family-like row labels
+    column: taxon-like column labels
+    fill: mat value
+  axes: matrix row/column labels; no numeric axes
+  legends: right continuous mat colorbar
+  annotations: []
+  text_density: moderate; column labels are long and vertical
+  visual_risks:
+  - case is marked fallback; plot.py generic heatmap renderer cannot reproduce the pseudo-3D tile geometry
+data_understanding:
+  data_read: true
+  observed_columns:
+  - row_id
+  - column_id
+  - value
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - label
+  - size_value
+  - facet
+  role_mapping:
+    row_id: matrix row identity
+    column_id: matrix column identity
+    value: tile fill/intensity
+    row_group: not visible as separate track
+    column_group: not visible as separate track
+    annotation_track: not visible in rebuilt image
+    annotation_value: not visible in rebuilt image
+    size_value: not used by the displayed 3D tiles
+    label: empty
+    facet: empty
+  derived_columns: []
+  false_positive_columns:
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - size_value
+  - label
+  - facet
+  missing_optional_data:
+  - data_optional.csv absent
+  - label
+  - facet
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('heatmap', '3D热图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - case is marked fallback; plot.py generic heatmap renderer cannot reproduce the pseudo-3D tile geometry
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

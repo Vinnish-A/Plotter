@@ -1,51 +1,55 @@
 id: plotmaster_047散点饼图
 title: 047散点饼图
 retrieval_tier: support
-one_line: pie asset for 047散点饼图
-geometry: pie
-subtype: pie_or_donut
+one_line: Time-position scatter plots where each point is a compositional pie glyph.
+geometry: temporal_scatter_pie_plot
+subtype: temporal_scatter_pie_plot
 required_roles:
+- timepoint
 - x
 - y
-- value
+- pie_category
+- pie_value
 optional_roles:
+- pie_radius
 - group
-- label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
 capabilities:
   highlight: true
   detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: false
   batch: true
 best_for:
-- 047散点饼图
-- 'pie/pie_or_donut grammar with roles: x, y, value'
+- Time-position scatter plots where each point is a compositional pie glyph.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 60790; width: 1008; height: 720'
+- Plain scatter or pie charts without coordinate-positioned composition data.
+image_summary: 'figure_type: temporal_scatter_pie_plot; layout: Single scatter-like panel with pies placed
+  across ordered time bins, vertical dashed separators, proportion y-axis, and cell-type legend.; marks:
+  [''pie glyphs'', ''dashed se…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- missing_optional_data
+risk_notes:
+- Do not treat x/y/value alone as a true scatter-pie contract.
+- Do not treat source/target/weight as graph roles.
+- generic_renderer_entry
+- pie_slice_contract_missing
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_047散点饼图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_047散点饼图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_047散点饼图.yaml
   evidence_pack: vault/material/plotmaster_047散点饼图
   preview: vault/material/plotmaster_047散点饼图/outputs/rebuilt.png

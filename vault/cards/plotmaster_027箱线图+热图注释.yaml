@@ -1,16 +1,15 @@
 id: plotmaster_027箱线图+热图注释
 title: 027箱线图+热图注释
 retrieval_tier: inspiration
-one_line: box asset for 027箱线图+热图注释
-geometry: box
-subtype: boxplot
+one_line: Synthetic inspiration for combining annotation swatches above grouped boxplots
+geometry: boxplot_with_annotation_tiles
+subtype: three grouped boxplot panels under categorical color-strip legend tiles
 required_roles:
 - x
 - y
 - value
 optional_roles:
 - group
-- label
 - facet
 - source
 - target
@@ -25,28 +24,36 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 027箱线图+热图注释
-- 'box/boxplot grammar with roles: x, y, value'
+- Synthetic inspiration for combining annotation swatches above grouped boxplots
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 47406; width: 1152; height: 720'
+- Core reusable cases requiring real source semantics
+- Network/flow retrieval from compatibility columns
+image_summary: 'geometry: boxplot_with_annotation_tiles; subtype: three grouped boxplot panels under categorical
+  color-strip legend tiles; panel_count: 3; layout: top row of color swatches, three bottom boxplot panels
+  sharing y axis'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- synthetic_data is true; canonical source/target/weight are compatibility copies and not flow roles
+- false_positive_column:source
+- false_positive_column:target
+- synthetic_data
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_027箱线图+热图注释.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_027箱线图+热图注释.yaml
   machine_evidence: vault/evidence/machine/plotmaster_027箱线图+热图注释.yaml
   evidence_pack: vault/material/plotmaster_027箱线图+热图注释
   preview: vault/material/plotmaster_027箱线图+热图注释/outputs/rebuilt.png

@@ -1,0 +1,88 @@
+case_id: plotmaster_018单细胞分组火山图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Reviewed image, CSV, plot.py, source R, visual evidence, card, and prior backfill."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotmaster_018单细胞分组火山图/metadata.json, vault/material/plotmaster_018单细胞分组火山图/agent_guide.md, vault/material/plotmaster_018单细胞分组火山图/plot.py, vault/material/plotmaster_018单细胞分组火山图/scripts/codes.R, vault/material/plotmaster_018单细胞分组火山图/data_main.csv, vault/material/plotmaster_018单细胞分组火山图/outputs/rebuilt.png, vault/material/plotmaster_018单细胞分组火山图/outputs/visual_check.json, vault/cards/plotmaster_018单细胞分组火山图.yaml, vault/review/deep_annotation/reviews/plotmaster_018单细胞分组火山图.yaml]
+  data_main_profile:
+    rows: 800
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  rebuilt_png: {width: 1008, height: 1008, visual_check_ok: true}
+observed_visual_grammar:
+  figure_type: grouped_single_cell_volcano_strip
+  layout: "One scatter plot split into eight cell-subtype x bands with central colored labels, up/down/not-significant points, top/bottom extreme gene labels, and top regulation legend."
+  marks: [points, rectangular subtype labels, text labels, legend points]
+  encodings:
+    x_band: cell subtype
+    y: log2 fold change
+    color: regulation class
+    labels: extreme genes
+inferred_visual_grammar:
+  grammar_id: grouped_volcano_by_cell_subtype
+  source_logic: "R builds sampled DEG lists per cell subtype and labels extreme fold-change genes."
+  current_standard_rebuild: "plot.py generic scatter does not create subtype bands or regulation legend."
+reviewed_visual_roles:
+  x: "Effect or x position in current CSV; visible plot uses subtype bands plus jitter."
+  y: "log2FoldChange."
+  value: "Continuous auxiliary value."
+  group: "Regulation class or subtype depending on source."
+  label: "Gene label."
+  source: "Compatibility duplicate; not graph source."
+  target: "Compatibility duplicate; not graph target."
+canonical_columns: [cell_subtype, log2_fold_change, regulation, gene_label, label_priority]
+required_data_semantics:
+  cell_subtype: "Discrete x-band/category."
+  log2_fold_change: "Vertical value."
+  regulation: "Up/down/not significant class."
+optional_data_semantics:
+  gene_label: "Selected labels."
+  label_priority: "Which points to label."
+optional_modules:
+  subtype_label_bands: {status: observed}
+  selected_gene_labels: {status: observed}
+false_positive_risks:
+  - "Do not treat source/target/weight as graph roles."
+  - "Current x values alone do not describe the visible cell-subtype bands."
+best_for:
+  - "Grouped volcano-like differential plots split by cell subtype."
+bad_for:
+  - "Ordinary bivariate scatter or network workflows."
+style_notes:
+  - "Dense pastel point cloud, central colored subtype labels, green/gray/red regulation legend."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Clear reusable grouped-volcano grammar, but current standard entry needs subtype/regulation semantics to be explicit."
+  exclusion_risks: [generic_renderer_entry, compatibility_columns]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Single grouped scatter plot with x-category bands."
+  marks: [points, subtype label boxes, text labels]
+  encodings: "Cell subtype by x band, fold change by y, regulation by color."
+  axes: "Cell Subtype x-axis and log2FoldChange y-axis."
+  legends: "Top regulation legend."
+  annotations: "Selected gene labels and subtype boxes."
+  text_density: high
+  visual_risks: "Extreme labels can overlap in dense bands."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  role_mapping: {x: x_or_effect, y: log2_fold_change, group: regulation_or_subtype, label: gene_label}
+  derived_columns: [lower, upper]
+  false_positive_columns: [source, target, weight, facet]
+  missing_optional_data: [cell_subtype, regulation, label_priority]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/ggplot/ggrepel source."
+  entry_behavior: "plot.py calls render('scatter'); R source builds grouped DEG plot."
+  hardcoded_aesthetics: "Cell subtypes, label selection count, colors, and thresholds are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank grouped-volcano output."
+  unsupported_features: [subtype_band_layout_in_generic_renderer]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

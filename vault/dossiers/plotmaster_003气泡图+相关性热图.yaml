@@ -308,3 +308,6 @@ reviewed_summary:
     data_roles: 0.9
     caveats:
     - Current rebuilt image and plot.R legend titles may not fully agree.
+agent_default_entry: vault/cards/plotmaster_003气泡图+相关性热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

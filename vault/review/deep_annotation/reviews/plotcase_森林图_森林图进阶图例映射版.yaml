@@ -1,0 +1,92 @@
+case_id: plotcase_森林图_森林图进阶图例映射版
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Observed image was inspected, but machine evidence records visual-audit fallback and standard plot.py is generic scatter."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotcase_森林图_森林图进阶图例映射版/metadata.json, vault/material/plotcase_森林图_森林图进阶图例映射版/agent_guide.md, vault/material/plotcase_森林图_森林图进阶图例映射版/plot.py, vault/material/plotcase_森林图_森林图进阶图例映射版/scripts/code.R, vault/material/plotcase_森林图_森林图进阶图例映射版/data_main.csv, vault/material/plotcase_森林图_森林图进阶图例映射版/outputs/rebuilt.png, vault/material/plotcase_森林图_森林图进阶图例映射版/outputs/visual_check.json, vault/cards/plotcase_森林图_森林图进阶图例映射版.yaml, vault/review/deep_annotation/reviews/plotcase_森林图_森林图进阶图例映射版.yaml]
+  data_main_profile:
+    rows: 8
+    columns: [term, estimate, lower, upper, p_value, group, reference, label, row_order]
+  rebuilt_png: {width: 1592, height: 917, visual_check_ok: true}
+  original_rebuild_log: "Visual audit fallback: original-code output did not preserve finished figure structure well enough."
+observed_visual_grammar:
+  figure_type: annotated_forest_plot_with_table_and_legend
+  layout: "Table-like left labels and estimates, central forest intervals around a dashed reference line, right p-value column, and numbered color legend."
+  marks: [row bands, square point estimates, horizontal confidence intervals, reference line, p-value text, legend badges]
+  encodings:
+    estimate: point x position
+    lower_upper: interval endpoints
+    row_group: side grouping labels
+    p_value: right text column and stars
+    legend_badge: cell signature mapping
+inferred_visual_grammar:
+  grammar_id: table_forest_interval_legend_mapping
+  source_logic: "Original R builds repeated ggplot layers and a manual legend mapping."
+  current_standard_rebuild: "plot.py calls generic scatter and cannot reproduce table columns or intervals."
+reviewed_visual_roles:
+  term: "Row label."
+  estimate: "Point estimate."
+  lower: "Interval lower bound."
+  upper: "Interval upper bound."
+  p_value: "Right-side p-value text."
+  group: "Row/legend grouping."
+  row_order: "Vertical order."
+canonical_columns: [term, estimate, lower, upper, p_value, group, row_order]
+required_data_semantics:
+  term: "Forest row identity."
+  estimate: "Point estimate."
+  lower: "Confidence interval lower bound."
+  upper: "Confidence interval upper bound."
+optional_data_semantics:
+  p_value: "Right table column."
+  group: "Row section or legend grouping."
+  reference: "Vertical null line."
+optional_modules:
+  table_columns: {status: observed}
+  numbered_legend_mapping: {status: observed}
+false_positive_risks:
+  - "Do not treat as a scatterplot."
+  - "Fallback status keeps it out of core/support despite suitable forest roles."
+best_for:
+  - "Inspiration for publication forest plots with table columns and custom legend mapping."
+bad_for:
+  - "Clean CSV-driven forest generation in current standard entry."
+style_notes:
+  - "Gray alternating row bands, bold text columns, black CI bars, numbered colored circle legend."
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: "Good forest visual, but explicit fallback and generic standard entry prevent support/core use."
+  exclusion_risks: [case_level_fallback, generic_renderer_entry]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: high, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Forest plot embedded in table-like rows."
+  marks: [intervals, squares, row bands, text columns, legend badges]
+  encodings: "Estimate and CI by x position, p-value as text, group by side labels and legend."
+  axes: "Numeric x axis with dashed reference at 1."
+  legends: "Right numbered cell-signature legend."
+  annotations: "P-value column and section labels."
+  text_density: high
+  visual_risks: "Alignment of table text and plot intervals is fragile."
+data_understanding:
+  data_read: true
+  observed_columns: [term, estimate, lower, upper, p_value, group, reference, label, row_order]
+  role_mapping: {term: row_label, estimate: point_estimate, lower: ci_lower, upper: ci_upper, p_value: p_value, group: row_group, row_order: order}
+  derived_columns: []
+  false_positive_columns: [label]
+  missing_optional_data: [legend_id, legend_label]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/ggplot/ComplexHeatmap/grid source."
+  entry_behavior: "plot.py calls render('scatter'); R source draws forest/table layers."
+  hardcoded_aesthetics: "Axis limits, row bands, legend colors, and text positions are hardcoded."
+  output_behavior: "Existing rebuilt.png is visually inspected fallback."
+  unsupported_features: [table_forest_layout_in_generic_renderer, clean_source_equivalence]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

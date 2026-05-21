@@ -1,0 +1,205 @@
+case_id: plotcase_tree_多层级系统发育树图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_tree_多层级系统发育树图/metadata.json
+  - vault/material/plotcase_tree_多层级系统发育树图/agent_guide.md
+  - vault/material/plotcase_tree_多层级系统发育树图/plot.py
+  - vault/material/plotcase_tree_多层级系统发育树图/data_main.csv
+  - vault/material/plotcase_tree_多层级系统发育树图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_tree_多层级系统发育树图.yaml
+  - vault/cards/plotcase_tree_多层级系统发育树图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_tree_多层级系统发育树图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_tree_多层级系统发育树图.yaml
+  asset_card: vault/cards/plotcase_tree_多层级系统发育树图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_tree_多层级系统发育树图.yaml
+  image_inspected: vault/material/plotcase_tree_多层级系统发育树图/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_tree_多层级系统发育树图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: circular_phylogenetic_tree
+  subtype: radial tree with outer abundance heat ring and tick tracks
+  panel_count: 1
+  layout: large circular tree centered left with legends stacked on right
+  marks:
+  - radial branches
+  - outer continuous heatmap ring
+  - thin tick tracks
+  - colored clade branches
+  encodings:
+    branch color: taxa/clade group
+    outer ring color: normalized log10 abundance
+    tick color: dataset/source class
+  axes: polar tree; scale marker 0.1 inside tree
+  legends: right legends for taxa, abundance, and datasets
+  annotations:
+  - scale label and multiple outer tracks
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: tree_heatmap
+    backend: R/ggtree
+    unit: tree edges plus tip-level annotation table
+    required_data_roles:
+    - node_id
+    - parent_id
+    - label
+    optional_data_roles:
+    - branch_length
+    - tip_group
+    - track
+    - track_value
+    - track_class
+    - heatmap_value
+reviewed_visual_roles:
+  node_id: tree node identifier
+  parent_id: tree parent link
+  label: node/tip label candidate
+  branch_length: branch length candidate
+  tip_group: clade/group candidate
+  track: annotation track name
+  track_value: outer-track value candidate
+  heatmap_value: abundance/ring value candidate
+  track_class: empty
+canonical_columns:
+- node_id
+- parent_id
+- label
+- branch_length
+- tip_group
+- track
+- track_value
+- track_class
+- heatmap_value
+required_data_semantics:
+  node_id: tree node identity
+  parent_id: tree topology parent
+  label: node/tip label
+optional_data_semantics:
+  branch_length: branch length/scale candidate
+  tip_group: clade coloring candidate
+  track: outer annotation track
+  track_value: outer tick/track value
+  track_class: empty
+  heatmap_value: outer heat ring value
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - branch_length
+  - tip_group
+  - track
+  - track_value
+  - track_class
+  - heatmap_value
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- compact nine-row CSV cannot represent the many visible tips and outer-ring cells
+- false_positive_column:track_class
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Radial phylogenetic tree with multiple outer annotation tracks
+bad_for:
+- Exact many-tip tree reconstruction from compact CSV
+- Simple dendrogram retrieval
+style_notes:
+- Outer ring and legends are visually separated
+- Export size must stay large for branch detail
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - compact nine-row CSV cannot represent the many visible tips and outer-ring cells
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: large circular tree centered left with legends stacked on right
+  marks:
+  - radial branches
+  - outer continuous heatmap ring
+  - thin tick tracks
+  - colored clade branches
+  encodings:
+    branch color: taxa/clade group
+    outer ring color: normalized log10 abundance
+    tick color: dataset/source class
+  axes: polar tree; scale marker 0.1 inside tree
+  legends: right legends for taxa, abundance, and datasets
+  annotations:
+  - scale label and multiple outer tracks
+  text_density: high in legend, low on tree body
+  visual_risks:
+  - compact nine-row CSV cannot represent the many visible tips and outer-ring cells
+data_understanding:
+  data_read: true
+  observed_columns:
+  - node_id
+  - parent_id
+  - label
+  - branch_length
+  - tip_group
+  - track
+  - track_value
+  - track_class
+  - heatmap_value
+  role_mapping:
+    node_id: tree node identifier
+    parent_id: tree parent link
+    label: node/tip label candidate
+    branch_length: branch length candidate
+    tip_group: clade/group candidate
+    track: annotation track name
+    track_value: outer-track value candidate
+    heatmap_value: abundance/ring value candidate
+    track_class: empty
+  derived_columns: []
+  false_positive_columns:
+  - track_class
+  missing_optional_data:
+  - data_optional.csv absent
+  - track_class
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('network', '多层级系统发育树图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - compact nine-row CSV cannot represent the many visible tips and outer-ring cells
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

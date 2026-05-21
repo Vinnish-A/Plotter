@@ -1,10 +1,12 @@
 id: plotmaster_020多组学九象限散点图
 title: 020多组学九象限散点图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+  reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+  annotator_model: gpt-5-codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_020多组学九象限散点图
   source:
@@ -355,3 +357,28 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_020多组学九象限散点图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: archive
+retrieval_rationale: Observed rebuilt image does not match the claimed advanced nine-quadrant
+  grammar and data are synthetic/generic.
+exclusion_risks:
+- false positive for nine-quadrant scatter retrieval
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_020多组学九象限散点图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_020多组学九象限散点图.yaml
+  geometry: generic_scatter_render
+  subtype: plain_xy_bubble_scatter
+  required_roles:
+  - x
+  - y
+  optional_roles:
+  - value
+  - group
+  tier: archive
+  confidence:
+    overall: 0.74
+    image: 0.9
+    data: 0.62
+    code: 0.7

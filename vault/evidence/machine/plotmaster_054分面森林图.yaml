@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_054分面森林图/metadata.json
     exists: true
-    size_bytes: 3035
+    size_bytes: 3888
   agent_guide:
     path: vault/material/plotmaster_054分面森林图/agent_guide.md
     exists: true

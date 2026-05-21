@@ -1,10 +1,14 @@
 id: plotmaster_037分类变量环形热图
 title: 037分类变量环形热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: Reviewed image and code; source contains a synthetic literature-evidence
+    track, so the asset is useful but not core.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_037分类变量环形热图
   source:
@@ -347,3 +351,31 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_037分类变量环形热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Strong visual grammar and source evidence, but synthetic track
+  and generic standard entry keep it below core.
+exclusion_risks:
+- synthetic_track
+- generic_renderer_entry
+- circular_track_contract_missing
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_037分类变量环形热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_037分类变量环形热图.yaml
+  geometry: circular_categorical_evidence_heatmap_with_outer_bar_track
+  subtype: circlize_multiring_categorical_heatmap
+  required_roles:
+  - item_id
+  - ring
+  - value
+  optional_roles:
+  - outer_score
+  - evidence_label
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

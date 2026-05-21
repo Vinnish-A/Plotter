@@ -1,0 +1,89 @@
+case_id: plotcase_综合图_lefse分析图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Observed LEfSe-like cladogram was inspected, but machine evidence records visual-audit fallback and the standard entry is generic scatter."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotcase_综合图_lefse分析图/metadata.json, vault/material/plotcase_综合图_lefse分析图/agent_guide.md, vault/material/plotcase_综合图_lefse分析图/plot.py, vault/material/plotcase_综合图_lefse分析图/scripts/code.R, vault/material/plotcase_综合图_lefse分析图/data_main.csv, vault/material/plotcase_综合图_lefse分析图/outputs/rebuilt.png, vault/material/plotcase_综合图_lefse分析图/outputs/visual_check.json, vault/cards/plotcase_综合图_lefse分析图.yaml, vault/review/deep_annotation/reviews/plotcase_综合图_lefse分析图.yaml]
+  data_main_profile:
+    rows: 7
+    columns: [source, target, weight, node_id, node_label, node_group, node_size, edge_group, edge_direction, layout_x, layout_y, source_group, target_group]
+  rebuilt_png: {width: 1767, height: 1537, visual_check_ok: true}
+  original_rebuild_log: "Visual audit fallback: original-code output did not preserve finished figure structure well enough."
+observed_visual_grammar:
+  figure_type: lefse_cladogram_with_taxonomic_highlight_regions
+  layout: "Radial taxonomy tree with colored clade highlight wedges and a right legend mapping letters to taxa/groups."
+  marks: [radial tree branches, circular nodes, translucent clade sectors, text labels, legend swatches]
+  encodings:
+    hierarchy: taxonomic branch structure
+    node_color: group/category association
+    sector_fill: highlighted clade group
+    legend_letters: taxonomic labels
+inferred_visual_grammar:
+  grammar_id: lefse_radial_cladogram
+  source_logic: "Original R uses microeco LEfSe differential analysis and cladogram plotting."
+  current_standard_rebuild: "plot.py calls generic scatter; current data_main is a node-link sketch, not a taxonomy hierarchy."
+reviewed_visual_roles:
+  source: "Could represent parent node."
+  target: "Could represent child node."
+  weight: "Not visibly central in cladogram."
+  node_id: "Taxon/node identity."
+  node_label: "Taxon label."
+  node_group: "Differential group/highlight class if populated."
+canonical_columns: [parent, child, taxon_label, rank, group, lda_score]
+required_data_semantics:
+  parent: "Taxonomic parent."
+  child: "Taxonomic child."
+  taxon_label: "Displayed taxon label."
+optional_data_semantics:
+  group: "Differential group/color."
+  rank: "Taxonomic rank."
+  lda_score: "Optional node/label emphasis."
+optional_modules:
+  clade_highlight_sectors: {status: observed_but_not_current_csv}
+  right_taxon_legend: {status: observed}
+false_positive_risks:
+  - "Do not treat source/target/weight as an ordinary graph unless parent-child taxonomy semantics are supplied."
+  - "Fallback and missing taxonomy contract keep it out of core/support."
+best_for:
+  - "Inspiration for LEfSe-style radial cladograms with highlighted taxonomic sectors."
+bad_for:
+  - "Generic network plots or data-backed LEfSe analysis without microeco inputs."
+style_notes:
+  - "Large radial tree, pastel translucent wedges, sparse colored nodes, long right-side legend."
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: "The visual grammar is distinct, but current case is fallback and lacks a real taxonomy data contract."
+  exclusion_risks: [case_level_fallback, generic_renderer_entry, taxonomy_contract_missing]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: high, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Radial cladogram with legend column."
+  marks: [branches, nodes, sector highlights, labels]
+  encodings: "Hierarchy by branch nesting, group by color, highlighted clades by translucent sector."
+  axes: "No axes."
+  legends: "Right taxonomic legend and group color swatches."
+  annotations: "Taxon labels around clades."
+  text_density: high
+  visual_risks: "Radial labels overlap at dense clades."
+data_understanding:
+  data_read: true
+  observed_columns: [source, target, weight, node_id, node_label, node_group, node_size, edge_group, edge_direction, layout_x, layout_y, source_group, target_group]
+  role_mapping: {source: possible_parent, target: possible_child, node_id: taxon_id, node_label: taxon_label}
+  derived_columns: []
+  false_positive_columns: [weight, edge_direction, layout_x, layout_y, source_group, target_group]
+  missing_optional_data: [rank, lda_score, clade_group]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/microeco source."
+  entry_behavior: "plot.py calls render('scatter'); R source constructs microtable and LEfSe plots."
+  hardcoded_aesthetics: "LEfSe thresholds and displayed count are coded in R."
+  output_behavior: "Existing rebuilt.png is visually inspected fallback."
+  unsupported_features: [microeco_runtime_contract, taxonomy_tree_from_current_csv]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

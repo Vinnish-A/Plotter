@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_053分组气泡图/metadata.json
     exists: true
-    size_bytes: 2997
+    size_bytes: 3943
   agent_guide:
     path: vault/material/plotmaster_053分组气泡图/agent_guide.md
     exists: true

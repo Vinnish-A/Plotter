@@ -1,0 +1,90 @@
+case_id: plotmaster_028分面双向柱状图+热图注释
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Reviewed image and source; script uses simulated data and current data_main does not encode the full bar-plus-heatstrip composition."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotmaster_028分面双向柱状图+热图注释/metadata.json, vault/material/plotmaster_028分面双向柱状图+热图注释/agent_guide.md, vault/material/plotmaster_028分面双向柱状图+热图注释/plot.py, vault/material/plotmaster_028分面双向柱状图+热图注释/scripts/codes.R, vault/material/plotmaster_028分面双向柱状图+热图注释/data_main.csv, vault/material/plotmaster_028分面双向柱状图+热图注释/outputs/rebuilt.png, vault/material/plotmaster_028分面双向柱状图+热图注释/outputs/visual_check.json, vault/cards/plotmaster_028分面双向柱状图+热图注释.yaml, vault/review/deep_annotation/reviews/plotmaster_028分面双向柱状图+热图注释.yaml]
+  data_main_profile:
+    rows: 800
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  rebuilt_png: {width: 1728, height: 1008, visual_check_ok: true}
+  original_rebuild_log: "R source completed; scripts/codes.R constructs simulated bar/heatstrip data."
+observed_visual_grammar:
+  figure_type: stacked_bidirectional_bar_panels_with_bottom_heatstrip
+  layout: "Two horizontally aligned bar panels, one positive and one inverted, grouped by feature family, with a two-row significance heatstrip below."
+  marks: [vertical bars, alternating background bands, bottom heatstrip cells, star annotations, legend]
+  encodings:
+    top_bar_height: Virome value
+    lower_bar_height: Bacteriome value inverted downward
+    bar_color: feature family group
+    heatstrip_color: significance/direction class
+inferred_visual_grammar:
+  grammar_id: bidirectional_bar_heatstrip_annotation
+  source_logic: "R simulates Virome/Bacteriome values and composes bar tracks plus heatstrip annotation."
+  current_standard_rebuild: "plot.py calls generic heatmap, not the visible bar/heatstrip composition."
+reviewed_visual_roles:
+  x: "Feature/category in current CSV."
+  y: "Row or category placeholder."
+  value: "Bar or heatmap value."
+  group: "Feature family color group when populated."
+  label: "Feature label."
+  source: "Duplicate x-like compatibility column, not graph source."
+canonical_columns: [feature, panel, value, group, sign_class, star_label]
+required_data_semantics:
+  feature: "Ordered feature/category."
+  panel: "Virome, Bacteriome, or annotation strip."
+  value: "Panel-specific value."
+optional_data_semantics:
+  group: "Feature family."
+  sign_class: "Heatstrip direction/significance class."
+  star_label: "Annotation text."
+optional_modules:
+  bidirectional_bar_tracks: {status: observed}
+  bottom_heatstrip: {status: observed}
+false_positive_risks:
+  - "Do not treat this as an annotated heatmap only."
+  - "Do not treat source/target/weight as graph roles."
+  - "Synthetic/demo construction limits retrieval tier."
+best_for:
+  - "Inspiration/support for bidirectional bar summaries with aligned annotation strips."
+bad_for:
+  - "Clean biological inference from the current data_main."
+style_notes:
+  - "Two large bar tracks, alternating gray vertical bands, compact legend across top, star heatstrip at bottom."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Reusable composition pattern, but source uses simulated data and current CSV lacks explicit panel semantics."
+  exclusion_risks: [simulated_data, generic_renderer_entry, panel_contract_missing]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 3
+  layout: "Top positive bars, middle inverted bars, bottom heatstrip."
+  marks: [bars, heatstrip cells, stars]
+  encodings: "Panel values by bar height, feature family by color, significance by heatstrip fill/star."
+  axes: "Feature labels rotated along bottom; separate y axes for bar tracks."
+  legends: "Feature-family color legend across top."
+  annotations: "Star markers in bottom strip."
+  text_density: high
+  visual_risks: "Dense feature labels require wide export."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  role_mapping: {x: feature, value: panel_value, group: feature_group, label: feature_label}
+  derived_columns: [lower, upper]
+  false_positive_columns: [source, target, weight]
+  missing_optional_data: [panel, sign_class, star_label]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/tidyverse/patchwork source."
+  entry_behavior: "plot.py calls render('heatmap'); R source composes bar tracks and annotation strips."
+  hardcoded_aesthetics: "Group sizes, colors, alternating bands, and simulated values are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank composite output."
+  unsupported_features: [bidirectional_bar_tracks_in_generic_renderer, panel_semantics_in_current_csv]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

@@ -151,5 +151,22 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Reusable visual grammar is clear, but current standard entry and abstract CSV are weaker than the inspected source-style figure.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "original_rebuild_error",
+    "incomplete_annotation_csv"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Visual output is strong, but the standard plot.py is a generic bar renderer and the original R rebuild log ended with an error.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_barplot_柱状图添加显著性标记_基础版.yaml"
 }

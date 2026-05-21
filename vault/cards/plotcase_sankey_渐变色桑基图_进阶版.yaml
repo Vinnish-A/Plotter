@@ -1,9 +1,9 @@
 id: plotcase_sankey_渐变色桑基图_进阶版
 title: 渐变色桑基图_进阶版
 retrieval_tier: support
-one_line: flow asset for 渐变色桑基图_进阶版
-geometry: flow
-subtype: sankey_or_alluvial
+one_line: Three-stage sankey/alluvial flows with grouped source colors.
+geometry: three_stage_gradient_sankey
+subtype: three_stage_gradient_sankey
 required_roles:
 - stage
 - node
@@ -11,40 +11,46 @@ required_roles:
 - next_node
 - value
 optional_roles:
-- flow_id
 - group
-- node_color
-- label
 - order
+- node_color
 capabilities:
   highlight: true
   detail_panel: false
   annotation_track: false
   uncertainty: false
-  composition: true
+  composition: false
   batch: true
 best_for:
-- 渐变色桑基图_进阶版
-- 'flow/sankey_or_alluvial grammar with roles: stage, node, next_stage, next_node, value'
+- Three-stage sankey/alluvial flows with grouped source colors.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 1215074; width: 1586; height: 1498'
+- Cyclic networks or link diagrams without ordered stages.
+image_summary: 'figure_type: three_stage_gradient_sankey; layout: Left management groups, middle phyla,
+  and right function categories connected by wide semi-transparent alluvial bands.; marks: [''vertical
+  nodes'', ''flow ribbons'', ''node l…'
 data_summary: 'main_columns: [''stage'', ''node'', ''next_stage'', ''next_node'', ''value'', ''flow_id'',
   ''group'', ''node_color'', ''label'', ''order'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- missing_optional_data
+risk_notes:
+- Do not use source/target/weight network roles here; the current CSV uses staged sankey roles.
+- Generic plot.py cannot reproduce flow ribbons.
+- generic_renderer_entry
+- sankey_renderer_missing
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_sankey_渐变色桑基图_进阶版.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_sankey_渐变色桑基图_进阶版.yaml
   machine_evidence: vault/evidence/machine/plotcase_sankey_渐变色桑基图_进阶版.yaml
   evidence_pack: vault/material/plotcase_sankey_渐变色桑基图_进阶版
   preview: vault/material/plotcase_sankey_渐变色桑基图_进阶版/outputs/rebuilt.png

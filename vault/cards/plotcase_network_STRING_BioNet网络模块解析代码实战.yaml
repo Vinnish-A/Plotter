@@ -35,16 +35,23 @@ data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', '
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
+- generic_renderer
+- compatibility_columns
+risk_notes:
 - Do not infer meaningful edge weight solely from a compatibility weight column.
-- Do not retrieve as flow/Sankey; source/target here are graph endpoints, not sta…
-- Dense labels can make this unsafe as a default recommendation without node filt…
+- Do not retrieve as flow/Sankey; source/target here are graph endpoints, not stages.
+- Dense labels can make this unsafe as a default recommendation without node filtering.
 - overstated edge-weight semantics
 - label crowding
 confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml

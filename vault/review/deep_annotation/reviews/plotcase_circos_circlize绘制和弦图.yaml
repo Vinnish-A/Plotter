@@ -1,0 +1,166 @@
+case_id: plotcase_circos_circlize绘制和弦图
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review
+  human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence, card, schema, and prior review were inspected
+    for this batch review.
+annotator_model: gpt-5-codex_model_assisted_review
+reviewed_at: '2026-05-21T00:00:00+08:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_circos_circlize绘制和弦图/metadata.json
+  - vault/material/plotcase_circos_circlize绘制和弦图/agent_guide.md
+  - vault/material/plotcase_circos_circlize绘制和弦图/plot.py
+  - vault/material/plotcase_circos_circlize绘制和弦图/data_main.csv
+  - vault/material/plotcase_circos_circlize绘制和弦图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_circos_circlize绘制和弦图.yaml
+  - vault/cards/plotcase_circos_circlize绘制和弦图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_circos_circlize绘制和弦图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_circos_circlize绘制和弦图.yaml
+  asset_card: vault/cards/plotcase_circos_circlize绘制和弦图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_circos_circlize绘制和弦图.yaml
+  image_size:
+    exists: true
+    size_bytes: 173312
+    width: 1301
+    height: 1121
+    mean_luma: 227.0027
+    stddev_luma: 53.5015
+    blank_like: false
+  data_rows_inspected: 7
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: circos chord diagram
+  subtype: weighted circular links
+  layout: single circular panel
+  primary_marks: &id001
+  - outer sectors
+  - inner red/blue ribbons
+  - sector ticks
+  - sector labels
+  visible_encodings: sector arc length and ribbon width imply volume; red/blue distinguish link classes or direction
+inferred_visual_grammar:
+  declared_geometry: circos
+  declared_subtype: chord_or_circular
+  metadata_keywords:
+  - circos
+  - chord_network
+  - radial_layout
+  - link_weight
+  reusable_pattern: high-level circular relationship patterns between sectors
+  domain_semantics: Only visual roles were reviewed; biological or clinical meanings are not treated as authoritative unless
+    visible in labels/axes.
+  core_exclusion_note: Generic renderer, fallback, and synthetic-data flags prevent promotion to core retrieval.
+reviewed_visual_roles:
+  marks: *id001
+  encodings: sector arc length and ribbon width imply volume; red/blue distinguish link classes or direction
+  axes: circular sector coordinate with tick labels on arcs
+  legends: no explicit legend for ribbon colors
+  annotations: title and sector labels
+canonical_columns: &id002
+- source
+- target
+- weight
+- source_group
+- target_group
+- direction
+- sector_order
+- sector_color
+- label
+- node_id
+- node_label
+required_data_semantics:
+  source: chord sector/source endpoint
+  target: chord sector/target endpoint
+  weight: ribbon/link magnitude
+optional_data_semantics:
+  source_group: source sector group
+  target_group: target sector group
+  direction: empty direction field
+  sector_order: empty sector order field
+  sector_color: empty sector color field
+  label: empty link label field
+  node_id: node identifier support field
+  node_label: node label support field
+optional_modules:
+  data_optional_csv: absent
+  visible_optional_layers: title and sector labels
+  needed_for_full_reuse: Provide explicit optional tables for labels, ordering, legends, manual positions, annotations, and
+    secondary tracks when those are visible.
+false_positive_risks:
+- generic_renderer_rebuild
+- dense ribbon crossings obscure individual links
+- color semantics are not declared in data_main
+best_for:
+- high-level circular relationship patterns between sectors
+bad_for:
+- exact edge lookup without an edge table plus legend semantics
+style_notes:
+- high text/mark density
+- Use the observed layout and scale cues, but do not infer undeclared domain semantics from placeholder CSV labels.
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Recommended below core because review found generic-renderer/fallback/synthetic or incomplete semantic-support
+    risks; still useful for visual pattern retrieval at the stated tier.
+  exclusion_risks:
+  - generic_renderer_rebuild
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: single circular panel
+  layout: single circular panel
+  marks: *id001
+  encodings: sector arc length and ribbon width imply volume; red/blue distinguish link classes or direction
+  axes: circular sector coordinate with tick labels on arcs
+  legends: no explicit legend for ribbon colors
+  annotations: title and sector labels
+  text_density: high
+  visual_risks:
+  - dense ribbon crossings obscure individual links
+  - color semantics are not declared in data_main
+data_understanding:
+  data_read: true
+  observed_columns: *id002
+  role_mapping:
+    source: chord sector/source endpoint
+    target: chord sector/target endpoint
+    weight: ribbon/link magnitude
+    source_group: source sector group
+    target_group: target sector group
+    direction: empty direction field
+    sector_order: empty sector order field
+    sector_color: empty sector color field
+    label: empty link label field
+    node_id: node identifier support field
+    node_label: node label support field
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data: No data_optional.csv is present; visible annotations, manual layout, labels, legends, and secondary
+    tracks may not be reproducible from data_main alone.
+code_understanding:
+  code_read: true
+  backend: Python wrapper around retinue plotter_standard_renderer; metadata may name original R backend but plot.py does
+    not call original plotting code directly
+  entry_behavior: plot.py inserts retinue/tools on sys.path, imports plotter_standard_renderer.render, and calls render('network',
+    'circlize绘制和弦图').
+  hardcoded_aesthetics: Case title and renderer mode are hardcoded in plot.py; detailed palette/layout behavior is delegated
+    to the generic renderer or preserved fallback image.
+  output_behavior: Standard script is expected to write outputs/rebuilt.png; machine evidence reports the rebuilt PNG exists
+    and is not blank-like.
+  unsupported_features: Original plotting code behavior, full manual layout resources, and any undeclared annotation tables
+    are not represented by plot.py itself.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

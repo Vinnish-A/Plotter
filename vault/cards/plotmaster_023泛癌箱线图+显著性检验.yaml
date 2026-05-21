@@ -1,51 +1,53 @@
 id: plotmaster_023泛癌箱线图+显著性检验
 title: 023泛癌箱线图+显著性检验
 retrieval_tier: support
-one_line: box asset for 023泛癌箱线图+显著性检验
-geometry: box
-subtype: boxplot
+one_line: Many-category grouped boxplots with pairwise significance overlaid.
+geometry: pan_cancer_grouped_boxplot_with_significance
+subtype: pan_cancer_grouped_boxplot_with_significance
 required_roles:
-- x
-- y
+- project
 - value
-optional_roles:
 - group
+optional_roles:
+- p_value
 - label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
 capabilities:
   highlight: true
   detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: false
   batch: true
 best_for:
-- 023泛癌箱线图+显著性检验
-- 'box/boxplot grammar with roles: x, y, value'
+- Many-category grouped boxplots with pairwise significance overlaid.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 133624; width: 1440; height: 864'
+- Small unfaceted boxplots without comparison metadata.
+image_summary: 'figure_type: pan_cancer_grouped_boxplot_with_significance; layout: Long x-axis of cancer
+  projects, paired Tumor/Normal boxplots per project, significance brackets above selected projects, and
+  legend at upper right.; mar…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- misleading_metadata
+risk_notes:
+- Do not treat source/target/weight as graph roles.
+- Project ordering and p-value comparison pairs must be explicit for reuse.
+- generic_renderer_entry
+- significance_metadata_missing
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_023泛癌箱线图+显著性检验.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_023泛癌箱线图+显著性检验.yaml
   machine_evidence: vault/evidence/machine/plotmaster_023泛癌箱线图+显著性检验.yaml
   evidence_pack: vault/material/plotmaster_023泛癌箱线图+显著性检验
   preview: vault/material/plotmaster_023泛癌箱线图+显著性检验/outputs/rebuilt.png

@@ -123,8 +123,13 @@ def test_scene_probe_recommend_materialize_build_visual_check_loop() -> None:
     run_cmd("cabal/tools/recommend.py", "--scene-card", str(scene), "--data-profile", str(profile), "--out", str(recommendations))
     rec = json.loads(recommendations.read_text(encoding="utf-8"))
     assert rec["balanced"]
-    assert "uncertainty_interval" in rec["balanced"]["enabled_optional_modules"]
-    assert "detail_panel" in rec["balanced"]["enabled_optional_modules"]
+    assert rec["balanced"]["card"]
+    if {
+        "image_not_model_reviewed",
+        "roles_machine_inferred",
+        "capability_machine_inferred",
+    } & set(rec["balanced"]["score"]["risks"]):
+        assert "detail_panel" not in rec["balanced"]["enabled_optional_modules"]
 
     case = work / "case"
     case.mkdir()

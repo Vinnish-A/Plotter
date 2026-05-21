@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_002渐变火山图/metadata.json
     exists: true
-    size_bytes: 2991
+    size_bytes: 3743
   agent_guide:
     path: vault/material/plotmaster_002渐变火山图/agent_guide.md
     exists: true

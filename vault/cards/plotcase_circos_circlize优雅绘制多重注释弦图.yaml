@@ -1,50 +1,55 @@
 id: plotcase_circos_circlize优雅绘制多重注释弦图
 title: circlize优雅绘制多重注释弦图
 retrieval_tier: support
-one_line: circos asset for circlize优雅绘制多重注释弦图
-geometry: circos
-subtype: chord_or_circular
+one_line: Chord diagrams with grouped circular sectors and weighted ribbons.
+geometry: circular_chord_diagram_with_outer_sector_groups
+subtype: circular_chord_diagram_with_outer_sector_groups
 required_roles:
 - source
 - target
 - weight
 optional_roles:
-- source_group
-- target_group
-- direction
+- source_group_target_group
 - sector_order
 - sector_color
-- label
 capabilities:
-  highlight: true
+  highlight: false
   detail_panel: false
   annotation_track: false
   uncertainty: false
-  composition: true
+  composition: false
   batch: true
 best_for:
-- circlize优雅绘制多重注释弦图
-- 'circos/chord_or_circular grammar with roles: source, target, weight'
+- Chord diagrams with grouped circular sectors and weighted ribbons.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 358572; width: 1008; height: 1008'
+- Simple node-link graphs or unweighted adjacency diagrams.
+image_summary: 'figure_type: circular_chord_diagram_with_outer_sector_groups; layout: Single circos figure
+  with large country sectors, seasonal sub-sectors, axes, and dense multicolor ribbons.; marks: [''outer
+  sector arcs'', ''inner axes''…'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''source_group'', ''target_group'',
   ''direction'', ''sector_order'', ''sector_color'', ''label'', ''node_id'', ''node_label'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: [''circlize'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- Do not treat node_id/node_label as a separate node-link network layer.
+- Do not retrieve as a generic circular network; ribbons and sector axes are central.
+- The standard Python entry will not regenerate the observed circlize grammar.
+- generic_renderer_entry
+- matrix_to_link_abstraction_gap
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_circos_circlize优雅绘制多重注释弦图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_circos_circlize优雅绘制多重注释弦图.yaml
   machine_evidence: vault/evidence/machine/plotcase_circos_circlize优雅绘制多重注释弦图.yaml
   evidence_pack: vault/material/plotcase_circos_circlize优雅绘制多重注释弦图
   preview: vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/outputs/rebuilt.png

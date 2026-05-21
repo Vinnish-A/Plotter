@@ -1,9 +1,9 @@
 id: plotmaster_006复杂散点图
 title: 006复杂散点图
 retrieval_tier: inspiration
-one_line: map asset for 006复杂散点图
-geometry: map
-subtype: map
+one_line: Visual inspiration for bubble scatter with diagonal reference
+geometry: bubble scatter with diagonal reference
+subtype: ''
 required_roles:
 - x
 - y
@@ -25,28 +25,39 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 006复杂散点图
-- 'map/map grammar with roles: x, y, value'
+- Visual inspiration for bubble scatter with diagonal reference
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 79597; width: 864; height: 864'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: bubble scatter with diagonal reference; panel_count: 1; layout: single scatter
+  panel with diagonal dashed reference and top correlation annotation; primary_marks: [''colored bubbles'',
+  ''dashed diagonal line'', ''tex…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
 - synthetic_data
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- synthetic_data
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_006复杂散点图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_006复杂散点图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_006复杂散点图.yaml
   evidence_pack: vault/material/plotmaster_006复杂散点图
   preview: vault/material/plotmaster_006复杂散点图/outputs/rebuilt.png

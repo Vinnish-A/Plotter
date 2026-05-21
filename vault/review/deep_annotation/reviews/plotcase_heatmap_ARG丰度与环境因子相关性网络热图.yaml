@@ -1,0 +1,120 @@
+case_id: plotcase_heatmap_ARG丰度与环境因子相关性网络热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Observed image is specialized and useful, but source rebuild failed because linkET is unavailable and data_main only encodes a generic heatmap grid."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read:
+    - AGENTS.md
+    - schemas/deep_dossier_review.schema.yaml
+    - vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/metadata.json
+    - vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/agent_guide.md
+    - vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/plot.py
+    - vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/scripts/code.R
+    - vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/data_main.csv
+    - vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/outputs/rebuilt.png
+    - vault/material/plotcase_heatmap_ARG丰度与环境因子相关性网络热图/outputs/visual_check.json
+    - vault/cards/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml
+    - vault/review/deep_annotation/reviews/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml
+  data_main_profile:
+    rows: 30
+    columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  rebuilt_png:
+    width: 1660
+    height: 1362
+    visual_check_ok: true
+  original_rebuild_log: "R source failed at library(linkET)."
+observed_visual_grammar:
+  figure_type: correlation_heatmap_with_arg_coupling_network
+  layout: "Upper-triangle correlation matrix on the right, ARG abundance anchor at lower left, curved links to environmental variables, top importance strip, and color/linetype/width legends."
+  marks: [heatmap squares, size-varying correlation tiles, curved connectors, top annotation strip, legends]
+  encodings:
+    heatmap_color: Pearson correlation sign and magnitude
+    heatmap_size: correlation strength
+    connector_color: positive or negative ARG association
+    connector_linetype: p-value threshold
+    connector_width: absolute mixed-model correlation band
+    top_strip: variable importance
+inferred_visual_grammar:
+  grammar_id: mantel_link_heatmap_arg_environment_network
+  source_logic: "Original R defines custom geom_arg_couple and uses linkET-style coupling plus matrix heatmap layers."
+  current_standard_rebuild: "plot.py calls generic render('heatmap'), losing connector, legend, and importance-strip semantics."
+reviewed_visual_roles:
+  row_id: "Matrix row variable in current CSV; true image uses environmental variable identity."
+  column_id: "Matrix column variable in current CSV; true image uses environmental variable identity."
+  value: "Correlation-like heatmap value in current CSV."
+  annotation_track: "Current class placeholder; not the observed importance strip."
+  annotation_value: "Placeholder annotation value; not enough for top importance strip."
+  size_value: "Could drive tile size, but current generic renderer ignores it."
+canonical_columns: [variable_i, variable_j, pearson_r, arg_env, arg_r, arg_p_value, importance, link_class]
+required_data_semantics:
+  variable_i: "Correlation-matrix row variable."
+  variable_j: "Correlation-matrix column variable."
+  pearson_r: "Matrix color and size value."
+  arg_env: "Environmental variable connected to ARG abundance."
+  arg_r: "ARG association magnitude/sign."
+  arg_p_value: "Connector line type/significance class."
+optional_data_semantics:
+  importance: "Top annotation strip value."
+  link_class: "Legend grouping for connector width/color bins."
+optional_modules:
+  curved_arg_links:
+    status: observed_but_not_encoded_by_current_csv
+  matrix_size_tiles:
+    status: observed_but_generic_entry_ignores_size_value
+  importance_strip:
+    status: observed_but_not_currently_abstracted
+false_positive_risks:
+  - "Do not treat this as an ordinary heatmap template."
+  - "Do not treat current row_id/column_id/value alone as sufficient for ARG network semantics."
+  - "Requires linkET or equivalent custom connector logic."
+best_for:
+  - "Inspiration for heatmap-plus-coupling-network figures with multiple legend channels."
+bad_for:
+  - "Clean CSV-only heatmap rebuilds or simple node-link graphs."
+style_notes:
+  - "Large white margins, upper triangular matrix, blue/orange curved connectors, separate legends for correlation, p-values, and importance."
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: "Distinct visual grammar, but dependency failure and weak current CSV abstraction keep it out of support/core use."
+  exclusion_risks: [missing_dependency_linkET, generic_renderer_entry, incomplete_data_contract]
+confidence:
+  overall: high
+  visual_observation: high
+  data_contract_assessment: high
+  source_rebuild_assessment: high
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Composite matrix plus left anchor network and bottom legends."
+  marks: [matrix cells, curved links, labels, top strip, colorbar, legends]
+  encodings: "Correlation by diverging color and square size; connector sign by color, p-value by line style, strength by line width."
+  axes: "Variable names on top and matrix side; no conventional x/y numeric axes."
+  legends: "Correlation colorbar, connector legend, absolute r legend, p-value linetype legend, importance label."
+  annotations: "ARG abundance anchor and p-value labels on selected arcs."
+  text_density: high
+  visual_risks: "Connector labels and dense rotated matrix labels require careful spacing."
+data_understanding:
+  data_read: true
+  observed_columns: [row_id, column_id, value, row_group, column_group, annotation_track, annotation_value, label, size_value, facet]
+  role_mapping:
+    row_id: matrix_row
+    column_id: matrix_column
+    value: heatmap_value
+    size_value: possible_tile_size
+  derived_columns: []
+  false_positive_columns: [row_group, column_group, annotation_track, annotation_value, label, facet]
+  missing_optional_data: [arg_link_table, p_value_class, importance_values]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus original R/tidyverse/linkET-style source."
+  entry_behavior: "plot.py calls render('heatmap'); original R fails without linkET."
+  hardcoded_aesthetics: "Connector anchors, curvature, label positions, legends, and palette bins are hardcoded or computed in R."
+  output_behavior: "Existing rebuilt.png is nonblank and visually rich, but not guaranteed by current clean-source environment."
+  unsupported_features: [linkET_dependency, curved_connector_layer, importance_strip_from_data_main]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

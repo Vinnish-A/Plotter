@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/metadata.json
     exists: true
-    size_bytes: 4187
+    size_bytes: 4971
   agent_guide:
     path: vault/material/plotcase_network_ggraph环形网络图_多维数据圈层/agent_guide.md
     exists: true

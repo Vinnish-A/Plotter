@@ -1,9 +1,9 @@
 id: plotmaster_058分面折线图+置信区间+误差棒
 title: 058分面折线图+置信区间+误差棒
 retrieval_tier: support
-one_line: map asset for 058分面折线图+置信区间+误差棒
-geometry: map
-subtype: map
+one_line: Visual inspiration for faceted line chart with intervals
+geometry: faceted line chart with intervals
+subtype: ''
 required_roles:
 - x
 - y
@@ -25,27 +25,38 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 058分面折线图+置信区间+误差棒
-- 'map/map grammar with roles: x, y, value'
+- Visual inspiration for faceted line chart with intervals
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 46764; width: 1152; height: 330'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: faceted line chart with intervals; panel_count: 4; layout: four small panels in
+  one row with colored strip headers; primary_marks: [''lines'', ''points'', ''confidence ribbons'', ''error
+  bars'']'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 16'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_058分面折线图+置信区间+误差棒.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_058分面折线图+置信区间+误差棒.yaml
   machine_evidence: vault/evidence/machine/plotmaster_058分面折线图+置信区间+误差棒.yaml
   evidence_pack: vault/material/plotmaster_058分面折线图+置信区间+误差棒
   preview: vault/material/plotmaster_058分面折线图+置信区间+误差棒/outputs/rebuilt.png

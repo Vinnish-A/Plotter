@@ -128,5 +128,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Volcano grammar and CSV roles are mostly clear, with caveats about duplicate compatibility columns and generic entry.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "compatibility_columns"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Reviewed source-style volcano image, CSV profile, plot.py, source evidence, visual_check, card, and prior review.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_002渐变火山图.yaml"
 }

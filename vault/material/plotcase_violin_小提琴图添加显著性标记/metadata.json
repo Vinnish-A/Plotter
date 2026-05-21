@@ -146,5 +146,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Reusable distribution grammar; still not core because standard entry omits violin and p-value behavior.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "bracket_metadata_incomplete"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Reviewed image, metadata, guide, source R, plot.py, data_main, visual_check, card, and previous review.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_violin_小提琴图添加显著性标记.yaml"
 }

@@ -1,51 +1,55 @@
 id: plotmaster_002渐变火山图
 title: 002渐变火山图
 retrieval_tier: support
-one_line: scatter asset for 002渐变火山图
-geometry: scatter
-subtype: volcano
+one_line: Labeled volcano plots with continuous color scale and cutoff lines.
+geometry: gradient_volcano_plot_with_thresholds_and_labels
+subtype: gradient_volcano_plot_with_thresholds_and_labels
 required_roles:
 - x
 - y
-- value
 optional_roles:
+- value
 - group
 - label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
+- threshold_x
+- threshold_y
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: false
   batch: true
 best_for:
-- 002渐变火山图
-- 'scatter/volcano grammar with roles: x, y, value'
+- Labeled volcano plots with continuous color scale and cutoff lines.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 112526; width: 1152; height: 1008'
+- Network, interval, or faceted volcano workflows without explicit facet metadata.
+image_summary: 'figure_type: gradient_volcano_plot_with_thresholds_and_labels; layout: Single volcano
+  scatter with vertical and horizontal dashed thresholds, colorbar legend, and selected gene labels near
+  extreme points.; marks: [''scat…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- compatibility_columns
+risk_notes:
+- Do not treat source/target/weight as graph roles.
+- Generic scatter output lacks volcano threshold semantics unless thresholds are explicit.
+- generic_renderer_entry
+- compatibility_columns
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_002渐变火山图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_002渐变火山图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_002渐变火山图.yaml
   evidence_pack: vault/material/plotmaster_002渐变火山图
   preview: vault/material/plotmaster_002渐变火山图/outputs/rebuilt.png

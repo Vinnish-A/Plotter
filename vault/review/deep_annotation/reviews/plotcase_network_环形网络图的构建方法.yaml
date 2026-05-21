@@ -1,0 +1,234 @@
+case_id: plotcase_network_环形网络图的构建方法
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_network_环形网络图的构建方法/metadata.json
+  - vault/material/plotcase_network_环形网络图的构建方法/agent_guide.md
+  - vault/material/plotcase_network_环形网络图的构建方法/plot.py
+  - vault/material/plotcase_network_环形网络图的构建方法/data_main.csv
+  - vault/material/plotcase_network_环形网络图的构建方法/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_network_环形网络图的构建方法.yaml
+  - vault/cards/plotcase_network_环形网络图的构建方法.yaml
+  - vault/review/deep_annotation/reviews/plotcase_network_环形网络图的构建方法.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_network_环形网络图的构建方法.yaml
+  asset_card: vault/cards/plotcase_network_环形网络图的构建方法.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_network_环形网络图的构建方法.yaml
+  image_inspected: vault/material/plotcase_network_环形网络图的构建方法/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_network_环形网络图的构建方法/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: circular_network
+  subtype: radial node-link graph with ring labels and varied node sizes
+  panel_count: 1
+  layout: single circular layout with nodes placed on circumference and chords crossing center
+  marks:
+  - colored circular nodes
+  - gray curved/straight links
+  - radial text labels
+  encodings:
+    angle: node order
+    node color: group/community
+    node size: importance or count candidate
+    edge: relationship
+  axes: none
+  legends: none visible
+  annotations:
+  - all node names placed around ring
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: network_graph
+    backend: R/ggraph-igraph
+    unit: node-link graph tables
+    required_data_roles:
+    - source
+    - target
+    - weight
+    optional_data_roles:
+    - node_id
+    - node_label
+    - node_group
+    - node_size
+    - edge_group
+    - edge_direction
+    - layout_x
+    - layout_y
+reviewed_visual_roles:
+  source: edge source supported by network image/title/data
+  target: edge target supported by network image/title/data
+  weight: edge weight/thickness candidate
+  node_id: node identity
+  node_label: node labels
+  source_group: group/color candidate
+  target_group: group/color candidate
+canonical_columns:
+- source
+- target
+- weight
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+- source_group
+- target_group
+required_data_semantics:
+  source: edge source node
+  target: edge target node
+  weight: edge weight or link strength
+optional_data_semantics:
+  node_id: node id
+  node_label: node label
+  source_group: source-side group
+  target_group: target-side group
+  node_group: empty
+  node_size: empty
+  edge_group: empty
+  edge_direction: empty
+  layout_x: empty
+  layout_y: empty
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - node_id
+  - node_label
+  - source_group
+  - target_group
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- layout_x/layout_y and node_size are empty, so observed ordering and sizes are not fully reproducible from CSV
+- false_positive_column:node_group
+- false_positive_column:node_size
+- false_positive_column:edge_group
+- false_positive_column:edge_direction
+- false_positive_column:layout_x
+- false_positive_column:layout_y
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Circular network visual grammar and radial label placement
+bad_for:
+- Exact chord routing or node-size recovery without extra data
+- Hierarchical circular trees
+style_notes:
+- Large centered white space makes crossing edges visible
+- Long radial labels need collision management
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - layout_x/layout_y and node_size are empty, so observed ordering and sizes are not fully reproducible from CSV
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single circular layout with nodes placed on circumference and chords crossing center
+  marks:
+  - colored circular nodes
+  - gray curved/straight links
+  - radial text labels
+  encodings:
+    angle: node order
+    node color: group/community
+    node size: importance or count candidate
+    edge: relationship
+  axes: none
+  legends: none visible
+  annotations:
+  - all node names placed around ring
+  text_density: high around perimeter
+  visual_risks:
+  - layout_x/layout_y and node_size are empty, so observed ordering and sizes are not fully reproducible from CSV
+data_understanding:
+  data_read: true
+  observed_columns:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  - source_group
+  - target_group
+  role_mapping:
+    source: edge source supported by network image/title/data
+    target: edge target supported by network image/title/data
+    weight: edge weight/thickness candidate
+    node_id: node identity
+    node_label: node labels
+    source_group: group/color candidate
+    target_group: group/color candidate
+  derived_columns: []
+  false_positive_columns:
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  missing_optional_data:
+  - data_optional.csv absent
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('network', '环形网络图的构建方法')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - layout_x/layout_y and node_size are empty, so observed ordering and sizes are not fully reproducible from CSV
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

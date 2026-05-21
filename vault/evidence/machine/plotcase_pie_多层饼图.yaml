@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_pie_多层饼图/metadata.json
     exists: true
-    size_bytes: 4466
+    size_bytes: 5092
   agent_guide:
     path: vault/material/plotcase_pie_多层饼图/agent_guide.md
     exists: true

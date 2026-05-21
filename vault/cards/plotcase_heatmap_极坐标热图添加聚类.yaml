@@ -1,9 +1,9 @@
 id: plotcase_heatmap_极坐标热图添加聚类
 title: 极坐标热图添加聚类
 retrieval_tier: inspiration
-one_line: heatmap asset for 极坐标热图添加聚类
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: radial multi-track heatmap inspiration
+geometry: radial clustered heatmap
+subtype: circular multi-ring heatmap with dendrogram
 required_roles:
 - row_id
 - column_id
@@ -18,34 +18,41 @@ optional_roles:
 - facet
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 极坐标热图添加聚类
-- 'heatmap/annotated_heatmap grammar with roles: row_id, column_id, value'
+- radial multi-track heatmap inspiration
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 522316; width: 1801; height: 1388'
+- core retrieval requiring real source labels/order
+image_summary: 'geometry: radial clustered heatmap; subtype: circular multi-ring heatmap with dendrogram;
+  layout: single radial cluster panel; primary_marks: [''concentric heatmap rings'', ''radial dendrogram'',
+  ''outside labels'', ''colorbar…'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
+- generic_renderer
+- misleading_metadata
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- synthetic_data
+- synthetic data flag; circular labels and branches are hard to reuse without ordering metadata
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_heatmap_极坐标热图添加聚类.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_极坐标热图添加聚类.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_极坐标热图添加聚类.yaml
   evidence_pack: vault/material/plotcase_heatmap_极坐标热图添加聚类
   preview: vault/material/plotcase_heatmap_极坐标热图添加聚类/outputs/rebuilt.png

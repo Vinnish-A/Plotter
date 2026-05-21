@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_雷达图_雷达图批量绘制/metadata.json
     exists: true
-    size_bytes: 3978
+    size_bytes: 4636
   agent_guide:
     path: vault/material/plotcase_雷达图_雷达图批量绘制/agent_guide.md
     exists: true

@@ -335,3 +335,6 @@ reviewed_summary:
     visual_grammar: 0.88
     data_roles: 0.74
     retrieval_tier: 0.82
+agent_default_entry: vault/cards/plotcase_network_STRING_BioNet网络模块解析代码实战.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

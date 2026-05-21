@@ -1,0 +1,90 @@
+case_id: plotmaster_047散点饼图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Reviewed scatter-pie image, source R, generic plot.py, data_main, visual evidence, card, and prior backfill."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotmaster_047散点饼图/metadata.json, vault/material/plotmaster_047散点饼图/agent_guide.md, vault/material/plotmaster_047散点饼图/plot.py, vault/material/plotmaster_047散点饼图/scripts/codes.R, vault/material/plotmaster_047散点饼图/data_main.csv, vault/material/plotmaster_047散点饼图/outputs/rebuilt.png, vault/material/plotmaster_047散点饼图/outputs/visual_check.json, vault/cards/plotmaster_047散点饼图.yaml, vault/review/deep_annotation/reviews/plotmaster_047散点饼图.yaml]
+  data_main_profile:
+    rows: 631
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  rebuilt_png: {width: 1008, height: 720, visual_check_ok: true}
+  original_rebuild_log: "R scatterpie source completed with deprecated aes_ warning."
+observed_visual_grammar:
+  figure_type: temporal_scatter_pie_plot
+  layout: "Single scatter-like panel with pies placed across ordered time bins, vertical dashed separators, proportion y-axis, and cell-type legend."
+  marks: [pie glyphs, dashed separators, axis labels, legend swatches]
+  encodings:
+    x: time bin and replicate order
+    y: proportion of residual cells
+    pie_slices: cell-type composition
+    pie_size: proportion magnitude or fixed glyph emphasis
+inferred_visual_grammar:
+  grammar_id: scatterpie_timepoint_composition
+  source_logic: "R reads Excel data and uses scatterpie to draw cell-type compositions at time/proportion coordinates."
+  current_standard_rebuild: "plot.py calls generic scatter and cannot draw pie glyphs."
+reviewed_visual_roles:
+  x: "Time/position coordinate."
+  y: "Proportion coordinate."
+  value: "Generic numeric value; not full pie composition."
+  group: "One cell type or grouping label in current flattening."
+  label: "Cell type/time label."
+  source: "Compatibility duplicate; not graph source."
+canonical_columns: [timepoint, x, y, pie_category, pie_value, pie_radius]
+required_data_semantics:
+  timepoint: "Ordered time bin."
+  x: "Horizontal glyph position."
+  y: "Vertical proportion."
+  pie_category: "Slice category."
+  pie_value: "Slice proportion."
+optional_data_semantics:
+  pie_radius: "Glyph radius or total proportion."
+  group: "Higher-level grouping if needed."
+optional_modules:
+  pie_glyphs: {status: observed}
+  time_separator_lines: {status: observed}
+false_positive_risks:
+  - "Do not treat x/y/value alone as a true scatter-pie contract."
+  - "Do not treat source/target/weight as graph roles."
+best_for:
+  - "Time-position scatter plots where each point is a compositional pie glyph."
+bad_for:
+  - "Plain scatter or pie charts without coordinate-positioned composition data."
+style_notes:
+  - "Large pastel pie glyphs, dashed vertical separators, time labels with sample counts, cell-type legend on right."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Strong source-backed scatterpie grammar, but current standard entry/data_main flatten the composition too aggressively."
+  exclusion_risks: [generic_renderer_entry, pie_slice_contract_missing]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Single temporal scatter-pie panel."
+  marks: [pie glyphs, separators, legend]
+  encodings: "Time by x groups, proportion by y, composition by pie slices."
+  axes: "Time labels on x and proportion y-axis."
+  legends: "Cell type legend."
+  annotations: "Sample counts in x tick labels."
+  text_density: moderate
+  visual_risks: "Small pie slices become unreadable at low radius."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  role_mapping: {x: x_position, y: proportion, value: flattened_value, group: pie_category, label: label}
+  derived_columns: [lower, upper]
+  false_positive_columns: [source, target, weight, facet]
+  missing_optional_data: [timepoint, pie_category, pie_value, pie_radius]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/scatterpie/tidyverse/readxl source."
+  entry_behavior: "plot.py calls render('scatter'); R source draws scatterpie glyphs."
+  hardcoded_aesthetics: "Time ordering, selected tissue, and cell-type columns are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank scatterpie output."
+  unsupported_features: [pie_glyphs_in_generic_renderer, composition_long_contract]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

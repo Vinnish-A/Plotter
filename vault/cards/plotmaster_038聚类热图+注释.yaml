@@ -1,9 +1,9 @@
 id: plotmaster_038聚类热图+注释
 title: 038聚类热图+注释
 retrieval_tier: inspiration
-one_line: heatmap asset for 038聚类热图+注释
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: compact clustered heatmap with annotation strip
+geometry: clustered annotated heatmap
+subtype: dendrogram plus compact heatmap strip
 required_roles:
 - x
 - y
@@ -12,41 +12,45 @@ optional_roles:
 - group
 - label
 - facet
-- source
-- target
-- weight
 - lower
 - upper
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: true
   composition: true
   batch: true
 best_for:
-- 038聚类热图+注释
-- 'heatmap/annotated_heatmap grammar with roles: x, y, value'
+- compact clustered heatmap with annotation strip
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 50629; width: 1440; height: 432'
+- core reproducible clustering without matrix and annotation tables
+image_summary: 'geometry: clustered annotated heatmap; subtype: dendrogram plus compact heatmap strip;
+  layout: single horizontal heatmap with top dendrogram; primary_marks: [''dendrogram branches'', ''heatmap
+  tiles'', ''annotation color str…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: [''circlize'', ''complexheatmap'']'
 risk_flags:
 - synthetic_data
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- synthetic_data
+- false_positive_columns:source,target,weight
+- generic_plotmaster_source_target_weight_columns_are_not_visual_roles
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotmaster_038聚类热图+注释.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_038聚类热图+注释.yaml
   machine_evidence: vault/evidence/machine/plotmaster_038聚类热图+注释.yaml
   evidence_pack: vault/material/plotmaster_038聚类热图+注释
   preview: vault/material/plotmaster_038聚类热图+注释/outputs/rebuilt.png

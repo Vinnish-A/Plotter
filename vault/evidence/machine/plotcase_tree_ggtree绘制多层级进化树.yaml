@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_tree_ggtree绘制多层级进化树/metadata.json
     exists: true
-    size_bytes: 4907
+    size_bytes: 5568
   agent_guide:
     path: vault/material/plotcase_tree_ggtree绘制多层级进化树/agent_guide.md
     exists: true

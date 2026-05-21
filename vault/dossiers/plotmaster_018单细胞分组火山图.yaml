@@ -1,10 +1,14 @@
 id: plotmaster_018单细胞分组火山图
 title: 018单细胞分组火山图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: reviewed
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Reviewed image, CSV, plot.py, source R, visual evidence, card, and prior
+    backfill.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_018单细胞分组火山图
   source:
@@ -349,3 +353,30 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_018单细胞分组火山图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Clear reusable grouped-volcano grammar, but current standard
+  entry needs subtype/regulation semantics to be explicit.
+exclusion_risks:
+- generic_renderer_entry
+- compatibility_columns
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_018单细胞分组火山图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_018单细胞分组火山图.yaml
+  geometry: grouped_single_cell_volcano_strip
+  subtype: grouped_volcano_by_cell_subtype
+  required_roles:
+  - cell_subtype
+  - log2_fold_change
+  - regulation
+  optional_roles:
+  - gene_label
+  - label_priority
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

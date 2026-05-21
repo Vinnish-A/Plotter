@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_062环形分组折线图/metadata.json
     exists: true
-    size_bytes: 2792
+    size_bytes: 3455
   agent_guide:
     path: vault/material/plotmaster_062环形分组折线图/agent_guide.md
     exists: true

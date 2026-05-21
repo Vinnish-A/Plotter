@@ -6,14 +6,34 @@ Run date: 2026-05-21
 
 - Machine evidence files: 156
 - Asset cards: 156
+- Deep review-layer files: 156
 - Skinny index records: 156
-- Retrieval tiers: 94 support, 62 inspiration
+- Retrieval tiers: 91 support, 63 inspiration, 2 archive
+
+## Deep Review Coverage
+
+- Standard material assets with `metadata.json`: 156
+- Assets with review-layer coverage: 156
+- Model/deep-reviewed assets: 156
+- Conservative machine-backfilled review records: 0
+- Incomplete review records: 0
+
+All standard `vault/material` assets now have review-layer records with model-assisted visual,
+data, and code inspection flags set true. The previous 126 conservative machine-backfilled records
+were replaced by subagent deep reviews. Some completed reviews keep a compact
+`annotation_status.replaces` pointer to the prior machine-backfill record for provenance; they are
+not incomplete backfills.
+
+Subagent run note: the run requested GPT-5.5 high-reasoning workers. The installed Codex registry
+reported actual model strings in the review files mostly as `gpt-5-codex` / `GPT-5 Codex`, with a
+small number of legacy or worker-reported variants. The reviews record the actual model string used
+by each worker.
 
 ## Size Budget
 
-- Index record size: min 756 chars, median 839 chars, max 1279 chars
-- Asset card size: min 1351 chars, median 1515 chars, max 2368 chars
-- Enforced limits: index record <= 2500 chars; asset card <= 8000 chars
+- Index record size: min 709 chars, median 850 chars, max 964 chars
+- Asset card size: min 1707 chars, median 2075.5 chars, max 3060 chars
+- Enforced limits: index record <= 1600 chars; asset card <= 8000 chars
 
 ## Default Index Slimming
 
@@ -34,14 +54,19 @@ The index keeps only retrieval-critical fields:
 - compact risk flags
 - preview, card, entry, and rebuild-class summary
 
+Index risk flags are now short machine-readable codes only. Human-readable explanations remain in
+`vault/cards/<case_id>.yaml` as card-level risk notes.
+
 ## Metadata And Dossier Slimming
 
-The 30 existing deep-reviewed cohort assets were slimmed through `apply_deep_annotation_reviews.py`.
+All 156 deep-reviewed material assets were slimmed through `apply_deep_annotation_reviews.py`.
 
 - Metadata now keeps compact retrieval fields plus `annotation_review_ref`.
 - Metadata no longer keeps full `reviewed_visual_grammar` or `reviewed_visual_roles` by default.
 - Canonical Dossiers now keep `reviewed_summary` instead of the full reviewed object.
 - Full model review content remains archived under `vault/review/deep_annotation/reviews/`.
+- Canonical Dossiers now declare `agent_default_entry`, `dossier_status: archival_full_record`,
+  and `machine_fields_are_not_authoritative: true`.
 
 ## Four-Layer Contract
 
@@ -52,13 +77,19 @@ The 30 existing deep-reviewed cohort assets were slimmed through `apply_deep_ann
 
 ## Remaining Risks
 
-- Unreviewed cards still rely on machine evidence for role summaries and are flagged with low confidence.
+- Cards with `image_not_model_reviewed`: 0
+- Cards with `roles_machine_inferred`: 0
+- Cards with conservative capabilities due to missing review: 0
+- Core seed candidates selected for manual/model review: 1
 - Existing legacy reviews were migrated into the new image/data/code understanding fields from already-recorded evidence, not from a new model pass.
 - `support` remains a retrieval tier, not a guarantee that the asset is a default-safe exemplar.
-- Capability inference for unreviewed machine cards is intentionally compact and should not be treated as full optional-module proof.
+- Many assets are still generic-renderer, fallback, synthetic, or thin-abstraction cases; the deep
+  reviews preserve those risks rather than promoting them to `core`.
 
 ## Next Batch
 
-Recommended next batch: 30 assets.
+Recommended next batch: no more annotation backfill is needed.
 
-Prioritize support-tier assets whose cards still carry `roles_machine_inferred` or `image_not_model_reviewed`, then include a smaller slice of inspiration-tier assets with high visual value but risky rebuild classes.
+Next work should review the high-risk `support` assets for possible Graft/Retinue repair, especially
+cases where the subagent review says the visible figure is richer than the standardized CSV or
+generic renderer can reproduce.

@@ -329,3 +329,6 @@ reviewed_summary:
     visual_observation: high
     source_rebuild_assessment: high
     data_semantics: medium
+agent_default_entry: vault/cards/plotcase_heatmap_scDotPlot绘制单细胞层次聚类气泡热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

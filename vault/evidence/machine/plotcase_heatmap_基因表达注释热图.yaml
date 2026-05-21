@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_heatmap_基因表达注释热图/metadata.json
     exists: true
-    size_bytes: 4409
+    size_bytes: 5374
   agent_guide:
     path: vault/material/plotcase_heatmap_基因表达注释热图/agent_guide.md
     exists: true

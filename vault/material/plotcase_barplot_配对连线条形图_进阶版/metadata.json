@@ -160,5 +160,19 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Visually distinctive and source-backed, but the standardized CSV does not encode the actual paired labels/links.",
+  "exclusion_risks": [
+    "data_main cannot regenerate the observed word-pair figure"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review_v1",
+    "replaces": "deep_annotation_machine_backfill_v1",
+    "reviewed_at": "2026-05-21T09:20:01.032527+00:00",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_barplot_配对连线条形图_进阶版.yaml"
 }

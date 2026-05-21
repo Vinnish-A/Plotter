@@ -17,6 +17,22 @@ from plotter.paths import material_root, repo_root
 from plotter.vault_status import rebuild_class
 
 
+ALLOWED_RISK_CODES = {
+    "synthetic_data",
+    "case_level_fallback",
+    "generic_renderer",
+    "image_not_model_reviewed",
+    "roles_machine_inferred",
+    "compatibility_columns",
+    "not_data_driven",
+    "misleading_metadata",
+    "missing_optional_data",
+    "statistical_claim_needs_review",
+    "capability_machine_inferred",
+    "blank_like_image",
+}
+
+
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
@@ -42,6 +58,17 @@ def tier_guard(tier: str, rebuild: dict[str, bool]) -> str:
     return tier
 
 
+def compact_risk_codes(flags: list) -> list[str]:
+    result = []
+    for flag in flags:
+        code = str(flag).strip()
+        if code == "generic_renderer_rebuild":
+            code = "generic_renderer"
+        if code in ALLOWED_RISK_CODES and code not in result:
+            result.append(code)
+    return result[:10]
+
+
 def record_from_card(card_path: Path, material: Path) -> dict[str, Any]:
     card = load_yaml(card_path)
     case_dir = material / str(card["id"])
@@ -56,7 +83,7 @@ def record_from_card(card_path: Path, material: Path) -> dict[str, Any]:
         "required_roles": card.get("required_roles", []),
         "optional_roles": card.get("optional_roles", []),
         "capabilities": card.get("capabilities", {}),
-        "risk_flags": card.get("risk_flags", []),
+        "risk_flags": compact_risk_codes(card.get("risk_flags", [])),
         "preview": (card.get("read_next") or {}).get("preview", ""),
         "card": str(card_path.relative_to(repo_root(card_path))),
         "entry": (card.get("read_next") or {}).get("entry", ""),
@@ -64,7 +91,7 @@ def record_from_card(card_path: Path, material: Path) -> dict[str, Any]:
     }
 
 
-def build_skinny_index(cards: Path, index: Path, material: Path, max_record_chars: int = 2500) -> dict[str, Any]:
+def build_skinny_index(cards: Path, index: Path, material: Path, max_record_chars: int = 1600) -> dict[str, Any]:
     records = []
     oversize = []
     for card_path in sorted(cards.glob("*.yaml")):
@@ -86,7 +113,7 @@ def main() -> int:
     parser.add_argument("--cards", type=Path, default=repo / "vault" / "cards")
     parser.add_argument("--index", type=Path, default=repo / "vault" / "index.jsonl")
     parser.add_argument("--material", type=Path, default=material_root(Path(__file__)))
-    parser.add_argument("--max-record-chars", type=int, default=2500)
+    parser.add_argument("--max-record-chars", type=int, default=1600)
     args = parser.parse_args()
     payload = build_skinny_index(args.cards.resolve(), args.index.resolve(), args.material.resolve(), args.max_record_chars)
     print(json.dumps(payload, indent=2, ensure_ascii=False))

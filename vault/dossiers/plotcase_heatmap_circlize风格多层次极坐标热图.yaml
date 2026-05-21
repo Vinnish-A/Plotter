@@ -1,10 +1,12 @@
 id: plotcase_heatmap_circlize风格多层次极坐标热图
 title: circlize风格多层次极坐标热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+  reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+  annotator_model: gpt-5-codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_heatmap_circlize风格多层次极坐标热图
   source:
@@ -297,3 +299,34 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_heatmap_circlize风格多层次极坐标热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Strong circular heatmap visual grammar, but current standard
+  CSV is a compact abstraction rather than the full metabolite table.
+exclusion_risks:
+- actual metabolite labels and ring values are not represented in data_main at observed
+  scale
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_circlize风格多层次极坐标热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_circlize风格多层次极坐标热图.yaml
+  geometry: annotated_heatmap
+  subtype: circular_multiring_heatmap
+  required_roles:
+  - row_id
+  - column_id
+  - value
+  optional_roles:
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - size_value
+  - label
+  tier: support
+  confidence:
+    overall: 0.74
+    image: 0.9
+    data: 0.62
+    code: 0.7

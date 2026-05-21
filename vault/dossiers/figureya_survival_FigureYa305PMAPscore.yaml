@@ -1,10 +1,14 @@
 id: figureya_survival_FigureYa305PMAPscore
 title: FigureYa305PMAPscore
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review
   human_review_required: false
+  reason: Replaced machine backfill after inspecting metadata, guide, entry script,
+    data profile, machine evidence, card, current review, and rebuilt image.
+  reviewed_at: '2026-05-21T17:03:36+08:00'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/figureya_survival_FigureYa305PMAPscore
   source:
@@ -306,3 +310,38 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/figureya_survival_FigureYa305PMAPscore.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: inspiration
+retrieval_rationale: The observed visual grammar is useful as a KM survival layout
+  reference, but current data/code do not faithfully rebuild it and the asset relies
+  on a case-level rendered-output fallback.
+exclusion_risks:
+- case_level_fallback
+- generic_renderer_entry
+- data_interface_placeholder
+- metadata_heatmap_false_positive
+annotation_review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa305PMAPscore.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/figureya_survival_FigureYa305PMAPscore.yaml
+  geometry: survival_step_curve
+  subtype: km_survival_curve_two_strata_with_risk_table
+  required_roles:
+  - time
+  - survival_probability
+  - stratum
+  optional_roles:
+  - censor_time
+  - risk_count
+  - p_value
+  - lower
+  - upper
+  - facet
+  tier: inspiration
+  confidence:
+    overall: medium
+    visual_grammar: high
+    data_roles: low
+    code_understanding: medium
+    reproducibility: low

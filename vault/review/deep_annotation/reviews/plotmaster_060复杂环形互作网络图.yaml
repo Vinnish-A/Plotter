@@ -1,0 +1,94 @@
+case_id: plotmaster_060复杂环形互作网络图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Reviewed image and source; source randomly samples a subset of edges and current CSV/plot entry do not encode the full circular network contract."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotmaster_060复杂环形互作网络图/metadata.json, vault/material/plotmaster_060复杂环形互作网络图/agent_guide.md, vault/material/plotmaster_060复杂环形互作网络图/plot.py, vault/material/plotmaster_060复杂环形互作网络图/scripts/codes.R, vault/material/plotmaster_060复杂环形互作网络图/data_main.csv, vault/material/plotmaster_060复杂环形互作网络图/outputs/rebuilt.png, vault/material/plotmaster_060复杂环形互作网络图/outputs/visual_check.json, vault/cards/plotmaster_060复杂环形互作网络图.yaml, vault/review/deep_annotation/reviews/plotmaster_060复杂环形互作网络图.yaml]
+  data_main_profile:
+    rows: 354
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  rebuilt_png: {width: 2448, height: 2160, visual_check_ok: true}
+  original_rebuild_log: "R source completed; source samples 198 rows after retaining first two rows."
+observed_visual_grammar:
+  figure_type: circular_hub_and_leaf_interaction_network_with_effect_legend
+  layout: "Large circular network with several central pollutant hub nodes, many radial metabolite leaves, colored edges, leaf colors by class, node size legend, class legend, and effect colorbar."
+  marks: [hub nodes, leaf nodes, radial edges, curved hub links, radial text labels, legends]
+  encodings:
+    hub_node: pollutant or source variable
+    leaf_node: biomarker/metabolite
+    edge_color: effect sign/magnitude
+    node_color: metabolite class
+    node_size: degree
+inferred_visual_grammar:
+  grammar_id: circular_bipartite_interaction_network_effect_class
+  source_logic: "R reads Excel, builds igraph/tidygraph edge data, samples edges, and plots with ggraph."
+  current_standard_rebuild: "plot.py calls generic network but current data_main uses x/y/value as primary roles and duplicates source/target/weight."
+reviewed_visual_roles:
+  source: "True edge source when treated as network table."
+  target: "True edge target when treated as network table."
+  weight: "Edge value/effect placeholder."
+  x: "Duplicate source-like value in current CSV, not coordinate x."
+  y: "Duplicate target-like value in current CSV, not coordinate y."
+  value: "Duplicate weight-like value."
+  label: "Node or item label."
+canonical_columns: [source, target, effect, p_value, node_class, degree, label]
+required_data_semantics:
+  source: "Hub/source node."
+  target: "Leaf/target node."
+  effect: "Edge color/magnitude."
+optional_data_semantics:
+  p_value: "Filtering or edge significance."
+  node_class: "Leaf color class."
+  degree: "Node size."
+  label: "Displayed node label."
+optional_modules:
+  hub_leaf_radial_layout: {status: observed}
+  class_legend: {status: observed}
+  effect_colorbar: {status: observed}
+false_positive_risks:
+  - "Do not use x/y as Cartesian coordinates; current CSV uses them as source/target compatibility values."
+  - "Random edge sampling and dense labels make this unsuitable for core."
+  - "Generic plot.py does not reproduce observed radial ggraph layout."
+best_for:
+  - "Support/inspiration for circular bipartite interaction networks with class-colored leaves and effect-colored edges."
+bad_for:
+  - "Exact full-network inference or dense graphs without label pruning."
+style_notes:
+  - "Very large white canvas, teal hub labels, long radial colored labels, multiple right-side legends, pale effect-colored edges."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Strong visual grammar and readable source, but random sampling and generic standard entry prevent core status."
+  exclusion_risks: [random_edge_sampling, generic_renderer_entry, dense_label_risk]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "One circular interaction network with legend stack on right."
+  marks: [nodes, edges, labels, legends]
+  encodings: "Hub/leaf topology by links, class by node/label color, effect by edge color, degree by node size."
+  axes: "No axes; radial layout."
+  legends: "Degree size legend, class legend, effect colorbar."
+  annotations: "Radial leaf labels and hub labels."
+  text_density: very_high
+  visual_risks: "Labels are extremely dense and partly clipped at canvas edges."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  role_mapping: {source: edge_source, target: edge_target, weight: edge_effect, label: node_label, value: edge_effect_duplicate}
+  derived_columns: [lower, upper]
+  false_positive_columns: [x, y, facet]
+  missing_optional_data: [node_class, degree, p_value]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/tidyverse/readxl/igraph/ggraph/tidygraph source."
+  entry_behavior: "plot.py calls render('network'); R source creates sampled circular interaction graph."
+  hardcoded_aesthetics: "Sampling count, class colors, set.seed, label placement, and effect scale are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank circular network output."
+  unsupported_features: [full_unsampled_network_contract, radial_label_collision_control, generic_renderer_equivalence]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_028分面双向柱状图+热图注释/metadata.json
     exists: true
-    size_bytes: 4513
+    size_bytes: 5316
   agent_guide:
     path: vault/material/plotmaster_028分面双向柱状图+热图注释/agent_guide.md
     exists: true

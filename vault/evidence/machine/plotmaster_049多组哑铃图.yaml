@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_049多组哑铃图/metadata.json
     exists: true
-    size_bytes: 3031
+    size_bytes: 4015
   agent_guide:
     path: vault/material/plotmaster_049多组哑铃图/agent_guide.md
     exists: true

@@ -1,0 +1,89 @@
+case_id: plotmaster_037分类变量环形热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Reviewed image and code; source contains a synthetic literature-evidence track, so the asset is useful but not core."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotmaster_037分类变量环形热图/metadata.json, vault/material/plotmaster_037分类变量环形热图/agent_guide.md, vault/material/plotmaster_037分类变量环形热图/plot.py, vault/material/plotmaster_037分类变量环形热图/scripts/codes.R, vault/material/plotmaster_037分类变量环形热图/data_main.csv, vault/material/plotmaster_037分类变量环形热图/outputs/rebuilt.png, vault/material/plotmaster_037分类变量环形热图/outputs/visual_check.json, vault/cards/plotmaster_037分类变量环形热图.yaml, vault/review/deep_annotation/reviews/plotmaster_037分类变量环形热图.yaml]
+  data_main_profile:
+    rows: 800
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  rebuilt_png: {width: 1440, height: 1440, visual_check_ok: true}
+  original_rebuild_log: "R circlize source completed with out-of-region notes."
+observed_visual_grammar:
+  figure_type: circular_categorical_evidence_heatmap_with_outer_bar_track
+  layout: "Circular multi-ring heatmap around gene labels, inner legend block, and outer tan bar track for multi-omics evidence."
+  marks: [radial heatmap cells, outer bars, gene labels, central legend]
+  encodings:
+    radial_item: gene/node identity
+    ring: evidence source
+    cell_color: evidence category/value
+    outer_bar_height: evidence count or score
+inferred_visual_grammar:
+  grammar_id: circlize_multiring_categorical_heatmap
+  source_logic: "R reads multiple Excel sheets, merges evidence columns, and draws circlize rings plus outer bars."
+  current_standard_rebuild: "plot.py calls generic heatmap, not circular rings."
+reviewed_visual_roles:
+  x: "Feature/gene or evidence category in current CSV."
+  y: "Ring/row placeholder."
+  value: "Cell value."
+  label: "Gene label."
+  source: "Duplicate x-like compatibility column, not network source."
+  target: "Duplicate y-like compatibility column, not network target."
+canonical_columns: [item_id, ring, value, evidence_label, outer_score]
+required_data_semantics:
+  item_id: "Radial gene/item identity."
+  ring: "Evidence track identity."
+  value: "Categorical or numeric ring value."
+optional_data_semantics:
+  outer_score: "Outer bar magnitude."
+  evidence_label: "Central legend label."
+optional_modules:
+  outer_bar_track: {status: observed}
+  central_legend: {status: observed}
+  synthetic_literature_track: {status: present_in_source}
+false_positive_risks:
+  - "Do not treat source/target/weight as graph roles."
+  - "One source track was duplicated synthetically in R; do not infer full evidence support for it."
+best_for:
+  - "Circular multi-track categorical evidence heatmap layouts."
+bad_for:
+  - "Core data-backed evidence aggregation without verifying every source track."
+style_notes:
+  - "Pastel radial rings, central numbered legend, dense gene labels, tan outer bar track."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Strong visual grammar and source evidence, but synthetic track and generic standard entry keep it below core."
+  exclusion_risks: [synthetic_track, generic_renderer_entry, circular_track_contract_missing]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: medium, source_rebuild_assessment: high}
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Circular multi-ring plot with central legend."
+  marks: [radial cells, outer bars, labels]
+  encodings: "Tracks by ring, values by color, outer score by bar height."
+  axes: "Radial item labels; no Cartesian axes."
+  legends: "Central evidence legend."
+  annotations: "Numbered ring labels in center gap."
+  text_density: very_high
+  visual_risks: "Dense radial gene labels and out-of-region notes suggest clipping risk."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  role_mapping: {x: item_or_category, y: ring, value: evidence_value, label: item_label}
+  derived_columns: [lower, upper]
+  false_positive_columns: [source, target, weight, facet]
+  missing_optional_data: [ring, outer_score, evidence_label]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus R/circlize/readxl source."
+  entry_behavior: "plot.py calls render('heatmap'); R source builds circular evidence heatmap."
+  hardcoded_aesthetics: "Ring order, color mode, and synthetic literature track are coded in R."
+  output_behavior: "Existing rebuilt.png is nonblank circular output."
+  unsupported_features: [circular_ring_renderer_in_generic_entry, verified_non_synthetic_tracks]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

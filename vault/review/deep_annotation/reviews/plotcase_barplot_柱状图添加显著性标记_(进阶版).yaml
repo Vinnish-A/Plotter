@@ -1,0 +1,211 @@
+case_id: plotcase_barplot_柱状图添加显著性标记_(进阶版)
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/metadata.json
+  - vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/agent_guide.md
+  - vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/plot.py
+  - vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/data_main.csv
+  - vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
+  - vault/cards/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
+  - vault/review/deep_annotation/reviews/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
+  asset_card: vault/cards/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_barplot_柱状图添加显著性标记_(进阶版).yaml
+  image_inspected: vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: grouped_bar_with_significance
+  subtype: grouped bar chart with error bars, point overlays, brackets, and star labels
+  panel_count: 1
+  layout: single wide Cartesian panel with eight x categories and four legend groups
+  marks:
+  - vertical grouped bars
+  - black error bars
+  - gray replicate diamonds
+  - significance brackets
+  - star annotations
+  encodings:
+    x: gene/category labels
+    y: RNA level fold change
+    fill: condition/genotype legend
+    stars: visual significance callouts
+  axes: categorical x axis; y axis labeled RNA leves (fold vs Col0)
+  legends: right legend for four groups
+  annotations:
+  - multiple star labels and bracket comparisons above bars
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: bar_composite
+    backend: R/ggplot2
+    unit: category-value summary table
+    required_data_roles:
+    - category
+    - value
+    optional_data_roles:
+    - group
+    - stack
+    - error_low
+    - error_high
+    - line_value
+    - annotation_value
+    - label
+reviewed_visual_roles:
+  category: x-category labels visible on the axis
+  value: bar height
+  group: bar fill grouping
+  error_low/error_high: error interval limits
+  annotation_value: empty despite significance marks
+  label: empty
+canonical_columns:
+- category
+- value
+- group
+- stack
+- error_low
+- error_high
+- line_value
+- annotation_value
+- label
+required_data_semantics:
+  category: x-axis category for each bar group
+  value: bar height
+optional_data_semantics:
+  group: bar/legend grouping
+  error_low: lower error extent
+  error_high: upper error extent
+  stack: not visually used here
+  line_value: not visually used here
+  annotation_value: empty; cannot support visible star/bracket labels
+  label: empty
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - group
+  - error_low
+  - error_high
+  - stack
+  - line_value
+  - annotation_value
+  - label
+  requires_custom_layout_for_full_rebuild: false
+false_positive_risks:
+- significance values are rendered as stars but p-value source is not present in data_main.csv
+- false_positive_column:stack
+- false_positive_column:line_value
+- false_positive_column:annotation_value
+- false_positive_column:label
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Grouped summary bar charts with error bars and compact significance callouts
+bad_for:
+- Exact statistical annotation recovery without p-value/bracket data
+- Stacked or line-overlay charts despite compatible columns
+style_notes:
+- High contrast bars with restrained replicate overlays
+- Legend is outside plotting body
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - significance values are rendered as stars but p-value source is not present in data_main.csv
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single wide Cartesian panel with eight x categories and four legend groups
+  marks:
+  - vertical grouped bars
+  - black error bars
+  - gray replicate diamonds
+  - significance brackets
+  - star annotations
+  encodings:
+    x: gene/category labels
+    y: RNA level fold change
+    fill: condition/genotype legend
+    stars: visual significance callouts
+  axes: categorical x axis; y axis labeled RNA leves (fold vs Col0)
+  legends: right legend for four groups
+  annotations:
+  - multiple star labels and bracket comparisons above bars
+  text_density: moderate; labels remain readable
+  visual_risks:
+  - significance values are rendered as stars but p-value source is not present in data_main.csv
+data_understanding:
+  data_read: true
+  observed_columns:
+  - category
+  - value
+  - group
+  - stack
+  - error_low
+  - error_high
+  - line_value
+  - annotation_value
+  - label
+  role_mapping:
+    category: x-category labels visible on the axis
+    value: bar height
+    group: bar fill grouping
+    error_low/error_high: error interval limits
+    annotation_value: empty despite significance marks
+    label: empty
+  derived_columns: []
+  false_positive_columns:
+  - stack
+  - line_value
+  - annotation_value
+  - label
+  missing_optional_data:
+  - data_optional.csv absent
+  - annotation_value
+  - label
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('bar', '柱状图添加显著性标记_(进阶版)')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - significance values are rendered as stars but p-value source is not present in data_main.csv
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

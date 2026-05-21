@@ -136,5 +136,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Strong reusable chord grammar and source script, but standard entry is generic and the abstract CSV is a small link sketch rather than the full matrix.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "matrix_to_link_abstraction_gap"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Image, data, R source, generic plot.py, machine evidence, card, and prior backfill were inspected.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_circos_circlize优雅绘制多重注释弦图.yaml"
 }

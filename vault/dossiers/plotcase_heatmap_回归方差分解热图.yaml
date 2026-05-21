@@ -1,10 +1,13 @@
 id: plotcase_heatmap_回归方差分解热图
 title: 回归方差分解热图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: reviewed
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  reason: Image, data, code, machine evidence, card, and prior review were inspected.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotcase_heatmap_回归方差分解热图
   source:
@@ -297,3 +300,31 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotcase_heatmap_回归方差分解热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Source grammar is reusable and evidence is readable, but standard
+  CSV and Python entry still understate the visible composition.
+exclusion_risks:
+- generic_renderer_entry
+- summary_track_not_encoded
+annotation_review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_回归方差分解热图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotcase_heatmap_回归方差分解热图.yaml
+  geometry: variance_decomposition_bar_plus_bubble_heatmap
+  subtype: regression_variance_decomposition_heatmap
+  required_roles:
+  - row_id
+  - column_id
+  - value
+  optional_roles:
+  - importance
+  - p_value
+  - explained_variation
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

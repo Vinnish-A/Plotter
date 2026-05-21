@@ -164,5 +164,22 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Distinct visual grammar, but dependency failure and weak current CSV abstraction keep it out of support/core use.",
+  "exclusion_risks": [
+    "missing_dependency_linkET",
+    "generic_renderer_entry",
+    "incomplete_data_contract"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Observed image is specialized and useful, but source rebuild failed because linkET is unavailable and data_main only encodes a generic heatmap grid.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_heatmap_ARG丰度与环境因子相关性网络热图.yaml"
 }

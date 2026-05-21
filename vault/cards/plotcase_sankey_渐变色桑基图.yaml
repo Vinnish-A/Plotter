@@ -1,9 +1,9 @@
 id: plotcase_sankey_渐变色桑基图
 title: 渐变色桑基图
 retrieval_tier: inspiration
-one_line: flow asset for 渐变色桑基图
-geometry: flow
-subtype: sankey_or_alluvial
+one_line: Alluvial/Sankey inspiration with smooth gradients and stage labels
+geometry: multistage_sankey
+subtype: gradient alluvial flow across four labeled stages
 required_roles:
 - stage
 - node
@@ -24,28 +24,35 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 渐变色桑基图
-- 'flow/sankey_or_alluvial grammar with roles: stage, node, next_stage, next_node, value'
+- Alluvial/Sankey inspiration with smooth gradients and stage labels
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 176561; width: 1412; height: 881'
+- Core rebuild without alluvial renderer
+- Dense stage labels with many long names
+image_summary: 'geometry: multistage_sankey; subtype: gradient alluvial flow across four labeled stages;
+  panel_count: 1; layout: left-to-right alluvial diagram with bottom stage labels'
 data_summary: 'main_columns: [''stage'', ''node'', ''next_stage'', ''next_node'', ''value'', ''flow_id'',
   ''group'', ''node_color'', ''label'', ''order'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- fallback case; plot.py network renderer cannot reproduce gradient alluvial ribbons
+- false_positive_column:node_color
+- false_positive_column:label
+- case_level_fallback
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_sankey_渐变色桑基图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_sankey_渐变色桑基图.yaml
   machine_evidence: vault/evidence/machine/plotcase_sankey_渐变色桑基图.yaml
   evidence_pack: vault/material/plotcase_sankey_渐变色桑基图
   preview: vault/material/plotcase_sankey_渐变色桑基图/outputs/rebuilt.png

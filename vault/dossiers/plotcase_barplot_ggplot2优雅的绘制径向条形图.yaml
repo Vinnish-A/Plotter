@@ -297,3 +297,6 @@ reviewed_summary:
     visual_identification: 0.97
     source_code_assessment: 0.92
     current_contract_fit: 0.3
+agent_default_entry: vault/cards/plotcase_barplot_ggplot2优雅的绘制径向条形图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

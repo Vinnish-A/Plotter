@@ -1,9 +1,9 @@
 id: plotcase_heatmap_基因表达注释热图
 title: 基因表达注释热图
 retrieval_tier: inspiration
-one_line: heatmap asset for 基因表达注释热图
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: inspiration for gene heatmap layout with top annotations
+geometry: annotated expression heatmap
+subtype: clustered vertical heatmap with sample annotation
 required_roles:
 - row_id
 - column_id
@@ -18,34 +18,40 @@ optional_roles:
 - facet
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 基因表达注释热图
-- 'heatmap/annotated_heatmap grammar with roles: row_id, column_id, value'
+- inspiration for gene heatmap layout with top annotations
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 168815; width: 937; height: 1537'
+- core reusable heatmap without original annotation tables
+image_summary: 'geometry: annotated expression heatmap; subtype: clustered vertical heatmap with sample
+  annotation; layout: single heatmap panel with side legend; primary_marks: [''rectangular heatmap cells'',
+  ''top annotation strip'', ''ro…'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: [''circlize'', ''complexheatmap'']'
 risk_flags:
 - case_level_fallback
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- case_level_fallback
+- visible_image_requires_semantics_not_present_in_data_main
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_heatmap_基因表达注释热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_基因表达注释热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_基因表达注释热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_基因表达注释热图
   preview: vault/material/plotcase_heatmap_基因表达注释热图/outputs/rebuilt.png

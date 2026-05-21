@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_017基因融合热图+堆积柱状图/metadata.json
     exists: true
-    size_bytes: 3898
+    size_bytes: 4781
   agent_guide:
     path: vault/material/plotmaster_017基因融合热图+堆积柱状图/agent_guide.md
     exists: true

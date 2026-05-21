@@ -35,10 +35,13 @@ data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''f
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
+- generic_renderer
+- misleading_metadata
+- compatibility_columns
+risk_notes:
 - Current dossier incorrectly labels the asset as scatter/pca_or_manifold.
-- Metadata visual_keywords include 3d_manifold, which is not visible in rebuilt.p…
-- Do not treat x/y/value/source/target/weight compatibility columns as visual evi…
+- Metadata visual_keywords include 3d_manifold, which is not visible in rebuilt.png.
+- Do not treat x/y/value/source/target/weight compatibility columns as visual evidence.
 - misleading manifold/scatter metadata
 - generic renderer entry mismatch
 - noncanonical current data_main interface
@@ -46,6 +49,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/figureya_survival_FigureYa66UnivariateCox.yaml
   deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa66UnivariateCox.yaml

@@ -1,0 +1,229 @@
+case_id: plotcase_heatmap_环状分组热图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_heatmap_环状分组热图/metadata.json
+  - vault/material/plotcase_heatmap_环状分组热图/agent_guide.md
+  - vault/material/plotcase_heatmap_环状分组热图/plot.py
+  - vault/material/plotcase_heatmap_环状分组热图/data_main.csv
+  - vault/material/plotcase_heatmap_环状分组热图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_heatmap_环状分组热图.yaml
+  - vault/cards/plotcase_heatmap_环状分组热图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_heatmap_环状分组热图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_heatmap_环状分组热图.yaml
+  asset_card: vault/cards/plotcase_heatmap_环状分组热图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_heatmap_环状分组热图.yaml
+  image_inspected: vault/material/plotcase_heatmap_环状分组热图/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_heatmap_环状分组热图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: circular_heatmap
+  subtype: annular heatmap with group ring and central colorbar
+  panel_count: 1
+  layout: single circular matrix with inner heatmap rings, outer group band, radial row labels, and central horizontal
+    colorbar
+  marks:
+  - annular heatmap tiles
+  - outer colored group arc
+  - numeric cell labels
+  - red cell outline
+  encodings:
+    angle: row/category identity
+    radius: column/ring identity
+    fill: continuous value
+    outer arc: row group
+  axes: polar categorical labels; no Cartesian axes
+  legends: horizontal colorbar inside circle
+  annotations:
+  - numeric tile labels
+  - group label Plant (PL)
+  - highlight outline
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: annotated_heatmap
+    backend: R/ggplot2
+    unit: long matrix table with optional row/column annotations
+    required_data_roles:
+    - row_id
+    - column_id
+    - value
+    optional_data_roles:
+    - row_group
+    - column_group
+    - annotation_track
+    - annotation_value
+    - label
+    - size_value
+    - facet
+reviewed_visual_roles:
+  row_id: angular row/category identity
+  column_id: ring/column identity
+  value: tile fill and printed numeric value
+  row_group: outer arc grouping
+  column_group: ring grouping candidate
+  annotation_track: annotation track candidate
+  annotation_value: annotation value candidate
+  size_value: not visually mapped to size
+  label: empty
+  facet: empty
+canonical_columns:
+- row_id
+- column_id
+- value
+- row_group
+- column_group
+- annotation_track
+- annotation_value
+- label
+- size_value
+- facet
+required_data_semantics:
+  row_id: row/category identity around circle
+  column_id: ring/column identity
+  value: continuous heatmap value
+optional_data_semantics:
+  row_group: outer group arc
+  column_group: column/ring grouping candidate
+  annotation_track: annotation track name
+  annotation_value: annotation class/value
+  size_value: not visually used
+  label: empty
+  facet: empty
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - size_value
+  - label
+  - facet
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- generic heatmap entry cannot reproduce polar geometry; row/column groups are roles but exact radial layout is
+  custom
+- false_positive_column:size_value
+- false_positive_column:label
+- false_positive_column:facet
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Circular grouped heatmaps with numeric labels and group arcs
+bad_for:
+- Standard rectangular heatmap retrieval
+- Exact polar spacing without custom layout code
+style_notes:
+- Central legend avoids outer clutter
+- Numeric labels are readable but dense
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - generic heatmap entry cannot reproduce polar geometry; row/column groups are roles but exact radial layout is
+    custom
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single circular matrix with inner heatmap rings, outer group band, radial row labels, and central horizontal
+    colorbar
+  marks:
+  - annular heatmap tiles
+  - outer colored group arc
+  - numeric cell labels
+  - red cell outline
+  encodings:
+    angle: row/category identity
+    radius: column/ring identity
+    fill: continuous value
+    outer arc: row group
+  axes: polar categorical labels; no Cartesian axes
+  legends: horizontal colorbar inside circle
+  annotations:
+  - numeric tile labels
+  - group label Plant (PL)
+  - highlight outline
+  text_density: high inside ring
+  visual_risks:
+  - generic heatmap entry cannot reproduce polar geometry; row/column groups are roles but exact radial layout is
+    custom
+data_understanding:
+  data_read: true
+  observed_columns:
+  - row_id
+  - column_id
+  - value
+  - row_group
+  - column_group
+  - annotation_track
+  - annotation_value
+  - label
+  - size_value
+  - facet
+  role_mapping:
+    row_id: angular row/category identity
+    column_id: ring/column identity
+    value: tile fill and printed numeric value
+    row_group: outer arc grouping
+    column_group: ring grouping candidate
+    annotation_track: annotation track candidate
+    annotation_value: annotation value candidate
+    size_value: not visually mapped to size
+    label: empty
+    facet: empty
+  derived_columns: []
+  false_positive_columns:
+  - size_value
+  - label
+  - facet
+  missing_optional_data:
+  - data_optional.csv absent
+  - label
+  - facet
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('heatmap', '环状分组热图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - generic heatmap entry cannot reproduce polar geometry; row/column groups are roles but exact radial layout is
+    custom
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

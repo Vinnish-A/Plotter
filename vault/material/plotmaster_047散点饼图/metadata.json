@@ -164,5 +164,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Strong source-backed scatterpie grammar, but current standard entry/data_main flatten the composition too aggressively.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "pie_slice_contract_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Reviewed scatter-pie image, source R, generic plot.py, data_main, visual evidence, card, and prior backfill.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_047散点饼图.yaml"
 }

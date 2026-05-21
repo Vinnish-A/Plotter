@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_基因组图_比较基因组结构图/metadata.json
     exists: true
-    size_bytes: 3974
+    size_bytes: 4976
   agent_guide:
     path: vault/material/plotcase_基因组图_比较基因组结构图/agent_guide.md
     exists: true

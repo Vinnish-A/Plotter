@@ -1,9 +1,9 @@
 id: plotcase_综合图_多分组统计与差异变化综合图
 title: 多分组统计与差异变化综合图
-retrieval_tier: support
-one_line: network asset for 多分组统计与差异变化综合图
-geometry: network
-subtype: node_link_network
+retrieval_tier: inspiration
+one_line: inspiration for compact multi-track statistical summaries
+geometry: multi-panel statistical composite
+subtype: bar summary plus differential marks plus heatstrip
 required_roles:
 - source
 - target
@@ -25,28 +25,34 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 多分组统计与差异变化综合图
-- 'network/node_link_network grammar with roles: source, target, weight'
+- inspiration for compact multi-track statistical summaries
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 196068; width: 1981; height: 1537'
+- network retrieval or core rebuild from edge-list data
+image_summary: 'geometry: multi-panel statistical composite; subtype: bar summary plus differential marks
+  plus heatstrip; layout: three vertically stacked panels sharing many x labels; primary_marks: [''top
+  grouped bars'', ''middle signed…'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- false_positive_columns:source,target,weight,node_id,node_label
+- declared_network_contract_does_not_match_observed_composite
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotcase_综合图_多分组统计与差异变化综合图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_综合图_多分组统计与差异变化综合图.yaml
   machine_evidence: vault/evidence/machine/plotcase_综合图_多分组统计与差异变化综合图.yaml
   evidence_pack: vault/material/plotcase_综合图_多分组统计与差异变化综合图
   preview: vault/material/plotcase_综合图_多分组统计与差异变化综合图/outputs/rebuilt.png

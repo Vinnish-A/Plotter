@@ -1,13 +1,12 @@
 id: plotcase_tree_ggtree绘制多层级进化树
 title: ggtree绘制多层级进化树
 retrieval_tier: support
-one_line: network asset for ggtree绘制多层级进化树
-geometry: network
-subtype: node_link_network
+one_line: circular ggtree-style trees with tip annotations
+geometry: circular_phylogenetic_tree_annotations
+subtype: radial_dendrogram_with_tip_tracks
 required_roles:
 - node_id
 - parent_id
-- label
 optional_roles:
 - branch_length
 - tip_group
@@ -16,34 +15,42 @@ optional_roles:
 - track_class
 - heatmap_value
 capabilities:
-  highlight: true
+  highlight: false
   detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- ggtree绘制多层级进化树
-- 'network/node_link_network grammar with roles: node_id, parent_id, label'
+- circular ggtree-style trees with tip annotations
+- tree plus categorical metadata examples
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 462795; width: 1770; height: 1498'
+- ordinary node-link networks
+- exact phylogeny recovery from current CSV
+image_summary: 'geometry: circular_phylogenetic_tree_annotations; subtype: radial_dendrogram_with_tip_tracks;
+  description: Large circular phylogenetic tree/dendrogram with colored branches, tip dots, outer star
+  annotation ring, and mul…'
 data_summary: 'main_columns: [''node_id'', ''parent_id'', ''label'', ''branch_length'', ''tip_group'',
   ''track'', ''track_value'', ''track_class'', ''heatmap_value'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: [''ggtree'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- data_main is small placeholder tree data and not the observed hundreds of tips
+- current plot.py is a generic network wrapper
+- full topology and annotations are absent from data_main
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_tree_ggtree绘制多层级进化树.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_tree_ggtree绘制多层级进化树.yaml
   machine_evidence: vault/evidence/machine/plotcase_tree_ggtree绘制多层级进化树.yaml
   evidence_pack: vault/material/plotcase_tree_ggtree绘制多层级进化树
   preview: vault/material/plotcase_tree_ggtree绘制多层级进化树/outputs/rebuilt.png

@@ -1,0 +1,155 @@
+case_id: plotcase_tree_ggtree绘制多层级进化树
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_tree_ggtree绘制多层级进化树/metadata.json
+  - vault/material/plotcase_tree_ggtree绘制多层级进化树/agent_guide.md
+  - vault/material/plotcase_tree_ggtree绘制多层级进化树/plot.py
+  - vault/material/plotcase_tree_ggtree绘制多层级进化树/data_main.csv
+  - vault/material/plotcase_tree_ggtree绘制多层级进化树/outputs/rebuilt.png
+  - vault/material/plotcase_tree_ggtree绘制多层级进化树/outputs/visual_check.json
+  - vault/evidence/machine/plotcase_tree_ggtree绘制多层级进化树.yaml
+  - vault/cards/plotcase_tree_ggtree绘制多层级进化树.yaml
+  - vault/review/deep_annotation/reviews/plotcase_tree_ggtree绘制多层级进化树.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotcase_tree_ggtree绘制多层级进化树.yaml
+  asset_card: vault/cards/plotcase_tree_ggtree绘制多层级进化树.yaml
+  image: vault/material/plotcase_tree_ggtree绘制多层级进化树/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1770
+    height: 1498
+    mean_stddev: 30.135
+  build:
+    status: build_success
+    language: R
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: high
+    last_built_at: '2026-05-17T12:30:12.660833+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: circular_phylogenetic_tree_annotations
+  subtype: radial_dendrogram_with_tip_tracks
+  description: Large circular phylogenetic tree/dendrogram with colored branches, tip dots, outer star annotation
+    ring, and multiple legends.
+inferred_visual_grammar:
+  grammar_id: circular_phylogenetic_tree_annotations
+  summary: Radial tree with node/parent topology plus tip-level categorical annotation tracks.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  node_id: tree node/tip id
+  parent_id: parent-child topology
+  branch_length: branch length/radius if available
+  tip_group: tip dot or branch category
+  track_class: outer annotation class
+canonical_columns: &id001
+- node_id
+- parent_id
+- label
+- branch_length
+- tip_group
+- track
+- track_value
+- track_class
+- heatmap_value
+required_data_semantics:
+  node_id: node or tip identifier
+  parent_id: tree parent identifier
+optional_data_semantics:
+  branch_length: edge length
+  tip_group: tip or branch category
+  track: annotation track name
+  track_value: track value
+  track_class: track class
+  heatmap_value: optional heatmap/continuous track
+optional_modules:
+  radial_tree_layout:
+    supported: true
+  tip_annotation_rings:
+    supported: true
+  branch_coloring:
+    supported: true
+false_positive_risks:
+- data_main is small placeholder tree data and not the observed hundreds of tips
+- current plot.py is a generic network wrapper
+best_for:
+- circular ggtree-style trees with tip annotations
+- tree plus categorical metadata examples
+bad_for:
+- ordinary node-link networks
+- exact phylogeny recovery from current CSV
+style_notes:
+- large white center improves tree readability; legends are outside right
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Observed grammar is a strong radial tree example, but standardized data are reduced placeholders.
+  exclusion_risks:
+  - full topology and annotations are absent from data_main
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single circular tree with right-side legends
+  marks:
+  - tree branches
+  - tip dots
+  - outer stars
+  - legend glyphs
+  encodings:
+    branch_color: group
+    tip_dot_color: region
+    outer_star_color: park/category
+  axes: none
+  legends: Region, Park, and group legends
+  annotations: tip/track glyphs; labels mostly suppressed
+  text_density: medium
+  visual_risks:
+  - tip annotation rings require synchronized ordering
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    node_id: tree node/tip id role
+    parent_id: tree topology role
+    branch_length: edge length proxy
+    tip_group: tip category
+    track/track_value/track_class: annotation track support
+    heatmap_value: optional continuous track
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

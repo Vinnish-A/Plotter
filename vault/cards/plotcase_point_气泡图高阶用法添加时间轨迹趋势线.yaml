@@ -1,20 +1,17 @@
 id: plotcase_point_气泡图高阶用法添加时间轨迹趋势线
 title: 气泡图高阶用法添加时间轨迹趋势线
 retrieval_tier: inspiration
-one_line: bubble asset for 气泡图高阶用法添加时间轨迹趋势线
-geometry: bubble
-subtype: bubble
+one_line: Inspiration for ordination scatterplots with curved temporal trajectories.
+geometry: bubble_scatter_with_time_trajectory_curves
+subtype: bubble_scatter_with_time_trajectory_curves
 required_roles:
 - x
 - y
-optional_roles:
 - group
-- value
+optional_roles:
+- timepoint
 - size_value
-- label
-- threshold
-- facet
-- highlight
+- trajectory_id
 capabilities:
   highlight: true
   detail_panel: false
@@ -23,28 +20,37 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 气泡图高阶用法添加时间轨迹趋势线
-- 'bubble/bubble grammar with roles: x, y'
+- Inspiration for ordination scatterplots with curved temporal trajectories.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 115996; width: 1439; height: 995'
+- Plain scatterplots or clean rebuilds without explicit trajectory metadata.
+image_summary: 'figure_type: bubble_scatter_with_time_trajectory_curves; layout: Single NMDS scatter panel
+  with many colored bubble groups, curved arrow trajectories, and right-side species legend.; marks: [''bubbles'',
+  ''curved arrows'', …'
 data_summary: 'main_columns: [''x'', ''y'', ''group'', ''value'', ''size_value'', ''label'', ''threshold'',
   ''facet'', ''highlight'']; sampled_rows: 29'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- misleading_metadata
+risk_notes:
+- Do not treat threshold/facet/highlight as active visible modules.
+- Do not promote to core because this is a visual-audit fallback.
+- case_level_fallback
+- generic_renderer_entry
+- trajectory_metadata_missing
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml
   machine_evidence: vault/evidence/machine/plotcase_point_气泡图高阶用法添加时间轨迹趋势线.yaml
   evidence_pack: vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线
   preview: vault/material/plotcase_point_气泡图高阶用法添加时间轨迹趋势线/outputs/rebuilt.png

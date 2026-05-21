@@ -148,5 +148,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Distinct source-backed composition, but current data_main omits the paired-link and bubble-panel contracts.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "multi_table_contract_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Reviewed visual composite, data_main, plot.py, source R, visual_check, card, and existing review.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_heatmap_配对连线热图.yaml"
 }

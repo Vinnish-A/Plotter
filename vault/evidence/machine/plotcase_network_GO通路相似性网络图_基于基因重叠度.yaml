@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/metadata.json
     exists: true
-    size_bytes: 4553
+    size_bytes: 5542
   agent_guide:
     path: vault/material/plotcase_network_GO通路相似性网络图_基于基因重叠度/agent_guide.md
     exists: true

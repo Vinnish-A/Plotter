@@ -1,9 +1,9 @@
 id: plotmaster_056复杂网络图
 title: 056复杂网络图
 retrieval_tier: support
-one_line: scatter asset for 056复杂网络图
-geometry: scatter
-subtype: pca_or_manifold
+one_line: inspiration for multi-layer bipartite enrichment networks
+geometry: bipartite enrichment network
+subtype: dense metabolite-class association network
 required_roles:
 - x
 - y
@@ -12,40 +12,43 @@ optional_roles:
 - group
 - label
 - facet
-- source
-- target
-- weight
 - lower
 - upper
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: true
-  composition: false
+  composition: true
   batch: true
 best_for:
-- 056复杂网络图
-- 'scatter/pca_or_manifold grammar with roles: x, y, value'
+- inspiration for multi-layer bipartite enrichment networks
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 520577; width: 1440; height: 720'
+- core graph construction from a simple edge list
+image_summary: 'geometry: bipartite enrichment network; subtype: dense metabolite-class association network;
+  layout: single layered node-link diagram; primary_marks: [''top source nodes'', ''many middle item labels'',
+  ''bottom class nodes'',…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- false_positive_columns:source,target,weight
+- generic_plotmaster_source_target_weight_columns_are_not_visual_roles
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotmaster_056复杂网络图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_056复杂网络图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_056复杂网络图.yaml
   evidence_pack: vault/material/plotmaster_056复杂网络图
   preview: vault/material/plotmaster_056复杂网络图/outputs/rebuilt.png

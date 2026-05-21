@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_046环形层次聚类热图+批量环形饼图/metadata.json
     exists: true
-    size_bytes: 3211
+    size_bytes: 4156
   agent_guide:
     path: vault/material/plotmaster_046环形层次聚类热图+批量环形饼图/agent_guide.md
     exists: true

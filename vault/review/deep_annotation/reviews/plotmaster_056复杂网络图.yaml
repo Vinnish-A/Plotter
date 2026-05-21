@@ -1,0 +1,173 @@
+case_id: plotmaster_056复杂网络图
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review
+  human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence, card, schema, and prior review were inspected
+    for this batch review.
+annotator_model: gpt-5-codex_model_assisted_review
+reviewed_at: '2026-05-21T00:00:00+08:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_056复杂网络图/metadata.json
+  - vault/material/plotmaster_056复杂网络图/agent_guide.md
+  - vault/material/plotmaster_056复杂网络图/plot.py
+  - vault/material/plotmaster_056复杂网络图/data_main.csv
+  - vault/material/plotmaster_056复杂网络图/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_056复杂网络图.yaml
+  - vault/cards/plotmaster_056复杂网络图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_056复杂网络图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotmaster_056复杂网络图.yaml
+  asset_card: vault/cards/plotmaster_056复杂网络图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_056复杂网络图.yaml
+  image_size:
+    exists: true
+    size_bytes: 520577
+    width: 1440
+    height: 720
+    mean_luma: 246.6663
+    stddev_luma: 26.4761
+    blank_like: false
+  data_rows_inspected: 354
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: bipartite enrichment network
+  subtype: dense metabolite-class association network
+  layout: single layered node-link diagram
+  primary_marks: &id001
+  - top source nodes
+  - many middle item labels
+  - bottom class nodes
+  - gray edges
+  - node size legend
+  visible_encodings: edge presence links sources/items/classes; node size encodes frequency; color encodes class/source grouping
+inferred_visual_grammar:
+  declared_geometry: scatter
+  declared_subtype: pca_or_manifold
+  metadata_keywords:
+  - 3d_manifold
+  - ggplot2
+  reusable_pattern: inspiration for multi-layer bipartite enrichment networks
+  domain_semantics: Only visual roles were reviewed; biological or clinical meanings are not treated as authoritative unless
+    visible in labels/axes.
+  core_exclusion_note: Generic renderer, fallback, and synthetic-data flags prevent promotion to core retrieval.
+reviewed_visual_roles:
+  marks: *id001
+  encodings: edge presence links sources/items/classes; node size encodes frequency; color encodes class/source grouping
+  axes: manual layered layout without numeric axes
+  legends: class color legend and frequency size legend
+  annotations: dense rotated item labels and class labels
+canonical_columns: &id002
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: source-like node identifier in generic CSV
+  y: target/category identifier
+  value: edge/item value or frequency proxy
+optional_data_semantics:
+  group: empty group field
+  label: item label
+  facet: empty facet field
+  lower: derived lower interval not visibly used
+  upper: derived upper interval not visibly used
+optional_modules:
+  data_optional_csv: absent
+  visible_optional_layers: dense rotated item labels and class labels
+  needed_for_full_reuse: Provide explicit optional tables for labels, ordering, legends, manual positions, annotations, and
+    secondary tracks when those are visible.
+false_positive_risks:
+- generic_renderer_rebuild
+- false_positive_columns:source,target,weight
+- generic_plotmaster_source_target_weight_columns_are_not_visual_roles
+- data_main uses source/target-like columns but visible network has multiple node types and class/frequency attributes not
+  fully encoded
+- dense labels are fragile
+best_for:
+- inspiration for multi-layer bipartite enrichment networks
+bad_for:
+- core graph construction from a simple edge list
+style_notes:
+- very high text/mark density
+- Use the observed layout and scale cues, but do not infer undeclared domain semantics from placeholder CSV labels.
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Recommended below core because review found generic-renderer/fallback/synthetic or incomplete semantic-support
+    risks; still useful for visual pattern retrieval at the stated tier.
+  exclusion_risks:
+  - generic_renderer_rebuild
+  - false_positive_columns:source,target,weight
+  - generic_plotmaster_source_target_weight_columns_are_not_visual_roles
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: single layered node-link diagram
+  layout: single layered node-link diagram
+  marks: *id001
+  encodings: edge presence links sources/items/classes; node size encodes frequency; color encodes class/source grouping
+  axes: manual layered layout without numeric axes
+  legends: class color legend and frequency size legend
+  annotations: dense rotated item labels and class labels
+  text_density: very high
+  visual_risks:
+  - data_main uses source/target-like columns but visible network has multiple node types and class/frequency attributes not
+    fully encoded
+  - dense labels are fragile
+data_understanding:
+  data_read: true
+  observed_columns: *id002
+  role_mapping:
+    x: source-like node identifier in generic CSV
+    y: target/category identifier
+    value: edge/item value or frequency proxy
+    group: empty group field
+    label: item label
+    facet: empty facet field
+    lower: derived lower interval not visibly used
+    upper: derived upper interval not visibly used
+  derived_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  missing_optional_data: No data_optional.csv is present; visible annotations, manual layout, labels, legends, and secondary
+    tracks may not be reproducible from data_main alone.
+code_understanding:
+  code_read: true
+  backend: Python wrapper around retinue plotter_standard_renderer; metadata may name original R backend but plot.py does
+    not call original plotting code directly
+  entry_behavior: plot.py inserts retinue/tools on sys.path, imports plotter_standard_renderer.render, and calls render('network',
+    '056复杂网络图').
+  hardcoded_aesthetics: Case title and renderer mode are hardcoded in plot.py; detailed palette/layout behavior is delegated
+    to the generic renderer or preserved fallback image.
+  output_behavior: Standard script is expected to write outputs/rebuilt.png; machine evidence reports the rebuilt PNG exists
+    and is not blank-like.
+  unsupported_features: Original plotting code behavior, full manual layout resources, and any undeclared annotation tables
+    are not represented by plot.py itself.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

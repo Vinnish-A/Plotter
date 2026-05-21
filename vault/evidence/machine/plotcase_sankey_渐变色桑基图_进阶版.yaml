@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_sankey_渐变色桑基图_进阶版/metadata.json
     exists: true
-    size_bytes: 3911
+    size_bytes: 4661
   agent_guide:
     path: vault/material/plotcase_sankey_渐变色桑基图_进阶版/agent_guide.md
     exists: true

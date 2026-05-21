@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_network_分层气泡图_类别层次结构展示/metadata.json
     exists: true
-    size_bytes: 4428
+    size_bytes: 5447
   agent_guide:
     path: vault/material/plotcase_network_分层气泡图_类别层次结构展示/agent_guide.md
     exists: true

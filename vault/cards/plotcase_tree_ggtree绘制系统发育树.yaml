@@ -1,9 +1,9 @@
 id: plotcase_tree_ggtree绘制系统发育树
 title: ggtree绘制系统发育树
 retrieval_tier: inspiration
-one_line: network asset for ggtree绘制系统发育树
-geometry: network
-subtype: node_link_network
+one_line: Visual inspiration for circular phylogeny with annotation rings
+geometry: circular phylogeny with annotation rings
+subtype: ''
 required_roles:
 - node_id
 - parent_id
@@ -20,31 +20,42 @@ capabilities:
   detail_panel: false
   annotation_track: false
   uncertainty: false
-  composition: true
+  composition: false
   batch: true
 best_for:
-- ggtree绘制系统发育树
-- 'network/node_link_network grammar with roles: node_id, parent_id, label'
+- Visual inspiration for circular phylogeny with annotation rings
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 387252; width: 1553; height: 1420'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: circular phylogeny with annotation rings; panel_count: 1; layout: radial tree
+  with outer heatmap rings, bar tracks, clade arcs, and legends at right; primary_marks: [''tree branches'',
+  ''annular tiles'', ''outer bars…'
 data_summary: 'main_columns: [''node_id'', ''parent_id'', ''label'', ''branch_length'', ''tip_group'',
   ''track'', ''track_value'', ''track_class'', ''heatmap_value'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: [''ggtree'']'
 risk_flags:
 - case_level_fallback
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- case_level_fallback_or_custom_required
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_tree_ggtree绘制系统发育树.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_tree_ggtree绘制系统发育树.yaml
   machine_evidence: vault/evidence/machine/plotcase_tree_ggtree绘制系统发育树.yaml
   evidence_pack: vault/material/plotcase_tree_ggtree绘制系统发育树
   preview: vault/material/plotcase_tree_ggtree绘制系统发育树/outputs/rebuilt.png

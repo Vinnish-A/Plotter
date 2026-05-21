@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_019堆积柱状图+折线+热图注释/metadata.json
     exists: true
-    size_bytes: 3126
+    size_bytes: 4248
   agent_guide:
     path: vault/material/plotmaster_019堆积柱状图+折线+热图注释/agent_guide.md
     exists: true

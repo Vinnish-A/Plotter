@@ -1,0 +1,161 @@
+case_id: plotmaster_005复杂热图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_005复杂热图/metadata.json
+  - vault/material/plotmaster_005复杂热图/agent_guide.md
+  - vault/material/plotmaster_005复杂热图/plot.py
+  - vault/material/plotmaster_005复杂热图/data_main.csv
+  - vault/material/plotmaster_005复杂热图/outputs/rebuilt.png
+  - vault/material/plotmaster_005复杂热图/outputs/visual_check.json
+  - vault/evidence/machine/plotmaster_005复杂热图.yaml
+  - vault/cards/plotmaster_005复杂热图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_005复杂热图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotmaster_005复杂热图.yaml
+  asset_card: vault/cards/plotmaster_005复杂热图.yaml
+  image: vault/material/plotmaster_005复杂热图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1008
+    height: 864
+    mean_stddev: 47.061
+  build:
+    status: build_success
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: medium
+    last_built_at: '2026-05-17T12:30:13.009750+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: clustered_correlation_heatmap
+  subtype: dendrogram_heatmap_with_significance_marks
+  description: Clustered correlation heatmap with top and left dendrograms, diverging cell colors, significance
+    symbols in cells, row labels colored by cluster/sign, and top colorbar.
+inferred_visual_grammar:
+  grammar_id: clustered_correlation_heatmap
+  summary: ComplexHeatmap-style clustered matrix requiring row id, column id, value, and optional significance text/group
+    colors.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  x: column variable
+  y: row feature/taxon
+  value: cell correlation/color
+  label: row display label or item label
+  significance: cell text mark if available
+canonical_columns: &id001
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: column variable identity
+  y: row identity
+  value: continuous heatmap value
+optional_data_semantics:
+  group: row/column group
+  label: display label
+  p_value: significance mark source
+optional_modules:
+  row_dendrogram:
+    supported: true
+  column_dendrogram:
+    supported: true
+  cell_text_marks:
+    supported: true
+false_positive_risks:
+- source/target/weight are compatibility duplicates of x/y/value, not graph roles
+- cell significance symbols are not represented as dedicated columns
+best_for:
+- clustered heatmaps with significance overlays
+- correlation matrix examples with dendrograms
+bad_for:
+- network retrieval from source/target/weight duplicates
+style_notes:
+- pink-blue diverging palette with dense black significance marks
+- colored row labels communicate row classes
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Good source-backed complex heatmap pattern; current standardized data partially captures x/y/value
+    but omits dendrogram/significance inputs.
+  exclusion_risks:
+  - exact clustering and symbols require original resources
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: clustered heatmap with dendrograms and right row labels
+  marks:
+  - heatmap tiles
+  - dendrogram segments
+  - cell text symbols
+  - colorbar
+  encodings:
+    cell_color: Spearman correlation
+    dendrogram: hierarchical clustering
+    text_symbol: significance/annotation
+  axes: column labels bottom, row labels right
+  legends: top-right continuous Spearman correlation colorbar
+  annotations: cell symbols and colored row labels
+  text_density: very high
+  visual_risks:
+  - dense symbols can obscure small cells
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    x: column variable
+    y: row feature
+    value: primary heatmap value
+    label: display/item label
+    lower/upper: generic interval duplicates not observed
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

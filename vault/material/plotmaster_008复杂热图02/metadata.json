@@ -137,5 +137,22 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": true
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Useful layout idea but synthetic/demo-heavy and not encoded by current CSV or generic entry.",
+  "exclusion_risks": [
+    "synthetic_data",
+    "generic_renderer_entry",
+    "decorative_icon_dependency"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Image and code were inspected; this is visually useful but synthetic/demo-heavy and not a clean data-backed core asset.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_008复杂热图02.yaml"
 }

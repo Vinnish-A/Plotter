@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_heatmap_环状注释热图/metadata.json
     exists: true
-    size_bytes: 3646
+    size_bytes: 4401
   agent_guide:
     path: vault/material/plotcase_heatmap_环状注释热图/agent_guide.md
     exists: true

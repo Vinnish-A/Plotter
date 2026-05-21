@@ -1,7 +1,8 @@
 id: figures4papers_figure_Dispersion_illustration_png
 title: figure_Dispersion_illustration
 retrieval_tier: inspiration
-one_line: scatter asset for figure_Dispersion_illustration
+one_line: Inspiration for explaining multiple geometric operations on points, manifolds, or embeddings
+  in one wide figure.
 geometry: scatter
 subtype: pca_or_manifold
 required_roles:
@@ -12,40 +13,58 @@ required_roles:
 - panel
 optional_roles:
 - group
-- label
 - surface
+- label
 - trajectory
 - color
 - annotation
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: false
   batch: true
 best_for:
-- figure_Dispersion_illustration
-- 'scatter/pca_or_manifold grammar with roles: x, y, z, value, panel'
+- Inspiration for explaining multiple geometric operations on points, manifolds, or embeddings in one
+  wide figure.
+- Reusing the composition idea of shaded spatial bodies plus directional arrows, local callouts, and bottom
+  legends.
+- Cases where explanatory visual grammar matters more than data-complete regeneration.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 762950; width: 7200; height: 2400'
+- Fully data-driven rebuilds from a single CSV.
+- Standard scatter, PCA, UMAP, or network diagrams.
+- Tasks requiring all labels, arrows, colors, and panel layouts to be controlled through the standardized
+  CSV interface.
+image_summary: 'plot_family: conceptual multi-panel manifold illustration; panel_structure: one horizontal
+  row of four independent but thematically linked panels; primary_geometry: [''shaded sphere or hemisphere
+  body'', ''translucent tilt…'
 data_summary: 'main_columns: [''x'', ''y'', ''z'', ''value'', ''panel'', ''group'', ''label'', ''surface'',
   ''trajectory'', ''color'']; sampled_rows: 64'
 code_summary: 'entry: plot.py; backend_hints: [''matplotlib'']'
 risk_flags:
 - case_level_fallback
-- image_not_model_reviewed
-- roles_machine_inferred
+- not_data_driven
+risk_notes:
+- Do not retrieve this as a complete data-driven scatter or PCA plot; the final visual is a four-panel
+  conceptual illustr…
+- Do not treat empty label, trajectory, or color columns as available annotation or styling data.
+- Do not treat the constant panel column as evidence that the CSV controls the four visible panels.
+- case_level_fallback
+- csv_does_not_encode_visible_annotations
+- not_a_standard_scatter_or_network
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/figures4papers_figure_Dispersion_illustration_png.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/figures4papers_figure_Dispersion_illustration_png.yaml
   machine_evidence: vault/evidence/machine/figures4papers_figure_Dispersion_illustration_png.yaml
   evidence_pack: vault/material/figures4papers_figure_Dispersion_illustration_png
   preview: vault/material/figures4papers_figure_Dispersion_illustration_png/outputs/rebuilt.png

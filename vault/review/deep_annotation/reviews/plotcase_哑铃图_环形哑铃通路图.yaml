@@ -1,0 +1,170 @@
+case_id: plotcase_哑铃图_环形哑铃通路图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_哑铃图_环形哑铃通路图/metadata.json
+  - vault/material/plotcase_哑铃图_环形哑铃通路图/agent_guide.md
+  - vault/material/plotcase_哑铃图_环形哑铃通路图/plot.py
+  - vault/material/plotcase_哑铃图_环形哑铃通路图/data_main.csv
+  - vault/material/plotcase_哑铃图_环形哑铃通路图/outputs/rebuilt.png
+  - vault/material/plotcase_哑铃图_环形哑铃通路图/outputs/visual_check.json
+  - vault/evidence/machine/plotcase_哑铃图_环形哑铃通路图.yaml
+  - vault/cards/plotcase_哑铃图_环形哑铃通路图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_哑铃图_环形哑铃通路图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotcase_哑铃图_环形哑铃通路图.yaml
+  asset_card: vault/cards/plotcase_哑铃图_环形哑铃通路图.yaml
+  image: vault/material/plotcase_哑铃图_环形哑铃通路图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1008
+    height: 1008
+    mean_stddev: 35.7997
+  build:
+    status: build_success
+    language: R
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: high
+    last_built_at: '2026-05-17T12:30:12.782801+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: radial_dumbbell_pathway
+  subtype: circular_paired_metric_plot
+  description: Circular pathway plot with sectors, paired point/triangle markers per item, dashed reference ring,
+    significance stars, and central colorbar/marker legend.
+inferred_visual_grammar:
+  grammar_id: radial_dumbbell_pathway
+  summary: Radial paired-measure comparison grammar requiring item, group/sector, two metric values, and optional
+    significance.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  item: numbered radial item
+  group: outer sector/pathway class
+  value_a: first radial metric marker
+  value_b: second radial metric marker
+  significance: star annotation
+canonical_columns: &id001
+- source
+- target
+- weight
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+- source_group
+- target_group
+required_data_semantics:
+  item: radial item identity
+  group: sector/category
+  value_a: first metric radial position
+  value_b: second metric radial position
+optional_data_semantics:
+  p_value: significance star
+  score_color: marker or background score
+  label: sector label
+optional_modules:
+  paired_markers:
+    supported: true
+  radial_sectors:
+    supported: true
+  significance_stars:
+    supported: true
+false_positive_risks:
+- data_main is a network edge table; source/target/weight are not observed radial dumbbell roles
+- current plot.py uses scatter generic wrapper
+best_for:
+- paired pathway scores in circular sector layout
+- compact two-measure pathway comparisons
+bad_for:
+- node-link network retrieval
+- many long labels or exact numeric readout
+style_notes:
+- pastel sector backgrounds; triangle/circle marker legend; central horizontal colorbar
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Observed radial paired comparison is useful, but the standardized CSV does not encode its actual item/group/two-metric
+    semantics.
+  exclusion_risks:
+  - source/target columns would mislead retrieval as network
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single circular sector plot
+  marks:
+  - sector wedges
+  - circle points
+  - triangle points
+  - dashed reference ring
+  - stars
+  - colorbar
+  encodings:
+    angle: item/order
+    radius: metric value
+    shape: metric type
+    sector_fill: pathway group
+    star: significance
+  axes: radial item numbers; no Cartesian axes
+  legends: marker legend and pathway score colorbar
+  annotations: sector labels and significance stars
+  text_density: medium
+  visual_risks:
+  - manual radial placement likely needed
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    source: false positive; not an edge source in the observed figure
+    target: false positive; not an edge target
+    weight: false positive for this observed grammar
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  - source_group
+  - target_group
+  - layout_x
+  - layout_y
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

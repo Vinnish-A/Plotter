@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_039雷达图+环形注释/metadata.json
     exists: true
-    size_bytes: 3229
+    size_bytes: 3875
   agent_guide:
     path: vault/material/plotmaster_039雷达图+环形注释/agent_guide.md
     exists: true

@@ -1,52 +1,55 @@
 id: plotmaster_031环形散点图+环形热图
 title: 031环形散点图+环形热图
-retrieval_tier: inspiration
-one_line: scatter asset for 031环形散点图+环形热图
-geometry: scatter
-subtype: pca_or_manifold
+retrieval_tier: archive
+one_line: visual inspiration for circular multi-track omics plots
+geometry: circular_scatter_heatmap_tracks
+subtype: radial_points_with_concentric_annotation_rings
 required_roles:
-- x
-- y
-- value
-optional_roles:
+- item
 - group
+- point_value
+- track_value
+optional_roles:
+- track
 - label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
+- legend
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
-  uncertainty: true
-  composition: false
+  uncertainty: false
+  composition: true
   batch: true
 best_for:
-- 031环形散点图+环形热图
-- 'scatter/pca_or_manifold grammar with roles: x, y, value'
+- visual inspiration for circular multi-track omics plots
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 277792; width: 864; height: 864'
+- core retrieval or exact rebuild
+- using current CSV for semantic roles
+image_summary: 'geometry: circular_scatter_heatmap_tracks; subtype: radial_points_with_concentric_annotation_rings;
+  description: Circular composition with inner scatter track and multiple concentric colored heatmap/annotation
+  rings, gr…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 1'
 code_summary: 'entry: plot.py; backend_hints: [''circlize'']'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- metadata marks case_level_fallback and original workbook sheet data is not recoverable
+- data_main has one summary/error row and cannot regenerate the figure
+- would be a severe false positive for rebuildable circular heatmap assets
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_031环形散点图+环形热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_031环形散点图+环形热图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_031环形散点图+环形热图.yaml
   evidence_pack: vault/material/plotmaster_031环形散点图+环形热图
   preview: vault/material/plotmaster_031环形散点图+环形热图/outputs/rebuilt.png

@@ -1,15 +1,14 @@
 id: plotcase_综合图_ggplot2组合展示误差线点图与柱状图
 title: ggplot2组合展示误差线点图与柱状图
 retrieval_tier: support
-one_line: map asset for ggplot2组合展示误差线点图与柱状图
-geometry: map
-subtype: map
+one_line: Aligned composite figures combining interval estimates and horizontal bars
+geometry: composite_point_interval_bar
+subtype: left grouped labels, central coefficient intervals, right horizontal bars
 required_roles:
 - category
 - value
 optional_roles:
 - group
-- stack
 - error_low
 - error_high
 - line_value
@@ -20,30 +19,37 @@ capabilities:
   detail_panel: false
   annotation_track: false
   uncertainty: false
-  composition: false
+  composition: true
   batch: true
 best_for:
-- ggplot2组合展示误差线点图与柱状图
-- 'map/map grammar with roles: category, value'
+- Aligned composite figures combining interval estimates and horizontal bars
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 99649; width: 1264; height: 1242'
+- Single ordinary bar charts
+- Exact multi-panel data split without a richer contract
+image_summary: 'geometry: composite_point_interval_bar; subtype: left grouped labels, central coefficient
+  intervals, right horizontal bars; panel_count: 3; layout: three aligned vertical regions: category rail,
+  interval dot plot, and h…'
 data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''error_low'', ''error_high'',
   ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- data_main is bar-composite abstraction and may not fully encode three-panel alignment
+- false_positive_column:stack
+- false_positive_column:annotation_value
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
   machine_evidence: vault/evidence/machine/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
   evidence_pack: vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图
   preview: vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/outputs/rebuilt.png

@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_tree_多层级系统发育树图/metadata.json
     exists: true
-    size_bytes: 4996
+    size_bytes: 5867
   agent_guide:
     path: vault/material/plotcase_tree_多层级系统发育树图/agent_guide.md
     exists: true

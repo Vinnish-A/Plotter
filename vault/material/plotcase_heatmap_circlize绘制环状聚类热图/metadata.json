@@ -137,5 +137,20 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Recommended below core because review found generic-renderer/fallback/synthetic or incomplete semantic-support risks; still useful for visual pattern retrieval at the stated tier.",
+  "exclusion_risks": [
+    "generic_renderer_rebuild"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review",
+    "human_review_required": false,
+    "reason": "Image, metadata, guide, standard script, CSV profile, machine evidence, card, schema, and prior review were inspected for this batch review.",
+    "reviewed_at": "2026-05-21T00:00:00+08:00",
+    "annotator_model": "gpt-5-codex_model_assisted_review",
+    "review_version": "deep_annotation_model_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_heatmap_circlize绘制环状聚类热图.yaml"
 }

@@ -1,0 +1,230 @@
+case_id: plotmaster_017基因融合热图+堆积柱状图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_017基因融合热图+堆积柱状图/metadata.json
+  - vault/material/plotmaster_017基因融合热图+堆积柱状图/agent_guide.md
+  - vault/material/plotmaster_017基因融合热图+堆积柱状图/plot.py
+  - vault/material/plotmaster_017基因融合热图+堆积柱状图/data_main.csv
+  - vault/material/plotmaster_017基因融合热图+堆积柱状图/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_017基因融合热图+堆积柱状图.yaml
+  - vault/cards/plotmaster_017基因融合热图+堆积柱状图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_017基因融合热图+堆积柱状图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotmaster_017基因融合热图+堆积柱状图.yaml
+  asset_card: vault/cards/plotmaster_017基因融合热图+堆积柱状图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_017基因融合热图+堆积柱状图.yaml
+  image_inspected: vault/material/plotmaster_017基因融合热图+堆积柱状图/outputs/rebuilt.png
+  code_entry: vault/material/plotmaster_017基因融合热图+堆积柱状图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: heatmap_with_stacked_bar_annotation
+  subtype: sparse frequency heatmap with left stacked percentage bars
+  panel_count: 2
+  layout: left stacked bar annotation panel aligned to main gene-by-tumor heatmap
+  marks:
+  - stacked horizontal bars
+  - rectangular heatmap cells
+  - cell count labels
+  encodings:
+    row: gene/fusion category
+    column: tumor type
+    fill: frequency percent
+    text: cell count
+    left bars: tumor type composition percentage
+  axes: gene rows and rotated tumor-type columns
+  legends: bottom legends for tumor type and frequency
+  annotations:
+  - cell numbers inside heatmap
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    backend: R/ComplexHeatmap-circlize
+    geometry: heatmap
+    keywords:
+    - heatmap
+    - ComplexHeatmap
+    - circlize
+    - ggplot2
+    visual_dependencies:
+    - ComplexHeatmap
+    - circlize
+    - ggplot2
+    - ggplotify
+    - ggsci
+    - patchwork
+    - tidyverse
+    - xlsx
+    runtime_dependencies:
+    - matplotlib
+    - numpy
+    - pandas
+    - python
+reviewed_visual_roles:
+  x: heatmap column category
+  y: heatmap row category
+  value: cell fill/frequency value
+  facet: annotation/composition grouping candidate
+  label: column label duplicate
+  source/target/weight: compatibility duplicates, not network roles
+  lower/upper: not visible intervals
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: heatmap column category
+  y: heatmap row category
+  value: cell value/frequency
+optional_data_semantics:
+  facet: left bar annotation/category candidate
+  label: label duplicate
+  group: empty
+  source: not a source role
+  target: not a target role
+  weight: not a weight role
+  lower: not visible
+  upper: not visible
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - facet
+  - label
+  - group
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- canonical source/target/weight duplicate x/y/value; do not interpret as network edges
+- false_positive_column:source
+- false_positive_column:target
+- false_positive_column:weight
+- false_positive_column:lower
+- false_positive_column:upper
+- false_positive_column:group
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Sparse labeled heatmaps with aligned stacked-bar annotations
+bad_for:
+- Network/flow retrieval from compatibility columns
+- Dense continuous heatmaps without labels
+style_notes:
+- Large white space emphasizes sparse events
+- Orange count labels contrast against blue cells
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - canonical source/target/weight duplicate x/y/value; do not interpret as network edges
+confidence:
+  overall: high
+  visual_grammar: high
+  data_roles: high
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 2
+  layout: left stacked bar annotation panel aligned to main gene-by-tumor heatmap
+  marks:
+  - stacked horizontal bars
+  - rectangular heatmap cells
+  - cell count labels
+  encodings:
+    row: gene/fusion category
+    column: tumor type
+    fill: frequency percent
+    text: cell count
+    left bars: tumor type composition percentage
+  axes: gene rows and rotated tumor-type columns
+  legends: bottom legends for tumor type and frequency
+  annotations:
+  - cell numbers inside heatmap
+  text_density: high but structured
+  visual_risks:
+  - canonical source/target/weight duplicate x/y/value; do not interpret as network edges
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_mapping:
+    x: heatmap column category
+    y: heatmap row category
+    value: cell fill/frequency value
+    facet: annotation/composition grouping candidate
+    label: column label duplicate
+    source/target/weight: compatibility duplicates, not network roles
+    lower/upper: not visible intervals
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  - group
+  missing_optional_data:
+  - data_optional.csv absent
+  - group
+  - lower
+  - upper
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('heatmap', '017基因融合热图+堆积柱状图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - canonical source/target/weight duplicate x/y/value; do not interpret as network edges
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

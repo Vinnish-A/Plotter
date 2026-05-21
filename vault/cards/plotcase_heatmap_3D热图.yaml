@@ -1,9 +1,9 @@
 id: plotcase_heatmap_3D热图
 title: 3D热图
 retrieval_tier: inspiration
-one_line: scatter asset for 3D热图
-geometry: scatter
-subtype: pca_or_manifold
+one_line: Visual inspiration for pseudo-3D heatmap tile styling
+geometry: pseudo_3d_heatmap
+subtype: oblique tile heatmap with 3D block illusion and continuous colorbar
 required_roles:
 - row_id
 - column_id
@@ -11,41 +11,47 @@ required_roles:
 optional_roles:
 - row_group
 - column_group
-- annotation_track
-- annotation_value
-- label
 - size_value
+- label
 - facet
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: false
-  composition: false
+  composition: true
   batch: true
 best_for:
-- 3D热图
-- 'scatter/pca_or_manifold grammar with roles: row_id, column_id, value'
+- Visual inspiration for pseudo-3D heatmap tile styling
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 222003; width: 1168; height: 871'
+- Core reusable heatmap rebuilds from clean code
+- Any task needing actual 3D coordinates
+image_summary: 'geometry: pseudo_3d_heatmap; subtype: oblique tile heatmap with 3D block illusion and
+  continuous colorbar; panel_count: 1; layout: single matrix body with rows at left, rotated column labels
+  at bottom, colorbar at right'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: [''complexheatmap'']'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- case is marked fallback; plot.py generic heatmap renderer cannot reproduce the pseudo-3D tile geometry
+- false_positive_column:row_group
+- false_positive_column:column_group
+- case_level_fallback
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_heatmap_3D热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_3D热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_3D热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_3D热图
   preview: vault/material/plotcase_heatmap_3D热图/outputs/rebuilt.png

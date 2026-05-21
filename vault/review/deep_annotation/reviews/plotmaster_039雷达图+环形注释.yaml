@@ -1,0 +1,155 @@
+case_id: plotmaster_039雷达图+环形注释
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_039雷达图+环形注释/metadata.json
+  - vault/material/plotmaster_039雷达图+环形注释/agent_guide.md
+  - vault/material/plotmaster_039雷达图+环形注释/plot.py
+  - vault/material/plotmaster_039雷达图+环形注释/data_main.csv
+  - vault/material/plotmaster_039雷达图+环形注释/outputs/rebuilt.png
+  - vault/material/plotmaster_039雷达图+环形注释/outputs/visual_check.json
+  - vault/evidence/machine/plotmaster_039雷达图+环形注释.yaml
+  - vault/cards/plotmaster_039雷达图+环形注释.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_039雷达图+环形注释.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotmaster_039雷达图+环形注释.yaml
+  asset_card: vault/cards/plotmaster_039雷达图+环形注释.yaml
+  image: vault/material/plotmaster_039雷达图+环形注释/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 720
+    height: 720
+    mean_stddev: 50.6213
+  build:
+    status: build_success
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: medium
+    last_built_at: '2026-05-17T12:30:13.275593+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: true
+observed_visual_grammar:
+  geometry: radar_with_outer_annotation_ring
+  subtype: single_radar_overlay_outer_category_band
+  description: Single radar plot with several colored polylines/points over percent reference rings and an outer
+    segmented annotation ring labeled by genes.
+inferred_visual_grammar:
+  grammar_id: radar_with_outer_annotation_ring
+  summary: Radar profile with outer categorical annotation segments; requires axis label, value, group/series, and
+    outer ring category.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  label: spoke/gene label
+  value: radial magnitude
+  group: polyline/color series
+  outer_segment: annotation ring category
+canonical_columns: &id001
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  label: radial axis label
+  value: radial value
+optional_data_semantics:
+  group: series identity
+  outer_segment: outer annotation band category
+optional_modules:
+  outer_annotation_ring:
+    supported: true
+  multiple_series:
+    supported: true
+false_positive_risks:
+- synthetic_data true
+- source/target/weight are duplicates and not graph roles
+best_for:
+- radar profile with categorical ring annotation inspiration
+bad_for:
+- network retrieval
+- exact reusable core without non-synthetic data
+style_notes:
+- outer segmented ring mirrors line colors; labels around circumference are readable
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Visually useful radar+ring pattern, but synthetic data keeps it out of core/support.
+  exclusion_risks:
+  - synthetic example may not reflect source-backed semantics
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single polar radar plot with outer annular band
+  marks:
+  - polylines
+  - points
+  - dashed rings
+  - outer colored segments
+  - text labels
+  encodings:
+    radius: value
+    angle: gene/category
+    line_color: series/group
+    outer_segment_color: annotation category
+  axes: polar spoke labels and radial reference rings
+  legends: none visible
+  annotations: circumferential gene labels
+  text_density: medium
+  visual_risks:
+  - no legend for line/segment color semantics
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    x: axis/category label proxy
+    y: numeric/radial value proxy
+    value: numeric/radial value
+    group: series/outer category
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

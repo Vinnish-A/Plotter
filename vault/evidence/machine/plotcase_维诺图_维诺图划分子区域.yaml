@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_维诺图_维诺图划分子区域/metadata.json
     exists: true
-    size_bytes: 3577
+    size_bytes: 4537
   agent_guide:
     path: vault/material/plotcase_维诺图_维诺图划分子区域/agent_guide.md
     exists: true

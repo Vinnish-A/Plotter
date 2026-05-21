@@ -131,5 +131,24 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": true
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Synthetic-data flag means this can guide visual grammar only, not serve as core evidence.",
+  "exclusion_risks": [
+    "generic_renderer_rebuild",
+    "synthetic_data",
+    "visible_output_may_not_be_recomputed_by_standard_entry",
+    "roles_require_visual_verification",
+    "some_columns_are_empty_or_generic_duplicates"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Image, metadata, guide, data profile, standard entry code, machine evidence, card, and prior review were inspected; limitations are recorded as risks.",
+    "reviewed_at": "2026-05-21T09:15:01+00:00",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "deep_annotation_model_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_026相关性气泡图+显著性热图.yaml"
 }

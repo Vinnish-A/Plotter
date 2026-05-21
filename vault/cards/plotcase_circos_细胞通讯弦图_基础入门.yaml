@@ -39,17 +39,26 @@ code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
 - case_level_fallback
-- generic_renderer_rebuild
-- Do not treat current source/target/weight columns as true chord/network evidenc…
-- Do not retrieve as generic weighted network without preserving cell-communicati…
-- Do not assume standardized rebuild from original code; metadata records case-le…
+- generic_renderer
+- misleading_metadata
+risk_notes:
+- Do not treat current source/target/weight columns as true chord/network evidence.
+- Do not retrieve as generic weighted network without preserving cell-communication and expression-track
+  semantics.
+- Do not assume standardized rebuild from original code; metadata records case-level finished-figure fallback.
 - source_target_weight_false_positive
 - synthetic_data_main
 - generic_renderer_entry
+- case_level_fallback
 confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_circos_细胞通讯弦图_基础入门.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_circos_细胞通讯弦图_基础入门.yaml

@@ -1,9 +1,9 @@
 id: plotcase_tree_多层级系统发育树图
 title: 多层级系统发育树图
 retrieval_tier: support
-one_line: network asset for 多层级系统发育树图
-geometry: network
-subtype: node_link_network
+one_line: Radial phylogenetic tree with multiple outer annotation tracks
+geometry: circular_phylogenetic_tree
+subtype: radial tree with outer abundance heat ring and tick tracks
 required_roles:
 - node_id
 - parent_id
@@ -23,27 +23,33 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 多层级系统发育树图
-- 'network/node_link_network grammar with roles: node_id, parent_id, label'
+- Radial phylogenetic tree with multiple outer annotation tracks
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 632112; width: 1839; height: 1537'
+- Exact many-tip tree reconstruction from compact CSV
+- Simple dendrogram retrieval
+image_summary: 'geometry: circular_phylogenetic_tree; subtype: radial tree with outer abundance heat ring
+  and tick tracks; panel_count: 1; layout: large circular tree centered left with legends stacked on right'
 data_summary: 'main_columns: [''node_id'', ''parent_id'', ''label'', ''branch_length'', ''tip_group'',
   ''track'', ''track_value'', ''track_class'', ''heatmap_value'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: [''ggtree'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- compact nine-row CSV cannot represent the many visible tips and outer-ring cells
+- false_positive_column:track_class
+- thin_plot_py_wrapper
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_tree_多层级系统发育树图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_tree_多层级系统发育树图.yaml
   machine_evidence: vault/evidence/machine/plotcase_tree_多层级系统发育树图.yaml
   evidence_pack: vault/material/plotcase_tree_多层级系统发育树图
   preview: vault/material/plotcase_tree_多层级系统发育树图/outputs/rebuilt.png

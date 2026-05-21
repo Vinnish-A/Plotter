@@ -163,5 +163,22 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "The design is reusable, but synthetic/demo substitution and generic standard entry prevent support/core use.",
+  "exclusion_risks": [
+    "synthetic_demo_values",
+    "generic_renderer_entry",
+    "batch_not_encoded"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Reviewed image and source; R source explicitly replaces source values with ggVolcano demo data, so keep out of core.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_055批量火山图.yaml"
 }

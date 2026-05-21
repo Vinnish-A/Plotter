@@ -1,0 +1,218 @@
+case_id: figures4papers_figure_Dispersion_illustration_png
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: Replaced machine backfill after inspecting metadata, guide, data, code, evidence records, current review, and rebuilt image.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:03:02Z'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/figures4papers_figure_Dispersion_illustration_png/metadata.json
+  - vault/material/figures4papers_figure_Dispersion_illustration_png/agent_guide.md
+  - vault/material/figures4papers_figure_Dispersion_illustration_png/plot.py
+  - vault/material/figures4papers_figure_Dispersion_illustration_png/data_main.csv
+  - vault/material/figures4papers_figure_Dispersion_illustration_png/scripts/plot_illustration.py
+  - vault/material/figures4papers_figure_Dispersion_illustration_png/scripts/plot_idea.py
+  - vault/material/figures4papers_figure_Dispersion_illustration_png/outputs/visual_check.json
+  - vault/evidence/machine/figures4papers_figure_Dispersion_illustration_png.yaml
+  - vault/cards/figures4papers_figure_Dispersion_illustration_png.yaml
+  - vault/review/deep_annotation/reviews/figures4papers_figure_Dispersion_illustration_png.yaml
+  image_inspected:
+  - vault/material/figures4papers_figure_Dispersion_illustration_png/outputs/rebuilt.png
+  rendered_reference: vault/material/figures4papers_figure_Dispersion_illustration_png/outputs/figure.png
+  image_identity_check: rebuilt.png is byte-identical to outputs/figure.png; standard plot.py copies the rendered source image.
+  data_optional_present: false
+observed_visual_grammar:
+  plot_family: conceptual multi-panel manifold illustration
+  panel_structure: one horizontal row of four independent but thematically linked panels
+  primary_geometry:
+  - shaded sphere or hemisphere body
+  - translucent tilted ellipsoid overlay
+  - 3D point cloud with vector arrows and axis triad
+  - geodesic arcs and dashed radial connectors
+  visual_flow: compares dispersion, decorrelation, l2-repel plus norm regularization, and orthogonalization strategies from left to right
+  composition: wide 7200x2400 canvas with large whitespace, bottom legends, and embedded callout boxes
+inferred_visual_grammar:
+  intended_use: likely an explanatory figure about dispersion-related operations on embedded points or manifold-like surfaces
+  inference_basis: visible labels and preserved source script names, not domain metadata or raw experimental data
+  weak_interpretations:
+  - The terms dispersion, decorrelation, l2-repel, norm regularization, and orthogonalization are visible scientific labels, but the review does not infer a specific application domain.
+  - The asset card's scatter/pca_or_manifold subtype is only partly supported; the final image is a conceptual illustration, not a standard PCA scatter.
+  - The CSV abstracts a generic surface grid and does not encode most visible points, arrows, legends, or callout text.
+reviewed_visual_roles:
+  main_body: shaded manifold-like bodies provide spatial context for directional transformations
+  points: small blue/red circular marks indicate example positions on surfaces or in 3D space
+  directional_marks: red, purple, and cyan arrows encode different transformation forces or action/no-action comparisons
+  connectors: black dashed lines connect points to centers or axes and support angle/radius interpretation
+  annotations: white-backed text labels explain local actions directly inside panels
+  legends: bottom legend entries define each panel or arrow family rather than mapping data categories
+canonical_columns:
+- x
+- y
+- z
+- value
+- panel
+- group
+- label
+- surface
+- trajectory
+- color
+required_data_semantics:
+  x: abstract surface grid coordinate in data_main.csv
+  y: abstract surface grid coordinate in data_main.csv
+  z: abstract surface height/value; duplicates value in the observed CSV
+  value: duplicate numeric field matching z, usable as surface magnitude but not visibly mapped by the fallback copier
+  panel: constant value main; not a true four-panel discriminator in this case
+optional_data_semantics:
+  group: constant surface value; weak grouping role only
+  surface: constant manifold value; weak surface-type tag only
+  label: declared but empty; visible callout labels are hardcoded or present only in the rendered image
+  trajectory: declared but empty; visible arrows are not represented in data_main.csv
+  color: declared but empty; palette is hardcoded or baked into the rendered image
+  annotation: declared in metadata but no data_optional.csv exists
+optional_modules:
+  callout_text:
+    present: true
+    source: hardcoded in source script and rendered fallback image
+  legends:
+    present: true
+    source: hardcoded in source script and rendered fallback image
+  directional_arrows:
+    present: true
+    source: hardcoded calculations and manual/example coordinates in source script
+  shaded_surfaces:
+    present: true
+    source: image-first fallback; CSV has only a simplified abstract surface grid
+  true_optional_csv:
+    present: false
+false_positive_risks:
+- Do not retrieve this as a complete data-driven scatter or PCA plot; the final visual is a four-panel conceptual illustration.
+- Do not treat empty label, trajectory, or color columns as available annotation or styling data.
+- Do not treat the constant panel column as evidence that the CSV controls the four visible panels.
+- Do not infer network roles; source, target, and weight columns are absent and the arrows are explanatory vectors, not graph edges.
+- Rebuild is a case-level rendered-output fallback, so CSV edits will not regenerate the visible layout.
+best_for:
+- Inspiration for explaining multiple geometric operations on points, manifolds, or embeddings in one wide figure.
+- Reusing the composition idea of shaded spatial bodies plus directional arrows, local callouts, and bottom legends.
+- Cases where explanatory visual grammar matters more than data-complete regeneration.
+bad_for:
+- Fully data-driven rebuilds from a single CSV.
+- Standard scatter, PCA, UMAP, or network diagrams.
+- Tasks requiring all labels, arrows, colors, and panel layouts to be controlled through the standardized CSV interface.
+- Dense quantitative plots where axes, ticks, or exact measurements are central.
+style_notes:
+- Uses restrained gray bodies with red as the dominant action color, purple as a secondary vector family, and cyan for the no-action contrast.
+- Text is large and readable, but several callouts sit inside panels and depend on available empty space.
+- The visual has no panel letters; each panel relies on its own legend/callouts for interpretation.
+- The third panel is the only visible 3D axis system; the other panels suppress axes entirely.
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Strong visual idea for a conceptual manifold-operation explanation, but the accepted case is image-first and not data-complete through data_main.csv.
+  exclusion_risks:
+  - case_level_fallback
+  - csv_does_not_encode_visible_annotations
+  - not_a_standard_scatter_or_network
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: high
+  rebuild_reproducibility: medium
+image_observation:
+  image_read: true
+  panel_count: 4
+  layout: one wide row with four evenly spaced conceptual panels on a white background
+  marks:
+  - shaded gray sphere/hemisphere surfaces
+  - translucent blue ellipsoid or surface overlay
+  - blue and red point marks
+  - red, purple, cyan, and black directional or connector lines
+  - 3D x/y/z axis arrows in the third panel
+  encodings:
+    red: primary dispersion, decorrelation, l2-repel, or orthogonalization action
+    purple: norm regularization arrows in the 3D panel
+    cyan: obtuse-angle do-nothing comparison in the orthogonalization panel
+    gray_shading: manifold or spherical surface form
+    dashed_black: center/radial reference connectors
+  axes: axes are hidden except for a tickless 3D x/y/z triad in the third panel
+  legends: bottom legends label Dispersion loss, Decorrelation, l2-repel, norm regularization, and Orthogonalization
+  annotations:
+  - disperse
+  - pairwise dispersion
+  - norm reduction
+  - acute angle, disperse
+  - obtuse angle, do nothing
+  text_density: moderate, with several large embedded callouts and bottom legend text
+  visual_risks:
+  - wide aspect ratio may downscale text in thumbnails
+  - embedded callout boxes could overlap data if adapted without manual placement
+  - explanatory arrows can be mistaken for network edges without context
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - z
+  - value
+  - panel
+  - group
+  - label
+  - surface
+  - trajectory
+  - color
+  row_count: 64
+  compact_profile:
+    x: eight numeric grid positions from -3.5 to 3.5
+    y: eight numeric grid positions from -3.5 to 3.5
+    z: nine numeric levels from 0.707 to 4.95
+    value: identical to z in inspected rows
+    panel: constant main
+    group: constant surface
+    surface: constant manifold
+    label: entirely empty
+    trajectory: entirely empty
+    color: entirely empty
+  role_mapping:
+    surface_grid: x, y, z, value
+    weak_panel_tag: panel
+    weak_group_tags:
+    - group
+    - surface
+    absent_visible_roles:
+    - arrows
+    - callout labels
+    - legend entries
+    - per-panel coordinates
+    - colors
+  derived_columns:
+  - value duplicates z
+  false_positive_columns:
+  - panel
+  - group
+  - label
+  - surface
+  - trajectory
+  - color
+  missing_optional_data:
+  - no data_optional.csv for visible labels, arrows, legend semantics, manual coordinates, or palette
+code_understanding:
+  code_read: true
+  backend:
+  - Python
+  - matplotlib
+  - shutil
+  entry_behavior: standard plot.py opens data_main.csv, consumes at most one row through csv.DictReader, then copies outputs/figure.png to outputs/rebuilt.png
+  hardcoded_aesthetics:
+  - red, purple, cyan, blue, gray, and black colors are hardcoded in the preserved source script or baked into the fallback image
+  - point positions, arrow vectors, text labels, legends, axis labels, camera view, and layout are hardcoded in the preserved source script
+  output_behavior: writes outputs/rebuilt.png as a byte-for-byte copy of outputs/figure.png
+  unsupported_features:
+  - data_main.csv does not drive the rendered figure in the standard entrypoint
+  - no optional CSV controls annotations, arrows, legends, or panel composition
+  - source script is useful evidence for grammar but is not the active rebuild path
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

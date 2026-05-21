@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_barplot_多层注释柱状图进阶版/metadata.json
     exists: true
-    size_bytes: 4218
+    size_bytes: 5095
   agent_guide:
     path: vault/material/plotcase_barplot_多层注释柱状图进阶版/agent_guide.md
     exists: true

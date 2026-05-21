@@ -176,5 +176,23 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": true,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "Visually useful survival-composite pattern, but current standardized data/code are fallback/generic and not a trustworthy reusable contract.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "generic_renderer_entry_does_not_match_reviewed_image",
+    "current_csv_missing_panel_specific_roles",
+    "stale_heatmap_metadata"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Replaced machine backfill after direct review of image, metadata, data, code, card, and machine evidence.",
+    "reviewed_at": "2026-05-21T09:03:39Z",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "deep_annotation_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/figureya_survival_FigureYa128Prognostic.yaml"
 }

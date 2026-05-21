@@ -137,5 +137,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Good support asset for grouped boxplots, with compatibility-column caveats.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "significance_metadata_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Reviewed image, CSV, plot.py, R source, visual_check, card, and prior review.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_023泛癌箱线图+显著性检验.yaml"
 }

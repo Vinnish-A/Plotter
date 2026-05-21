@@ -22,7 +22,7 @@ def records() -> list[dict]:
 def test_context_budget_pipeline_writes_evidence_cards_and_skinny_index() -> None:
     run_cmd("cabal/tools/build_machine_evidence.py")
     run_cmd("cabal/tools/build_asset_cards.py")
-    run_cmd("cabal/tools/build_skinny_index.py")
+    run_cmd("cabal/tools/build_skinny_index.py", "--max-record-chars", "1600")
 
     evidence = sorted((REPO / "vault" / "evidence" / "machine").glob("*.yaml"))
     cards = sorted((REPO / "vault" / "cards").glob("*.yaml"))
@@ -36,17 +36,19 @@ def test_context_budget_pipeline_writes_evidence_cards_and_skinny_index() -> Non
     for line in (REPO / "vault" / "index.jsonl").read_text(encoding="utf-8").splitlines():
         if not line.strip():
             continue
-        assert len(line) <= 2500
+        assert len(line) <= 1600
         sizes.append(len(line))
         record = json.loads(line)
         assert not forbidden & set(record)
-    assert max(sizes) <= 2500
+        assert all(len(flag) <= 40 for flag in record.get("risk_flags", []))
+        assert all("." not in flag for flag in record.get("risk_flags", []))
+    assert max(sizes) <= 1600
 
 
 def test_asset_cards_stay_bounded_and_risky_assets_are_not_core() -> None:
     run_cmd("cabal/tools/build_machine_evidence.py")
     run_cmd("cabal/tools/build_asset_cards.py")
-    run_cmd("cabal/tools/build_skinny_index.py")
+    run_cmd("cabal/tools/build_skinny_index.py", "--max-record-chars", "1600")
 
     for card_path in (REPO / "vault" / "cards").glob("*.yaml"):
         text = card_path.read_text(encoding="utf-8")
@@ -69,6 +71,78 @@ def test_reviewed_asset_card_preserves_plotmaster_bubble_geometry() -> None:
     card = yaml.safe_load((REPO / "vault" / "cards" / "plotmaster_003气泡图+相关性热图.yaml").read_text(encoding="utf-8"))
     assert card["geometry"] == "bubble_matrix"
     assert card["subtype"] == "correlation_bubble_heatmap"
+    assert card["review_status"]["image_read_by_model"]
+    assert card["review_status"]["data_read_by_model"]
+    assert card["review_status"]["code_read_by_model"]
+    assert card["capabilities"] == {
+        "highlight": True,
+        "detail_panel": False,
+        "annotation_track": False,
+        "uncertainty": False,
+        "composition": False,
+        "batch": True,
+    }
+
+
+def test_all_material_cards_have_model_review_status_after_full_deep_review() -> None:
+    run_cmd("cabal/tools/build_machine_evidence.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    for card_path in (REPO / "vault" / "cards").glob("*.yaml"):
+        card = yaml.safe_load(card_path.read_text(encoding="utf-8"))
+        assert card["review_status"]["image_read_by_model"], card_path.name
+        assert card["review_status"]["data_read_by_model"], card_path.name
+        assert card["review_status"]["code_read_by_model"], card_path.name
+        assert "image_not_model_reviewed" not in card["risk_flags"]
+        assert "roles_machine_inferred" not in card["risk_flags"]
+        assert "capability_machine_inferred" not in card["risk_flags"]
+
+
+def test_dossiers_are_marked_archival_and_retrieval_does_not_reference_them() -> None:
+    dossier = yaml.safe_load((REPO / "vault" / "dossiers" / "plotmaster_003气泡图+相关性热图.yaml").read_text(encoding="utf-8"))
+    assert dossier["agent_default_entry"] == "vault/cards/plotmaster_003气泡图+相关性热图.yaml"
+    assert dossier["dossier_status"] == "archival_full_record"
+    assert dossier["machine_fields_are_not_authoritative"] is True
+    run_cmd("cabal/tools/build_machine_evidence.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    run_cmd("cabal/tools/build_skinny_index.py", "--max-record-chars", "1600")
+    assert all("dossier" not in record for record in records())
+
+
+def test_core_seed_selection_report_does_not_promote_assets() -> None:
+    run_cmd("cabal/tools/build_machine_evidence.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    run_cmd("cabal/tools/select_core_seed_candidates.py")
+    payload = json.loads((REPO / "vault" / "review" / "core_seed_candidates.json").read_text(encoding="utf-8"))
+    assert "candidate_count" in payload
+    assert (REPO / "vault" / "review" / "core_seed_candidates.md").exists()
+    records_before = records()
+    assert all(record["retrieval_tier"] != "core" for record in records_before if record["id"] in {item["id"] for item in payload["candidates"]})
+
+
+def test_every_material_asset_has_review_record_after_backfill() -> None:
+    run_cmd("cabal/tools/build_machine_evidence.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    run_cmd("cabal/tools/backfill_deep_annotation_reviews.py")
+    material_ids = {
+        json.loads((path / "metadata.json").read_text(encoding="utf-8-sig")).get("id") or path.name
+        for path in (REPO / "vault" / "material").iterdir()
+        if path.is_dir() and (path / "metadata.json").exists()
+    }
+    review_ids = {path.stem for path in (REPO / "vault" / "review" / "deep_annotation" / "reviews").glob("*.yaml")}
+    assert material_ids <= review_ids
+
+
+def test_backfill_does_not_overwrite_existing_complete_model_reviews() -> None:
+    run_cmd("cabal/tools/build_machine_evidence.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    run_cmd("cabal/tools/backfill_deep_annotation_reviews.py")
+    run_cmd("cabal/tools/build_asset_cards.py")
+    card = yaml.safe_load((REPO / "vault" / "cards" / "figures4papers_figure_Dispersion_illustration_png.yaml").read_text(encoding="utf-8"))
+    assert card["read_next"]["deep_review"] == "vault/review/deep_annotation/reviews/figures4papers_figure_Dispersion_illustration_png.yaml"
+    assert card["review_status"]["image_read_by_model"]
+    assert card["review_status"]["data_read_by_model"]
+    assert card["review_status"]["code_read_by_model"]
+    assert "machine_backfill" not in str(card).lower()
 
 
 def complete_review() -> dict:

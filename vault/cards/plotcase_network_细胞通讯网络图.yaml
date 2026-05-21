@@ -1,22 +1,16 @@
 id: plotcase_network_细胞通讯网络图
 title: 细胞通讯网络图
 retrieval_tier: inspiration
-one_line: network asset for 细胞通讯网络图
-geometry: network
-subtype: node_link_network
+one_line: Inspiration for focused sender-to-receiver cell communication diagrams.
+geometry: cell_communication_star_network
+subtype: cell_communication_star_network
 required_roles:
 - source
 - target
 - weight
 optional_roles:
-- node_id
-- node_label
-- node_group
-- node_size
-- edge_group
-- edge_direction
-- layout_x
-- layout_y
+- node_color
+- focused_source
 capabilities:
   highlight: false
   detail_panel: false
@@ -25,29 +19,37 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 细胞通讯网络图
-- 'network/node_link_network grammar with roles: source, target, weight'
+- Inspiration for focused sender-to-receiver cell communication diagrams.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 145484; width: 1294; height: 1393'
+- Clean CellChat regeneration or multi-sender communication networks.
+image_summary: 'figure_type: cell_communication_star_network; layout: One source cell class at left with
+  curved weighted edges to labeled target cell classes arranged around the right and lower perimeter.;
+  marks: [''colored nodes'', ''thi…'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- Do not treat as a complete CellChat matrix workflow.
+- Do not promote to core because this is an explicit visual-audit fallback.
+- case_level_fallback
+- CellChat_special_runtime
+- generic_renderer_entry
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_network_细胞通讯网络图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_network_细胞通讯网络图.yaml
   machine_evidence: vault/evidence/machine/plotcase_network_细胞通讯网络图.yaml
   evidence_pack: vault/material/plotcase_network_细胞通讯网络图
   preview: vault/material/plotcase_network_细胞通讯网络图/outputs/rebuilt.png

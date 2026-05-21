@@ -175,6 +175,9 @@ def safe_fields(review: dict[str, Any], review_ref: str, legacy_full_reviewed_fi
     }
     dossier_fields = dict(metadata_fields)
     dossier_fields["reviewed_summary"] = compact_reviewed_summary(review, review_ref)
+    dossier_fields["agent_default_entry"] = f"vault/cards/{review['case_id']}.yaml"
+    dossier_fields["dossier_status"] = "archival_full_record"
+    dossier_fields["machine_fields_are_not_authoritative"] = True
     remove_metadata = ["reviewed_visual_grammar", "reviewed_visual_roles"]
     remove_dossier = ["reviewed_visual_grammar", "reviewed_visual_roles"]
     if legacy_full_reviewed_fields:

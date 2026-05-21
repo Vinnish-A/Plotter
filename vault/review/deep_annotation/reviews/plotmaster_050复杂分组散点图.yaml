@@ -1,0 +1,167 @@
+case_id: plotmaster_050复杂分组散点图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_050复杂分组散点图/metadata.json
+  - vault/material/plotmaster_050复杂分组散点图/agent_guide.md
+  - vault/material/plotmaster_050复杂分组散点图/plot.py
+  - vault/material/plotmaster_050复杂分组散点图/data_main.csv
+  - vault/material/plotmaster_050复杂分组散点图/outputs/rebuilt.png
+  - vault/material/plotmaster_050复杂分组散点图/outputs/visual_check.json
+  - vault/evidence/machine/plotmaster_050复杂分组散点图.yaml
+  - vault/cards/plotmaster_050复杂分组散点图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_050复杂分组散点图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotmaster_050复杂分组散点图.yaml
+  asset_card: vault/cards/plotmaster_050复杂分组散点图.yaml
+  image: vault/material/plotmaster_050复杂分组散点图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1008
+    height: 720
+    mean_stddev: 39.654
+  build:
+    status: build_success
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: true
+    complexity_mode: medium
+    last_built_at: '2026-05-17T12:30:13.356070+00:00'
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: loglog_grouped_scatter_background_grid
+  subtype: organ_mass_density_reference_scatter
+  description: Log-log scatter over pale blue heatmap/background grid with diagonal dashed reference lines, group-colored
+    markers, shape-coded methods, labels, and two legends.
+inferred_visual_grammar:
+  grammar_id: loglog_grouped_scatter_background_grid
+  summary: Complex grouped scatter requiring x/y numeric values, group/color, method/shape, optional labels, and
+    optional background tile field.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  x: organ mass
+  y: organ immune density
+  group: tissue group color
+  method: marker shape
+  label: point label
+  background_value: tile fill/reference field
+canonical_columns: &id001
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: numeric x coordinate
+  y: numeric y coordinate
+optional_data_semantics:
+  group: point color class
+  method: point shape class
+  label: point annotation
+  background_value: heatmap/background layer
+optional_modules:
+  log_axes:
+    supported: true
+  background_tiles:
+    supported: true
+  diagonal_reference_lines:
+    supported: true
+  point_labels:
+    supported: true
+false_positive_risks:
+- data_main x/y/value abstraction does not explicitly name organ mass/density/method fields
+- source/target/weight are duplicates and not network roles
+best_for:
+- log-scaled grouped scatter with reference grid and label layer
+- two-legend scatter compositions
+bad_for:
+- unlabeled high-density point clouds
+- network retrieval
+style_notes:
+- subtle blue background grid supports colored point focus; legends separated by semantic role
+retrieval_tier_recommendation:
+  tier: support
+  rationale: Observed figure is a strong complex scatter grammar; CSV captures numeric fields but not all semantic
+    labels/modules.
+  exclusion_risks:
+  - method shape and background layer may require original data
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single Cartesian scatter with right-side legends
+  marks:
+  - points
+  - background tiles
+  - diagonal dashed lines
+  - text labels
+  - legend glyphs
+  encodings:
+    x: log organ mass
+    y: log immune density
+    color: tissue group
+    shape: method
+    background_fill: reference density
+  axes: log-scaled x and y axes with scientific tick labels
+  legends: Tissue group and Method legends
+  annotations: selected point labels and dashed reference diagonals
+  text_density: medium
+  visual_risks:
+  - some labels overlap nearby points
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    x: numeric x coordinate
+    y: numeric y coordinate
+    value: background or scalar value proxy
+    label: point label
+    group: empty in current CSV despite visual groups
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

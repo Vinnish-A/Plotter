@@ -323,3 +323,6 @@ reviewed_summary:
     visual_review: high
     limitation: Rplots.pdf page not deeply audited in annotator output; metadata already
       records fallback due poor original-code match
+agent_default_entry: vault/cards/plotcase_circos_多类别关联网络弦图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

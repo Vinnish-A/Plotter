@@ -1,0 +1,215 @@
+case_id: plotmaster_001箱线图+散点图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_001箱线图+散点图/metadata.json
+  - vault/material/plotmaster_001箱线图+散点图/agent_guide.md
+  - vault/material/plotmaster_001箱线图+散点图/plot.py
+  - vault/material/plotmaster_001箱线图+散点图/data_main.csv
+  - vault/material/plotmaster_001箱线图+散点图/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_001箱线图+散点图.yaml
+  - vault/cards/plotmaster_001箱线图+散点图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_001箱线图+散点图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotmaster_001箱线图+散点图.yaml
+  asset_card: vault/cards/plotmaster_001箱线图+散点图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_001箱线图+散点图.yaml
+  image_inspected: vault/material/plotmaster_001箱线图+散点图/outputs/rebuilt.png
+  code_entry: vault/material/plotmaster_001箱线图+散点图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: boxplot
+  subtype: many-category boxplot without visible jitter despite title
+  panel_count: 1
+  layout: single Cartesian panel with many rotated sample categories
+  marks:
+  - boxplots
+  - whiskers
+  - median lines
+  encodings:
+    x: sample/group category
+    y: value
+  axes: x group, y value
+  legends: none
+  annotations: []
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    backend: R/ggplot2
+    geometry: scatter
+    keywords:
+    - scatter
+    - ggplot2
+    visual_dependencies:
+    - ggplot2
+    - tidyr
+    runtime_dependencies:
+    - matplotlib
+    - numpy
+    - pandas
+    - python
+reviewed_visual_roles:
+  group: x category for boxplots
+  value: distribution value
+  x: coarse category but not directly the visible sample labels
+  y: duplicate quantitative value candidate
+  label: coarse label only
+  source/target/weight: compatibility duplicates, not network roles
+  lower/upper: compatibility intervals, not visible
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  group: visible x/category grouping
+  value: boxplot distribution value
+optional_data_semantics:
+  x: coarse grouping candidate
+  y: quantitative duplicate of value
+  label: coarse label candidate
+  facet: empty
+  source: not a network source
+  target: not a network target
+  weight: not a network weight
+  lower: not visible
+  upper: not visible
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - x
+  - y
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  requires_custom_layout_for_full_rebuild: false
+false_positive_risks:
+- title says boxplot plus scatter, but rebuilt image shows only boxplots
+- false_positive_column:source
+- false_positive_column:target
+- false_positive_column:weight
+- false_positive_column:lower
+- false_positive_column:upper
+- false_positive_column:facet
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Many-category boxplot layouts
+bad_for:
+- Network/flow retrieval from compatibility columns
+- Actual boxplot-plus-jitter examples
+style_notes:
+- Rotated labels fit but are dense
+- Simple grid and blue boxes
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - title says boxplot plus scatter, but rebuilt image shows only boxplots
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: single Cartesian panel with many rotated sample categories
+  marks:
+  - boxplots
+  - whiskers
+  - median lines
+  encodings:
+    x: sample/group category
+    y: value
+  axes: x group, y value
+  legends: none
+  annotations: []
+  text_density: moderate on rotated x labels
+  visual_risks:
+  - title says boxplot plus scatter, but rebuilt image shows only boxplots
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_mapping:
+    group: x category for boxplots
+    value: distribution value
+    x: coarse category but not directly the visible sample labels
+    y: duplicate quantitative value candidate
+    label: coarse label only
+    source/target/weight: compatibility duplicates, not network roles
+    lower/upper: compatibility intervals, not visible
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  - facet
+  missing_optional_data:
+  - data_optional.csv absent
+  - facet
+  - lower
+  - upper
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('box', '001箱线图+散点图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - title says boxplot plus scatter, but rebuilt image shows only boxplots
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

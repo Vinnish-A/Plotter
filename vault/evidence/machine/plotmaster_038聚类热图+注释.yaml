@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_038聚类热图+注释/metadata.json
     exists: true
-    size_bytes: 3199
+    size_bytes: 4213
   agent_guide:
     path: vault/material/plotmaster_038聚类热图+注释/agent_guide.md
     exists: true

@@ -161,5 +161,20 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "support tier because the visual grammar is useful, but retrieval should remain conservative around fallback/synthetic/generic-renderer limits.",
+  "exclusion_risks": [
+    "canonical source/target/weight duplicate x/y/value; do not interpret as network edges"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "notes": "Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine evidence, card, and prior review.",
+    "reviewed_at": "2026-05-21T09:16:58.936503+00:00",
+    "annotator_model": "gpt-5-codex",
+    "review_version": "model_assisted_deep_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_017基因融合热图+堆积柱状图.yaml"
 }

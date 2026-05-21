@@ -1,50 +1,59 @@
 id: plotcase_heatmap_时间序列基因表达热图
 title: 时间序列基因表达热图
 retrieval_tier: inspiration
-one_line: heatmap asset for 时间序列基因表达热图
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: Visual inspiration for clustered time-series expression heatmaps with side trend summaries and
+  enrichment callouts.
+geometry: clustered_time_series_expression_heatmap_with_side_summaries
+subtype: clustered_time_series_expression_heatmap_with_side_summaries
 required_roles:
-- row_id
-- column_id
-- value
+- gene_id
+- timepoint
+- expression_z
+- cluster_id
 optional_roles:
-- row_group
-- column_group
-- annotation_track
-- annotation_value
-- label
-- size_value
-- facet
+- marked_gene
+- annotation_term
+- stage_group
 capabilities:
-  highlight: true
-  detail_panel: true
+  highlight: false
+  detail_panel: false
   annotation_track: false
   uncertainty: false
   composition: true
   batch: true
 best_for:
-- 时间序列基因表达热图
-- 'heatmap/annotated_heatmap grammar with roles: row_id, column_id, value'
+- Visual inspiration for clustered time-series expression heatmaps with side trend summaries and enrichment
+  callouts.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 478735; width: 2184; height: 2027'
+- Data-backed generation from arbitrary gene expression matrices in the current environment.
+image_summary: 'figure_type: clustered_time_series_expression_heatmap_with_side_summaries; layout: Large
+  left dendrogram and cluster labels, stacked central expression heatmap across developmental stages,
+  mini trend plots on the left, …'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.R; backend_hints: []'
 risk_flags:
 - case_level_fallback
-- image_not_model_reviewed
-- roles_machine_inferred
+- missing_optional_data
+risk_notes:
+- Do not treat as a clean rebuildable heatmap until ClusterGVis or an equivalent renderer is pinned.
+- Current data_main is a small generic heatmap sketch, not the full gene-by-time matrix.
+- Keep out of core retrieval because this is a case-level fallback.
+- case_level_fallback
+- missing_ClusterGVis
+- incomplete_data_contract
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_heatmap_时间序列基因表达热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_时间序列基因表达热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_时间序列基因表达热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_时间序列基因表达热图
   preview: vault/material/plotcase_heatmap_时间序列基因表达热图/outputs/rebuilt.png

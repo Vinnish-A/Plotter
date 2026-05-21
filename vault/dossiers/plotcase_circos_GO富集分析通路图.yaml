@@ -321,3 +321,6 @@ reviewed_summary:
     overall: 0.82
     visual_grammar: 0.91
     reproducibility_contract: 0.58
+agent_default_entry: vault/cards/plotcase_circos_GO富集分析通路图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

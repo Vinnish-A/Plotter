@@ -153,5 +153,23 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": true,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "inspiration",
+  "retrieval_rationale": "The observed visual grammar is useful as a KM survival layout reference, but current data/code do not faithfully rebuild it and the asset relies on a case-level rendered-output fallback.",
+  "exclusion_risks": [
+    "case_level_fallback",
+    "generic_renderer_entry",
+    "data_interface_placeholder",
+    "metadata_heatmap_false_positive"
+  ],
+  "annotation_status": {
+    "status": "complete",
+    "level": "model_assisted_deep_review",
+    "human_review_required": false,
+    "reason": "Replaced machine backfill after inspecting metadata, guide, entry script, data profile, machine evidence, card, current review, and rebuilt image.",
+    "reviewed_at": "2026-05-21T17:03:36+08:00",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/figureya_survival_FigureYa305PMAPscore.yaml"
 }

@@ -296,3 +296,6 @@ reviewed_summary:
     overall: 0.9
     visual_grammar: 0.97
     current_contract_fit: 0.3
+agent_default_entry: vault/cards/plotcase_barplot_ggplot2绘制菌群分布图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

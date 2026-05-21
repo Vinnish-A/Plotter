@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_015分半小提琴图/metadata.json
     exists: true
-    size_bytes: 3157
+    size_bytes: 3844
   agent_guide:
     path: vault/material/plotmaster_015分半小提琴图/agent_guide.md
     exists: true

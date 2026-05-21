@@ -1,0 +1,225 @@
+case_id: plotmaster_022复杂环形热图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotmaster_022复杂环形热图/metadata.json
+  - vault/material/plotmaster_022复杂环形热图/agent_guide.md
+  - vault/material/plotmaster_022复杂环形热图/plot.py
+  - vault/material/plotmaster_022复杂环形热图/data_main.csv
+  - vault/material/plotmaster_022复杂环形热图/outputs/rebuilt.png
+  - vault/evidence/machine/plotmaster_022复杂环形热图.yaml
+  - vault/cards/plotmaster_022复杂环形热图.yaml
+  - vault/review/deep_annotation/reviews/plotmaster_022复杂环形热图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotmaster_022复杂环形热图.yaml
+  asset_card: vault/cards/plotmaster_022复杂环形热图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotmaster_022复杂环形热图.yaml
+  image_inspected: vault/material/plotmaster_022复杂环形热图/outputs/rebuilt.png
+  code_entry: vault/material/plotmaster_022复杂环形热图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: complex_circular_heatmap
+  subtype: multi-ring circos heatmap with pathway group annulus and many radial labels
+  panel_count: 1
+  layout: large broken circular heatmap with center legend and small stacked colorbars above
+  marks:
+  - annular heatmap tiles
+  - inner pathway ring
+  - radial text labels
+  - multiple colorbars
+  encodings:
+    angle: feature/metabolite identity
+    ring: measurement layer
+    fill: layer-specific continuous values
+    inner band: super pathway group
+  axes: polar categorical labels; no Cartesian axes
+  legends: center categorical legend plus multiple continuous colorbars
+  annotations:
+  - many radial feature labels
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    backend: R/ComplexHeatmap-circlize
+    geometry: 3d_manifold
+    keywords:
+    - 3d_manifold
+    - ComplexHeatmap
+    - circlize
+    visual_dependencies:
+    - ComplexHeatmap
+    - circlize
+    - readxl
+    - tidyverse
+    runtime_dependencies:
+    - matplotlib
+    - numpy
+    - pandas
+    - python
+reviewed_visual_roles:
+  x: feature/category identity candidate
+  y: ring/layer identity candidate
+  value: heatmap value
+  facet: feature group/order candidate
+  label: feature label duplicate
+  source/target/weight: compatibility duplicates, not network roles
+  lower/upper: not visible
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: feature/category identity
+  y: ring/layer identity
+  value: cell value
+optional_data_semantics:
+  facet: group/order/facet candidate
+  label: label duplicate
+  group: empty
+  source: not a source role
+  target: not a target role
+  weight: not a weight role
+  lower: not visible
+  upper: not visible
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - facet
+  - label
+  - group
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- metadata calls geometry 3d_manifold, but image is circular heatmap; source/target/weight are compatibility duplicates
+- false_positive_column:source
+- false_positive_column:target
+- false_positive_column:weight
+- false_positive_column:lower
+- false_positive_column:upper
+- false_positive_column:group
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- High-complexity circular heatmap inspiration with multiple rings and legends
+bad_for:
+- Core retrieval for clean reusable heatmaps
+- Small-format figures where radial labels must be readable
+style_notes:
+- Text density is the limiting factor
+- Multiple color scales imply layer-specific semantics
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: inspiration tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - metadata calls geometry 3d_manifold, but image is circular heatmap; source/target/weight are compatibility duplicates
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: large broken circular heatmap with center legend and small stacked colorbars above
+  marks:
+  - annular heatmap tiles
+  - inner pathway ring
+  - radial text labels
+  - multiple colorbars
+  encodings:
+    angle: feature/metabolite identity
+    ring: measurement layer
+    fill: layer-specific continuous values
+    inner band: super pathway group
+  axes: polar categorical labels; no Cartesian axes
+  legends: center categorical legend plus multiple continuous colorbars
+  annotations:
+  - many radial feature labels
+  text_density: very high
+  visual_risks:
+  - metadata calls geometry 3d_manifold, but image is circular heatmap; source/target/weight are compatibility duplicates
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  role_mapping:
+    x: feature/category identity candidate
+    y: ring/layer identity candidate
+    value: heatmap value
+    facet: feature group/order candidate
+    label: feature label duplicate
+    source/target/weight: compatibility duplicates, not network roles
+    lower/upper: not visible
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  - group
+  missing_optional_data:
+  - data_optional.csv absent
+  - group
+  - lower
+  - upper
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('heatmap', '022复杂环形热图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - metadata calls geometry 3d_manifold, but image is circular heatmap; source/target/weight are compatibility duplicates
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

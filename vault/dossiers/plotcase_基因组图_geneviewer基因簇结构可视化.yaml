@@ -352,3 +352,6 @@ reviewed_summary:
     source_lineage: high
     limitation: Original geneviewer widget cannot be statically rebuilt from declared
       standard data.
+agent_default_entry: vault/cards/plotcase_基因组图_geneviewer基因簇结构可视化.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

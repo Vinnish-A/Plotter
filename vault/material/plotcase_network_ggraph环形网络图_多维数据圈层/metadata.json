@@ -160,5 +160,21 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Strong source-backed grammar, but standard entry and current CSV do not encode the multiring annotation contract.",
+  "exclusion_risks": [
+    "generic_renderer_entry",
+    "annotation_tracks_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": false,
+    "reason": "Reviewed rich circular network image, data_main, source R, generic plot.py, machine evidence, card, and prior review.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotcase_network_ggraph环形网络图_多维数据圈层.yaml"
 }

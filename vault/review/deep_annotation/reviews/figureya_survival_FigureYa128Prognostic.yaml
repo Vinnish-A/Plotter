@@ -1,0 +1,256 @@
+case_id: figureya_survival_FigureYa128Prognostic
+annotation_version: deep_annotation_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: Replaced machine backfill after direct review of image, metadata, data, code, card, and machine evidence.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:03:39Z'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/figureya_survival_FigureYa128Prognostic/metadata.json
+  - vault/material/figureya_survival_FigureYa128Prognostic/agent_guide.md
+  - vault/material/figureya_survival_FigureYa128Prognostic/plot.py
+  - vault/material/figureya_survival_FigureYa128Prognostic/data_main.csv
+  - vault/material/figureya_survival_FigureYa128Prognostic/outputs/rebuilt.png
+  - vault/evidence/machine/figureya_survival_FigureYa128Prognostic.yaml
+  - vault/cards/figureya_survival_FigureYa128Prognostic.yaml
+  - vault/review/deep_annotation/reviews/figureya_survival_FigureYa128Prognostic.yaml
+  - retinue/tools/plotter_standard_renderer.py
+  - vault/material/figureya_survival_FigureYa128Prognostic/scripts/FigureYa128Prognostic.Rmd
+  - vault/material/figureya_survival_FigureYa128Prognostic/outputs/visual_check.json
+  image_inspected: vault/material/figureya_survival_FigureYa128Prognostic/outputs/rebuilt.png
+  data_optional_present: false
+  machine_evidence: vault/evidence/machine/figureya_survival_FigureYa128Prognostic.yaml
+  asset_card: vault/cards/figureya_survival_FigureYa128Prognostic.yaml
+  review_record: vault/review/deep_annotation/reviews/figureya_survival_FigureYa128Prognostic.yaml
+observed_visual_grammar:
+  geometry: composite_cartesian_line_survival
+  subtype: prognostic_auc_roc_kaplan_meier_triptych
+  panel_structure: three horizontally arranged panels
+  primary_marks:
+  - blue AUC line over ordered gene count with red peak point, arrow, and text callout
+  - blue ROC curve with grey diagonal no-skill reference line and inline AUC label
+  - red and blue Kaplan-Meier step curves with censor tick marks, risk legend, and log-rank p-value
+  not_heatmap: true
+  source: direct image inspection plus Rmd plotting block
+inferred_visual_grammar:
+  figure_intent: Prognostic model evaluation summary for a gene signature.
+  required_visual_units:
+  - feature-count performance trajectory
+  - ROC discrimination panel at selected feature count
+  - risk-stratified survival comparison panel
+  weak_interpretations:
+  - Specific disease, cohort, and gene-selection semantics come from source file names and Rmd comments, not from the standardized CSV interface.
+  - The live metadata/card heatmap classification is stale relative to the reviewed image.
+reviewed_visual_roles:
+  feature_count:
+    role: x-position in first panel
+    evidence: image axis "Genes ordered by frequency"; Rmd uses 1:length(genes)
+    present_in_data_main: false
+  auc:
+    role: y-position in first panel and selected performance annotation
+    evidence: image y-axis "Area under the curve"; Rmd auc vector
+    present_in_data_main: false
+  selected_peak:
+    role: red point, arrow, and "Number of genes / Current AUC" callout
+    evidence: image annotation at 18 genes and AUC 0.954
+    present_in_data_main: false
+  roc_fpr:
+    role: x-position in ROC panel
+    evidence: image axis "1-Specificity (FPR)"
+    present_in_data_main: false
+  roc_tpr:
+    role: y-position in ROC panel
+    evidence: image axis "Sensitivity (TPR)"
+    present_in_data_main: false
+  risk_group:
+    role: Kaplan-Meier curve color and legend category
+    evidence: image legend "Risk" with High red and Low blue
+    present_in_data_main: false
+  survival_time:
+    role: x-position in survival panel
+    evidence: image axis "Time (Years)"
+    present_in_data_main: false
+  survival_probability:
+    role: y-position in survival panel
+    evidence: image axis "Overall survival"
+    present_in_data_main: false
+canonical_columns:
+- x
+- y
+- value
+- group
+- label
+- facet
+- source
+- target
+- weight
+- lower
+- upper
+required_data_semantics:
+  x: Generic quantitative column in current data_main.csv; not sufficient to identify feature count, ROC FPR, or survival time roles.
+  y: Generic quantitative column in current data_main.csv; duplicated by value/target/weight and not sufficient to identify AUC, TPR, or survival probability roles.
+  value: Duplicate of y in sampled rows; current plot.py can use it as fallback y/value but the reviewed image does not expose a single value channel.
+optional_data_semantics:
+  label: Sequential item labels such as item_1; not visible as final figure labels.
+  group: Empty in data_main.csv; no risk-group semantics are encoded here.
+  facet: Empty in data_main.csv; does not encode the three reviewed panels.
+  source: Compatibility duplicate of x; do not treat as network source.
+  target: Compatibility duplicate of y; do not treat as network target.
+  weight: Compatibility duplicate of y; do not treat as network edge weight.
+  lower: Numeric compatibility/interval-like column, not visibly used in the rebuilt image.
+  upper: Numeric compatibility/interval-like column, not visibly used in the rebuilt image.
+optional_modules:
+  peak_callout:
+    observed: true
+    data_backed_by_current_csv: false
+    notes: Red point, arrow, and text callout mark the selected gene count/AUC.
+  roc_reference:
+    observed: true
+    data_backed_by_current_csv: false
+    notes: Dashed diagonal no-skill reference line is part of the ROC panel grammar.
+  survival_legend_and_pvalue:
+    observed: true
+    data_backed_by_current_csv: false
+    notes: Risk legend and log-rank p-value are essential annotations for the KM panel.
+  censor_marks:
+    observed: true
+    data_backed_by_current_csv: false
+    notes: Short tick marks on KM curves indicate censored observations.
+false_positive_risks:
+- Metadata and card label the asset as heatmap/annotated_heatmap, but the reviewed image is an AUC/ROC/KM survival composite.
+- Current data_main.csv is a generic compatibility table and does not encode the panel-specific survival grammar.
+- plot.py delegates to the generic line renderer; running it would not reproduce the reviewed three-panel image.
+- source, target, and weight are compatibility duplicates of x/y/value, not network roles.
+- lower and upper look interval-like but are not visible uncertainty encodings in the reviewed output.
+- The accepted image is a case-level fallback because the precomputed lasso_fea.rda object is unavailable.
+best_for:
+- Inspiration for compact prognostic-model evaluation layouts combining feature-selection AUC, ROC, and Kaplan-Meier survival evidence.
+- Reusing visual composition ideas for risk-stratified survival summaries when panel-specific data can be supplied explicitly.
+- Cases needing clear inline performance annotations and a small survival legend in a wide horizontal figure.
+bad_for:
+- Heatmaps, annotated matrices, networks, or any retrieval that depends on source/target/weight semantics.
+- Fully reproducible source-code rebuilds from the current standardized CSV alone.
+- Automated remapping unless the caller can provide separate AUC trajectory, ROC, and survival curve data tables.
+style_notes:
+- Wide 3:1 layout uses three equally weighted base-plot panels with generous whitespace.
+- Blue carries model-performance curves and low-risk survival; red marks the selected peak and high-risk survival.
+- 'Text annotations are sparse but semantically important: selected gene count/AUC, ROC AUC, risk legend, and log-rank p-value.'
+- The final image has no main title; panel identity is carried by axes and annotations.
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Visually useful survival-composite pattern, but current standardized data/code are fallback/generic and not a trustworthy reusable contract.
+  exclusion_risks:
+  - case_level_fallback
+  - generic_renderer_entry_does_not_match_reviewed_image
+  - current_csv_missing_panel_specific_roles
+  - stale_heatmap_metadata
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: high
+  reproducibility_contract: low
+image_observation:
+  image_read: true
+  panel_count: 3
+  layout:
+  - one row of three cartesian panels on a wide canvas
+  - left panel AUC versus genes ordered by frequency
+  - middle panel ROC curve with diagonal reference
+  - right panel Kaplan-Meier survival comparison
+  marks:
+  - continuous line
+  - red point marker
+  - arrow
+  - dashed diagonal reference line
+  - step survival curves
+  - censor tick marks
+  encodings:
+    blue: AUC/ROC performance line and Low-risk survival group
+    red: selected AUC peak marker/text and High-risk survival group
+    x_position: feature count, FPR, or time depending on panel
+    y_position: AUC, TPR, or overall survival depending on panel
+  axes:
+  - Genes ordered by frequency / Area under the curve
+  - 1-Specificity (FPR) / Sensitivity (TPR)
+  - Time (Years) / Overall survival
+  legends:
+  - Risk legend with High and Low labels in right panel
+  annotations:
+  - 'Number of genes: 18; Current AUC: 0.954'
+  - AUC = 0.954
+  - Log-rank P < 0.001
+  text_density: moderate
+  visual_risks:
+  - The risk legend sits outside or near the right panel plotting region and depends on wide canvas space.
+  - No title or panel labels; retrieval should not assume standalone panel naming beyond axis text.
+data_understanding:
+  data_read: true
+  observed_columns:
+  - x
+  - y
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  row_count: 2000
+  role_mapping:
+    x: Generic numeric input for fallback renderer; no panel-specific role.
+    y: Generic numeric input for fallback renderer; duplicated by value/target/weight in sampled rows.
+    value: Generic value duplicate of y.
+    label: Sequential item identifier only.
+  derived_columns:
+  - value duplicates y in sampled rows
+  - source duplicates x in sampled rows
+  - target duplicates y in sampled rows
+  - weight duplicates y in sampled rows
+  - lower and upper appear derived from value by a fixed offset-like transformation
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  - label
+  missing_optional_data:
+  - data_optional.csv is absent
+  - no explicit panel/facet identifiers for AUC, ROC, and KM panels
+  - no risk group, censoring, survival probability, or ROC curve columns in the standardized interface
+code_understanding:
+  code_read: true
+  backend: Python matplotlib via retinue/tools/plotter_standard_renderer.py; source Rmd uses R base plot with survival and survivalROC.
+  entry_behavior: plot.py imports the shared standard renderer and calls render('line', 'FigureYa128Prognostic'), which reads data_main.csv and would draw a generic single-panel line plot.
+  hardcoded_aesthetics:
+  - Rmd uses red #E94244 and blue #4084BB for the reviewed AUC/ROC/KM figure.
+  - Rmd hardcodes a 10x3 PDF, par(mfrow = c(1, 3)), callout positions, legend positions, and p-value text placement.
+  output_behavior: outputs/rebuilt.png is a rasterized case-level fallback from AUCandKM.pdf; current plot.py does not explain the observed three-panel PNG.
+  unsupported_features:
+  - Missing lasso_fea.rda prevents ordinary recomputation of the original R workflow.
+  - Generic Python renderer cannot rebuild ROC curves, Kaplan-Meier steps, censor marks, or log-rank annotations from data_main.csv.
+proposed_metadata_patch:
+  visual_keywords:
+  - survival
+  - ROC
+  - Kaplan-Meier
+  - AUC
+  chart_family:
+  - survival_composite
+  visual_grammar:
+    geometry: composite_cartesian_line_survival
+    keywords:
+    - survival
+    - ROC
+    - Kaplan-Meier
+    - AUC
+  note: Metadata currently says heatmap despite the reviewed image being an AUC/ROC/KM survival composite.
+proposed_dossier_patch: {}

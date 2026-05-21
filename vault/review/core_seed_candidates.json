@@ -1,0 +1,21 @@
+{
+  "candidate_count": 1,
+  "candidates": [
+    {
+      "id": "plotmaster_003气泡图+相关性热图",
+      "title": "003气泡图+相关性热图",
+      "geometry": "bubble_matrix",
+      "subtype": "correlation_bubble_heatmap",
+      "card": "vault/cards/plotmaster_003气泡图+相关性热图.yaml",
+      "score": 40,
+      "safe_signals": [
+        "support_tier",
+        "clean_rebuild_flags",
+        "model_reviewed_image_data_code",
+        "reviewed_roles_and_image"
+      ],
+      "remaining_risks": [],
+      "evidence_missing": []
+    }
+  ]
+}

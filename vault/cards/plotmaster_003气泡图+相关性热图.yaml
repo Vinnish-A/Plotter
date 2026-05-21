@@ -36,13 +36,20 @@ data_summary: 'main_columns: [''group'', ''gene'', ''correlation'', ''p_value'',
   ''abs_correlation'']; sampled_rows: 190'
 code_summary: 'entry: plot.R; backend_hints: [''ggplot2'']'
 risk_flags:
-- Do not retrieve as clustered heatmap, annotated heatmap, dendrogram, or tile-on…
+- statistical_claim_needs_review
+risk_notes:
+- Do not retrieve as clustered heatmap, annotated heatmap, dendrogram, or tile-only heatmap.
 - Do not infer source/target/weight network semantics; those columns are absent.
 - Legend text around p/FDR needs review before statistical claims.
 confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_003气泡图+相关性热图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotmaster_003气泡图+相关性热图.yaml

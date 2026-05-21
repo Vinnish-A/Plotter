@@ -1,0 +1,160 @@
+case_id: plotcase_pie_多层饼图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_pie_多层饼图/metadata.json
+  - vault/material/plotcase_pie_多层饼图/agent_guide.md
+  - vault/material/plotcase_pie_多层饼图/plot.py
+  - vault/material/plotcase_pie_多层饼图/data_main.csv
+  - vault/material/plotcase_pie_多层饼图/outputs/rebuilt.png
+  - vault/material/plotcase_pie_多层饼图/outputs/visual_check.json
+  - vault/evidence/machine/plotcase_pie_多层饼图.yaml
+  - vault/cards/plotcase_pie_多层饼图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_pie_多层饼图.yaml
+  optional_data_present: false
+  machine_evidence: vault/evidence/machine/plotcase_pie_多层饼图.yaml
+  asset_card: vault/cards/plotcase_pie_多层饼图.yaml
+  image: vault/material/plotcase_pie_多层饼图/outputs/rebuilt.png
+  visual_check:
+    file_exists: true
+    non_empty_image: true
+    minimum_resolution: true
+    not_blank: true
+    width: 1859
+    height: 1130
+    mean_stddev: 67.9585
+  build:
+    status: custom_required
+    language: Python
+    entry: plot.py
+    output: outputs/rebuilt.png
+    requires_optional_data: false
+    linux_ready: false
+    complexity_mode: high
+    last_built_at: '2026-05-17T12:30:12.399636+00:00'
+  rebuild_class:
+    source_code_rebuild: false
+    generic_renderer_rebuild: true
+    case_level_fallback: true
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: multi_donut_grid
+  subtype: small_multiple_nested_donut
+  description: Grid of nested donut charts with central environment labels/counts and a long categorical legend
+    at right.
+inferred_visual_grammar:
+  grammar_id: multi_donut_grid
+  summary: Small-multiple part-to-whole donut grammar needing facet, category, inner/outer ring, and value roles.
+  not_core_reason: generic_renderer/fallback/synthetic risks were considered when assigning retrieval tier
+reviewed_visual_roles:
+  facet: one donut per environment
+  category: legend category/slice
+  value: slice angle/proportion
+  ring: inner versus outer donut ring
+canonical_columns: &id001
+- source
+- target
+- weight
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+- source_group
+- target_group
+required_data_semantics:
+  facet: donut panel identity
+  category: slice category
+  value: slice magnitude
+optional_data_semantics:
+  ring: inner/outer ring type
+  label: center label/count
+  color: category color
+optional_modules:
+  small_multiples:
+    supported: true
+  nested_rings:
+    supported: true
+false_positive_risks:
+- metadata/data_main present a network edge list, not donut slice data
+- case_level_fallback true
+best_for:
+- multi-condition compositional donut summaries
+- nested part-to-whole visual inspiration
+bad_for:
+- network/chord retrieval despite source/target columns
+- precise comparison of many tiny slices
+style_notes:
+- consistent category colors across donuts; spacious grid plus right legend
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Good visual exemplar but fallback and standardized data do not encode the donut grammar.
+  exclusion_risks:
+  - cannot be rebuilt from data_main as observed
+confidence:
+  overall: 0.74
+  image: 0.9
+  data: 0.62
+  code: 0.7
+image_observation:
+  image_read: true
+  panel_count: 11
+  layout: 3x4 grid with one empty slot and right-side legend
+  marks:
+  - donut slices
+  - inner rings
+  - center labels
+  - legend swatches
+  encodings:
+    slice_angle: category proportion
+    facet_position: environment
+    center_text: panel total
+  axes: none
+  legends: long categorical legend at right
+  annotations: center labels and totals
+  text_density: medium
+  visual_risks:
+  - small slices are hard to compare
+data_understanding:
+  data_read: true
+  observed_columns: *id001
+  role_mapping:
+    source: false positive; not a donut role
+    target: false positive; not a donut role
+    weight: could be slice value only after remapping, not supported by current columns
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  - source_group
+  - target_group
+  - layout_x
+  - layout_y
+  missing_optional_data: []
+code_understanding:
+  code_read: true
+  backend: standard plot.py wrapper plus original rebuild log
+  entry_behavior: Current standard entry imports retinue/tools/plotter_standard_renderer.py and calls render(...);
+    original_rebuild.log records the source/fallback build evidence.
+  hardcoded_aesthetics:
+  - specialized styling is present in rebuilt image and/or original output; current plot.py wrapper does not expose
+    those aesthetics through data_main
+  output_behavior: Reviewed existing outputs/rebuilt.png; visual_check reports nonblank image and dimensions, but
+    file existence was not treated as sufficient evidence.
+  unsupported_features: []
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

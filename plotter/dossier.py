@@ -507,6 +507,9 @@ def dossier_from_case(case_dir: Path, repo_root: Path) -> dict[str, Any]:
     dossier = {
         "id": case_id,
         "title": title,
+        "agent_default_entry": f"vault/cards/{case_id}.yaml",
+        "dossier_status": "archival_full_record",
+        "machine_fields_are_not_authoritative": True,
         "annotation_status": {
             "level": "machine_generated_dossier_v1",
             "method": "metadata + agent guide + canonical CSV profile + plot entry + rebuilt image evidence",

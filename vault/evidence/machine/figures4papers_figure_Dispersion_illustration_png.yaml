@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/figures4papers_figure_Dispersion_illustration_png/metadata.json
     exists: true
-    size_bytes: 2656
+    size_bytes: 3550
   agent_guide:
     path: vault/material/figures4papers_figure_Dispersion_illustration_png/agent_guide.md
     exists: true

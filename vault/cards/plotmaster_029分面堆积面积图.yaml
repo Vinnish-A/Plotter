@@ -1,20 +1,16 @@
 id: plotmaster_029分面堆积面积图
 title: 029分面堆积面积图
 retrieval_tier: inspiration
-one_line: map asset for 029分面堆积面积图
-geometry: map
-subtype: map
+one_line: faceted composition trends
+geometry: faceted stacked area chart
+subtype: three-panel proportional area composition
 required_roles:
 - x
 - y
 - value
 optional_roles:
 - group
-- label
 - facet
-- source
-- target
-- weight
 - lower
 - upper
 capabilities:
@@ -25,28 +21,35 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 029分面堆积面积图
-- 'map/map grammar with roles: x, y, value'
+- faceted composition trends
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 43595; width: 1152; height: 864'
+- core use when stack categories must be recoverable
+image_summary: 'geometry: faceted stacked area chart; subtype: three-panel proportional area composition;
+  layout: three side-by-side facets; primary_marks: [''stacked filled areas'', ''facet titles'', ''vertical
+  separators'']'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - synthetic_data
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- synthetic_data
+- false_positive_columns:source,target,weight
+- generic_plotmaster_source_target_weight_columns_are_not_visual_roles
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotmaster_029分面堆积面积图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_029分面堆积面积图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_029分面堆积面积图.yaml
   evidence_pack: vault/material/plotmaster_029分面堆积面积图
   preview: vault/material/plotmaster_029分面堆积面积图/outputs/rebuilt.png

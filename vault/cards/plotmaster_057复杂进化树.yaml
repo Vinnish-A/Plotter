@@ -1,52 +1,53 @@
 id: plotmaster_057复杂进化树
 title: 057复杂进化树
 retrieval_tier: inspiration
-one_line: network asset for 057复杂进化树
-geometry: network
-subtype: node_link_network
+one_line: inspiration for circular tree with outer clade bands
+geometry: circular_tree_outer_clades
+subtype: radial_tree_with_outer_clade_blocks
 required_roles:
-- x
-- y
-- value
+- node_id
+- parent_id
 optional_roles:
-- group
 - label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
+- group
+- outer_block
 capabilities:
   highlight: true
   detail_panel: false
   annotation_track: false
-  uncertainty: true
+  uncertainty: false
   composition: true
   batch: true
 best_for:
-- 057复杂进化树
-- 'network/node_link_network grammar with roles: x, y, value'
+- inspiration for circular tree with outer clade bands
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 163298; width: 720; height: 720'
+- core tree retrieval or clean-session rebuild
+- network source-target interpretation
+image_summary: 'geometry: circular_tree_outer_clades; subtype: radial_tree_with_outer_clade_blocks; description:
+  Circular phylogenetic tree with sample labels at tips, colored node points, and broad outer clade/group
+  bands separated by…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'', ''ggtree'']'
 risk_flags:
 - synthetic_data
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- synthetic_data true and original log reports an R error
+- current data_main is generic x/y/value and does not encode topology
+- topology and clade ranges absent from data_main
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_057复杂进化树.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_057复杂进化树.yaml
   machine_evidence: vault/evidence/machine/plotmaster_057复杂进化树.yaml
   evidence_pack: vault/material/plotmaster_057复杂进化树
   preview: vault/material/plotmaster_057复杂进化树/outputs/rebuilt.png

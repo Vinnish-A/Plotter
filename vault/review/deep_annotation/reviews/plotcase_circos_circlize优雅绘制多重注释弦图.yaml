@@ -1,0 +1,118 @@
+case_id: plotcase_circos_circlize优雅绘制多重注释弦图
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  reason: "Image, data, R source, generic plot.py, machine evidence, card, and prior backfill were inspected."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read:
+    - AGENTS.md
+    - schemas/deep_dossier_review.schema.yaml
+    - vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/metadata.json
+    - vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/agent_guide.md
+    - vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/plot.py
+    - vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/scripts/code.R
+    - vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/data_main.csv
+    - vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/outputs/rebuilt.png
+    - vault/material/plotcase_circos_circlize优雅绘制多重注释弦图/outputs/visual_check.json
+    - vault/cards/plotcase_circos_circlize优雅绘制多重注释弦图.yaml
+    - vault/review/deep_annotation/reviews/plotcase_circos_circlize优雅绘制多重注释弦图.yaml
+  data_main_profile:
+    rows: 7
+    columns: [source, target, weight, source_group, target_group, direction, sector_order, sector_color, label, node_id, node_label]
+  rebuilt_png:
+    width: 1008
+    height: 1008
+    visual_check_ok: true
+  original_rebuild_log: "R circlize script ran and read an 8x13 matrix."
+observed_visual_grammar:
+  figure_type: circular_chord_diagram_with_outer_sector_groups
+  layout: "Single circos figure with large country sectors, seasonal sub-sectors, axes, and dense multicolor ribbons."
+  marks: [outer sector arcs, inner axes, chord ribbons, sector labels]
+  encodings:
+    sector: "Origin/destination categories arranged around a circle."
+    ribbon_width: "Connection magnitude."
+    ribbon_color: "Connection or subgroup identity."
+    outer_highlight: "Higher-level region grouping."
+inferred_visual_grammar:
+  grammar_id: circlize_chord_diagram_grouped_sectors
+  source_logic: "Original R uses circlize::chordDiagram on a matrix and highlight.sector for country-level group bands."
+  current_standard_rebuild: "plot.py calls generic render('network'), not the circlize chord renderer."
+reviewed_visual_roles:
+  source: "Chord start sector when backed by a true link table."
+  target: "Chord end sector when backed by a true link table."
+  weight: "Connection magnitude/ribbon width."
+  source_group: "Potential outer sector grouping."
+  target_group: "Potential outer sector grouping."
+  sector_order: "Needed for deterministic circular ordering but empty in current CSV."
+  sector_color: "Potential color override but empty in current CSV."
+canonical_columns: [source, target, weight, source_group, target_group, sector_order, sector_color]
+required_data_semantics:
+  source: "Ribbon source sector."
+  target: "Ribbon target sector."
+  weight: "Positive connection magnitude."
+optional_data_semantics:
+  source_group_target_group: "Outer grouping bands such as countries."
+  sector_order: "Manual circular order."
+  sector_color: "Explicit palette control."
+optional_modules:
+  outer_group_bands:
+    status: observed
+  directional_arrows:
+    status: source_code_directional_but_not_visually_dominant
+  node_label_layer:
+    status: not_separate_from_sector_labels
+false_positive_risks:
+  - "Do not treat node_id/node_label as a separate node-link network layer."
+  - "Do not retrieve as a generic circular network; ribbons and sector axes are central."
+  - "The standard Python entry will not regenerate the observed circlize grammar."
+best_for:
+  - "Chord diagrams with grouped circular sectors and weighted ribbons."
+bad_for:
+  - "Simple node-link graphs or unweighted adjacency diagrams."
+style_notes:
+  - "High-chroma ribbons, white gaps between sectors, colored outer country bands, small radial axis tick labels."
+retrieval_tier_recommendation:
+  tier: support
+  rationale: "Strong reusable chord grammar and source script, but standard entry is generic and the abstract CSV is a small link sketch rather than the full matrix."
+  exclusion_risks: [generic_renderer_entry, matrix_to_link_abstraction_gap]
+confidence:
+  overall: high
+  visual_observation: high
+  data_contract_assessment: medium
+  source_rebuild_assessment: high
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: "Centered circular chord diagram."
+  marks: [sector arcs, ribbons, axes, labels]
+  encodings: "Sector identity by position/label, connection magnitude by ribbon width, group by outer highlight color."
+  axes: "Circular axis ticks on sectors."
+  legends: "No separate legend; labels and colored sectors carry semantics."
+  annotations: "Outer region names and season labels."
+  text_density: high
+  visual_risks: "Dense ribbons can obscure direction and small sectors."
+data_understanding:
+  data_read: true
+  observed_columns: [source, target, weight, source_group, target_group, direction, sector_order, sector_color, label, node_id, node_label]
+  role_mapping:
+    source: link_source
+    target: link_target
+    weight: ribbon_weight
+    source_group: sector_group
+    target_group: sector_group
+  derived_columns: []
+  false_positive_columns: [label, node_id, node_label, direction]
+  missing_optional_data: [full_matrix_values, explicit_sector_order, color_mapping]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus original R circlize source."
+  entry_behavior: "plot.py calls render('network'); scripts/code.R calls chordDiagram and highlight.sector."
+  hardcoded_aesthetics: "Country colors, sector labels, track heights, and grouping blocks are hardcoded in R."
+  output_behavior: "visual_check reports nonblank rebuilt.png; observed image matches circlize source-style output."
+  unsupported_features: [full_circlize_track_rebuild_from_data_main, matrix_input_contract]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

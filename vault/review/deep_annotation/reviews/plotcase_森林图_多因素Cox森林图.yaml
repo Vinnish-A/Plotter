@@ -1,0 +1,214 @@
+case_id: plotcase_森林图_多因素Cox森林图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_森林图_多因素Cox森林图/metadata.json
+  - vault/material/plotcase_森林图_多因素Cox森林图/agent_guide.md
+  - vault/material/plotcase_森林图_多因素Cox森林图/plot.py
+  - vault/material/plotcase_森林图_多因素Cox森林图/data_main.csv
+  - vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_森林图_多因素Cox森林图.yaml
+  - vault/cards/plotcase_森林图_多因素Cox森林图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_森林图_多因素Cox森林图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_森林图_多因素Cox森林图.yaml
+  asset_card: vault/cards/plotcase_森林图_多因素Cox森林图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_森林图_多因素Cox森林图.yaml
+  image_inspected: vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_森林图_多因素Cox森林图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: false
+    generic_renderer_rebuild: true
+    case_level_fallback: true
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: cox_forest_plot
+  subtype: hazard-ratio table plus log-scale interval forest plot
+  panel_count: 1
+  layout: table-like left columns aligned to central interval plot and right p-value column
+  marks:
+  - square estimates
+  - horizontal confidence intervals
+  - vertical null reference line
+  - alternating row bands
+  - text columns
+  encodings:
+    x: hazard ratio on log scale
+    row: clinical covariate/category
+    interval: confidence interval
+    text: estimate, N, p-value
+  axes: bottom log-scale HR axis with reference at 1
+  legends: none
+  annotations:
+  - global p-value, AIC, concordance footer
+  - significance stars in p-value column
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: forest_interval
+    backend: R/ggplot2
+    unit: interval estimate table
+    required_data_roles:
+    - term
+    - estimate
+    - lower
+    - upper
+    optional_data_roles:
+    - p_value
+    - group
+    - reference
+    - label
+    - row_order
+reviewed_visual_roles:
+  term: row term/covariate
+  estimate: point estimate
+  lower: confidence interval lower bound
+  upper: confidence interval upper bound
+  p_value: right p-value annotation candidate
+  group: covariate group candidate
+  row_order: row ordering
+  reference: empty
+  label: empty
+canonical_columns:
+- term
+- estimate
+- lower
+- upper
+- p_value
+- group
+- reference
+- label
+- row_order
+required_data_semantics:
+  term: forest row label
+  estimate: interval point estimate
+  lower: lower confidence bound
+  upper: upper confidence bound
+optional_data_semantics:
+  p_value: p-value annotation
+  group: section grouping
+  reference: empty
+  label: empty
+  row_order: row order
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - p_value
+  - group
+  - reference
+  - label
+  - row_order
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- fallback case; compact CSV has only eight terms, fewer than displayed table rows and reference rows
+- false_positive_column:reference
+- false_positive_column:label
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Cox-style forest table visual grammar
+bad_for:
+- Reusable core forest plot from this data alone
+- Non-table interval plots
+style_notes:
+- Alternating bands improve table readability
+- Requires careful alignment of text columns and interval axis
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: inspiration tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - fallback case; compact CSV has only eight terms, fewer than displayed table rows and reference rows
+  - case_level_fallback
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: table-like left columns aligned to central interval plot and right p-value column
+  marks:
+  - square estimates
+  - horizontal confidence intervals
+  - vertical null reference line
+  - alternating row bands
+  - text columns
+  encodings:
+    x: hazard ratio on log scale
+    row: clinical covariate/category
+    interval: confidence interval
+    text: estimate, N, p-value
+  axes: bottom log-scale HR axis with reference at 1
+  legends: none
+  annotations:
+  - global p-value, AIC, concordance footer
+  - significance stars in p-value column
+  text_density: very high; table and plot are integrated
+  visual_risks:
+  - fallback case; compact CSV has only eight terms, fewer than displayed table rows and reference rows
+data_understanding:
+  data_read: true
+  observed_columns:
+  - term
+  - estimate
+  - lower
+  - upper
+  - p_value
+  - group
+  - reference
+  - label
+  - row_order
+  role_mapping:
+    term: row term/covariate
+    estimate: point estimate
+    lower: confidence interval lower bound
+    upper: confidence interval upper bound
+    p_value: right p-value annotation candidate
+    group: covariate group candidate
+    row_order: row ordering
+    reference: empty
+    label: empty
+  derived_columns: []
+  false_positive_columns:
+  - reference
+  - label
+  missing_optional_data:
+  - data_optional.csv absent
+  - reference
+  - label
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('line', '多因素Cox森林图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - fallback case; compact CSV has only eight terms, fewer than displayed table rows and reference rows
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

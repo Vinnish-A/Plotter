@@ -34,7 +34,10 @@ data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''f
   ''weight'', ''lower'', ''upper'']; sampled_rows: 200'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
+- generic_renderer
+- misleading_metadata
+- compatibility_columns
+risk_notes:
 - Do not treat metadata heatmap keywords as observed grammar.
 - Do not treat dossier subtype survival_curve as visually supported.
 - Do not infer source/target/weight graph semantics from compatibility columns.
@@ -44,6 +47,11 @@ confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/figureya_survival_FigureYa182RFSurvV2.yaml
   deep_review: vault/review/deep_annotation/reviews/figureya_survival_FigureYa182RFSurvV2.yaml

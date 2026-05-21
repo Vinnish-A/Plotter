@@ -36,15 +36,21 @@ data_summary: 'main_columns: [''category'', ''value'', ''group'', ''stack'', ''e
   ''line_value'', ''annotation_value'', ''label'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
+- generic_renderer
+risk_notes:
 - Do not classify as line grammar; no line marks are present.
-- Do not treat data_main.csv error_low/error_high/line_value as supported visual …
-- Do not classify raw meta tag '环状' as observed geometry; rebuilt image is rectan…
-- generic renderer entry does not reproduce the observed grammar from data_main.c…
+- Do not treat data_main.csv error_low/error_high/line_value as supported visual roles for this asset.
+- Do not classify raw meta tag '环状' as observed geometry; rebuilt image is rectangular stacked bars.
+- generic renderer entry does not reproduce the observed grammar from data_main.csv
 confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_barplot_多层注释柱状图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_barplot_多层注释柱状图.yaml

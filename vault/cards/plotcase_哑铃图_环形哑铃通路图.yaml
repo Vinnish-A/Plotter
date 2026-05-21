@@ -1,52 +1,56 @@
 id: plotcase_哑铃图_环形哑铃通路图
 title: 环形哑铃通路图
 retrieval_tier: support
-one_line: network asset for 环形哑铃通路图
-geometry: network
-subtype: node_link_network
+one_line: paired pathway scores in circular sector layout
+geometry: radial_dumbbell_pathway
+subtype: circular_paired_metric_plot
 required_roles:
-- source
-- target
-- weight
+- item
+- group
+- value_a
+- value_b
 optional_roles:
-- node_id
-- node_label
-- node_group
-- node_size
-- edge_group
-- edge_direction
-- layout_x
-- layout_y
+- p_value
+- score_color
+- label
 capabilities:
-  highlight: false
+  highlight: true
   detail_panel: false
   annotation_track: false
   uncertainty: false
-  composition: true
+  composition: false
   batch: true
 best_for:
-- 环形哑铃通路图
-- 'network/node_link_network grammar with roles: source, target, weight'
+- paired pathway scores in circular sector layout
+- compact two-measure pathway comparisons
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 124244; width: 1008; height: 1008'
+- node-link network retrieval
+- many long labels or exact numeric readout
+image_summary: 'geometry: radial_dumbbell_pathway; subtype: circular_paired_metric_plot; description:
+  Circular pathway plot with sectors, paired point/triangle markers per item, dashed reference ring, significance
+  stars, and central co…'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- data_main is a network edge table; source/target/weight are not observed radial dumbbell roles
+- current plot.py uses scatter generic wrapper
+- source/target columns would mislead retrieval as network
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_哑铃图_环形哑铃通路图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_哑铃图_环形哑铃通路图.yaml
   machine_evidence: vault/evidence/machine/plotcase_哑铃图_环形哑铃通路图.yaml
   evidence_pack: vault/material/plotcase_哑铃图_环形哑铃通路图
   preview: vault/material/plotcase_哑铃图_环形哑铃通路图/outputs/rebuilt.png

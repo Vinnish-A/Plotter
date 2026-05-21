@@ -35,14 +35,20 @@ data_summary: 'main_columns: [''stage'', ''node'', ''next_stage'', ''next_node''
   ''group'', ''node_color'', ''label'', ''order'']; sampled_rows: 9'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- Do not collapse stage/node/next_stage/next_node into generic source/target unle…
+- generic_renderer
+risk_notes:
+- Do not collapse stage/node/next_stage/next_node into generic source/target unless preserving stage semantics.
 - Do not retrieve as a free-form network graph.
 - stage semantics lost by generic network retrieval
 confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_sankey_多层级桑基图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_sankey_多层级桑基图.yaml

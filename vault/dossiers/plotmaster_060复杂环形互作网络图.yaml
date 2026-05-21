@@ -1,10 +1,14 @@
 id: plotmaster_060复杂环形互作网络图
 title: 060复杂环形互作网络图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: Reviewed image and source; source randomly samples a subset of edges and
+    current CSV/plot entry do not encode the full circular network contract.
+  reviewed_at: '2026-05-21'
+  annotator_model: GPT-5 Codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_060复杂环形互作网络图
   source:
@@ -321,3 +325,33 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_060复杂环形互作网络图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Strong visual grammar and readable source, but random sampling
+  and generic standard entry prevent core status.
+exclusion_risks:
+- random_edge_sampling
+- generic_renderer_entry
+- dense_label_risk
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_060复杂环形互作网络图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_060复杂环形互作网络图.yaml
+  geometry: circular_hub_and_leaf_interaction_network_with_effect_legend
+  subtype: circular_bipartite_interaction_network_effect_class
+  required_roles:
+  - source
+  - target
+  - effect
+  optional_roles:
+  - p_value
+  - node_class
+  - degree
+  - label
+  tier: support
+  confidence:
+    overall: high
+    visual_observation: high
+    data_contract_assessment: medium
+    source_rebuild_assessment: high

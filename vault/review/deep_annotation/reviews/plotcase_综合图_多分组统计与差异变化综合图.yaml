@@ -1,0 +1,184 @@
+case_id: plotcase_综合图_多分组统计与差异变化综合图
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review
+  human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence, card, schema, and prior review were inspected
+    for this batch review.
+annotator_model: gpt-5-codex_model_assisted_review
+reviewed_at: '2026-05-21T00:00:00+08:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_综合图_多分组统计与差异变化综合图/metadata.json
+  - vault/material/plotcase_综合图_多分组统计与差异变化综合图/agent_guide.md
+  - vault/material/plotcase_综合图_多分组统计与差异变化综合图/plot.py
+  - vault/material/plotcase_综合图_多分组统计与差异变化综合图/data_main.csv
+  - vault/material/plotcase_综合图_多分组统计与差异变化综合图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_综合图_多分组统计与差异变化综合图.yaml
+  - vault/cards/plotcase_综合图_多分组统计与差异变化综合图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_综合图_多分组统计与差异变化综合图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_综合图_多分组统计与差异变化综合图.yaml
+  asset_card: vault/cards/plotcase_综合图_多分组统计与差异变化综合图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_综合图_多分组统计与差异变化综合图.yaml
+  image_size:
+    exists: true
+    size_bytes: 196068
+    width: 1981
+    height: 1537
+    mean_luma: 232.4923
+    stddev_luma: 54.244
+    blank_like: false
+  data_rows_inspected: 7
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: multi-panel statistical composite
+  subtype: bar summary plus differential marks plus heatstrip
+  layout: three vertically stacked panels sharing many x labels
+  primary_marks: &id001
+  - top grouped bars
+  - middle signed bars/points
+  - bottom heatmap strip
+  - colorbar
+  visible_encodings: bar height encodes counts; middle marks encode signed differences; bottom tile intensity encodes contrast/total
+    count
+inferred_visual_grammar:
+  declared_geometry: network
+  declared_subtype: node_link_network
+  metadata_keywords:
+  - network_graph
+  - node_link
+  - layout
+  - community
+  reusable_pattern: inspiration for compact multi-track statistical summaries
+  domain_semantics: Only visual roles were reviewed; biological or clinical meanings are not treated as authoritative unless
+    visible in labels/axes.
+  core_exclusion_note: Generic renderer, fallback, and synthetic-data flags prevent promotion to core retrieval.
+reviewed_visual_roles:
+  marks: *id001
+  encodings: bar height encodes counts; middle marks encode signed differences; bottom tile intensity encodes contrast/total
+    count
+  axes: shared categorical x axis with rotated labels; separate y axes for upper panels
+  legends: bottom continuous colorbar
+  annotations: row labels and dense rotated category labels
+canonical_columns: &id002
+- source
+- target
+- weight
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+- source_group
+- target_group
+required_data_semantics:
+  source: declared edge source in standardized CSV; supported only for actual node-link visuals
+  target: declared edge target in standardized CSV; supported only for actual node-link visuals
+  weight: declared edge weight in standardized CSV
+optional_data_semantics:
+  node_id: node identifier field
+  node_label: node label field
+  node_group: empty in inspected data
+  node_size: empty in inspected data
+  edge_group: empty in inspected data
+  edge_direction: empty in inspected data
+  layout_x: empty layout coordinate
+  layout_y: empty layout coordinate
+  source_group: source grouping field
+  target_group: target grouping field
+optional_modules:
+  data_optional_csv: absent
+  visible_optional_layers: row labels and dense rotated category labels
+  needed_for_full_reuse: Provide explicit optional tables for labels, ordering, legends, manual positions, annotations, and
+    secondary tracks when those are visible.
+false_positive_risks:
+- generic_renderer_rebuild
+- false_positive_columns:source,target,weight,node_id,node_label
+- declared_network_contract_does_not_match_observed_composite
+- metadata/data declare network roles but image is not a node-link network
+- current CSV source/target/weight roles are false positives for this visual
+best_for:
+- inspiration for compact multi-track statistical summaries
+bad_for:
+- network retrieval or core rebuild from edge-list data
+style_notes:
+- high text/mark density
+- Use the observed layout and scale cues, but do not infer undeclared domain semantics from placeholder CSV labels.
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Recommended below core because review found generic-renderer/fallback/synthetic or incomplete semantic-support
+    risks; still useful for visual pattern retrieval at the stated tier.
+  exclusion_risks:
+  - generic_renderer_rebuild
+  - false_positive_columns:source,target,weight,node_id,node_label
+  - declared_network_contract_does_not_match_observed_composite
+confidence:
+  overall: low
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: three vertically stacked panels sharing many x labels
+  layout: three vertically stacked panels sharing many x labels
+  marks: *id001
+  encodings: bar height encodes counts; middle marks encode signed differences; bottom tile intensity encodes contrast/total
+    count
+  axes: shared categorical x axis with rotated labels; separate y axes for upper panels
+  legends: bottom continuous colorbar
+  annotations: row labels and dense rotated category labels
+  text_density: high
+  visual_risks:
+  - metadata/data declare network roles but image is not a node-link network
+  - current CSV source/target/weight roles are false positives for this visual
+data_understanding:
+  data_read: true
+  observed_columns: *id002
+  role_mapping:
+    source: declared edge source in standardized CSV; supported only for actual node-link visuals
+    target: declared edge target in standardized CSV; supported only for actual node-link visuals
+    weight: declared edge weight in standardized CSV
+    node_id: node identifier field
+    node_label: node label field
+    node_group: empty in inspected data
+    node_size: empty in inspected data
+    edge_group: empty in inspected data
+    edge_direction: empty in inspected data
+    layout_x: empty layout coordinate
+    layout_y: empty layout coordinate
+    source_group: source grouping field
+    target_group: target grouping field
+  derived_columns: []
+  false_positive_columns:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  missing_optional_data: No data_optional.csv is present; visible annotations, manual layout, labels, legends, and secondary
+    tracks may not be reproducible from data_main alone.
+code_understanding:
+  code_read: true
+  backend: Python wrapper around retinue plotter_standard_renderer; metadata may name original R backend but plot.py does
+    not call original plotting code directly
+  entry_behavior: plot.py inserts retinue/tools on sys.path, imports plotter_standard_renderer.render, and calls render('scatter',
+    '多分组统计与差异变化综合图').
+  hardcoded_aesthetics: Case title and renderer mode are hardcoded in plot.py; detailed palette/layout behavior is delegated
+    to the generic renderer or preserved fallback image.
+  output_behavior: Standard script is expected to write outputs/rebuilt.png; machine evidence reports the rebuilt PNG exists
+    and is not blank-like.
+  unsupported_features: Original plotting code behavior, full manual layout resources, and any undeclared annotation tables
+    are not represented by plot.py itself.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

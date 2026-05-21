@@ -1,0 +1,166 @@
+case_id: plotcase_冲积图_物种组成冲积图
+annotation_version: deep_annotation_model_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review
+  human_review_required: false
+  reason: Image, metadata, guide, standard script, CSV profile, machine evidence, card, schema, and prior review were inspected
+    for this batch review.
+annotator_model: gpt-5-codex_model_assisted_review
+reviewed_at: '2026-05-21T00:00:00+08:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_冲积图_物种组成冲积图/metadata.json
+  - vault/material/plotcase_冲积图_物种组成冲积图/agent_guide.md
+  - vault/material/plotcase_冲积图_物种组成冲积图/plot.py
+  - vault/material/plotcase_冲积图_物种组成冲积图/data_main.csv
+  - vault/material/plotcase_冲积图_物种组成冲积图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_冲积图_物种组成冲积图.yaml
+  - vault/cards/plotcase_冲积图_物种组成冲积图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_冲积图_物种组成冲积图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_冲积图_物种组成冲积图.yaml
+  asset_card: vault/cards/plotcase_冲积图_物种组成冲积图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_冲积图_物种组成冲积图.yaml
+  image_size:
+    exists: true
+    size_bytes: 63088
+    width: 1148
+    height: 640
+    mean_luma: 198.5876
+    stddev_luma: 60.0633
+    blank_like: false
+  data_rows_inspected: 9
+  rebuild_class:
+    source_code_rebuild: false
+    generic_renderer_rebuild: true
+    case_level_fallback: true
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: stacked alluvial area
+  subtype: relative-abundance alluvial composition
+  layout: single percent composition panel
+  primary_marks: &id001
+  - stacked filled areas
+  - vertical category bands
+  - legend swatches
+  visible_encodings: stack height encodes relative abundance; fill color encodes taxon/group
+inferred_visual_grammar:
+  declared_geometry: flow
+  declared_subtype: sankey_or_alluvial
+  metadata_keywords:
+  - alluvial
+  - sankey
+  - flow
+  - stage_transition
+  reusable_pattern: inspiration for longitudinal composition alluvial plots
+  domain_semantics: Only visual roles were reviewed; biological or clinical meanings are not treated as authoritative unless
+    visible in labels/axes.
+  core_exclusion_note: Generic renderer, fallback, and synthetic-data flags prevent promotion to core retrieval.
+reviewed_visual_roles:
+  marks: *id001
+  encodings: stack height encodes relative abundance; fill color encodes taxon/group
+  axes: x has sample/stage categories; y is percent abundance
+  legends: right categorical legend
+  annotations: axis titles and category labels
+canonical_columns: &id002
+- stage
+- node
+- next_stage
+- next_node
+- value
+- flow_id
+- group
+- node_color
+- label
+- order
+required_data_semantics:
+  stage: left/current stage category
+  node: left/current node category
+  next_stage: following stage category
+  next_node: following node category
+  value: flow magnitude
+optional_data_semantics:
+  flow_id: flow identifier
+  group: flow grouping/color candidate
+  node_color: empty in inspected data
+  label: empty label field
+  order: row/order field
+optional_modules:
+  data_optional_csv: absent
+  visible_optional_layers: axis titles and category labels
+  needed_for_full_reuse: Provide explicit optional tables for labels, ordering, legends, manual positions, annotations, and
+    secondary tracks when those are visible.
+false_positive_risks:
+- generic_renderer_rebuild
+- case_level_fallback
+- visible_image_requires_semantics_not_present_in_data_main
+- case-level fallback; current stage-flow CSV does not encode the visible taxon abundances directly
+- small rare classes are visually minor
+best_for:
+- inspiration for longitudinal composition alluvial plots
+bad_for:
+- core flow reconstruction without abundance-by-stage table
+style_notes:
+- medium text/mark density
+- Use the observed layout and scale cues, but do not infer undeclared domain semantics from placeholder CSV labels.
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: Recommended below core because review found generic-renderer/fallback/synthetic or incomplete semantic-support
+    risks; still useful for visual pattern retrieval at the stated tier.
+  exclusion_risks:
+  - generic_renderer_rebuild
+  - case_level_fallback
+  - visible_image_requires_semantics_not_present_in_data_main
+confidence:
+  overall: low
+  visual_grammar: high
+  data_roles: low
+  code_understanding: medium
+image_observation:
+  image_read: true
+  panel_count: single percent composition panel
+  layout: single percent composition panel
+  marks: *id001
+  encodings: stack height encodes relative abundance; fill color encodes taxon/group
+  axes: x has sample/stage categories; y is percent abundance
+  legends: right categorical legend
+  annotations: axis titles and category labels
+  text_density: medium
+  visual_risks:
+  - case-level fallback; current stage-flow CSV does not encode the visible taxon abundances directly
+  - small rare classes are visually minor
+data_understanding:
+  data_read: true
+  observed_columns: *id002
+  role_mapping:
+    stage: left/current stage category
+    node: left/current node category
+    next_stage: following stage category
+    next_node: following node category
+    value: flow magnitude
+    flow_id: flow identifier
+    group: flow grouping/color candidate
+    node_color: empty in inspected data
+    label: empty label field
+    order: row/order field
+  derived_columns: []
+  false_positive_columns: []
+  missing_optional_data: No data_optional.csv is present; visible annotations, manual layout, labels, legends, and secondary
+    tracks may not be reproducible from data_main alone.
+code_understanding:
+  code_read: true
+  backend: Python wrapper around retinue plotter_standard_renderer; metadata may name original R backend but plot.py does
+    not call original plotting code directly
+  entry_behavior: plot.py inserts retinue/tools on sys.path, imports plotter_standard_renderer.render, and calls render('scatter',
+    '物种组成冲积图').
+  hardcoded_aesthetics: Case title and renderer mode are hardcoded in plot.py; detailed palette/layout behavior is delegated
+    to the generic renderer or preserved fallback image.
+  output_behavior: Standard script is expected to write outputs/rebuilt.png; machine evidence reports the rebuilt PNG exists
+    and is not blank-like.
+  unsupported_features: Original plotting code behavior, full manual layout resources, and any undeclared annotation tables
+    are not represented by plot.py itself.
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

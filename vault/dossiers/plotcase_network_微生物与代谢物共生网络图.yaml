@@ -341,3 +341,6 @@ reviewed_summary:
     visual_grammar: high
     data_semantics: high
     reproducibility_contract: high
+agent_default_entry: vault/cards/plotcase_network_微生物与代谢物共生网络图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

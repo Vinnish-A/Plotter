@@ -36,14 +36,20 @@ data_summary: 'main_columns: [''group'', ''value'', ''subgroup'', ''paired_id'',
   ''label'']; sampled_rows: 24'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
+- generic_renderer
+risk_notes:
 - Do not retrieve as a plain boxplot.
 - Do not treat paired_id as evidence for paired-line plots.
-- Do not treat canonical data_main.csv as the full source data for the 22-panel i…
+- Do not treat canonical data_main.csv as the full source data for the 22-panel image.
 confidence:
   image_understanding: medium
   data_roles: medium
   code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_boxplot_多分组分面小提琴箱线图.yaml
   deep_review: vault/review/deep_annotation/reviews/plotcase_boxplot_多分组分面小提琴箱线图.yaml

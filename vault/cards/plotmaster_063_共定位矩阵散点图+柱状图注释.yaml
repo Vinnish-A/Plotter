@@ -1,9 +1,9 @@
 id: plotmaster_063_共定位矩阵散点图+柱状图注释
 title: 063 共定位矩阵散点图+柱状图注释
 retrieval_tier: support
-one_line: heatmap asset for 063 共定位矩阵散点图+柱状图注释
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: Visual inspiration for colocalization matrix with bar annotation
+geometry: colocalization matrix with bar annotation
+subtype: ''
 required_roles:
 - x
 - y
@@ -19,33 +19,44 @@ optional_roles:
 - upper
 capabilities:
   highlight: true
-  detail_panel: true
-  annotation_track: false
+  detail_panel: false
+  annotation_track: true
   uncertainty: true
-  composition: true
+  composition: false
   batch: true
 best_for:
-- 063 共定位矩阵散点图+柱状图注释
-- 'heatmap/annotated_heatmap grammar with roles: x, y, value'
+- Visual inspiration for colocalization matrix with bar annotation
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 232931; width: 1872; height: 864'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: colocalization matrix with bar annotation; panel_count: 1; layout: left horizontal
+  bar summary aligned to a large dot/connector matrix with top and bottom rotated labels; primary_marks:
+  [''horizontal bars'', ''matr…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 43'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_063_共定位矩阵散点图+柱状图注释.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_063_共定位矩阵散点图+柱状图注释.yaml
   machine_evidence: vault/evidence/machine/plotmaster_063_共定位矩阵散点图+柱状图注释.yaml
   evidence_pack: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释
   preview: vault/material/plotmaster_063_共定位矩阵散点图+柱状图注释/outputs/rebuilt.png

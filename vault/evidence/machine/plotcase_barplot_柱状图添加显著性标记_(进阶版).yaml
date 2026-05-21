@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/metadata.json
     exists: true
-    size_bytes: 3969
+    size_bytes: 4870
   agent_guide:
     path: vault/material/plotcase_barplot_柱状图添加显著性标记_(进阶版)/agent_guide.md
     exists: true

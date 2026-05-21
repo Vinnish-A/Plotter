@@ -327,3 +327,6 @@ reviewed_summary:
     visual_grammar: 0.92
     data_roles: 0.7
     rebuild_path: 0.55
+agent_default_entry: vault/cards/plotcase_heatmap_Mantel检验热图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

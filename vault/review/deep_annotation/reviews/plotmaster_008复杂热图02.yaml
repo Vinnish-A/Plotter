@@ -1,0 +1,91 @@
+case_id: plotmaster_008复杂热图02
+annotation_version: deep_dossier_review_v1
+annotation_status:
+  status: reviewed
+  level: model_assisted_deep_review_v1
+  human_review_required: true
+  reason: "Image and code were inspected; this is visually useful but synthetic/demo-heavy and not a clean data-backed core asset."
+annotator_model: GPT-5 Codex
+reviewed_at: '2026-05-21'
+evidence:
+  files_read: [AGENTS.md, schemas/deep_dossier_review.schema.yaml, vault/material/plotmaster_008复杂热图02/metadata.json, vault/material/plotmaster_008复杂热图02/agent_guide.md, vault/material/plotmaster_008复杂热图02/plot.py, vault/material/plotmaster_008复杂热图02/data_main.csv, vault/material/plotmaster_008复杂热图02/outputs/rebuilt.png, vault/material/plotmaster_008复杂热图02/outputs/visual_check.json, vault/cards/plotmaster_008复杂热图02.yaml, vault/review/deep_annotation/reviews/plotmaster_008复杂热图02.yaml]
+  data_main_profile:
+    rows: 36
+    columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  rebuilt_png: {width: 1224, height: 1440, visual_check_ok: true}
+  original_rebuild_log: "R source completed with warnings; visible output uses demo-like gene labels and icon headers."
+observed_visual_grammar:
+  figure_type: repeated_small_heatmap_blocks_with_icons_and_direction_arrows
+  layout: "Three side-by-side repeated heatmap blocks, each with PFC/Ctrl/CUMS headers, mouse icons, gene rows, heatmap cells, and direction arrows."
+  marks: [heatmap tiles, header icons, arrows, block titles, row labels]
+  encodings:
+    row: gene label
+    column: condition
+    tile_color: expression/change value
+    arrow: direction of regulation
+inferred_visual_grammar:
+  grammar_id: repeated_condition_heatmap_arrow_annotation
+  source_logic: "Figure behaves like a demonstration layout rather than a data-rich matrix abstraction."
+  current_standard_rebuild: "plot.py calls generic heatmap and cannot express icons or arrow annotation columns."
+reviewed_visual_roles:
+  x: "Column/condition placeholder."
+  y: "Row/gene placeholder."
+  value: "Tile value."
+  label: "Gene label duplicate."
+  source: "Compatibility duplicate of x; not graph source."
+  target: "Compatibility duplicate of y; not graph target."
+  weight: "Compatibility duplicate of value; not edge weight."
+canonical_columns: [panel, row_label, condition, value, direction]
+required_data_semantics:
+  row_label: "Gene/feature row."
+  condition: "Column condition."
+  value: "Heatmap fill value."
+optional_data_semantics:
+  panel: "Repeated block identity."
+  direction: "Arrow annotation."
+  icon_group: "Header icon/category if used."
+optional_modules:
+  repeated_panels: {status: observed}
+  icon_headers: {status: observed_but_not_core_data}
+  arrow_annotations: {status: observed}
+false_positive_risks:
+  - "Do not treat source/target/weight as network roles."
+  - "Synthetic/demo genes and icons should keep this out of core."
+best_for:
+  - "Inspiration for compact repeated heatmap panels with directional annotation columns."
+bad_for:
+  - "Data-backed complex heatmaps requiring real biological row semantics."
+style_notes:
+  - "Three repeated clean panels, red-blue heatmap cells, gray/red arrows, decorative mouse icons."
+retrieval_tier_recommendation:
+  tier: inspiration
+  rationale: "Useful layout idea but synthetic/demo-heavy and not encoded by current CSV or generic entry."
+  exclusion_risks: [synthetic_data, generic_renderer_entry, decorative_icon_dependency]
+confidence: {overall: high, visual_observation: high, data_contract_assessment: high, source_rebuild_assessment: medium}
+image_observation:
+  image_read: true
+  panel_count: 3
+  layout: "Three repeated heatmap blocks in one row."
+  marks: [tiles, icons, arrows, labels]
+  encodings: "Rows are genes, columns are conditions, color is value, arrows indicate direction."
+  axes: "Condition headers above, gene labels left."
+  legends: "No explicit legend visible."
+  annotations: "Mouse icons and arrow column."
+  text_density: moderate
+  visual_risks: "Icon/header semantics are not data-driven."
+data_understanding:
+  data_read: true
+  observed_columns: [x, y, value, group, label, facet, source, target, weight, lower, upper]
+  role_mapping: {x: condition, y: row_label, value: tile_value, label: row_label}
+  derived_columns: [lower, upper]
+  false_positive_columns: [source, target, weight, group, facet]
+  missing_optional_data: [panel, direction, icon_group]
+code_understanding:
+  code_read: true
+  backend: "Python generic renderer plus source-style R evidence."
+  entry_behavior: "plot.py calls render('heatmap')."
+  hardcoded_aesthetics: "Icon headers, repeated panels, and arrows are not represented in data_main."
+  output_behavior: "Existing rebuilt.png is nonblank repeated-panel heatmap."
+  unsupported_features: [icon_headers, arrow_annotation_column, repeated_panel_contract]
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

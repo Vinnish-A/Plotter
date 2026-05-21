@@ -340,3 +340,6 @@ reviewed_summary:
     visual_observation: high
     data_contract_assessment: high
     source_rebuild_assessment: medium
+agent_default_entry: vault/cards/figures4papers_figure_Cflows_diffusion_swiss_roll_png.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true

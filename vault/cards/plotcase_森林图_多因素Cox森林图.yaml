@@ -1,9 +1,9 @@
 id: plotcase_森林图_多因素Cox森林图
 title: 多因素Cox森林图
 retrieval_tier: inspiration
-one_line: forest asset for 多因素Cox森林图
-geometry: forest
-subtype: interval_forest
+one_line: Cox-style forest table visual grammar
+geometry: cox_forest_plot
+subtype: hazard-ratio table plus log-scale interval forest plot
 required_roles:
 - term
 - estimate
@@ -23,28 +23,36 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 多因素Cox森林图
-- 'forest/interval_forest grammar with roles: term, estimate, lower, upper'
+- Cox-style forest table visual grammar
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 216136; width: 1358; height: 1537'
+- Reusable core forest plot from this data alone
+- Non-table interval plots
+image_summary: 'geometry: cox_forest_plot; subtype: hazard-ratio table plus log-scale interval forest
+  plot; panel_count: 1; layout: table-like left columns aligned to central interval plot and right p-value
+  column'
 data_summary: 'main_columns: [''term'', ''estimate'', ''lower'', ''upper'', ''p_value'', ''group'', ''reference'',
   ''label'', ''row_order'']; sampled_rows: 8'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
 - case_level_fallback
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- fallback case; compact CSV has only eight terms, fewer than displayed table rows and reference rows
+- false_positive_column:reference
+- false_positive_column:label
+- case_level_fallback
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_森林图_多因素Cox森林图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_森林图_多因素Cox森林图.yaml
   machine_evidence: vault/evidence/machine/plotcase_森林图_多因素Cox森林图.yaml
   evidence_pack: vault/material/plotcase_森林图_多因素Cox森林图
   preview: vault/material/plotcase_森林图_多因素Cox森林图/outputs/rebuilt.png

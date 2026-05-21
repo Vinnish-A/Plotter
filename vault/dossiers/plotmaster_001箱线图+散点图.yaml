@@ -1,10 +1,14 @@
 id: plotmaster_001箱线图+散点图
 title: 001箱线图+散点图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata,
+    guide, data, code, machine evidence, card, and prior review.
+  reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+  annotator_model: gpt-5-codex
+  review_version: model_assisted_deep_review_v1
 origin:
   case_dir: vault/material/plotmaster_001箱线图+散点图
   source:
@@ -319,3 +323,37 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_001箱线图+散点图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: support tier because the visual grammar is useful, but retrieval
+  should remain conservative around fallback/synthetic/generic-renderer limits.
+exclusion_risks:
+- title says boxplot plus scatter, but rebuilt image shows only boxplots
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_001箱线图+散点图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_001箱线图+散点图.yaml
+  geometry: boxplot
+  subtype: many-category boxplot without visible jitter despite title
+  required_roles:
+  - group
+  - value
+  optional_roles:
+  - x
+  - y
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  tier: support
+  confidence:
+    overall: medium
+    visual_grammar: high
+    data_roles: medium
+    code_understanding: medium
+    notes: Visual grammar is directly observed; data-role confidence is reduced where
+      data_main is compact, synthetic, fallback, or includes compatibility columns.

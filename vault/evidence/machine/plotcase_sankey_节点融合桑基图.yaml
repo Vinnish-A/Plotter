@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_sankey_节点融合桑基图/metadata.json
     exists: true
-    size_bytes: 3502
+    size_bytes: 4367
   agent_guide:
     path: vault/material/plotcase_sankey_节点融合桑基图/agent_guide.md
     exists: true

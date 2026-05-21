@@ -161,5 +161,22 @@
     "generic_renderer_rebuild": true,
     "case_level_fallback": false,
     "synthetic_data": false
-  }
+  },
+  "retrieval_tier": "support",
+  "retrieval_rationale": "Strong visual grammar and source evidence, but synthetic track and generic standard entry keep it below core.",
+  "exclusion_risks": [
+    "synthetic_track",
+    "generic_renderer_entry",
+    "circular_track_contract_missing"
+  ],
+  "annotation_status": {
+    "status": "reviewed",
+    "level": "model_assisted_deep_review_v1",
+    "human_review_required": true,
+    "reason": "Reviewed image and code; source contains a synthetic literature-evidence track, so the asset is useful but not core.",
+    "reviewed_at": "2026-05-21",
+    "annotator_model": "GPT-5 Codex",
+    "review_version": "deep_dossier_review_v1"
+  },
+  "annotation_review_ref": "vault/review/deep_annotation/reviews/plotmaster_037分类变量环形热图.yaml"
 }

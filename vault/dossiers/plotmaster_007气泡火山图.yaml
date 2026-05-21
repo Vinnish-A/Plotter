@@ -1,10 +1,14 @@
 id: plotmaster_007气泡火山图
 title: 007气泡火山图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
+  status: complete
+  level: model_assisted_deep_review_v1
   human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata,
+    guide, data, code, machine evidence, card, and prior review.
+  reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+  annotator_model: gpt-5-codex
+  review_version: model_assisted_deep_review_v1
 origin:
   case_dir: vault/material/plotmaster_007气泡火山图
   source:
@@ -351,3 +355,37 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_007气泡火山图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: support tier because the visual grammar is useful, but retrieval
+  should remain conservative around fallback/synthetic/generic-renderer limits.
+exclusion_risks:
+- source/target/weight are numeric compatibility duplicates, not graph roles
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_007气泡火山图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_007气泡火山图.yaml
+  geometry: bubble_volcano
+  subtype: volcano scatter with highlighted labeled bubbles and threshold lines
+  required_roles:
+  - x
+  - y
+  optional_roles:
+  - value
+  - group
+  - label
+  - facet
+  - source
+  - target
+  - weight
+  - lower
+  - upper
+  tier: support
+  confidence:
+    overall: high
+    visual_grammar: high
+    data_roles: high
+    code_understanding: medium
+    notes: Visual grammar is directly observed; data-role confidence is reduced where
+      data_main is compact, synthetic, fallback, or includes compatibility columns.

@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotcase_heatmap_气泡配对连线个性化热图/metadata.json
     exists: true
-    size_bytes: 4787
+    size_bytes: 5538
   agent_guide:
     path: vault/material/plotcase_heatmap_气泡配对连线个性化热图/agent_guide.md
     exists: true

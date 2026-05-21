@@ -1,52 +1,52 @@
 id: plotmaster_039雷达图+环形注释
 title: 039雷达图+环形注释
 retrieval_tier: inspiration
-one_line: network asset for 039雷达图+环形注释
-geometry: network
-subtype: node_link_network
+one_line: radar profile with categorical ring annotation inspiration
+geometry: radar_with_outer_annotation_ring
+subtype: single_radar_overlay_outer_category_band
 required_roles:
-- x
-- y
+- label
 - value
 optional_roles:
 - group
-- label
-- facet
-- source
-- target
-- weight
-- lower
-- upper
+- outer_segment
 capabilities:
   highlight: true
   detail_panel: false
   annotation_track: false
-  uncertainty: true
-  composition: true
+  uncertainty: false
+  composition: false
   batch: true
 best_for:
-- 039雷达图+环形注释
-- 'network/node_link_network grammar with roles: x, y, value'
+- radar profile with categorical ring annotation inspiration
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 91917; width: 720; height: 720'
+- network retrieval
+- exact reusable core without non-synthetic data
+image_summary: 'geometry: radar_with_outer_annotation_ring; subtype: single_radar_overlay_outer_category_band;
+  description: Single radar plot with several colored polylines/points over percent reference rings and
+  an outer segmented ann…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
 - synthetic_data
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- synthetic_data true
+- source/target/weight are duplicates and not graph roles
+- synthetic example may not reflect source-backed semantics
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_039雷达图+环形注释.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_039雷达图+环形注释.yaml
   machine_evidence: vault/evidence/machine/plotmaster_039雷达图+环形注释.yaml
   evidence_pack: vault/material/plotmaster_039雷达图+环形注释
   preview: vault/material/plotmaster_039雷达图+环形注释/outputs/rebuilt.png

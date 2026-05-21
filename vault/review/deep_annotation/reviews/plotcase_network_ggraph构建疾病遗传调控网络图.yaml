@@ -1,0 +1,240 @@
+case_id: plotcase_network_ggraph构建疾病遗传调控网络图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/metadata.json
+  - vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/agent_guide.md
+  - vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/plot.py
+  - vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/data_main.csv
+  - vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_network_ggraph构建疾病遗传调控网络图.yaml
+  - vault/cards/plotcase_network_ggraph构建疾病遗传调控网络图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_network_ggraph构建疾病遗传调控网络图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_network_ggraph构建疾病遗传调控网络图.yaml
+  asset_card: vault/cards/plotcase_network_ggraph构建疾病遗传调控网络图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_network_ggraph构建疾病遗传调控网络图.yaml
+  image_inspected: vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_network_ggraph构建疾病遗传调控网络图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: force_network
+  subtype: labeled disease-gene-variant network
+  panel_count: 1
+  layout: free network layout with disease diamonds, central highlighted gene triangle, circular gene/variant nodes
+  marks:
+  - nodes with distinct shapes
+  - gray edges
+  - text labels
+  encodings:
+    node shape: entity type candidate
+    node color: node group/focus
+    edge: relationships
+    label: node id plus p-value-like text
+  axes: none
+  legends: none visible
+  annotations:
+  - dense node labels around graph
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: network_graph
+    backend: R/ggraph-igraph
+    unit: node-link graph tables
+    required_data_roles:
+    - source
+    - target
+    - weight
+    optional_data_roles:
+    - node_id
+    - node_label
+    - node_group
+    - node_size
+    - edge_group
+    - edge_direction
+    - layout_x
+    - layout_y
+reviewed_visual_roles:
+  source: edge source supported by network image/title/data
+  target: edge target supported by network image/title/data
+  weight: edge weight/thickness candidate
+  node_id: node identity
+  node_label: node text label
+  source_group: source type/group candidate
+  target_group: target type/group candidate
+  layout_x/layout_y: empty, so layout is not data-driven
+canonical_columns:
+- source
+- target
+- weight
+- node_id
+- node_label
+- node_group
+- node_size
+- edge_group
+- edge_direction
+- layout_x
+- layout_y
+- source_group
+- target_group
+required_data_semantics:
+  source: edge source node
+  target: edge target node
+  weight: edge weight or relationship strength
+optional_data_semantics:
+  node_id: node id
+  node_label: node label text
+  source_group: source class
+  target_group: target class
+  node_group: empty
+  node_size: empty
+  edge_group: empty
+  edge_direction: empty
+  layout_x: empty
+  layout_y: empty
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - node_id
+  - node_label
+  - source_group
+  - target_group
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  requires_custom_layout_for_full_rebuild: false
+false_positive_risks:
+- data_main has only seven rows, far less than visible edges/nodes, so it is a structural abstraction not complete
+  graph data
+- false_positive_column:node_group
+- false_positive_column:node_size
+- false_positive_column:edge_group
+- false_positive_column:edge_direction
+- false_positive_column:layout_x
+- false_positive_column:layout_y
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Labeled biological/relationship network diagrams with mixed node types
+bad_for:
+- Dense networks requiring collision-free labels
+- Exact force layout replay without coordinates
+style_notes:
+- Shape coding helps separate entity types
+- Label collisions are a primary reuse risk
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - data_main has only seven rows, far less than visible edges/nodes, so it is a structural abstraction not complete
+    graph data
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 1
+  layout: free network layout with disease diamonds, central highlighted gene triangle, circular gene/variant nodes
+  marks:
+  - nodes with distinct shapes
+  - gray edges
+  - text labels
+  encodings:
+    node shape: entity type candidate
+    node color: node group/focus
+    edge: relationships
+    label: node id plus p-value-like text
+  axes: none
+  legends: none visible
+  annotations:
+  - dense node labels around graph
+  text_density: high; some labels overlap edges
+  visual_risks:
+  - data_main has only seven rows, far less than visible edges/nodes, so it is a structural abstraction not complete
+    graph data
+data_understanding:
+  data_read: true
+  observed_columns:
+  - source
+  - target
+  - weight
+  - node_id
+  - node_label
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  - source_group
+  - target_group
+  role_mapping:
+    source: edge source supported by network image/title/data
+    target: edge target supported by network image/title/data
+    weight: edge weight/thickness candidate
+    node_id: node identity
+    node_label: node text label
+    source_group: source type/group candidate
+    target_group: target type/group candidate
+    layout_x/layout_y: empty, so layout is not data-driven
+  derived_columns: []
+  false_positive_columns:
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+  missing_optional_data:
+  - data_optional.csv absent
+  - node_group
+  - node_size
+  - edge_group
+  - edge_direction
+  - layout_x
+  - layout_y
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('network', 'ggraph构建疾病遗传调控网络图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - data_main has only seven rows, far less than visible edges/nodes, so it is a structural abstraction not complete
+    graph data
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

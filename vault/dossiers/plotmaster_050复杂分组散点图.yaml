@@ -1,10 +1,12 @@
 id: plotmaster_050复杂分组散点图
 title: 050复杂分组散点图
 annotation_status:
-  level: deep_structural_pass_v1
-  method: metadata + agent guide + canonical CSV profile + plot entry + rebuilt image
-    evidence
-  human_review_required: false
+  status: complete
+  level: model_assisted_deep_review_v1
+  replaces: deep_annotation_machine_backfill_v1
+  reviewed_at: '2026-05-21T09:20:01.032527+00:00'
+  annotator_model: gpt-5-codex
+  review_version: deep_dossier_review_v1
 origin:
   case_dir: vault/material/plotmaster_050复杂分组散点图
   source:
@@ -333,3 +335,30 @@ vault_status:
   restored_from_fold: false
   canonical_case: null
   reason: null
+agent_default_entry: vault/cards/plotmaster_050复杂分组散点图.yaml
+dossier_status: archival_full_record
+machine_fields_are_not_authoritative: true
+retrieval_tier: support
+retrieval_rationale: Observed figure is a strong complex scatter grammar; CSV captures
+  numeric fields but not all semantic labels/modules.
+exclusion_risks:
+- method shape and background layer may require original data
+annotation_review_ref: vault/review/deep_annotation/reviews/plotmaster_050复杂分组散点图.yaml
+reviewed_summary:
+  review_ref: vault/review/deep_annotation/reviews/plotmaster_050复杂分组散点图.yaml
+  geometry: loglog_grouped_scatter_background_grid
+  subtype: organ_mass_density_reference_scatter
+  required_roles:
+  - x
+  - y
+  optional_roles:
+  - group
+  - method
+  - label
+  - background_value
+  tier: support
+  confidence:
+    overall: 0.74
+    image: 0.9
+    data: 0.62
+    code: 0.7

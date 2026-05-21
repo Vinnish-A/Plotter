@@ -1,9 +1,9 @@
 id: plotmaster_026相关性气泡图+显著性热图
 title: 026相关性气泡图+显著性热图
 retrieval_tier: inspiration
-one_line: heatmap asset for 026相关性气泡图+显著性热图
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: Visual inspiration for correlation bubble matrix with significance heatmap
+geometry: correlation bubble matrix with significance heatmap
+subtype: ''
 required_roles:
 - x
 - y
@@ -19,34 +19,45 @@ optional_roles:
 - upper
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: true
   composition: true
   batch: true
 best_for:
-- 026相关性气泡图+显著性热图
-- 'heatmap/annotated_heatmap grammar with roles: x, y, value'
+- Visual inspiration for correlation bubble matrix with significance heatmap
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 182527; width: 1050; height: 1194'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: correlation bubble matrix with significance heatmap; panel_count: 1; layout: square
+  matrix: lower triangle colored significance tiles and upper triangle correlation bubbles with dual legends;
+  primary_marks: [''co…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
 - synthetic_data
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- synthetic_data
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_026相关性气泡图+显著性热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_026相关性气泡图+显著性热图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_026相关性气泡图+显著性热图.yaml
   evidence_pack: vault/material/plotmaster_026相关性气泡图+显著性热图
   preview: vault/material/plotmaster_026相关性气泡图+显著性热图/outputs/rebuilt.png

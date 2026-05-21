@@ -1,52 +1,56 @@
 id: plotcase_游泳图_游泳图_进阶版
 title: 游泳图_进阶版
 retrieval_tier: support
-one_line: network asset for 游泳图_进阶版
-geometry: network
-subtype: node_link_network
+one_line: clinical treatment timelines with row-level metadata
+geometry: swimmer_timeline
+subtype: row_duration_events_with_annotation_strips
 required_roles:
-- source
-- target
-- weight
+- subject
+- duration
+- bar_group
 optional_roles:
-- node_id
-- node_label
-- node_group
-- node_size
-- edge_group
-- edge_direction
-- layout_x
-- layout_y
+- event_time
+- event_type
+- censor_arrow
+- annotation_strip
 capabilities:
   highlight: false
   detail_panel: false
   annotation_track: false
   uncertainty: false
-  composition: true
+  composition: false
   batch: true
 best_for:
-- 游泳图_进阶版
-- 'network/node_link_network grammar with roles: source, target, weight'
+- clinical treatment timelines with row-level metadata
+- response/event overlays on durations
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 106283; width: 1331; height: 1243'
+- network retrieval
+- large cohorts without label thinning
+image_summary: 'geometry: swimmer_timeline; subtype: row_duration_events_with_annotation_strips; description:
+  Swimmer plot with patient rows, horizontal duration bars, event symbols, terminal arrows, left categorical
+  annotation strips,…'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- data_main is network-shaped and does not encode subject durations/events
+- source/target/weight are not true roles here
+- cannot rebuild event layer from data_main
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_游泳图_游泳图_进阶版.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_游泳图_游泳图_进阶版.yaml
   machine_evidence: vault/evidence/machine/plotcase_游泳图_游泳图_进阶版.yaml
   evidence_pack: vault/material/plotcase_游泳图_游泳图_进阶版
   preview: vault/material/plotcase_游泳图_游泳图_进阶版/outputs/rebuilt.png

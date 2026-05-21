@@ -1,9 +1,9 @@
 id: plotmaster_019堆积柱状图+折线+热图注释
 title: 019堆积柱状图+折线+热图注释
 retrieval_tier: inspiration
-one_line: heatmap asset for 019堆积柱状图+折线+热图注释
-geometry: heatmap
-subtype: annotated_heatmap
+one_line: inspiration for multi-track cohort summaries
+geometry: stacked bar-line-heatstrip composite
+subtype: multi-track sample annotation summary
 required_roles:
 - x
 - y
@@ -12,42 +12,46 @@ optional_roles:
 - group
 - label
 - facet
-- source
-- target
-- weight
 - lower
 - upper
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: true
   composition: true
   batch: true
 best_for:
-- 019堆积柱状图+折线+热图注释
-- 'heatmap/annotated_heatmap grammar with roles: x, y, value'
+- inspiration for multi-track cohort summaries
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 96953; width: 1296; height: 864'
+- core generation without explicit per-track data tables
+image_summary: 'geometry: stacked bar-line-heatstrip composite; subtype: multi-track sample annotation
+  summary; layout: stacked tracks sharing sample x axis; primary_marks: [''top bars'', ''line plot'',
+  ''annotation color strips'', ''stacked …'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 36'
 code_summary: 'entry: plot.py; backend_hints: [''complexheatmap'', ''ggplot2'']'
 risk_flags:
 - synthetic_data
 - case_level_fallback
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- case_level_fallback
+- synthetic_data
+- false_positive_columns:source,target,weight
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: false
 read_next:
   card: vault/cards/plotmaster_019堆积柱状图+折线+热图注释.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_019堆积柱状图+折线+热图注释.yaml
   machine_evidence: vault/evidence/machine/plotmaster_019堆积柱状图+折线+热图注释.yaml
   evidence_pack: vault/material/plotmaster_019堆积柱状图+折线+热图注释
   preview: vault/material/plotmaster_019堆积柱状图+折线+热图注释/outputs/rebuilt.png

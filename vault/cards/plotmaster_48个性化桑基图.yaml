@@ -1,51 +1,58 @@
 id: plotmaster_48个性化桑基图
 title: 48个性化桑基图
 retrieval_tier: support
-one_line: scatter asset for 48个性化桑基图
-geometry: scatter
-subtype: pca_or_manifold
+one_line: Simple three-stage Sankey/alluvial label matching
+geometry: three_stage_sankey
+subtype: left labels to middle clusters to right labels with colored curved links
 required_roles:
-- x
-- y
-- value
-optional_roles:
-- group
-- label
-- facet
 - source
 - target
 - weight
+optional_roles:
+- y
+- value
+- group
+- facet
 - lower
 - upper
 capabilities:
   highlight: true
-  detail_panel: true
+  detail_panel: false
   annotation_track: false
   uncertainty: true
   composition: false
   batch: true
 best_for:
-- 48个性化桑基图
-- 'scatter/pca_or_manifold grammar with roles: x, y, value'
+- Simple three-stage Sankey/alluvial label matching
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 206690; width: 1296; height: 720'
+- 3D manifold retrieval despite metadata
+- Quantitative interval plots
+image_summary: 'geometry: three_stage_sankey; subtype: left labels to middle clusters to right labels
+  with colored curved links; panel_count: 1; layout: single left-to-right three-column alluvial/network
+  diagram'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 28'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- compatibility_columns
+risk_notes:
+- metadata says 3d_manifold, but image/title show Sankey; compatibility columns are supported only because
+  image/data/tit…
+- false_positive_column:lower
+- false_positive_column:upper
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_48个性化桑基图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_48个性化桑基图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_48个性化桑基图.yaml
   evidence_pack: vault/material/plotmaster_48个性化桑基图
   preview: vault/material/plotmaster_48个性化桑基图/outputs/rebuilt.png

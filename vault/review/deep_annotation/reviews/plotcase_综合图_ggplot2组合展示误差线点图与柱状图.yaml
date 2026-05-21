@@ -1,0 +1,213 @@
+case_id: plotcase_综合图_ggplot2组合展示误差线点图与柱状图
+annotation_version: model_assisted_deep_review_v1
+annotation_status:
+  status: complete
+  level: model_assisted_deep_review_v1
+  human_review_required: false
+  notes: Model-assisted review based on direct rebuilt image inspection plus metadata, guide, data, code, machine
+    evidence, card, and prior review.
+annotator_model: gpt-5-codex
+reviewed_at: '2026-05-21T09:16:58.936503+00:00'
+evidence:
+  files_read:
+  - AGENTS.md
+  - schemas/deep_dossier_review.schema.yaml
+  - vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/metadata.json
+  - vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/agent_guide.md
+  - vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/plot.py
+  - vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/data_main.csv
+  - vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/outputs/rebuilt.png
+  - vault/evidence/machine/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
+  - vault/cards/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
+  - vault/review/deep_annotation/reviews/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
+  data_optional: absent
+  machine_evidence: vault/evidence/machine/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
+  asset_card: vault/cards/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
+  review_record: vault/review/deep_annotation/reviews/plotcase_综合图_ggplot2组合展示误差线点图与柱状图.yaml
+  image_inspected: vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/outputs/rebuilt.png
+  code_entry: vault/material/plotcase_综合图_ggplot2组合展示误差线点图与柱状图/plot.py
+  renderer_read: retinue/tools/plotter_standard_renderer.py
+  rebuild_class:
+    source_code_rebuild: true
+    generic_renderer_rebuild: true
+    case_level_fallback: false
+    synthetic_data: false
+observed_visual_grammar:
+  geometry: composite_point_interval_bar
+  subtype: left grouped labels, central coefficient intervals, right horizontal bars
+  panel_count: 3
+  layout: 'three aligned vertical regions: category rail, interval dot plot, and horizontal bar panel'
+  marks:
+  - dashed group brackets
+  - points with error bars
+  - vertical zero line
+  - horizontal bars
+  encodings:
+    row: predictor/category
+    point x: standardized coefficient
+    bar length: percentage IncMSE
+    color: response/component group
+  axes: central coefficient axis and right bar-value axis share row identity
+  legends: legend inside central panel for four groups
+  annotations:
+  - left group labels Geochemical/Microbial/N-related/Climatic
+inferred_visual_grammar:
+  domain_semantics: Use only visible labels/title as weak hints; no biological or statistical meaning was inferred
+    beyond the graphic roles.
+  rebuild_note: plot.py is a thin Python wrapper around the shared CSV renderer; for custom/fallback-looking figures,
+    the current PNG is more visually specific than the wrapper entry.
+  metadata_alignment:
+    grammar_id: bar_composite
+    backend: R/ggplot2
+    unit: category-value summary table
+    required_data_roles:
+    - category
+    - value
+    optional_data_roles:
+    - group
+    - stack
+    - error_low
+    - error_high
+    - line_value
+    - annotation_value
+    - label
+reviewed_visual_roles:
+  category: row/category labels
+  value: bar or point magnitude candidate
+  group: series/color group
+  error_low: interval lower bound
+  error_high: interval upper bound
+  line_value: secondary point/line value candidate
+  stack: not visually stacked
+  annotation_value: empty
+  label: empty
+canonical_columns:
+- category
+- value
+- group
+- stack
+- error_low
+- error_high
+- line_value
+- annotation_value
+- label
+required_data_semantics:
+  category: shared row/category identity
+  value: quantitative measure
+optional_data_semantics:
+  group: series/color group
+  error_low: interval lower bound
+  error_high: interval upper bound
+  line_value: secondary value candidate
+  stack: not observed as stack
+  annotation_value: empty
+  label: empty
+optional_modules:
+  data_optional_csv: absent
+  main_csv_optional_layers:
+  - group
+  - error_low
+  - error_high
+  - line_value
+  - stack
+  - annotation_value
+  - label
+  requires_custom_layout_for_full_rebuild: true
+false_positive_risks:
+- data_main is bar-composite abstraction and may not fully encode three-panel alignment
+- false_positive_column:stack
+- false_positive_column:annotation_value
+- false_positive_column:label
+- thin_plot_py_wrapper
+- generic_renderer_rebuild_flag
+best_for:
+- Aligned composite figures combining interval estimates and horizontal bars
+bad_for:
+- Single ordinary bar charts
+- Exact multi-panel data split without a richer contract
+style_notes:
+- Shared row alignment is the key visual feature
+- Dashed left brackets separate semantic groups
+retrieval_tier_recommendation:
+  tier: support
+  rationale: support tier because the visual grammar is useful, but retrieval should remain conservative around
+    fallback/synthetic/generic-renderer limits.
+  exclusion_risks:
+  - data_main is bar-composite abstraction and may not fully encode three-panel alignment
+confidence:
+  overall: medium
+  visual_grammar: high
+  data_roles: medium
+  code_understanding: medium
+  notes: Visual grammar is directly observed; data-role confidence is reduced where data_main is compact, synthetic,
+    fallback, or includes compatibility columns.
+image_observation:
+  image_read: true
+  panel_count: 3
+  layout: 'three aligned vertical regions: category rail, interval dot plot, and horizontal bar panel'
+  marks:
+  - dashed group brackets
+  - points with error bars
+  - vertical zero line
+  - horizontal bars
+  encodings:
+    row: predictor/category
+    point x: standardized coefficient
+    bar length: percentage IncMSE
+    color: response/component group
+  axes: central coefficient axis and right bar-value axis share row identity
+  legends: legend inside central panel for four groups
+  annotations:
+  - left group labels Geochemical/Microbial/N-related/Climatic
+  text_density: moderate-high
+  visual_risks:
+  - data_main is bar-composite abstraction and may not fully encode three-panel alignment
+data_understanding:
+  data_read: true
+  observed_columns:
+  - category
+  - value
+  - group
+  - stack
+  - error_low
+  - error_high
+  - line_value
+  - annotation_value
+  - label
+  role_mapping:
+    category: row/category labels
+    value: bar or point magnitude candidate
+    group: series/color group
+    error_low: interval lower bound
+    error_high: interval upper bound
+    line_value: secondary point/line value candidate
+    stack: not visually stacked
+    annotation_value: empty
+    label: empty
+  derived_columns: []
+  false_positive_columns:
+  - stack
+  - annotation_value
+  - label
+  missing_optional_data:
+  - data_optional.csv absent
+  - annotation_value
+  - label
+code_understanding:
+  code_read: true
+  backend:
+  - Python plot.py wrapper
+  - retinue.tools.plotter_standard_renderer
+  - matplotlib
+  - pandas
+  - numpy
+  entry_behavior: render('bar', 'ggplot2组合展示误差线点图与柱状图')
+  hardcoded_aesthetics:
+  - shared Plotter style palettes and renderer defaults
+  - title/geometry literal passed in plot.py
+  output_behavior: Wrapper calls render(...) and is expected to write outputs/rebuilt.png from data_main.csv; it
+    does not itself contain the full custom plotting logic visible in several rebuilt PNGs.
+  unsupported_features:
+  - data_main is bar-composite abstraction and may not fully encode three-panel alignment
+proposed_metadata_patch: {}
+proposed_dossier_patch: {}

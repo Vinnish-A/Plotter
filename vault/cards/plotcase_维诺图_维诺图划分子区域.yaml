@@ -1,9 +1,9 @@
 id: plotcase_维诺图_维诺图划分子区域
 title: 维诺图划分子区域
 retrieval_tier: support
-one_line: network asset for 维诺图划分子区域
-geometry: network
-subtype: node_link_network
+one_line: Visual inspiration for circular Voronoi partition/treemap
+geometry: circular Voronoi partition/treemap
+subtype: ''
 required_roles:
 - source
 - target
@@ -25,28 +25,39 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 维诺图划分子区域
-- 'network/node_link_network grammar with roles: source, target, weight'
+- Visual inspiration for circular Voronoi partition/treemap
+- Support retrieval when user data matches the observed grammar and missing annotations can be supplied
+  explicitly
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 193859; width: 1008; height: 1008'
+- Core template selection without stronger rebuild evidence
+- Claims that generic or synthetic source/target/weight columns are true visual roles
+- Automatic reuse when required annotation, layout, or hierarchy data is missing
+image_summary: 'family: circular Voronoi partition/treemap; panel_count: 1; layout: circle subdivided
+  into colored polygonal regions with smaller tessellated cells and right legend; primary_marks: [''Voronoi
+  polygons'', ''region boundarie…'
 data_summary: 'main_columns: [''source'', ''target'', ''weight'', ''node_id'', ''node_label'', ''node_group'',
   ''node_size'', ''edge_group'', ''edge_direction'', ''layout_x'', ''layout_y'', ''source_group'']; sampled_rows:
   7'
 code_summary: 'entry: plot.py; backend_hints: []'
 risk_flags:
+- generic_renderer
+risk_notes:
 - generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- visible_output_may_not_be_recomputed_by_standard_entry
+- roles_require_visual_verification
+- some_columns_are_empty_or_generic_duplicates
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_维诺图_维诺图划分子区域.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_维诺图_维诺图划分子区域.yaml
   machine_evidence: vault/evidence/machine/plotcase_维诺图_维诺图划分子区域.yaml
   evidence_pack: vault/material/plotcase_维诺图_维诺图划分子区域
   preview: vault/material/plotcase_维诺图_维诺图划分子区域/outputs/rebuilt.png

@@ -26,7 +26,7 @@ files:
   metadata:
     path: vault/material/plotmaster_025三维PCA散点图/metadata.json
     exists: true
-    size_bytes: 3789
+    size_bytes: 4477
   agent_guide:
     path: vault/material/plotmaster_025三维PCA散点图/agent_guide.md
     exists: true

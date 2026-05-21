@@ -1,21 +1,16 @@
 id: plotcase_heatmap_环状注释热图
 title: 环状注释热图
 retrieval_tier: support
-one_line: tree asset for 环状注释热图
-geometry: tree
-subtype: phylogenetic_tree
+one_line: Circular heatmap templates with a simple outer categorical annotation ring.
+geometry: circular_phylogenetic_heatmap_with_outer_group_ring
+subtype: circular_phylogenetic_heatmap_with_outer_group_ring
 required_roles:
-- row_id
-- column_id
+- sample_id
+- feature
 - value
 optional_roles:
-- row_group
-- column_group
-- annotation_track
-- annotation_value
-- label
-- size_value
-- facet
+- group
+- tip_order
 capabilities:
   highlight: true
   detail_panel: false
@@ -24,27 +19,34 @@ capabilities:
   composition: true
   batch: true
 best_for:
-- 环状注释热图
-- 'tree/phylogenetic_tree grammar with roles: row_id, column_id, value'
+- Circular heatmap templates with a simple outer categorical annotation ring.
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 256388; width: 1008; height: 1008'
+- Trees requiring meaningful branch lengths or multiple independent radial tracks.
+image_summary: 'figure_type: circular_phylogenetic_heatmap_with_outer_group_ring; layout: Fan/circular
+  heatmap with many labeled tips, inner value tiles, outer categorical group ring, and right-side legends.;
+  marks: [''circular heatmap …'
 data_summary: 'main_columns: [''row_id'', ''column_id'', ''value'', ''row_group'', ''column_group'', ''annotation_track'',
   ''annotation_value'', ''label'', ''size_value'', ''facet'']; sampled_rows: 30'
 code_summary: 'entry: plot.py; backend_hints: [''ggtree'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+risk_notes:
+- Do not treat as an ordinary rectangular heatmap or true phylogeny.
+- Current generic plot.py cannot reproduce circular fan layout.
+- generic_renderer_entry
+- circular_layout_not_in_csv
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotcase_heatmap_环状注释热图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotcase_heatmap_环状注释热图.yaml
   machine_evidence: vault/evidence/machine/plotcase_heatmap_环状注释热图.yaml
   evidence_pack: vault/material/plotcase_heatmap_环状注释热图
   preview: vault/material/plotcase_heatmap_环状注释热图/outputs/rebuilt.png

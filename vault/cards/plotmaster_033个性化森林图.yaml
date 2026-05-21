@@ -1,22 +1,21 @@
 id: plotmaster_033个性化森林图
 title: 033个性化森林图
 retrieval_tier: support
-one_line: forest asset for 033个性化森林图
-geometry: forest
-subtype: interval_forest
+one_line: Customized forest/effect plots with significance categories
+geometry: forest_interval
+subtype: effect-size forest plot with grouped background bands and significance legend
 required_roles:
-- x
-- y
+- label
 - value
+- lower
+- upper
 optional_roles:
 - group
-- label
+- y
 - facet
 - source
 - target
 - weight
-- lower
-- upper
 capabilities:
   highlight: true
   detail_panel: false
@@ -25,27 +24,35 @@ capabilities:
   composition: false
   batch: true
 best_for:
-- 033个性化森林图
-- 'forest/interval_forest grammar with roles: x, y, value'
+- Customized forest/effect plots with significance categories
 bad_for:
-- Missing required roles
-- Unbounded labels without focus selection
-- Using optional modules without matching data
-image_summary: 'exists: True; size_bytes: 107330; width: 864; height: 864'
+- Flow/network retrieval from compatibility columns
+- Exact p-value semantics without explicit p-value column
+image_summary: 'geometry: forest_interval; subtype: effect-size forest plot with grouped background bands
+  and significance legend; panel_count: 1; layout: single interval plot with shaded horizontal taxonomic/functional
+  bands and right…'
 data_summary: 'main_columns: [''x'', ''y'', ''value'', ''group'', ''label'', ''facet'', ''source'', ''target'',
   ''weight'', ''lower'', ''upper'']; sampled_rows: 27'
 code_summary: 'entry: plot.py; backend_hints: [''ggplot2'']'
 risk_flags:
-- generic_renderer_rebuild
-- image_not_model_reviewed
-- roles_machine_inferred
+- generic_renderer
+- compatibility_columns
+risk_notes:
+- source/target/weight numeric columns are compatibility duplicates, not edge roles
+- false_positive_column:source
+- false_positive_column:target
 confidence:
-  image_understanding: low
-  data_roles: low
-  code_understanding: low
+  image_understanding: medium
+  data_roles: medium
+  code_understanding: medium
+review_status:
+  image_read_by_model: true
+  data_read_by_model: true
+  code_read_by_model: true
+  migrated_legacy_review: true
 read_next:
   card: vault/cards/plotmaster_033个性化森林图.yaml
-  deep_review: null
+  deep_review: vault/review/deep_annotation/reviews/plotmaster_033个性化森林图.yaml
   machine_evidence: vault/evidence/machine/plotmaster_033个性化森林图.yaml
   evidence_pack: vault/material/plotmaster_033个性化森林图
   preview: vault/material/plotmaster_033个性化森林图/outputs/rebuilt.png
