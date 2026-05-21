@@ -1,0 +1,9 @@
+sample,response,batch,score
+S01,Responder,B1,0.91
+S02,Responder,B1,0.88
+S03,Responder,B2,0.79
+S04,Responder,B2,0.73
+S05,NonResponder,B1,0.34
+S06,NonResponder,B1,0.29
+S07,NonResponder,B2,0.18
+S08,NonResponder,B2,0.26

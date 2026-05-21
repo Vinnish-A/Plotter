@@ -17,7 +17,7 @@ Rules:
 - Do not assume a preselected template, mapping request, or existing `plot.py`.
 - Create your own plotting code and render `outputs/rebuilt.png`.
 - Open `outputs/rebuilt.png` yourself and judge aesthetics, readability, role hierarchy, panel
-  balance, and information density.
+  balance, overlap/occlusion, and information density.
 - If the self-check fails, revise the figure. Stop after at most 2 revision iterations.
 - Write `outputs/agent_self_review.json` using `schemas/agent_self_review.schema.yaml`.
 

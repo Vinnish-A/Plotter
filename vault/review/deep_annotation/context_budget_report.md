@@ -87,8 +87,8 @@ All 156 deep-reviewed material assets were slimmed through `apply_deep_annotatio
   `retinue/tools/visual_check.py --require-agent-self-review`.
 - Bastard is repositioned as a compact visual grammar and mutation skill pack under
   `bastard/SKILL.md` and `bastard/grammar/`; Retinue continues to own generated outputs.
-- Actual subagent run status: executed for `global_local_focus`; output recorded in
-  `vault/review/agent_runs/global_local_focus_run.md`.
+- Actual subagent run status: executed for `global_local_focus`, `annotated_expression_heatmap`,
+  and `grouped_forest_interval`; outputs recorded under `vault/review/agent_runs/`.
 
 ## Remaining Risks
 

@@ -19,6 +19,8 @@ file unless the user explicitly overrides it.
 
 - Keep plot text concise.
 - Each figure should normally have exactly one plot title.
+- Center the plot title by default. Use a non-centered title only when the user explicitly requests
+  it or a source template clearly depends on it.
 - Do not use subtitles, supertitles, captions inside the image, or panel-letter titles unless the
   user explicitly asks for them or the source template relies on them.
 - The plot title should name the abstract visual claim or figure type, not list every condition.
@@ -62,6 +64,10 @@ Line and mark references:
 ## Visual Architecture
 
 - Main data body first; place annotation tracks, summaries, labels, legends, and callouts around it.
+- Text overlap, element overlap, and occlusion are not acceptable. This includes legends, axis text,
+  tick labels, colorbars, annotation labels, callouts, data marks, connectors, and panel titles.
+- If inspection finds overlap or hidden elements, revise the figure until the overlap is removed or
+  document a remaining risk only when the user explicitly accepts it.
 - Main/subordinate hierarchy must be visually clear.
 - Area allocation should roughly match data complexity and mark density.
 - A low-information support panel must be narrow, strip-like, inset-like, or otherwise subordinate.

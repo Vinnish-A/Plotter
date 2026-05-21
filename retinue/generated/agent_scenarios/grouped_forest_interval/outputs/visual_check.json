@@ -1,5 +1,5 @@
 {
-  "case": "/mnt/f/plotter/retinue/generated/agent_scenarios/global_local_focus",
+  "case": "/mnt/f/plotter/retinue/generated/agent_scenarios/grouped_forest_interval",
   "output": "outputs/rebuilt.png",
   "ok": true,
   "checks": {
@@ -7,9 +7,9 @@
     "non_empty_image": true,
     "minimum_resolution": true,
     "not_blank": true,
-    "width": 2052,
-    "height": 1188,
-    "mean_stddev": 34.2592
+    "width": 2015,
+    "height": 1278,
+    "mean_stddev": 29.183
   },
   "agent_self_review_present": true,
   "agent_self_review_ok": true,

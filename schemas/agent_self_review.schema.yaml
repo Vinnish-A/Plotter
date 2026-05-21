@@ -4,6 +4,7 @@ required:
   - overall_pass
   - aesthetic_pass
   - hierarchy_pass
+  - overlap_pass
   - panel_balance_pass
   - information_density_pass
   - main_visual_claim
@@ -20,6 +21,8 @@ properties:
   aesthetic_pass:
     type: boolean
   hierarchy_pass:
+    type: boolean
+  overlap_pass:
     type: boolean
   panel_balance_pass:
     type: boolean

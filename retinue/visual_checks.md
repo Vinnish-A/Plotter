@@ -6,6 +6,10 @@ enough for Agent scenario tests.
 Additional Agent self-review principles:
 
 - Main/subordinate hierarchy must be visually clear.
+- Plot titles should be centered unless explicitly requested otherwise.
+- Text overlap, element overlap, and occlusion are validation failures. This includes legends, axis
+  text, tick labels, colorbars, annotation labels, callouts, data marks, connectors, and panel titles.
+- If any overlap is found during self-review, the figure must be revised before passing validation.
 - A support or decorative panel may be larger than the main panel only when it carries high
   information density and independent interpretive value.
 - A low-information support panel must be narrow, strip-like, inset-like, or otherwise visually

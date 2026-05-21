@@ -1,0 +1,16 @@
+must_have:
+  - interval_forest_main_panel
+  - null_line_visible
+  - grouped_term_structure
+  - confidence_intervals_readable
+  - agent_self_review_json
+fail_if:
+  - p_value_column_dominates_intervals
+  - label_rail_larger_than_interval_panel_without_justification
+  - decorative_elements_dominate_data
+  - more_than_one_plot_title
+  - no_image_opened_self_check
+preferred:
+  - calm_group_colors
+  - compact p_value_support_column
+  - estimate_axis_named_abstractly

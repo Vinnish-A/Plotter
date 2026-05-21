@@ -3,6 +3,7 @@
   "overall_pass": true,
   "aesthetic_pass": true,
   "hierarchy_pass": true,
+  "overlap_pass": true,
   "panel_balance_pass": true,
   "information_density_pass": true,
   "main_visual_claim": "Class_07 occupies the high signed-effect and high-correlation region globally, and its sample-level values show a coherent positive internal trend that supports the highlighted global point.",

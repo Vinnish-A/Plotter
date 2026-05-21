@@ -21,6 +21,7 @@ def passing_review() -> dict:
         "overall_pass": True,
         "aesthetic_pass": True,
         "hierarchy_pass": True,
+        "overlap_pass": True,
         "panel_balance_pass": True,
         "information_density_pass": True,
         "main_visual_claim": "Class_07 is a high-effect, high-correlation focus supported by sample detail.",
@@ -75,6 +76,13 @@ def test_agent_scenario_protocol_files_exist() -> None:
     assert (scenario / "data" / "summary.csv").exists()
     assert (scenario / "data" / "samples.csv").exists()
     assert (scenario / "hidden_rubric.yaml").exists()
+    for scenario_dir in (REPO / "tests" / "agent_scenarios").iterdir():
+        if not scenario_dir.is_dir():
+            continue
+        assert (scenario_dir / "request.md").exists(), scenario_dir.name
+        assert (scenario_dir / "hidden_rubric.yaml").exists(), scenario_dir.name
+        data_files = sorted((scenario_dir / "data").glob("*.csv"))
+        assert data_files, scenario_dir.name
     agents = (REPO / "AGENTS.md").read_text(encoding="utf-8")
     assert "Real plotting capability must be tested through subagents" in agents
     assert str(preferences.relative_to(REPO)) in agents
@@ -88,7 +96,7 @@ def test_validate_agent_self_review_accepts_passing_example(tmp_path: Path) -> N
 
 
 def test_validate_agent_self_review_rejects_required_failures(tmp_path: Path) -> None:
-    for field in ("image_opened", "panel_balance_pass", "information_density_pass"):
+    for field in ("image_opened", "overlap_pass", "panel_balance_pass", "information_density_pass"):
         payload = passing_review()
         payload[field] = False
         review = tmp_path / f"{field}.json"

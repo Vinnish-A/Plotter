@@ -1,0 +1,63 @@
+{
+  "image_opened": true,
+  "overall_pass": true,
+  "aesthetic_pass": true,
+  "hierarchy_pass": true,
+  "overlap_pass": true,
+  "panel_balance_pass": true,
+  "information_density_pass": true,
+  "main_visual_claim": "Responder samples show coordinated up-regulation of the interferon module, while NonResponder samples show weaker or mixed interferon signal.",
+  "primary_panel": {
+    "id": "expression_heatmap",
+    "role": "Main gene-by-sample z-score matrix showing expression patterns across modules and response groups.",
+    "information_density": "high",
+    "relative_area": 0.72,
+    "justification": "The heatmap carries the primary sample-level expression evidence and occupies the largest area."
+  },
+  "support_panels": [
+    {
+      "id": "response_track",
+      "role": "Thin sample annotation strip identifying Responder and NonResponder columns.",
+      "information_density": "low",
+      "relative_area": 0.03,
+      "area_justified": true,
+      "justification": "The response track is compact and aligned to columns so it explains grouping without competing with the heatmap."
+    },
+    {
+      "id": "batch_track",
+      "role": "Thin sample annotation strip identifying batch for each sample.",
+      "information_density": "low",
+      "relative_area": 0.03,
+      "area_justified": true,
+      "justification": "The batch track is subordinate and reveals possible batch structure while preserving heatmap dominance."
+    },
+    {
+      "id": "module_strip",
+      "role": "Narrow row annotation strip showing gene modules and supporting the interferon highlight.",
+      "information_density": "medium",
+      "relative_area": 0.04,
+      "area_justified": true,
+      "justification": "The module strip is narrow, adjacent to the body, and helps decode row groups without duplicating the heatmap."
+    },
+    {
+      "id": "colorbar_and_annotation_legend",
+      "role": "Decode continuous z-score color and categorical annotation colors.",
+      "information_density": "medium",
+      "relative_area": 0.18,
+      "area_justified": true,
+      "justification": "The legend area is outside the main body and provides necessary decoding for color scales and annotation tracks."
+    }
+  ],
+  "issues_found": [
+    "Initial render placed row labels too close to the colorbar and overcrowded the annotation legend.",
+    "Second render improved row labels but left colorbar text too close to the legend."
+  ],
+  "fixes_applied": [
+    "Added a dedicated gene label rail outside the module strip.",
+    "Widened the canvas and separated the heatmap, colorbar, and annotation legend.",
+    "Moved colorbar ticks and label away from the legend after the second render."
+  ],
+  "remaining_risks": [
+    "The dataset is small, so sample ordering is intentionally simple rather than clustered."
+  ]
+}

@@ -15,6 +15,7 @@ REQUIRED = {
     "overall_pass",
     "aesthetic_pass",
     "hierarchy_pass",
+    "overlap_pass",
     "panel_balance_pass",
     "information_density_pass",
     "main_visual_claim",
@@ -31,6 +32,7 @@ PASS_FLAGS = [
     "overall_pass",
     "aesthetic_pass",
     "hierarchy_pass",
+    "overlap_pass",
     "panel_balance_pass",
     "information_density_pass",
 ]

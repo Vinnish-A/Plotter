@@ -1,0 +1,13 @@
+term,domain,estimate,lower,upper,p_value,n,display_order
+Age,clinical,1.12,0.98,1.29,0.087,184,1
+Stage III/IV,clinical,1.48,1.15,1.91,0.003,184,2
+Therapy response,clinical,0.62,0.46,0.84,0.002,184,3
+Inflammatory score,molecular,1.76,1.31,2.38,0.0004,184,4
+IFN module,molecular,1.54,1.18,2.01,0.001,184,5
+Metabolic module,molecular,0.88,0.66,1.17,0.380,184,6
+T-cell infiltration,immune,0.74,0.56,0.99,0.043,184,7
+Myeloid infiltration,immune,1.33,1.02,1.74,0.036,184,8
+Checkpoint score,immune,1.09,0.84,1.42,0.510,184,9
+Stromal fraction,microenvironment,1.27,0.96,1.69,0.094,184,10
+Hypoxia score,microenvironment,1.41,1.08,1.84,0.012,184,11
+Vascular score,microenvironment,0.93,0.71,1.22,0.610,184,12

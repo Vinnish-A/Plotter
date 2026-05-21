@@ -56,6 +56,7 @@ def run_visual_check(
     aesthetic_checks = {
         "requires_agent_self_review": require_agent_self_review,
         "panel_hierarchy": agent_self_review_ok if require_agent_self_review or agent_self_review_present else None,
+        "overlap": agent_self_review_ok if require_agent_self_review or agent_self_review_present else None,
         "panel_balance": agent_self_review_ok if require_agent_self_review or agent_self_review_present else None,
         "information_density": agent_self_review_ok if require_agent_self_review or agent_self_review_present else None,
         "errors": self_review.get("errors", []),

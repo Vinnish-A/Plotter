@@ -1,0 +1,16 @@
+must_have:
+  - heatmap_main_body
+  - response_annotation_subordinate
+  - batch_annotation_subordinate
+  - interferon_module_highlight
+  - agent_self_review_json
+fail_if:
+  - annotation_tracks_larger_than_heatmap
+  - unreadable_gene_or_sample_labels
+  - default_color_cycle_only
+  - more_than_one_plot_title
+  - no_image_opened_self_check
+preferred:
+  - blue_white_red_diverging_expression_scale
+  - compact module grouping
+  - annotation_tracks_without_local_axes
